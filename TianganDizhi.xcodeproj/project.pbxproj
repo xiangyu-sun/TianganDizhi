@@ -15,6 +15,18 @@
 		46AB55D7242B5EFF00F6604A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46AB55D5242B5EFF00F6604A /* LaunchScreen.storyboard */; };
 		46AB55E2242B5EFF00F6604A /* TianganDizhiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55E1242B5EFF00F6604A /* TianganDizhiTests.swift */; };
 		46AB55ED242B5EFF00F6604A /* TianganDizhiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55EC242B5EFF00F6604A /* TianganDizhiUITests.swift */; };
+		46AB55FD242B5F7100F6604A /* DizhiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55FC242B5F7100F6604A /* DizhiListView.swift */; };
+		46AB55FF242B62A100F6604A /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55FE242B62A100F6604A /* TianganListView.swift */; };
+		46AB5607242B7F6C00F6604A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AB5606242B7F6C00F6604A /* NotificationCenter.framework */; };
+		46AB560A242B7F6C00F6604A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5609242B7F6C00F6604A /* TodayViewController.swift */; };
+		46AB560D242B7F6C00F6604A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46AB560B242B7F6C00F6604A /* MainInterface.storyboard */; };
+		46AB5611242B7F6C00F6604A /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 46AB5604242B7F6C00F6604A /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		46AB5623242B89F100F6604A /* Zodiac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB561F242B89F000F6604A /* Zodiac.swift */; };
+		46AB5624242B89F100F6604A /* Dizhi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5620242B89F000F6604A /* Dizhi.swift */; };
+		46AB5625242B89F100F6604A /* Tiangan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5621242B89F000F6604A /* Tiangan.swift */; };
+		46AB5626242B8A1D00F6604A /* Dizhi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5620242B89F000F6604A /* Dizhi.swift */; };
+		46AB5627242B8A1D00F6604A /* Tiangan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5621242B89F000F6604A /* Tiangan.swift */; };
+		46AB5628242B8A1D00F6604A /* Zodiac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB561F242B89F000F6604A /* Zodiac.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +44,28 @@
 			remoteGlobalIDString = 46AB55C6242B5EFD00F6604A;
 			remoteInfo = TianganDizhi;
 		};
+		46AB560F242B7F6C00F6604A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46AB55BF242B5EFD00F6604A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46AB5603242B7F6C00F6604A;
+			remoteInfo = Today;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		46AB5615242B7F6C00F6604A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				46AB5611242B7F6C00F6604A /* Today.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		46AB55C7242B5EFD00F6604A /* TianganDizhi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TianganDizhi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +82,16 @@
 		46AB55E8242B5EFF00F6604A /* TianganDizhiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TianganDizhiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AB55EC242B5EFF00F6604A /* TianganDizhiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganDizhiUITests.swift; sourceTree = "<group>"; };
 		46AB55EE242B5EFF00F6604A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46AB55FC242B5F7100F6604A /* DizhiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizhiListView.swift; sourceTree = "<group>"; };
+		46AB55FE242B62A100F6604A /* TianganListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
+		46AB5604242B7F6C00F6604A /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		46AB5606242B7F6C00F6604A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		46AB5609242B7F6C00F6604A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		46AB560C242B7F6C00F6604A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		46AB560E242B7F6C00F6604A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46AB561F242B89F000F6604A /* Zodiac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zodiac.swift; sourceTree = "<group>"; };
+		46AB5620242B89F000F6604A /* Dizhi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dizhi.swift; sourceTree = "<group>"; };
+		46AB5621242B89F000F6604A /* Tiangan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tiangan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +116,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46AB5601242B7F6C00F6604A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46AB5607242B7F6C00F6604A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +133,8 @@
 				46AB55C9242B5EFD00F6604A /* TianganDizhi */,
 				46AB55E0242B5EFF00F6604A /* TianganDizhiTests */,
 				46AB55EB242B5EFF00F6604A /* TianganDizhiUITests */,
+				46AB5608242B7F6C00F6604A /* Today */,
+				46AB5605242B7F6C00F6604A /* Frameworks */,
 				46AB55C8242B5EFD00F6604A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +145,7 @@
 				46AB55C7242B5EFD00F6604A /* TianganDizhi.app */,
 				46AB55DD242B5EFF00F6604A /* TianganDizhiTests.xctest */,
 				46AB55E8242B5EFF00F6604A /* TianganDizhiUITests.xctest */,
+				46AB5604242B7F6C00F6604A /* Today.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +156,11 @@
 				46AB55CA242B5EFD00F6604A /* AppDelegate.swift */,
 				46AB55CC242B5EFD00F6604A /* SceneDelegate.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
+				46AB55FC242B5F7100F6604A /* DizhiListView.swift */,
+				46AB55FE242B62A100F6604A /* TianganListView.swift */,
+				46AB5620242B89F000F6604A /* Dizhi.swift */,
+				46AB5621242B89F000F6604A /* Tiangan.swift */,
+				46AB561F242B89F000F6604A /* Zodiac.swift */,
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
 				46AB55D5242B5EFF00F6604A /* LaunchScreen.storyboard */,
 				46AB55D8242B5EFF00F6604A /* Info.plist */,
@@ -136,6 +195,24 @@
 			path = TianganDizhiUITests;
 			sourceTree = "<group>";
 		};
+		46AB5605242B7F6C00F6604A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46AB5606242B7F6C00F6604A /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46AB5608242B7F6C00F6604A /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				46AB5609242B7F6C00F6604A /* TodayViewController.swift */,
+				46AB560B242B7F6C00F6604A /* MainInterface.storyboard */,
+				46AB560E242B7F6C00F6604A /* Info.plist */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,10 +223,12 @@
 				46AB55C3242B5EFD00F6604A /* Sources */,
 				46AB55C4242B5EFD00F6604A /* Frameworks */,
 				46AB55C5242B5EFD00F6604A /* Resources */,
+				46AB5615242B7F6C00F6604A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				46AB5610242B7F6C00F6604A /* PBXTargetDependency */,
 			);
 			name = TianganDizhi;
 			productName = TianganDizhi;
@@ -192,6 +271,23 @@
 			productReference = 46AB55E8242B5EFF00F6604A /* TianganDizhiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		46AB5603242B7F6C00F6604A /* Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46AB5612242B7F6C00F6604A /* Build configuration list for PBXNativeTarget "Today" */;
+			buildPhases = (
+				46AB5600242B7F6C00F6604A /* Sources */,
+				46AB5601242B7F6C00F6604A /* Frameworks */,
+				46AB5602242B7F6C00F6604A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Today;
+			productName = Today;
+			productReference = 46AB5604242B7F6C00F6604A /* Today.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,6 +309,9 @@
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 46AB55C6242B5EFD00F6604A;
 					};
+					46AB5603242B7F6C00F6604A = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 46AB55C2242B5EFD00F6604A /* Build configuration list for PBXProject "TianganDizhi" */;
@@ -231,6 +330,7 @@
 				46AB55C6242B5EFD00F6604A /* TianganDizhi */,
 				46AB55DC242B5EFF00F6604A /* TianganDizhiTests */,
 				46AB55E7242B5EFF00F6604A /* TianganDizhiUITests */,
+				46AB5603242B7F6C00F6604A /* Today */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +360,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46AB5602242B7F6C00F6604A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46AB560D242B7F6C00F6604A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -267,9 +375,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46AB55FF242B62A100F6604A /* TianganListView.swift in Sources */,
 				46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */,
 				46AB55CD242B5EFD00F6604A /* SceneDelegate.swift in Sources */,
+				46AB5625242B89F100F6604A /* Tiangan.swift in Sources */,
 				46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */,
+				46AB55FD242B5F7100F6604A /* DizhiListView.swift in Sources */,
+				46AB5624242B89F100F6604A /* Dizhi.swift in Sources */,
+				46AB5623242B89F100F6604A /* Zodiac.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +402,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		46AB5600242B7F6C00F6604A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46AB5626242B8A1D00F6604A /* Dizhi.swift in Sources */,
+				46AB5628242B8A1D00F6604A /* Zodiac.swift in Sources */,
+				46AB5627242B8A1D00F6604A /* Tiangan.swift in Sources */,
+				46AB560A242B7F6C00F6604A /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -302,6 +426,11 @@
 			target = 46AB55C6242B5EFD00F6604A /* TianganDizhi */;
 			targetProxy = 46AB55E9242B5EFF00F6604A /* PBXContainerItemProxy */;
 		};
+		46AB5610242B7F6C00F6604A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46AB5603242B7F6C00F6604A /* Today */;
+			targetProxy = 46AB560F242B7F6C00F6604A /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -311,6 +440,14 @@
 				46AB55D6242B5EFF00F6604A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		46AB560B242B7F6C00F6604A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46AB560C242B7F6C00F6604A /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -433,12 +570,14 @@
 		46AB55F2242B5EFF00F6604A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TianganDizhi/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,12 +592,14 @@
 		46AB55F3242B5EFF00F6604A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TianganDizhi/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,6 +695,46 @@
 			};
 			name = Release;
 		};
+		46AB5613242B7F6C00F6604A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				INFOPLIST_FILE = Today/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.Today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46AB5614242B7F6C00F6604A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				INFOPLIST_FILE = Today/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.Today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -589,6 +770,15 @@
 			buildConfigurations = (
 				46AB55F8242B5EFF00F6604A /* Debug */,
 				46AB55F9242B5EFF00F6604A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46AB5612242B7F6C00F6604A /* Build configuration list for PBXNativeTarget "Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46AB5613242B7F6C00F6604A /* Debug */,
+				46AB5614242B7F6C00F6604A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
