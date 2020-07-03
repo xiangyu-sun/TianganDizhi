@@ -11,6 +11,7 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
+    @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var informationLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         let now = Date()
-        informationLabel.text = "\(now.year)\n\(now.shichen)"
+        informationLabel.text = "\(now.year)\n\(now.zodiac)"
+        yearLabel.text = now.shichen
+        
         completionHandler(NCUpdateResult.newData)
     }
     

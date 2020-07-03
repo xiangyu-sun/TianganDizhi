@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 protocol TimeExpressible {
     init(hourOfDay: Int)
     var displayText: String { get }
@@ -13,9 +14,13 @@ protocol TimeExpressible {
     var displayHourDetailText: String { get }
 }
 
+protocol MonthExpressible {
+    var displayMonthText: String { get }
+}
 
-public enum Dizhi: String, CaseIterable {
-    case zi, chou, yin, mao, chen, si, wu, wei, shen, you, xu, hai
+
+public enum Dizhi: Int, CaseIterable {
+    case yin = 1, mao, chen, si, wu, wei, shen, you, xu, hai, zi, chou
     
     public var displayText: String {
         switch self {
@@ -48,8 +53,6 @@ public enum Dizhi: String, CaseIterable {
 }
 
 public struct HourInterval<T> where T:Comparable {
-    
-
     let start:T
     let end:T
 }
@@ -125,8 +128,4 @@ extension Dizhi: TimeExpressible {
     var displayHourText: String { displayText + "時" }
     
     var displayHourDetailText: String { "\(displayText) \(hourInterval.description) 時" }
-}
-
-extension Range {
-    
 }

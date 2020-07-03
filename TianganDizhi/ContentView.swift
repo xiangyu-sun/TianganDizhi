@@ -9,12 +9,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var date: Date
+    
     var body: some View {
         VStack() {
-            Text(Date().year)
+            HStack() {
+                Text(DateFormatter.localizedString(from: date, dateStyle: .long, timeStyle: .medium))
+                    .font(.body)
+                Spacer()
+            }.padding()
+            HStack() {
+                Text(date.year)
+                    .font(.largeTitle)
+                Spacer()
+            }.padding()
+            Spacer()
+            Text(date.shichen)
                 .font(.largeTitle)
-            Text(Date().shichen)
-                .font(.largeTitle)
+            Spacer()
         }
         
     }
@@ -22,6 +34,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(date: Date())
     }
 }

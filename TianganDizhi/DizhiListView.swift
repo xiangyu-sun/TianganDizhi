@@ -11,6 +11,7 @@ import SwiftUI
 struct DizhiListView: View {
     enum DisplayMode {
         case name
+        case month
         case time
     }
     
@@ -19,8 +20,11 @@ struct DizhiListView: View {
     
     var body: some View {
         List(dizhi, id: \.self) {
+            
             if self.disppayMode == .name {
                 Text($0.displayText)
+            } else if self.disppayMode == .name {
+                Text($0.displayHourDetailText)
             } else {
                 Text($0.displayHourDetailText)
             }
@@ -28,8 +32,14 @@ struct DizhiListView: View {
     }
 }
 
-struct DizhiListView_Previews: PreviewProvider {
+struct DizhiListView_Time_Previews: PreviewProvider {
     static var previews: some View {
         DizhiListView(disppayMode: .time)
+    }
+}
+
+struct DizhiListView_Name_Previews: PreviewProvider {
+    static var previews: some View {
+        DizhiListView(disppayMode: .name)
     }
 }

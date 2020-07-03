@@ -7,8 +7,8 @@
 
 import Foundation
 
-public enum Tiangan: String, CaseIterable {
-    case jia, yi, bing, ding, wu, ji, geng, xin, ren, kui
+public enum Tiangan: Int, CaseIterable {
+    case jia = 1, yi, bing, ding, wu, ji, geng, xin, ren, kui
     
     public var displayText: String {
         switch self {
@@ -39,33 +39,23 @@ public enum Tiangan: String, CaseIterable {
 public extension Date {
     
     var year: String {
-        let calendar = Calendar(identifier: .chinese)
-        
-        let formatter = DateFormatter()
-        formatter.calendar = calendar
-        formatter.dateStyle = .long
-        let regex = try? NSRegularExpression(pattern: ##"(\w*)-(\w*)"##)
-        let str = formatter.string(from: self)
-        let matches = regex?.matches(in: str, options: [], range: NSRange(location: 0, length: str.count))
-        
-        var tiangan: String?
-        var dizhi: String?
-        
-        matches?.forEach { (result) in
-            let ns = (str as NSString)
-            tiangan = ns.substring(with: result.range(at: 1))
-            dizhi = ns.substring(with: result.range(at: 2))
-        }
         
         var tianGanDizhi: String?
-        var zodiac: Zodiac?
-        if let tiangan = tiangan, let t = Tiangan(rawValue: tiangan), let dizhi = dizhi, let d = Dizhi(rawValue: dizhi){
+        if let t = self.nianGan, let d = self.nianZhi {
             tianGanDizhi = t.displayText + d.displayText
-            zodiac = Zodiac(d)
         }
-        
-        if let tianGanDizhi = tianGanDizhi, let zodiac = zodiac{
-            return "\(tianGanDizhi) \(zodiac.rawValue) 年"
+
+        if let tianGanDizhi = tianGanDizhi{
+            return "\(tianGanDizhi)年"
+        }
+
+        return "未卜"
+    }
+    
+    var zodiac: String {
+        if let d = self.nianZhi {
+            let zodiac = Zodiac(d)
+            return zodiac.rawValue
         }
         
         return "未卜"
@@ -76,8 +66,6 @@ public extension Date {
         let calendar = Calendar(identifier: .chinese)
         
         let component = calendar.dateComponents(in: TimeZone.current, from: Date())
-        
-        
         
         guard let hour = component.hour else { return "未卜" }
         
