@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import ChineseAstrologyCalendar
 
 struct DizhiListView: View {
     enum DisplayMode {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,19 +16,13 @@
 		46AB55E2242B5EFF00F6604A /* TianganDizhiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55E1242B5EFF00F6604A /* TianganDizhiTests.swift */; };
 		46AB55ED242B5EFF00F6604A /* TianganDizhiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55EC242B5EFF00F6604A /* TianganDizhiUITests.swift */; };
 		46AB55FD242B5F7100F6604A /* DizhiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55FC242B5F7100F6604A /* DizhiListView.swift */; };
-		46AB55FF242B62A100F6604A /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55FE242B62A100F6604A /* TianganListView.swift */; };
 		46AB5607242B7F6C00F6604A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AB5606242B7F6C00F6604A /* NotificationCenter.framework */; };
 		46AB560A242B7F6C00F6604A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5609242B7F6C00F6604A /* TodayViewController.swift */; };
 		46AB560D242B7F6C00F6604A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46AB560B242B7F6C00F6604A /* MainInterface.storyboard */; };
 		46AB5611242B7F6C00F6604A /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 46AB5604242B7F6C00F6604A /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		46AB5623242B89F100F6604A /* Zodiac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB561F242B89F000F6604A /* Zodiac.swift */; };
-		46AB5624242B89F100F6604A /* Dizhi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5620242B89F000F6604A /* Dizhi.swift */; };
-		46AB5625242B89F100F6604A /* Tiangan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5621242B89F000F6604A /* Tiangan.swift */; };
-		46AB5626242B8A1D00F6604A /* Dizhi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5620242B89F000F6604A /* Dizhi.swift */; };
-		46AB5627242B8A1D00F6604A /* Tiangan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5621242B89F000F6604A /* Tiangan.swift */; };
-		46AB5628242B8A1D00F6604A /* Zodiac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB561F242B89F000F6604A /* Zodiac.swift */; };
-		46E0559D24AF147300AC2AE5 /* Date+Ganzhi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0559C24AF147300AC2AE5 /* Date+Ganzhi.swift */; };
-		46E0559E24AF285B00AC2AE5 /* Date+Ganzhi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0559C24AF147300AC2AE5 /* Date+Ganzhi.swift */; };
+		46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
+		46E055AC24AF34AE00AC2AE5 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46E055AB24AF34AE00AC2AE5 /* ChineseAstrologyCalendar */; };
+		46E055B024AF351700AC2AE5 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46E055AF24AF351700AC2AE5 /* ChineseAstrologyCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,16 +79,12 @@
 		46AB55EC242B5EFF00F6604A /* TianganDizhiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganDizhiUITests.swift; sourceTree = "<group>"; };
 		46AB55EE242B5EFF00F6604A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46AB55FC242B5F7100F6604A /* DizhiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizhiListView.swift; sourceTree = "<group>"; };
-		46AB55FE242B62A100F6604A /* TianganListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
 		46AB5604242B7F6C00F6604A /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AB5606242B7F6C00F6604A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		46AB5609242B7F6C00F6604A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		46AB560C242B7F6C00F6604A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		46AB560E242B7F6C00F6604A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46AB561F242B89F000F6604A /* Zodiac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zodiac.swift; sourceTree = "<group>"; };
-		46AB5620242B89F000F6604A /* Dizhi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dizhi.swift; sourceTree = "<group>"; };
-		46AB5621242B89F000F6604A /* Tiangan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tiangan.swift; sourceTree = "<group>"; };
-		46E0559C24AF147300AC2AE5 /* Date+Ganzhi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ganzhi.swift"; sourceTree = "<group>"; };
+		46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E055AC24AF34AE00AC2AE5 /* ChineseAstrologyCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +115,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46AB5607242B7F6C00F6604A /* NotificationCenter.framework in Frameworks */,
+				46E055B024AF351700AC2AE5 /* ChineseAstrologyCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,12 +151,8 @@
 				46AB55CA242B5EFD00F6604A /* AppDelegate.swift */,
 				46AB55CC242B5EFD00F6604A /* SceneDelegate.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
+				46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */,
 				46AB55FC242B5F7100F6604A /* DizhiListView.swift */,
-				46AB55FE242B62A100F6604A /* TianganListView.swift */,
-				46AB5620242B89F000F6604A /* Dizhi.swift */,
-				46E0559C24AF147300AC2AE5 /* Date+Ganzhi.swift */,
-				46AB5621242B89F000F6604A /* Tiangan.swift */,
-				46AB561F242B89F000F6604A /* Zodiac.swift */,
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
 				46AB55D5242B5EFF00F6604A /* LaunchScreen.storyboard */,
 				46AB55D8242B5EFF00F6604A /* Info.plist */,
@@ -235,6 +223,9 @@
 				46AB5610242B7F6C00F6604A /* PBXTargetDependency */,
 			);
 			name = TianganDizhi;
+			packageProductDependencies = (
+				46E055AB24AF34AE00AC2AE5 /* ChineseAstrologyCalendar */,
+			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
 			productType = "com.apple.product-type.application";
@@ -288,6 +279,9 @@
 			dependencies = (
 			);
 			name = Today;
+			packageProductDependencies = (
+				46E055AF24AF351700AC2AE5 /* ChineseAstrologyCalendar */,
+			);
 			productName = Today;
 			productReference = 46AB5604242B7F6C00F6604A /* Today.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -327,6 +321,9 @@
 				Base,
 			);
 			mainGroup = 46AB55BE242B5EFD00F6604A;
+			packageReferences = (
+				46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
+			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -379,15 +376,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46AB55FF242B62A100F6604A /* TianganListView.swift in Sources */,
 				46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */,
+				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
 				46AB55CD242B5EFD00F6604A /* SceneDelegate.swift in Sources */,
-				46AB5625242B89F100F6604A /* Tiangan.swift in Sources */,
 				46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */,
-				46E0559D24AF147300AC2AE5 /* Date+Ganzhi.swift in Sources */,
 				46AB55FD242B5F7100F6604A /* DizhiListView.swift in Sources */,
-				46AB5624242B89F100F6604A /* Dizhi.swift in Sources */,
-				46AB5623242B89F100F6604A /* Zodiac.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,11 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46AB5626242B8A1D00F6604A /* Dizhi.swift in Sources */,
-				46AB5628242B8A1D00F6604A /* Zodiac.swift in Sources */,
-				46AB5627242B8A1D00F6604A /* Tiangan.swift in Sources */,
 				46AB560A242B7F6C00F6604A /* TodayViewController.swift in Sources */,
-				46E0559E24AF285B00AC2AE5 /* Date+Ganzhi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +572,7 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,7 +594,7 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -707,7 +696,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = Today/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -727,7 +716,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = Today/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -790,6 +779,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:xiangyu-sun/ChineseAstrologyCalendar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46E055AB24AF34AE00AC2AE5 /* ChineseAstrologyCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			productName = ChineseAstrologyCalendar;
+		};
+		46E055AF24AF351700AC2AE5 /* ChineseAstrologyCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			productName = ChineseAstrologyCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46AB55BF242B5EFD00F6604A /* Project object */;
 }

@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+import ChineseAstrologyCalendar
 struct ContentView: View {
     @State var date: Date
     
@@ -20,6 +20,8 @@ struct ContentView: View {
             }.padding()
             HStack() {
                 Text(date.year)
+                    .font(.largeTitle)
+                Text(date.month)
                     .font(.largeTitle)
                 Spacer()
             }.padding()

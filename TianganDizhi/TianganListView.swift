@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import ChineseAstrologyCalendar
 
 struct TianganListView: View {
     let tiangan = Tiangan.allCases
