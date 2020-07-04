@@ -21,7 +21,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         let now = Date()
         informationLabel.text = "\(now.year)\n\(now.month)\n\(now.zodiac)"
-        yearLabel.text = now.shichen
+        yearLabel.text = now.shichen?.displayText
         
         completionHandler(NCUpdateResult.newData)
     }

@@ -11,7 +11,7 @@ import ChineseAstrologyCalendar
 struct ContentView: View {
     @State var date: Date
     
-    
+
     var body: some View {
         VStack() {
             HStack() {
@@ -28,9 +28,7 @@ struct ContentView: View {
             }.padding()
             Spacer()
             ZStack() {
-                ClockView()
-                Text(date.shichen)
-                             .font(.largeTitle)
+                ClockView(currentShichen: date.shichen!)
             }
             Spacer()
         }
