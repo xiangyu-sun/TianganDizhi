@@ -23,6 +23,9 @@
 		46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
 		46E055AC24AF34AE00AC2AE5 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46E055AB24AF34AE00AC2AE5 /* ChineseAstrologyCalendar */; };
 		46E055B024AF351700AC2AE5 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46E055AF24AF351700AC2AE5 /* ChineseAstrologyCalendar */; };
+		46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* ClockView.swift */; };
+		46E055B424B0462500AC2AE5 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B324B0462500AC2AE5 /* Ring.swift */; };
+		46E055B624B048C500AC2AE5 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B524B048C500AC2AE5 /* Transition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		46AB560C242B7F6C00F6604A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		46AB560E242B7F6C00F6604A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
+		46E055B124B02FA900AC2AE5 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		46E055B324B0462500AC2AE5 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
+		46E055B524B048C500AC2AE5 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +158,10 @@
 				46AB55CC242B5EFD00F6604A /* SceneDelegate.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
 				46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */,
+				46E055B124B02FA900AC2AE5 /* ClockView.swift */,
 				46AB55FC242B5F7100F6604A /* DizhiListView.swift */,
+				46E055B524B048C500AC2AE5 /* Transition.swift */,
+				46E055B324B0462500AC2AE5 /* Ring.swift */,
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
 				46AB55D5242B5EFF00F6604A /* LaunchScreen.storyboard */,
 				46AB55D8242B5EFF00F6604A /* Info.plist */,
@@ -377,9 +386,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */,
+				46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */,
+				46E055B424B0462500AC2AE5 /* Ring.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
 				46AB55CD242B5EFD00F6604A /* SceneDelegate.swift in Sources */,
 				46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */,
+				46E055B624B048C500AC2AE5 /* Transition.swift in Sources */,
 				46AB55FD242B5F7100F6604A /* DizhiListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
