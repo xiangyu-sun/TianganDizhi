@@ -29,13 +29,13 @@ struct DizhiView: View {
     var body: some View {
         VStack() {
             if current {
-                Text("\(shichen.displayText)")
+                Text("\(shichen.chineseCharactor)")
                                .font(.largeTitle)
                                .fontWeight(.bold)
                                 .scaleEffect(1.2)
                                .rotationEffect(.radians(-(Double.pi * 2 / 12 * rotation)))
             } else {
-                Text("\(shichen.displayText)")
+                Text("\(shichen.chineseCharactor)")
                                .font(.largeTitle)
                                .fontWeight(.bold)
                                 .foregroundColor(Color.secondary)

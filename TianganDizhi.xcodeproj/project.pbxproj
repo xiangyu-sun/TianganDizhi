@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		468844D024F54B4600310941 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468844CF24F54B4600310941 /* Updater.swift */; };
 		46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CA242B5EFD00F6604A /* AppDelegate.swift */; };
 		46AB55CD242B5EFD00F6604A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CC242B5EFD00F6604A /* SceneDelegate.swift */; };
 		46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CE242B5EFD00F6604A /* ContentView.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		468844CF24F54B4600310941 /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		46AB55C7242B5EFD00F6604A /* TianganDizhi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TianganDizhi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AB55CA242B5EFD00F6604A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46AB55CC242B5EFD00F6604A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				46AB55CA242B5EFD00F6604A /* AppDelegate.swift */,
 				46AB55CC242B5EFD00F6604A /* SceneDelegate.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
+				468844CF24F54B4600310941 /* Updater.swift */,
 				46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */,
 				46E055B124B02FA900AC2AE5 /* ClockView.swift */,
 				46AB55FC242B5F7100F6604A /* DizhiListView.swift */,
@@ -387,6 +390,7 @@
 				46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
 				46AB55CD242B5EFD00F6604A /* SceneDelegate.swift in Sources */,
+				468844D024F54B4600310941 /* Updater.swift in Sources */,
 				46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */,
 				46AB55FD242B5F7100F6604A /* DizhiListView.swift in Sources */,
 			);

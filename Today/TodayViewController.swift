@@ -20,8 +20,16 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         let now = Date()
-        informationLabel.text = "\(now.year)\n\(now.month)\n\(now.zodiac)"
-        yearLabel.text = now.shichen?.displayText
+        do {
+            let year = try GanzhiDateConverter.nian(now).formatedYear
+            let zodiac = try GanzhiDateConverter.zodiac(now)
+            informationLabel.text = "\(year)\n\(zodiac)"
+            let dizhi = try GanzhiDateConverter.shichen(now)
+            yearLabel.text = dizhi.displayHourText
+        } catch {
+            
+        }
+        
         
         completionHandler(NCUpdateResult.newData)
     }

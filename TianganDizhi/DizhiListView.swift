@@ -23,7 +23,7 @@ struct DizhiListView: View {
         List(dizhi, id: \.self) {
             
             if self.disppayMode == .name {
-                Text($0.displayText)
+                Text($0.chineseCharactor)
             } else if self.disppayMode == .name {
                 Text($0.displayHourDetailText)
             } else {

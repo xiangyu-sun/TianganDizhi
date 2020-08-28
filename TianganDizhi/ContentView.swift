@@ -9,27 +9,27 @@
 import SwiftUI
 import ChineseAstrologyCalendar
 struct ContentView: View {
-    @State var date: Date
+    @ObservedObject var updater = Updater.shared
     
-
     var body: some View {
+        
         VStack() {
             HStack() {
-                Text(DateFormatter.localizedString(from: date, dateStyle: .long, timeStyle: .medium))
+                Text(DateFormatter.localizedString(from: updater.date, dateStyle: .long, timeStyle: .medium))
                     .font(.body)
                 Spacer()
             }.padding()
             HStack() {
-                Text(date.year)
+                
+                Text((try? GanzhiDateConverter.nian(updater.date).formatedYear) ?? "")
                     .font(.largeTitle)
-                Text(date.month)
+                Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
                     .font(.largeTitle)
                 Spacer()
             }.padding()
             Spacer()
-            ZStack() {
-                ClockView(currentShichen: date.shichen!)
-            }
+            ClockView(currentShichen: try! GanzhiDateConverter.shichen(updater.date))
+                .padding()
             Spacer()
         }
     }
@@ -37,6 +37,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(date: Date())
+        ContentView()
     }
 }

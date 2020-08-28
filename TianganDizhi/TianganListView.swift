@@ -13,7 +13,7 @@ struct TianganListView: View {
     let tiangan = Tiangan.allCases
      var body: some View {
          List(tiangan, id: \.self) {
-             Text($0.displayText)
+             Text($0.chineseCharactor)
          }
      }
 }
