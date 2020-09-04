@@ -10,15 +10,17 @@ import SwiftUI
 
 struct KnowledgeView: View {
     var body: some View {
-        List() {
-            NavigationLink(destination: TianganListView()) {
-                Text("Tiangan")
-            }
-            NavigationLink(destination: DizhiListView(disppayMode: .name)) {
-                Text("Dizhi")
-            }
-            NavigationLink(destination: DizhiListView(disppayMode: .time)) {
-                Text("Dizhi")
+        NavigationView() {
+            List() {
+                NavigationLink(destination: TianganListView()) {
+                    Text("十天干")
+                }
+                NavigationLink(destination: DizhiListView(disppayMode: .name)) {
+                    Text("十二地支")
+                }
+                NavigationLink(destination: DizhiListView(disppayMode: .time)) {
+                    Text("地支時辰")
+                }
             }
         }
     }

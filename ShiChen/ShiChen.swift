@@ -63,22 +63,18 @@ struct ShiChenEntryView : View {
             VStack() {
                 titleView
                 ShichenHStackView(shichen: shichen)
-                .padding()
             }
         case .systemLarge:
             VStack() {
                 titleView
                 ClockView(currentShichen: shichen)
-                    .padding()
             }
         default:
             VStack() {
                 titleView
                 Text(shichen.displayHourText)
                     .font(.defaultLargeTitle)
-                Text(shichen.aliasName)
-                    .font(.defaultBody)
-                Spacer()
+                ShichenInformationView(shichen: shichen)
             }
         }
         

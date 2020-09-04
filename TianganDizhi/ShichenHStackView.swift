@@ -17,18 +17,17 @@ struct ShichenHStackView: View {
             VStack(){
                 Text("\(shichen.previous.displayHourText)")
                     .font(.defaultTitle)
-                Text(shichen.previous.aliasName)
-                    .font(.defaultFootnote)
+                ShichenInformationView(shichen: shichen.previous)
             }
             .foregroundColor(Color.secondary)
             
             Spacer()
+            
             VStack(){
                 Text("\(shichen.displayHourText)")
                     .font(.defaultTitle)
                     .scaleEffect(1.2)
-                Text(shichen.aliasName)
-                    .font(.defaultFootnote)
+                ShichenInformationView(shichen: shichen)
             }
             
             
@@ -36,12 +35,24 @@ struct ShichenHStackView: View {
             VStack(){
                 Text("\(shichen.next.displayHourText)")
                     .font(.defaultTitle)
-                Text(shichen.next.aliasName)
-                    .font(.defaultFootnote)
+                ShichenInformationView(shichen: shichen.next)
             }
             .foregroundColor(Color.secondary)
         }
         .padding()
+    }
+}
+
+struct ShichenInformationView: View {
+    let shichen: Dizhi
+    
+    var body: some View {
+        HStack() {
+            Text(shichen.aliasName)
+                .font(.defaultFootnote)
+            Text(shichen.organReference)
+                .font(.defaultFootnote)
+        }
     }
 }
 

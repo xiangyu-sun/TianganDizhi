@@ -32,6 +32,8 @@ struct ContentView: View {
                 Spacer()
                 Text(shichen.aliasName)
                 .font(.defaultLargeTitle)
+                Text(shichen.organReference)
+                .font(.defaultBody)
                 ClockView(currentShichen: shichen)
                 .padding()
                 
@@ -39,9 +41,7 @@ struct ContentView: View {
             }
             .tabItem { Text("現在時辰")}
             
-            NavigationView(){
-                KnowledgeView()
-            }
+            KnowledgeView()
             .tabItem { Text("天干地支相關") }
         }
         
