@@ -12,26 +12,39 @@ struct ContentView: View {
     @ObservedObject var updater = Updater.shared
     
     var body: some View {
-        
-        VStack() {
-            HStack() {
-                Text(DateFormatter.localizedString(from: updater.date, dateStyle: .long, timeStyle: .medium))
-                    .font(.body)
-                Spacer()
-            }.padding()
-            HStack() {
+        TabView(){
+            VStack() {
+                HStack() {
+                    Text((try? GanzhiDateConverter.nian(updater.date).formatedYear) ?? "")
+                        .font(.defaultTitle)
+                    Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
+                        .font(.defaultTitle)
+                    Spacer()
+                }
                 
-                Text((try? GanzhiDateConverter.nian(updater.date).formatedYear) ?? "")
-                    .font(.largeTitle)
-                Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
-                    .font(.largeTitle)
+                HStack() {
+                    Text(DateFormatter.localizedString(from: updater.date, dateStyle: .long, timeStyle: .medium))
+                        .font(.body)
+                    Spacer()
+                }
+                
+                let shichen = try! GanzhiDateConverter.shichen(updater.date)
                 Spacer()
-            }.padding()
-            Spacer()
-            ClockView(currentShichen: try! GanzhiDateConverter.shichen(updater.date))
+                Text(shichen.aliasName)
+                .font(.defaultLargeTitle)
+                ClockView(currentShichen: shichen)
                 .padding()
-            Spacer()
+                
+                Spacer()
+            }
+            .tabItem { Text("現在時辰")}
+            
+            NavigationView(){
+                KnowledgeView()
+            }
+            .tabItem { Text("天干地支相關") }
         }
+        
     }
 }
 

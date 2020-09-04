@@ -30,20 +30,18 @@ struct DizhiView: View {
         VStack() {
             if current {
                 Text("\(shichen.chineseCharactor)")
-                               .font(.largeTitle)
-                               .fontWeight(.bold)
+                               .font(.defaultTitle)
                                 .scaleEffect(1.2)
                                .rotationEffect(.radians(-(Double.pi * 2 / 12 * rotation)))
             } else {
                 Text("\(shichen.chineseCharactor)")
-                               .font(.largeTitle)
-                               .fontWeight(.bold)
+                                .font(.defaultTitle)
                                 .foregroundColor(Color.secondary)
                                .rotationEffect(.radians(-(Double.pi * 2 / 12 * rotation)))
             }
             Spacer()
         }
-        .padding()
+        .padding(25)
         .rotationEffect(.radians((Double.pi * 2 / 12 * rotation)))
     }
 }

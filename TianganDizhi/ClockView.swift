@@ -14,8 +14,9 @@ struct ClockView: View {
     var body: some View {
         ZStack{
             Circle()
-            .stroke(lineWidth: 2)
-            ShichenView(currentShichen: currentShichen).padding()
+            .stroke(lineWidth: 4)
+            ShichenView(currentShichen: currentShichen)
+                .padding()
         }
         .scaledToFit()
         
