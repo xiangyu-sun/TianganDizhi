@@ -24,7 +24,7 @@ struct KnowledgeView: View {
                 NavigationLink(destination: DizhiListView(disppayMode: .organs)) {
                     Text("時辰與經絡")
                 }
-            }
+            }.navigationBarTitle("天干地支相關知識")
         }
     }
 }

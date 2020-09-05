@@ -16,6 +16,7 @@ struct DizhiListView: View {
         case month
         case time
         case organs
+        case alias
     }
     
     let dizhi = Dizhi.allCases
@@ -33,6 +34,8 @@ struct DizhiListView: View {
                 Text($0.displayHourDetailText)
             case .organs:
                 OrganShichenCell(shichen: $0)
+            case .alias:
+                AliasShichenCell(shichen: $0)
             }
         }
     }
@@ -46,8 +49,23 @@ struct OrganShichenCell: View {
                 .padding()
             Spacer()
             Text(气血循环流注[shichen.rawValue - 1].rawValue)
-            Spacer()
+                .padding()
         }
+        .font(.defaultBody)
+    }
+}
+
+struct AliasShichenCell: View {
+    let shichen: Dizhi
+    var body: some View {
+        HStack() {
+            Text(shichen.chineseCharactor)
+                .padding()
+            Spacer()
+            Text(shichen.aliasName)
+                .padding()
+        }
+        .font(.defaultBody)
     }
 }
 
@@ -56,6 +74,7 @@ struct DizhiListView_Time_Previews: PreviewProvider {
         DizhiListView(disppayMode: .time)
         DizhiListView(disppayMode: .name)
         DizhiListView(disppayMode: .organs)
+        DizhiListView(disppayMode: .alias)
     }
 }
 
