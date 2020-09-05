@@ -29,9 +29,10 @@ struct DizhiListView: View {
                 Text($0.chineseCharactor)
                     .padding()
             case .time:
-                Text($0.displayHourDetailText)
+                ShichenHourCell(shichen: $0)
             case .month:
-                Text($0.displayHourDetailText)
+                Text($0.formattedHourRange ?? "")
+                    .padding()
             case .organs:
                 OrganShichenCell(shichen: $0)
             case .alias:
@@ -41,16 +42,29 @@ struct DizhiListView: View {
     }
 }
 
+struct ShichenHourCell: View {
+    let shichen: Dizhi
+    var body: some View {
+        HStack() {
+            Text(shichen.chineseCharactor)
+            Spacer()
+            Text(shichen.formattedHourRange ?? "")
+        }
+        .padding()
+        .font(.defaultBody)
+    }
+}
+
 struct OrganShichenCell: View {
     let shichen: Dizhi
     var body: some View {
         HStack() {
             Text(shichen.chineseCharactor)
-                .padding()
+                
             Spacer()
             Text(气血循环流注[shichen.rawValue - 1].rawValue)
-                .padding()
         }
+        .padding()
         .font(.defaultBody)
     }
 }
@@ -60,11 +74,10 @@ struct AliasShichenCell: View {
     var body: some View {
         HStack() {
             Text(shichen.chineseCharactor)
-                .padding()
             Spacer()
             Text(shichen.aliasName)
-                .padding()
         }
+        .padding()
         .font(.defaultBody)
     }
 }
@@ -72,6 +85,7 @@ struct AliasShichenCell: View {
 struct DizhiListView_Time_Previews: PreviewProvider {
     static var previews: some View {
         DizhiListView(disppayMode: .time)
+            .environment(\.locale, Locale(identifier: "jp_JP"))
         DizhiListView(disppayMode: .name)
         DizhiListView(disppayMode: .organs)
         DizhiListView(disppayMode: .alias)
