@@ -31,8 +31,7 @@ struct DizhiListView: View {
             case .time:
                 ShichenHourCell(shichen: $0)
             case .month:
-                Text($0.formattedHourRange ?? "")
-                    .padding()
+                ShichenMonthCell(shichen: $0)
             case .organs:
                 OrganShichenCell(shichen: $0)
             case .alias:
@@ -41,6 +40,20 @@ struct DizhiListView: View {
         }
     }
 }
+
+struct ShichenMonthCell: View {
+    let shichen: Dizhi
+    var body: some View {
+        HStack() {
+            Text(shichen.chineseCharactor)
+            Spacer()
+            Text(shichen.formattedMonth)
+        }
+        .padding()
+        .font(.defaultBody)
+    }
+}
+
 
 struct ShichenHourCell: View {
     let shichen: Dizhi
@@ -87,6 +100,7 @@ struct DizhiListView_Time_Previews: PreviewProvider {
         DizhiListView(disppayMode: .time)
             .environment(\.locale, Locale(identifier: "jp_JP"))
         DizhiListView(disppayMode: .name)
+        DizhiListView(disppayMode: .month)
         DizhiListView(disppayMode: .organs)
         DizhiListView(disppayMode: .alias)
     }
