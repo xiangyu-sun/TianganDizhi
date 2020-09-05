@@ -17,6 +17,21 @@ struct DizhiListView: View {
         case time
         case organs
         case alias
+        
+        var title: String {
+            switch self {
+            case .name:
+                return "十二地支"
+            case .month:
+                return "時辰與月份"
+            case .time:
+                return "時辰與小時"
+            case .organs:
+                return "時辰與經絡"
+            case .alias:
+                return "時辰的別名"
+            }
+        }
     }
     
     let dizhi = Dizhi.allCases
@@ -38,6 +53,7 @@ struct DizhiListView: View {
                 AliasShichenCell(shichen: $0)
             }
         }
+        .navigationBarTitle(disppayMode.title)
     }
 }
 

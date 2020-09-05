@@ -16,13 +16,16 @@ struct KnowledgeView: View {
                     Text("十天干")
                 }
                 NavigationLink(destination: DizhiListView(disppayMode: .name)) {
-                    Text("十二地支")
+                    Text(DizhiListView.DisplayMode.name.title)
                 }
                 NavigationLink(destination: DizhiListView(disppayMode: .time)) {
-                    Text("地支時辰")
+                    Text(DizhiListView.DisplayMode.time.title)
+                }
+                NavigationLink(destination: DizhiListView(disppayMode: .month)) {
+                    Text(DizhiListView.DisplayMode.month.title)
                 }
                 NavigationLink(destination: DizhiListView(disppayMode: .organs)) {
-                    Text("時辰與經絡")
+                    Text(DizhiListView.DisplayMode.organs.title)
                 }
             }.navigationBarTitle("天干地支相關知識")
         }
