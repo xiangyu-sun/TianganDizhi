@@ -21,6 +21,9 @@ struct KnowledgeView: View {
                 NavigationLink(destination: DizhiListView(disppayMode: .time)) {
                     Text("地支時辰")
                 }
+                NavigationLink(destination: DizhiListView(disppayMode: .organs)) {
+                    Text("時辰與經絡")
+                }
             }
         }
     }

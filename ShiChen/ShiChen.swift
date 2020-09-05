@@ -67,7 +67,7 @@ struct ShiChenEntryView : View {
         case .systemLarge:
             VStack() {
                 titleView
-                ClockView(currentShichen: shichen)
+                ClockView(currentShichen: shichen, padding: 0)
             }
         default:
             VStack() {

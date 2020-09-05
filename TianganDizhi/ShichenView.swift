@@ -20,10 +20,10 @@ struct ShichenView: View {
     }
 }
 
-struct DizhiView: View {
+private struct DizhiView: View {
     let shichen: Dizhi
     var rotation: Double {
-        Double((shichen.rawValue + 1) % 12)
+        Double((shichen.rawValue + 7) % 12)
     }
     let current: Bool
     var body: some View {

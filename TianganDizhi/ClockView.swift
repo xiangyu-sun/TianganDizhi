@@ -10,13 +10,14 @@ import SwiftUI
 import ChineseAstrologyCalendar
 
 struct ClockView: View {
-    var currentShichen: Dizhi
+    let currentShichen: Dizhi
+    let padding: CGFloat
     var body: some View {
         ZStack{
             Circle()
             .stroke(lineWidth: 4)
             ShichenView(currentShichen: currentShichen)
-                .padding()
+            .padding(padding)
         }
         .scaledToFit()
         
@@ -25,6 +26,7 @@ struct ClockView: View {
 
 struct ClockView_Previews: PreviewProvider {
     static var previews: some View {
-        ClockView(currentShichen: .chen)
+        ClockView(currentShichen: .chen, padding: 14)
+        ClockView(currentShichen: .chen, padding: 0)
     }
 }

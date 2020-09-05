@@ -8,12 +8,14 @@
 
 import SwiftUI
 import ChineseAstrologyCalendar
+import JingluoShuxue
 
 struct DizhiListView: View {
     enum DisplayMode {
         case name
         case month
         case time
+        case organs
     }
     
     let dizhi = Dizhi.allCases
@@ -21,14 +23,30 @@ struct DizhiListView: View {
     
     var body: some View {
         List(dizhi, id: \.self) {
-            
-            if self.disppayMode == .name {
+            switch self.disppayMode {
+            case .name:
                 Text($0.chineseCharactor)
-            } else if self.disppayMode == .name {
+                    .padding()
+            case .time:
                 Text($0.displayHourDetailText)
-            } else {
+            case .month:
                 Text($0.displayHourDetailText)
+            case .organs:
+                OrganShichenCell(shichen: $0)
             }
+        }
+    }
+}
+
+struct OrganShichenCell: View {
+    let shichen: Dizhi
+    var body: some View {
+        HStack() {
+            Text(shichen.chineseCharactor)
+                .padding()
+            Spacer()
+            Text(气血循环流注[shichen.rawValue - 1].rawValue)
+            Spacer()
         }
     }
 }
@@ -36,11 +54,8 @@ struct DizhiListView: View {
 struct DizhiListView_Time_Previews: PreviewProvider {
     static var previews: some View {
         DizhiListView(disppayMode: .time)
+        DizhiListView(disppayMode: .name)
+        DizhiListView(disppayMode: .organs)
     }
 }
 
-struct DizhiListView_Name_Previews: PreviewProvider {
-    static var previews: some View {
-        DizhiListView(disppayMode: .name)
-    }
-}

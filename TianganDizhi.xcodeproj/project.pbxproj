@@ -24,6 +24,8 @@
 		46339FE625027DA8007D4137 /* ShichenHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE525027DA8007D4137 /* ShichenHStackView.swift */; };
 		46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE525027DA8007D4137 /* ShichenHStackView.swift */; };
 		46339FE925028279007D4137 /* KnowledgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE825028279007D4137 /* KnowledgeView.swift */; };
+		46339FEB25028DB5007D4137 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FEA25028DB5007D4137 /* MainView.swift */; };
+		46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 46339FEF25029C64007D4137 /* JingluoShuxue */; };
 		468844D024F54B4600310941 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468844CF24F54B4600310941 /* Updater.swift */; };
 		46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CA242B5EFD00F6604A /* AppDelegate.swift */; };
 		46AB55CD242B5EFD00F6604A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CC242B5EFD00F6604A /* SceneDelegate.swift */; };
@@ -103,6 +105,8 @@
 		46339FE225024E85007D4137 /* Styler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styler.swift; sourceTree = "<group>"; };
 		46339FE525027DA8007D4137 /* ShichenHStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenHStackView.swift; sourceTree = "<group>"; };
 		46339FE825028279007D4137 /* KnowledgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeView.swift; sourceTree = "<group>"; };
+		46339FEA25028DB5007D4137 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		46339FEC250296BF007D4137 /* ShiChenExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiChenExtension.entitlements; sourceTree = "<group>"; };
 		468844CF24F54B4600310941 /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		46AB55C7242B5EFD00F6604A /* TianganDizhi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TianganDizhi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AB55CA242B5EFD00F6604A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E055AC24AF34AE00AC2AE5 /* ChineseAstrologyCalendar in Frameworks */,
+				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +201,7 @@
 		46AB55BE242B5EFD00F6604A = {
 			isa = PBXGroup;
 			children = (
+				46339FEC250296BF007D4137 /* ShiChenExtension.entitlements */,
 				46AB55C9242B5EFD00F6604A /* TianganDizhi */,
 				46AB55E0242B5EFF00F6604A /* TianganDizhiTests */,
 				46AB55EB242B5EFF00F6604A /* TianganDizhiUITests */,
@@ -224,6 +230,7 @@
 				46AB55CA242B5EFD00F6604A /* AppDelegate.swift */,
 				46AB55CC242B5EFD00F6604A /* SceneDelegate.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
+				46339FEA25028DB5007D4137 /* MainView.swift */,
 				468844CF24F54B4600310941 /* Updater.swift */,
 				46339FE825028279007D4137 /* KnowledgeView.swift */,
 				46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */,
@@ -328,6 +335,7 @@
 			name = TianganDizhi;
 			packageProductDependencies = (
 				46E055AB24AF34AE00AC2AE5 /* ChineseAstrologyCalendar */,
+				46339FEF25029C64007D4137 /* JingluoShuxue */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -429,6 +437,7 @@
 			mainGroup = 46AB55BE242B5EFD00F6604A;
 			packageReferences = (
 				46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
+				46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -507,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */,
+				46339FEB25028DB5007D4137 /* MainView.swift in Sources */,
 				46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */,
 				46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
@@ -596,6 +606,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = ShiChenExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = ShiChen/Info.plist;
@@ -608,8 +619,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -619,6 +631,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = ShiChenExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = ShiChen/Info.plist;
@@ -631,8 +644,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
@@ -980,6 +994,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xiangyu-sun/JingluoShuxueCore.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:xiangyu-sun/ChineseAstrologyCalendar.git";
@@ -995,6 +1017,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
 			productName = ChineseAstrologyCalendar;
+		};
+		46339FEF25029C64007D4137 /* JingluoShuxue */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */;
+			productName = JingluoShuxue;
 		};
 		46E055AB24AF34AE00AC2AE5 /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
