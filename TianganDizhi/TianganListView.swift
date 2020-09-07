@@ -13,9 +13,21 @@ struct TianganListView: View {
     let tiangan = Tiangan.allCases
      var body: some View {
          List(tiangan, id: \.self) {
-             Text($0.chineseCharactor)
+            TianganCell(tiangan: $0)
          }
      }
+}
+
+struct TianganCell: View {
+    let tiangan: Tiangan
+    var body: some View {
+        HStack() {
+            Text(tiangan.chineseCharactor)
+            Text("(\(tiangan.chineseCharactor.transformToPinyin()))")
+        }
+        .padding()
+        .font(.defaultBody)
+    }
 }
 
 struct TianganListView_Previews: PreviewProvider {

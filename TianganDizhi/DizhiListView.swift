@@ -41,8 +41,7 @@ struct DizhiListView: View {
         List(dizhi, id: \.self) {
             switch self.disppayMode {
             case .name:
-                Text($0.chineseCharactor)
-                    .padding()
+                DizhiCell(dizhi: $0)
             case .time:
                 ShichenHourCell(shichen: $0)
             case .month:
@@ -54,6 +53,18 @@ struct DizhiListView: View {
             }
         }
         .navigationBarTitle(disppayMode.title)
+    }
+}
+
+struct DizhiCell: View {
+    let dizhi: Dizhi
+    var body: some View {
+        HStack() {
+            Text(dizhi.chineseCharactor)
+            Text("(\(dizhi.chineseCharactor.transformToPinyin()))")
+        }
+        .padding()
+        .font(.defaultBody)
     }
 }
 
