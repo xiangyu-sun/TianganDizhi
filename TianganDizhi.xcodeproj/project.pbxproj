@@ -41,6 +41,8 @@
 		46AB560D242B7F6C00F6604A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46AB560B242B7F6C00F6604A /* MainInterface.storyboard */; };
 		46AB5611242B7F6C00F6604A /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 46AB5604242B7F6C00F6604A /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */; };
+		46B7FCE9250620CC008E8D48 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
+		46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
 		46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
 		46E055AC24AF34AE00AC2AE5 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46E055AB24AF34AE00AC2AE5 /* ChineseAstrologyCalendar */; };
 		46E055B024AF351700AC2AE5 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46E055AF24AF351700AC2AE5 /* ChineseAstrologyCalendar */; };
@@ -130,6 +132,7 @@
 		46AB560C242B7F6C00F6604A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		46AB560E242B7F6C00F6604A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinesePinyin.swift; sourceTree = "<group>"; };
+		46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineScheduler.swift; sourceTree = "<group>"; };
 		46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
 		46E055B124B02FA900AC2AE5 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		46E055B724B065BD00AC2AE5 /* ShichenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenView.swift; sourceTree = "<group>"; };
@@ -242,6 +245,7 @@
 				46339FE525027DA8007D4137 /* ShichenHStackView.swift */,
 				46339FE225024E85007D4137 /* Styler.swift */,
 				46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */,
+				46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */,
 				46339FDE25024CD7007D4137 /* Songti TC */,
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
 				46AB55D5242B5EFF00F6604A /* LaunchScreen.storyboard */,
@@ -510,6 +514,7 @@
 				46339FDD2500EA60007D4137 /* ShichenView.swift in Sources */,
 				46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */,
 				46339FDC2500EA41007D4137 /* ClockView.swift in Sources */,
+				46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */,
 				462A5F7024FFE5F20032A125 /* ShiChen.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +527,7 @@
 				46339FEB25028DB5007D4137 /* MainView.swift in Sources */,
 				46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */,
 				46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */,
+				46B7FCE9250620CC008E8D48 /* TimelineScheduler.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
 				46AB55CD242B5EFD00F6604A /* SceneDelegate.swift in Sources */,
 				46339FE925028279007D4137 /* KnowledgeView.swift in Sources */,

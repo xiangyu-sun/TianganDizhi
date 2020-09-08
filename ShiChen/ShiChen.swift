@@ -25,19 +25,8 @@ struct Provider: IntentTimelineProvider {
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
         
-        let currentDate = Date()
-        
-        let entry = SimpleEntry(date: currentDate, configuration: configuration)
-        entries.append(entry)
-        
-        let next = try? GanzhiDateConverter.shichen(currentDate).secondToNextShiChen()
-        let nextDate = Date(timeIntervalSinceNow: next!)
-        let nextEntry = SimpleEntry(date: nextDate, configuration: configuration)
-        entries.append(nextEntry)
-        
-        for hourOffset in 1 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset * 2, to: nextDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+        for date in TimeLineSceduler.buildTimeLine() {
+            let entry = SimpleEntry(date: date, configuration: configuration)
             entries.append(entry)
         }
         
