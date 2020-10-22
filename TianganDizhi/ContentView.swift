@@ -26,6 +26,7 @@ struct ContentView: View {
                 Image(systemName: "book")
                 Text("天干地支")
             }
+            .accessibility(identifier: "knowledge")
         }
         .titleFont(.defaultTitleWithSize(size: 80))
         .largeTitleFont(.defaultLargeTitleWithSize(size: 100))

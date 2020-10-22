@@ -26,13 +26,18 @@ class TianganDizhiUITests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testLaunch() {
         snapshot("launch")
     }
-
+    
+    func testKownlegeScreen() {
+        XCUIApplication().tabBars["Tab Bar"].buttons["book"].tap()
+        snapshot("testKownlegeScreen")
+    }
+    
+    func testShichen() {
+        app.tabBars["Tab Bar"].buttons["book"].tap()
+        app/*@START_MENU_TOKEN@*/.tables.buttons["十天干"]/*[[".otherElements[\"knowledge\"].tables",".cells[\"十天干\"].buttons[\"十天干\"]",".buttons[\"十天干\"]",".tables"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/.tap()
+        snapshot("testShichen")
+    }
 }

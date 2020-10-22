@@ -21,7 +21,7 @@ class TianganDizhiTests: XCTestCase {
     
     func testTimeline() {
         let timeline = TimeLineSceduler.buildTimeLine()
-        XCTAssertEqual(timeline.count, 5)
+        XCTAssertEqual(timeline.count, 6)
         let comp:Set<Calendar.Component> = [.hour, .minute, .second, .nanosecond]
         
         let second = timeline[1]
