@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct KnowledgeView: View {
+    @Environment(\.bodyFont) var bodyFont
+    
     var body: some View {
         NavigationView() {
             List() {
@@ -27,8 +29,11 @@ struct KnowledgeView: View {
                 NavigationLink(destination: DizhiListView(disppayMode: .organs)) {
                     Text(DizhiListView.DisplayMode.organs.title)
                 }
-            }.navigationBarTitle("天干地支相關知識")
+            }
+            .font(bodyFont)
+            .navigationBarTitle("天干地支相關知識")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

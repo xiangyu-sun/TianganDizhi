@@ -11,6 +11,7 @@ import ChineseAstrologyCalendar
 import JingluoShuxue
 
 struct DizhiListView: View {
+    @Environment(\.bodyFont) var bodyFont
     enum DisplayMode {
         case name
         case month
@@ -52,26 +53,25 @@ struct DizhiListView: View {
                 AliasShichenCell(shichen: $0)
             }
         }
+        .font(bodyFont)
         .navigationBarTitle(disppayMode.title)
     }
 }
 
 struct DizhiCell: View {
     let dizhi: Dizhi
-    @Environment(\.bodyFont) var bodyFont
+
     var body: some View {
         HStack() {
             Text(dizhi.chineseCharactor)
             Text("(\(dizhi.chineseCharactor.transformToPinyin()))")
         }
         .padding()
-        .font(bodyFont)
     }
 }
 
 struct ShichenMonthCell: View {
     let shichen: Dizhi
-    @Environment(\.bodyFont) var bodyFont
     var body: some View {
         HStack() {
             Text(shichen.chineseCharactor)
@@ -79,14 +79,12 @@ struct ShichenMonthCell: View {
             Text(shichen.formattedMonth)
         }
         .padding()
-        .font(bodyFont)
     }
 }
 
 
 struct ShichenHourCell: View {
     let shichen: Dizhi
-    @Environment(\.bodyFont) var bodyFont
     var body: some View {
         HStack() {
             Text(shichen.chineseCharactor)
@@ -94,13 +92,12 @@ struct ShichenHourCell: View {
             Text(shichen.formattedHourRange ?? "")
         }
         .padding()
-        .font(bodyFont)
     }
 }
 
 struct OrganShichenCell: View {
     let shichen: Dizhi
-    @Environment(\.bodyFont) var bodyFont
+
     var body: some View {
         HStack() {
             Text(shichen.chineseCharactor)
@@ -109,13 +106,11 @@ struct OrganShichenCell: View {
             Text(气血循环流注[shichen.rawValue - 1].rawValue)
         }
         .padding()
-        .font(bodyFont)
     }
 }
 
 struct AliasShichenCell: View {
     let shichen: Dizhi
-    @Environment(\.bodyFont) var bodyFont
     var body: some View {
         HStack() {
             Text(shichen.chineseCharactor)
@@ -123,7 +118,6 @@ struct AliasShichenCell: View {
             Text(shichen.aliasName)
         }
         .padding()
-        .font(bodyFont)
     }
 }
 
