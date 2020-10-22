@@ -39,7 +39,6 @@ struct ShichenHStackView: View {
             }
             .foregroundColor(Color.secondary)
         }
-        .padding()
     }
 }
 

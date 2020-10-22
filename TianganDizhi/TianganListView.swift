@@ -15,6 +15,7 @@ struct TianganListView: View {
          List(tiangan, id: \.self) {
             TianganCell(tiangan: $0)
          }
+         .navigationBarTitle("十天干")
      }
 }
 

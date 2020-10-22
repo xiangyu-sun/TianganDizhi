@@ -51,7 +51,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Songti.ttc</string>
+		<string>WeibeiTC-Bold.otf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

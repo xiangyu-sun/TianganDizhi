@@ -1,0 +1,8 @@
+app_identifier("com.uriphium.TianganDizhi") # The bundle identifier of your app
+apple_id("luc.alexander.sun@icloud.com") # Your Apple email address
+
+itc_team_id("1077822") # App Store Connect Team ID
+team_id("46S3S784AR") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

@@ -12,10 +12,16 @@ struct ContentView: View {
     var body: some View {
         TabView(){
             MainView()
-            .tabItem { Text("現在時辰")}
+            .tabItem {
+                Image(systemName: "clock.fill")
+                Text("時辰")
+            }
             
             KnowledgeView()
-            .tabItem { Text("天干地支相關") }
+            .tabItem {
+                Image(systemName: "book")
+                Text("天干地支")
+            }
         }
         
     }

@@ -21,7 +21,7 @@ struct TimeLineSceduler {
             return backup()
         }
         
-        for hourOffset in 1 ..< 5 {
+        for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset * 2, to: nextShichenStart)!
             timeline.append(entryDate)
         }

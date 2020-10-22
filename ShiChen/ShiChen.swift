@@ -101,5 +101,14 @@ struct ShiChen_Previews: PreviewProvider {
             .previewContext(WidgetPreviewContext(family: .systemMedium))
         ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
             .previewContext(WidgetPreviewContext(family: .systemLarge))
+        
+        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
+            .environment(\.colorScheme, .dark)
+        
+        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
+            .environment(\.sizeCategory, .extraExtraLarge)
+
     }
 }

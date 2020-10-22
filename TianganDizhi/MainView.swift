@@ -11,36 +11,43 @@ import ChineseAstrologyCalendar
 
 struct MainView: View {
     @ObservedObject var updater = Updater.shared
-
+    
     var body: some View {
-        VStack() {
-            HStack() {
-                Text((try? GanzhiDateConverter.nian(updater.date).formatedYear) ?? "")
-                    .font(.defaultTitle)
-                Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
-                    .font(.defaultTitle)
+ 
+            VStack() {
+                HStack() {
+                    Text((try? GanzhiDateConverter.nian(updater.date).formatedYear) ?? "")
+                        .font(.defaultTitle)
+                    Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
+                        .font(.defaultTitle)
+                    Spacer()
+                }
+               
+                HStack() {
+                    Text(DateFormatter.localizedString(from: updater.date, dateStyle: .long, timeStyle: .medium))
+                        .font(.defaultFootnote)
+                    Spacer()
+                }
+                
+                let shichen = try! GanzhiDateConverter.shichen(updater.date)
+                Spacer()
+                Text(shichen.aliasName)
+                .font(.defaultLargeTitle)
+                Text(shichen.organReference)
+                .font(.defaultBody)
+                
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    ClockView(currentShichen: shichen, padding: 40)
+                    .padding()
+                } else {
+                    ClockView(currentShichen: shichen, padding: 14)
+                    .padding()
+                }
+      
+                
                 Spacer()
             }
-           
-            HStack() {
-                Text(Locale.current.languageCode ?? "")
-                Text(DateFormatter.localizedString(from: updater.date, dateStyle: .long, timeStyle: .medium))
-                    .font(.defaultFootnote)
-                Spacer()
-            }
             
-            let shichen = try! GanzhiDateConverter.shichen(updater.date)
-            Spacer()
-            Text(shichen.aliasName)
-            .font(.defaultLargeTitle)
-            Text(shichen.organReference)
-            .font(.defaultBody)
-            
-            ClockView(currentShichen: shichen, padding: 14)
-            .padding()
-            
-            Spacer()
-        }
     }
 }
 
