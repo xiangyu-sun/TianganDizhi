@@ -43,7 +43,8 @@ struct SimpleEntry: TimelineEntry {
 struct ShiChenEntryView : View {
     var entry: Provider.Entry
     @Environment(\.widgetFamily) var family
-    
+    @Environment(\.largeTitleFont) var largeTitleFont
+    @Environment(\.bodyFont) var bodyFont
     var body: some View {
         let shichen = try! GanzhiDateConverter.shichen(entry.date)
         
@@ -62,7 +63,8 @@ struct ShiChenEntryView : View {
             VStack() {
                 titleView
                 Text(shichen.displayHourText)
-                    .font(.defaultLargeTitle)
+                .font(largeTitleFont)
+                
                 ShichenInformationView(shichen: shichen)
             }
         }
@@ -72,9 +74,9 @@ struct ShiChenEntryView : View {
     private var titleView: some View {
         HStack(){
             Text((try? GanzhiDateConverter.nian(entry.date).formatedYear) ?? "")
-                .font(.defaultBody)
+                .font(bodyFont)
             Text((try? GanzhiDateConverter.zodiac(entry.date).rawValue) ?? "")
-                .font(.defaultBody)
+                .font(bodyFont)
         }
     }
 }

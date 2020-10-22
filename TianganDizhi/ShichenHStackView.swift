@@ -11,12 +11,13 @@ import ChineseAstrologyCalendar
 
 struct ShichenHStackView: View {
     let shichen: Dizhi
+    @Environment(\.titleFont) var titleFont
     
     var body: some View {
         HStack() {
             VStack(){
                 Text("\(shichen.previous.displayHourText)")
-                    .font(.defaultTitle)
+                    .font(titleFont)
                 ShichenInformationView(shichen: shichen.previous)
             }
             .foregroundColor(Color.secondary)
@@ -25,7 +26,7 @@ struct ShichenHStackView: View {
             
             VStack(){
                 Text("\(shichen.displayHourText)")
-                    .font(.defaultTitle)
+                    .font(titleFont)
                     .scaleEffect(1.2)
                 ShichenInformationView(shichen: shichen)
             }
@@ -34,7 +35,7 @@ struct ShichenHStackView: View {
             Spacer()
             VStack(){
                 Text("\(shichen.next.displayHourText)")
-                    .font(.defaultTitle)
+                    .font(titleFont)
                 ShichenInformationView(shichen: shichen.next)
             }
             .foregroundColor(Color.secondary)

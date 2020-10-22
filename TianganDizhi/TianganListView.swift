@@ -21,13 +21,14 @@ struct TianganListView: View {
 
 struct TianganCell: View {
     let tiangan: Tiangan
+    @Environment(\.bodyFont) var bodyFont
     var body: some View {
         HStack() {
             Text(tiangan.chineseCharactor)
             Text("(\(tiangan.chineseCharactor.transformToPinyin()))")
         }
         .padding()
-        .font(.defaultBody)
+        .font(bodyFont)
     }
 }
 

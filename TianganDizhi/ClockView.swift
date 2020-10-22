@@ -11,14 +11,15 @@ import ChineseAstrologyCalendar
 
 struct ClockView: View {
     let currentShichen: Dizhi
-     let padding: CGFloat
+    let padding: CGFloat
+
     var body: some View {
         ZStack{
             Circle()
-            .stroke(lineWidth: 4)
+                .stroke(lineWidth: 4)
             
             ShichenView(currentShichen: currentShichen)
-            .padding(padding)
+                .padding(padding)
         }
         .scaledToFit()
         

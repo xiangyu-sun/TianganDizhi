@@ -9,32 +9,35 @@
 import SwiftUI
 
 extension Font {
-    public static var defaultLargeTitle: Font {
-        
+
+    public static func defaultLargeTitleWithSize(size: CGFloat) -> Font {
         if #available(iOS 14.0, *) {
-            return .custom("Weibei TC Bold", size: 50, relativeTo: .largeTitle)
+            return .custom("Weibei TC Bold", size: size, relativeTo: .largeTitle)
         } else {
-            return .custom("Weibei TC Bold", size: 50)
+            return .custom("Weibei TC Bold", size: size)
         }
         
     }
     
-    public static var defaultTitle: Font {
+    public static func defaultTitleWithSize(size: CGFloat) -> Font {
         if #available(iOS 14.0, *) {
-            return .custom("Weibei TC Bold", size: 40, relativeTo: .title)
+            return .custom("Weibei TC Bold", size: size, relativeTo: .title)
         } else {
-            return .custom("Weibei TC Bold", size: 40)
+            return .custom("Weibei TC Bold", size: size)
         }
         
     }
-    public static var defaultBody: Font {
+    
+    
+    public static func defaultBodyWithSize(size: CGFloat) -> Font {
         if #available(iOS 14.0, *) {
-            return .custom("Weibei TC Bold", size: 22, relativeTo: .subheadline)
+            return .custom("Weibei TC Bold", size: size, relativeTo: .body)
         } else {
-            return .custom("Weibei TC Bold", size: 22)
+            return .custom("Weibei TC Bold", size: size)
         }
         
     }
+    
     public static var defaultFootnote: Font {
         if #available(iOS 14.0, *) {
             return .custom("Weibei TC Bold", size: 18, relativeTo: .footnote)

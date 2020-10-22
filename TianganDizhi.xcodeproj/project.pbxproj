@@ -41,6 +41,8 @@
 		46B79C0D2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
 		46B79C0E2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
 		46B79C342541EB87003C0B7F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C332541EB87003C0B7F /* SnapshotHelper.swift */; };
+		46B79C402541F95F003C0B7F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
+		46B79C462541F962003C0B7F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
 		46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */; };
 		46B7FCE9250620CC008E8D48 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
 		46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
@@ -133,6 +135,7 @@
 		46AB560E242B7F6C00F6604A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WeibeiTC-Bold.otf"; sourceTree = "<group>"; };
 		46B79C332541EB87003C0B7F /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		46B79C3F2541F95F003C0B7F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinesePinyin.swift; sourceTree = "<group>"; };
 		46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineScheduler.swift; sourceTree = "<group>"; };
 		46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
@@ -230,6 +233,7 @@
 				46AB55CC242B5EFD00F6604A /* SceneDelegate.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
 				46339FEA25028DB5007D4137 /* MainView.swift */,
+				46B79C3F2541F95F003C0B7F /* Environment.swift */,
 				468844CF24F54B4600310941 /* Updater.swift */,
 				46339FE825028279007D4137 /* KnowledgeView.swift */,
 				46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */,
@@ -513,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */,
+				46B79C462541F962003C0B7F /* Environment.swift in Sources */,
 				46339FE425024F2B007D4137 /* Styler.swift in Sources */,
 				46339FDD2500EA60007D4137 /* ShichenView.swift in Sources */,
 				46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */,
@@ -527,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */,
+				46B79C402541F95F003C0B7F /* Environment.swift in Sources */,
 				46339FEB25028DB5007D4137 /* MainView.swift in Sources */,
 				46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */,
 				46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */,

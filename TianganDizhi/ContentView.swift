@@ -8,9 +8,13 @@
 
 import SwiftUI
 import ChineseAstrologyCalendar
+
+
+
 struct ContentView: View {    
     var body: some View {
         TabView(){
+        
             MainView()
             .tabItem {
                 Image(systemName: "clock.fill")
@@ -23,7 +27,9 @@ struct ContentView: View {
                 Text("天干地支")
             }
         }
-        
+        .titleFont(.defaultTitleWithSize(size: 80))
+        .largeTitleFont(.defaultLargeTitleWithSize(size: 100))
+        .bodyFont(.defaultBodyWithSize(size: 44))
     }
 }
 

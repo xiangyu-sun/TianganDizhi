@@ -9,20 +9,24 @@
 import SwiftUI
 import ChineseAstrologyCalendar
 
+
 struct MainView: View {
     @ObservedObject var updater = Updater.shared
+    @Environment(\.titleFont) var titleFont
+    @Environment(\.largeTitleFont) var largeTitleFont
+    @Environment(\.bodyFont) var bodyFont
     
     var body: some View {
  
-            VStack() {
+        VStack() {
                 HStack() {
                     Text((try? GanzhiDateConverter.nian(updater.date).formatedYear) ?? "")
-                        .font(.defaultTitle)
+                        .font(titleFont)
                     Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
-                        .font(.defaultTitle)
+                        .font(titleFont)
                     Spacer()
                 }
-               
+                
                 HStack() {
                     Text(DateFormatter.localizedString(from: updater.date, dateStyle: .long, timeStyle: .medium))
                         .font(.defaultFootnote)
@@ -32,16 +36,16 @@ struct MainView: View {
                 let shichen = try! GanzhiDateConverter.shichen(updater.date)
                 Spacer()
                 Text(shichen.aliasName)
-                .font(.defaultLargeTitle)
+                .font(largeTitleFont)
                 Text(shichen.organReference)
-                .font(.defaultBody)
+                .font(bodyFont)
                 
                 if UIDevice.current.userInterfaceIdiom == .pad {
-                    ClockView(currentShichen: shichen, padding: 40)
-                    .padding()
+                    ClockView(currentShichen: shichen, padding: 50)
+                        .padding()
                 } else {
                     ClockView(currentShichen: shichen, padding: 14)
-                    .padding()
+                        .padding()
                 }
       
                 
