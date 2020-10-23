@@ -11,8 +11,6 @@
 		462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
 		462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A5F6A24FFE5F20032A125 /* ShiChen.swift */; };
 		462A5F6E24FFE5F20032A125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462A5F6D24FFE5F20032A125 /* Assets.xcassets */; };
-		462A5F7024FFE5F20032A125 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 462A5F6C24FFE5F20032A125 /* ShiChen.intentdefinition */; };
-		462A5F7124FFE5F20032A125 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 462A5F6C24FFE5F20032A125 /* ShiChen.intentdefinition */; };
 		462A5F7424FFE5F20032A125 /* ShiChenExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		46339FDB2500D169007D4137 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46339FDA2500D169007D4137 /* ChineseAstrologyCalendar */; };
 		46339FDC2500EA41007D4137 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* ClockView.swift */; };
@@ -43,6 +41,10 @@
 		46B79C342541EB87003C0B7F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C332541EB87003C0B7F /* SnapshotHelper.swift */; };
 		46B79C402541F95F003C0B7F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
 		46B79C462541F962003C0B7F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
+		46B79CC62542F076003C0B7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B79CC82542F076003C0B7F /* InfoPlist.strings */; };
+		46B79CD62542F0AE003C0B7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B79CD82542F0AE003C0B7F /* InfoPlist.strings */; };
+		46B79CE92542F359003C0B7F /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46B79CEC2542F359003C0B7F /* ShiChen.intentdefinition */; };
+		46B79CEA2542F359003C0B7F /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46B79CEC2542F359003C0B7F /* ShiChen.intentdefinition */; };
 		46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */; };
 		46B7FCE9250620CC008E8D48 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
 		46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
@@ -104,7 +106,6 @@
 		462A5F6524FFE5F20032A125 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		462A5F6724FFE5F20032A125 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		462A5F6A24FFE5F20032A125 /* ShiChen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChen.swift; sourceTree = "<group>"; };
-		462A5F6C24FFE5F20032A125 /* ShiChen.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ShiChen.intentdefinition; sourceTree = "<group>"; };
 		462A5F6D24FFE5F20032A125 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		462A5F6F24FFE5F20032A125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46339FE225024E85007D4137 /* Styler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styler.swift; sourceTree = "<group>"; };
@@ -140,6 +141,14 @@
 		46B79C5C25420BC9003C0B7F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/MainInterface.strings"; sourceTree = "<group>"; };
 		46B79C7125420C5C003C0B7F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		46B79C7225420C5C003C0B7F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
+		46B79CB22542F017003C0B7F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		46B79CB92542F019003C0B7F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		46B79CC72542F076003C0B7F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		46B79CCE2542F07A003C0B7F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		46B79CD72542F0AE003C0B7F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		46B79CDE2542F0B3003C0B7F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		46B79CEB2542F359003C0B7F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = "zh-Hans"; path = "zh-Hans.lproj/ShiChen.intentdefinition"; sourceTree = "<group>"; };
+		46B79CF32542F35D003C0B7F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/ShiChen.strings"; sourceTree = "<group>"; };
 		46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinesePinyin.swift; sourceTree = "<group>"; };
 		46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineScheduler.swift; sourceTree = "<group>"; };
 		46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
@@ -197,7 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				462A5F6A24FFE5F20032A125 /* ShiChen.swift */,
-				462A5F6C24FFE5F20032A125 /* ShiChen.intentdefinition */,
+				46B79CB32542F017003C0B7F /* InfoPlist.strings */,
+				46B79CEC2542F359003C0B7F /* ShiChen.intentdefinition */,
 				462A5F6D24FFE5F20032A125 /* Assets.xcassets */,
 				462A5F6F24FFE5F20032A125 /* Info.plist */,
 			);
@@ -252,6 +262,7 @@
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
 				46AB55D5242B5EFF00F6604A /* LaunchScreen.storyboard */,
 				46AB55D8242B5EFF00F6604A /* Info.plist */,
+				46B79CD82542F0AE003C0B7F /* InfoPlist.strings */,
 				46AB55D2242B5EFF00F6604A /* Preview Content */,
 			);
 			path = TianganDizhi;
@@ -298,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				46AB5609242B7F6C00F6604A /* TodayViewController.swift */,
+				46B79CC82542F076003C0B7F /* InfoPlist.strings */,
 				46AB560B242B7F6C00F6604A /* MainInterface.storyboard */,
 				46AB560E242B7F6C00F6604A /* Info.plist */,
 			);
@@ -487,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46AB55D7242B5EFF00F6604A /* LaunchScreen.storyboard in Resources */,
+				46B79CD62542F0AE003C0B7F /* InfoPlist.strings in Resources */,
 				46B79C0D2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */,
 				46AB55D4242B5EFF00F6604A /* Preview Assets.xcassets in Resources */,
 				46AB55D1242B5EFF00F6604A /* Assets.xcassets in Resources */,
@@ -512,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46AB560D242B7F6C00F6604A /* MainInterface.storyboard in Resources */,
+				46B79CC62542F076003C0B7F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,7 +543,7 @@
 				46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */,
 				46339FDC2500EA41007D4137 /* ClockView.swift in Sources */,
 				46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */,
-				462A5F7024FFE5F20032A125 /* ShiChen.intentdefinition in Sources */,
+				46B79CEA2542F359003C0B7F /* ShiChen.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +562,7 @@
 				46339FE925028279007D4137 /* KnowledgeView.swift in Sources */,
 				468844D024F54B4600310941 /* Updater.swift in Sources */,
 				46339FE325024E85007D4137 /* Styler.swift in Sources */,
-				462A5F7124FFE5F20032A125 /* ShiChen.intentdefinition in Sources */,
+				46B79CE92542F359003C0B7F /* ShiChen.intentdefinition in Sources */,
 				46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */,
 				46339FE625027DA8007D4137 /* ShichenHStackView.swift in Sources */,
 				46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */,
@@ -627,6 +641,42 @@
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
+		46B79CB32542F017003C0B7F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46B79CB22542F017003C0B7F /* zh-Hans */,
+				46B79CB92542F019003C0B7F /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		46B79CC82542F076003C0B7F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46B79CC72542F076003C0B7F /* zh-Hans */,
+				46B79CCE2542F07A003C0B7F /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		46B79CD82542F0AE003C0B7F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46B79CD72542F0AE003C0B7F /* zh-Hans */,
+				46B79CDE2542F0B3003C0B7F /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		46B79CEC2542F359003C0B7F /* ShiChen.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46B79CEB2542F359003C0B7F /* zh-Hans */,
+				46B79CF32542F35D003C0B7F /* zh-Hant */,
+			);
+			name = ShiChen.intentdefinition;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -638,6 +688,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_ENTITLEMENTS = ShiChenExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = ShiChen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -663,6 +714,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_ENTITLEMENTS = ShiChenExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = ShiChen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -804,11 +856,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"TianganDizhi/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -827,11 +880,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"TianganDizhi/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -932,6 +986,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = Today/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -952,6 +1007,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = Today/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

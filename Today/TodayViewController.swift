@@ -14,6 +14,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var aliasLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -26,10 +27,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             informationLabel.text = "\(year)\n\(zodiac)"
             let dizhi = try GanzhiDateConverter.shichen(now)
             yearLabel.text = dizhi.displayHourText
+            aliasLabel.text = dizhi.aliasName
         } catch {
             
         }
-        
         
         completionHandler(NCUpdateResult.newData)
     }
