@@ -11,7 +11,11 @@ import ChineseAstrologyCalendar
 
 
 
-struct ContentView: View {    
+struct ContentView: View {
+    
+    init() {
+        UITabBarItem.appearance().setTitleTextAttributes([.font : UIFont(name: "Weibei TC Bold", size: 12)!], for: [])
+    }
     var body: some View {
         TabView(){
         
@@ -24,9 +28,8 @@ struct ContentView: View {
             KnowledgeView()
             .tabItem {
                 Image(systemName: "book")
-                Text("天干地支")
+                Text("天干地支")                    
             }
-            .accessibility(identifier: "knowledge")
         }
         .titleFont(.defaultTitleWithSize(size: 80))
         .largeTitleFont(.defaultLargeTitleWithSize(size: 100))

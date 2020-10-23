@@ -31,13 +31,13 @@ class TianganDizhiUITests: XCTestCase {
     }
     
     func testKownlegeScreen() {
-        XCUIApplication().tabBars["Tab Bar"].buttons["book"].tap()
+        app.tabBars.firstMatch.buttons["book"].tap()
         snapshot("testKownlegeScreen")
     }
     
-    func testShichen() {
-        app.tabBars["Tab Bar"].buttons["book"].tap()
-        app/*@START_MENU_TOKEN@*/.tables.buttons["十天干"]/*[[".otherElements[\"knowledge\"].tables",".cells[\"十天干\"].buttons[\"十天干\"]",".buttons[\"十天干\"]",".tables"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,0]]@END_MENU_TOKEN@*/.tap()
-        snapshot("testShichen")
+    func testJingluo() {
+        app.tabBars.firstMatch.buttons["book"].tap()
+        app.tables/*@START_MENU_TOKEN@*/.buttons["時辰與經絡"]/*[[".cells[\"時辰與經絡\"].buttons[\"時辰與經絡\"]",".buttons[\"時辰與經絡\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        snapshot("testJingluo")
     }
 }

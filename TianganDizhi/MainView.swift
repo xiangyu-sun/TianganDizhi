@@ -16,6 +16,7 @@ struct MainView: View {
     @Environment(\.largeTitleFont) var largeTitleFont
     @Environment(\.bodyFont) var bodyFont
     
+ 
     var body: some View {
  
         VStack() {
@@ -24,12 +25,6 @@ struct MainView: View {
                         .font(titleFont)
                     Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
                         .font(titleFont)
-                    Spacer()
-                }
-                
-                HStack() {
-                    Text(DateFormatter.localizedString(from: updater.date, dateStyle: .long, timeStyle: .medium))
-                        .font(.defaultFootnote)
                     Spacer()
                 }
                 

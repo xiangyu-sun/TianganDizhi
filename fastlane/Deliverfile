@@ -3,7 +3,7 @@
 # https://docs.fastlane.tools/actions/deliver/
 require 'open-uri'
 
-app_version "1.0.0"
+app_version "1.0"
 
 # modify the following parameter for different purpose
 skip_app_version_update false

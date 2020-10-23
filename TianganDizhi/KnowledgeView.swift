@@ -10,7 +10,9 @@ import SwiftUI
 
 struct KnowledgeView: View {
     @Environment(\.bodyFont) var bodyFont
-    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Weibei TC Bold", size: 34)!]
+    }
     var body: some View {
         NavigationView() {
             List() {
@@ -31,7 +33,7 @@ struct KnowledgeView: View {
                 }
             }
             .font(bodyFont)
-            .navigationBarTitle("天干地支相關知識")
+            .navigationBarTitle(Text("天干地支相關知識"))
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
