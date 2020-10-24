@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ChineseAstrologyCalendar",
+        "repositoryURL": "git@github.com:xiangyu-sun/ChineseAstrologyCalendar.git",
+        "state": {
+          "branch": "master",
+          "revision": "6e90d45b1544126fea029d4a7cd337cd33e1e75c",
+          "version": null
+        }
+      },
+      {
+        "package": "JingluoShuxue",
+        "repositoryURL": "https://github.com/xiangyu-sun/JingluoShuxueCore.git",
+        "state": {
+          "branch": "main",
+          "revision": "1a9cf4298c61b4c23e963a5e6039267561d155b8",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
