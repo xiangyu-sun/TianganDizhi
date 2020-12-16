@@ -10,9 +10,7 @@ import SwiftUI
 
 struct KnowledgeView: View {
     @Environment(\.bodyFont) var bodyFont
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Weibei TC Bold", size: 34)!]
-    }
+
     var body: some View {
         NavigationView() {
             List() {
@@ -21,6 +19,9 @@ struct KnowledgeView: View {
                 }
                 NavigationLink(destination: DizhiListView(disppayMode: .name)) {
                     Text(DizhiListView.DisplayMode.name.title)
+                }
+                NavigationLink(destination: DizhiListView(disppayMode: .zodiac)) {
+                    Text(DizhiListView.DisplayMode.zodiac.title)
                 }
                 NavigationLink(destination: DizhiListView(disppayMode: .time)) {
                     Text(DizhiListView.DisplayMode.time.title)

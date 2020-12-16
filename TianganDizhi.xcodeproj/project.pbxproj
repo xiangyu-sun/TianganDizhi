@@ -14,7 +14,7 @@
 		462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A5F6A24FFE5F20032A125 /* ShiChen.swift */; };
 		462A5F6E24FFE5F20032A125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462A5F6D24FFE5F20032A125 /* Assets.xcassets */; };
 		462A5F7424FFE5F20032A125 /* ShiChenExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		46339FDB2500D169007D4137 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 46339FDA2500D169007D4137 /* SwiftPackageProductDependency */; };
+		46339FDB2500D169007D4137 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46339FDA2500D169007D4137 /* ChineseAstrologyCalendar */; };
 		46339FDC2500EA41007D4137 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* ClockView.swift */; };
 		46339FDD2500EA60007D4137 /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
 		46339FE325024E85007D4137 /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE225024E85007D4137 /* Styler.swift */; };
@@ -23,7 +23,7 @@
 		46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE525027DA8007D4137 /* ShichenHStackView.swift */; };
 		46339FE925028279007D4137 /* KnowledgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE825028279007D4137 /* KnowledgeView.swift */; };
 		46339FEB25028DB5007D4137 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FEA25028DB5007D4137 /* MainView.swift */; };
-		46339FF025029C64007D4137 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 46339FEF25029C64007D4137 /* SwiftPackageProductDependency */; };
+		46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 46339FEF25029C64007D4137 /* JingluoShuxue */; };
 		46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		468844D024F54B4600310941 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468844CF24F54B4600310941 /* Updater.swift */; };
@@ -52,8 +52,8 @@
 		46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
 		46B816892543F42900B051B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46B816882543F42900B051B2 /* GoogleService-Info.plist */; };
 		46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
-		46E055AC24AF34AE00AC2AE5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 46E055AB24AF34AE00AC2AE5 /* SwiftPackageProductDependency */; };
-		46E055B024AF351700AC2AE5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 46E055AF24AF351700AC2AE5 /* SwiftPackageProductDependency */; };
+		46E055AC24AF34AE00AC2AE5 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46E055AB24AF34AE00AC2AE5 /* ChineseAstrologyCalendar */; };
+		46E055B024AF351700AC2AE5 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46E055AF24AF351700AC2AE5 /* ChineseAstrologyCalendar */; };
 		46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* ClockView.swift */; };
 		46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
 		49E49F8C3110C648AB0BC326 /* Pods_TianganDizhiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4434E2EFBA745D6C0E654DDA /* Pods_TianganDizhiTests.framework */; };
@@ -185,7 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */,
-				46339FDB2500D169007D4137 /* BuildFile in Frameworks */,
+				46339FDB2500D169007D4137 /* ChineseAstrologyCalendar in Frameworks */,
 				462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */,
 				0EC07EA1A1D94D17F5FDC3A3 /* Pods_ShiChenExtension.framework in Frameworks */,
 			);
@@ -195,8 +195,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46E055AC24AF34AE00AC2AE5 /* BuildFile in Frameworks */,
-				46339FF025029C64007D4137 /* BuildFile in Frameworks */,
+				46E055AC24AF34AE00AC2AE5 /* ChineseAstrologyCalendar in Frameworks */,
+				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
 				C7BA154F4B90FE9DBDD16411 /* Pods_TianganDizhi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46AB5607242B7F6C00F6604A /* NotificationCenter.framework in Frameworks */,
-				46E055B024AF351700AC2AE5 /* BuildFile in Frameworks */,
+				46E055B024AF351700AC2AE5 /* ChineseAstrologyCalendar in Frameworks */,
 				3D268AC2A8EDF483D11A627A /* Pods_Today.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +373,6 @@
 				497F08ED6B7BD25E664CF735 /* Pods-Today.debug.xcconfig */,
 				7B823A31D03ED8C5C78E4793 /* Pods-Today.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -395,7 +394,7 @@
 			);
 			name = ShiChenExtension;
 			packageProductDependencies = (
-				46339FDA2500D169007D4137 /* SwiftPackageProductDependency */,
+				46339FDA2500D169007D4137 /* ChineseAstrologyCalendar */,
 			);
 			productName = ShiChenExtension;
 			productReference = 462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */;
@@ -420,8 +419,8 @@
 			);
 			name = TianganDizhi;
 			packageProductDependencies = (
-				46E055AB24AF34AE00AC2AE5 /* SwiftPackageProductDependency */,
-				46339FEF25029C64007D4137 /* SwiftPackageProductDependency */,
+				46E055AB24AF34AE00AC2AE5 /* ChineseAstrologyCalendar */,
+				46339FEF25029C64007D4137 /* JingluoShuxue */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -481,7 +480,7 @@
 			);
 			name = Today;
 			packageProductDependencies = (
-				46E055AF24AF351700AC2AE5 /* SwiftPackageProductDependency */,
+				46E055AF24AF351700AC2AE5 /* ChineseAstrologyCalendar */,
 			);
 			productName = Today;
 			productReference = 46AB5604242B7F6C00F6604A /* Today.appex */;
@@ -528,8 +527,8 @@
 			);
 			mainGroup = 46AB55BE242B5EFD00F6604A;
 			packageReferences = (
-				46E055AA24AF34AE00AC2AE5 /* RemoteSwiftPackageReference */,
-				46339FEE25029C64007D4137 /* RemoteSwiftPackageReference */,
+				46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
+				46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -1078,7 +1077,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1103,7 +1102,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1303,7 +1302,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		46339FEE25029C64007D4137 /* RemoteSwiftPackageReference */ = {
+		46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/JingluoShuxueCore.git";
 			requirement = {
@@ -1311,7 +1310,7 @@
 				kind = branch;
 			};
 		};
-		46E055AA24AF34AE00AC2AE5 /* RemoteSwiftPackageReference */ = {
+		46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:xiangyu-sun/ChineseAstrologyCalendar.git";
 			requirement = {
@@ -1322,24 +1321,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		46339FDA2500D169007D4137 /* SwiftPackageProductDependency */ = {
+		46339FDA2500D169007D4137 /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 46E055AA24AF34AE00AC2AE5 /* RemoteSwiftPackageReference */;
+			package = 46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
 			productName = ChineseAstrologyCalendar;
 		};
-		46339FEF25029C64007D4137 /* SwiftPackageProductDependency */ = {
+		46339FEF25029C64007D4137 /* JingluoShuxue */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 46339FEE25029C64007D4137 /* RemoteSwiftPackageReference */;
+			package = 46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */;
 			productName = JingluoShuxue;
 		};
-		46E055AB24AF34AE00AC2AE5 /* SwiftPackageProductDependency */ = {
+		46E055AB24AF34AE00AC2AE5 /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 46E055AA24AF34AE00AC2AE5 /* RemoteSwiftPackageReference */;
+			package = 46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
 			productName = ChineseAstrologyCalendar;
 		};
-		46E055AF24AF351700AC2AE5 /* SwiftPackageProductDependency */ = {
+		46E055AF24AF351700AC2AE5 /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 46E055AA24AF34AE00AC2AE5 /* RemoteSwiftPackageReference */;
+			package = 46E055AA24AF34AE00AC2AE5 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
 			productName = ChineseAstrologyCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */

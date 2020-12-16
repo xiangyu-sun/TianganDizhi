@@ -17,6 +17,7 @@ struct DizhiListView: View {
         case month
         case time
         case organs
+        case zodiac
         case alias
         
         var title: String {
@@ -31,6 +32,8 @@ struct DizhiListView: View {
                 return "時辰與經絡"
             case .alias:
                 return "時辰的別名"
+            case .zodiac:
+                return "十二生肖"
             }
         }
     }
@@ -51,6 +54,8 @@ struct DizhiListView: View {
                 OrganShichenCell(shichen: $0)
             case .alias:
                 AliasShichenCell(shichen: $0)
+            case .zodiac:
+                DizhiZodiaCell(dizhi: $0)
             }
         }
         .font(bodyFont)
@@ -65,6 +70,18 @@ struct DizhiCell: View {
         HStack() {
             Text(dizhi.chineseCharactor)
             Text("(\(dizhi.chineseCharactor.transformToPinyin()))")
+        }
+        .padding()
+    }
+}
+
+struct DizhiZodiaCell: View {
+    let dizhi: Dizhi
+
+    var body: some View {
+        HStack() {
+            Text(dizhi.chineseCharactor)
+            Text("(\(Zodiac(dizhi).rawValue)")
         }
         .padding()
     }
