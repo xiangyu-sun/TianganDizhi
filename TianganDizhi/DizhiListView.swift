@@ -81,7 +81,6 @@ struct DizhiZodiaCell: View {
     var body: some View {
         HStack() {
             Text(dizhi.chineseCharactor)
-            Spacer()
             Text("\(Zodiac(dizhi).rawValue)")
         }
         .padding()
