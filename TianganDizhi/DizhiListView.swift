@@ -38,7 +38,7 @@ struct DizhiListView: View {
         }
     }
     
-    let dizhi = Dizhi.allCases
+    var dizhi: [Dizhi]
     let disppayMode: DisplayMode
     
     var body: some View {
@@ -80,8 +80,10 @@ struct DizhiZodiaCell: View {
 
     var body: some View {
         HStack() {
+            let zodiac = Zodiac(dizhi)
+            Text(zodiac.emoji)
             Text(dizhi.chineseCharactor)
-            Text("\(Zodiac(dizhi).rawValue)")
+            Text("\(zodiac.rawValue)")
         }
         .padding()
     }
@@ -140,12 +142,13 @@ struct AliasShichenCell: View {
 
 struct DizhiListView_Time_Previews: PreviewProvider {
     static var previews: some View {
-        DizhiListView(disppayMode: .time)
+        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .time)
             .environment(\.locale, Locale(identifier: "jp_JP"))
-        DizhiListView(disppayMode: .name)
-        DizhiListView(disppayMode: .month)
-        DizhiListView(disppayMode: .organs)
-        DizhiListView(disppayMode: .alias)
+        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .name)
+        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .month)
+        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .organs)
+        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .alias)
+        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .zodiac)
     }
 }
 
