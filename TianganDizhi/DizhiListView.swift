@@ -142,13 +142,13 @@ struct AliasShichenCell: View {
 
 struct DizhiListView_Time_Previews: PreviewProvider {
     static var previews: some View {
-        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .time)
+        DizhiListView(dizhi: Dizhi.orderedAllCases, disppayMode: .time)
             .environment(\.locale, Locale(identifier: "jp_JP"))
         DizhiListView(dizhi: Dizhi.allCases, disppayMode: .name)
         DizhiListView(dizhi: Dizhi.allCases, disppayMode: .month)
         DizhiListView(dizhi: Dizhi.allCases, disppayMode: .organs)
         DizhiListView(dizhi: Dizhi.allCases, disppayMode: .alias)
-        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .zodiac)
+        DizhiListView(dizhi: Dizhi.orderedAllCases, disppayMode: .zodiac)
     }
 }
 
