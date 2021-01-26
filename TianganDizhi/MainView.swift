@@ -21,9 +21,9 @@ struct MainView: View {
  
         VStack() {
                 HStack() {
-                    Text((try? GanzhiDateConverter.nian(updater.date).formatedYear) ?? "")
-                        .font(titleFont)
                     Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
+                        .font(titleFont)
+                    Text(updater.date.chineseYearMonthDate)
                         .font(titleFont)
                     Spacer()
                 }

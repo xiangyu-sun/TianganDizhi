@@ -51,12 +51,12 @@ struct ShiChenEntryView : View {
         switch family {
         case .systemMedium:
             VStack() {
-                titleView
+                FullDateTitleView(date: entry.date)
                 ShichenHStackView(shichen: shichen)
             }
         case .systemLarge:
             VStack() {
-                titleView
+                FullDateTitleView(date: entry.date)
                 ClockView(currentShichen: shichen, padding: 0)
             }
         default:
@@ -81,7 +81,52 @@ struct ShiChenEntryView : View {
     }
 }
 
-@main
+struct ShiChenYearMonthDateEntryView : View {
+    var entry: Provider.Entry
+    @Environment(\.bodyFont) var bodyFont
+    @Environment(\.titleFont) var titleFont
+    var body: some View {
+        let shichen = try! GanzhiDateConverter.shichen(entry.date)
+        
+        VStack() {
+            Spacer()
+            Text(entry.date.chineseYearMonthDate)
+                .font(bodyFont)
+                .padding([.leading,.trailing], 15)
+            Text(shichen.displayHourText)
+                .font(titleFont)
+            Spacer()
+        }
+    }
+}
+
+struct FullDateTitleView: View {
+    @Environment(\.bodyFont) var bodyFont
+    var date: Date
+    var body: some View {
+        HStack(){
+            Text((try? GanzhiDateConverter.zodiac(date).rawValue) ?? "")
+                .font(bodyFont)
+            Text(date.chineseYearMonthDate)
+                .font(bodyFont)
+        }
+    }
+}
+
+struct Nongli: Widget {
+    let kind: String = "Nongli"
+    
+    var body: some WidgetConfiguration {
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
+            ShiChenYearMonthDateEntryView(entry: entry)
+        }
+        .configurationDisplayName("年月日時辰")
+        .description("農曆年月日以及十二時辰")
+        .supportedFamilies([.systemSmall])
+        
+    }
+}
+
 struct ShiChen: Widget {
     let kind: String = "ShiChen"
     
@@ -90,13 +135,25 @@ struct ShiChen: Widget {
             ShiChenEntryView(entry: entry)
         }
         .configurationDisplayName("十二时辰")
-        .description("十二地支为名的十二时辰计时法")
+        .description("十二地支为名的十二时辰计，俗稱，以及相關臟器")
         
+    }
+}
+
+@main
+struct AllWidgets: WidgetBundle {
+    @WidgetBundleBuilder
+    var body: some Widget {
+        ShiChen()
+        Nongli()
     }
 }
 
 struct ShiChen_Previews: PreviewProvider {
     static var previews: some View {
+        ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        
         ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
         ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
