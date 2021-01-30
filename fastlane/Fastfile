@@ -18,11 +18,16 @@ default_platform(:ios)
 platform :ios do
   desc "Test on iphone 8 plus and iPad Air"
   lane :tests do
-    run_tests(devices: ["iPhone 8 Plus", "iPad Pro (12.9-inch) (3rd generation)"]
+    run_tests(devices: ["iPhone 8 Plus", "iPad Pro (12.9-inch) (3rd generation)"])
     end
 
     lane :screenshots do
     capture_screenshots
     upload_to_app_store
   end
+
+  lane :release do
+  build_app(scheme: "TianganDizhi",
+            include_bitcode: true)
+	end
 end
