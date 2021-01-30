@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1946EFEFC1E4DF0259A1126D /* Pods_TianganDizhiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD53A8168A0A4888ECEAC466 /* Pods_TianganDizhiTests.framework */; };
 		462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
 		462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A5F6A24FFE5F20032A125 /* ShiChen.swift */; };
@@ -20,12 +21,12 @@
 		46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE525027DA8007D4137 /* ShichenHStackView.swift */; };
 		46339FE925028279007D4137 /* KnowledgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE825028279007D4137 /* KnowledgeView.swift */; };
 		46339FEB25028DB5007D4137 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FEA25028DB5007D4137 /* MainView.swift */; };
-		46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 46339FEF25029C64007D4137 /* JingluoShuxue */; };
+		46339FF025029C64007D4137 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 46339FEF25029C64007D4137 /* SwiftPackageProductDependency */; };
 		46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		468844D024F54B4600310941 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468844CF24F54B4600310941 /* Updater.swift */; };
-		4690D62B25C0292E008D9D1B /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 4690D62A25C0292E008D9D1B /* ChineseAstrologyCalendar */; };
-		4690D63225C02948008D9D1B /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 4690D63125C02948008D9D1B /* ChineseAstrologyCalendar */; };
+		4690D62B25C0292E008D9D1B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 4690D62A25C0292E008D9D1B /* SwiftPackageProductDependency */; };
+		4690D63225C02948008D9D1B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 4690D63125C02948008D9D1B /* SwiftPackageProductDependency */; };
 		46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CA242B5EFD00F6604A /* AppDelegate.swift */; };
 		46AB55CD242B5EFD00F6604A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CC242B5EFD00F6604A /* SceneDelegate.swift */; };
 		46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CE242B5EFD00F6604A /* ContentView.swift */; };
@@ -39,8 +40,7 @@
 		46AB560A242B7F6C00F6604A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB5609242B7F6C00F6604A /* TodayViewController.swift */; };
 		46AB560D242B7F6C00F6604A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46AB560B242B7F6C00F6604A /* MainInterface.storyboard */; };
 		46AB5611242B7F6C00F6604A /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 46AB5604242B7F6C00F6604A /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		46B2423025B3237A00B17A4A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 46B2422F25B3237A00B17A4A /* FirebaseAnalytics */; };
-		46B2423825B3250D00B17A4A /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46B2423725B3250D00B17A4A /* ChineseAstrologyCalendar */; };
+		46B2423825B3250D00B17A4A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 46B2423725B3250D00B17A4A /* SwiftPackageProductDependency */; };
 		46B79C0D2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
 		46B79C0E2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
 		46B79C342541EB87003C0B7F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C332541EB87003C0B7F /* SnapshotHelper.swift */; };
@@ -55,6 +55,9 @@
 		46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
 		46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* ClockView.swift */; };
 		46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
+		4F764E38C6087D092FF82239 /* Pods_TianganDizhi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC08DF893B8A7923751F903 /* Pods_TianganDizhi.framework */; };
+		786565B90449CB84C03DC9BB /* Pods_TianganDizhi_TianganDizhiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4219A6EF4E8A223CCC8625A5 /* Pods_TianganDizhi_TianganDizhiUITests.framework */; };
+		D15610BC2C270FFC3CDA40EE /* Pods_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD4A6070EC9208BA01E1F8 /* Pods_Today.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14B2C30715475B56CD5CF380 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
+		14E9692AF83CE4C2FEC21216 /* Pods-TianganDizhiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhiTests.release.xcconfig"; path = "Target Support Files/Pods-TianganDizhiTests/Pods-TianganDizhiTests.release.xcconfig"; sourceTree = "<group>"; };
+		4219A6EF4E8A223CCC8625A5 /* Pods_TianganDizhi_TianganDizhiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianganDizhi_TianganDizhiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiChenExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		462A5F6524FFE5F20032A125 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		462A5F6724FFE5F20032A125 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -158,6 +164,15 @@
 		46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
 		46E055B124B02FA900AC2AE5 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		46E055B724B065BD00AC2AE5 /* ShichenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenView.swift; sourceTree = "<group>"; };
+		60DD4A6070EC9208BA01E1F8 /* Pods_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC08DF893B8A7923751F903 /* Pods_TianganDizhi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianganDizhi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A1E4D6E0E1C6B7CAFBA4C0 /* Pods-TianganDizhiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhiTests.debug.xcconfig"; path = "Target Support Files/Pods-TianganDizhiTests/Pods-TianganDizhiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9938F36E8CA751DFE404D8EE /* Pods-TianganDizhi-TianganDizhiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhi-TianganDizhiUITests.debug.xcconfig"; path = "Target Support Files/Pods-TianganDizhi-TianganDizhiUITests/Pods-TianganDizhi-TianganDizhiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABE815904061A0ED71B76828 /* Pods-TianganDizhi-TianganDizhiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhi-TianganDizhiUITests.release.xcconfig"; path = "Target Support Files/Pods-TianganDizhi-TianganDizhiUITests/Pods-TianganDizhi-TianganDizhiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B3FC7CFA213389B51454D856 /* Pods-TianganDizhi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhi.debug.xcconfig"; path = "Target Support Files/Pods-TianganDizhi/Pods-TianganDizhi.debug.xcconfig"; sourceTree = "<group>"; };
+		D966D0FB9FDE34E9C21520F8 /* Pods-TianganDizhi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhi.release.xcconfig"; path = "Target Support Files/Pods-TianganDizhi/Pods-TianganDizhi.release.xcconfig"; sourceTree = "<group>"; };
+		DD53A8168A0A4888ECEAC466 /* Pods_TianganDizhiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianganDizhiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBA8457D77FAF7A5C2BFBBB5 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */,
-				4690D63225C02948008D9D1B /* ChineseAstrologyCalendar in Frameworks */,
+				4690D63225C02948008D9D1B /* BuildFile in Frameworks */,
 				462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,9 +190,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46B2423025B3237A00B17A4A /* FirebaseAnalytics in Frameworks */,
-				46B2423825B3250D00B17A4A /* ChineseAstrologyCalendar in Frameworks */,
-				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
+				46B2423825B3250D00B17A4A /* BuildFile in Frameworks */,
+				46339FF025029C64007D4137 /* BuildFile in Frameworks */,
+				4F764E38C6087D092FF82239 /* Pods_TianganDizhi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1946EFEFC1E4DF0259A1126D /* Pods_TianganDizhiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786565B90449CB84C03DC9BB /* Pods_TianganDizhi_TianganDizhiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46AB5607242B7F6C00F6604A /* NotificationCenter.framework in Frameworks */,
-				4690D62B25C0292E008D9D1B /* ChineseAstrologyCalendar in Frameworks */,
+				4690D62B25C0292E008D9D1B /* BuildFile in Frameworks */,
+				D15610BC2C270FFC3CDA40EE /* Pods_Today.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +248,7 @@
 				462A5F6924FFE5F20032A125 /* ShiChen */,
 				46AB5605242B7F6C00F6604A /* Frameworks */,
 				46AB55C8242B5EFD00F6604A /* Products */,
+				B8B47127326EA9AF117EC8FA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -307,6 +326,10 @@
 				46AB5606242B7F6C00F6604A /* NotificationCenter.framework */,
 				462A5F6524FFE5F20032A125 /* WidgetKit.framework */,
 				462A5F6724FFE5F20032A125 /* SwiftUI.framework */,
+				6AC08DF893B8A7923751F903 /* Pods_TianganDizhi.framework */,
+				4219A6EF4E8A223CCC8625A5 /* Pods_TianganDizhi_TianganDizhiUITests.framework */,
+				DD53A8168A0A4888ECEAC466 /* Pods_TianganDizhiTests.framework */,
+				60DD4A6070EC9208BA01E1F8 /* Pods_Today.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -330,6 +353,22 @@
 			path = "Weibei TC";
 			sourceTree = "<group>";
 		};
+		B8B47127326EA9AF117EC8FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3FC7CFA213389B51454D856 /* Pods-TianganDizhi.debug.xcconfig */,
+				D966D0FB9FDE34E9C21520F8 /* Pods-TianganDizhi.release.xcconfig */,
+				9938F36E8CA751DFE404D8EE /* Pods-TianganDizhi-TianganDizhiUITests.debug.xcconfig */,
+				ABE815904061A0ED71B76828 /* Pods-TianganDizhi-TianganDizhiUITests.release.xcconfig */,
+				79A1E4D6E0E1C6B7CAFBA4C0 /* Pods-TianganDizhiTests.debug.xcconfig */,
+				14E9692AF83CE4C2FEC21216 /* Pods-TianganDizhiTests.release.xcconfig */,
+				FBA8457D77FAF7A5C2BFBBB5 /* Pods-Today.debug.xcconfig */,
+				14B2C30715475B56CD5CF380 /* Pods-Today.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,7 +386,7 @@
 			);
 			name = ShiChenExtension;
 			packageProductDependencies = (
-				4690D63125C02948008D9D1B /* ChineseAstrologyCalendar */,
+				4690D63125C02948008D9D1B /* SwiftPackageProductDependency */,
 			);
 			productName = ShiChenExtension;
 			productReference = 462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */;
@@ -357,10 +396,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46AB55F1242B5EFF00F6604A /* Build configuration list for PBXNativeTarget "TianganDizhi" */;
 			buildPhases = (
+				B9A5B13D3F0C1293CBE21A18 /* [CP] Check Pods Manifest.lock */,
 				46AB55C3242B5EFD00F6604A /* Sources */,
 				46AB55C4242B5EFD00F6604A /* Frameworks */,
 				46AB55C5242B5EFD00F6604A /* Resources */,
 				46AB5615242B7F6C00F6604A /* Embed App Extensions */,
+				870C71ACE3729DD12F9D8F9C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,9 +411,8 @@
 			);
 			name = TianganDizhi;
 			packageProductDependencies = (
-				46339FEF25029C64007D4137 /* JingluoShuxue */,
-				46B2422F25B3237A00B17A4A /* FirebaseAnalytics */,
-				46B2423725B3250D00B17A4A /* ChineseAstrologyCalendar */,
+				46339FEF25029C64007D4137 /* SwiftPackageProductDependency */,
+				46B2423725B3250D00B17A4A /* SwiftPackageProductDependency */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -382,6 +422,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46AB55F4242B5EFF00F6604A /* Build configuration list for PBXNativeTarget "TianganDizhiTests" */;
 			buildPhases = (
+				CAF9F323865032052FBD45EC /* [CP] Check Pods Manifest.lock */,
 				46AB55D9242B5EFF00F6604A /* Sources */,
 				46AB55DA242B5EFF00F6604A /* Frameworks */,
 				46AB55DB242B5EFF00F6604A /* Resources */,
@@ -400,9 +441,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46AB55F7242B5EFF00F6604A /* Build configuration list for PBXNativeTarget "TianganDizhiUITests" */;
 			buildPhases = (
+				66155DCC5F7E9EEB2D2D12E8 /* [CP] Check Pods Manifest.lock */,
 				46AB55E4242B5EFF00F6604A /* Sources */,
 				46AB55E5242B5EFF00F6604A /* Frameworks */,
 				46AB55E6242B5EFF00F6604A /* Resources */,
+				F211107B999473449C19C392 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -418,6 +461,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46AB5612242B7F6C00F6604A /* Build configuration list for PBXNativeTarget "Today" */;
 			buildPhases = (
+				6ADFB1D4265E6293F9732094 /* [CP] Check Pods Manifest.lock */,
 				46AB5600242B7F6C00F6604A /* Sources */,
 				46AB5601242B7F6C00F6604A /* Frameworks */,
 				46AB5602242B7F6C00F6604A /* Resources */,
@@ -428,7 +472,7 @@
 			);
 			name = Today;
 			packageProductDependencies = (
-				4690D62A25C0292E008D9D1B /* ChineseAstrologyCalendar */,
+				4690D62A25C0292E008D9D1B /* SwiftPackageProductDependency */,
 			);
 			productName = Today;
 			productReference = 46AB5604242B7F6C00F6604A /* Today.appex */;
@@ -475,9 +519,8 @@
 			);
 			mainGroup = 46AB55BE242B5EFD00F6604A;
 			packageReferences = (
-				46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */,
-				46B2422E25B3237A00B17A4A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
+				46339FEE25029C64007D4137 /* RemoteSwiftPackageReference */,
+				46B2423625B3250D00B17A4A /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -539,6 +582,131 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66155DCC5F7E9EEB2D2D12E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TianganDizhi-TianganDizhiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ADFB1D4265E6293F9732094 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Today-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		870C71ACE3729DD12F9D8F9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi/Pods-TianganDizhi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi/Pods-TianganDizhi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi/Pods-TianganDizhi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9A5B13D3F0C1293CBE21A18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TianganDizhi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAF9F323865032052FBD45EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TianganDizhiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F211107B999473449C19C392 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi-TianganDizhiUITests/Pods-TianganDizhi-TianganDizhiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi-TianganDizhiUITests/Pods-TianganDizhi-TianganDizhiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi-TianganDizhiUITests/Pods-TianganDizhi-TianganDizhiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		462A5F6024FFE5F20032A125 /* Sources */ = {
@@ -864,6 +1032,7 @@
 		};
 		46AB55F2242B5EFF00F6604A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3FC7CFA213389B51454D856 /* Pods-TianganDizhi.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -888,6 +1057,7 @@
 		};
 		46AB55F3242B5EFF00F6604A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D966D0FB9FDE34E9C21520F8 /* Pods-TianganDizhi.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -912,6 +1082,7 @@
 		};
 		46AB55F5242B5EFF00F6604A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79A1E4D6E0E1C6B7CAFBA4C0 /* Pods-TianganDizhiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -934,6 +1105,7 @@
 		};
 		46AB55F6242B5EFF00F6604A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E9692AF83CE4C2FEC21216 /* Pods-TianganDizhiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -956,6 +1128,7 @@
 		};
 		46AB55F8242B5EFF00F6604A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9938F36E8CA751DFE404D8EE /* Pods-TianganDizhi-TianganDizhiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -976,6 +1149,7 @@
 		};
 		46AB55F9242B5EFF00F6604A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABE815904061A0ED71B76828 /* Pods-TianganDizhi-TianganDizhiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -996,6 +1170,7 @@
 		};
 		46AB5613242B7F6C00F6604A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBA8457D77FAF7A5C2BFBBB5 /* Pods-Today.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1018,6 +1193,7 @@
 		};
 		46AB5614242B7F6C00F6604A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14B2C30715475B56CD5CF380 /* Pods-Today.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1098,7 +1274,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */ = {
+		46339FEE25029C64007D4137 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/JingluoShuxueCore.git";
 			requirement = {
@@ -1106,15 +1282,7 @@
 				kind = branch;
 			};
 		};
-		46B2422E25B3237A00B17A4A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.4.0;
-			};
-		};
-		46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */ = {
+		46B2423625B3250D00B17A4A /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:xiangyu-sun/ChineseAstrologyCalendar.git";
 			requirement = {
@@ -1125,29 +1293,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		46339FEF25029C64007D4137 /* JingluoShuxue */ = {
+		46339FEF25029C64007D4137 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */;
+			package = 46339FEE25029C64007D4137 /* RemoteSwiftPackageReference */;
 			productName = JingluoShuxue;
 		};
-		4690D62A25C0292E008D9D1B /* ChineseAstrologyCalendar */ = {
+		4690D62A25C0292E008D9D1B /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			package = 46B2423625B3250D00B17A4A /* RemoteSwiftPackageReference */;
 			productName = ChineseAstrologyCalendar;
 		};
-		4690D63125C02948008D9D1B /* ChineseAstrologyCalendar */ = {
+		4690D63125C02948008D9D1B /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			package = 46B2423625B3250D00B17A4A /* RemoteSwiftPackageReference */;
 			productName = ChineseAstrologyCalendar;
 		};
-		46B2422F25B3237A00B17A4A /* FirebaseAnalytics */ = {
+		46B2423725B3250D00B17A4A /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 46B2422E25B3237A00B17A4A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		46B2423725B3250D00B17A4A /* ChineseAstrologyCalendar */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			package = 46B2423625B3250D00B17A4A /* RemoteSwiftPackageReference */;
 			productName = ChineseAstrologyCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
