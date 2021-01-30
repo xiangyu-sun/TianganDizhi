@@ -17,4 +17,4 @@ jobs:
         APPLE_ACCOUNT: ${{ secrets.APPLE_ACCOUNT }}
         TEAM_ID: ${{ secrets.TEAM_ID }}
       run: |
-        fastlane compile --verbose
+        fastlane tests --verbose
