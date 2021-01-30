@@ -1,6 +1,0 @@
-framework module Pods_ShiChenExtension {
-  umbrella header "Pods-ShiChenExtension-umbrella.h"
-
-  export *
-  module * { export * }
-}
