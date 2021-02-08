@@ -55,6 +55,8 @@
 		46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
 		46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* ClockView.swift */; };
 		46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
+		46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 46F9C28425D137020017440D /* ChineseTranditionalMusicCore */; };
+		46F9C28C25D137D50017440D /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9C28B25D137D50017440D /* Cells.swift */; };
 		4F764E38C6087D092FF82239 /* Pods_TianganDizhi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC08DF893B8A7923751F903 /* Pods_TianganDizhi.framework */; };
 		786565B90449CB84C03DC9BB /* Pods_TianganDizhi_TianganDizhiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4219A6EF4E8A223CCC8625A5 /* Pods_TianganDizhi_TianganDizhiUITests.framework */; };
 		D15610BC2C270FFC3CDA40EE /* Pods_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD4A6070EC9208BA01E1F8 /* Pods_Today.framework */; };
@@ -164,6 +166,7 @@
 		46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
 		46E055B124B02FA900AC2AE5 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		46E055B724B065BD00AC2AE5 /* ShichenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenView.swift; sourceTree = "<group>"; };
+		46F9C28B25D137D50017440D /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		60DD4A6070EC9208BA01E1F8 /* Pods_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC08DF893B8A7923751F903 /* Pods_TianganDizhi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianganDizhi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A1E4D6E0E1C6B7CAFBA4C0 /* Pods-TianganDizhiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhiTests.debug.xcconfig"; path = "Target Support Files/Pods-TianganDizhiTests/Pods-TianganDizhiTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +195,7 @@
 			files = (
 				46B2423825B3250D00B17A4A /* ChineseAstrologyCalendar in Frameworks */,
 				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
+				46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */,
 				4F764E38C6087D092FF82239 /* Pods_TianganDizhi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +281,7 @@
 				46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */,
 				46E055B124B02FA900AC2AE5 /* ClockView.swift */,
 				46AB55FC242B5F7100F6604A /* DizhiListView.swift */,
+				46F9C28B25D137D50017440D /* Cells.swift */,
 				46E055B724B065BD00AC2AE5 /* ShichenView.swift */,
 				46339FE525027DA8007D4137 /* ShichenHStackView.swift */,
 				46339FE225024E85007D4137 /* Styler.swift */,
@@ -412,6 +417,7 @@
 			packageProductDependencies = (
 				46339FEF25029C64007D4137 /* JingluoShuxue */,
 				46B2423725B3250D00B17A4A /* ChineseAstrologyCalendar */,
+				46F9C28425D137020017440D /* ChineseTranditionalMusicCore */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -520,6 +526,7 @@
 			packageReferences = (
 				46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */,
 				46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
+				46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -733,6 +740,7 @@
 				46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */,
 				46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */,
+				46F9C28C25D137D50017440D /* Cells.swift in Sources */,
 				46B7FCE9250620CC008E8D48 /* TimelineScheduler.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
 				46AB55CD242B5EFD00F6604A /* SceneDelegate.swift in Sources */,
@@ -1295,6 +1303,14 @@
 				kind = branch;
 			};
 		};
+		46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xiangyu-sun/ChineseTranditionalMusicCore.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1317,6 +1333,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
 			productName = ChineseAstrologyCalendar;
+		};
+		46F9C28425D137020017440D /* ChineseTranditionalMusicCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */;
+			productName = ChineseTranditionalMusicCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

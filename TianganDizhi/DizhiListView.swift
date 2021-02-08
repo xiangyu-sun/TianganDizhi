@@ -8,7 +8,7 @@
 
 import SwiftUI
 import ChineseAstrologyCalendar
-import JingluoShuxue
+
 
 struct DizhiListView: View {
     @Environment(\.bodyFont) var bodyFont
@@ -19,6 +19,26 @@ struct DizhiListView: View {
         case organs
         case zodiac
         case alias
+        case lvlv
+        
+        var dizhi: [Dizhi] {
+            switch self {
+            case .name:
+                return Dizhi.orderedAllCases
+            case .month:
+                return Dizhi.xiaDynastyYearOrder
+            case .time:
+                return Dizhi.orderedAllCases
+            case .organs:
+                return Dizhi.orderedAllCases
+            case .alias:
+                return Dizhi.orderedAllCases
+            case .zodiac:
+                return Dizhi.orderedAllCases
+            case .lvlv:
+                return Dizhi.xiaDynastyYearOrder
+            }
+        }
         
         var title: String {
             switch self {
@@ -34,15 +54,16 @@ struct DizhiListView: View {
                 return "時辰的別名"
             case .zodiac:
                 return "十二生肖"
+            case .lvlv:
+                return "十二律呂"
             }
         }
     }
     
-    var dizhi: [Dizhi]
     let disppayMode: DisplayMode
     
     var body: some View {
-        List(dizhi, id: \.self) {
+        List(disppayMode.dizhi, id: \.self) {
             switch self.disppayMode {
             case .name:
                 DizhiCell(dizhi: $0)
@@ -56,6 +77,8 @@ struct DizhiListView: View {
                 AliasShichenCell(shichen: $0)
             case .zodiac:
                 DizhiZodiaCell(dizhi: $0)
+            case .lvlv:
+                LvlvCell(dizhi: $0)
             }
         }
         .font(bodyFont)
@@ -63,92 +86,16 @@ struct DizhiListView: View {
     }
 }
 
-struct DizhiCell: View {
-    let dizhi: Dizhi
-
-    var body: some View {
-        HStack() {
-            Text(dizhi.chineseCharactor)
-            Text("(\(dizhi.chineseCharactor.transformToPinyin()))")
-        }
-        .padding()
-    }
-}
-
-struct DizhiZodiaCell: View {
-    let dizhi: Dizhi
-
-    var body: some View {
-        HStack() {
-            let zodiac = Zodiac(dizhi)
-            Text(zodiac.emoji)
-            Text(dizhi.chineseCharactor)
-            Text("\(zodiac.rawValue)")
-        }
-        .padding()
-    }
-}
-
-struct ShichenMonthCell: View {
-    let shichen: Dizhi
-    var body: some View {
-        HStack() {
-            Text(shichen.chineseCharactor)
-            Spacer()
-            Text(shichen.formattedMonth)
-        }
-        .padding()
-    }
-}
-
-
-struct ShichenHourCell: View {
-    let shichen: Dizhi
-    var body: some View {
-        HStack() {
-            Text(shichen.chineseCharactor)
-            Spacer()
-            Text(shichen.formattedHourRange ?? "")
-        }
-        .padding()
-    }
-}
-
-struct OrganShichenCell: View {
-    let shichen: Dizhi
-
-    var body: some View {
-        HStack() {
-            Text(shichen.chineseCharactor)
-                
-            Spacer()
-            Text(气血循环流注[shichen.rawValue - 1].rawValue)
-        }
-        .padding()
-    }
-}
-
-struct AliasShichenCell: View {
-    let shichen: Dizhi
-    var body: some View {
-        HStack() {
-            Text(shichen.chineseCharactor)
-            Spacer()
-            Text(shichen.aliasName)
-        }
-        .padding()
-    }
-}
-
 struct DizhiListView_Time_Previews: PreviewProvider {
     static var previews: some View {
-        DizhiListView(dizhi: Dizhi.orderedAllCases, disppayMode: .time)
+        DizhiListView(disppayMode: .time)
             .environment(\.locale, Locale(identifier: "jp_JP"))
-        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .name)
-        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .month)
-        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .organs)
-        DizhiListView(dizhi: Dizhi.allCases, disppayMode: .alias)
-        DizhiListView(dizhi: Dizhi.orderedAllCases, disppayMode: .zodiac)
+        DizhiListView(disppayMode: .name)
+        DizhiListView(disppayMode: .month)
+        DizhiListView(disppayMode: .organs)
+        DizhiListView(disppayMode: .alias)
+        DizhiListView(disppayMode: .zodiac)
+        DizhiListView(disppayMode: .lvlv)
     }
 }
 

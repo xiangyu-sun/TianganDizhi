@@ -18,20 +18,23 @@ struct KnowledgeView: View {
                 NavigationLink(destination: TianganListView()) {
                     Text("十天干")
                 }
-                NavigationLink(destination: DizhiListView(dizhi: Dizhi.allCases, disppayMode: .name)) {
+                NavigationLink(destination: DizhiListView( disppayMode: .name)) {
                     Text(DizhiListView.DisplayMode.name.title)
                 }
-                NavigationLink(destination: DizhiListView(dizhi: Dizhi.orderedAllCases, disppayMode: .zodiac)) {
+                NavigationLink(destination: DizhiListView( disppayMode: .zodiac)) {
                     Text(DizhiListView.DisplayMode.zodiac.title)
                 }
-                NavigationLink(destination: DizhiListView(dizhi: Dizhi.orderedAllCases, disppayMode: .time)) {
+                NavigationLink(destination: DizhiListView( disppayMode: .time)) {
                     Text(DizhiListView.DisplayMode.time.title)
                 }
-                NavigationLink(destination: DizhiListView(dizhi: Dizhi.allCases, disppayMode: .month)) {
+                NavigationLink(destination: DizhiListView( disppayMode: .month)) {
                     Text(DizhiListView.DisplayMode.month.title)
                 }
-                NavigationLink(destination: DizhiListView(dizhi: Dizhi.allCases, disppayMode: .organs)) {
+                NavigationLink(destination: DizhiListView( disppayMode: .organs)) {
                     Text(DizhiListView.DisplayMode.organs.title)
+                }
+                NavigationLink(destination: DizhiListView( disppayMode: .lvlv)) {
+                    Text(DizhiListView.DisplayMode.lvlv.title)
                 }
             }
             .font(bodyFont)

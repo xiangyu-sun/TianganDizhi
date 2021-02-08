@@ -53,6 +53,7 @@ struct ShiChenEntryView : View {
             VStack() {
                 FullDateTitleView(date: entry.date)
                 ShichenHStackView(shichen: shichen)
+                    .padding([.leading, .trailing], 8)
             }
         case .systemLarge:
             VStack() {
@@ -102,6 +103,7 @@ struct ShiChenYearMonthDateEntryView : View {
 
 struct FullDateTitleView: View {
     @Environment(\.bodyFont) var bodyFont
+    @Environment(\.titleFont) var titleFont
     var date: Date
     var body: some View {
         HStack(){
