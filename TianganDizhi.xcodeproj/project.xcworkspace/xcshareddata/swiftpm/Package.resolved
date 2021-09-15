@@ -6,7 +6,16 @@
         "repositoryURL": "git@github.com:xiangyu-sun/ChineseAstrologyCalendar.git",
         "state": {
           "branch": "master",
-          "revision": "6602dec8aa65d2fc4443027470b708850402a830",
+          "revision": "252680597e40b1386b36b623d2d1d9bb73a5d62a",
+          "version": null
+        }
+      },
+      {
+        "package": "ChineseTranditionalMusicCore",
+        "repositoryURL": "https://github.com/xiangyu-sun/ChineseTranditionalMusicCore.git",
+        "state": {
+          "branch": "main",
+          "revision": "af409cca6ba9e8a5cd51ecaf46692f18526ffbaf",
           "version": null
         }
       },

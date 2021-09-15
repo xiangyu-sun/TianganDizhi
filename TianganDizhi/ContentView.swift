@@ -9,8 +9,6 @@
 import SwiftUI
 import ChineseAstrologyCalendar
 
-
-
 struct ContentView: View {
     
     var body: some View {
@@ -24,8 +22,14 @@ struct ContentView: View {
             
             KnowledgeView()
             .tabItem {
-                Image(systemName: "book")
+                Image(systemName: "moon")
                 Text("天干地支")
+            }
+            
+            ShiciListView()
+            .tabItem {
+                Image(systemName: "book")
+                Text("文章")
             }
         }
         .titleFont(.defaultTitleWithSize(size: 80))
