@@ -26,8 +26,11 @@ platform :ios do
     upload_to_app_store
   end
 
+  desc "Push a new release build to the App Store"
   lane :release do
   build_app(scheme: "TianganDizhi",
             include_bitcode: true)
-	end
+    upload_to_app_store
+  end
+
 end

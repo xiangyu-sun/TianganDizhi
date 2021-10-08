@@ -30,17 +30,12 @@ private struct DizhiView: View {
     let current: Bool
     var body: some View {
         VStack() {
-            if current {
-                Text("\(shichen.chineseCharactor)")
-                               .font(titleFont)
-                                .scaleEffect(1.2)
-                               .rotationEffect(.radians(-(Double.pi * 2 / 12 * rotation)))
-            } else {
-                Text("\(shichen.chineseCharactor)")
-                    .font(titleFont)
-                                .foregroundColor(Color.secondary)
-                               .rotationEffect(.radians(-(Double.pi * 2 / 12 * rotation)))
-            }
+            Text("\(shichen.chineseCharactor)")
+                .font(titleFont)
+                .foregroundColor(current ? Color.primary : Color.secondary)
+                .scaleEffect(current ? 1.2 : 1)
+                .rotationEffect(.radians(-(Double.pi * 2 / 12 * rotation)))
+            
             Spacer()
         }
         .padding(25)
@@ -51,5 +46,6 @@ private struct DizhiView: View {
 struct ShichenView_Previews: PreviewProvider {
     static var previews: some View {
         ShichenView(currentShichen: .zi)
+            .scaledToFit()
     }
 }

@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1946EFEFC1E4DF0259A1126D /* Pods_TianganDizhiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD53A8168A0A4888ECEAC466 /* Pods_TianganDizhiTests.framework */; };
 		460BA9AA26F24CA10025CA39 /* ShiciListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9A926F24CA10025CA39 /* ShiciListView.swift */; };
 		460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
+		460EE4DB270211EA0006A7D3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 460EE4DA270211EA0006A7D3 /* FirebaseAnalytics */; };
 		462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
 		462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A5F6A24FFE5F20032A125 /* ShiChen.swift */; };
 		462A5F6E24FFE5F20032A125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462A5F6D24FFE5F20032A125 /* Assets.xcassets */; };
 		462A5F7424FFE5F20032A125 /* ShiChenExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		46339FDC2500EA41007D4137 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* ClockView.swift */; };
+		46339FDC2500EA41007D4137 /* CircularContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */; };
 		46339FDD2500EA60007D4137 /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
 		46339FE325024E85007D4137 /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE225024E85007D4137 /* Styler.swift */; };
 		46339FE425024F2B007D4137 /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE225024E85007D4137 /* Styler.swift */; };
@@ -55,13 +55,14 @@
 		46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
 		46B816892543F42900B051B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46B816882543F42900B051B2 /* GoogleService-Info.plist */; };
 		46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
-		46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* ClockView.swift */; };
+		46E055B224B02FA900AC2AE5 /* CircularContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */; };
 		46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
+		46EF7F7E271077AE007030CC /* JieqiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F7D271077AE007030CC /* JieqiListView.swift */; };
+		46EF7F8027107968007030CC /* JieqiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F7F27107968007030CC /* JieqiCell.swift */; };
+		46EF7F8227108A00007030CC /* JieqiCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8127108A00007030CC /* JieqiCircularView.swift */; };
+		46EF7F8427108D73007030CC /* JieqiContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* JieqiContainerView.swift */; };
 		46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 46F9C28425D137020017440D /* ChineseTranditionalMusicCore */; };
 		46F9C28C25D137D50017440D /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9C28B25D137D50017440D /* Cells.swift */; };
-		4F764E38C6087D092FF82239 /* Pods_TianganDizhi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC08DF893B8A7923751F903 /* Pods_TianganDizhi.framework */; };
-		786565B90449CB84C03DC9BB /* Pods_TianganDizhi_TianganDizhiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4219A6EF4E8A223CCC8625A5 /* Pods_TianganDizhi_TianganDizhiUITests.framework */; };
-		D15610BC2C270FFC3CDA40EE /* Pods_Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60DD4A6070EC9208BA01E1F8 /* Pods_Today.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,9 +112,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		14B2C30715475B56CD5CF380 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
-		14E9692AF83CE4C2FEC21216 /* Pods-TianganDizhiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhiTests.release.xcconfig"; path = "Target Support Files/Pods-TianganDizhiTests/Pods-TianganDizhiTests.release.xcconfig"; sourceTree = "<group>"; };
-		4219A6EF4E8A223CCC8625A5 /* Pods_TianganDizhi_TianganDizhiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianganDizhi_TianganDizhiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		460BA9A926F24CA10025CA39 /* ShiciListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiciListView.swift; sourceTree = "<group>"; };
 		460BA9AB26F24DAD0025CA39 /* ShiciView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiciView.swift; sourceTree = "<group>"; };
 		462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiChenExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,18 +166,13 @@
 		46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineScheduler.swift; sourceTree = "<group>"; };
 		46B816882543F42900B051B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
-		46E055B124B02FA900AC2AE5 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularContainerView.swift; sourceTree = "<group>"; };
 		46E055B724B065BD00AC2AE5 /* ShichenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenView.swift; sourceTree = "<group>"; };
+		46EF7F7D271077AE007030CC /* JieqiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiListView.swift; sourceTree = "<group>"; };
+		46EF7F7F27107968007030CC /* JieqiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiCell.swift; sourceTree = "<group>"; };
+		46EF7F8127108A00007030CC /* JieqiCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiCircularView.swift; sourceTree = "<group>"; };
+		46EF7F8327108D73007030CC /* JieqiContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiContainerView.swift; sourceTree = "<group>"; };
 		46F9C28B25D137D50017440D /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
-		60DD4A6070EC9208BA01E1F8 /* Pods_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AC08DF893B8A7923751F903 /* Pods_TianganDizhi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianganDizhi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		79A1E4D6E0E1C6B7CAFBA4C0 /* Pods-TianganDizhiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhiTests.debug.xcconfig"; path = "Target Support Files/Pods-TianganDizhiTests/Pods-TianganDizhiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9938F36E8CA751DFE404D8EE /* Pods-TianganDizhi-TianganDizhiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhi-TianganDizhiUITests.debug.xcconfig"; path = "Target Support Files/Pods-TianganDizhi-TianganDizhiUITests/Pods-TianganDizhi-TianganDizhiUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		ABE815904061A0ED71B76828 /* Pods-TianganDizhi-TianganDizhiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhi-TianganDizhiUITests.release.xcconfig"; path = "Target Support Files/Pods-TianganDizhi-TianganDizhiUITests/Pods-TianganDizhi-TianganDizhiUITests.release.xcconfig"; sourceTree = "<group>"; };
-		B3FC7CFA213389B51454D856 /* Pods-TianganDizhi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhi.debug.xcconfig"; path = "Target Support Files/Pods-TianganDizhi/Pods-TianganDizhi.debug.xcconfig"; sourceTree = "<group>"; };
-		D966D0FB9FDE34E9C21520F8 /* Pods-TianganDizhi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TianganDizhi.release.xcconfig"; path = "Target Support Files/Pods-TianganDizhi/Pods-TianganDizhi.release.xcconfig"; sourceTree = "<group>"; };
-		DD53A8168A0A4888ECEAC466 /* Pods_TianganDizhiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TianganDizhiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBA8457D77FAF7A5C2BFBBB5 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,8 +192,8 @@
 			files = (
 				46B2423825B3250D00B17A4A /* ChineseAstrologyCalendar in Frameworks */,
 				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
+				460EE4DB270211EA0006A7D3 /* FirebaseAnalytics in Frameworks */,
 				46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */,
-				4F764E38C6087D092FF82239 /* Pods_TianganDizhi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +201,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1946EFEFC1E4DF0259A1126D /* Pods_TianganDizhiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +208,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				786565B90449CB84C03DC9BB /* Pods_TianganDizhi_TianganDizhiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +217,6 @@
 			files = (
 				46AB5607242B7F6C00F6604A /* NotificationCenter.framework in Frameworks */,
 				4690D62B25C0292E008D9D1B /* ChineseAstrologyCalendar in Frameworks */,
-				D15610BC2C270FFC3CDA40EE /* Pods_Today.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +228,8 @@
 			children = (
 				46339FE825028279007D4137 /* KnowledgeView.swift */,
 				46AB55FC242B5F7100F6604A /* DizhiListView.swift */,
+				46EF7F7D271077AE007030CC /* JieqiListView.swift */,
+				46EF7F7F27107968007030CC /* JieqiCell.swift */,
 				46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */,
 				46F9C28B25D137D50017440D /* Cells.swift */,
 			);
@@ -267,7 +259,6 @@
 				462A5F6924FFE5F20032A125 /* ShiChen */,
 				46AB5605242B7F6C00F6604A /* Frameworks */,
 				46AB55C8242B5EFD00F6604A /* Products */,
-				B8B47127326EA9AF117EC8FA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,8 +286,10 @@
 				460BA9A926F24CA10025CA39 /* ShiciListView.swift */,
 				460BA9AB26F24DAD0025CA39 /* ShiciView.swift */,
 				460BA9A826F24C400025CA39 /* Knowledge */,
-				46E055B124B02FA900AC2AE5 /* ClockView.swift */,
+				46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */,
 				46E055B724B065BD00AC2AE5 /* ShichenView.swift */,
+				46EF7F8127108A00007030CC /* JieqiCircularView.swift */,
+				46EF7F8327108D73007030CC /* JieqiContainerView.swift */,
 				46339FE525027DA8007D4137 /* ShichenHStackView.swift */,
 				46339FE225024E85007D4137 /* Styler.swift */,
 				46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */,
@@ -345,10 +338,6 @@
 				46AB5606242B7F6C00F6604A /* NotificationCenter.framework */,
 				462A5F6524FFE5F20032A125 /* WidgetKit.framework */,
 				462A5F6724FFE5F20032A125 /* SwiftUI.framework */,
-				6AC08DF893B8A7923751F903 /* Pods_TianganDizhi.framework */,
-				4219A6EF4E8A223CCC8625A5 /* Pods_TianganDizhi_TianganDizhiUITests.framework */,
-				DD53A8168A0A4888ECEAC466 /* Pods_TianganDizhiTests.framework */,
-				60DD4A6070EC9208BA01E1F8 /* Pods_Today.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -370,21 +359,6 @@
 				46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */,
 			);
 			path = "Weibei TC";
-			sourceTree = "<group>";
-		};
-		B8B47127326EA9AF117EC8FA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B3FC7CFA213389B51454D856 /* Pods-TianganDizhi.debug.xcconfig */,
-				D966D0FB9FDE34E9C21520F8 /* Pods-TianganDizhi.release.xcconfig */,
-				9938F36E8CA751DFE404D8EE /* Pods-TianganDizhi-TianganDizhiUITests.debug.xcconfig */,
-				ABE815904061A0ED71B76828 /* Pods-TianganDizhi-TianganDizhiUITests.release.xcconfig */,
-				79A1E4D6E0E1C6B7CAFBA4C0 /* Pods-TianganDizhiTests.debug.xcconfig */,
-				14E9692AF83CE4C2FEC21216 /* Pods-TianganDizhiTests.release.xcconfig */,
-				FBA8457D77FAF7A5C2BFBBB5 /* Pods-Today.debug.xcconfig */,
-				14B2C30715475B56CD5CF380 /* Pods-Today.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,12 +388,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46AB55F1242B5EFF00F6604A /* Build configuration list for PBXNativeTarget "TianganDizhi" */;
 			buildPhases = (
-				B9A5B13D3F0C1293CBE21A18 /* [CP] Check Pods Manifest.lock */,
 				46AB55C3242B5EFD00F6604A /* Sources */,
 				46AB55C4242B5EFD00F6604A /* Frameworks */,
 				46AB55C5242B5EFD00F6604A /* Resources */,
 				46AB5615242B7F6C00F6604A /* Embed App Extensions */,
-				870C71ACE3729DD12F9D8F9C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -432,6 +404,7 @@
 				46339FEF25029C64007D4137 /* JingluoShuxue */,
 				46B2423725B3250D00B17A4A /* ChineseAstrologyCalendar */,
 				46F9C28425D137020017440D /* ChineseTranditionalMusicCore */,
+				460EE4DA270211EA0006A7D3 /* FirebaseAnalytics */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -441,7 +414,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46AB55F4242B5EFF00F6604A /* Build configuration list for PBXNativeTarget "TianganDizhiTests" */;
 			buildPhases = (
-				CAF9F323865032052FBD45EC /* [CP] Check Pods Manifest.lock */,
 				46AB55D9242B5EFF00F6604A /* Sources */,
 				46AB55DA242B5EFF00F6604A /* Frameworks */,
 				46AB55DB242B5EFF00F6604A /* Resources */,
@@ -460,11 +432,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46AB55F7242B5EFF00F6604A /* Build configuration list for PBXNativeTarget "TianganDizhiUITests" */;
 			buildPhases = (
-				66155DCC5F7E9EEB2D2D12E8 /* [CP] Check Pods Manifest.lock */,
 				46AB55E4242B5EFF00F6604A /* Sources */,
 				46AB55E5242B5EFF00F6604A /* Frameworks */,
 				46AB55E6242B5EFF00F6604A /* Resources */,
-				F211107B999473449C19C392 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -480,7 +450,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46AB5612242B7F6C00F6604A /* Build configuration list for PBXNativeTarget "Today" */;
 			buildPhases = (
-				6ADFB1D4265E6293F9732094 /* [CP] Check Pods Manifest.lock */,
 				46AB5600242B7F6C00F6604A /* Sources */,
 				46AB5601242B7F6C00F6604A /* Frameworks */,
 				46AB5602242B7F6C00F6604A /* Resources */,
@@ -541,6 +510,7 @@
 				46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */,
 				46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
 				46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */,
+				460EE4D9270211EA0006A7D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -603,131 +573,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		66155DCC5F7E9EEB2D2D12E8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TianganDizhi-TianganDizhiUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6ADFB1D4265E6293F9732094 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Today-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		870C71ACE3729DD12F9D8F9C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi/Pods-TianganDizhi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi/Pods-TianganDizhi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi/Pods-TianganDizhi-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9A5B13D3F0C1293CBE21A18 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TianganDizhi-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CAF9F323865032052FBD45EC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TianganDizhiTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F211107B999473449C19C392 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi-TianganDizhiUITests/Pods-TianganDizhi-TianganDizhiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi-TianganDizhiUITests/Pods-TianganDizhi-TianganDizhiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TianganDizhi-TianganDizhiUITests/Pods-TianganDizhi-TianganDizhiUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		462A5F6024FFE5F20032A125 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -739,7 +584,7 @@
 				46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				46339FDD2500EA60007D4137 /* ShichenView.swift in Sources */,
 				46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */,
-				46339FDC2500EA41007D4137 /* ClockView.swift in Sources */,
+				46339FDC2500EA41007D4137 /* CircularContainerView.swift in Sources */,
 				46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,12 +593,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46EF7F8027107968007030CC /* JieqiCell.swift in Sources */,
 				46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */,
 				46B79C402541F95F003C0B7F /* Environment.swift in Sources */,
 				46339FEB25028DB5007D4137 /* MainView.swift in Sources */,
+				46EF7F8427108D73007030CC /* JieqiContainerView.swift in Sources */,
 				46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */,
-				46E055B224B02FA900AC2AE5 /* ClockView.swift in Sources */,
+				46E055B224B02FA900AC2AE5 /* CircularContainerView.swift in Sources */,
 				46F9C28C25D137D50017440D /* Cells.swift in Sources */,
 				46B7FCE9250620CC008E8D48 /* TimelineScheduler.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
@@ -763,6 +610,8 @@
 				468844D024F54B4600310941 /* Updater.swift in Sources */,
 				46339FE325024E85007D4137 /* Styler.swift in Sources */,
 				460BA9AA26F24CA10025CA39 /* ShiciListView.swift in Sources */,
+				46EF7F8227108A00007030CC /* JieqiCircularView.swift in Sources */,
+				46EF7F7E271077AE007030CC /* JieqiListView.swift in Sources */,
 				46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */,
 				46339FE625027DA8007D4137 /* ShichenHStackView.swift in Sources */,
 				46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */,
@@ -989,7 +838,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1045,7 +894,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1057,7 +906,6 @@
 		};
 		46AB55F2242B5EFF00F6604A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3FC7CFA213389B51454D856 /* Pods-TianganDizhi.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1067,7 +915,7 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1083,7 +931,6 @@
 		};
 		46AB55F3242B5EFF00F6604A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D966D0FB9FDE34E9C21520F8 /* Pods-TianganDizhi.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1093,7 +940,7 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1109,14 +956,12 @@
 		};
 		46AB55F5242B5EFF00F6604A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79A1E4D6E0E1C6B7CAFBA4C0 /* Pods-TianganDizhiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = TianganDizhiTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1132,14 +977,12 @@
 		};
 		46AB55F6242B5EFF00F6604A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14E9692AF83CE4C2FEC21216 /* Pods-TianganDizhiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = TianganDizhiTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1155,7 +998,6 @@
 		};
 		46AB55F8242B5EFF00F6604A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9938F36E8CA751DFE404D8EE /* Pods-TianganDizhi-TianganDizhiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1176,7 +1018,6 @@
 		};
 		46AB55F9242B5EFF00F6604A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABE815904061A0ED71B76828 /* Pods-TianganDizhi-TianganDizhiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1197,13 +1038,12 @@
 		};
 		46AB5613242B7F6C00F6604A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBA8457D77FAF7A5C2BFBBB5 /* Pods-Today.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = Today/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1221,13 +1061,12 @@
 		};
 		46AB5614242B7F6C00F6604A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14B2C30715475B56CD5CF380 /* Pods-Today.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = Today/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1303,6 +1142,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		460EE4D9270211EA0006A7D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/JingluoShuxueCore.git";
@@ -1330,6 +1177,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		460EE4DA270211EA0006A7D3 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 460EE4D9270211EA0006A7D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
 		46339FEF25029C64007D4137 /* JingluoShuxue */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */;

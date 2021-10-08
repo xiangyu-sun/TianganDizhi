@@ -1,6 +1,0 @@
-framework module Pods_TianganDizhi {
-  umbrella header "Pods-TianganDizhi-umbrella.h"
-
-  export *
-  module * { export * }
-}

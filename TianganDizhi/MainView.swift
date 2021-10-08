@@ -35,15 +35,11 @@ struct MainView: View {
                 Text(shichen.organReference)
                 .font(bodyFont)
                 
-                if UIDevice.current.userInterfaceIdiom == .pad {
-                    ClockView(currentShichen: shichen, padding: 50)
-                        .padding()
-                } else {
-                    ClockView(currentShichen: shichen, padding: 14)
-                        .padding()
-                }
-      
-                
+            CircularContainerView(currentShichen:
+                                    shichen,
+                                  padding: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 14)
+                .padding()
+            
                 Spacer()
             }
             

@@ -58,7 +58,7 @@ struct ShiChenEntryView : View {
         case .systemLarge:
             VStack() {
                 FullDateTitleView(date: entry.date)
-                ClockView(currentShichen: shichen, padding: 0)
+                CircularContainerView(currentShichen: shichen, padding: 0)
             }
         default:
             VStack() {

@@ -30,6 +30,9 @@ struct KnowledgeView: View {
                 NavigationLink(destination: DizhiListView( disppayMode: .month)) {
                     Text(DizhiListView.DisplayMode.month.title)
                 }
+                NavigationLink(destination: JieqiListView()) {
+                    Text("二十四節氣")
+                }
                 NavigationLink(destination: DizhiListView( disppayMode: .organs)) {
                     Text(DizhiListView.DisplayMode.organs.title)
                 }

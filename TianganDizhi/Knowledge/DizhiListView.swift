@@ -9,7 +9,6 @@
 import SwiftUI
 import ChineseAstrologyCalendar
 
-
 struct DizhiListView: View {
     @Environment(\.bodyFont) var bodyFont
     enum DisplayMode {
