@@ -35,7 +35,7 @@ struct ShiChenYearMonthDateEntryView : View {
                     .widgetAccentable()
             }
         case .accessoryCircular:
-            ProgressView(interval: Date()...Date() + 60 * 60,
+            ProgressView(interval: (shichen.startDate ?? Date())...(shichen.endDate ?? Date()),
                          countdown: false,
                          label: { Text("時辰") },
                          currentValueLabel: {

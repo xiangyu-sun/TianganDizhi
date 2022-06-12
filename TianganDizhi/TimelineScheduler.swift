@@ -17,7 +17,7 @@ struct TimeLineSceduler {
         timeline.append(currentDate)
         
         guard let currentShichen = try? GanzhiDateConverter.shichen(currentDate),
-              let nextShichenStart = currentShichen.next.startDateComponent else {
+              let nextShichenStart = currentShichen.next.startDate else {
             return backup()
         }
         

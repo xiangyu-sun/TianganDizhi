@@ -128,15 +128,15 @@ struct ShiChen_Previews: PreviewProvider {
             
             ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .accessoryInline))
-                .previewDisplayName("Inline")
+                .previewDisplayName("ShiChenEntryView Inline")
             
             ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-                .previewDisplayName("Circular")
+                .previewDisplayName("ShiChenEntryView Circular")
             
             ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-                .previewDisplayName("Retangular")
+                .previewDisplayName("ShiChenEntryView Retangular")
         }
 #if os(iOS)
         Group {

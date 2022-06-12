@@ -8,6 +8,7 @@
 
 import SwiftUI
 import ChineseAstrologyCalendar
+import WidgetKit
 
 struct CompactShichenView: View {
     @Environment(\.largeTitleFont) var largeTitleFont
@@ -39,5 +40,6 @@ struct CompactShichenView: View {
 struct CompactShichenView_Previews: PreviewProvider {
     static var previews: some View {
         CompactShichenView(shichen: .zi, date: Date())
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
