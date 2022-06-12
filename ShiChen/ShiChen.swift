@@ -17,12 +17,22 @@ struct Provider: IntentTimelineProvider {
         SimpleEntry(date: Date(), configuration: ConfigurationIntent())
     }
     
+    func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
+        return defaultDecommendedIntents().map { intent in
+            return IntentRecommendation(intent: intent, description: "")
+        }
+    }
+    
+    private func defaultDecommendedIntents() -> [ConfigurationIntent] {
+        return [ConfigurationIntent()]
+    }
+    
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         let entry = SimpleEntry(date: Date(), configuration: configuration)
         completion(entry)
     }
     
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> ()) {
         var entries: [SimpleEntry] = []
         
         for date in TimeLineSceduler.buildTimeLine() {
@@ -40,50 +50,6 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationIntent
 }
 
-struct ShiChenEntryView : View {
-    var entry: Provider.Entry
-    @Environment(\.widgetFamily) var family
-    @Environment(\.largeTitleFont) var largeTitleFont
-    @Environment(\.bodyFont) var bodyFont
-    var body: some View {
-        let shichen = try! GanzhiDateConverter.shichen(entry.date)
-        
-        switch family {
-        case .systemMedium:
-            VStack() {
-                FullDateTitleView(date: entry.date)
-                ShichenHStackView(shichen: shichen)
-                    .padding([.leading, .trailing], 8)
-            }
-        case .systemLarge:
-            VStack() {
-                FullDateTitleView(date: entry.date)
-                CircularContainerView(currentShichen: shichen, padding: 0)
-            }
-        default:
-            CompactShichenView(shichen: shichen, date: entry.date)
-        }
-    }
-}
-
-struct ShiChenYearMonthDateEntryView : View {
-    var entry: Provider.Entry
-    @Environment(\.bodyFont) var bodyFont
-    @Environment(\.titleFont) var titleFont
-    var body: some View {
-        let shichen = try! GanzhiDateConverter.shichen(entry.date)
-        
-        VStack() {
-            Spacer()
-            Text(entry.date.chineseYearMonthDate)
-                .font(bodyFont)
-                .padding([.leading,.trailing], 15)
-            Text(shichen.displayHourText)
-                .font(titleFont)
-            Spacer()
-        }
-    }
-}
 
 struct FullDateTitleView: View {
     @Environment(\.bodyFont) var bodyFont
@@ -108,7 +74,12 @@ struct Nongli: Widget {
         }
         .configurationDisplayName("年月日時辰")
         .description("農曆年月日以及十二時辰")
-        .supportedFamilies([.systemSmall])
+#if os(watchOS)
+        .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
+#else
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge,  .accessoryInline, .accessoryCircular, .accessoryRectangular])
+#endif
+    
         
     }
 }
@@ -122,6 +93,11 @@ struct ShiChen: Widget {
         }
         .configurationDisplayName("十二时辰")
         .description("十二地支为名的十二时辰计，俗稱，以及相關臟器")
+#if os(watchOS)
+        .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
+#else
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge,  .accessoryInline, .accessoryCircular, .accessoryRectangular])
+#endif
         
     }
 }
@@ -137,23 +113,53 @@ struct AllWidgets: WidgetBundle {
 
 struct ShiChen_Previews: PreviewProvider {
     static var previews: some View {
-        ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-        
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemLarge))
-        
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemLarge))
-            .environment(\.colorScheme, .dark)
-        
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
-            .environment(\.sizeCategory, .extraExtraLarge)
-
+        Group {
+            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .accessoryInline))
+                .previewDisplayName("YearMonth Inline")
+            
+            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+                .previewDisplayName("YearMonth Circular")
+            
+            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+                .previewDisplayName("YearMonth Retangular")
+            
+            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .accessoryInline))
+                .previewDisplayName("Inline")
+            
+            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+                .previewDisplayName("Circular")
+            
+            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+                .previewDisplayName("Retangular")
+        }
+#if os(iOS)
+        Group {
+            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            
+            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemLarge))
+            
+            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemLarge))
+                .environment(\.colorScheme, .dark)
+            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
+            
+            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+                .environment(\.sizeCategory, .extraExtraLarge)
+        }
+#endif
     }
 }
