@@ -57,40 +57,48 @@ extension EnvironmentValues {
 
 extension View {
     func titleFont(_ myCustomValue: Font) -> some View {
+#if os(iOS)
         if UIDevice.current.userInterfaceIdiom == .pad {
             return environment(\.titleFont, myCustomValue)
         }
+#endif
+        
         return environment(\.titleFont, TitleFontEnvironmentKey.defaultValue)
     }
     
     func title3Font(_ myCustomValue: Font) -> some View {
+#if os(iOS)
         if UIDevice.current.userInterfaceIdiom == .pad {
             return environment(\.title3Font, myCustomValue)
         }
+#endif
         return environment(\.title3Font, Title3FontEnvironmentKey.defaultValue)
     }
     
     func largeTitleFont(_ myCustomValue: Font) -> some View {
-        
+#if os(iOS)
         if UIDevice.current.userInterfaceIdiom == .pad {
             return environment(\.largeTitleFont, myCustomValue)
         }
+#endif
         return environment(\.largeTitleFont, LargeTitleFontEnvironmentKey.defaultValue)
     }
     
     func bodyFont(_ myCustomValue: Font) -> some View {
-        
+#if os(iOS)
         if UIDevice.current.userInterfaceIdiom == .pad {
             return environment(\.bodyFont, myCustomValue)
         }
+#endif
         return environment(\.bodyFont, BodyFontEnvironmentKey.defaultValue)
     }
     
     func headlineFont(_ myCustomValue: Font) -> some View {
-        
+#if os(iOS)
         if UIDevice.current.userInterfaceIdiom == .pad {
             return environment(\.headlineFont, myCustomValue)
         }
+#endif
         return environment(\.headlineFont, HeadlineFontEnvironmentKey.defaultValue)
     }
     

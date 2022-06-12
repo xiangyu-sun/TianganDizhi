@@ -61,23 +61,7 @@ struct ShiChenEntryView : View {
                 CircularContainerView(currentShichen: shichen, padding: 0)
             }
         default:
-            VStack() {
-                titleView
-                Text(shichen.displayHourText)
-                .font(largeTitleFont)
-                
-                ShichenInformationView(shichen: shichen)
-            }
-        }
-        
-    }
-    
-    private var titleView: some View {
-        HStack(){
-            Text((try? GanzhiDateConverter.nian(entry.date).formatedYear) ?? "")
-                .font(bodyFont)
-            Text((try? GanzhiDateConverter.zodiac(entry.date).rawValue) ?? "")
-                .font(bodyFont)
+            CompactShichenView(shichen: shichen, date: entry.date)
         }
     }
 }
