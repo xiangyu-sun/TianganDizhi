@@ -24,7 +24,7 @@ struct ShiChenEntryView : View {
         case .accessoryInline:
             ViewThatFits() {
                 HStack() {
-                    Text(entry.date.chineseYearMonthDate)
+                    Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
                         .font(bodyFont)
                         .padding([.leading,.trailing], 15)
                     Text(shichen.displayHourText)
@@ -36,16 +36,19 @@ struct ShiChenEntryView : View {
                     .widgetAccentable()
             }
         case .accessoryCircular:
-            ProgressView(value: 0.2) {
-                Text(shichen.displayHourText)
-                    .font(titleFont)
-                    .widgetAccentable()
-            }.progressViewStyle(.circular)
-            //TODO: change to live update API
+          ProgressView(interval: (shichen.startDate ?? Date())...(shichen.endDate ?? Date()),
+                       countdown: false,
+                       label: {
+            Text(shichen.displayHourText)
+              .widgetAccentable()
+          }, currentValueLabel: {
+            
+          })
+          .progressViewStyle(.circular)
         case .accessoryRectangular:
             HStack() {
                 VStack() {
-                    Text(entry.date.chineseYearMonthDate)
+                    Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
                         .font(bodyFont)
                   
                 }
@@ -63,7 +66,8 @@ struct ShiChenEntryView : View {
         case .systemLarge, .systemExtraLarge:
             VStack() {
                 FullDateTitleView(date: entry.date)
-                CircularContainerView(currentShichen: shichen, padding: 0)
+                CircularContainerView(currentShichen: shichen, padding: -30)
+                .padding(.bottom, 8)
             }
         default:
             CompactShichenView(shichen: shichen, date: entry.date)

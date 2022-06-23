@@ -12,7 +12,7 @@ import WidgetKit
 
 struct CompactShichenView: View {
     @Environment(\.largeTitleFont) var largeTitleFont
-    @Environment(\.bodyFont) var bodyFont
+    @Environment(\.title3Font) var title3Font
     
     let shichen: Dizhi
     let date: Date
@@ -30,10 +30,9 @@ struct CompactShichenView: View {
     private var titleView: some View {
         HStack(){
             Text((try? GanzhiDateConverter.nian(date).formatedYear) ?? "")
-                .font(bodyFont)
             Text((try? GanzhiDateConverter.zodiac(date).rawValue) ?? "")
-                .font(bodyFont)
         }
+        .font(title3Font)
     }
 }
 

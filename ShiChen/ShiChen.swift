@@ -51,19 +51,6 @@ struct SimpleEntry: TimelineEntry {
 }
 
 
-struct FullDateTitleView: View {
-    @Environment(\.bodyFont) var bodyFont
-    @Environment(\.titleFont) var titleFont
-    var date: Date
-    var body: some View {
-        HStack(){
-            Text((try? GanzhiDateConverter.zodiac(date).rawValue) ?? "")
-                .font(bodyFont)
-            Text(date.chineseYearMonthDate)
-                .font(bodyFont)
-        }
-    }
-}
 
 struct Nongli: Widget {
     let kind: String = "Nongli"

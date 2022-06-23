@@ -17,6 +17,7 @@ struct JieqiContainerView: View {
             JieqiCircularView(currentJieqi: nil)
                 .scaledToFill()
         }
+        .padding(padding)
         .scaledToFit()
         
     }

@@ -93,6 +93,8 @@
 		993843C0285636DC00FA7631 /* ShiChenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843BD285636B800FA7631 /* ShiChenEntryView.swift */; };
 		993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
 		993843C428563D0400FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
+		994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D37522864BFF200A9C99E /* FullDateTitleView.swift */; };
+		994D37552864C05300A9C99E /* FullDateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D37522864BFF200A9C99E /* FullDateTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +245,7 @@
 		993843B8285633D900FA7631 /* ShiChenExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ShiChenExtension copy-Info.plist"; path = "/Users/xiangyu.sun/TianganDizhi/ShiChenExtension copy-Info.plist"; sourceTree = "<absolute>"; };
 		993843BD285636B800FA7631 /* ShiChenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenEntryView.swift; sourceTree = "<group>"; };
 		993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenYearMonthDateEntryView.swift; sourceTree = "<group>"; };
+		994D37522864BFF200A9C99E /* FullDateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDateTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				462A5F6A24FFE5F20032A125 /* ShiChen.swift */,
+				994D37522864BFF200A9C99E /* FullDateTitleView.swift */,
 				993843BD285636B800FA7631 /* ShiChenEntryView.swift */,
 				993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */,
 				46701E2C271B2E7E00D6D322 /* CompactShichenView.swift */,
@@ -404,17 +408,14 @@
 				46339FEA25028DB5007D4137 /* MainView.swift */,
 				46B79C3F2541F95F003C0B7F /* Environment.swift */,
 				468844CF24F54B4600310941 /* Updater.swift */,
-				460BA9A926F24CA10025CA39 /* ShiciListView.swift */,
-				460BA9AB26F24DAD0025CA39 /* ShiciView.swift */,
+				46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */,
+				994190BF285A294700295389 /* Shici */,
 				460BA9A826F24C400025CA39 /* Knowledge */,
-				46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */,
-				46E055B724B065BD00AC2AE5 /* ShichenView.swift */,
+				994190BE285A28E900295389 /* ShiChenClock */,
 				46EF7F8127108A00007030CC /* JieqiCircularView.swift */,
 				46EF7F8327108D73007030CC /* JieqiContainerView.swift */,
 				46339FE525027DA8007D4137 /* ShichenHStackView.swift */,
-				46339FE225024E85007D4137 /* Styler.swift */,
-				46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */,
-				46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */,
+				994190C0285A296A00295389 /* Utilities */,
 				46B79C0B2541E4B9003C0B7F /* Weibei TC */,
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
 				46AB55D5242B5EFF00F6604A /* LaunchScreen.storyboard */,
@@ -477,6 +478,33 @@
 				46EF7FA42711D9CD007030CC /* AppStoreReviewPrompt */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		994190BE285A28E900295389 /* ShiChenClock */ = {
+			isa = PBXGroup;
+			children = (
+				46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */,
+				46E055B724B065BD00AC2AE5 /* ShichenView.swift */,
+			);
+			path = ShiChenClock;
+			sourceTree = "<group>";
+		};
+		994190BF285A294700295389 /* Shici */ = {
+			isa = PBXGroup;
+			children = (
+				460BA9A926F24CA10025CA39 /* ShiciListView.swift */,
+				460BA9AB26F24DAD0025CA39 /* ShiciView.swift */,
+			);
+			path = Shici;
+			sourceTree = "<group>";
+		};
+		994190C0285A296A00295389 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				46339FE225024E85007D4137 /* Styler.swift */,
+				46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -754,6 +782,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */,
 				462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */,
 				993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				46B79C462541F962003C0B7F /* Environment.swift in Sources */,
@@ -836,6 +865,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994D37552864C05300A9C99E /* FullDateTitleView.swift in Sources */,
 				993843A4285633D900FA7631 /* ShiChen.swift in Sources */,
 				993843C428563D0400FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				993843A5285633D900FA7631 /* Environment.swift in Sources */,
@@ -1122,13 +1152,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -1178,13 +1209,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};

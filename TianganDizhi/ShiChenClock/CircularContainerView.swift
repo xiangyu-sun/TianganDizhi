@@ -20,7 +20,6 @@ struct CircularContainerView: View {
             ShichenView(currentShichen: currentShichen)
                 .padding(padding)
         }
-        .scaledToFit()
         
     }
 }

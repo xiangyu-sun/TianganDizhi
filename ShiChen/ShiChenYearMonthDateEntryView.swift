@@ -23,7 +23,7 @@ struct ShiChenYearMonthDateEntryView : View {
         case .accessoryInline:
             ViewThatFits() {
                 HStack() {
-                    Text(entry.date.chineseYearMonthDate)
+                    Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
                         .font(bodyFont)
                         .padding([.leading,.trailing], 15)
                     Text(shichen.displayHourText)
@@ -35,20 +35,19 @@ struct ShiChenYearMonthDateEntryView : View {
                     .widgetAccentable()
             }
         case .accessoryCircular:
-            ProgressView(interval: (shichen.startDate ?? Date())...(shichen.endDate ?? Date()),
-                         countdown: false,
-                         label: { Text("時辰") },
-                         currentValueLabel: {
-                Text(shichen.displayHourText)
-                    .font(titleFont)
-                    .widgetAccentable()
-            })
-            .progressViewStyle(.circular)
-            //TODO: change to live update API
+          ProgressView(interval: (shichen.startDate ?? Date())...(shichen.endDate ?? Date()),
+                       countdown: false,
+                       label: {
+            Text(shichen.displayHourText)
+              .widgetAccentable()
+          }, currentValueLabel: {
+            
+          })
+          .progressViewStyle(.circular)
         case .accessoryRectangular:
             HStack() {
                 VStack() {
-                    Text(entry.date.chineseYearMonthDate)
+                    Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
                         .font(bodyFont)
                     
                 }
@@ -71,3 +70,22 @@ struct ShiChenYearMonthDateEntryView : View {
         
     }
 }
+
+struct ShiChenYearMonthDateEntryView_Previews: PreviewProvider {
+  static var previews: some View {
+    Group {
+      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryInline))
+        .previewDisplayName("YearMonth Inline")
+      
+      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+        .previewDisplayName("YearMonth Circular")
+      
+      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+        .previewDisplayName("YearMonth Retangular")
+    }
+  }
+}
+            
