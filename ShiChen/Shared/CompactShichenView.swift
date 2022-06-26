@@ -35,10 +35,11 @@ struct CompactShichenView: View {
         .font(title3Font)
     }
 }
-
+#if os(iOS)
 struct CompactShichenView_Previews: PreviewProvider {
     static var previews: some View {
         CompactShichenView(shichen: .zi, date: Date())
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
+#endif

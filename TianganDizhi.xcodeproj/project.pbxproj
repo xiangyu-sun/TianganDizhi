@@ -26,23 +26,7 @@
 		46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 46339FEF25029C64007D4137 /* JingluoShuxue */; };
 		46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
-		46701DFB271B2A0800D6D322 /* Shichen WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 46701DFA271B2A0800D6D322 /* Shichen WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		46701E00271B2A0900D6D322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46701DFF271B2A0900D6D322 /* Assets.xcassets */; };
-		46701E0B271B2A0900D6D322 /* TianganDizhiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E0A271B2A0900D6D322 /* TianganDizhiApp.swift */; };
-		46701E0D271B2A0900D6D322 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E0C271B2A0900D6D322 /* ContentView.swift */; };
-		46701E0F271B2A0900D6D322 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E0E271B2A0900D6D322 /* NotificationController.swift */; };
-		46701E11271B2A0900D6D322 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E10271B2A0900D6D322 /* NotificationView.swift */; };
-		46701E13271B2A0900D6D322 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E12271B2A0900D6D322 /* ComplicationController.swift */; };
-		46701E15271B2A0A00D6D322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46701E14271B2A0A00D6D322 /* Assets.xcassets */; };
-		46701E18271B2A0A00D6D322 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46701E17271B2A0A00D6D322 /* Preview Assets.xcassets */; };
-		46701E2B271B2CBA00D6D322 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 46701E2A271B2CBA00D6D322 /* ChineseAstrologyCalendar */; };
 		46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E2C271B2E7E00D6D322 /* CompactShichenView.swift */; };
-		46701E30271B303300D6D322 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
-		46701E31271B308D00D6D322 /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE225024E85007D4137 /* Styler.swift */; };
-		46701E32271B31AA00D6D322 /* ShichenHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE525027DA8007D4137 /* ShichenHStackView.swift */; };
-		46701E35271B37E300D6D322 /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E34271B37E300D6D322 /* ShichenView.swift */; };
-		46701E37271B3B8A00D6D322 /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
-		46701E39271C1C8800D6D322 /* Emoji+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E38271C1C8800D6D322 /* Emoji+Image.swift */; };
 		468844D024F54B4600310941 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468844CF24F54B4600310941 /* Updater.swift */; };
 		4690D63225C02948008D9D1B /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 4690D63125C02948008D9D1B /* ChineseAstrologyCalendar */; };
 		46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CA242B5EFD00F6604A /* AppDelegate.swift */; };
@@ -74,27 +58,39 @@
 		46EF7F8427108D73007030CC /* JieqiContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* JieqiContainerView.swift */; };
 		46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 46F9C28425D137020017440D /* ChineseTranditionalMusicCore */; };
 		46F9C28C25D137D50017440D /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9C28B25D137D50017440D /* Cells.swift */; };
-		993843A4285633D900FA7631 /* ShiChen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A5F6A24FFE5F20032A125 /* ShiChen.swift */; };
-		993843A5285633D900FA7631 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
-		993843A6285633D900FA7631 /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE225024E85007D4137 /* Styler.swift */; };
-		993843A7285633D900FA7631 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
-		993843A8285633D900FA7631 /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
-		993843A9285633D900FA7631 /* ShichenHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE525027DA8007D4137 /* ShichenHStackView.swift */; };
-		993843AA285633D900FA7631 /* CircularContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */; };
-		993843AB285633D900FA7631 /* CompactShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E2C271B2E7E00D6D322 /* CompactShichenView.swift */; };
-		993843AC285633D900FA7631 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
-		993843AE285633D900FA7631 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
-		993843AF285633D900FA7631 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 993843A1285633D900FA7631 /* ChineseAstrologyCalendar */; };
-		993843B0285633D900FA7631 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
-		993843B2285633D900FA7631 /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
-		993843B3285633D900FA7631 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462A5F6D24FFE5F20032A125 /* Assets.xcassets */; };
-		993843B92856346900FA7631 /* ShiChenExtension Watch.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 993843B7285633D900FA7631 /* ShiChenExtension Watch.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843BD285636B800FA7631 /* ShiChenEntryView.swift */; };
-		993843C0285636DC00FA7631 /* ShiChenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843BD285636B800FA7631 /* ShiChenEntryView.swift */; };
 		993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
-		993843C428563D0400FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
 		994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D37522864BFF200A9C99E /* FullDateTitleView.swift */; };
-		994D37552864C05300A9C99E /* FullDateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D37522864BFF200A9C99E /* FullDateTitleView.swift */; };
+		997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68492864CADE00B40D3F /* ShichenWatchApp.swift */; };
+		997C684C2864CADE00B40D3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C684B2864CADE00B40D3F /* ContentView.swift */; };
+		997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C684D2864CADF00B40D3F /* Assets.xcassets */; };
+		997C68512864CADF00B40D3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C68502864CADF00B40D3F /* Preview Assets.xcassets */; };
+		997C685B2864CADF00B40D3F /* ShichenWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C685A2864CADF00B40D3F /* ShichenWatch_Watch_AppTests.swift */; };
+		997C68652864CADF00B40D3F /* ShichenWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68642864CADF00B40D3F /* ShichenWatch_Watch_AppUITests.swift */; };
+		997C68672864CADF00B40D3F /* ShichenWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68662864CADF00B40D3F /* ShichenWatch_Watch_AppUITestsLaunchTests.swift */; };
+		997C68782864CB9B00B40D3F /* AllWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68762864CB8F00B40D3F /* AllWidgets.swift */; };
+		997C68812865FAD200B40D3F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
+		997C68822865FAD200B40D3F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
+		997C68852865FAD200B40D3F /* ShichenWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68842865FAD200B40D3F /* ShichenWatch.swift */; };
+		997C68882865FAD300B40D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C68872865FAD300B40D3F /* Assets.xcassets */; };
+		997C688F2865FAD300B40D3F /* ShichenWatchExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 997C68802865FAD200B40D3F /* ShichenWatchExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		997C68942868A76800B40D3F /* FullDateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D37522864BFF200A9C99E /* FullDateTitleView.swift */; };
+		997C68952868A76800B40D3F /* ShiChenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843BD285636B800FA7631 /* ShiChenEntryView.swift */; };
+		997C68962868A76800B40D3F /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
+		997C68972868A76800B40D3F /* CompactShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E2C271B2E7E00D6D322 /* CompactShichenView.swift */; };
+		997C68982868A77700B40D3F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
+		997C68992868A78400B40D3F /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE225024E85007D4137 /* Styler.swift */; };
+		997C689A2868A7B600B40D3F /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C687A2865F80A00B40D3F /* CornerView.swift */; };
+		997C689C2868A7DC00B40D3F /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 997C689B2868A7DC00B40D3F /* ChineseAstrologyCalendar */; };
+		997C689D2868A7EA00B40D3F /* ShichenHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE525027DA8007D4137 /* ShichenHStackView.swift */; };
+		997C68A42868A86C00B40D3F /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
+		997C68A52868A8E900B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
+		997C68AB2868A8F600B40D3F /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* Provider.swift */; };
+		997C68AC2868A92400B40D3F /* CircularContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */; };
+		997C68AD2868A93100B40D3F /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
+		997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
+		997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
+		997C68B32868ABEE00B40D3F /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* Provider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,13 +100,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 462A5F6324FFE5F20032A125;
 			remoteInfo = ShiChenExtension;
-		};
-		46701DFC271B2A0800D6D322 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 46AB55BF242B5EFD00F6604A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 46701DF9271B2A0800D6D322;
-			remoteInfo = "Shichen WatchKit App";
 		};
 		46AB55DE242B5EFF00F6604A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -126,27 +115,30 @@
 			remoteGlobalIDString = 46AB55C6242B5EFD00F6604A;
 			remoteInfo = TianganDizhi;
 		};
-		993843BA2856346900FA7631 /* PBXContainerItemProxy */ = {
+		997C68572864CADF00B40D3F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46AB55BF242B5EFD00F6604A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 993843A0285633D900FA7631;
-			remoteInfo = "ShiChenExtension Watch";
+			remoteGlobalIDString = 997C68432864CADE00B40D3F;
+			remoteInfo = "ShichenWatch Watch App";
+		};
+		997C68612864CADF00B40D3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46AB55BF242B5EFD00F6604A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 997C68432864CADE00B40D3F;
+			remoteInfo = "ShichenWatch Watch App";
+		};
+		997C688C2865FAD300B40D3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46AB55BF242B5EFD00F6604A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 997C687F2865FAD200B40D3F;
+			remoteInfo = ShichenWatchExtension;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		46701E1D271B2A0A00D6D322 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				46701DFB271B2A0800D6D322 /* Shichen WatchKit App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		46AB5615242B7F6C00F6604A /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,13 +150,13 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		993843BC2856346900FA7631 /* Embed Foundation Extensions */ = {
+		997C688E2865FAD300B40D3F /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				993843B92856346900FA7631 /* ShiChenExtension Watch.appex in Embed Foundation Extensions */,
+				997C688F2865FAD300B40D3F /* ShichenWatchExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,21 +180,7 @@
 		46393EE62542F57900E40518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/ShiChen.intentdefinition; sourceTree = "<group>"; };
 		46393EEE2542F57F00E40518 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ShiChen.strings"; sourceTree = "<group>"; };
 		46393EF52542F58000E40518 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/ShiChen.strings"; sourceTree = "<group>"; };
-		46701DF7271B2A0800D6D322 /* Shichen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shichen.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		46701DFA271B2A0800D6D322 /* Shichen WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shichen WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		46701DFF271B2A0900D6D322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		46701E0A271B2A0900D6D322 /* TianganDizhiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganDizhiApp.swift; sourceTree = "<group>"; };
-		46701E0C271B2A0900D6D322 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		46701E0E271B2A0900D6D322 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		46701E10271B2A0900D6D322 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		46701E12271B2A0900D6D322 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		46701E14271B2A0A00D6D322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		46701E17271B2A0A00D6D322 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		46701E19271B2A0A00D6D322 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46701E1A271B2A0A00D6D322 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		46701E2C271B2E7E00D6D322 /* CompactShichenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactShichenView.swift; sourceTree = "<group>"; };
-		46701E34271B37E300D6D322 /* ShichenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenView.swift; sourceTree = "<group>"; };
-		46701E38271C1C8800D6D322 /* Emoji+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Emoji+Image.swift"; sourceTree = "<group>"; };
 		468844CF24F54B4600310941 /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		46AB55C7242B5EFD00F6604A /* TianganDizhi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TianganDizhi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AB55CA242B5EFD00F6604A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -241,11 +219,28 @@
 		46EF7F8327108D73007030CC /* JieqiContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiContainerView.swift; sourceTree = "<group>"; };
 		46EF7FA42711D9CD007030CC /* AppStoreReviewPrompt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppStoreReviewPrompt; path = ../AppStoreReviewPrompt; sourceTree = "<group>"; };
 		46F9C28B25D137D50017440D /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
-		993843B7285633D900FA7631 /* ShiChenExtension Watch.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ShiChenExtension Watch.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		993843B8285633D900FA7631 /* ShiChenExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ShiChenExtension copy-Info.plist"; path = "/Users/xiangyu.sun/TianganDizhi/ShiChenExtension copy-Info.plist"; sourceTree = "<absolute>"; };
 		993843BD285636B800FA7631 /* ShiChenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenEntryView.swift; sourceTree = "<group>"; };
 		993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenYearMonthDateEntryView.swift; sourceTree = "<group>"; };
 		994D37522864BFF200A9C99E /* FullDateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDateTitleView.swift; sourceTree = "<group>"; };
+		997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShichenWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		997C68492864CADE00B40D3F /* ShichenWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatchApp.swift; sourceTree = "<group>"; };
+		997C684B2864CADE00B40D3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		997C684D2864CADF00B40D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		997C68502864CADF00B40D3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		997C68562864CADF00B40D3F /* ShichenWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShichenWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		997C685A2864CADF00B40D3F /* ShichenWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
+		997C68602864CADF00B40D3F /* ShichenWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ShichenWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		997C68642864CADF00B40D3F /* ShichenWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		997C68662864CADF00B40D3F /* ShichenWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		997C68762864CB8F00B40D3F /* AllWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllWidgets.swift; sourceTree = "<group>"; };
+		997C687A2865F80A00B40D3F /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		997C68802865FAD200B40D3F /* ShichenWatchExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShichenWatchExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		997C68842865FAD200B40D3F /* ShichenWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatch.swift; sourceTree = "<group>"; };
+		997C68872865FAD300B40D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		997C68892865FAD300B40D3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		997C689E2868A81500B40D3F /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
+		997C68A02868A83700B40D3F /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,14 +251,6 @@
 				462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */,
 				4690D63225C02948008D9D1B /* ChineseAstrologyCalendar in Frameworks */,
 				462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		46701E02271B2A0900D6D322 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46701E2B271B2CBA00D6D322 /* ChineseAstrologyCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,13 +279,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		993843AD285633D900FA7631 /* Frameworks */ = {
+		997C68412864CADE00B40D3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				993843AE285633D900FA7631 /* SwiftUI.framework in Frameworks */,
-				993843AF285633D900FA7631 /* ChineseAstrologyCalendar in Frameworks */,
-				993843B0285633D900FA7631 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		997C68532864CADF00B40D3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		997C685D2864CADF00B40D3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		997C687D2865FAD200B40D3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				997C68822865FAD200B40D3F /* SwiftUI.framework in Frameworks */,
+				997C689C2868A7DC00B40D3F /* ChineseAstrologyCalendar in Frameworks */,
+				997C68812865FAD200B40D3F /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,50 +330,14 @@
 			isa = PBXGroup;
 			children = (
 				462A5F6A24FFE5F20032A125 /* ShiChen.swift */,
-				994D37522864BFF200A9C99E /* FullDateTitleView.swift */,
-				993843BD285636B800FA7631 /* ShiChenEntryView.swift */,
-				993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */,
-				46701E2C271B2E7E00D6D322 /* CompactShichenView.swift */,
+				997C68762864CB8F00B40D3F /* AllWidgets.swift */,
+				997C68932868A75300B40D3F /* Shared */,
 				46393EE72542F57900E40518 /* ShiChen.intentdefinition */,
 				46B79CB32542F017003C0B7F /* InfoPlist.strings */,
 				462A5F6D24FFE5F20032A125 /* Assets.xcassets */,
 				462A5F6F24FFE5F20032A125 /* Info.plist */,
 			);
 			path = ShiChen;
-			sourceTree = "<group>";
-		};
-		46701DFE271B2A0800D6D322 /* Shichen WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				46701DFF271B2A0900D6D322 /* Assets.xcassets */,
-			);
-			path = "Shichen WatchKit App";
-			sourceTree = "<group>";
-		};
-		46701E09271B2A0900D6D322 /* Shichen WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				46701E0A271B2A0900D6D322 /* TianganDizhiApp.swift */,
-				46701E0C271B2A0900D6D322 /* ContentView.swift */,
-				46701E0E271B2A0900D6D322 /* NotificationController.swift */,
-				46701E10271B2A0900D6D322 /* NotificationView.swift */,
-				46701E12271B2A0900D6D322 /* ComplicationController.swift */,
-				46701E34271B37E300D6D322 /* ShichenView.swift */,
-				46701E38271C1C8800D6D322 /* Emoji+Image.swift */,
-				46701E14271B2A0A00D6D322 /* Assets.xcassets */,
-				46701E19271B2A0A00D6D322 /* Info.plist */,
-				46701E1A271B2A0A00D6D322 /* PushNotificationPayload.apns */,
-				46701E16271B2A0A00D6D322 /* Preview Content */,
-			);
-			path = "Shichen WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		46701E16271B2A0A00D6D322 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				46701E17271B2A0A00D6D322 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		46AB55BE242B5EFD00F6604A = {
@@ -377,8 +349,10 @@
 				46AB55E0242B5EFF00F6604A /* TianganDizhiTests */,
 				46AB55EB242B5EFF00F6604A /* TianganDizhiUITests */,
 				462A5F6924FFE5F20032A125 /* ShiChen */,
-				46701DFE271B2A0800D6D322 /* Shichen WatchKit App */,
-				46701E09271B2A0900D6D322 /* Shichen WatchKit Extension */,
+				997C68482864CADE00B40D3F /* ShichenWatch Watch App */,
+				997C68592864CADF00B40D3F /* ShichenWatch Watch AppTests */,
+				997C68632864CADF00B40D3F /* ShichenWatch Watch AppUITests */,
+				997C68832865FAD200B40D3F /* ShichenWatch */,
 				46AB5605242B7F6C00F6604A /* Frameworks */,
 				46AB55C8242B5EFD00F6604A /* Products */,
 				993843B8285633D900FA7631 /* ShiChenExtension copy-Info.plist */,
@@ -392,9 +366,10 @@
 				46AB55DD242B5EFF00F6604A /* TianganDizhiTests.xctest */,
 				46AB55E8242B5EFF00F6604A /* TianganDizhiUITests.xctest */,
 				462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */,
-				46701DF7271B2A0800D6D322 /* Shichen.app */,
-				46701DFA271B2A0800D6D322 /* Shichen WatchKit App.app */,
-				993843B7285633D900FA7631 /* ShiChenExtension Watch.appex */,
+				997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */,
+				997C68562864CADF00B40D3F /* ShichenWatch Watch AppTests.xctest */,
+				997C68602864CADF00B40D3F /* ShichenWatch Watch AppUITests.xctest */,
+				997C68802865FAD200B40D3F /* ShichenWatchExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -507,6 +482,66 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		997C68482864CADE00B40D3F /* ShichenWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				997C68492864CADE00B40D3F /* ShichenWatchApp.swift */,
+				997C684B2864CADE00B40D3F /* ContentView.swift */,
+				997C684D2864CADF00B40D3F /* Assets.xcassets */,
+				997C684F2864CADF00B40D3F /* Preview Content */,
+			);
+			path = "ShichenWatch Watch App";
+			sourceTree = "<group>";
+		};
+		997C684F2864CADF00B40D3F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				997C68502864CADF00B40D3F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		997C68592864CADF00B40D3F /* ShichenWatch Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				997C685A2864CADF00B40D3F /* ShichenWatch_Watch_AppTests.swift */,
+			);
+			path = "ShichenWatch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		997C68632864CADF00B40D3F /* ShichenWatch Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				997C68642864CADF00B40D3F /* ShichenWatch_Watch_AppUITests.swift */,
+				997C68662864CADF00B40D3F /* ShichenWatch_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "ShichenWatch Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		997C68832865FAD200B40D3F /* ShichenWatch */ = {
+			isa = PBXGroup;
+			children = (
+				997C68842865FAD200B40D3F /* ShichenWatch.swift */,
+				997C687A2865F80A00B40D3F /* CornerView.swift */,
+				997C68872865FAD300B40D3F /* Assets.xcassets */,
+				997C68892865FAD300B40D3F /* Info.plist */,
+			);
+			path = ShichenWatch;
+			sourceTree = "<group>";
+		};
+		997C68932868A75300B40D3F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				994D37522864BFF200A9C99E /* FullDateTitleView.swift */,
+				993843BD285636B800FA7631 /* ShiChenEntryView.swift */,
+				993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */,
+				46701E2C271B2E7E00D6D322 /* CompactShichenView.swift */,
+				997C68A02868A83700B40D3F /* Provider.swift */,
+				997C689E2868A81500B40D3F /* SimpleEntry.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -529,42 +564,6 @@
 			productName = ShiChenExtension;
 			productReference = 462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
-		};
-		46701DF6271B2A0800D6D322 /* Shichen */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46701E25271B2A0A00D6D322 /* Build configuration list for PBXNativeTarget "Shichen" */;
-			buildPhases = (
-				46701DF5271B2A0800D6D322 /* Resources */,
-				46701E1D271B2A0A00D6D322 /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				46701DFD271B2A0800D6D322 /* PBXTargetDependency */,
-			);
-			name = Shichen;
-			productName = Shichen;
-			productReference = 46701DF7271B2A0800D6D322 /* Shichen.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
-		46701DF9271B2A0800D6D322 /* Shichen WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 46701E24271B2A0A00D6D322 /* Build configuration list for PBXNativeTarget "Shichen WatchKit App" */;
-			buildPhases = (
-				46701DF8271B2A0800D6D322 /* Resources */,
-				46701E01271B2A0900D6D322 /* Sources */,
-				46701E02271B2A0900D6D322 /* Frameworks */,
-				993843BC2856346900FA7631 /* Embed Foundation Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				993843BB2856346900FA7631 /* PBXTargetDependency */,
-			);
-			name = "Shichen WatchKit App";
-			productName = "Shichen WatchKit App";
-			productReference = 46701DFA271B2A0800D6D322 /* Shichen WatchKit App.app */;
-			productType = "com.apple.product-type.application";
 		};
 		46AB55C6242B5EFD00F6604A /* TianganDizhi */ = {
 			isa = PBXNativeTarget;
@@ -627,24 +626,79 @@
 			productReference = 46AB55E8242B5EFF00F6604A /* TianganDizhiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		993843A0285633D900FA7631 /* ShiChenExtension Watch */ = {
+		997C68432864CADE00B40D3F /* ShichenWatch Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 993843B4285633D900FA7631 /* Build configuration list for PBXNativeTarget "ShiChenExtension Watch" */;
+			buildConfigurationList = 997C68682864CADF00B40D3F /* Build configuration list for PBXNativeTarget "ShichenWatch Watch App" */;
 			buildPhases = (
-				993843A3285633D900FA7631 /* Sources */,
-				993843AD285633D900FA7631 /* Frameworks */,
-				993843B1285633D900FA7631 /* Resources */,
+				997C68402864CADE00B40D3F /* Sources */,
+				997C68412864CADE00B40D3F /* Frameworks */,
+				997C68422864CADE00B40D3F /* Resources */,
+				997C688E2865FAD300B40D3F /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				997C688D2865FAD300B40D3F /* PBXTargetDependency */,
+			);
+			name = "ShichenWatch Watch App";
+			productName = "ShichenWatch Watch App";
+			productReference = 997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		997C68552864CADF00B40D3F /* ShichenWatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 997C686F2864CADF00B40D3F /* Build configuration list for PBXNativeTarget "ShichenWatch Watch AppTests" */;
+			buildPhases = (
+				997C68522864CADF00B40D3F /* Sources */,
+				997C68532864CADF00B40D3F /* Frameworks */,
+				997C68542864CADF00B40D3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				997C68582864CADF00B40D3F /* PBXTargetDependency */,
+			);
+			name = "ShichenWatch Watch AppTests";
+			productName = "ShichenWatch Watch AppTests";
+			productReference = 997C68562864CADF00B40D3F /* ShichenWatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		997C685F2864CADF00B40D3F /* ShichenWatch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 997C68722864CADF00B40D3F /* Build configuration list for PBXNativeTarget "ShichenWatch Watch AppUITests" */;
+			buildPhases = (
+				997C685C2864CADF00B40D3F /* Sources */,
+				997C685D2864CADF00B40D3F /* Frameworks */,
+				997C685E2864CADF00B40D3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				997C68622864CADF00B40D3F /* PBXTargetDependency */,
+			);
+			name = "ShichenWatch Watch AppUITests";
+			productName = "ShichenWatch Watch AppUITests";
+			productReference = 997C68602864CADF00B40D3F /* ShichenWatch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		997C687F2865FAD200B40D3F /* ShichenWatchExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 997C68902865FAD300B40D3F /* Build configuration list for PBXNativeTarget "ShichenWatchExtension" */;
+			buildPhases = (
+				997C687C2865FAD200B40D3F /* Sources */,
+				997C687D2865FAD200B40D3F /* Frameworks */,
+				997C687E2865FAD200B40D3F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "ShiChenExtension Watch";
+			name = ShichenWatchExtension;
 			packageProductDependencies = (
-				993843A1285633D900FA7631 /* ChineseAstrologyCalendar */,
+				997C689B2868A7DC00B40D3F /* ChineseAstrologyCalendar */,
 			);
-			productName = ShiChenExtension;
-			productReference = 993843B7285633D900FA7631 /* ShiChenExtension Watch.appex */;
+			productName = ShichenWatchExtension;
+			productReference = 997C68802865FAD200B40D3F /* ShichenWatchExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -653,18 +707,12 @@
 		46AB55BF242B5EFD00F6604A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "孙翔宇";
 				TargetAttributes = {
 					462A5F6324FFE5F20032A125 = {
 						CreatedOnToolsVersion = 12.0;
-					};
-					46701DF6271B2A0800D6D322 = {
-						CreatedOnToolsVersion = 13.0;
-					};
-					46701DF9271B2A0800D6D322 = {
-						CreatedOnToolsVersion = 13.0;
 					};
 					46AB55C6242B5EFD00F6604A = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -676,6 +724,20 @@
 					46AB55E7242B5EFF00F6604A = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 46AB55C6242B5EFD00F6604A;
+					};
+					997C68432864CADE00B40D3F = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					997C68552864CADF00B40D3F = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 997C68432864CADE00B40D3F;
+					};
+					997C685F2864CADF00B40D3F = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 997C68432864CADE00B40D3F;
+					};
+					997C687F2865FAD200B40D3F = {
+						CreatedOnToolsVersion = 14.0;
 					};
 				};
 			};
@@ -704,9 +766,10 @@
 				46AB55DC242B5EFF00F6604A /* TianganDizhiTests */,
 				46AB55E7242B5EFF00F6604A /* TianganDizhiUITests */,
 				462A5F6324FFE5F20032A125 /* ShiChenExtension */,
-				46701DF6271B2A0800D6D322 /* Shichen */,
-				46701DF9271B2A0800D6D322 /* Shichen WatchKit App */,
-				993843A0285633D900FA7631 /* ShiChenExtension Watch */,
+				997C68432864CADE00B40D3F /* ShichenWatch Watch App */,
+				997C68552864CADF00B40D3F /* ShichenWatch Watch AppTests */,
+				997C685F2864CADF00B40D3F /* ShichenWatch Watch AppUITests */,
+				997C687F2865FAD200B40D3F /* ShichenWatchExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -718,24 +781,6 @@
 			files = (
 				46B79C0E2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */,
 				462A5F6E24FFE5F20032A125 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		46701DF5271B2A0800D6D322 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		46701DF8271B2A0800D6D322 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46701E37271B3B8A00D6D322 /* WeibeiTC-Bold.otf in Resources */,
-				46701E18271B2A0A00D6D322 /* Preview Assets.xcassets in Resources */,
-				46701E15271B2A0A00D6D322 /* Assets.xcassets in Resources */,
-				46701E00271B2A0900D6D322 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,12 +811,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		993843B1285633D900FA7631 /* Resources */ = {
+		997C68422864CADE00B40D3F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				993843B2285633D900FA7631 /* WeibeiTC-Bold.otf in Resources */,
-				993843B3285633D900FA7631 /* Assets.xcassets in Resources */,
+				997C68512864CADF00B40D3F /* Preview Assets.xcassets in Resources */,
+				997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		997C68542864CADF00B40D3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		997C685E2864CADF00B40D3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		997C687E2865FAD200B40D3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				997C68882865FAD300B40D3F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +849,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				997C68A52868A8E900B40D3F /* SimpleEntry.swift in Sources */,
 				994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */,
 				462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */,
 				993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
@@ -793,24 +861,9 @@
 				46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */,
 				46339FDC2500EA41007D4137 /* CircularContainerView.swift in Sources */,
 				46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */,
+				997C68782864CB9B00B40D3F /* AllWidgets.swift in Sources */,
+				997C68AB2868A8F600B40D3F /* Provider.swift in Sources */,
 				46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		46701E01271B2A0900D6D322 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46701E35271B37E300D6D322 /* ShichenView.swift in Sources */,
-				46701E0F271B2A0900D6D322 /* NotificationController.swift in Sources */,
-				46701E31271B308D00D6D322 /* Styler.swift in Sources */,
-				46701E32271B31AA00D6D322 /* ShichenHStackView.swift in Sources */,
-				46701E0D271B2A0900D6D322 /* ContentView.swift in Sources */,
-				46701E30271B303300D6D322 /* Environment.swift in Sources */,
-				46701E39271C1C8800D6D322 /* Emoji+Image.swift in Sources */,
-				46701E13271B2A0900D6D322 /* ComplicationController.swift in Sources */,
-				46701E0B271B2A0900D6D322 /* TianganDizhiApp.swift in Sources */,
-				46701E11271B2A0900D6D322 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,22 +914,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		993843A3285633D900FA7631 /* Sources */ = {
+		997C68402864CADE00B40D3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				994D37552864C05300A9C99E /* FullDateTitleView.swift in Sources */,
-				993843A4285633D900FA7631 /* ShiChen.swift in Sources */,
-				993843C428563D0400FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
-				993843A5285633D900FA7631 /* Environment.swift in Sources */,
-				993843C0285636DC00FA7631 /* ShiChenEntryView.swift in Sources */,
-				993843A6285633D900FA7631 /* Styler.swift in Sources */,
-				993843A7285633D900FA7631 /* ShiChen.intentdefinition in Sources */,
-				993843A8285633D900FA7631 /* ShichenView.swift in Sources */,
-				993843A9285633D900FA7631 /* ShichenHStackView.swift in Sources */,
-				993843AA285633D900FA7631 /* CircularContainerView.swift in Sources */,
-				993843AB285633D900FA7631 /* CompactShichenView.swift in Sources */,
-				993843AC285633D900FA7631 /* TimelineScheduler.swift in Sources */,
+				997C684C2864CADE00B40D3F /* ContentView.swift in Sources */,
+				997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		997C68522864CADF00B40D3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				997C685B2864CADF00B40D3F /* ShichenWatch_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		997C685C2864CADF00B40D3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				997C68652864CADF00B40D3F /* ShichenWatch_Watch_AppUITests.swift in Sources */,
+				997C68672864CADF00B40D3F /* ShichenWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		997C687C2865FAD200B40D3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */,
+				997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */,
+				997C68A42868A86C00B40D3F /* TimelineScheduler.swift in Sources */,
+				997C68952868A76800B40D3F /* ShiChenEntryView.swift in Sources */,
+				997C68AD2868A93100B40D3F /* ShichenView.swift in Sources */,
+				997C68972868A76800B40D3F /* CompactShichenView.swift in Sources */,
+				997C68992868A78400B40D3F /* Styler.swift in Sources */,
+				997C68942868A76800B40D3F /* FullDateTitleView.swift in Sources */,
+				997C689A2868A7B600B40D3F /* CornerView.swift in Sources */,
+				997C68AC2868A92400B40D3F /* CircularContainerView.swift in Sources */,
+				997C68982868A77700B40D3F /* Environment.swift in Sources */,
+				997C68852865FAD200B40D3F /* ShichenWatch.swift in Sources */,
+				997C689D2868A7EA00B40D3F /* ShichenHStackView.swift in Sources */,
+				997C68B32868ABEE00B40D3F /* Provider.swift in Sources */,
+				997C68962868A76800B40D3F /* ShiChenYearMonthDateEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,11 +970,6 @@
 			target = 462A5F6324FFE5F20032A125 /* ShiChenExtension */;
 			targetProxy = 462A5F7224FFE5F20032A125 /* PBXContainerItemProxy */;
 		};
-		46701DFD271B2A0800D6D322 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 46701DF9271B2A0800D6D322 /* Shichen WatchKit App */;
-			targetProxy = 46701DFC271B2A0800D6D322 /* PBXContainerItemProxy */;
-		};
 		46AB55DF242B5EFF00F6604A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 46AB55C6242B5EFD00F6604A /* TianganDizhi */;
@@ -903,10 +980,20 @@
 			target = 46AB55C6242B5EFD00F6604A /* TianganDizhi */;
 			targetProxy = 46AB55E9242B5EFF00F6604A /* PBXContainerItemProxy */;
 		};
-		993843BB2856346900FA7631 /* PBXTargetDependency */ = {
+		997C68582864CADF00B40D3F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 993843A0285633D900FA7631 /* ShiChenExtension Watch */;
-			targetProxy = 993843BA2856346900FA7631 /* PBXContainerItemProxy */;
+			target = 997C68432864CADE00B40D3F /* ShichenWatch Watch App */;
+			targetProxy = 997C68572864CADF00B40D3F /* PBXContainerItemProxy */;
+		};
+		997C68622864CADF00B40D3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 997C68432864CADE00B40D3F /* ShichenWatch Watch App */;
+			targetProxy = 997C68612864CADF00B40D3F /* PBXContainerItemProxy */;
+		};
+		997C688D2865FAD300B40D3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 997C687F2865FAD200B40D3F /* ShichenWatchExtension */;
+			targetProxy = 997C688C2865FAD300B40D3F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1005,98 +1092,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
-		46701E1B271B2A0A00D6D322 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.Shichen;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		46701E1C271B2A0A00D6D322 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.Shichen;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		46701E1E271B2A0A00D6D322 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Shichen WatchKit App";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKWatchOnly = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.Shichen.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Debug;
-		};
-		46701E1F271B2A0A00D6D322 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 46S3S784AR;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Shichen WatchKit App";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKWatchOnly = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.Shichen.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
@@ -1352,62 +1347,214 @@
 			};
 			name = Release;
 		};
-		993843B5285633D900FA7631 /* Debug */ = {
+		997C68692864CADF00B40D3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_ENTITLEMENTS = ShiChenExtension.entitlements;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShichenWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
-				INFOPLIST_FILE = "ShiChenExtension copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ShichenWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen.watchkitapp.intermidiate;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
-		993843B6285633D900FA7631 /* Release */ = {
+		997C686A2864CADF00B40D3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ShichenWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ShichenWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenWatch.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		997C68702864CADF00B40D3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.TianganDizhi.ShichenWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShichenWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShichenWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		997C68712864CADF00B40D3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.TianganDizhi.ShichenWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShichenWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShichenWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		997C68732864CADF00B40D3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.TianganDizhi.ShichenWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "ShichenWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		997C68742864CADF00B40D3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.TianganDizhi.ShichenWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "ShichenWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		997C68912865FAD300B40D3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_ENTITLEMENTS = ShiChenExtension.entitlements;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46S3S784AR;
-				INFOPLIST_FILE = "ShiChenExtension copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShichenWatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShichenWatch;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 孙翔宇. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen.watchkitapp.intermidiate;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenWatch.watchkitapp.ShichenWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		997C68922865FAD300B40D3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46S3S784AR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShichenWatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ShichenWatch;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 孙翔宇. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenWatch.watchkitapp.ShichenWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
@@ -1420,24 +1567,6 @@
 			buildConfigurations = (
 				462A5F7524FFE5F20032A125 /* Debug */,
 				462A5F7624FFE5F20032A125 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		46701E24271B2A0A00D6D322 /* Build configuration list for PBXNativeTarget "Shichen WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				46701E1E271B2A0A00D6D322 /* Debug */,
-				46701E1F271B2A0A00D6D322 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		46701E25271B2A0A00D6D322 /* Build configuration list for PBXNativeTarget "Shichen" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				46701E1B271B2A0A00D6D322 /* Debug */,
-				46701E1C271B2A0A00D6D322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1478,11 +1607,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		993843B4285633D900FA7631 /* Build configuration list for PBXNativeTarget "ShiChenExtension Watch" */ = {
+		997C68682864CADF00B40D3F /* Build configuration list for PBXNativeTarget "ShichenWatch Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				993843B5285633D900FA7631 /* Debug */,
-				993843B6285633D900FA7631 /* Release */,
+				997C68692864CADF00B40D3F /* Debug */,
+				997C686A2864CADF00B40D3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		997C686F2864CADF00B40D3F /* Build configuration list for PBXNativeTarget "ShichenWatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				997C68702864CADF00B40D3F /* Debug */,
+				997C68712864CADF00B40D3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		997C68722864CADF00B40D3F /* Build configuration list for PBXNativeTarget "ShichenWatch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				997C68732864CADF00B40D3F /* Debug */,
+				997C68742864CADF00B40D3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		997C68902865FAD300B40D3F /* Build configuration list for PBXNativeTarget "ShichenWatchExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				997C68912865FAD300B40D3F /* Debug */,
+				997C68922865FAD300B40D3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1522,14 +1678,6 @@
 				kind = branch;
 			};
 		};
-		993843A2285633D900FA7631 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:xiangyu-sun/ChineseAstrologyCalendar.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1542,11 +1690,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */;
 			productName = JingluoShuxue;
-		};
-		46701E2A271B2CBA00D6D322 /* ChineseAstrologyCalendar */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
-			productName = ChineseAstrologyCalendar;
 		};
 		4690D63125C02948008D9D1B /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1563,9 +1706,9 @@
 			package = 46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */;
 			productName = ChineseTranditionalMusicCore;
 		};
-		993843A1285633D900FA7631 /* ChineseAstrologyCalendar */ = {
+		997C689B2868A7DC00B40D3F /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 993843A2285633D900FA7631 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			package = 46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
 			productName = ChineseAstrologyCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */

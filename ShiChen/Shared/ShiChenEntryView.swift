@@ -16,6 +16,7 @@ struct ShiChenEntryView : View {
     @Environment(\.largeTitleFont) var largeTitleFont
     @Environment(\.bodyFont) var bodyFont
     @Environment(\.titleFont) var titleFont
+    @Environment(\.title3Font) var title3Font
     
     var body: some View {
         let shichen = try! GanzhiDateConverter.shichen(entry.date)
@@ -23,40 +24,38 @@ struct ShiChenEntryView : View {
         switch family {
         case .accessoryInline:
             ViewThatFits() {
-                HStack() {
-                    Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
-                        .font(bodyFont)
-                        .padding([.leading,.trailing], 15)
-                    Text(shichen.displayHourText)
-                        .font(titleFont)
-                        .widgetAccentable()
-                }
+                Text("\(entry.date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen.displayHourText)")
                 Text(shichen.displayHourText)
-                    .font(titleFont)
-                    .widgetAccentable()
             }
+            .font(bodyFont)
+            .widgetAccentable()
         case .accessoryCircular:
-          ProgressView(interval: (shichen.startDate ?? Date())...(shichen.endDate ?? Date()),
-                       countdown: false,
-                       label: {
-            Text(shichen.displayHourText)
-              .widgetAccentable()
-          }, currentValueLabel: {
-            
-          })
-          .progressViewStyle(.circular)
+            ProgressView(interval: (shichen.startDate ?? Date())...(shichen.endDate ?? Date()),
+                         countdown: false,
+                         label: {
+                Text(shichen.displayHourText)
+                    .widgetAccentable()
+            }, currentValueLabel: {
+#if os(watchOS)
+                Text(shichen.displayHourText)
+                    .widgetAccentable()
+#endif
+                
+            })
+            .progressViewStyle(.circular)
         case .accessoryRectangular:
             HStack() {
-                VStack() {
-                    Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
-                        .font(bodyFont)
-                  
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                Text(shichen.displayHourText)
+                Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
                     .font(bodyFont)
-                    .widgetAccentable()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text(shichen.displayHourText)
+#if os(watchOS)
+                    .font(titleFont)
+#else
+                    .font(title3Font)
+#endif
             }
+            .widgetAccentable()
         case .systemMedium:
             VStack() {
                 FullDateTitleView(date: entry.date)
@@ -67,7 +66,7 @@ struct ShiChenEntryView : View {
             VStack() {
                 FullDateTitleView(date: entry.date)
                 CircularContainerView(currentShichen: shichen, padding: -30)
-                .padding(.bottom, 8)
+                    .padding(.bottom, 8)
             }
         default:
             CompactShichenView(shichen: shichen, date: entry.date)
