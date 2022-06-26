@@ -22,43 +22,11 @@ struct ShiChenYearMonthDateEntryView : View {
         
         switch family {
         case .accessoryInline:
-            ViewThatFits() {
-                Text("\(entry.date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen.displayHourText)")
-                Text(shichen.displayHourText)
-                
-            }
-            .font(bodyFont)
-            .widgetAccentable()
+            InlineWidgetView(date: entry.date)
         case .accessoryCircular:
-            ProgressView(interval: (shichen.startDate ?? Date())...(shichen.endDate ?? Date()),
-                         countdown: false,
-                         label: {
-                Text(shichen.displayHourText)
-                    .widgetAccentable()
-            }, currentValueLabel: {
-#if os(watchOS)
-                Text(shichen.displayHourText)
-                    .widgetAccentable()
-#endif
-                
-            })
-            .progressViewStyle(.circular)
+            CircularWidgetView(date: entry.date)
         case .accessoryRectangular:
-            HStack() {
-                Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
-                    .font(bodyFont)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-          
-                Text(shichen.displayHourText)
-                    .widgetAccentable()
-#if os(watchOS)
-                    .font(titleFont)
-#else
-                    .font(title3Font)
-#endif
-                  
-            }
-            .widgetAccentable()
+            RetangularWidgetView(date: entry.date)
         default:
             VStack() {
                 Spacer()
