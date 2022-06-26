@@ -23,7 +23,7 @@ struct Nongli: Widget {
 #if os(watchOS)
         .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
 #else
-        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge,  .accessoryInline, .accessoryCircular, .accessoryRectangular])
+        .supportedFamilies([.systemSmall, .systemMedium,  .accessoryInline, .accessoryCircular, .accessoryRectangular])
 #endif
     
         
@@ -52,18 +52,6 @@ struct ShiChen: Widget {
 struct ShiChen_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryInline))
-                .previewDisplayName("YearMonth Inline")
-            
-            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-                .previewDisplayName("YearMonth Circular")
-            
-            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-                .previewDisplayName("YearMonth Retangular")
-            
             ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .accessoryInline))
                 .previewDisplayName("ShiChenEntryView Inline")
@@ -91,6 +79,7 @@ struct ShiChen_Previews: PreviewProvider {
             ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .systemLarge))
                 .environment(\.colorScheme, .dark)
+            
             ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
             

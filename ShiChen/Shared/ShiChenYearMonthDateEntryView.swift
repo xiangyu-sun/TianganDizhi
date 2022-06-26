@@ -30,7 +30,7 @@ struct ShiChenYearMonthDateEntryView : View {
         default:
             VStack() {
                 Spacer()
-                Text(entry.date.chineseYearMonthDate)
+                Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
                     .font(bodyFont)
                     .padding([.leading,.trailing], 15)
                 Text(shichen.displayHourText)
@@ -46,16 +46,27 @@ struct ShiChenYearMonthDateEntryView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+                .previewDisplayName("Small")
+            
+            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
+                .previewDisplayName("Medium")
+        }
+        
+        Group {
+            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .accessoryInline))
-                .previewDisplayName("YearMonth Inline")
+                .previewDisplayName("ShiChenYearMonthDateEntryView Inline")
             
             ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-                .previewDisplayName("YearMonth Circular")
+                .previewDisplayName("ShiChenYearMonthDateEntryView Circular")
             
             ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-                .previewDisplayName("YearMonth Retangular")
+                .previewDisplayName("ShiChenYearMonthDateEntryView Retangular")
+            
         }
     }
 }

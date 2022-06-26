@@ -561,9 +561,9 @@
 			isa = PBXGroup;
 			children = (
 				994AD1982868FBB600BB5BED /* Desktop */,
-				993843BD285636B800FA7631 /* ShiChenEntryView.swift */,
 				994AD1972868FBA800BB5BED /* Widget */,
 				993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */,
+				993843BD285636B800FA7631 /* ShiChenEntryView.swift */,
 				997C68A02868A83700B40D3F /* Provider.swift */,
 				997C689E2868A81500B40D3F /* SimpleEntry.swift */,
 			);
