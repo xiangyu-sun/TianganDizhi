@@ -35,9 +35,8 @@ struct MainView: View {
                 Text(shichen.organReference)
                 .font(bodyFont)
                 
-            CircularContainerView(currentShichen:
-                                    shichen,
-                                  padding: UIDevice.current.userInterfaceIdiom == .pad ? 50 : 14)
+            CircularContainerView(currentShichen: shichen,
+                                  padding: UIDevice.current.userInterfaceIdiom == .pad ? 0 : -26)
                 .padding()
             
                 Spacer()

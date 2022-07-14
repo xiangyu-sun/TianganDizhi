@@ -20,13 +20,16 @@ struct CircularContainerView: View {
             ShichenView(currentShichen: currentShichen)
                 .padding(padding)
         }
+        .fixedSize(horizontal: false, vertical: true)
         
     }
 }
 
 struct CircularContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        CircularContainerView(currentShichen: .chen, padding: 10)
+      Group() {
         CircularContainerView(currentShichen: .chen, padding: 0)
+        CircularContainerView(currentShichen: .chen, padding: 0)
+      }
     }
 }

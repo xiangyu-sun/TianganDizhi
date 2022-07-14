@@ -13,7 +13,6 @@ struct ContentView: View {
     
     var body: some View {
         TabView(){
-        
             MainView()
             .tabItem {
                 Image(systemName: "clock.fill")
@@ -38,9 +37,6 @@ struct ContentView: View {
                 Text("文章")
             }
         }
-        .titleFont(.defaultTitleWithSize(size: 80))
-        .largeTitleFont(.defaultLargeTitleWithSize(size: 100))
-        .bodyFont(.defaultBodyWithSize(size: 44))
     }
 }
 
