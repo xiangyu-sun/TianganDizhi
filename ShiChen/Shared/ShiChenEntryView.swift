@@ -23,7 +23,15 @@ struct ShiChenEntryView : View {
         
         switch family {
         case .accessoryInline:
-            InlineWidgetView(date: entry.date)
+            ViewThatFits() {
+                InlineWidgetView(date: entry.date)
+                // ipad os
+                HStack() {
+                    Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+                    Text(shichen.displayHourText)
+                }
+                .font(.custom("Weibei TC Bold", size: 20, relativeTo: .body))
+            }
         case .accessoryCircular:
             CircularWidgetView(date: entry.date)
         case .accessoryRectangular:

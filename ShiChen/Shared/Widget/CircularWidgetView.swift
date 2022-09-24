@@ -19,17 +19,20 @@ struct CircularWidgetView: View {
     var body: some View {
         let shichen = try! GanzhiDateConverter.shichen(date)
       
-        ProgressView(interval: (shichen.startDate ?? Date())...(shichen.endDate ?? Date()),
-                     countdown: false,
+      let start = self.date.timeIntervalSince1970 -  shichen.startDate!.timeIntervalSince1970
+      
+      let base = shichen.endDate!.timeIntervalSince1970 -  shichen.startDate!.timeIntervalSince1970
+   
+      ProgressView(value: start/base,
                      label: {
             Text(shichen.displayHourText)
                 .widgetAccentable()
         }, currentValueLabel: {
-#if os(watchOS)
-            Text(shichen.displayHourText)
-                .widgetAccentable()
+          Text(shichen.displayHourText)
+              .widgetAccentable()
+#if os(iOS)
+              .font(bodyFont)
 #endif
-            
         })
         .progressViewStyle(.circular)
     }
