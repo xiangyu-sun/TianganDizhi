@@ -3,12 +3,9 @@ import WidgetKit
 import ChineseAstrologyCalendar
 
 struct FullDateTitleView: View {
-
-    @Environment(\.title3Font) var title3Font
     var date: Date
     var body: some View {
         Text(date.displayStringOfChineseYearMonthDateWithZodiac)
-        .font(title3Font)
     }
 }
 
