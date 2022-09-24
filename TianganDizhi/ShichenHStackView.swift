@@ -8,6 +8,7 @@
 
 import SwiftUI
 import ChineseAstrologyCalendar
+import WidgetKit
 
 struct ShichenHStackView: View {
     let shichen: Dizhi
@@ -47,6 +48,8 @@ struct ShichenHStackView: View {
 struct ShichenInformationView: View {
     @Environment(\.iPad) var iPad
     @Environment(\.title2Font) var title2Font
+    @Environment(\.widgetFamily) var family
+    
     let shichen: Dizhi
     
     var body: some View {
@@ -54,7 +57,7 @@ struct ShichenInformationView: View {
             Text(shichen.aliasName)
             Text(shichen.organReference)
         }
-        .font(iPad ? title2Font : .defaultFootnote)
+        .font((iPad && family == .systemExtraLarge) ? title2Font : .defaultFootnote)
     }
 }
 
