@@ -12,6 +12,7 @@ import ChineseAstrologyCalendar
 struct ShichenHStackView: View {
     let shichen: Dizhi
     @Environment(\.titleFont) var titleFont
+  
     
     var body: some View {
         HStack() {
@@ -44,20 +45,22 @@ struct ShichenHStackView: View {
 }
 
 struct ShichenInformationView: View {
+    @Environment(\.iPad) var iPad
+    @Environment(\.title2Font) var title2Font
     let shichen: Dizhi
     
     var body: some View {
         HStack() {
             Text(shichen.aliasName)
-                .font(.defaultFootnote)
             Text(shichen.organReference)
-                .font(.defaultFootnote)
         }
+        .font(iPad ? title2Font : .defaultFootnote)
     }
 }
 
 struct ShichenHStackView_Previews: PreviewProvider {
     static var previews: some View {
         ShichenHStackView(shichen: .zi)
+        .padding()
     }
 }

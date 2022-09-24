@@ -55,8 +55,10 @@ struct ShiChenEntryView : View {
             HStack() {
               VStack() {
                   FullDateTitleView(date: entry.date)
-                  .font(title3Font)
+                  .font(titleFont)
+                  Spacer()
                   ShichenHStackView(shichen: shichen)
+                  Spacer()
               }
               .padding()
                 CircularContainerView(currentShichen: shichen, padding: -30)

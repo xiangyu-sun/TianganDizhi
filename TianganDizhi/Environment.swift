@@ -28,6 +28,14 @@ private struct Title3FontEnvironmentKey: EnvironmentKey {
     static let defaultValue: Font = .custom("Weibei TC Bold", size: 26, relativeTo: .title3)
 }
 
+private struct Title2FontEnvironmentKey: EnvironmentKey {
+    static let defaultValue: Font = .custom("Weibei TC Bold", size: 30, relativeTo: .title3)
+}
+
+
+private struct iPadEnvironmentKey: EnvironmentKey {
+    static let defaultValue: Bool = UIDevice.current.userInterfaceIdiom == .pad
+}
 extension EnvironmentValues {
     var titleFont: Font {
         get { self[TitleFontEnvironmentKey.self] }
@@ -38,6 +46,12 @@ extension EnvironmentValues {
         get { self[LargeTitleFontEnvironmentKey.self] }
         set { self[LargeTitleFontEnvironmentKey.self] = newValue }
     }
+    
+    var title2Font: Font {
+        get { self[Title2FontEnvironmentKey.self] }
+        set { self[Title2FontEnvironmentKey.self] = newValue }
+    }
+    
     
     var title3Font: Font {
         get { self[Title3FontEnvironmentKey.self] }
@@ -53,6 +67,11 @@ extension EnvironmentValues {
         get { self[HeadlineFontEnvironmentKey.self] }
         set { self[HeadlineFontEnvironmentKey.self] = newValue }
     }
+  
+  var iPad: Bool {
+      get { self[iPadEnvironmentKey.self] }
+      set { }
+  }
 }
 
 extension View {
