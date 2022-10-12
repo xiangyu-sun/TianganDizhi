@@ -1264,6 +1264,8 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TianganDizhi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1289,6 +1291,8 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TianganDizhi;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

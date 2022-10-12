@@ -15,33 +15,38 @@ struct MainView: View {
     @Environment(\.titleFont) var titleFont
     @Environment(\.largeTitleFont) var largeTitleFont
     @Environment(\.bodyFont) var bodyFont
+    @Environment(\.iPad) var iPad
     
- 
+    
     var body: some View {
- 
+        
         VStack() {
-                HStack() {
-                    Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
-                        .font(titleFont)
-                    Text(updater.date.chineseYearMonthDate)
-                        .font(titleFont)
-                    Spacer()
-                }
-                
-                let shichen = try! GanzhiDateConverter.shichen(updater.date)
-                Spacer()
-                Text(shichen.aliasName)
-                .font(largeTitleFont)
-                Text(shichen.organReference)
-                .font(bodyFont)
-                
-            CircularContainerView(currentShichen: shichen,
-                                  padding: UIDevice.current.userInterfaceIdiom == .pad ? 0 : -26)
-                .padding()
-            
+            HStack() {
+                Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
+                    .font(titleFont)
+                Text(updater.date.chineseYearMonthDate)
+                    .font(titleFont)
                 Spacer()
             }
             
+            let shichen = try! GanzhiDateConverter.shichen(updater.date)
+            Spacer()
+            Text(shichen.aliasName)
+                .font(largeTitleFont)
+            Text(shichen.organReference)
+                .font(bodyFont)
+            
+            
+            if self.iPad {
+                CircularContainerView(currentShichen: shichen, padding: 0)
+            }else {
+                CircularContainerView(currentShichen: shichen, padding: 0)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            
+            Spacer()
+        }
+        
     }
 }
 
@@ -51,6 +56,6 @@ struct MainView_Previews: PreviewProvider {
             .environment(\.locale, Locale(identifier: "zh_Hant"))
         MainView()
             .environment(\.locale, Locale(identifier: "ja_JP"))
-            
+        
     }
 }
