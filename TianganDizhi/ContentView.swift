@@ -34,7 +34,7 @@ struct ContentView: View {
             TwelveView()
             .tabItem {
                 Image(systemName: "book")
-                Text("十二地支衍生")
+                Text("十二地支匯總")
             }
         }
     }

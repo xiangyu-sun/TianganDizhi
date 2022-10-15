@@ -27,7 +27,7 @@ struct TwelveView: View {
                     ForEach(data, id: \.self) { item in
                         DizhiGridView(dizhi: item)
                             .frame(width: gp.size.width / 3)
-                            .border(.black)
+                            .border(Color.primary)
                     }
                 }
             }

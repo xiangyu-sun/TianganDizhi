@@ -17,6 +17,7 @@ struct ShiChenEntryView : View {
     @Environment(\.bodyFont) var bodyFont
     @Environment(\.titleFont) var titleFont
     @Environment(\.title3Font) var title3Font
+    @Environment(\.iPad) var iPad
     
     var body: some View {
         let shichen = try! GanzhiDateConverter.shichen(entry.date)
@@ -24,15 +25,16 @@ struct ShiChenEntryView : View {
         switch family {
         case .accessoryInline:
             if #available(iOSApplicationExtension 16.0, *) {
-                ViewThatFits() {
-                    InlineWidgetView(date: entry.date)
-                    // ipad os
+                if iPad {
                     HStack() {
                         Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
                         Text(shichen.displayHourText)
                     }
                     .font(.custom("Weibei TC Bold", size: 20, relativeTo: .body))
+                } else {
+                    InlineWidgetView(date: entry.date)
                 }
+                
             }
         case .accessoryCircular:
             if #available(iOSApplicationExtension 16.0, *) {

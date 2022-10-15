@@ -30,10 +30,9 @@
     {
       "identity" : "chineseastrologycalendar",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:xiangyu-sun/ChineseAstrologyCalendar.git",
+      "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "921e5839c59422e5fddf144bc89317e341cec1b3"
+        "revision" : "71a6dca2884bb088bfc513592eae03f32d2174d1"
       }
     },
     {

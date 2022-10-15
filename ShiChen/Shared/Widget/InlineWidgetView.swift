@@ -20,10 +20,11 @@ struct InlineWidgetView: View {
     var body: some View {
         let shichen = try! GanzhiDateConverter.shichen(date)
         
-        ViewThatFits() {
-            Text("\(date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen.displayHourText)")
-            Text(shichen.displayHourText)
-        }
+//        ViewThatFits() {
+//            Text("\(date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen.displayHourText)")
+//            Text(shichen.displayHourText)
+//        }
+        Text("\(date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen.displayHourText)")
         .font(bodyFont)
         .widgetAccentable()
     }
