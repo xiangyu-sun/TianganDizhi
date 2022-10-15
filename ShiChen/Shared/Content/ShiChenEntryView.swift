@@ -47,30 +47,30 @@ struct ShiChenEntryView : View {
         case .systemMedium:
             VStack() {
                 FullDateTitleView(date: entry.date)
-                .font(title3Font)
+                    .font(title3Font)
                 ShichenHStackView(shichen: shichen)
                     .padding([.leading, .trailing], 8)
             }
         case .systemLarge:
             VStack() {
                 FullDateTitleView(date: entry.date)
-                .font(title3Font)
-                .padding(.top, 8)
+                    .font(title3Font)
+                    .padding(.top, 8)
                 CircularContainerView(currentShichen: shichen, padding: -30)
-                .padding(.bottom, 8)
+                    .padding(.bottom, 8)
             }
         case .systemExtraLarge:
             HStack() {
-              VStack() {
-                  FullDateTitleView(date: entry.date)
-                  .font(titleFont)
-                  Spacer()
-                  ShichenHStackView(shichen: shichen)
-                  Spacer()
-              }
-              .padding()
-                CircularContainerView(currentShichen: shichen, padding: -30)
+                VStack() {
+                    FullDateTitleView(date: entry.date)
+                        .font(titleFont)
+                    Spacer()
+                    ShichenHStackView(shichen: shichen)
+                    Spacer()
+                }
                 .padding()
+                CircularContainerView(currentShichen: shichen, padding: -30)
+                    .padding()
             }
         default:
             CompactShichenView(shichen: shichen, date: entry.date)

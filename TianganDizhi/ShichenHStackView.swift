@@ -13,13 +13,16 @@ import WidgetKit
 struct ShichenHStackView: View {
     let shichen: Dizhi
     @Environment(\.titleFont) var titleFont
-  
+    @Environment(\.shouldScaleFont) var shouldScaleFont
+    @Environment(\.title2Font) var title2Font
+    @Environment(\.widgetFamily) var family
+    
     
     var body: some View {
         HStack() {
             VStack(){
                 Text("\(shichen.previous.displayHourText)")
-                    .font(titleFont)
+                    .font((shouldScaleFont && family != .systemMedium) ? titleFont : title2Font)
                 ShichenInformationView(shichen: shichen.previous)
             }
             .foregroundColor(Color.secondary)
@@ -28,7 +31,7 @@ struct ShichenHStackView: View {
             
             VStack(){
                 Text("\(shichen.displayHourText)")
-                    .font(titleFont)
+                    .font((shouldScaleFont && family != .systemMedium) ? titleFont : title2Font)
                     .scaleEffect(1.2)
                 ShichenInformationView(shichen: shichen)
             }
@@ -37,7 +40,7 @@ struct ShichenHStackView: View {
             Spacer()
             VStack(){
                 Text("\(shichen.next.displayHourText)")
-                    .font(titleFont)
+                    .font((shouldScaleFont && family != .systemMedium) ? titleFont : title2Font)
                 ShichenInformationView(shichen: shichen.next)
             }
             .foregroundColor(Color.secondary)
@@ -46,9 +49,10 @@ struct ShichenHStackView: View {
 }
 
 struct ShichenInformationView: View {
-    @Environment(\.iPad) var iPad
+    @Environment(\.shouldScaleFont) var shouldScaleFont
     @Environment(\.title2Font) var title2Font
     @Environment(\.widgetFamily) var family
+    
     
     let shichen: Dizhi
     
@@ -57,13 +61,13 @@ struct ShichenInformationView: View {
             Text(shichen.aliasName)
             Text(shichen.organReference)
         }
-        .font((iPad && family == .systemExtraLarge) ? title2Font : .defaultFootnote)
+        .font((shouldScaleFont && family == .systemExtraLarge) ? title2Font : .defaultFootnote)
     }
 }
 
 struct ShichenHStackView_Previews: PreviewProvider {
     static var previews: some View {
         ShichenHStackView(shichen: .zi)
-        .padding()
+            .padding()
     }
 }

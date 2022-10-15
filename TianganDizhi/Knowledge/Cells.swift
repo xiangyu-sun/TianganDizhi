@@ -95,8 +95,9 @@ struct LvlvCell: View {
             Text(dizhi.chineseCharactor)
                 
             Spacer()
-            
-            Text(律呂.allCases[dizhi.rawValue - 1].rawValue)
+            let value = 律呂.allCases[dizhi.rawValue - 1].rawValue
+            Text(value)
+            Text("(\(value.transformToPinyin()))")
         }
         .padding()
     }

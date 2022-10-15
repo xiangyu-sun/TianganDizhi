@@ -15,7 +15,7 @@ struct MainView: View {
     @Environment(\.titleFont) var titleFont
     @Environment(\.largeTitleFont) var largeTitleFont
     @Environment(\.bodyFont) var bodyFont
-    @Environment(\.iPad) var iPad
+    @Environment(\.shouldScaleFont) var shouldScaleFont
     
     
     var body: some View {
@@ -37,7 +37,7 @@ struct MainView: View {
                 .font(bodyFont)
             
             
-            if self.iPad {
+            if self.shouldScaleFont {
                 CircularContainerView(currentShichen: shichen, padding: 0)
             }else {
                 CircularContainerView(currentShichen: shichen, padding: 0)
