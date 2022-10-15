@@ -4,12 +4,14 @@ import ChineseAstrologyCalendar
 struct Provider: IntentTimelineProvider {
     
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+        SimpleEntry(date: Date.now, configuration: ConfigurationIntent())
     }
     
+    @available(iOSApplicationExtension 16.0, *)
     func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
         return defaultDecommendedIntents().map { intent in
-            return IntentRecommendation(intent: intent, description: "")
+          let description = (try? GanzhiDateConverter.shichen(Date.now).chineseCharactor) ?? ""
+          return IntentRecommendation(intent: intent, description: description)
         }
     }
     
@@ -18,7 +20,7 @@ struct Provider: IntentTimelineProvider {
     }
     
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+      let entry = SimpleEntry(date: Date.now, configuration: configuration)
         completion(entry)
     }
     

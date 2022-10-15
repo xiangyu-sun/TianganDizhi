@@ -68,8 +68,7 @@ struct OrganShichenCell: View {
     var body: some View {
         HStack() {
             Text(shichen.chineseCharactor)
-                
-            Spacer()
+            Text(shichen.formattedHourRange ?? "")
             Text(气血循环流注[shichen.rawValue - 1].rawValue)
         }
         .padding()
@@ -106,5 +105,6 @@ struct LvlvCell: View {
 struct Cells_Previews: PreviewProvider {
     static var previews: some View {
         LvlvCell(dizhi: .zi)
+        OrganShichenCell(shichen: .zi)
     }
 }

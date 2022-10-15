@@ -10,6 +10,7 @@ import SwiftUI
 import ChineseAstrologyCalendar
 import WidgetKit
 
+@available(iOSApplicationExtension 16.0, *)
 struct InlineWidgetView: View {
     
     @Environment(\.bodyFont) var bodyFont
@@ -28,6 +29,7 @@ struct InlineWidgetView: View {
     }
 }
 
+@available(iOSApplicationExtension 16.0, *)
 struct InlineWidgetView_Previews: PreviewProvider {
     static var previews: some View {
         InlineWidgetView(date: .now)

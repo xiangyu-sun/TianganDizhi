@@ -15,29 +15,36 @@ struct KnowledgeView: View {
     var body: some View {
         NavigationView() {
             List() {
-                NavigationLink(destination: TianganListView()) {
-                    Text("十天干")
+                Section(header: Text("天干地支")) {
+                    NavigationLink(destination: TianganListView()) {
+                        Text("十天干")
+                    }
+                    NavigationLink(destination: DizhiListView( disppayMode: .name)) {
+                        Text(DizhiListView.DisplayMode.name.title)
+                    }
+                    NavigationLink(destination: DizhiListView( disppayMode: .zodiac)) {
+                        Text(DizhiListView.DisplayMode.zodiac.title)
+                    }
+                    NavigationLink(destination: DizhiListView( disppayMode: .time)) {
+                        Text(DizhiListView.DisplayMode.time.title)
+                    }
+                    NavigationLink(destination: DizhiListView( disppayMode: .month)) {
+                        Text(DizhiListView.DisplayMode.month.title)
+                    }
+                    NavigationLink(destination: JieqiListView()) {
+                        Text("二十四節氣")
+                    }
+                    NavigationLink(destination: DizhiListView( disppayMode: .organs)) {
+                        Text(DizhiListView.DisplayMode.organs.title)
+                    }
+                    NavigationLink(destination: DizhiListView( disppayMode: .lvlv)) {
+                        Text(DizhiListView.DisplayMode.lvlv.title)
+                    }
                 }
-                NavigationLink(destination: DizhiListView( disppayMode: .name)) {
-                    Text(DizhiListView.DisplayMode.name.title)
-                }
-                NavigationLink(destination: DizhiListView( disppayMode: .zodiac)) {
-                    Text(DizhiListView.DisplayMode.zodiac.title)
-                }
-                NavigationLink(destination: DizhiListView( disppayMode: .time)) {
-                    Text(DizhiListView.DisplayMode.time.title)
-                }
-                NavigationLink(destination: DizhiListView( disppayMode: .month)) {
-                    Text(DizhiListView.DisplayMode.month.title)
-                }
-                NavigationLink(destination: JieqiListView()) {
-                    Text("二十四節氣")
-                }
-                NavigationLink(destination: DizhiListView( disppayMode: .organs)) {
-                    Text(DizhiListView.DisplayMode.organs.title)
-                }
-                NavigationLink(destination: DizhiListView( disppayMode: .lvlv)) {
-                    Text(DizhiListView.DisplayMode.lvlv.title)
+                Section(header: Text("詩詞歌賦頌")) {
+                    NavigationLink(destination: ShiciView()) {
+                        Text("十二時辰頌")
+                    }
                 }
             }
             .font(bodyFont)

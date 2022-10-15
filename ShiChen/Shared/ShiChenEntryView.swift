@@ -23,19 +23,25 @@ struct ShiChenEntryView : View {
         
         switch family {
         case .accessoryInline:
-            ViewThatFits() {
-                InlineWidgetView(date: entry.date)
-                // ipad os
-                HStack() {
-                    Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
-                    Text(shichen.displayHourText)
+            if #available(iOSApplicationExtension 16.0, *) {
+                ViewThatFits() {
+                    InlineWidgetView(date: entry.date)
+                    // ipad os
+                    HStack() {
+                        Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+                        Text(shichen.displayHourText)
+                    }
+                    .font(.custom("Weibei TC Bold", size: 20, relativeTo: .body))
                 }
-                .font(.custom("Weibei TC Bold", size: 20, relativeTo: .body))
             }
         case .accessoryCircular:
-            CircularWidgetView(date: entry.date)
+            if #available(iOSApplicationExtension 16.0, *) {
+                CircularWidgetView(date: entry.date)
+            }
         case .accessoryRectangular:
-            RetangularWidgetView(date: entry.date)
+            if #available(iOSApplicationExtension 16.0, *) {
+                RetangularWidgetView(date: entry.date)
+            }
         case .systemMedium:
             VStack() {
                 FullDateTitleView(date: entry.date)
@@ -73,19 +79,21 @@ struct ShiChenEntryView : View {
 
 struct ShiChenEntryView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryInline))
-                .previewDisplayName("Inline")
-            
-            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-                .previewDisplayName("Circular")
-            
-            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-                .previewDisplayName("Retangular")
-            
+        if #available(iOSApplicationExtension 16.0, *) {
+            Group {
+                ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                    .previewContext(WidgetPreviewContext(family: .accessoryInline))
+                    .previewDisplayName("Inline")
+                
+                ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+                    .previewDisplayName("Circular")
+                
+                ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+                    .previewDisplayName("Retangular")
+                
+            }
         }
 #if os(iOS)
         Group {

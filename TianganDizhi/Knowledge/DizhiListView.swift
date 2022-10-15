@@ -48,7 +48,7 @@ struct DizhiListView: View {
             case .time:
                 return "時辰與小時"
             case .organs:
-                return "時辰與經絡"
+                return "子午流注"
             case .alias:
                 return "時辰的別名"
             case .zodiac:

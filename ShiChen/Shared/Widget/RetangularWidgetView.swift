@@ -11,6 +11,7 @@ import WidgetKit
 
 import ChineseAstrologyCalendar
 
+@available(iOSApplicationExtension 16.0, *)
 struct RetangularWidgetView: View {
     @Environment(\.bodyFont) var bodyFont
     @Environment(\.titleFont) var titleFont
@@ -35,6 +36,7 @@ struct RetangularWidgetView: View {
     }
 }
 
+@available(iOSApplicationExtension 16.0, *)
 struct RetangularWidgetView_Previews: PreviewProvider {
     static var previews: some View {
         RetangularWidgetView(date: .now)

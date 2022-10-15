@@ -22,11 +22,17 @@ struct ShiChenYearMonthDateEntryView : View {
         
         switch family {
         case .accessoryInline:
-            InlineWidgetView(date: entry.date)
+            if #available(iOSApplicationExtension 16.0, *) {
+                InlineWidgetView(date: entry.date)
+            }
         case .accessoryCircular:
-            CircularWidgetView(date: entry.date)
+            if #available(iOSApplicationExtension 16.0, *) {
+                CircularWidgetView(date: entry.date)
+            }
         case .accessoryRectangular:
-            RetangularWidgetView(date: entry.date)
+            if #available(iOSApplicationExtension 16.0, *) {
+                RetangularWidgetView(date: entry.date)
+            }
         default:
             VStack() {
                 Spacer()
@@ -53,20 +59,21 @@ struct ShiChenYearMonthDateEntryView_Previews: PreviewProvider {
                 .previewContext(WidgetPreviewContext(family: .systemMedium))
                 .previewDisplayName("Medium")
         }
-        
-        Group {
-            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryInline))
-                .previewDisplayName("ShiChenYearMonthDateEntryView Inline")
-            
-            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-                .previewDisplayName("ShiChenYearMonthDateEntryView Circular")
-            
-            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-                .previewDisplayName("ShiChenYearMonthDateEntryView Retangular")
-            
+        if #available(iOSApplicationExtension 16.0, *) {
+            Group {
+                ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                    .previewContext(WidgetPreviewContext(family: .accessoryInline))
+                    .previewDisplayName("ShiChenYearMonthDateEntryView Inline")
+                
+                ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+                    .previewDisplayName("ShiChenYearMonthDateEntryView Circular")
+                
+                ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+                    .previewDisplayName("ShiChenYearMonthDateEntryView Retangular")
+                
+            }
         }
     }
 }

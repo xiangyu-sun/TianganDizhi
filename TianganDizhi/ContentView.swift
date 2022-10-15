@@ -31,10 +31,10 @@ struct ContentView: View {
 //                Text("二十四節氣")
 //            }
             
-            ShiciListView()
+            TwelveView()
             .tabItem {
                 Image(systemName: "book")
-                Text("文章")
+                Text("十二地支衍生")
             }
         }
     }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		460BA9AA26F24CA10025CA39 /* ShiciListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9A926F24CA10025CA39 /* ShiciListView.swift */; };
 		460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
 		460EE4DB270211EA0006A7D3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 460EE4DA270211EA0006A7D3 /* FirebaseAnalytics */; };
 		462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
@@ -68,6 +67,9 @@
 		994AD1932868FA0400BB5BED /* CircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD1912868FA0400BB5BED /* CircularWidgetView.swift */; };
 		994AD1952868FA6500BB5BED /* RetangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD1942868FA6500BB5BED /* RetangularWidgetView.swift */; };
 		994AD1962868FA6500BB5BED /* RetangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD1942868FA6500BB5BED /* RetangularWidgetView.swift */; };
+		994B3BBD28FAE27800F9CF67 /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 994B3BBC28FAE27800F9CF67 /* AppStoreReviewPrompt */; };
+		994B3BBF28FB34C800F9CF67 /* TwelveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994B3BBE28FB34C800F9CF67 /* TwelveView.swift */; };
+		994B3BC128FB35C000F9CF67 /* DizhiGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */; };
 		994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D37522864BFF200A9C99E /* FullDateTitleView.swift */; };
 		997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68492864CADE00B40D3F /* ShichenWatchApp.swift */; };
 		997C684C2864CADE00B40D3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C684B2864CADE00B40D3F /* ContentView.swift */; };
@@ -172,7 +174,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		460BA9A926F24CA10025CA39 /* ShiciListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiciListView.swift; sourceTree = "<group>"; };
 		460BA9AB26F24DAD0025CA39 /* ShiciView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiciView.swift; sourceTree = "<group>"; };
 		462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiChenExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		462A5F6524FFE5F20032A125 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -225,7 +226,6 @@
 		46EF7F7F27107968007030CC /* JieqiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiCell.swift; sourceTree = "<group>"; };
 		46EF7F8127108A00007030CC /* JieqiCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiCircularView.swift; sourceTree = "<group>"; };
 		46EF7F8327108D73007030CC /* JieqiContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiContainerView.swift; sourceTree = "<group>"; };
-		46EF7FA42711D9CD007030CC /* AppStoreReviewPrompt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppStoreReviewPrompt; path = ../AppStoreReviewPrompt; sourceTree = "<group>"; };
 		46F9C28B25D137D50017440D /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		993843B8285633D900FA7631 /* ShiChenExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ShiChenExtension copy-Info.plist"; path = "/Users/xiangyu.sun/TianganDizhi/ShiChenExtension copy-Info.plist"; sourceTree = "<absolute>"; };
 		993843BD285636B800FA7631 /* ShiChenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenEntryView.swift; sourceTree = "<group>"; };
@@ -233,6 +233,8 @@
 		994AD18E2868F96800BB5BED /* InlineWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineWidgetView.swift; sourceTree = "<group>"; };
 		994AD1912868FA0400BB5BED /* CircularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularWidgetView.swift; sourceTree = "<group>"; };
 		994AD1942868FA6500BB5BED /* RetangularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetangularWidgetView.swift; sourceTree = "<group>"; };
+		994B3BBE28FB34C800F9CF67 /* TwelveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelveView.swift; sourceTree = "<group>"; };
+		994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizhiGridView.swift; sourceTree = "<group>"; };
 		994D37522864BFF200A9C99E /* FullDateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDateTitleView.swift; sourceTree = "<group>"; };
 		997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShichenWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997C68492864CADE00B40D3F /* ShichenWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatchApp.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994B3BBD28FAE27800F9CF67 /* AppStoreReviewPrompt in Frameworks */,
 				46B2423825B3250D00B17A4A /* ChineseAstrologyCalendar in Frameworks */,
 				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
 				460EE4DB270211EA0006A7D3 /* FirebaseAnalytics in Frameworks */,
@@ -354,7 +357,6 @@
 		46AB55BE242B5EFD00F6604A = {
 			isa = PBXGroup;
 			children = (
-				46EF7FA32711D9CD007030CC /* Packages */,
 				46339FEC250296BF007D4137 /* ShiChenExtension.entitlements */,
 				46AB55C9242B5EFD00F6604A /* TianganDizhi */,
 				46AB55E0242B5EFF00F6604A /* TianganDizhiTests */,
@@ -395,6 +397,8 @@
 				46B79C3F2541F95F003C0B7F /* Environment.swift */,
 				468844CF24F54B4600310941 /* Updater.swift */,
 				46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */,
+				994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */,
+				994B3BBE28FB34C800F9CF67 /* TwelveView.swift */,
 				994190BF285A294700295389 /* Shici */,
 				460BA9A826F24C400025CA39 /* Knowledge */,
 				994190BE285A28E900295389 /* ShiChenClock */,
@@ -458,14 +462,6 @@
 			path = "Weibei TC";
 			sourceTree = "<group>";
 		};
-		46EF7FA32711D9CD007030CC /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				46EF7FA42711D9CD007030CC /* AppStoreReviewPrompt */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		994190BE285A28E900295389 /* ShiChenClock */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,7 +474,6 @@
 		994190BF285A294700295389 /* Shici */ = {
 			isa = PBXGroup;
 			children = (
-				460BA9A926F24CA10025CA39 /* ShiciListView.swift */,
 				460BA9AB26F24DAD0025CA39 /* ShiciView.swift */,
 			);
 			path = Shici;
@@ -615,6 +610,7 @@
 				46B2423725B3250D00B17A4A /* ChineseAstrologyCalendar */,
 				46F9C28425D137020017440D /* ChineseTranditionalMusicCore */,
 				460EE4DA270211EA0006A7D3 /* FirebaseAnalytics */,
+				994B3BBC28FAE27800F9CF67 /* AppStoreReviewPrompt */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -787,6 +783,7 @@
 				46B2423625B3250D00B17A4A /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
 				46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */,
 				460EE4D9270211EA0006A7D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				994B3BBB28FAE27800F9CF67 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -908,6 +905,7 @@
 			files = (
 				46EF7F8027107968007030CC /* JieqiCell.swift in Sources */,
 				46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */,
+				994B3BC128FB35C000F9CF67 /* DizhiGridView.swift in Sources */,
 				46B79C402541F95F003C0B7F /* Environment.swift in Sources */,
 				46339FEB25028DB5007D4137 /* MainView.swift in Sources */,
 				46EF7F8427108D73007030CC /* JieqiContainerView.swift in Sources */,
@@ -922,11 +920,11 @@
 				460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */,
 				468844D024F54B4600310941 /* Updater.swift in Sources */,
 				46339FE325024E85007D4137 /* Styler.swift in Sources */,
-				460BA9AA26F24CA10025CA39 /* ShiciListView.swift in Sources */,
 				46EF7F8227108A00007030CC /* JieqiCircularView.swift in Sources */,
 				46EF7F7E271077AE007030CC /* JieqiListView.swift in Sources */,
 				46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */,
 				46339FE625027DA8007D4137 /* ShichenHStackView.swift in Sources */,
+				994B3BBF28FB34C800F9CF67 /* TwelveView.swift in Sources */,
 				46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */,
 				46AB55FD242B5F7100F6604A /* DizhiListView.swift in Sources */,
 			);
@@ -1088,7 +1086,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = ShiChen/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1116,7 +1114,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				INFOPLIST_FILE = ShiChen/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1259,7 +1257,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"TianganDizhi/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
@@ -1286,7 +1284,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"TianganDizhi/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
@@ -1720,6 +1718,14 @@
 				kind = branch;
 			};
 		};
+		994B3BBB28FAE27800F9CF67 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:xiangyu-sun/AppStoreReviewPrompt.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1747,6 +1753,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */;
 			productName = ChineseTranditionalMusicCore;
+		};
+		994B3BBC28FAE27800F9CF67 /* AppStoreReviewPrompt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 994B3BBB28FAE27800F9CF67 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */;
+			productName = AppStoreReviewPrompt;
 		};
 		997C689B2868A7DC00B40D3F /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
