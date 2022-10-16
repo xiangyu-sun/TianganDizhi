@@ -14,6 +14,14 @@ import ChineseAstrologyCalendar
 struct Nongli: Widget {
     let kind: String = "Nongli"
     
+    var supportedFamilies: [WidgetFamily] {
+        if #available(iOSApplicationExtension 16.0, *) {
+            return [.systemSmall, .systemMedium,  .accessoryInline, .accessoryCircular, .accessoryRectangular]
+        }else {
+            return [.systemSmall, .systemMedium]
+        }
+    }
+    
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             ShiChenYearMonthDateEntryView(entry: entry)
@@ -23,7 +31,8 @@ struct Nongli: Widget {
 #if os(watchOS)
         .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
 #else
-        .supportedFamilies([.systemSmall, .systemMedium,  .accessoryInline, .accessoryCircular, .accessoryRectangular])
+        
+        .supportedFamilies(supportedFamilies)
 #endif
     
         
@@ -32,6 +41,14 @@ struct Nongli: Widget {
 
 struct ShiChen: Widget {
     let kind: String = "ShiChen"
+    
+    var supportedFamilies: [WidgetFamily] {
+        if #available(iOSApplicationExtension 16.0, *) {
+            return [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge,  .accessoryInline, .accessoryCircular, .accessoryRectangular]
+        }else {
+            return [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge]
+        }
+    }
     
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
@@ -42,7 +59,7 @@ struct ShiChen: Widget {
 #if os(watchOS)
         .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
 #else
-        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge,  .accessoryInline, .accessoryCircular, .accessoryRectangular])
+        .supportedFamilies(supportedFamilies)
 #endif
         
     }
@@ -52,17 +69,18 @@ struct ShiChen: Widget {
 struct ShiChen_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryInline))
-                .previewDisplayName("ShiChenEntryView Inline")
-            
-            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-                .previewDisplayName("ShiChenEntryView Circular")
-            
-            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-                .previewDisplayName("ShiChenEntryView Retangular")
+            if #available(iOSApplicationExtension 16.0, *) {
+                ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                    .previewContext(WidgetPreviewContext(family: .accessoryInline))
+                    .previewDisplayName("ShiChenEntryView Inline")
+                ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+                    .previewDisplayName("ShiChenEntryView Circular")
+                
+                ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+                    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+                    .previewDisplayName("ShiChenEntryView Retangular")
+            }
         }
 #if os(iOS)
         Group {

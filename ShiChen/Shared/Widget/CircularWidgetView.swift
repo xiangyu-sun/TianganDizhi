@@ -10,6 +10,7 @@ import SwiftUI
 import ChineseAstrologyCalendar
 import WidgetKit
 
+@available(iOSApplicationExtension 16.0, *)
 struct CircularWidgetView: View {
     
     @Environment(\.bodyFont) var bodyFont
@@ -38,6 +39,7 @@ struct CircularWidgetView: View {
     }
 }
 
+@available(iOSApplicationExtension 16.0, *)
 struct CircularWidgetView_Previews: PreviewProvider {
     static var previews: some View {
         CircularWidgetView(date: .now)

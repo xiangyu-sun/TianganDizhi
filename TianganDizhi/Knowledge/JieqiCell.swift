@@ -20,8 +20,6 @@ struct JieqiCell: View {
             HStack() {
                 Text(jieqi.chineseName)
                     .font(title3Font)
-                Text(jieqi.chineseName)
-                    .font(title3Font)
             }
             Text(jieqi.qishierHou)
                 .font(bodyFont)

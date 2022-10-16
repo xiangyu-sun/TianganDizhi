@@ -35,9 +35,8 @@ class TianganDizhiUITests: XCTestCase {
         snapshot("testKownlegeScreen")
     }
     
-    func testJingluo() {
-        app.tabBars.firstMatch.buttons["天干地支"].tap()
-        app.tables.buttons["時辰與經絡"].tap()
-        snapshot("testJingluo")
+    func testTwelve() {
+        app.tabBars.firstMatch.buttons["十二地支匯總"].tap()
+        snapshot("grid")
     }
 }

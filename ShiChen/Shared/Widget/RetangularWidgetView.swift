@@ -11,6 +11,7 @@ import WidgetKit
 
 import ChineseAstrologyCalendar
 
+@available(iOSApplicationExtension 16.0, *)
 struct RetangularWidgetView: View {
     @Environment(\.bodyFont) var bodyFont
     @Environment(\.titleFont) var titleFont
@@ -23,7 +24,7 @@ struct RetangularWidgetView: View {
         
         HStack() {
             Text(date.displayStringOfChineseYearMonthDateWithZodiac)
-                .font(.custom("Weibei TC Bold", size: 20, relativeTo: .body))
+                .font(.custom(.weibeiBold, size: 20, relativeTo: .body))
             Text(shichen.displayHourText)
 #if os(watchOS)
                 .font(titleFont)
@@ -35,6 +36,7 @@ struct RetangularWidgetView: View {
     }
 }
 
+@available(iOSApplicationExtension 16.0, *)
 struct RetangularWidgetView_Previews: PreviewProvider {
     static var previews: some View {
         RetangularWidgetView(date: .now)

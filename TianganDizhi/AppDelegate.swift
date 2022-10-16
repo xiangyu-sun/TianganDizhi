@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Weibei TC Bold", size: 34)!]
-        UITabBarItem.appearance().setTitleTextAttributes([.font : UIFont(name: "Weibei TC Bold", size: 12)!], for: [])
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: .weibeiBold, size: 34)!]
+        UITabBarItem.appearance().setTitleTextAttributes([.font : UIFont(name: .weibeiBold, size: 12)!], for: [])
         
         return true
     }

@@ -32,6 +32,8 @@ struct DizhiZodiaCell: View {
             Text(zodiac.emoji)
             Text(dizhi.chineseCharactor)
             Text("\(zodiac.rawValue)")
+            Spacer()
+            Text(dizhi.wuxing.chineseCharacter)
         }
         .padding()
     }
@@ -68,8 +70,7 @@ struct OrganShichenCell: View {
     var body: some View {
         HStack() {
             Text(shichen.chineseCharactor)
-                
-            Spacer()
+            Text(shichen.formattedHourRange ?? "")
             Text(气血循环流注[shichen.rawValue - 1].rawValue)
         }
         .padding()
@@ -96,8 +97,9 @@ struct LvlvCell: View {
             Text(dizhi.chineseCharactor)
                 
             Spacer()
-            
-            Text(律呂.allCases[dizhi.rawValue - 1].rawValue)
+            let value = 律呂.allCases[dizhi.rawValue - 1].rawValue
+            Text(value)
+            Text("(\(value.transformToPinyin()))")
         }
         .padding()
     }
@@ -105,6 +107,10 @@ struct LvlvCell: View {
 
 struct Cells_Previews: PreviewProvider {
     static var previews: some View {
-        LvlvCell(dizhi: .zi)
+        Group(){
+            LvlvCell(dizhi: .zi)
+            OrganShichenCell(shichen: .zi)
+            DizhiZodiaCell(dizhi: .hai)
+        }
     }
 }

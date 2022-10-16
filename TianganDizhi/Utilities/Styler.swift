@@ -11,22 +11,19 @@ import SwiftUI
 extension Font {
     
     public static func defaultLargeTitleWithSize(size: CGFloat) -> Font {
-        return .custom("Weibei TC Bold", size: size, relativeTo: .largeTitle)
+        return .custom(.weibeiBold, size: size, relativeTo: .largeTitle)
     }
     
     public static func defaultTitleWithSize(size: CGFloat) -> Font {
-        return .custom("Weibei TC Bold", size: size, relativeTo: .title)
+        return .custom(.weibeiBold, size: size, relativeTo: .title)
     }
     
     public static func defaultBodyWithSize(size: CGFloat) -> Font {
-        return .custom("Weibei TC Bold", size: size, relativeTo: .body)
+        return .custom(.weibeiBold, size: size, relativeTo: .body)
     }
     
     public static var defaultFootnote: Font {
-        return .custom("Weibei TC Bold", size: 18, relativeTo: .footnote)
+        return .custom(.weibeiBold, size: 18, relativeTo: .footnote)
     }
     
-    public static func defaultWidgetBodyWithSize(size: CGFloat) -> Font {
-        return .custom("Xingkai TC Light", size: size, relativeTo: .body)
-    }
 }

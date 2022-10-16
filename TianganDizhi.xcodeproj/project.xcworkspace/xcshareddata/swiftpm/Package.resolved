@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "appstorereviewprompt",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:xiangyu-sun/AppStoreReviewPrompt.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1b6c213eeee645caf876116469c4f6d5f7a9991b"
+      }
+    },
+    {
       "identity" : "boringssl-swiftpm",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/boringssl-SwiftPM.git",
@@ -21,9 +30,8 @@
     {
       "identity" : "chineseastrologycalendar",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:xiangyu-sun/ChineseAstrologyCalendar.git",
+      "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
-        "branch" : "master",
         "revision" : "6d61bd57a7cf20c5cc4668b1eaed7487246d32ca"
       }
     },
