@@ -30,7 +30,7 @@ struct ShiChenEntryView : View {
                         Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
                         Text(shichen.displayHourText)
                     }
-                    .font(.custom("Weibei TC Bold", size: 20, relativeTo: .body))
+                    .font(.custom(.weibeiBold, size: 20, relativeTo: .body))
                 } else {
                     InlineWidgetView(date: entry.date)
                 }

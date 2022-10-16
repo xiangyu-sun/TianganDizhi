@@ -24,7 +24,7 @@ struct RetangularWidgetView: View {
         
         HStack() {
             Text(date.displayStringOfChineseYearMonthDateWithZodiac)
-                .font(.custom("Weibei TC Bold", size: 20, relativeTo: .body))
+                .font(.custom(.weibeiBold, size: 20, relativeTo: .body))
             Text(shichen.displayHourText)
 #if os(watchOS)
                 .font(titleFont)

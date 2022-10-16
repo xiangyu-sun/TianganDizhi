@@ -8,6 +8,10 @@
 
 import SwiftUI
 
+extension String {
+    static let weibeiBold = "Weibei TC Bold"
+}
+
 private struct TitleFontEnvironmentKey: EnvironmentKey {
     static let defaultValue: Font = .defaultTitleWithSize(size: 40)
 }
@@ -21,15 +25,15 @@ private struct BodyFontEnvironmentKey: EnvironmentKey {
 }
 
 private struct HeadlineFontEnvironmentKey: EnvironmentKey {
-    static let defaultValue: Font = .custom("Weibei TC Bold", size: 22, relativeTo: .headline)
+    static let defaultValue: Font = .custom(.weibeiBold, size: 22, relativeTo: .headline)
 }
 
 private struct Title3FontEnvironmentKey: EnvironmentKey {
-    static let defaultValue: Font = .custom("Weibei TC Bold", size: 26, relativeTo: .title3)
+    static let defaultValue: Font = .custom(.weibeiBold, size: 26, relativeTo: .title3)
 }
 
 private struct Title2FontEnvironmentKey: EnvironmentKey {
-    static let defaultValue: Font = .custom("Weibei TC Bold", size: 30, relativeTo: .title2)
+    static let defaultValue: Font = .custom(.weibeiBold, size: 30, relativeTo: .title2)
 }
 
 
