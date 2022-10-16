@@ -32,6 +32,8 @@ struct DizhiZodiaCell: View {
             Text(zodiac.emoji)
             Text(dizhi.chineseCharactor)
             Text("\(zodiac.rawValue)")
+            Spacer()
+            Text(dizhi.wuxing.chineseCharacter)
         }
         .padding()
     }
@@ -105,7 +107,10 @@ struct LvlvCell: View {
 
 struct Cells_Previews: PreviewProvider {
     static var previews: some View {
-        LvlvCell(dizhi: .zi)
-        OrganShichenCell(shichen: .zi)
+        Group(){
+            LvlvCell(dizhi: .zi)
+            OrganShichenCell(shichen: .zi)
+            DizhiZodiaCell(dizhi: .hai)
+        }
     }
 }

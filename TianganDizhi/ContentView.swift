@@ -8,6 +8,7 @@
 
 import SwiftUI
 import ChineseAstrologyCalendar
+import AppStoreReviewPrompt
 
 struct ContentView: View {
     
@@ -36,6 +37,9 @@ struct ContentView: View {
                 Image(systemName: "book")
                 Text("十二地支匯總")
             }
+        }
+        .onAppear() {
+            AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()
         }
     }
 }
