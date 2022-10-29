@@ -22,7 +22,11 @@ struct ShichenHStackView: View {
         HStack() {
             VStack(){
                 Text("\(shichen.previous.displayHourText)")
+#if os(watchOS)
+                    .font(title2Font)
+#else
                     .font((shouldScaleFont && family != .systemMedium) ? titleFont : title2Font)
+#endif
                 ShichenInformationView(shichen: shichen.previous)
             }
             .foregroundColor(Color.secondary)
@@ -31,7 +35,12 @@ struct ShichenHStackView: View {
             
             VStack(){
                 Text("\(shichen.displayHourText)")
+#if os(watchOS)
+                    .font(title2Font)
+#else
                     .font((shouldScaleFont && family != .systemMedium) ? titleFont : title2Font)
+#endif
+                
                     .scaleEffect(1.2)
                 ShichenInformationView(shichen: shichen)
             }
@@ -40,7 +49,11 @@ struct ShichenHStackView: View {
             Spacer()
             VStack(){
                 Text("\(shichen.next.displayHourText)")
+#if os(watchOS)
+                    .font(title2Font)
+#else
                     .font((shouldScaleFont && family != .systemMedium) ? titleFont : title2Font)
+#endif
                 ShichenInformationView(shichen: shichen.next)
             }
             .foregroundColor(Color.secondary)
@@ -61,7 +74,12 @@ struct ShichenInformationView: View {
             Text(shichen.aliasName)
             Text(shichen.organReference)
         }
+#if os(iOS)
         .font((shouldScaleFont && family == .systemExtraLarge) ? title2Font : .defaultFootnote)
+#else
+        .font(.defaultFootnote)
+#endif
+        
     }
 }
 

@@ -11,26 +11,25 @@ import ChineseAstrologyCalendar
 
 
 struct MainView: View {
-    @ObservedObject var updater = Updater.shared
+    @ObservedObject var updater = DateProvider()
     @Environment(\.titleFont) var titleFont
     @Environment(\.largeTitleFont) var largeTitleFont
     @Environment(\.bodyFont) var bodyFont
     @Environment(\.shouldScaleFont) var shouldScaleFont
     
-    
     var body: some View {
         
         VStack() {
             HStack() {
-                Text((try? GanzhiDateConverter.zodiac(updater.date).rawValue) ?? "")
+                Text((try? GanzhiDateConverter.zodiac(updater.currentDate).rawValue) ?? "")
                     .font(titleFont)
-                Text(updater.date.chineseYearMonthDate)
+                Text(updater.currentDate.chineseYearMonthDate)
                     .font(titleFont)
                 Spacer()
             }
             
-            let shichen = try! GanzhiDateConverter.shichen(updater.date)
-            Spacer()
+            let shichen = try! GanzhiDateConverter.shichen(updater.currentDate)
+
             Text(shichen.aliasName)
                 .font(largeTitleFont)
             Text(shichen.organReference)
@@ -43,9 +42,8 @@ struct MainView: View {
                 CircularContainerView(currentShichen: shichen, padding: 0)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            
             Spacer()
-        }
+        }        
         
     }
 }

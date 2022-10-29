@@ -36,15 +36,26 @@ private struct Title2FontEnvironmentKey: EnvironmentKey {
     static let defaultValue: Font = .custom(.weibeiBold, size: 30, relativeTo: .title2)
 }
 
-
 private struct iPadEnvironmentKey: EnvironmentKey {
-    static let defaultValue: Bool = UIDevice.current.userInterfaceIdiom == .pad
+    static var defaultValue: Bool {
+#if os(iOS)
+        UIDevice.current.userInterfaceIdiom == .pad
+#else
+    false
+#endif
+    }
 }
 
 private struct ShouldScaleFontEnvironmentKey: EnvironmentKey {
-    static let defaultValue: Bool = UIScreen.main.bounds.width > 744
+    static var defaultValue: Bool {
+#if os(iOS)
+        UIScreen.main.bounds.width > 744
+#else
+    false
+#endif
+    }
+    
 }
-
 
 extension EnvironmentValues {
     var titleFont: Font {
@@ -77,7 +88,6 @@ extension EnvironmentValues {
         get { self[HeadlineFontEnvironmentKey.self] }
         set { self[HeadlineFontEnvironmentKey.self] = newValue }
     }
-    
     var iPad: Bool {
         get { self[iPadEnvironmentKey.self] }
         set { }
@@ -87,7 +97,6 @@ extension EnvironmentValues {
         get { self[ShouldScaleFontEnvironmentKey.self] }
         set { }
     }
-    
     
 }
 

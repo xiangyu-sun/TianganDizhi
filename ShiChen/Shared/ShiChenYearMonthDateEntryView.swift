@@ -52,11 +52,19 @@ struct ShiChenYearMonthDateEntryView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .systemSmall))
+#if os(watchOS)
+            .previewContext(WidgetPreviewContext(family: .accessoryInline))
+#else
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+#endif
                 .previewDisplayName("Small")
             
             ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .systemMedium))
+#if os(watchOS)
+            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+#else
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
+#endif
                 .previewDisplayName("Medium")
         }
         if #available(iOSApplicationExtension 16.0, *) {
