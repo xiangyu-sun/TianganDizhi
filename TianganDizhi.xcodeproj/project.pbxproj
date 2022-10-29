@@ -70,6 +70,7 @@
 		99632043290C2D1E000C4A2B /* TianganDizhiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */; };
 		9963204B290C32C1000C4A2B /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963204A290C32C1000C4A2B /* DateProvider.swift */; };
 		9963204D290D52AA000C4A2B /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 9963204C290D52AA000C4A2B /* AppStoreReviewPrompt */; };
+		99632068290DC349000C4A2B /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 99632067290DC349000C4A2B /* AppStoreReviewPrompt */; };
 		997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68492864CADE00B40D3F /* ShichenWatchApp.swift */; };
 		997C684C2864CADE00B40D3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C684B2864CADE00B40D3F /* ContentView.swift */; };
 		997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C684D2864CADF00B40D3F /* Assets.xcassets */; };
@@ -230,8 +231,8 @@
 		994D37522864BFF200A9C99E /* FullDateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDateTitleView.swift; sourceTree = "<group>"; };
 		9955E82628FB810B00FA8362 /* Baoli.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Baoli.ttc; sourceTree = "<group>"; };
 		99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganDizhiApp.swift; sourceTree = "<group>"; };
-		99632049290C312A000C4A2B /* AppStoreReviewPrompt */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AppStoreReviewPrompt; path = ../AppStoreReviewPrompt; sourceTree = "<group>"; };
 		9963204A290C32C1000C4A2B /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
+		99632069290DD90A000C4A2B /* TianganDizhi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TianganDizhi.entitlements; sourceTree = "<group>"; };
 		997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShichenWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997C68492864CADE00B40D3F /* ShichenWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatchApp.swift; sourceTree = "<group>"; };
 		997C684B2864CADE00B40D3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -271,6 +272,7 @@
 				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
 				994B3BCE28FB6F1900F9CF67 /* ChineseAstrologyCalendar in Frameworks */,
 				460EE4DB270211EA0006A7D3 /* FirebaseAnalytics in Frameworks */,
+				99632068290DC349000C4A2B /* AppStoreReviewPrompt in Frameworks */,
 				46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,7 +354,6 @@
 		46AB55BE242B5EFD00F6604A = {
 			isa = PBXGroup;
 			children = (
-				99632048290C312A000C4A2B /* Packages */,
 				46339FEC250296BF007D4137 /* ShiChenExtension.entitlements */,
 				46AB55C9242B5EFD00F6604A /* TianganDizhi */,
 				46AB55E0242B5EFF00F6604A /* TianganDizhiTests */,
@@ -386,6 +387,7 @@
 		46AB55C9242B5EFD00F6604A /* TianganDizhi */ = {
 			isa = PBXGroup;
 			children = (
+				99632069290DD90A000C4A2B /* TianganDizhi.entitlements */,
 				99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
 				46339FEA25028DB5007D4137 /* MainView.swift */,
@@ -518,14 +520,6 @@
 			path = "Baoli TC";
 			sourceTree = "<group>";
 		};
-		99632048290C312A000C4A2B /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				99632049290C312A000C4A2B /* AppStoreReviewPrompt */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		997C68482864CADE00B40D3F /* ShichenWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,6 +624,7 @@
 				460EE4DA270211EA0006A7D3 /* FirebaseAnalytics */,
 				994B3BCD28FB6F1900F9CF67 /* ChineseAstrologyCalendar */,
 				9963204C290D52AA000C4A2B /* AppStoreReviewPrompt */,
+				99632067290DC349000C4A2B /* AppStoreReviewPrompt */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -801,6 +796,7 @@
 				46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */,
 				460EE4D9270211EA0006A7D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				994B3BCC28FB6F1900F9CF67 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
+				99632066290DC348000C4A2B /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -1102,6 +1098,7 @@
 				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -1130,6 +1127,7 @@
 				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -1195,7 +1193,6 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WATCHOS_DEPLOYMENT_TARGET = 8.0;
@@ -1252,7 +1249,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -1265,19 +1261,24 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = TianganDizhi/TianganDizhi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TianganDizhi/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TianganDizhi;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1300,19 +1301,24 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = TianganDizhi/TianganDizhi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TianganDizhi/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TianganDizhi;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1755,6 +1761,14 @@
 				revision = 6d61bd57a7cf20c5cc4668b1eaed7487246d32ca;
 			};
 		};
+		99632066290DC348000C4A2B /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:xiangyu-sun/AppStoreReviewPrompt.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1785,6 +1799,11 @@
 		};
 		9963204C290D52AA000C4A2B /* AppStoreReviewPrompt */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = AppStoreReviewPrompt;
+		};
+		99632067290DC349000C4A2B /* AppStoreReviewPrompt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99632066290DC348000C4A2B /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */;
 			productName = AppStoreReviewPrompt;
 		};
 /* End XCSwiftPackageProductDependency section */
