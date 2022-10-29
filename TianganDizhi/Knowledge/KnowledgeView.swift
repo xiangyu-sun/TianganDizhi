@@ -11,7 +11,7 @@ import ChineseAstrologyCalendar
 
 struct KnowledgeView: View {
     @Environment(\.bodyFont) var bodyFont
-
+    
     var body: some View {
         NavigationView() {
             List() {
@@ -48,9 +48,13 @@ struct KnowledgeView: View {
                 }
             }
             .font(bodyFont)
+#if os(iOS)
             .navigationBarTitle(Text("天干地支相關知識"))
+#endif
         }
+#if os(iOS)
         .navigationViewStyle(StackNavigationViewStyle())
+#endif
     }
 }
 

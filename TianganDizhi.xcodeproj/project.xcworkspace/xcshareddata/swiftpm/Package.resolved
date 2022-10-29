@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "appstorereviewprompt",
-      "kind" : "remoteSourceControl",
-      "location" : "git@github.com:xiangyu-sun/AppStoreReviewPrompt.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "1b6c213eeee645caf876116469c4f6d5f7a9991b"
-      }
-    },
-    {
       "identity" : "boringssl-swiftpm",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/boringssl-SwiftPM.git",

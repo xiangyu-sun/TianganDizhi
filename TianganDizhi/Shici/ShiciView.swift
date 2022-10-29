@@ -76,7 +76,9 @@ struct ShiciView: View {
              """)
                 .font(bodyFont)
         }
+        #if os(iOS)
         .navigationBarTitle("十二時辰頌")
+        #endif
     }
 }
 

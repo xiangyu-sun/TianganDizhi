@@ -61,7 +61,12 @@ struct ShichenInformationView: View {
             Text(shichen.aliasName)
             Text(shichen.organReference)
         }
+        #if os(iOS)
         .font((shouldScaleFont && family == .systemExtraLarge) ? title2Font : .defaultFootnote)
+        #else
+        .font(.defaultFootnote)
+        #endif
+        
     }
 }
 

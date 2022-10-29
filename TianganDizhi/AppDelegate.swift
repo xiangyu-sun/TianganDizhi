@@ -5,12 +5,14 @@
 //  Created by 孙翔宇 on 25/03/2020.
 //  Copyright © 2020 孙翔宇. All rights reserved.
 //
-
+#if canImport(UIKit)
 import UIKit
+#endif
+
 import Firebase
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+@available(macOS, unavailable)
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
