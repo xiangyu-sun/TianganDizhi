@@ -26,7 +26,6 @@
 		46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46701E2C271B2E7E00D6D322 /* CompactShichenView.swift */; };
-		46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CA242B5EFD00F6604A /* AppDelegate.swift */; platformFilter = ios; };
 		46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CE242B5EFD00F6604A /* ContentView.swift */; };
 		46AB55D1242B5EFF00F6604A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AB55D0242B5EFF00F6604A /* Assets.xcassets */; };
 		46AB55D4242B5EFF00F6604A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AB55D3242B5EFF00F6604A /* Preview Assets.xcassets */; };
@@ -190,7 +189,6 @@
 		46393EF52542F58000E40518 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/ShiChen.strings"; sourceTree = "<group>"; };
 		46701E2C271B2E7E00D6D322 /* CompactShichenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactShichenView.swift; sourceTree = "<group>"; };
 		46AB55C7242B5EFD00F6604A /* TianganDizhi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TianganDizhi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		46AB55CA242B5EFD00F6604A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46AB55CE242B5EFD00F6604A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		46AB55D0242B5EFF00F6604A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46AB55D3242B5EFF00F6604A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -389,7 +387,6 @@
 			isa = PBXGroup;
 			children = (
 				99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */,
-				46AB55CA242B5EFD00F6604A /* AppDelegate.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
 				46339FEA25028DB5007D4137 /* MainView.swift */,
 				9963204A290C32C1000C4A2B /* DateProvider.swift */,
@@ -930,7 +927,6 @@
 				46339FEB25028DB5007D4137 /* MainView.swift in Sources */,
 				46EF7F8427108D73007030CC /* JieqiContainerView.swift in Sources */,
 				46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */,
-				46AB55CB242B5EFD00F6604A /* AppDelegate.swift in Sources */,
 				99632043290C2D1E000C4A2B /* TianganDizhiApp.swift in Sources */,
 				46E055B224B02FA900AC2AE5 /* CircularContainerView.swift in Sources */,
 				46F9C28C25D137D50017440D /* Cells.swift in Sources */,
@@ -1274,9 +1270,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TianganDizhi/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TianganDizhi;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1304,9 +1305,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TianganDizhi/Preview Content\"";
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TianganDizhi;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
