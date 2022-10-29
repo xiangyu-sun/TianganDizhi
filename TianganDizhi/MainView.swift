@@ -29,7 +29,7 @@ struct MainView: View {
             }
             
             let shichen = try! GanzhiDateConverter.shichen(updater.currentDate)
-            Spacer()
+
             Text(shichen.aliasName)
                 .font(largeTitleFont)
             Text(shichen.organReference)
@@ -42,9 +42,8 @@ struct MainView: View {
                 CircularContainerView(currentShichen: shichen, padding: 0)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            
             Spacer()
-        }
+        }        
         
     }
 }
