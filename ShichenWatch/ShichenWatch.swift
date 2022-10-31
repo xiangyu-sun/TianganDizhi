@@ -10,7 +10,7 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-
+@main
 struct ShiChen: Widget {
     let kind: String = "ShiChen"
     
