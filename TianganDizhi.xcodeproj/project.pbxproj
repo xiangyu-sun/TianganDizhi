@@ -95,6 +95,7 @@
 		99632086290DE1DE000C4A2B /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
 		99632088290DE2FE000C4A2B /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 99632087290DE2FE000C4A2B /* ChineseAstrologyCalendar */; };
 		996320F1290DE885000C4A2B /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 996320F0290DE885000C4A2B /* AppStoreReviewPrompt */; };
+		9963212229107B7B000C4A2B /* ShichenWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68492864CADE00B40D3F /* ShichenWatchApp.swift */; };
 		997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C684D2864CADF00B40D3F /* Assets.xcassets */; };
 		997C68512864CADF00B40D3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C68502864CADF00B40D3F /* Preview Assets.xcassets */; };
@@ -147,6 +148,13 @@
 			remoteGlobalIDString = 46AB55C6242B5EFD00F6604A;
 			remoteInfo = TianganDizhi;
 		};
+		9963212329107B7B000C4A2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46AB55BF242B5EFD00F6604A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 997C68432864CADE00B40D3F;
+			remoteInfo = "ShichenWatch Watch App";
+		};
 		997C68572864CADF00B40D3F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46AB55BF242B5EFD00F6604A /* Project object */;
@@ -180,6 +188,17 @@
 				462A5F7424FFE5F20032A125 /* ShiChenExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9963212529107B7B000C4A2B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9963212229107B7B000C4A2B /* ShichenWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		997C688E2865FAD300B40D3F /* Embed Foundation Extensions */ = {
@@ -634,11 +653,13 @@
 				46AB55C4242B5EFD00F6604A /* Frameworks */,
 				46AB55C5242B5EFD00F6604A /* Resources */,
 				46AB5615242B7F6C00F6604A /* Embed Foundation Extensions */,
+				9963212529107B7B000C4A2B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				462A5F7324FFE5F20032A125 /* PBXTargetDependency */,
+				9963212429107B7B000C4A2B /* PBXTargetDependency */,
 			);
 			name = TianganDizhi;
 			packageProductDependencies = (
@@ -1076,6 +1097,11 @@
 			isa = PBXTargetDependency;
 			target = 46AB55C6242B5EFD00F6604A /* TianganDizhi */;
 			targetProxy = 46AB55E9242B5EFF00F6604A /* PBXContainerItemProxy */;
+		};
+		9963212429107B7B000C4A2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 997C68432864CADE00B40D3F /* ShichenWatch Watch App */;
+			targetProxy = 9963212329107B7B000C4A2B /* PBXContainerItemProxy */;
 		};
 		997C68582864CADF00B40D3F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
