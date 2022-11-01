@@ -52,14 +52,19 @@ struct MainView: View {
             if self.shouldScaleFont {
                 CircularContainerView(currentShichen: shichen, padding: 0)
             }else {
-                CircularContainerView(currentShichen: shichen, padding: 0)
+                CircularContainerView(currentShichen: shichen, padding: -10)
                     .fixedSize(horizontal: false, vertical: true)
+                    .padding()
             }
             Spacer()
             
             #endif
-        }        
-        
+        }
+        .background(
+            Image("background")
+                .resizable(resizingMode: .tile)
+                .ignoresSafeArea()
+        )
     }
 }
 

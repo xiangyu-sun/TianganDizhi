@@ -11,16 +11,41 @@ import SwiftUI
 import Intents
 
 @main
+struct AllWidgets: WidgetBundle {
+    @WidgetBundleBuilder
+    var body: some Widget {
+        ShiChen()
+        HourlyWidget()
+    }
+}
+
+struct HourlyWidget: Widget {
+    let kind: String = "ShiChenByMinute"
+    
+    var supportedFamilies: [WidgetFamily] {
+        return [.accessoryCircular]
+    }
+    
+    var body: some WidgetConfiguration {
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: MinuteTimelineProvider()) { entry in
+            ShiChenEntryView(entry: entry)
+        }
+        .configurationDisplayName("十二时辰")
+        .description("十二地支为名的十二时辰組件")
+        .supportedFamilies([.accessoryCircular, .accessoryCorner])
+    }
+}
+
 struct ShiChen: Widget {
     let kind: String = "ShiChen"
     
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: TimelineProvider()) { entry in
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
             ShiChenEntryView(entry: entry)
         }
-        .configurationDisplayName("十二时辰")
-        .description("十二地支为名的十二时辰计，俗稱，以及相關臟器")
-        .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular, .accessoryCorner])
+        .configurationDisplayName("天干地支年月日，以及時辰")
+        .description("十二地支为名的十二时辰，紀年，紀月")
+        .supportedFamilies([.accessoryInline, .accessoryRectangular])
         
     }
 }

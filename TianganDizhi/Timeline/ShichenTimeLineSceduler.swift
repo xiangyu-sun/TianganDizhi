@@ -9,7 +9,7 @@
 import Foundation
 import ChineseAstrologyCalendar
 
-struct TimeLineSceduler {
+struct ShichenTimeLineSceduler {
     static func buildTimeLine() -> [Date]{
         var timeline = [Date]()
         let currentDate = Date()
