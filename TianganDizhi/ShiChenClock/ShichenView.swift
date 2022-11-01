@@ -23,7 +23,9 @@ struct ShichenView: View {
 
 private struct DizhiView: View {
     let shichen: Dizhi
+    
     @Environment(\.titleFont) var titleFont
+    
     var rotation: Double {
         Double((shichen.rawValue + 7) % 12)
     }
