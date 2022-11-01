@@ -118,12 +118,12 @@
 		997C689D2868A7EA00B40D3F /* ShichenHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE525027DA8007D4137 /* ShichenHStackView.swift */; };
 		997C68A42868A86C00B40D3F /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
 		997C68A52868A8E900B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
-		997C68AB2868A8F600B40D3F /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* Provider.swift */; };
+		997C68AB2868A8F600B40D3F /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* TimelineProvider.swift */; };
 		997C68AC2868A92400B40D3F /* CircularContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */; };
 		997C68AD2868A93100B40D3F /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
 		997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
-		997C68B32868ABEE00B40D3F /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* Provider.swift */; };
+		997C68B32868ABEE00B40D3F /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* TimelineProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,7 +290,7 @@
 		997C68842865FAD200B40D3F /* ShichenWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatch.swift; sourceTree = "<group>"; };
 		997C68872865FAD300B40D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		997C689E2868A81500B40D3F /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
-		997C68A02868A83700B40D3F /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		997C68A02868A83700B40D3F /* TimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -616,7 +616,7 @@
 				994AD1972868FBA800BB5BED /* Widget */,
 				993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */,
 				9955E82428FB782600FA8362 /* Content */,
-				997C68A02868A83700B40D3F /* Provider.swift */,
+				997C68A02868A83700B40D3F /* TimelineProvider.swift */,
 				997C689E2868A81500B40D3F /* SimpleEntry.swift */,
 			);
 			path = Shared;
@@ -956,7 +956,7 @@
 				46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */,
 				994AD1952868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
 				997C68782864CB9B00B40D3F /* AllWidgets.swift in Sources */,
-				997C68AB2868A8F600B40D3F /* Provider.swift in Sources */,
+				997C68AB2868A8F600B40D3F /* TimelineProvider.swift in Sources */,
 				46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */,
 				994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */,
 			);
@@ -1073,7 +1073,7 @@
 				997C68852865FAD200B40D3F /* ShichenWatch.swift in Sources */,
 				994AD1962868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
 				997C689D2868A7EA00B40D3F /* ShichenHStackView.swift in Sources */,
-				997C68B32868ABEE00B40D3F /* Provider.swift in Sources */,
+				997C68B32868ABEE00B40D3F /* TimelineProvider.swift in Sources */,
 				997C68962868A76800B40D3F /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				994AD1902868F96800BB5BED /* InlineWidgetView.swift in Sources */,
 			);
@@ -1528,7 +1528,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1560,7 +1560,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;

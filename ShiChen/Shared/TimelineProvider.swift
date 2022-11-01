@@ -1,7 +1,7 @@
 import WidgetKit
 import ChineseAstrologyCalendar
 
-struct Provider: IntentTimelineProvider {
+struct TimelineProvider: IntentTimelineProvider {
     
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date.now, configuration: ConfigurationIntent())

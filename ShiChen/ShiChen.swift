@@ -23,7 +23,7 @@ struct Nongli: Widget {
     }
     
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: TimelineProvider()) { entry in
             ShiChenYearMonthDateEntryView(entry: entry)
         }
         .configurationDisplayName("年月日時辰")
@@ -51,7 +51,7 @@ struct ShiChen: Widget {
     }
     
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: TimelineProvider()) { entry in
             ShiChenEntryView(entry: entry)
         }
         .configurationDisplayName("十二时辰")
