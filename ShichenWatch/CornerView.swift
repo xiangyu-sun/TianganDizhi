@@ -8,21 +8,31 @@
 
 import SwiftUI
 import WidgetKit
+import ChineseAstrologyCalendar
 
 struct CornerView: View {
+    @State var date: Date
+    
     var body: some View {
+        let shichen = try! GanzhiDateConverter.shichen(date)
+        let start = date.timeIntervalSince1970 -  shichen.startDate!.timeIntervalSince1970
+        
+        let base = shichen.endDate!.timeIntervalSince1970 -  shichen.startDate!.timeIntervalSince1970
         ZStack() {
             AccessoryWidgetBackground()
+            Text(date.chineseDate)
+                .font(.largeTitle)
+            
         }
-        widgetLabel{
-            Gauge(value: 1) {
-                Text("mg")
+        .widgetLabel{
+            Gauge(value: start/base) {
+                Text("")
             } currentValueLabel: {
-                Text("current")
+                Text("")
             } minimumValueLabel: {
-                Text("shi")
+                Text(try! GanzhiDateConverter.shichen(shichen.startDate!).displayHourText)
             } maximumValueLabel: {
-                Text("chen")
+                Text(shichen.next.displayHourText)
             }
 
         }
@@ -31,6 +41,7 @@ struct CornerView: View {
 
 struct CornerView_Previews: PreviewProvider {
     static var previews: some View {
-        CornerView()
+        CornerView(date: .now)
+            .previewContext(WidgetPreviewContext(family: .accessoryCorner))
     }
 }

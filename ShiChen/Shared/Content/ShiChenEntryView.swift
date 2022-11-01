@@ -11,7 +11,7 @@ import ChineseAstrologyCalendar
 import WidgetKit
 
 struct ShiChenEntryView : View {
-    var entry: TimelineProvider.Entry
+    var entry: ShichenTimelineProvider.Entry
     @Environment(\.widgetFamily) var family
     @Environment(\.largeTitleFont) var largeTitleFont
     @Environment(\.bodyFont) var bodyFont
@@ -44,13 +44,25 @@ struct ShiChenEntryView : View {
             if #available(iOSApplicationExtension 16.0, *) {
                 RetangularWidgetView(date: entry.date)
             }
+#if os(watchOS)
+        case .accessoryCorner:
+            CornerView(date: entry.date)
+#endif
         case .systemMedium:
             VStack() {
+                Spacer()
                 FullDateTitleView(date: entry.date)
                     .font(title3Font)
+                Spacer()
                 ShichenHStackView(shichen: shichen)
                     .padding([.leading, .trailing], 8)
+                Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                Image("background")
+                    .resizable(resizingMode: .tile)
+            )
         case .systemLarge:
             VStack() {
                 FullDateTitleView(date: entry.date)
@@ -59,6 +71,11 @@ struct ShiChenEntryView : View {
                 CircularContainerView(currentShichen: shichen, padding: -30)
                     .padding(.bottom, 8)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                Image("background")
+                    .resizable(resizingMode: .tile)
+            )
         case .systemExtraLarge:
             HStack() {
                 VStack() {
@@ -72,8 +89,18 @@ struct ShiChenEntryView : View {
                 CircularContainerView(currentShichen: shichen, padding: -30)
                     .padding()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                Image("background")
+                    .resizable(resizingMode: .tile)
+            )
         default:
             CompactShichenView(shichen: shichen, date: entry.date)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(
+                    Image("background")
+                        .resizable(resizingMode: .tile)
+                )
         }
     }
 }
@@ -111,6 +138,7 @@ struct ShiChenEntryView_Previews: PreviewProvider {
                 .environment(\.colorScheme, .dark)
             ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
+                .previewDisplayName("systemExtraLarge")
             
             ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .systemMedium))

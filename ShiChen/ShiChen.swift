@@ -23,7 +23,7 @@ struct Nongli: Widget {
     }
     
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: TimelineProvider()) { entry in
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
             ShiChenYearMonthDateEntryView(entry: entry)
         }
         .configurationDisplayName("年月日時辰")
@@ -44,24 +44,42 @@ struct ShiChen: Widget {
     
     var supportedFamilies: [WidgetFamily] {
         if #available(iOSApplicationExtension 16.0, *) {
-            return [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge,  .accessoryInline, .accessoryCircular, .accessoryRectangular]
+            return [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge,  .accessoryInline, .accessoryRectangular]
         }else {
             return [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge]
         }
     }
     
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: TimelineProvider()) { entry in
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
             ShiChenEntryView(entry: entry)
         }
         .configurationDisplayName("十二时辰")
         .description("十二地支为名的十二时辰计，俗稱，以及相關臟器")
 #if os(watchOS)
-        .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
+        .supportedFamilies([.accessoryInline, .accessoryRectangular])
 #else
         .supportedFamilies(supportedFamilies)
 #endif
         
+    }
+}
+
+@available(iOSApplicationExtension 16.0, *)
+struct HourlyWidget: Widget {
+    let kind: String = "ShiChenByMinute"
+    
+    var supportedFamilies: [WidgetFamily] {
+        return [.accessoryCircular]
+    }
+    
+    var body: some WidgetConfiguration {
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: MinuteTimelineProvider()) { entry in
+            ShiChenEntryView(entry: entry)
+        }
+        .configurationDisplayName("十二时辰")
+        .description("十二地支为名的十二时辰組件")
+        .supportedFamilies([.accessoryCircular])
     }
 }
 

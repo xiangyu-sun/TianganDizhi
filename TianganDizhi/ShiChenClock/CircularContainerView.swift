@@ -17,6 +17,7 @@ struct CircularContainerView: View {
         ZStack{
             Circle()
                 .stroke(lineWidth: 4)
+                .foregroundColor(.secondary)
             ShichenView(currentShichen: currentShichen)
                 .padding(padding)
         }

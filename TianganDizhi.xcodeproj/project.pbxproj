@@ -39,8 +39,8 @@
 		46B79C462541F962003C0B7F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
 		46B79CD62542F0AE003C0B7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B79CD82542F0AE003C0B7F /* InfoPlist.strings */; };
 		46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */; };
-		46B7FCE9250620CC008E8D48 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
-		46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
+		46B7FCE9250620CC008E8D48 /* ShichenTimeLineSceduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */; };
+		46B7FCEA250630DE008E8D48 /* ShichenTimeLineSceduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */; };
 		46B816892543F42900B051B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46B816882543F42900B051B2 /* GoogleService-Info.plist */; };
 		46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
 		46E055B224B02FA900AC2AE5 /* CircularContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */; };
@@ -74,7 +74,7 @@
 		9963206E290DE18E000C4A2B /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 9963206D290DE18E000C4A2B /* ChineseAstrologyCalendar */; };
 		99632070290DE195000C4A2B /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 9963206F290DE195000C4A2B /* JingluoShuxue */; };
 		99632072290DE199000C4A2B /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 99632071290DE199000C4A2B /* ChineseTranditionalMusicCore */; };
-		99632073290DE1DE000C4A2B /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
+		99632073290DE1DE000C4A2B /* ShichenTimeLineSceduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */; };
 		99632074290DE1DE000C4A2B /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9C28B25D137D50017440D /* Cells.swift */; };
 		99632075290DE1DE000C4A2B /* JieqiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F7D271077AE007030CC /* JieqiListView.swift */; };
 		99632077290DE1DE000C4A2B /* JieqiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F7F27107968007030CC /* JieqiCell.swift */; };
@@ -96,6 +96,14 @@
 		99632088290DE2FE000C4A2B /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 99632087290DE2FE000C4A2B /* ChineseAstrologyCalendar */; };
 		996320F1290DE885000C4A2B /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 996320F0290DE885000C4A2B /* AppStoreReviewPrompt */; };
 		9963212229107B7B000C4A2B /* ShichenWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		996321422911B2CD000C4A2B /* MinuteTimeLineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321412911B2CD000C4A2B /* MinuteTimeLineScheduler.swift */; };
+		996321452911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */; };
+		996321462911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */; };
+		996321472911B3F0000C4A2B /* MinuteTimeLineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321412911B2CD000C4A2B /* MinuteTimeLineScheduler.swift */; };
+		996321482911B3F1000C4A2B /* MinuteTimeLineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321412911B2CD000C4A2B /* MinuteTimeLineScheduler.swift */; };
+		9963214A2911B8E4000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
+		9963214B2911B8F3000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
+		9963214C2911B8F3000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68492864CADE00B40D3F /* ShichenWatchApp.swift */; };
 		997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C684D2864CADF00B40D3F /* Assets.xcassets */; };
 		997C68512864CADF00B40D3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C68502864CADF00B40D3F /* Preview Assets.xcassets */; };
@@ -116,14 +124,14 @@
 		997C68992868A78400B40D3F /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE225024E85007D4137 /* Styler.swift */; };
 		997C689A2868A7B600B40D3F /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C687A2865F80A00B40D3F /* CornerView.swift */; };
 		997C689D2868A7EA00B40D3F /* ShichenHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE525027DA8007D4137 /* ShichenHStackView.swift */; };
-		997C68A42868A86C00B40D3F /* TimelineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */; };
+		997C68A42868A86C00B40D3F /* ShichenTimeLineSceduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */; };
 		997C68A52868A8E900B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
-		997C68AB2868A8F600B40D3F /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* TimelineProvider.swift */; };
+		997C68AB2868A8F600B40D3F /* ShichenTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */; };
 		997C68AC2868A92400B40D3F /* CircularContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */; };
 		997C68AD2868A93100B40D3F /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
 		997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
-		997C68B32868ABEE00B40D3F /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* TimelineProvider.swift */; };
+		997C68B32868ABEE00B40D3F /* ShichenTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,7 +260,7 @@
 		46B79CD72542F0AE003C0B7F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		46B79CDE2542F0B3003C0B7F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinesePinyin.swift; sourceTree = "<group>"; };
-		46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineScheduler.swift; sourceTree = "<group>"; };
+		46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenTimeLineSceduler.swift; sourceTree = "<group>"; };
 		46B816882543F42900B051B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
 		46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularContainerView.swift; sourceTree = "<group>"; };
@@ -275,6 +283,9 @@
 		9963204A290C32C1000C4A2B /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
 		99632069290DD90A000C4A2B /* TianganDizhi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TianganDizhi.entitlements; sourceTree = "<group>"; };
 		996320ED290DE47A000C4A2B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		996321412911B2CD000C4A2B /* MinuteTimeLineScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteTimeLineScheduler.swift; sourceTree = "<group>"; };
+		996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteTimelineProvider.swift; sourceTree = "<group>"; };
+		996321492911B8E4000C4A2B /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShichenWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997C68492864CADE00B40D3F /* ShichenWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatchApp.swift; sourceTree = "<group>"; };
 		997C684D2864CADF00B40D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -290,7 +301,7 @@
 		997C68842865FAD200B40D3F /* ShichenWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatch.swift; sourceTree = "<group>"; };
 		997C68872865FAD300B40D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		997C689E2868A81500B40D3F /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
-		997C68A02868A83700B40D3F /* TimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
+		997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenTimelineProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -436,7 +447,7 @@
 				46339FEA25028DB5007D4137 /* MainView.swift */,
 				9963204A290C32C1000C4A2B /* DateProvider.swift */,
 				46B79C3F2541F95F003C0B7F /* Environment.swift */,
-				46B7FCE8250620CC008E8D48 /* TimelineScheduler.swift */,
+				996321402911B2A4000C4A2B /* Timeline */,
 				994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */,
 				994B3BBE28FB34C800F9CF67 /* TwelveView.swift */,
 				994190BF285A294700295389 /* Shici */,
@@ -449,6 +460,7 @@
 				46B79C0B2541E4B9003C0B7F /* Weibei TC */,
 				9955E82528FB810B00FA8362 /* Baoli TC */,
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
+				996321492911B8E4000C4A2B /* Shared.xcassets */,
 				46AB55D8242B5EFF00F6604A /* Info.plist */,
 				46B816882543F42900B051B2 /* GoogleService-Info.plist */,
 				46B79CD82542F0AE003C0B7F /* InfoPlist.strings */,
@@ -563,6 +575,24 @@
 			path = "Baoli TC";
 			sourceTree = "<group>";
 		};
+		996321402911B2A4000C4A2B /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */,
+				996321412911B2CD000C4A2B /* MinuteTimeLineScheduler.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		996321432911B374000C4A2B /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */,
+				996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
 		997C68482864CADE00B40D3F /* ShichenWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,7 +646,7 @@
 				994AD1972868FBA800BB5BED /* Widget */,
 				993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */,
 				9955E82428FB782600FA8362 /* Content */,
-				997C68A02868A83700B40D3F /* TimelineProvider.swift */,
+				996321432911B374000C4A2B /* Timeline */,
 				997C689E2868A81500B40D3F /* SimpleEntry.swift */,
 			);
 			path = Shared;
@@ -871,6 +901,7 @@
 			files = (
 				46B79C0E2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */,
 				462A5F6E24FFE5F20032A125 /* Assets.xcassets in Resources */,
+				9963214B2911B8F3000C4A2B /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,6 +915,7 @@
 				46AB55D1242B5EFF00F6604A /* Assets.xcassets in Resources */,
 				9955E82728FB810B00FA8362 /* Baoli.ttc in Resources */,
 				46B816892543F42900B051B2 /* GoogleService-Info.plist in Resources */,
+				9963214A2911B8E4000C4A2B /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,6 +963,7 @@
 			files = (
 				993CFB9A28809F6A0015252E /* WeibeiTC-Bold.otf in Resources */,
 				997C68882865FAD300B40D3F /* Assets.xcassets in Resources */,
+				9963214C2911B8F3000C4A2B /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,19 +978,21 @@
 				994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */,
 				462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */,
 				993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
+				996321472911B3F0000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				46B79C462541F962003C0B7F /* Environment.swift in Sources */,
 				993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */,
 				46339FE425024F2B007D4137 /* Styler.swift in Sources */,
 				46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				46339FDD2500EA60007D4137 /* ShichenView.swift in Sources */,
+				996321452911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */,
 				994AD1922868FA0400BB5BED /* CircularWidgetView.swift in Sources */,
 				46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */,
 				46339FDC2500EA41007D4137 /* CircularContainerView.swift in Sources */,
 				46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */,
 				994AD1952868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
 				997C68782864CB9B00B40D3F /* AllWidgets.swift in Sources */,
-				997C68AB2868A8F600B40D3F /* TimelineProvider.swift in Sources */,
-				46B7FCEA250630DE008E8D48 /* TimelineScheduler.swift in Sources */,
+				997C68AB2868A8F600B40D3F /* ShichenTimelineProvider.swift in Sources */,
+				46B7FCEA250630DE008E8D48 /* ShichenTimeLineSceduler.swift in Sources */,
 				994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -976,12 +1011,13 @@
 				99632043290C2D1E000C4A2B /* TianganDizhiApp.swift in Sources */,
 				46E055B224B02FA900AC2AE5 /* CircularContainerView.swift in Sources */,
 				46F9C28C25D137D50017440D /* Cells.swift in Sources */,
-				46B7FCE9250620CC008E8D48 /* TimelineScheduler.swift in Sources */,
+				46B7FCE9250620CC008E8D48 /* ShichenTimeLineSceduler.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
 				46339FE925028279007D4137 /* KnowledgeView.swift in Sources */,
 				460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */,
 				46339FE325024E85007D4137 /* Styler.swift in Sources */,
 				46EF7F8227108A00007030CC /* JieqiCircularView.swift in Sources */,
+				996321422911B2CD000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				46EF7F7E271077AE007030CC /* JieqiListView.swift in Sources */,
 				46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */,
 				46339FE625027DA8007D4137 /* ShichenHStackView.swift in Sources */,
@@ -1030,7 +1066,7 @@
 				9963207C290DE1DE000C4A2B /* TwelveView.swift in Sources */,
 				9963207D290DE1DE000C4A2B /* JieqiCircularView.swift in Sources */,
 				99632086290DE1DE000C4A2B /* TianganListView.swift in Sources */,
-				99632073290DE1DE000C4A2B /* TimelineScheduler.swift in Sources */,
+				99632073290DE1DE000C4A2B /* ShichenTimeLineSceduler.swift in Sources */,
 				997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */,
 				99632083290DE1DE000C4A2B /* CircularContainerView.swift in Sources */,
 				9963207E290DE1DE000C4A2B /* JieqiContainerView.swift in Sources */,
@@ -1060,20 +1096,22 @@
 			files = (
 				997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */,
 				997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */,
-				997C68A42868A86C00B40D3F /* TimelineScheduler.swift in Sources */,
+				997C68A42868A86C00B40D3F /* ShichenTimeLineSceduler.swift in Sources */,
 				997C68952868A76800B40D3F /* ShiChenEntryView.swift in Sources */,
+				996321482911B3F1000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				997C68AD2868A93100B40D3F /* ShichenView.swift in Sources */,
 				997C68972868A76800B40D3F /* CompactShichenView.swift in Sources */,
 				997C68992868A78400B40D3F /* Styler.swift in Sources */,
 				997C68942868A76800B40D3F /* FullDateTitleView.swift in Sources */,
 				997C689A2868A7B600B40D3F /* CornerView.swift in Sources */,
+				996321462911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */,
 				994AD1932868FA0400BB5BED /* CircularWidgetView.swift in Sources */,
 				997C68AC2868A92400B40D3F /* CircularContainerView.swift in Sources */,
 				997C68982868A77700B40D3F /* Environment.swift in Sources */,
 				997C68852865FAD200B40D3F /* ShichenWatch.swift in Sources */,
 				994AD1962868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
 				997C689D2868A7EA00B40D3F /* ShichenHStackView.swift in Sources */,
-				997C68B32868ABEE00B40D3F /* TimelineProvider.swift in Sources */,
+				997C68B32868ABEE00B40D3F /* ShichenTimelineProvider.swift in Sources */,
 				997C68962868A76800B40D3F /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				994AD1902868F96800BB5BED /* InlineWidgetView.swift in Sources */,
 			);
@@ -1677,7 +1715,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1708,7 +1746,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1836,7 +1874,7 @@
 			repositoryURL = "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git";
 			requirement = {
 				kind = revision;
-				revision = 6d61bd57a7cf20c5cc4668b1eaed7487246d32ca;
+				revision = 135b6eceb96518ccbaf0a7e69d8020c007f5f72d;
 			};
 		};
 		996320EF290DE885000C4A2B /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */ = {

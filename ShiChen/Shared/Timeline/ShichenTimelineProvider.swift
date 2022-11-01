@@ -1,7 +1,7 @@
 import WidgetKit
 import ChineseAstrologyCalendar
 
-struct TimelineProvider: IntentTimelineProvider {
+struct ShichenTimelineProvider: IntentTimelineProvider {
     
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date.now, configuration: ConfigurationIntent())
@@ -27,7 +27,7 @@ struct TimelineProvider: IntentTimelineProvider {
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> ()) {
         var entries: [SimpleEntry] = []
         
-        for date in TimeLineSceduler.buildTimeLine() {
+        for date in ShichenTimeLineSceduler.buildTimeLine() {
             let entry = SimpleEntry(date: date, configuration: configuration)
             entries.append(entry)
         }
