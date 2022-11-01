@@ -13,7 +13,12 @@ extension String {
 }
 
 private struct TitleFontEnvironmentKey: EnvironmentKey {
+#if os(watchOS)
+    static let defaultValue: Font = .defaultTitleWithSize(size: 28)
+#else
     static let defaultValue: Font = .defaultTitleWithSize(size: 40)
+#endif
+
 }
 
 private struct LargeTitleFontEnvironmentKey: EnvironmentKey {
@@ -41,7 +46,7 @@ private struct iPadEnvironmentKey: EnvironmentKey {
 #if os(iOS)
         UIDevice.current.userInterfaceIdiom == .pad
 #else
-    false
+        false
 #endif
     }
 }
@@ -51,7 +56,7 @@ private struct ShouldScaleFontEnvironmentKey: EnvironmentKey {
 #if os(iOS)
         UIScreen.main.bounds.width > 744
 #else
-    false
+        false
 #endif
     }
     

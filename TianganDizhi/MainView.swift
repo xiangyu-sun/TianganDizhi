@@ -20,6 +20,22 @@ struct MainView: View {
     var body: some View {
         
         VStack() {
+            let shichen = try! GanzhiDateConverter.shichen(updater.currentDate)
+
+            #if os(watchOS)
+            HStack() {
+                Text((try? GanzhiDateConverter.zodiac(updater.currentDate).rawValue) ?? "")
+                Text(updater.currentDate.chineseYearMonthDate)
+                Spacer()
+            }
+            
+            CircularContainerView(currentShichen: shichen, padding: -18)
+                    .fixedSize(horizontal: false, vertical: true)
+            
+            Spacer()
+            
+            #else
+            
             HStack() {
                 Text((try? GanzhiDateConverter.zodiac(updater.currentDate).rawValue) ?? "")
                     .font(titleFont)
@@ -27,14 +43,11 @@ struct MainView: View {
                     .font(titleFont)
                 Spacer()
             }
-            
-            let shichen = try! GanzhiDateConverter.shichen(updater.currentDate)
-
+           
             Text(shichen.aliasName)
                 .font(largeTitleFont)
             Text(shichen.organReference)
                 .font(bodyFont)
-            
             
             if self.shouldScaleFont {
                 CircularContainerView(currentShichen: shichen, padding: 0)
@@ -43,6 +56,8 @@ struct MainView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
             Spacer()
+            
+            #endif
         }        
         
     }

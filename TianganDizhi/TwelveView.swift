@@ -20,15 +20,10 @@ struct TwelveView: View {
     ]
     
     var body: some View {
-        
         ScrollView {
-            GeometryReader { gp in
-                LazyVGrid(columns: columns, alignment: .leading, spacing: 0) {
-                    ForEach(data, id: \.self) { item in
-                        DizhiGridView(dizhi: item)
-                            .frame(width: gp.size.width / 3)
-                            .border(Color.primary)
-                    }
+            LazyVGrid(columns: columns, alignment: .center, spacing: 0) {
+                ForEach(data, id: \.self) { item in
+                    DizhiGridView(dizhi: item)
                 }
             }
             .padding()
