@@ -11,7 +11,7 @@ import ChineseAstrologyCalendar
 import WidgetKit
 
 struct ShiChenEntryView : View {
-    var entry: Provider.Entry
+    var entry: TimelineProvider.Entry
     @Environment(\.widgetFamily) var family
     @Environment(\.largeTitleFont) var largeTitleFont
     @Environment(\.bodyFont) var bodyFont
