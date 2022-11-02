@@ -286,6 +286,7 @@
 		996321412911B2CD000C4A2B /* MinuteTimeLineScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteTimeLineScheduler.swift; sourceTree = "<group>"; };
 		996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteTimelineProvider.swift; sourceTree = "<group>"; };
 		996321492911B8E4000C4A2B /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
+		9963214E2911E0D4000C4A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShichenWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997C68492864CADE00B40D3F /* ShichenWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatchApp.swift; sourceTree = "<group>"; };
 		997C684D2864CADF00B40D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -597,6 +598,7 @@
 			isa = PBXGroup;
 			children = (
 				997C68492864CADE00B40D3F /* ShichenWatchApp.swift */,
+				9963214E2911E0D4000C4A2B /* Info.plist */,
 				997C684D2864CADF00B40D3F /* Assets.xcassets */,
 				997C684F2864CADF00B40D3F /* Preview Content */,
 			);
@@ -1559,6 +1561,7 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShichenWatch Watch App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ShichenWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.uriphium.TianganDizhi;
@@ -1591,6 +1594,7 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShichenWatch Watch App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ShichenWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.uriphium.TianganDizhi;
