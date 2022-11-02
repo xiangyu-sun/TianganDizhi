@@ -3,6 +3,16 @@
     {
       "filename" : "background.jpeg",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "dark.jpeg",
+      "idiom" : "universal"
     }
   ],
   "info" : {
