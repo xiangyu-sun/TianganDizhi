@@ -93,7 +93,7 @@
 		99632086290DE1DE000C4A2B /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
 		99632088290DE2FE000C4A2B /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 99632087290DE2FE000C4A2B /* ChineseAstrologyCalendar */; };
 		996320F1290DE885000C4A2B /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 996320F0290DE885000C4A2B /* AppStoreReviewPrompt */; };
-		9963212229107B7B000C4A2B /* ShichenWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9963212229107B7B000C4A2B /* ShichenWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		996321422911B2CD000C4A2B /* MinuteTimeLineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321412911B2CD000C4A2B /* MinuteTimeLineScheduler.swift */; };
 		996321452911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */; };
 		996321462911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */; };
@@ -1136,6 +1136,7 @@
 		};
 		9963212429107B7B000C4A2B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 997C68432864CADE00B40D3F /* ShichenWatch Watch App */;
 			targetProxy = 9963212329107B7B000C4A2B /* PBXContainerItemProxy */;
 		};
@@ -1385,6 +1386,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -1425,6 +1427,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -1850,7 +1853,7 @@
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
+				minimumVersion = 8.9.0;
 			};
 		};
 		46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */ = {
