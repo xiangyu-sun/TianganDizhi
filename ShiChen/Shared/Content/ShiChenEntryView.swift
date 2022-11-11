@@ -77,6 +77,7 @@ struct ShiChenEntryView : View {
                     .resizable(resizingMode: .tile)
             )
         case .systemExtraLarge:
+          if iPad {
             HStack() {
                 VStack() {
                     FullDateTitleView(date: entry.date)
@@ -94,6 +95,21 @@ struct ShiChenEntryView : View {
                 Image("background")
                     .resizable(resizingMode: .tile)
             )
+
+          } else {
+            VStack() {
+              FullDateTitleView(date: entry.date)
+                .font(title3Font)
+                .padding(.top, 8)
+              CircularContainerView(currentShichen: shichen, padding: -30)
+                .padding(.bottom, 8)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+              Image("background")
+                .resizable(resizingMode: .tile)
+            )
+          }
         default:
             CompactShichenView(shichen: shichen, date: entry.date)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

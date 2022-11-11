@@ -9,8 +9,8 @@ struct MinuteTimeLineScheduler {
     
         timeline.append(currentDate)
         
-        for minuteOffset in 0 ... 60 * 12 {
-            let entryDate = Calendar.current.date(byAdding: .minute, value: minuteOffset, to: currentDate)!
+        for minuteOffset in 0 ... 6 * 12 {
+            let entryDate = Calendar.current.date(byAdding: .minute, value: minuteOffset * 5 , to: currentDate)!
             timeline.append(entryDate)
         }
         return timeline
