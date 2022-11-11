@@ -30,11 +30,9 @@
 		46AB55D1242B5EFF00F6604A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AB55D0242B5EFF00F6604A /* Assets.xcassets */; };
 		46AB55D4242B5EFF00F6604A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AB55D3242B5EFF00F6604A /* Preview Assets.xcassets */; };
 		46AB55E2242B5EFF00F6604A /* TianganDizhiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55E1242B5EFF00F6604A /* TianganDizhiTests.swift */; };
-		46AB55ED242B5EFF00F6604A /* TianganDizhiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55EC242B5EFF00F6604A /* TianganDizhiUITests.swift */; };
 		46AB55FD242B5F7100F6604A /* DizhiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55FC242B5F7100F6604A /* DizhiListView.swift */; };
 		46B79C0D2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
 		46B79C0E2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
-		46B79C342541EB87003C0B7F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C332541EB87003C0B7F /* SnapshotHelper.swift */; };
 		46B79C402541F95F003C0B7F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
 		46B79C462541F962003C0B7F /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
 		46B79CD62542F0AE003C0B7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46B79CD82542F0AE003C0B7F /* InfoPlist.strings */; };
@@ -132,6 +130,7 @@
 		997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
 		997C68B32868ABEE00B40D3F /* ShichenTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */; };
+		99FD3EEB291E9DC00048DCEB /* ScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,12 +247,10 @@
 		46AB55E1242B5EFF00F6604A /* TianganDizhiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganDizhiTests.swift; sourceTree = "<group>"; };
 		46AB55E3242B5EFF00F6604A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46AB55E8242B5EFF00F6604A /* TianganDizhiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TianganDizhiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		46AB55EC242B5EFF00F6604A /* TianganDizhiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganDizhiUITests.swift; sourceTree = "<group>"; };
 		46AB55EE242B5EFF00F6604A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46AB55FC242B5F7100F6604A /* DizhiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizhiListView.swift; sourceTree = "<group>"; };
 		46AB5606242B7F6C00F6604A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WeibeiTC-Bold.otf"; sourceTree = "<group>"; };
-		46B79C332541EB87003C0B7F /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		46B79C3F2541F95F003C0B7F /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		46B79CB22542F017003C0B7F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		46B79CB92542F019003C0B7F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -303,6 +300,7 @@
 		997C68872865FAD300B40D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		997C689E2868A81500B40D3F /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
 		997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenTimelineProvider.swift; sourceTree = "<group>"; };
+		99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,9 +488,8 @@
 		46AB55EB242B5EFF00F6604A /* TianganDizhiUITests */ = {
 			isa = PBXGroup;
 			children = (
-				46B79C332541EB87003C0B7F /* SnapshotHelper.swift */,
-				46AB55EC242B5EFF00F6604A /* TianganDizhiUITests.swift */,
 				46AB55EE242B5EFF00F6604A /* Info.plist */,
+				99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */,
 			);
 			path = TianganDizhiUITests;
 			sourceTree = "<group>";
@@ -1042,8 +1039,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46AB55ED242B5EFF00F6604A /* TianganDizhiUITests.swift in Sources */,
-				46B79C342541EB87003C0B7F /* SnapshotHelper.swift in Sources */,
+				99FD3EEB291E9DC00048DCEB /* ScreenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
