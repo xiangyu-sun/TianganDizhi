@@ -585,13 +585,13 @@
 			path = Timeline;
 			sourceTree = "<group>";
 		};
-		996321432911B374000C4A2B /* Timeline */ = {
+		996321432911B374000C4A2B /* IntentTimelineProvider */ = {
 			isa = PBXGroup;
 			children = (
 				997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */,
 				996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */,
 			);
-			path = Timeline;
+			path = IntentTimelineProvider;
 			sourceTree = "<group>";
 		};
 		997C68482864CADE00B40D3F /* ShichenWatch Watch App */ = {
@@ -648,7 +648,7 @@
 				994AD1972868FBA800BB5BED /* Widget */,
 				993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */,
 				9955E82428FB782600FA8362 /* Content */,
-				996321432911B374000C4A2B /* Timeline */,
+				996321432911B374000C4A2B /* IntentTimelineProvider */,
 				997C689E2868A81500B40D3F /* SimpleEntry.swift */,
 			);
 			path = Shared;
