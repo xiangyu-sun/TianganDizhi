@@ -23,7 +23,7 @@ struct HourlyWidget: Widget {
     let kind: String = "ShiChenByMinute"
     
     var supportedFamilies: [WidgetFamily] {
-        return [.accessoryCircular]
+        return [.accessoryCircular, .accessoryCorner]
     }
     
     var body: some WidgetConfiguration {
@@ -77,6 +77,9 @@ struct ShiChen_Previews: PreviewProvider {
             ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
                 .previewDisplayName("ShiChenEntryView Retangular")
+          ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+              .previewContext(WidgetPreviewContext(family: .accessoryCorner))
+              .previewDisplayName("ShiChenEntryView accessoryCorner")
         }
     }
 }
