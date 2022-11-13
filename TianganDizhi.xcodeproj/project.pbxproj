@@ -131,6 +131,7 @@
 		997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
 		997C68B32868ABEE00B40D3F /* ShichenTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */; };
 		99FD3EEB291E9DC00048DCEB /* ScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */; };
+		99FD3F4129214F7B0048DCEB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 99FD3F4029214F7B0048DCEB /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -331,6 +332,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FD3F4129214F7B0048DCEB /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +719,9 @@
 				46AB55DF242B5EFF00F6604A /* PBXTargetDependency */,
 			);
 			name = TianganDizhiTests;
+			packageProductDependencies = (
+				99FD3F4029214F7B0048DCEB /* FirebaseAnalytics */,
+			);
 			productName = TianganDizhiTests;
 			productReference = 46AB55DD242B5EFF00F6604A /* TianganDizhiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1944,6 +1949,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 996320EF290DE885000C4A2B /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */;
 			productName = AppStoreReviewPrompt;
+		};
+		99FD3F4029214F7B0048DCEB /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 460EE4D9270211EA0006A7D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

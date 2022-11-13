@@ -20,7 +20,7 @@ class TianganDizhiTests: XCTestCase {
     }
     
     func testTimeline() {
-        let timeline = TimeLineSceduler.buildTimeLine()
+        let timeline = ShichenTimeLineSceduler.buildTimeLine()
         XCTAssertEqual(timeline.count, 6)
         let comp:Set<Calendar.Component> = [.hour, .minute, .second, .nanosecond]
         
