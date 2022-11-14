@@ -26,14 +26,10 @@ struct MainView: View {
             HStack() {
                 Text((try? GanzhiDateConverter.zodiac(updater.currentDate).rawValue) ?? "")
                 Text(updater.currentDate.chineseYearMonthDate)
-                Spacer()
             }
             
-            CircularContainerView(currentShichen: shichen, padding: -18)
-                    .fixedSize(horizontal: false, vertical: true)
-            
-            Spacer()
-            
+            CircularContainerView(currentShichen: shichen, padding: -24)
+                    
             #else
             
             HStack() {
