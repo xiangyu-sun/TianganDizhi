@@ -39,7 +39,11 @@ struct RetangularWidgetView: View {
 @available(iOSApplicationExtension 16.0, *)
 struct RetangularWidgetView_Previews: PreviewProvider {
     static var previews: some View {
+        #if os(iOS)
         RetangularWidgetView(date: .now)
             .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+        #endif
+        RetangularWidgetView(date: .now)
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

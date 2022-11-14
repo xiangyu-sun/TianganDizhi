@@ -124,6 +124,7 @@ struct ShiChenEntryView : View {
 
 struct ShiChenEntryView_Previews: PreviewProvider {
     static var previews: some View {
+#if os(iOS)
         if #available(iOSApplicationExtension 16.0, *) {
             Group {
                 ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
@@ -140,7 +141,6 @@ struct ShiChenEntryView_Previews: PreviewProvider {
                 
             }
         }
-#if os(iOS)
         Group {
             ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))

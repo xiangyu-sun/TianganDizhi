@@ -42,7 +42,12 @@ struct CircularWidgetView: View {
 @available(iOSApplicationExtension 16.0, *)
 struct CircularWidgetView_Previews: PreviewProvider {
     static var previews: some View {
+#if os(iOS)
         CircularWidgetView(date: .now)
             .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+#endif
+        CircularWidgetView(date: .now)
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
+    
     }
 }

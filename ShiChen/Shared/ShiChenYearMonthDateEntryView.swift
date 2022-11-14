@@ -53,20 +53,21 @@ struct ShiChenYearMonthDateEntryView_Previews: PreviewProvider {
         Group {
             ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
 #if os(watchOS)
-            .previewContext(WidgetPreviewContext(family: .accessoryInline))
+                .previewContext(WidgetPreviewContext(family: .accessoryInline))
 #else
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
 #endif
                 .previewDisplayName("Small")
             
             ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
 #if os(watchOS)
-            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
 #else
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
 #endif
                 .previewDisplayName("Medium")
         }
+#if os(iOS)
         if #available(iOSApplicationExtension 16.0, *) {
             Group {
                 ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
@@ -83,6 +84,7 @@ struct ShiChenYearMonthDateEntryView_Previews: PreviewProvider {
                 
             }
         }
+#endif
     }
 }
 

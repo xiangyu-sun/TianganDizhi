@@ -32,7 +32,14 @@ struct InlineWidgetView: View {
 @available(iOSApplicationExtension 16.0, *)
 struct InlineWidgetView_Previews: PreviewProvider {
     static var previews: some View {
+#if os(macOS)
+        InlineWidgetView(date: .now)
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+#else
         InlineWidgetView(date: .now)
             .previewContext(WidgetPreviewContext(family: .accessoryInline))
+#endif
+        
+        
     }
 }
