@@ -77,7 +77,6 @@
 		99632075290DE1DE000C4A2B /* JieqiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F7D271077AE007030CC /* JieqiListView.swift */; };
 		99632077290DE1DE000C4A2B /* JieqiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F7F27107968007030CC /* JieqiCell.swift */; };
 		99632078290DE1DE000C4A2B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FEA25028DB5007D4137 /* MainView.swift */; };
-		99632079290DE1DE000C4A2B /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
 		9963207A290DE1DE000C4A2B /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
 		9963207B290DE1DE000C4A2B /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963204A290C32C1000C4A2B /* DateProvider.swift */; };
 		9963207C290DE1DE000C4A2B /* TwelveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994B3BBE28FB34C800F9CF67 /* TwelveView.swift */; };
@@ -157,6 +156,8 @@
 		99FD3F6F2922988B0048DCEB /* MinuteTimeLineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321412911B2CD000C4A2B /* MinuteTimeLineScheduler.swift */; };
 		99FD3F702922989F0048DCEB /* ShichenTimeLineSceduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */; };
 		99FD3F722922994D0048DCEB /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
+		99FD3F752927EBD90048DCEB /* WuxingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3F742927EBD90048DCEB /* WuxingView.swift */; };
+		99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3F742927EBD90048DCEB /* WuxingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -340,6 +341,7 @@
 		99FD3F4F292296180048DCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99FD3F50292296180048DCEB /* ShichenMacWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShichenMacWidget.entitlements; sourceTree = "<group>"; };
 		99FD3F68292297030048DCEB /* ShichenMacWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShichenMacWidget.swift; sourceTree = "<group>"; };
+		99FD3F742927EBD90048DCEB /* WuxingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuxingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,6 +439,7 @@
 				46EF7F7F27107968007030CC /* JieqiCell.swift */,
 				46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */,
 				46F9C28B25D137D50017440D /* Cells.swift */,
+				99FD3F742927EBD90048DCEB /* WuxingView.swift */,
 			);
 			path = Knowledge;
 			sourceTree = "<group>";
@@ -497,16 +500,13 @@
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
 				46339FEA25028DB5007D4137 /* MainView.swift */,
 				9963204A290C32C1000C4A2B /* DateProvider.swift */,
-				46B79C3F2541F95F003C0B7F /* Environment.swift */,
-				996321402911B2A4000C4A2B /* Timeline */,
 				994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */,
 				994B3BBE28FB34C800F9CF67 /* TwelveView.swift */,
 				994190BF285A294700295389 /* Shici */,
 				460BA9A826F24C400025CA39 /* Knowledge */,
-				994190BE285A28E900295389 /* ShiChenClock */,
+				99FD3F732927EAB70048DCEB /* AppWidgetShared */,
 				46EF7F8127108A00007030CC /* JieqiCircularView.swift */,
 				46EF7F8327108D73007030CC /* JieqiContainerView.swift */,
-				46339FE525027DA8007D4137 /* ShichenHStackView.swift */,
 				994190C0285A296A00295389 /* Utilities */,
 				46B79C0B2541E4B9003C0B7F /* Weibei TC */,
 				9955E82528FB810B00FA8362 /* Baoli TC */,
@@ -712,6 +712,17 @@
 				99FD3F50292296180048DCEB /* ShichenMacWidget.entitlements */,
 			);
 			path = ShichenMacWidget;
+			sourceTree = "<group>";
+		};
+		99FD3F732927EAB70048DCEB /* AppWidgetShared */ = {
+			isa = PBXGroup;
+			children = (
+				46B79C3F2541F95F003C0B7F /* Environment.swift */,
+				996321402911B2A4000C4A2B /* Timeline */,
+				46339FE525027DA8007D4137 /* ShichenHStackView.swift */,
+				994190BE285A28E900295389 /* ShiChenClock */,
+			);
+			path = AppWidgetShared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1113,6 +1124,7 @@
 				46B7FCE9250620CC008E8D48 /* ShichenTimeLineSceduler.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
 				46339FE925028279007D4137 /* KnowledgeView.swift in Sources */,
+				99FD3F752927EBD90048DCEB /* WuxingView.swift in Sources */,
 				460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */,
 				46339FE325024E85007D4137 /* Styler.swift in Sources */,
 				46EF7F8227108A00007030CC /* JieqiCircularView.swift in Sources */,
@@ -1155,8 +1167,8 @@
 				99632081290DE1DE000C4A2B /* DizhiGridView.swift in Sources */,
 				9963207A290DE1DE000C4A2B /* ShiciView.swift in Sources */,
 				99632075290DE1DE000C4A2B /* JieqiListView.swift in Sources */,
+				99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */,
 				9963207F290DE1DE000C4A2B /* Styler.swift in Sources */,
-				99632079290DE1DE000C4A2B /* Environment.swift in Sources */,
 				99632085290DE1DE000C4A2B /* ChinesePinyin.swift in Sources */,
 				99632074290DE1DE000C4A2B /* Cells.swift in Sources */,
 				99632080290DE1DE000C4A2B /* KnowledgeView.swift in Sources */,
@@ -2081,8 +2093,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git";
 			requirement = {
-				kind = revision;
-				revision = 135b6eceb96518ccbaf0a7e69d8020c007f5f72d;
+				branch = master;
+				kind = branch;
 			};
 		};
 		996320EF290DE885000C4A2B /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */ = {

@@ -41,6 +41,11 @@ struct KnowledgeView: View {
                         Text(DizhiListView.DisplayMode.lvlv.title)
                     }
                 }
+                Section(header: Text("五行")) {
+                    NavigationLink(destination: WuxingView()) {
+                        Text("五行")
+                    }
+                }
                 Section(header: Text("詩詞歌賦頌")) {
                     NavigationLink(destination: ShiciView()) {
                         Text("十二時辰頌")
