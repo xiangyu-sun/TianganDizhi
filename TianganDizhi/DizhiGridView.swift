@@ -6,42 +6,45 @@
 //  Copyright © 2022 孙翔宇. All rights reserved.
 //
 
-import SwiftUI
 import ChineseAstrologyCalendar
 import ChineseTranditionalMusicCore
 import JingluoShuxue
+import SwiftUI
+
+// MARK: - DizhiGridView
 
 struct DizhiGridView: View {
-    @Environment(\.bodyFont) var bodyFont
-    @Environment(\.titleFont) var titleFont
-    let dizhi: Dizhi
-    
-    var body: some View {
-        VStack() {
-            HStack() {
-                Text(dizhi.chineseCharactor)
-                    .font(titleFont)
+  @Environment(\.bodyFont) var bodyFont
+  @Environment(\.titleFont) var titleFont
+  let dizhi: Dizhi
 
-            }
-         
-            HStack() {
-                Text(气血循环流注[dizhi.rawValue - 1].rawValue)
-            }
-            .font(bodyFont)
-            HStack() {
-                let zodiac = Zodiac(dizhi)
-                Text("\(zodiac.rawValue)")
-                    .font(bodyFont)
-            
-                Text(律呂.allCases[dizhi.rawValue - 1].rawValue)
-                    .font(bodyFont)
-            }
-        }
+  var body: some View {
+    VStack {
+      HStack {
+        Text(dizhi.chineseCharactor)
+          .font(titleFont)
+      }
+
+      HStack {
+        Text(气血循环流注[dizhi.rawValue - 1].rawValue)
+      }
+      .font(bodyFont)
+      HStack {
+        let zodiac = Zodiac(dizhi)
+        Text("\(zodiac.rawValue)")
+          .font(bodyFont)
+
+        Text(律呂.allCases[dizhi.rawValue - 1].rawValue)
+          .font(bodyFont)
+      }
     }
+  }
 }
 
+// MARK: - DizhiGridView_Previews
+
 struct DizhiGridView_Previews: PreviewProvider {
-    static var previews: some View {
-        DizhiGridView(dizhi: .zi)
-    }
+  static var previews: some View {
+    DizhiGridView(dizhi: .zi)
+  }
 }

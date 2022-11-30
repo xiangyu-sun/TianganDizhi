@@ -8,13 +8,12 @@
 
 import Foundation
 
-
 extension String {
-    func transformToPinyin ()->String {
-        let stringref = NSMutableString (string: self) as CFMutableString
-        CFStringTransform (stringref, nil, kCFStringTransformToLatin, false);
-        let pinyin=stringref as String;
-        return pinyin
-    }
-    
+  func transformToPinyin() -> String {
+    let stringref = NSMutableString(string: self) as CFMutableString
+    CFStringTransform(stringref, nil, kCFStringTransformToLatin, false);
+    let pinyin = stringref as String;
+    return pinyin
+  }
+
 }

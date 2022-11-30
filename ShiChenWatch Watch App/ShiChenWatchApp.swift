@@ -10,11 +10,11 @@ import SwiftUI
 
 @main
 struct ShichenWatch_Watch_AppApp: App {
-    var body: some Scene {
-        WindowGroup {
-          NavigationStack() {
-            ContentView()
-          }
-        }
+  var body: some Scene {
+    WindowGroup {
+      NavigationStack {
+        ContentView()
+      }
     }
+  }
 }

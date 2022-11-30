@@ -11,42 +11,45 @@ import WidgetKit
 
 import ChineseAstrologyCalendar
 
+// MARK: - RetangularWidgetView
+
 @available(iOSApplicationExtension 16.0, *)
 struct RetangularWidgetView: View {
-    @Environment(\.bodyFont) var bodyFont
-    @Environment(\.titleFont) var titleFont
-    @Environment(\.title3Font) var title3Font
-    
-    @State var date: Date
-    
-    var body: some View {
-        let shichen = try! GanzhiDateConverter.shichen(date)
-        
-        HStack() {
-            Text(date.displayStringOfChineseYearMonthDateWithZodiac)
-                .font(.custom(.weibeiBold, size: 20, relativeTo: .body))
-            Text(shichen.displayHourText)
-#if os(watchOS)
-                .font(titleFont)
-#else
-                .font(title3Font)
-#endif
-        }
-        .widgetAccentable()
+  @Environment(\.bodyFont) var bodyFont
+  @Environment(\.titleFont) var titleFont
+  @Environment(\.title3Font) var title3Font
+
+  @State var date: Date
+
+  var body: some View {
+    let shichen = try! GanzhiDateConverter.shichen(date)
+
+    HStack {
+      Text(date.displayStringOfChineseYearMonthDateWithZodiac)
+        .font(.custom(.weibeiBold, size: 20, relativeTo: .body))
+      Text(shichen.displayHourText)
+      #if os(watchOS)
+        .font(titleFont)
+      #else
+        .font(title3Font)
+      #endif
     }
+    .widgetAccentable()
+  }
 }
+
+// MARK: - RetangularWidgetView_Previews
 
 @available(iOSApplicationExtension 16.0, *)
 struct RetangularWidgetView_Previews: PreviewProvider {
-    static var previews: some View {
-#if os(macOS)
-        RetangularWidgetView(date: .now)
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-#else
-        
-        RetangularWidgetView(date: .now)
-            .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-#endif
-        
-    }
+  static var previews: some View {
+    #if os(macOS)
+    RetangularWidgetView(date: .now)
+      .previewContext(WidgetPreviewContext(family: .systemSmall))
+    #else
+
+    RetangularWidgetView(date: .now)
+      .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+    #endif
+  }
 }

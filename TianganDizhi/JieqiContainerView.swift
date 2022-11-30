@@ -8,23 +8,26 @@
 
 import SwiftUI
 
+// MARK: - JieqiContainerView
+
 struct JieqiContainerView: View {
 
-    let padding: CGFloat
+  let padding: CGFloat
 
-    var body: some View {
-        ZStack{
-            JieqiCircularView(currentJieqi: nil)
-                .scaledToFill()
-        }
-        .padding(padding)
-        .scaledToFit()
-        
+  var body: some View {
+    ZStack {
+      JieqiCircularView(currentJieqi: nil)
+        .scaledToFill()
     }
+    .padding(padding)
+    .scaledToFit()
+  }
 }
 
+// MARK: - JieqiContainerView_Previews
+
 struct JieqiContainerView_Previews: PreviewProvider {
-    static var previews: some View {
-        JieqiContainerView(padding: 0)
-    }
+  static var previews: some View {
+    JieqiContainerView(padding: 0)
+  }
 }

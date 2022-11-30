@@ -10,12 +10,12 @@ import SwiftUI
 
 @main
 struct AllWidgets: WidgetBundle {
-    @WidgetBundleBuilder
-    var body: some Widget {
-        ShiChen()
-        Nongli()
-        if #available(iOSApplicationExtension 16.0, *) {
-            HourlyWidget()
-        }
+  @WidgetBundleBuilder
+  var body: some Widget {
+    ShiChen()
+    Nongli()
+    if #available(iOSApplicationExtension 16.0, *) {
+      HourlyWidget()
     }
+  }
 }

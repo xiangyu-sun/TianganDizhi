@@ -1,4 +1,4 @@
-  //
+//
 //  ShichenWatch.swift
 //  ShichenWatch
 //
@@ -6,80 +6,86 @@
 //  Copyright © 2022 孙翔宇. All rights reserved.
 //
 
-import WidgetKit
-import SwiftUI
 import Intents
+import SwiftUI
+import WidgetKit
+
+// MARK: - AllWidgets
 
 @main
 struct AllWidgets: WidgetBundle {
-    @WidgetBundleBuilder
-    var body: some Widget {
-        ShiChen()
-        HourlyWidget()
-    }
+  @WidgetBundleBuilder
+  var body: some Widget {
+    ShiChen()
+    HourlyWidget()
+  }
 }
+
+// MARK: - HourlyWidget
 
 struct HourlyWidget: Widget {
-    let kind: String = "ShiChenByMinute"
-    
-    var supportedFamilies: [WidgetFamily] {
-        return [.accessoryCircular, .accessoryCorner]
+  let kind = "ShiChenByMinute"
+
+  var supportedFamilies: [WidgetFamily] {
+    [.accessoryCircular, .accessoryCorner]
+  }
+
+  var body: some WidgetConfiguration {
+    IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: MinuteTimelineProvider()) { entry in
+      ShiChenEntryView(entry: entry)
     }
-    
-    var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: MinuteTimelineProvider()) { entry in
-            ShiChenEntryView(entry: entry)
-        }
-        .configurationDisplayName("十二时辰")
-        .description("十二地支为名的十二时辰組件")
-        .supportedFamilies([.accessoryCircular, .accessoryCorner])
-    }
+    .configurationDisplayName("十二时辰")
+    .description("十二地支为名的十二时辰組件")
+    .supportedFamilies([.accessoryCircular, .accessoryCorner])
+  }
 }
+
+// MARK: - ShiChen
 
 struct ShiChen: Widget {
-    let kind: String = "ShiChen"
-    
-    var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
-            ShiChenEntryView(entry: entry)
-        }
-        .configurationDisplayName("天干地支年月日，以及時辰")
-        .description("十二地支为名的十二时辰，紀年，紀月")
-        .supportedFamilies([.accessoryInline, .accessoryRectangular])
-        
+  let kind = "ShiChen"
+
+  var body: some WidgetConfiguration {
+    IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
+      ShiChenEntryView(entry: entry)
     }
+    .configurationDisplayName("天干地支年月日，以及時辰")
+    .description("十二地支为名的十二时辰，紀年，紀月")
+    .supportedFamilies([.accessoryInline, .accessoryRectangular])
+  }
 }
 
+// MARK: - ShiChen_Previews
 
 struct ShiChen_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryInline))
-                .previewDisplayName("YearMonth Inline")
-            
-            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-                .previewDisplayName("YearMonth Circular")
-            
-            ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-                .previewDisplayName("YearMonth Retangular")
-            
-            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryInline))
-                .previewDisplayName("ShiChenEntryView Inline")
-            
-            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-                .previewDisplayName("ShiChenEntryView Circular")
-            
-            ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-                .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-                .previewDisplayName("ShiChenEntryView Retangular")
-          ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-              .previewContext(WidgetPreviewContext(family: .accessoryCorner))
-              .previewDisplayName("ShiChenEntryView accessoryCorner")
-        }
+  static var previews: some View {
+    Group {
+      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryInline))
+        .previewDisplayName("YearMonth Inline")
+
+      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+        .previewDisplayName("YearMonth Circular")
+
+      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+        .previewDisplayName("YearMonth Retangular")
+
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryInline))
+        .previewDisplayName("ShiChenEntryView Inline")
+
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+        .previewDisplayName("ShiChenEntryView Circular")
+
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+        .previewDisplayName("ShiChenEntryView Retangular")
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryCorner))
+        .previewDisplayName("ShiChenEntryView accessoryCorner")
     }
+  }
 }

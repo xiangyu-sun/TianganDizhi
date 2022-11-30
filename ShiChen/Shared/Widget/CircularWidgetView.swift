@@ -6,49 +6,54 @@
 //  Copyright © 2022 孙翔宇. All rights reserved.
 //
 
-import SwiftUI
 import ChineseAstrologyCalendar
+import SwiftUI
 import WidgetKit
+
+// MARK: - CircularWidgetView
 
 @available(iOSApplicationExtension 16.0, *)
 struct CircularWidgetView: View {
-    
-    @Environment(\.bodyFont) var bodyFont
-    
-    @State var date: Date
-    
-    var body: some View {
-        let shichen = try! GanzhiDateConverter.shichen(date)
-      
-      let start = self.date.timeIntervalSince1970 -  shichen.startDate!.timeIntervalSince1970
-      
-      let base = shichen.endDate!.timeIntervalSince1970 -  shichen.startDate!.timeIntervalSince1970
-   
-      ProgressView(value: start/base,
-                     label: {
-            Text(shichen.displayHourText)
-                .widgetAccentable()
-        }, currentValueLabel: {
-          Text(shichen.displayHourText)
-              .widgetAccentable()
-#if os(iOS)
-              .font(bodyFont)
-#endif
-        })
-        .progressViewStyle(.circular)
-    }
+
+  @Environment(\.bodyFont) var bodyFont
+
+  @State var date: Date
+
+  var body: some View {
+    let shichen = try! GanzhiDateConverter.shichen(date)
+
+    let start = date.timeIntervalSince1970 - shichen.startDate!.timeIntervalSince1970
+
+    let base = shichen.endDate!.timeIntervalSince1970 - shichen.startDate!.timeIntervalSince1970
+
+    ProgressView(
+      value: start / base,
+      label: {
+        Text(shichen.displayHourText)
+          .widgetAccentable()
+      },
+      currentValueLabel: {
+        Text(shichen.displayHourText)
+          .widgetAccentable()
+        #if os(iOS)
+          .font(bodyFont)
+        #endif
+      })
+      .progressViewStyle(.circular)
+  }
 }
+
+// MARK: - CircularWidgetView_Previews
 
 @available(iOSApplicationExtension 16.0, *)
 struct CircularWidgetView_Previews: PreviewProvider {
-    static var previews: some View {
-#if os(macOS)
-      CircularWidgetView(date: .now)
-        .previewContext(WidgetPreviewContext(family: .systemLarge))
-#else
-      CircularWidgetView(date: .now)
-          .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-#endif
-    
-    }
+  static var previews: some View {
+    #if os(macOS)
+    CircularWidgetView(date: .now)
+      .previewContext(WidgetPreviewContext(family: .systemLarge))
+    #else
+    CircularWidgetView(date: .now)
+      .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+    #endif
+  }
 }

@@ -11,11 +11,14 @@ import SwiftUI
 
 final class DateProvider: ObservableObject {
 
-    @Published
-    var currentDate: Date = Date.now
-    
-    init() {
-        Timer.publish(every: 1, on: .main, in: .common).autoconnect().map{ _ in Date.now }.assign(to: &$currentDate)
-    }
-    
+  // MARK: Lifecycle
+
+  init() {
+    Timer.publish(every: 1, on: .main, in: .common).autoconnect().map { _ in Date.now }.assign(to: &$currentDate)
+  }
+
+  // MARK: Internal
+
+  @Published
+  var currentDate = Date.now
 }

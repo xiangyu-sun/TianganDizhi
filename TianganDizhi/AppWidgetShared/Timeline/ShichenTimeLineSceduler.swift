@@ -6,36 +6,37 @@
 //  Copyright © 2020 孙翔宇. All rights reserved.
 //
 
-import Foundation
 import ChineseAstrologyCalendar
+import Foundation
 
 struct ShichenTimeLineSceduler {
-    static func buildTimeLine() -> [Date]{
-        var timeline = [Date]()
-        let currentDate = Date()
-    
-        timeline.append(currentDate)
-        
-        guard let currentShichen = try? GanzhiDateConverter.shichen(currentDate),
-              let nextShichenStart = currentShichen.next.startDate else {
-            return backup()
-        }
-        
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset * 2, to: nextShichenStart)!
-            timeline.append(entryDate)
-        }
-        return timeline
+  static func buildTimeLine() -> [Date] {
+    var timeline = [Date]()
+    let currentDate = Date()
+
+    timeline.append(currentDate)
+
+    guard
+      let currentShichen = try? GanzhiDateConverter.shichen(currentDate),
+      let nextShichenStart = currentShichen.next.startDate else
+    {
+      return backup()
     }
-    
-    
-    static func backup() -> [Date] {
-        let currentDate = Date()
-        var timeline = [Date]()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset * 2, to: currentDate)!
-            timeline.append(entryDate)
-        }
-        return timeline
+
+    for hourOffset in 0 ..< 5 {
+      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset * 2, to: nextShichenStart)!
+      timeline.append(entryDate)
     }
+    return timeline
+  }
+
+  static func backup() -> [Date] {
+    let currentDate = Date()
+    var timeline = [Date]()
+    for hourOffset in 0 ..< 5 {
+      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset * 2, to: currentDate)!
+      timeline.append(entryDate)
+    }
+    return timeline
+  }
 }

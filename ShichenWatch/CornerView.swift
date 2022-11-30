@@ -6,44 +6,42 @@
 //  Copyright © 2022 孙翔宇. All rights reserved.
 //
 
+import ChineseAstrologyCalendar
 import SwiftUI
 import WidgetKit
-import ChineseAstrologyCalendar
+
+// MARK: - CornerView
 
 struct CornerView: View {
-    @State var date: Date
-    
-    var body: some View {
-        let shichen = try! GanzhiDateConverter.shichen(date)
-        let start = date.timeIntervalSince1970 -  shichen.startDate!.timeIntervalSince1970
-        
-        let base = shichen.endDate!.timeIntervalSince1970 -  shichen.startDate!.timeIntervalSince1970
-        ZStack() {
-            AccessoryWidgetBackground()
-            Text(date.chineseDate)
-                .font(.largeTitle)
-            
-        }
-        .widgetLabel{
-            Gauge(value: start/base) {
-                
-            } currentValueLabel: {
-                
-            } minimumValueLabel: {
-                Text(try! GanzhiDateConverter.shichen(shichen.startDate!).displayHourText)
-                    .foregroundColor(.primary)
-            } maximumValueLabel: {
-                Text(shichen.next.displayHourText)
-                    .foregroundColor(.secondary)
-            }
-            
-        }
+  @State var date: Date
+
+  var body: some View {
+    let shichen = try! GanzhiDateConverter.shichen(date)
+    let start = date.timeIntervalSince1970 - shichen.startDate!.timeIntervalSince1970
+
+    let base = shichen.endDate!.timeIntervalSince1970 - shichen.startDate!.timeIntervalSince1970
+    ZStack {
+      AccessoryWidgetBackground()
+      Text(date.chineseDate)
+        .font(.largeTitle)
     }
+    .widgetLabel {
+      Gauge(value: start / base) { } currentValueLabel: { } minimumValueLabel: {
+        Text(try! GanzhiDateConverter.shichen(shichen.startDate!).displayHourText)
+          .foregroundColor(.primary)
+      } maximumValueLabel: {
+        Text(shichen.next.displayHourText)
+          .foregroundColor(.secondary)
+      }
+    }
+  }
 }
 
+// MARK: - CornerView_Previews
+
 struct CornerView_Previews: PreviewProvider {
-    static var previews: some View {
-        CornerView(date: .now)
-            .previewContext(WidgetPreviewContext(family: .accessoryCorner))
-    }
+  static var previews: some View {
+    CornerView(date: .now)
+      .previewContext(WidgetPreviewContext(family: .accessoryCorner))
+  }
 }

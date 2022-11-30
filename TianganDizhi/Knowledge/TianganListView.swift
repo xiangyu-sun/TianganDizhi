@@ -6,36 +6,42 @@
 //  Copyright © 2020 孙翔宇. All rights reserved.
 //
 
-import SwiftUI
 import ChineseAstrologyCalendar
+import SwiftUI
+
+// MARK: - TianganListView
 
 struct TianganListView: View {
-    let tiangan = Tiangan.allCases
-     var body: some View {
-         List(tiangan, id: \.self) {
-            TianganCell(tiangan: $0)
-         }
-         #if os(iOS)
-         .navigationBarTitle("十天干")
-         #endif
-     }
+  let tiangan = Tiangan.allCases
+  var body: some View {
+    List(tiangan, id: \.self) {
+      TianganCell(tiangan: $0)
+    }
+    #if os(iOS)
+    .navigationBarTitle("十天干")
+    #endif
+  }
 }
+
+// MARK: - TianganCell
 
 struct TianganCell: View {
-    let tiangan: Tiangan
-    @Environment(\.bodyFont) var bodyFont
-    var body: some View {
-        HStack() {
-            Text(tiangan.chineseCharactor)
-            Text("(\(tiangan.chineseCharactor.transformToPinyin()))")
-        }
-        .padding()
-        .font(bodyFont)
+  let tiangan: Tiangan
+  @Environment(\.bodyFont) var bodyFont
+  var body: some View {
+    HStack {
+      Text(tiangan.chineseCharactor)
+      Text("(\(tiangan.chineseCharactor.transformToPinyin()))")
     }
+    .padding()
+    .font(bodyFont)
+  }
 }
 
+// MARK: - TianganListView_Previews
+
 struct TianganListView_Previews: PreviewProvider {
-    static var previews: some View {
-        TianganListView()
-    }
+  static var previews: some View {
+    TianganListView()
+  }
 }
