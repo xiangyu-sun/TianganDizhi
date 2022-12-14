@@ -1,5 +1,4 @@
 import ChineseAstrologyCalendar
-import Firebase
 import SwiftUI
 
 @main
@@ -8,7 +7,6 @@ struct TianganDizhiApp: App {
   // MARK: Lifecycle
 
   init() {
-    FirebaseApp.configure()
     #if os(iOS)
     UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: .weibeiBold, size: 34)!]
     UITabBarItem.appearance().setTitleTextAttributes([.font : UIFont(name: .weibeiBold, size: 12)!], for: [])
