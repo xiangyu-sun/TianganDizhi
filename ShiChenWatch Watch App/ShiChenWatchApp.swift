@@ -12,7 +12,11 @@ import SwiftUI
 struct ShichenWatch_Watch_AppApp: App {
   var body: some Scene {
     WindowGroup {
-      NavigationStack {
+      if #available(watchOS 9.0, *) {
+        NavigationStack {
+          ContentView()
+        }
+      } else {
         ContentView()
       }
     }

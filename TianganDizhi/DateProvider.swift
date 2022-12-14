@@ -14,11 +14,11 @@ final class DateProvider: ObservableObject {
   // MARK: Lifecycle
 
   init() {
-    Timer.publish(every: 1, on: .main, in: .common).autoconnect().map { _ in Date.now }.assign(to: &$currentDate)
+    Timer.publish(every: 1, on: .main, in: .common).autoconnect().map { _ in Date() }.assign(to: &$currentDate)
   }
 
   // MARK: Internal
 
   @Published
-  var currentDate = Date.now
+  var currentDate = Date()
 }
