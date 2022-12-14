@@ -15,7 +15,7 @@ struct FullDateTitleView: View {
 
 struct FullDateTitleView_Previews: PreviewProvider {
   static var previews: some View {
-    FullDateTitleView(date: .now)
+    FullDateTitleView(date: Date())
     #if os(watchOS)
       .previewContext(WidgetPreviewContext(family: .accessoryCircular))
     #else
