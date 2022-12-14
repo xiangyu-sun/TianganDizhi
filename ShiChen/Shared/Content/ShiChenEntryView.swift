@@ -148,9 +148,11 @@ struct ShiChenEntryView_Previews: PreviewProvider {
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemLarge))
         .environment(\.colorScheme, .dark)
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
-        .previewDisplayName("systemExtraLarge")
+      if #available(iOSApplicationExtension 15.0, *) {
+        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+          .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
+          .previewDisplayName("systemExtraLarge")
+      }
 
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemMedium))

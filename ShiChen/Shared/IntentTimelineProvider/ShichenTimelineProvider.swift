@@ -6,7 +6,7 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
   // MARK: Internal
 
   func placeholder(in _: Context) -> SimpleEntry {
-    SimpleEntry(date: Date.now, configuration: ConfigurationIntent())
+    SimpleEntry(date: Date(), configuration: ConfigurationIntent())
   }
 
   @available(iOSApplicationExtension 16.0, *)
@@ -18,7 +18,7 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
   }
 
   func getSnapshot(for configuration: ConfigurationIntent, in _: Context, completion: @escaping (SimpleEntry) -> Void) {
-    let entry = SimpleEntry(date: Date.now, configuration: configuration)
+    let entry = SimpleEntry(date: Date(), configuration: configuration)
     completion(entry)
   }
 

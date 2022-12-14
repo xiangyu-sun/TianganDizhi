@@ -27,10 +27,10 @@ struct CornerView: View {
     }
     .widgetLabel {
       Gauge(value: start / base) { } currentValueLabel: { } minimumValueLabel: {
-        Text(try! GanzhiDateConverter.shichen(shichen.startDate!).displayHourText)
+        Text(try! GanzhiDateConverter.shichen(shichen.startDate!).chineseCharactor)
           .foregroundColor(.primary)
       } maximumValueLabel: {
-        Text(shichen.next.displayHourText)
+        Text(shichen.next.chineseCharactor)
           .foregroundColor(.secondary)
       }
     }
