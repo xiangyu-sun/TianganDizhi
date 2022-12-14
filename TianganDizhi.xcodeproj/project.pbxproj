@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
-		460EE4DB270211EA0006A7D3 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 460EE4DA270211EA0006A7D3 /* FirebaseAnalytics */; };
 		462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
 		462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A5F6A24FFE5F20032A125 /* ShiChen.swift */; };
@@ -38,7 +37,6 @@
 		46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */; };
 		46B7FCE9250620CC008E8D48 /* ShichenTimeLineSceduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */; };
 		46B7FCEA250630DE008E8D48 /* ShichenTimeLineSceduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */; };
-		46B816892543F42900B051B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46B816882543F42900B051B2 /* GoogleService-Info.plist */; };
 		46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
 		46E055B224B02FA900AC2AE5 /* CircularContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */; };
 		46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
@@ -130,7 +128,6 @@
 		99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */; };
 		99D2C78E2943935800327AF7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
 		99FD3EEB291E9DC00048DCEB /* ScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */; };
-		99FD3F4129214F7B0048DCEB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 99FD3F4029214F7B0048DCEB /* FirebaseAnalytics */; };
 		99FD3F47292296170048DCEB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		99FD3F48292296170048DCEB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
 		99FD3F4E292296180048DCEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99FD3F4D292296180048DCEB /* Assets.xcassets */; };
@@ -293,7 +290,6 @@
 		46B79CDE2542F0B3003C0B7F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinesePinyin.swift; sourceTree = "<group>"; };
 		46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenTimeLineSceduler.swift; sourceTree = "<group>"; };
-		46B816882543F42900B051B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TianganListView.swift; sourceTree = "<group>"; };
 		46E055B124B02FA900AC2AE5 /* CircularContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularContainerView.swift; sourceTree = "<group>"; };
 		46E055B724B065BD00AC2AE5 /* ShichenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenView.swift; sourceTree = "<group>"; };
@@ -362,7 +358,6 @@
 				9963204D290D52AA000C4A2B /* AppStoreReviewPrompt in Frameworks */,
 				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
 				994B3BCE28FB6F1900F9CF67 /* ChineseAstrologyCalendar in Frameworks */,
-				460EE4DB270211EA0006A7D3 /* FirebaseAnalytics in Frameworks */,
 				99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */,
 				46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */,
 			);
@@ -372,7 +367,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99FD3F4129214F7B0048DCEB /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,7 +507,6 @@
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
 				996321492911B8E4000C4A2B /* Shared.xcassets */,
 				46AB55D8242B5EFF00F6604A /* Info.plist */,
-				46B816882543F42900B051B2 /* GoogleService-Info.plist */,
 				46B79CD82542F0AE003C0B7F /* InfoPlist.strings */,
 				46AB55D2242B5EFF00F6604A /* Preview Content */,
 			);
@@ -769,7 +762,6 @@
 			packageProductDependencies = (
 				46339FEF25029C64007D4137 /* JingluoShuxue */,
 				46F9C28425D137020017440D /* ChineseTranditionalMusicCore */,
-				460EE4DA270211EA0006A7D3 /* FirebaseAnalytics */,
 				994B3BCD28FB6F1900F9CF67 /* ChineseAstrologyCalendar */,
 				9963204C290D52AA000C4A2B /* AppStoreReviewPrompt */,
 				99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */,
@@ -793,7 +785,6 @@
 			);
 			name = TianganDizhiTests;
 			packageProductDependencies = (
-				99FD3F4029214F7B0048DCEB /* FirebaseAnalytics */,
 			);
 			productName = TianganDizhiTests;
 			productReference = 46AB55DD242B5EFF00F6604A /* TianganDizhiTests.xctest */;
@@ -974,7 +965,6 @@
 			packageReferences = (
 				46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */,
 				46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */,
-				460EE4D9270211EA0006A7D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				994B3BCC28FB6F1900F9CF67 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
 				99CACD7D29379B6B005FCEA0 /* XCRemoteSwiftPackageReference "swift" */,
 				99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */,
@@ -1016,7 +1006,6 @@
 				46AB55D4242B5EFF00F6604A /* Preview Assets.xcassets in Resources */,
 				46AB55D1242B5EFF00F6604A /* Assets.xcassets in Resources */,
 				9955E82728FB810B00FA8362 /* Baoli.ttc in Resources */,
-				46B816892543F42900B051B2 /* GoogleService-Info.plist in Resources */,
 				9963214A2911B8E4000C4A2B /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1457,7 +1446,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Debug;
 		};
@@ -1514,7 +1503,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
@@ -2062,14 +2051,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		460EE4D9270211EA0006A7D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.9.0;
-			};
-		};
 		46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/JingluoShuxueCore.git";
@@ -2113,11 +2094,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		460EE4DA270211EA0006A7D3 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 460EE4D9270211EA0006A7D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
 		46339FEF25029C64007D4137 /* JingluoShuxue */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */;
@@ -2166,11 +2142,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */;
 			productName = AppStoreReviewPrompt;
-		};
-		99FD3F4029214F7B0048DCEB /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 460EE4D9270211EA0006A7D3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
 		};
 		99FD3F59292296320048DCEB /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
