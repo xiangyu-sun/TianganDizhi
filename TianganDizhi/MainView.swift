@@ -56,10 +56,13 @@ struct MainView: View {
 
       #endif
     }
+    #if os(iOS)
     .background(
       Image("background")
         .resizable(resizingMode: .tile)
-        .ignoresSafeArea())
+        .ignoresSafeArea()
+    )
+    #endif
   }
 }
 
