@@ -65,11 +65,11 @@ private struct iPadEnvironmentKey: EnvironmentKey {
   }
 }
 
+// MARK: - FootnoteFontEnvironmentKey
 
 private struct FootnoteFontEnvironmentKey: EnvironmentKey {
   static let defaultValue: Font = .custom(.weibeiBold, size: 12, relativeTo: .footnote)
 }
-
 
 // MARK: - ShouldScaleFontEnvironmentKey
 
@@ -109,12 +109,11 @@ extension EnvironmentValues {
     get { self[BodyFontEnvironmentKey.self] }
     set { self[BodyFontEnvironmentKey.self] = newValue }
   }
-    
-    var footnote: Font {
-      get { self[FootnoteFontEnvironmentKey.self] }
-      set { self[FootnoteFontEnvironmentKey.self] = newValue }
-    }
 
+  var footnote: Font {
+    get { self[FootnoteFontEnvironmentKey.self] }
+    set { self[FootnoteFontEnvironmentKey.self] = newValue }
+  }
 
   var headlineFont: Font {
     get { self[HeadlineFontEnvironmentKey.self] }

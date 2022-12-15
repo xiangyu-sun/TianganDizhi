@@ -18,42 +18,42 @@ struct ShichenHStackView: View {
   @Environment(\.shouldScaleFont) var shouldScaleFont
   @Environment(\.title2Font) var title2Font
   @Environment(\.widgetFamily) var family
-  
+
   var body: some View {
     HStack {
       VStack {
         Text("\(shichen.previous.displayHourText)")
-#if os(watchOS)
+        #if os(watchOS)
           .font(title2Font)
-#else
+        #else
           .font((shouldScaleFont && family != .systemMedium) ? titleFont : title2Font)
-#endif
+        #endif
         ShichenInformationView(shichen: shichen.previous)
       }
       .foregroundColor(Color.secondary)
-      
+
       Spacer()
-      
+
       VStack {
         Text("\(shichen.displayHourText)")
-#if os(watchOS)
+        #if os(watchOS)
           .font(title2Font)
-#else
+        #else
           .font((shouldScaleFont && family != .systemMedium) ? titleFont : title2Font)
-#endif
-        
+        #endif
+
           .scaleEffect(1.2)
         ShichenInformationView(shichen: shichen)
       }
-      
+
       Spacer()
       VStack {
         Text("\(shichen.next.displayHourText)")
-#if os(watchOS)
+        #if os(watchOS)
           .font(title2Font)
-#else
+        #else
           .font((shouldScaleFont && family != .systemMedium) ? titleFont : title2Font)
-#endif
+        #endif
         ShichenInformationView(shichen: shichen.next)
       }
       .foregroundColor(Color.secondary)
@@ -67,32 +67,32 @@ struct ShichenInformationView: View {
   @Environment(\.shouldScaleFont) var shouldScaleFont
   @Environment(\.title2Font) var title2Font
   @Environment(\.widgetFamily) var family
-  
+
   let shichen: Dizhi
-  
+
   var scaleFont: Bool {
-#if os(iOS)
+    #if os(iOS)
     if #available(iOSApplicationExtension 15.0, *) {
       return shouldScaleFont && family == .systemExtraLarge
     } else {
       return shouldScaleFont
     }
-#else
-     return false
-#endif
+    #else
+    return false
+    #endif
   }
-  
+
   var body: some View {
     if #available(iOSApplicationExtension 15.0, *) {
       HStack {
         Text(shichen.aliasName)
         Text(shichen.organReference)
       }
-#if os(iOS)
+      #if os(iOS)
       .font(scaleFont ? title2Font : .defaultFootnote)
-#else
+      #else
       .font(.defaultFootnote)
-#endif
+      #endif
     }
   }
 }

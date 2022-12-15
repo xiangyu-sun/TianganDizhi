@@ -15,7 +15,7 @@ import WidgetKit
 
 struct Nongli: Widget {
   let kind = "Nongli"
-  
+
   var supportedFamilies: [WidgetFamily] {
     if #available(iOSApplicationExtension 16.0, *) {
       return [.systemSmall, .systemMedium, .accessoryInline, .accessoryCircular, .accessoryRectangular]
@@ -23,19 +23,19 @@ struct Nongli: Widget {
       return [.systemSmall, .systemMedium]
     }
   }
-  
+
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
       ShiChenYearMonthDateEntryView(entry: entry)
     }
     .configurationDisplayName("年月日時辰")
     .description("農曆年月日以及十二時辰")
-#if os(watchOS)
-    .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
-#else
-    
-    .supportedFamilies(supportedFamilies)
-#endif
+    #if os(watchOS)
+      .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
+    #else
+
+      .supportedFamilies(supportedFamilies)
+    #endif
   }
 }
 
@@ -43,7 +43,7 @@ struct Nongli: Widget {
 
 struct ShiChen: Widget {
   let kind = "ShiChen"
-  
+
   var supportedFamilies: [WidgetFamily] {
     if #available(iOSApplicationExtension 16.0, *) {
       return [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge, .accessoryInline, .accessoryRectangular]
@@ -53,18 +53,18 @@ struct ShiChen: Widget {
       return [.systemSmall, .systemMedium, .systemLarge]
     }
   }
-  
+
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
       ShiChenEntryView(entry: entry)
     }
     .configurationDisplayName("十二时辰")
     .description("十二地支为名的十二时辰计，俗稱，以及相關臟器")
-#if os(watchOS)
-    .supportedFamilies([.accessoryInline, .accessoryRectangular])
-#else
-    .supportedFamilies(supportedFamilies)
-#endif
+    #if os(watchOS)
+      .supportedFamilies([.accessoryInline, .accessoryRectangular])
+    #else
+      .supportedFamilies(supportedFamilies)
+    #endif
   }
 }
 
@@ -73,11 +73,11 @@ struct ShiChen: Widget {
 @available(iOSApplicationExtension 16.0, *)
 struct HourlyWidget: Widget {
   let kind = "ShiChenByMinute"
-  
+
   var supportedFamilies: [WidgetFamily] {
     [.accessoryCircular]
   }
-  
+
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: MinuteTimelineProvider()) { entry in
       ShiChenEntryView(entry: entry)
@@ -100,38 +100,38 @@ struct ShiChen_Previews: PreviewProvider {
         ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
           .previewContext(WidgetPreviewContext(family: .accessoryCircular))
           .previewDisplayName("ShiChenEntryView Circular")
-        
+
         ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
           .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
           .previewDisplayName("ShiChenEntryView Retangular")
       }
     }
-    
-#if os(iOS)
-      Group {
-        ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .systemSmall))
-        
+
+    #if os(iOS)
+    Group {
+      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .systemSmall))
+
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .systemSmall))
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .systemMedium))
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .systemLarge))
+
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .systemLarge))
+        .environment(\.colorScheme, .dark)
+      if #available(iOSApplicationExtension 15.0, *) {
         ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .systemSmall))
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .systemMedium))
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .systemLarge))
-        
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .systemLarge))
-          .environment(\.colorScheme, .dark)
-        if #available(iOSApplicationExtension 15.0, *) {
-          ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
-            .previewDisplayName("systemExtraLarge")
-        }
-        
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .systemMedium))
-          .environment(\.sizeCategory, .extraExtraLarge)
+          .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
+          .previewDisplayName("systemExtraLarge")
       }
-#endif
+
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .systemMedium))
+        .environment(\.sizeCategory, .extraExtraLarge)
+    }
+    #endif
   }
 }
