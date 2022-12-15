@@ -1339,7 +1339,7 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShiChen/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ShiChen;
+				INFOPLIST_KEY_CFBundleDisplayName = "天干地支時辰";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1370,7 +1370,7 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShiChen/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ShiChen;
+				INFOPLIST_KEY_CFBundleDisplayName = "天干地支時辰";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1525,6 +1525,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1567,6 +1568,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TianganDizhi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1701,7 +1703,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ShichenWatch Watch App/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = ShichenWatch;
+				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.uriphium.TianganDizhi;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1733,7 +1735,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ShichenWatch Watch App/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = ShichenWatch;
+				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.uriphium.TianganDizhi;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1844,7 +1846,7 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShichenWatch/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ShichenWatch;
+				INFOPLIST_KEY_CFBundleDisplayName = "天干地支時辰";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 孙翔宇. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1875,7 +1877,7 @@
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShichenWatch/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ShichenWatch;
+				INFOPLIST_KEY_CFBundleDisplayName = "天干地支時辰";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 孙翔宇. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
