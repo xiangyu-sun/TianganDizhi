@@ -125,6 +125,7 @@
 		997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
 		997C68B32868ABEE00B40D3F /* ShichenTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */; };
+		997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */; };
 		99D2C78E2943935800327AF7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
 		99FD3EEB291E9DC00048DCEB /* ScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */; };
@@ -1030,6 +1031,7 @@
 			files = (
 				997C68512864CADF00B40D3F /* Preview Assets.xcassets in Resources */,
 				997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */,
+				997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */,
 				993CFB9928809F690015252E /* WeibeiTC-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
