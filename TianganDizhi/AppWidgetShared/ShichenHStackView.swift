@@ -102,6 +102,11 @@ struct ShichenInformationView: View {
 struct ShichenHStackView_Previews: PreviewProvider {
   static var previews: some View {
     ShichenHStackView(shichen: .zi)
-      .padding()
+#if os(watchOS)
+          .previewContext(WidgetPreviewContext(family: .accessoryInline))
+#else
+          .previewContext(WidgetPreviewContext(family: .systemMedium))
+      #endif
+      
   }
 }

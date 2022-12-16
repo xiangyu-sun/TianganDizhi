@@ -17,6 +17,7 @@ struct MainView: View {
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.shouldScaleFont) var shouldScaleFont
+    @StateObject var weatherData = WeatherData.shared
 
   var body: some View {
     VStack {
@@ -37,6 +38,11 @@ struct MainView: View {
           .font(titleFont)
         Text(updater.currentDate.chineseYearMonthDate)
           .font(titleFont)
+          
+          if let value = weatherData.forcastedWeather {
+              Text(value.moonPhaseDisplayName)
+                .font(titleFont)
+          }
         Spacer()
       }
 
@@ -62,6 +68,16 @@ struct MainView: View {
         .resizable(resizingMode: .tile)
         .ignoresSafeArea()
     )
+    .onAppear(){
+        if #available(iOS 16.0, *) {
+            Task {
+                if let location = try? await LocationManager.shared.startLocationUpdate() {
+                    try? await self.weatherData.dailyForecast(for: location)
+                }
+            }
+        }
+    }
+   
     #endif
   }
 }

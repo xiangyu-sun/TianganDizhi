@@ -46,6 +46,11 @@
 		46EF7F8427108D73007030CC /* JieqiContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* JieqiContainerView.swift */; };
 		46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 46F9C28425D137020017440D /* ChineseTranditionalMusicCore */; };
 		46F9C28C25D137D50017440D /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9C28B25D137D50017440D /* Cells.swift */; };
+		990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
+		990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
+		990FEADF294CAFD700CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
+		990FEAE0294CB03900CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
+		990FEAE2294CE89400CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
 		993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843BD285636B800FA7631 /* ShiChenEntryView.swift */; };
 		993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
 		993CFB9928809F690015252E /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
@@ -299,6 +304,9 @@
 		46EF7F8127108A00007030CC /* JieqiCircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiCircularView.swift; sourceTree = "<group>"; };
 		46EF7F8327108D73007030CC /* JieqiContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiContainerView.swift; sourceTree = "<group>"; };
 		46F9C28B25D137D50017440D /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		990FEAD7294C9EA800CB1CEF /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		990FEADC294CA2FE00CB1CEF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		990FEAE1294CC02D00CB1CEF /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		993843BD285636B800FA7631 /* ShiChenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenEntryView.swift; sourceTree = "<group>"; };
 		993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenYearMonthDateEntryView.swift; sourceTree = "<group>"; };
 		994AD18E2868F96800BB5BED /* InlineWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineWidgetView.swift; sourceTree = "<group>"; };
@@ -507,6 +515,7 @@
 				9955E82528FB810B00FA8362 /* Baoli TC */,
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
 				996321492911B8E4000C4A2B /* Shared.xcassets */,
+				990FEAE1294CC02D00CB1CEF /* Location.gpx */,
 				46AB55D8242B5EFF00F6604A /* Info.plist */,
 				46B79CD82542F0AE003C0B7F /* InfoPlist.strings */,
 				46AB55D2242B5EFF00F6604A /* Preview Content */,
@@ -711,10 +720,12 @@
 		99FD3F732927EAB70048DCEB /* AppWidgetShared */ = {
 			isa = PBXGroup;
 			children = (
+				990FEADC294CA2FE00CB1CEF /* LocationManager.swift */,
 				46B79C3F2541F95F003C0B7F /* Environment.swift */,
 				996321402911B2A4000C4A2B /* Timeline */,
 				46339FE525027DA8007D4137 /* ShichenHStackView.swift */,
 				994190BE285A28E900295389 /* ShiChenClock */,
+				990FEAD7294C9EA800CB1CEF /* WeatherData.swift */,
 			);
 			path = AppWidgetShared;
 			sourceTree = "<group>";
@@ -1090,8 +1101,10 @@
 				994AD1922868FA0400BB5BED /* CircularWidgetView.swift in Sources */,
 				46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */,
 				46339FDC2500EA41007D4137 /* CircularContainerView.swift in Sources */,
+				990FEADF294CAFD700CB1CEF /* LocationManager.swift in Sources */,
 				46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */,
 				994AD1952868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
+				990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */,
 				997C68782864CB9B00B40D3F /* AllWidgets.swift in Sources */,
 				997C68AB2868A8F600B40D3F /* ShichenTimelineProvider.swift in Sources */,
 				46B7FCEA250630DE008E8D48 /* ShichenTimeLineSceduler.swift in Sources */,
@@ -1105,6 +1118,7 @@
 			files = (
 				46EF7F8027107968007030CC /* JieqiCell.swift in Sources */,
 				46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */,
+				990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */,
 				994B3BC128FB35C000F9CF67 /* DizhiGridView.swift in Sources */,
 				46B79C402541F95F003C0B7F /* Environment.swift in Sources */,
 				46339FEB25028DB5007D4137 /* MainView.swift in Sources */,
@@ -1114,6 +1128,7 @@
 				46E055B224B02FA900AC2AE5 /* CircularContainerView.swift in Sources */,
 				46F9C28C25D137D50017440D /* Cells.swift in Sources */,
 				46B7FCE9250620CC008E8D48 /* ShichenTimeLineSceduler.swift in Sources */,
+				990FEAE0294CB03900CB1CEF /* WeatherData.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
 				46339FE925028279007D4137 /* KnowledgeView.swift in Sources */,
 				99FD3F752927EBD90048DCEB /* WuxingView.swift in Sources */,
@@ -1162,6 +1177,7 @@
 				99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */,
 				9963207F290DE1DE000C4A2B /* Styler.swift in Sources */,
 				99632085290DE1DE000C4A2B /* ChinesePinyin.swift in Sources */,
+				990FEAE2294CE89400CB1CEF /* WeatherData.swift in Sources */,
 				99632074290DE1DE000C4A2B /* Cells.swift in Sources */,
 				99632080290DE1DE000C4A2B /* KnowledgeView.swift in Sources */,
 				99632084290DE1DE000C4A2B /* ShichenView.swift in Sources */,

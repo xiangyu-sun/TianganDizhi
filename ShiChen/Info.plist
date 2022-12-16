@@ -11,5 +11,7 @@
 	<array>
 		<string>WeibeiTC-Bold.otf</string>
 	</array>
+	<key>NSWidgetWantsLocation </key>
+	<true/>
 </dict>
 </plist>

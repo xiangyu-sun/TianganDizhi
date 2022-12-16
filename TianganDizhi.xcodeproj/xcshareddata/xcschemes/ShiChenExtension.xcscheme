@@ -81,16 +81,16 @@
          <EnvironmentVariable
             key = "_XCWidgetKind"
             value = "ShiChen"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "_XCWidgetDefaultView"
-            value = "timeline"
+            value = "snapshot"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "_XCWidgetFamily"
-            value = "accessoryCircular"
+            value = "large"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
