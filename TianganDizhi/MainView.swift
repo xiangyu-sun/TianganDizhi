@@ -51,6 +51,10 @@ struct MainView: View {
       Text(shichen.organReference)
         .font(bodyFont)
 
+      #if os(macOS)
+      CircularContainerView(currentShichen: shichen, padding: 0)
+        .frame(minWidth: 640)
+      #else
       if shouldScaleFont {
         CircularContainerView(currentShichen: shichen, padding: 0)
       } else {
@@ -58,6 +62,7 @@ struct MainView: View {
           .fixedSize(horizontal: false, vertical: true)
           .padding()
       }
+      #endif
       Spacer()
 
       #endif
