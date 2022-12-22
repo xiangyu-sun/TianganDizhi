@@ -42,11 +42,11 @@ struct ContentView: View {
           Text("十二地支匯總")
         }
       
-      SettingsView()
-        .tabItem {
-          Image(systemName: "gear")
-          Text("設置")
-        }
+//      SettingsView()
+//        .tabItem {
+//          Image(systemName: "gear")
+//          Text("設置")
+//        }
     }
     #if os(iOS)
     .onAppear {

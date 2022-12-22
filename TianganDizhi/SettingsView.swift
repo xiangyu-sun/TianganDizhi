@@ -10,9 +10,9 @@ import SwiftUI
 import WidgetKit
 
 struct SettingsView: View {
-  @AppStorage("springFestiveBackgroundEnabled", store: UserDefaults(suiteName: "group.uriphium.tiangandizhi"))
+  @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled: Bool = false
-  @AppStorage("springFestiveForegroundEnabled", store: UserDefaults(suiteName: "group.uriphium.tiangandizhi"))
+  @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled: Bool = false
 
   var body: some View {

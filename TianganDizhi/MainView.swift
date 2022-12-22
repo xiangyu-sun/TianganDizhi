@@ -18,10 +18,10 @@ struct MainView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.shouldScaleFont) var shouldScaleFont
   @StateObject var weatherData = WeatherData.shared
-  @AppStorage("springFestiveBackgroundEnabled", store: UserDefaults(suiteName: "group.uriphium.tiangandizhi"))
+  @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled: Bool = false
   
-  @AppStorage("springFestiveForegroundEnabled", store: UserDefaults(suiteName: "group.uriphium.tiangandizhi"))
+  @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled: Bool = false
   
   var body: some View {
@@ -54,8 +54,16 @@ struct MainView: View {
             Text(value.moonPhaseDisplayName)
               .font(titleFont)
           }else {
-            Text(updater.currentDate.chineseDay?.moonPhase.rawValue ?? "")
+            if let moonphase = updater.currentDate.chineseDay?.moonPhase {
+              HStack() {
+                if #available(iOS 16.0, *) {
+                  Image(systemName: moonphase.moonPhase.symbolName)
+                }
+                Text(moonphase.rawValue)
+              }
               .font(bodyFont)
+            }
+ 
           }
        
         }

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MaterialBackground: ViewModifier {
-  @AppStorage("springFestiveBackgroundEnabled", store: UserDefaults(suiteName: "group.uriphium.tiangandizhi"))
+  @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled: Bool = false
   var image: Image
   var toogle: Bool

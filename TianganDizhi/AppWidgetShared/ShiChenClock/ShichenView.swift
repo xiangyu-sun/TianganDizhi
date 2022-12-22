@@ -36,7 +36,7 @@ private struct DizhiView: View {
     Double((shichen.rawValue + 7) % 12)
   }
   
-  @AppStorage("springFestiveForegroundEnabled", store: UserDefaults(suiteName: "group.uriphium.tiangandizhi"))
+  @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled: Bool = false
     
   var body: some View {
