@@ -20,7 +20,6 @@ struct ShichenView: View {
         DizhiView(shichen: dizhi, current: currentShichen == dizhi)
       }
     }
-
   }
 }
 
@@ -32,17 +31,16 @@ private struct DizhiView: View {
   @Environment(\.titleFont) var titleFont
   let current: Bool
 
+  @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
+  var springFestiveForegroundEnabled = false
+
   var rotation: Double {
     Double((shichen.rawValue + 7) % 12)
   }
-  
-  @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
-  var springFestiveForegroundEnabled: Bool = false
-    
+
   var body: some View {
     VStack {
-      
-      let color = springFestiveForegroundEnabled ? Color("springfestivaltext") :  Color.primary
+      let color = springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary
       Text("\(shichen.chineseCharactor)")
         .font(titleFont)
         .foregroundColor(current ? color : Color.secondary)

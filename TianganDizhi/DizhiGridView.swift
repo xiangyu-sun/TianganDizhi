@@ -28,9 +28,9 @@ struct DizhiGridView: View {
       HStack {
         if #available(iOS 16.0, watchOS 9.0, *) {
           Text(气血循环流注[dizhi.rawValue - 1].rawValue)
-#if os(iOS)
+          #if os(iOS)
             .lineLimit(2, reservesSpace: true)
-#endif
+          #endif
         } else {
           Text(气血循环流注[dizhi.rawValue - 1].rawValue)
         }

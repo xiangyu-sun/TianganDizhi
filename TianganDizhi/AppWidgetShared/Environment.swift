@@ -85,7 +85,7 @@ private struct ShouldScaleFontEnvironmentKey: EnvironmentKey {
 }
 
 extension EnvironmentValues {
-  
+
   var titleFont: Font {
     get { self[TitleFontEnvironmentKey.self] }
     set { self[TitleFontEnvironmentKey.self] = newValue }

@@ -9,11 +9,13 @@
 import SwiftUI
 import WidgetKit
 
+// MARK: - SettingsView
+
 struct SettingsView: View {
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
-  var springFestiveBackgroundEnabled: Bool = false
+  var springFestiveBackgroundEnabled = false
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
-  var springFestiveForegroundEnabled: Bool = false
+  var springFestiveForegroundEnabled = false
 
   var body: some View {
     NavigationView {
@@ -26,17 +28,18 @@ struct SettingsView: View {
             Text("夜間模式使用黑字")
           }
         }
-        
       }
+      #if os(iOS)
       .navigationBarTitle(Text("設置"))
-      .onChange(of: springFestiveBackgroundEnabled) { newValue in
+      #endif
+      .onChange(of: springFestiveBackgroundEnabled) { _ in
         if #available(watchOS 9.0, *) {
           WidgetCenter.shared.reloadAllTimelines()
         } else {
           // Fallback on earlier versions
         }
       }
-      .onChange(of: springFestiveForegroundEnabled) { newValue in
+      .onChange(of: springFestiveForegroundEnabled) { _ in
         if #available(watchOS 9.0, *) {
           WidgetCenter.shared.reloadAllTimelines()
         } else {
@@ -46,8 +49,11 @@ struct SettingsView: View {
     }
   }
 }
+
+// MARK: - SettingsView_Previews
+
 struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
-    }
+  static var previews: some View {
+    SettingsView()
+  }
 }

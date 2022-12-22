@@ -8,8 +8,8 @@
 
 import ChineseAstrologyCalendar
 import SwiftUI
-import WidgetKit
 import WeatherKit
+import WidgetKit
 
 // MARK: - CompactShichenView
 

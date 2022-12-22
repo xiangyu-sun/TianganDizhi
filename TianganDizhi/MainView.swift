@@ -19,43 +19,43 @@ struct MainView: View {
   @Environment(\.shouldScaleFont) var shouldScaleFont
   @StateObject var weatherData = WeatherData.shared
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
-  var springFestiveBackgroundEnabled: Bool = false
-  
+  var springFestiveBackgroundEnabled = false
+
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
-  var springFestiveForegroundEnabled: Bool = false
-  
+  var springFestiveForegroundEnabled = false
+
   var body: some View {
     VStack {
       let shichen = try! GanzhiDateConverter.shichen(updater.currentDate)
-      
-#if os(watchOS)
+
+      #if os(watchOS)
       HStack {
         Text((try? GanzhiDateConverter.zodiac(updater.currentDate).rawValue) ?? "")
         Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
         if let value = weatherData.forcastedWeather {
           Text(value.moonPhaseDisplayName)
             .font(titleFont)
-        }else {
+        } else {
           Text(updater.currentDate.chineseDay?.moonPhase.rawValue ?? "")
             .font(bodyFont)
         }
       }
-      
+
       CircularContainerView(currentShichen: shichen, padding: -24)
-      
-#else
-      
+
+      #else
+
       HStack {
         VStack(alignment: .leading) {
           Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
             .font(titleFont)
-          
+
           if let value = weatherData.forcastedWeather {
             Text(value.moonPhaseDisplayName)
               .font(titleFont)
-          }else {
+          } else {
             if let moonphase = updater.currentDate.chineseDay?.moonPhase {
-              HStack() {
+              HStack {
                 if #available(iOS 16.0, *) {
                   Image(systemName: moonphase.moonPhase.symbolName)
                 }
@@ -63,26 +63,22 @@ struct MainView: View {
               }
               .font(bodyFont)
             }
- 
           }
-       
         }
         .padding(.leading)
 
-          
-
         Spacer()
       }
-      
+
       Text(shichen.aliasName)
         .font(largeTitleFont)
       Text(shichen.organReference)
         .font(bodyFont)
-      
-#if os(macOS)
+
+      #if os(macOS)
       CircularContainerView(currentShichen: shichen, padding: 0)
         .frame(minWidth: 640)
-#else
+      #else
       if shouldScaleFont {
         CircularContainerView(currentShichen: shichen, padding: 0)
       } else {
@@ -90,28 +86,28 @@ struct MainView: View {
           .fixedSize(horizontal: false, vertical: true)
           .padding()
       }
-#endif
+      #endif
       Spacer()
-      
-#endif
+
+      #endif
     }
-    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
-#if os(iOS)
-    .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
-    .onAppear(){
-      if #available(iOS 16.0, *) {
-        Task {
-          do {
-            let location = try await LocationManager.shared.startLocationUpdate()
-            try await self.weatherData.dailyForecast(for: location)
-          } catch {
-            print(error)
+    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+    #if os(iOS)
+      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      .onAppear {
+        if #available(iOS 16.0, *) {
+          Task {
+            do {
+              let location = try await LocationManager.shared.startLocationUpdate()
+              try await self.weatherData.dailyForecast(for: location)
+            } catch {
+              print(error)
+            }
           }
         }
       }
-    }
-    
-#endif
+
+    #endif
   }
 }
 

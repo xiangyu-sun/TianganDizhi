@@ -21,10 +21,10 @@ struct ShiChenEntryView: View {
   @Environment(\.title3Font) var title3Font
   @Environment(\.iPad) var iPad
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
-  var springFestiveBackgroundEnabled: Bool = false
-  
+  var springFestiveBackgroundEnabled = false
+
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
-  var springFestiveForegroundEnabled: Bool = false
+  var springFestiveForegroundEnabled = false
 
   var body: some View {
     let shichen = try! GanzhiDateConverter.shichen(entry.date)
@@ -60,14 +60,14 @@ struct ShiChenEntryView: View {
         FullDateTitleView(date: entry.date)
           .font(title3Font)
         Spacer()
-        
+
         ShichenHStackView(shichen: shichen)
           .padding([.leading, .trailing], 8)
         Spacer()
       }
-      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
+      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
+      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     case .systemLarge:
       VStack {
         FullDateTitleView(date: entry.date)
@@ -76,9 +76,9 @@ struct ShiChenEntryView: View {
         CircularContainerView(currentShichen: shichen, padding: -30)
           .padding(.bottom, 8)
       }
-      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
+      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
+      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     case .systemExtraLarge:
       if iPad {
         HStack {
@@ -93,9 +93,9 @@ struct ShiChenEntryView: View {
           CircularContainerView(currentShichen: shichen, padding: -30)
             .padding()
         }
-        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
+        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
+        .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
       } else {
         VStack {
@@ -105,15 +105,15 @@ struct ShiChenEntryView: View {
           CircularContainerView(currentShichen: shichen, padding: -30)
             .padding(.bottom, 8)
         }
-        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
+        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
+        .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
       }
     default:
       CompactShichenView(shichen: shichen, date: entry.date)
-        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
+        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
+        .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     }
   }
 }

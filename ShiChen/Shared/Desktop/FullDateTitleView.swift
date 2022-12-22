@@ -7,7 +7,7 @@ import WidgetKit
 struct FullDateTitleView: View {
   var date: Date
   var body: some View {
-    HStack() {
+    HStack {
       Text(date.displayStringOfChineseYearMonthDateWithZodiac)
       Text(date.chineseDay?.moonPhase.rawValue ?? "")
     }
