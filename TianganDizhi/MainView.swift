@@ -30,14 +30,11 @@ struct MainView: View {
 
       #if os(watchOS)
       HStack {
-        Text((try? GanzhiDateConverter.zodiac(updater.currentDate).rawValue) ?? "")
         Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
         if let value = weatherData.forcastedWeather {
           Text(value.moonPhaseDisplayName)
-            .font(titleFont)
         } else {
           Text(updater.currentDate.chineseDay?.moonPhase.rawValue ?? "")
-            .font(bodyFont)
         }
       }
 

@@ -141,6 +141,10 @@
 		997CD11C2954FE1500BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
 		997CD11D2954FE1600BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
 		997CD11E2954FE1700BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
+		997CD11F2955202000BECF31 /* Baoli.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9955E82628FB810B00FA8362 /* Baoli.ttc */; };
+		997CD1202955202100BECF31 /* Baoli.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9955E82628FB810B00FA8362 /* Baoli.ttc */; };
+		997CD1212955202200BECF31 /* Baoli.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9955E82628FB810B00FA8362 /* Baoli.ttc */; };
+		997CD1222955202400BECF31 /* Baoli.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9955E82628FB810B00FA8362 /* Baoli.ttc */; };
 		997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */; };
 		99D2C78E2943935800327AF7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
@@ -1021,6 +1025,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46B79C0E2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */,
+				997CD11F2955202000BECF31 /* Baoli.ttc in Resources */,
 				462A5F6E24FFE5F20032A125 /* Assets.xcassets in Resources */,
 				9963214B2911B8F3000C4A2B /* Shared.xcassets in Resources */,
 			);
@@ -1060,6 +1065,7 @@
 				997C68512864CADF00B40D3F /* Preview Assets.xcassets in Resources */,
 				997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */,
 				997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */,
+				997CD1202955202100BECF31 /* Baoli.ttc in Resources */,
 				993CFB9928809F690015252E /* WeibeiTC-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1083,6 +1089,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				993CFB9A28809F6A0015252E /* WeibeiTC-Bold.otf in Resources */,
+				997CD1212955202200BECF31 /* Baoli.ttc in Resources */,
 				997C68882865FAD300B40D3F /* Assets.xcassets in Resources */,
 				9963214C2911B8F3000C4A2B /* Shared.xcassets in Resources */,
 			);
@@ -1093,6 +1100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FD3F722922994D0048DCEB /* WeibeiTC-Bold.otf in Resources */,
+				997CD1222955202400BECF31 /* Baoli.ttc in Resources */,
 				99FD3F4E292296180048DCEB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
