@@ -17,44 +17,47 @@ struct MainView: View {
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.shouldScaleFont) var shouldScaleFont
-    @StateObject var weatherData = WeatherData.shared
-
+  @StateObject var weatherData = WeatherData.shared
+  
   var body: some View {
     VStack {
       let shichen = try! GanzhiDateConverter.shichen(updater.currentDate)
-
-      #if os(watchOS)
+      
+#if os(watchOS)
       HStack {
         Text((try? GanzhiDateConverter.zodiac(updater.currentDate).rawValue) ?? "")
         Text(updater.currentDate.chineseYearMonthDate)
+        if let value = weatherData.forcastedWeather {
+          Text(value.moonPhaseDisplayName)
+        }
       }
-
+      
       CircularContainerView(currentShichen: shichen, padding: -24)
-
-      #else
-
+      
+#else
+      
       HStack {
         Text((try? GanzhiDateConverter.zodiac(updater.currentDate).rawValue) ?? "")
           .font(titleFont)
         Text(updater.currentDate.chineseYearMonthDate)
           .font(titleFont)
-          
-          if let value = weatherData.forcastedWeather {
-              Text(value.moonPhaseDisplayName)
-                .font(titleFont)
-          }
+        
+        if let value = weatherData.forcastedWeather {
+          Text(value.moonPhaseDisplayName)
+            .font(titleFont)
+        }
         Spacer()
       }
-
+      
       Text(shichen.aliasName)
         .font(largeTitleFont)
       Text(shichen.organReference)
         .font(bodyFont)
-
-      #if os(macOS)
+      
+#if os(macOS)
       CircularContainerView(currentShichen: shichen, padding: 0)
         .frame(minWidth: 640)
-      #else
+#else
       if shouldScaleFont {
         CircularContainerView(currentShichen: shichen, padding: 0)
       } else {
@@ -62,28 +65,31 @@ struct MainView: View {
           .fixedSize(horizontal: false, vertical: true)
           .padding()
       }
-      #endif
+#endif
       Spacer()
-
-      #endif
+      
+#endif
     }
-    #if os(iOS)
+#if os(iOS)
     .background(
       Image("background")
         .resizable(resizingMode: .tile)
         .ignoresSafeArea()
     )
     .onAppear(){
-        if #available(iOS 16.0, *) {
-            Task {
-                if let location = try? await LocationManager.shared.startLocationUpdate() {
-                    try? await self.weatherData.dailyForecast(for: location)
-                }
-            }
+      if #available(iOS 16.0, *) {
+        Task {
+          do {
+            let location = try await LocationManager.shared.startLocationUpdate()
+            try await self.weatherData.dailyForecast(for: location)
+          } catch {
+            print(error)
+          }
         }
+      }
     }
-   
-    #endif
+    
+#endif
   }
 }
 

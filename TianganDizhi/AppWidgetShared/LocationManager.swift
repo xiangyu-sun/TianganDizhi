@@ -54,8 +54,7 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
         case .authorizedAlways, .authorizedWhenInUse:
             service.startUpdatingLocation()
         case .notDetermined:
-            locationContinuation?.resume(throwing: OperationError.didNotGetResult)
-            locationContinuation = nil
+            break
         case .denied, .restricted:
             locationContinuation?.resume(throwing: OperationError.perimissionDeclied)
             locationContinuation = nil

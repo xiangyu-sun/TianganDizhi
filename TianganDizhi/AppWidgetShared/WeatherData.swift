@@ -27,9 +27,17 @@ final class WeatherData: ObservableObject {
                 including: .daily)
             return forcast
         }.value
-        let data = Information(moonPhaseDisplayName: dayWeather?.forecast.first?.moon.phase.description ?? "")
+      
+      logger.debug("\(dayWeather.debugDescription)")
+      
+      if let dayWeather {
+        let data = Information(moonPhaseDisplayName: dayWeather.forecast.first?.moon.phase.description ?? "")
         forcastedWeather = data
-        logger.debug("\(dayWeather.debugDescription)")
         return data
+      } else {
+        return nil
+      }
+    
+   
     }
 }
