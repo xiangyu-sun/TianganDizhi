@@ -20,6 +20,8 @@ struct ShiChenEntryView: View {
   @Environment(\.titleFont) var titleFont
   @Environment(\.title3Font) var title3Font
   @Environment(\.iPad) var iPad
+  @AppStorage("springFestiveBackgroundEnabled", store: UserDefaults(suiteName: "group.uriphium.tiangandizhi"))
+  var springFestiveBackgroundEnabled: Bool = false
 
   var body: some View {
     let shichen = try! GanzhiDateConverter.shichen(entry.date)
@@ -55,14 +57,13 @@ struct ShiChenEntryView: View {
         FullDateTitleView(date: entry.date)
           .font(title3Font)
         Spacer()
+        
         ShichenHStackView(shichen: shichen)
           .padding([.leading, .trailing], 8)
         Spacer()
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .background(
-        Image("background")
-          .resizable(resizingMode: .tile))
+      .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
     case .systemLarge:
       VStack {
         FullDateTitleView(date: entry.date)
@@ -72,9 +73,7 @@ struct ShiChenEntryView: View {
           .padding(.bottom, 8)
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .background(
-        Image("background")
-          .resizable(resizingMode: .tile))
+      .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
     case .systemExtraLarge:
       if iPad {
         HStack {
@@ -90,9 +89,7 @@ struct ShiChenEntryView: View {
             .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-          Image("background")
-            .resizable(resizingMode: .tile))
+        .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
 
       } else {
         VStack {
@@ -103,16 +100,12 @@ struct ShiChenEntryView: View {
             .padding(.bottom, 8)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-          Image("background")
-            .resizable(resizingMode: .tile))
+        .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
       }
     default:
       CompactShichenView(shichen: shichen, date: entry.date)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-          Image("background")
-            .resizable(resizingMode: .tile))
+        .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
     }
   }
 }

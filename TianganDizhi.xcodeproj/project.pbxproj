@@ -130,6 +130,12 @@
 		997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
 		997C68B32868ABEE00B40D3F /* ShichenTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */; };
+		997CD1122954C96B00BECF31 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1102954C92000BECF31 /* MaterialBackground.swift */; };
+		997CD1132954C96C00BECF31 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1102954C92000BECF31 /* MaterialBackground.swift */; };
+		997CD1142954C96D00BECF31 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1102954C92000BECF31 /* MaterialBackground.swift */; };
+		997CD1162954CF9700BECF31 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1152954CF9700BECF31 /* SettingsView.swift */; };
+		997CD1172954D0EC00BECF31 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1152954CF9700BECF31 /* SettingsView.swift */; };
+		997CD1182954D44100BECF31 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1102954C92000BECF31 /* MaterialBackground.swift */; };
 		997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */; };
 		99D2C78E2943935800327AF7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
@@ -340,6 +346,8 @@
 		997C68872865FAD300B40D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		997C689E2868A81500B40D3F /* SimpleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleEntry.swift; sourceTree = "<group>"; };
 		997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenTimelineProvider.swift; sourceTree = "<group>"; };
+		997CD1102954C92000BECF31 /* MaterialBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialBackground.swift; sourceTree = "<group>"; };
+		997CD1152954CF9700BECF31 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTests.swift; sourceTree = "<group>"; };
 		99FD3F46292296170048DCEB /* ShichenMacWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShichenMacWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FD3F4D292296180048DCEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -452,6 +460,7 @@
 			children = (
 				462A5F6A24FFE5F20032A125 /* ShiChen.swift */,
 				997C68762864CB8F00B40D3F /* AllWidgets.swift */,
+				997CD1102954C92000BECF31 /* MaterialBackground.swift */,
 				997C68932868A75300B40D3F /* Shared */,
 				46393EE72542F57900E40518 /* ShiChen.intentdefinition */,
 				46B79CB32542F017003C0B7F /* InfoPlist.strings */,
@@ -505,6 +514,7 @@
 				9963204A290C32C1000C4A2B /* DateProvider.swift */,
 				994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */,
 				994B3BBE28FB34C800F9CF67 /* TwelveView.swift */,
+				997CD1152954CF9700BECF31 /* SettingsView.swift */,
 				994190BF285A294700295389 /* Shici */,
 				460BA9A826F24C400025CA39 /* Knowledge */,
 				99FD3F732927EAB70048DCEB /* AppWidgetShared */,
@@ -1096,6 +1106,7 @@
 				993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */,
 				46339FE425024F2B007D4137 /* Styler.swift in Sources */,
 				46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */,
+				997CD1122954C96B00BECF31 /* MaterialBackground.swift in Sources */,
 				46339FDD2500EA60007D4137 /* ShichenView.swift in Sources */,
 				996321452911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */,
 				994AD1922868FA0400BB5BED /* CircularWidgetView.swift in Sources */,
@@ -1137,10 +1148,12 @@
 				46EF7F8227108A00007030CC /* JieqiCircularView.swift in Sources */,
 				996321422911B2CD000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				46EF7F7E271077AE007030CC /* JieqiListView.swift in Sources */,
+				997CD1162954CF9700BECF31 /* SettingsView.swift in Sources */,
 				46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */,
 				994B3BBF28FB34C800F9CF67 /* TwelveView.swift in Sources */,
 				46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */,
 				9963204B290C32C1000C4A2B /* DateProvider.swift in Sources */,
+				997CD1182954D44100BECF31 /* MaterialBackground.swift in Sources */,
 				46AB55FD242B5F7100F6604A /* DizhiListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1174,6 +1187,7 @@
 				9963207A290DE1DE000C4A2B /* ShiciView.swift in Sources */,
 				99D2C78E2943935800327AF7 /* Environment.swift in Sources */,
 				99632075290DE1DE000C4A2B /* JieqiListView.swift in Sources */,
+				997CD1172954D0EC00BECF31 /* SettingsView.swift in Sources */,
 				99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */,
 				9963207F290DE1DE000C4A2B /* Styler.swift in Sources */,
 				99632085290DE1DE000C4A2B /* ChinesePinyin.swift in Sources */,
@@ -1224,6 +1238,7 @@
 				997C689A2868A7B600B40D3F /* CornerView.swift in Sources */,
 				996321462911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */,
 				994AD1932868FA0400BB5BED /* CircularWidgetView.swift in Sources */,
+				997CD1132954C96C00BECF31 /* MaterialBackground.swift in Sources */,
 				997C68AC2868A92400B40D3F /* CircularContainerView.swift in Sources */,
 				997C68982868A77700B40D3F /* Environment.swift in Sources */,
 				997C68852865FAD200B40D3F /* ShichenWatch.swift in Sources */,
@@ -1253,6 +1268,7 @@
 				99FD3F6D292298650048DCEB /* CircularContainerView.swift in Sources */,
 				99FD3F622922968B0048DCEB /* RetangularWidgetView.swift in Sources */,
 				99FD3F6B292297C50048DCEB /* Styler.swift in Sources */,
+				997CD1142954C96D00BECF31 /* MaterialBackground.swift in Sources */,
 				99FD3F652922968B0048DCEB /* CompactShichenView.swift in Sources */,
 				99FD3F6C292297DE0048DCEB /* ShichenHStackView.swift in Sources */,
 				99FD3F602922968B0048DCEB /* CircularWidgetView.swift in Sources */,

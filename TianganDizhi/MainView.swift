@@ -18,7 +18,7 @@ struct MainView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.shouldScaleFont) var shouldScaleFont
   @StateObject var weatherData = WeatherData.shared
-  
+  @AppStorage("springFestiveBackgroundEnabled") var springFestiveBackgroundEnabled: Bool = false
   var body: some View {
     VStack {
       let shichen = try! GanzhiDateConverter.shichen(updater.currentDate)
@@ -83,11 +83,7 @@ struct MainView: View {
 #endif
     }
 #if os(iOS)
-    .background(
-      Image("background")
-        .resizable(resizingMode: .tile)
-        .ignoresSafeArea()
-    )
+    .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
     .onAppear(){
       if #available(iOS 16.0, *) {
         Task {
