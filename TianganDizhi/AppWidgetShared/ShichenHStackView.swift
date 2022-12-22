@@ -65,7 +65,7 @@ struct ShichenHStackView: View {
 
 struct ShichenInformationView: View {
   @Environment(\.shouldScaleFont) var shouldScaleFont
-  @Environment(\.title2Font) var title2Font
+  @Environment(\.title3Font) var title3Font
   @Environment(\.widgetFamily) var family
 
   let shichen: Dizhi
@@ -89,7 +89,7 @@ struct ShichenInformationView: View {
         Text(shichen.organReference)
       }
       #if os(iOS)
-      .font(scaleFont ? title2Font : .defaultFootnote)
+      .font(scaleFont ? title3Font : .defaultFootnote)
       #else
       .font(.defaultFootnote)
       #endif
