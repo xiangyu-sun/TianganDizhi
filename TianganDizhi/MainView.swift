@@ -94,18 +94,18 @@ struct MainView: View {
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     #if os(iOS)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-      .onAppear {
-        if #available(iOS 16.0, *) {
-          Task {
-            do {
-              let location = try await LocationManager.shared.startLocationUpdate()
-              try await self.weatherData.dailyForecast(for: location)
-            } catch {
-              print(error)
-            }
-          }
-        }
-      }
+//      .onAppear {
+//        if #available(iOS 16.0, *) {
+//          Task {
+//            do {
+//              let location = try await LocationManager.shared.startLocationUpdate()
+//              try await self.weatherData.dailyForecast(for: location)
+//            } catch {
+//              print(error)
+//            }
+//          }
+//        }
+//      }
 
     #endif
   }
