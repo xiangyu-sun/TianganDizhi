@@ -12,6 +12,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>WeibeiTC-Bold.otf</string>
+		<string>Baoli.ttc</string>
 	</array>
 </dict>
 </plist>
