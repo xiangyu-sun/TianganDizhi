@@ -20,6 +20,7 @@ struct ShichenView: View {
         DizhiView(shichen: dizhi, current: currentShichen == dizhi)
       }
     }
+
   }
 }
 
@@ -34,12 +35,17 @@ private struct DizhiView: View {
   var rotation: Double {
     Double((shichen.rawValue + 7) % 12)
   }
-
+  
+  @AppStorage("springFestiveForegroundEnabled", store: UserDefaults(suiteName: "group.uriphium.tiangandizhi"))
+  var springFestiveForegroundEnabled: Bool = false
+    
   var body: some View {
     VStack {
+      
+      let color = springFestiveForegroundEnabled ? Color("springfestivaltext") :  Color.primary
       Text("\(shichen.chineseCharactor)")
         .font(titleFont)
-        .foregroundColor(current ? Color.primary : Color.secondary)
+        .foregroundColor(current ? color : Color.secondary)
         .scaleEffect(current ? 1.2 : 1)
         .rotationEffect(.radians(-(Double.pi * 2 / 12 * rotation)))
 

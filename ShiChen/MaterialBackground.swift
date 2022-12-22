@@ -26,7 +26,7 @@ struct MaterialBackground: ViewModifier {
             .resizable(resizingMode: .tile)
             .renderingMode(.template)
             .ignoresSafeArea(.all)
-            .foregroundColor(Color(red: 230/250.0, green: 0, blue: 0))
+            .foregroundColor(Color("sprintfestivaltint"))
         )
     }
     

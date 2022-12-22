@@ -22,6 +22,9 @@ struct ShiChenEntryView: View {
   @Environment(\.iPad) var iPad
   @AppStorage("springFestiveBackgroundEnabled", store: UserDefaults(suiteName: "group.uriphium.tiangandizhi"))
   var springFestiveBackgroundEnabled: Bool = false
+  
+  @AppStorage("springFestiveForegroundEnabled", store: UserDefaults(suiteName: "group.uriphium.tiangandizhi"))
+  var springFestiveForegroundEnabled: Bool = false
 
   var body: some View {
     let shichen = try! GanzhiDateConverter.shichen(entry.date)
@@ -62,6 +65,7 @@ struct ShiChenEntryView: View {
           .padding([.leading, .trailing], 8)
         Spacer()
       }
+      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
     case .systemLarge:
@@ -72,6 +76,7 @@ struct ShiChenEntryView: View {
         CircularContainerView(currentShichen: shichen, padding: -30)
           .padding(.bottom, 8)
       }
+      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
     case .systemExtraLarge:
@@ -88,6 +93,7 @@ struct ShiChenEntryView: View {
           CircularContainerView(currentShichen: shichen, padding: -30)
             .padding()
         }
+        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
 
@@ -99,11 +105,13 @@ struct ShiChenEntryView: View {
           CircularContainerView(currentShichen: shichen, padding: -30)
             .padding(.bottom, 8)
         }
+        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
       }
     default:
       CompactShichenView(shichen: shichen, date: entry.date)
+        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary )
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .materialBackground(with:  Image("background"), toogle: springFestiveBackgroundEnabled)
     }
