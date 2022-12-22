@@ -23,7 +23,7 @@ struct TianganDizhiApp: App {
       ContentView()
     }
     #if os(macOS)
-    MenuBarExtra(updater.currentDate.chineseYearMonthDate + dizh!.displayHourText) {
+    MenuBarExtra(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh!.displayHourText) {
       VStack {
         Divider()
         Button("退出") {

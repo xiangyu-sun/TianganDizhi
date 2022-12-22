@@ -24,6 +24,7 @@ struct InlineWidgetView: View {
 
     ViewThatFits(in: .horizontal) {
       Text("\(date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen.displayHourText)")
+      
       Text(shichen.displayHourText)
     }
     .font(bodyFont)

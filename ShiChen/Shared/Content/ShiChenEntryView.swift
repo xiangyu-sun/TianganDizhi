@@ -157,6 +157,7 @@ struct ShiChenEntryView_Previews: PreviewProvider {
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemMedium))
         .environment(\.sizeCategory, .extraExtraLarge)
+        .previewDisplayName("systemMedium + extraExtraLarge")
     }
     #endif
   }
