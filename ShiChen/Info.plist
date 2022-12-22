@@ -7,11 +7,11 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.widgetkit-extension</string>
 	</dict>
+	<key>NSWidgetWantsLocation </key>
+	<true/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>WeibeiTC-Bold.otf</string>
 	</array>
-	<key>NSWidgetWantsLocation </key>
-	<true/>
 </dict>
 </plist>
