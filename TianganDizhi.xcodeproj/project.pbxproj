@@ -66,7 +66,6 @@
 		994B3BCE28FB6F1900F9CF67 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994B3BCD28FB6F1900F9CF67 /* ChineseAstrologyCalendar */; };
 		994B3BD028FB70B300F9CF67 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994B3BCF28FB70B300F9CF67 /* ChineseAstrologyCalendar */; };
 		994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D37522864BFF200A9C99E /* FullDateTitleView.swift */; };
-		9955E82728FB810B00FA8362 /* Baoli.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9955E82628FB810B00FA8362 /* Baoli.ttc */; };
 		99632043290C2D1E000C4A2B /* TianganDizhiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */; };
 		9963204B290C32C1000C4A2B /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963204A290C32C1000C4A2B /* DateProvider.swift */; };
 		9963204D290D52AA000C4A2B /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 9963204C290D52AA000C4A2B /* AppStoreReviewPrompt */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -141,8 +140,6 @@
 		997CD11C2954FE1500BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
 		997CD11D2954FE1600BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
 		997CD11E2954FE1700BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
-		997CD11F2955202000BECF31 /* Baoli.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9955E82628FB810B00FA8362 /* Baoli.ttc */; };
-		997CD1222955202400BECF31 /* Baoli.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 9955E82628FB810B00FA8362 /* Baoli.ttc */; };
 		997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */; };
 		99D2C78E2943935800327AF7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
@@ -328,7 +325,6 @@
 		994B3BBE28FB34C800F9CF67 /* TwelveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelveView.swift; sourceTree = "<group>"; };
 		994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizhiGridView.swift; sourceTree = "<group>"; };
 		994D37522864BFF200A9C99E /* FullDateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDateTitleView.swift; sourceTree = "<group>"; };
-		9955E82628FB810B00FA8362 /* Baoli.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Baoli.ttc; sourceTree = "<group>"; };
 		99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganDizhiApp.swift; sourceTree = "<group>"; };
 		9963204A290C32C1000C4A2B /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
 		99632069290DD90A000C4A2B /* TianganDizhi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TianganDizhi.entitlements; sourceTree = "<group>"; };
@@ -530,7 +526,6 @@
 				46EF7F8327108D73007030CC /* JieqiContainerView.swift */,
 				994190C0285A296A00295389 /* Utilities */,
 				46B79C0B2541E4B9003C0B7F /* Weibei TC */,
-				9955E82528FB810B00FA8362 /* Baoli TC */,
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
 				996321492911B8E4000C4A2B /* Shared.xcassets */,
 				990FEAE1294CC02D00CB1CEF /* Location.gpx */,
@@ -636,14 +631,6 @@
 				993843BD285636B800FA7631 /* ShiChenEntryView.swift */,
 			);
 			path = Content;
-			sourceTree = "<group>";
-		};
-		9955E82528FB810B00FA8362 /* Baoli TC */ = {
-			isa = PBXGroup;
-			children = (
-				9955E82628FB810B00FA8362 /* Baoli.ttc */,
-			);
-			path = "Baoli TC";
 			sourceTree = "<group>";
 		};
 		996321402911B2A4000C4A2B /* Timeline */ = {
@@ -1023,7 +1010,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				46B79C0E2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */,
-				997CD11F2955202000BECF31 /* Baoli.ttc in Resources */,
 				462A5F6E24FFE5F20032A125 /* Assets.xcassets in Resources */,
 				9963214B2911B8F3000C4A2B /* Shared.xcassets in Resources */,
 			);
@@ -1037,7 +1023,6 @@
 				46B79C0D2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */,
 				46AB55D4242B5EFF00F6604A /* Preview Assets.xcassets in Resources */,
 				46AB55D1242B5EFF00F6604A /* Assets.xcassets in Resources */,
-				9955E82728FB810B00FA8362 /* Baoli.ttc in Resources */,
 				9963214A2911B8E4000C4A2B /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1096,7 +1081,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FD3F722922994D0048DCEB /* WeibeiTC-Bold.otf in Resources */,
-				997CD1222955202400BECF31 /* Baoli.ttc in Resources */,
 				99FD3F4E292296180048DCEB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
