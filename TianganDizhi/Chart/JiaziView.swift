@@ -15,7 +15,7 @@ struct JiaziView: View {
 
   let data = getJiazhi()
     @Environment(\.bodyFont) var bodyFont
-    @Environment(\.titleFont) var titleFont
+    @Environment(\.footnote) var footnote
   let columns = [
     GridItem(.flexible(), spacing: 0),
     GridItem(.flexible(), spacing: 0),
@@ -31,15 +31,26 @@ struct JiaziView: View {
 
     var body: some View {
         let nian = Date().nian
-        
+        let yue = Date().yue
         GeometryReader { proxy in
             ScrollView {
                 LazyVGrid(columns: columns, alignment: .center, spacing: 0) {
                     ForEach(data, id: \.description) { item in
-                        Text("\(item.description)")
-                            .font(bodyFont)
-                            .foregroundColor(nian == item ? .primary : .secondary)
-                            .frame(minHeight: proxy.size.height / 6)
+                        ZStack(alignment: .bottom) {
+                            Text("\(item.description)")
+                                .font(bodyFont)
+                                .frame(minHeight: proxy.size.height / 6)
+                            
+                            if nian == item {
+                                Text("年柱")
+                                    .font(footnote)
+                            } else if yue == item {
+                                Text("月柱")
+                                    .font(footnote)
+                            }
+                            
+                        }
+                        .foregroundColor((nian == item || yue == item) ? .primary : .secondary)
                     }
                 }
             }
