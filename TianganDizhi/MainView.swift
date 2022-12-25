@@ -26,7 +26,7 @@ struct MainView: View {
 
   var body: some View {
     VStack {
-      let shichen = try! GanzhiDateConverter.shichen(updater.currentDate)
+        let shichen = updater.currentDate.shichen!
 
       #if os(watchOS)
       HStack {
@@ -38,7 +38,7 @@ struct MainView: View {
         }
       }
 
-      CircularContainerView(currentShichen: shichen, padding: -24)
+        CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
 
       #else
 
@@ -67,9 +67,9 @@ struct MainView: View {
         Spacer()
       }
 
-      Text(shichen.aliasName)
+        Text(shichen.dizhi.aliasName)
         .font(largeTitleFont)
-      Text(shichen.organReference)
+        Text(shichen.dizhi.organReference)
         .font(bodyFont)
 
       #if os(macOS)
@@ -77,9 +77,9 @@ struct MainView: View {
         .frame(minWidth: 640)
       #else
       if shouldScaleFont {
-        CircularContainerView(currentShichen: shichen, padding: 0)
+          CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
       } else {
-        CircularContainerView(currentShichen: shichen, padding: -10)
+          CircularContainerView(currentShichen: shichen.dizhi, padding: -10)
           .fixedSize(horizontal: false, vertical: true)
           .padding()
       }

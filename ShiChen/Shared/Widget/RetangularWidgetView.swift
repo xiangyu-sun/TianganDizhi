@@ -22,12 +22,12 @@ struct RetangularWidgetView: View {
   @State var date: Date
 
   var body: some View {
-    let shichen = try! GanzhiDateConverter.shichen(date)
+      let shichen = date.shichen
 
     HStack {
       Text(date.displayStringOfChineseYearMonthDateWithZodiac)
         .font(.custom(.weibeiBold, size: 20, relativeTo: .body))
-      Text(shichen.displayHourText)
+        Text(shichen?.dizhi.displayHourText ?? "")
       #if os(watchOS)
         .font(titleFont)
       #else

@@ -55,6 +55,11 @@
 		993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
 		993CFB9928809F690015252E /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
 		993CFB9A28809F6A0015252E /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
+		994215CA2958A0EF003C5CA1 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994215C92958A0EF003C5CA1 /* ChineseAstrologyCalendar */; };
+		994215CC2958A27D003C5CA1 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994215CB2958A27D003C5CA1 /* ChineseAstrologyCalendar */; };
+		994215CE2958A282003C5CA1 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994215CD2958A282003C5CA1 /* ChineseAstrologyCalendar */; };
+		994215D02958A286003C5CA1 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994215CF2958A286003C5CA1 /* ChineseAstrologyCalendar */; };
+		994215D22958A289003C5CA1 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994215D12958A289003C5CA1 /* ChineseAstrologyCalendar */; };
 		994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD18E2868F96800BB5BED /* InlineWidgetView.swift */; };
 		994AD1902868F96800BB5BED /* InlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD18E2868F96800BB5BED /* InlineWidgetView.swift */; };
 		994AD1922868FA0400BB5BED /* CircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD1912868FA0400BB5BED /* CircularWidgetView.swift */; };
@@ -63,14 +68,11 @@
 		994AD1962868FA6500BB5BED /* RetangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD1942868FA6500BB5BED /* RetangularWidgetView.swift */; };
 		994B3BBF28FB34C800F9CF67 /* TwelveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994B3BBE28FB34C800F9CF67 /* TwelveView.swift */; };
 		994B3BC128FB35C000F9CF67 /* DizhiGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */; };
-		994B3BCE28FB6F1900F9CF67 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994B3BCD28FB6F1900F9CF67 /* ChineseAstrologyCalendar */; };
-		994B3BD028FB70B300F9CF67 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994B3BCF28FB70B300F9CF67 /* ChineseAstrologyCalendar */; };
 		994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D37522864BFF200A9C99E /* FullDateTitleView.swift */; };
 		99632043290C2D1E000C4A2B /* TianganDizhiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */; };
 		9963204B290C32C1000C4A2B /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963204A290C32C1000C4A2B /* DateProvider.swift */; };
 		9963204D290D52AA000C4A2B /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 9963204C290D52AA000C4A2B /* AppStoreReviewPrompt */; settings = {ATTRIBUTES = (Required, ); }; };
 		9963206C290DE153000C4A2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CE242B5EFD00F6604A /* ContentView.swift */; };
-		9963206E290DE18E000C4A2B /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 9963206D290DE18E000C4A2B /* ChineseAstrologyCalendar */; };
 		99632070290DE195000C4A2B /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 9963206F290DE195000C4A2B /* JingluoShuxue */; };
 		99632072290DE199000C4A2B /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 99632071290DE199000C4A2B /* ChineseTranditionalMusicCore */; };
 		99632073290DE1DE000C4A2B /* ShichenTimeLineSceduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE8250620CC008E8D48 /* ShichenTimeLineSceduler.swift */; };
@@ -91,7 +93,6 @@
 		99632084290DE1DE000C4A2B /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
 		99632085290DE1DE000C4A2B /* ChinesePinyin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */; };
 		99632086290DE1DE000C4A2B /* TianganListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055A424AF2B3A00AC2AE5 /* TianganListView.swift */; };
-		99632088290DE2FE000C4A2B /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 99632087290DE2FE000C4A2B /* ChineseAstrologyCalendar */; };
 		9963212229107B7B000C4A2B /* ShichenWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		996321422911B2CD000C4A2B /* MinuteTimeLineScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321412911B2CD000C4A2B /* MinuteTimeLineScheduler.swift */; };
 		996321452911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */; };
@@ -148,7 +149,6 @@
 		99FD3F48292296170048DCEB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
 		99FD3F4E292296180048DCEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99FD3F4D292296180048DCEB /* Assets.xcassets */; };
 		99FD3F55292296180048DCEB /* ShichenMacWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 99FD3F46292296170048DCEB /* ShichenMacWidgetExtension.appex */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		99FD3F5A292296320048DCEB /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 99FD3F59292296320048DCEB /* ChineseAstrologyCalendar */; };
 		99FD3F5C2922968B0048DCEB /* ShichenTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */; };
 		99FD3F5E2922968B0048DCEB /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
 		99FD3F5F2922968B0048DCEB /* FullDateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D37522864BFF200A9C99E /* FullDateTitleView.swift */; };
@@ -367,7 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */,
-				994B3BD028FB70B300F9CF67 /* ChineseAstrologyCalendar in Frameworks */,
+				994215D22958A289003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +378,7 @@
 			files = (
 				9963204D290D52AA000C4A2B /* AppStoreReviewPrompt in Frameworks */,
 				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
-				994B3BCE28FB6F1900F9CF67 /* ChineseAstrologyCalendar in Frameworks */,
+				994215CA2958A0EF003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */,
 				46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */,
 			);
@@ -402,8 +402,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9963206E290DE18E000C4A2B /* ChineseAstrologyCalendar in Frameworks */,
 				99632070290DE195000C4A2B /* JingluoShuxue in Frameworks */,
+				994215CC2958A27D003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				99632072290DE199000C4A2B /* ChineseTranditionalMusicCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				997C68822865FAD200B40D3F /* SwiftUI.framework in Frameworks */,
-				99632088290DE2FE000C4A2B /* ChineseAstrologyCalendar in Frameworks */,
+				994215CE2958A282003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				997C68812865FAD200B40D3F /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FD3F48292296170048DCEB /* SwiftUI.framework in Frameworks */,
-				99FD3F5A292296320048DCEB /* ChineseAstrologyCalendar in Frameworks */,
+				994215D02958A286003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				99FD3F47292296170048DCEB /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,7 +753,7 @@
 			);
 			name = ShiChenExtension;
 			packageProductDependencies = (
-				994B3BCF28FB70B300F9CF67 /* ChineseAstrologyCalendar */,
+				994215D12958A289003C5CA1 /* ChineseAstrologyCalendar */,
 			);
 			productName = ShiChenExtension;
 			productReference = 462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */;
@@ -780,9 +780,9 @@
 			packageProductDependencies = (
 				46339FEF25029C64007D4137 /* JingluoShuxue */,
 				46F9C28425D137020017440D /* ChineseTranditionalMusicCore */,
-				994B3BCD28FB6F1900F9CF67 /* ChineseAstrologyCalendar */,
 				9963204C290D52AA000C4A2B /* AppStoreReviewPrompt */,
 				99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */,
+				994215C92958A0EF003C5CA1 /* ChineseAstrologyCalendar */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -842,9 +842,9 @@
 			);
 			name = "ShichenWatch Watch App";
 			packageProductDependencies = (
-				9963206D290DE18E000C4A2B /* ChineseAstrologyCalendar */,
 				9963206F290DE195000C4A2B /* JingluoShuxue */,
 				99632071290DE199000C4A2B /* ChineseTranditionalMusicCore */,
+				994215CB2958A27D003C5CA1 /* ChineseAstrologyCalendar */,
 			);
 			productName = "ShichenWatch Watch App";
 			productReference = 997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */;
@@ -900,7 +900,7 @@
 			);
 			name = ShichenWatchExtension;
 			packageProductDependencies = (
-				99632087290DE2FE000C4A2B /* ChineseAstrologyCalendar */,
+				994215CD2958A282003C5CA1 /* ChineseAstrologyCalendar */,
 			);
 			productName = ShichenWatchExtension;
 			productReference = 997C68802865FAD200B40D3F /* ShichenWatchExtension.appex */;
@@ -920,7 +920,7 @@
 			);
 			name = ShichenMacWidgetExtension;
 			packageProductDependencies = (
-				99FD3F59292296320048DCEB /* ChineseAstrologyCalendar */,
+				994215CF2958A286003C5CA1 /* ChineseAstrologyCalendar */,
 			);
 			productName = ShichenMacWidgetExtension;
 			productReference = 99FD3F46292296170048DCEB /* ShichenMacWidgetExtension.appex */;
@@ -983,9 +983,9 @@
 			packageReferences = (
 				46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */,
 				46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */,
-				994B3BCC28FB6F1900F9CF67 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
 				99CACD7D29379B6B005FCEA0 /* XCRemoteSwiftPackageReference "swift" */,
 				99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */,
+				994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -2103,7 +2103,7 @@
 				kind = branch;
 			};
 		};
-		994B3BCC28FB6F1900F9CF67 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */ = {
+		994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git";
 			requirement = {
@@ -2140,24 +2140,34 @@
 			package = 46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */;
 			productName = ChineseTranditionalMusicCore;
 		};
-		994B3BCD28FB6F1900F9CF67 /* ChineseAstrologyCalendar */ = {
+		994215C92958A0EF003C5CA1 /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 994B3BCC28FB6F1900F9CF67 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			package = 994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
 			productName = ChineseAstrologyCalendar;
 		};
-		994B3BCF28FB70B300F9CF67 /* ChineseAstrologyCalendar */ = {
+		994215CB2958A27D003C5CA1 /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 994B3BCC28FB6F1900F9CF67 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			package = 994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			productName = ChineseAstrologyCalendar;
+		};
+		994215CD2958A282003C5CA1 /* ChineseAstrologyCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			productName = ChineseAstrologyCalendar;
+		};
+		994215CF2958A286003C5CA1 /* ChineseAstrologyCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
+			productName = ChineseAstrologyCalendar;
+		};
+		994215D12958A289003C5CA1 /* ChineseAstrologyCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
 			productName = ChineseAstrologyCalendar;
 		};
 		9963204C290D52AA000C4A2B /* AppStoreReviewPrompt */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppStoreReviewPrompt;
-		};
-		9963206D290DE18E000C4A2B /* ChineseAstrologyCalendar */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 994B3BCC28FB6F1900F9CF67 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
-			productName = ChineseAstrologyCalendar;
 		};
 		9963206F290DE195000C4A2B /* JingluoShuxue */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -2169,20 +2179,10 @@
 			package = 46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */;
 			productName = ChineseTranditionalMusicCore;
 		};
-		99632087290DE2FE000C4A2B /* ChineseAstrologyCalendar */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 994B3BCC28FB6F1900F9CF67 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
-			productName = ChineseAstrologyCalendar;
-		};
 		99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */;
 			productName = AppStoreReviewPrompt;
-		};
-		99FD3F59292296320048DCEB /* ChineseAstrologyCalendar */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 994B3BCC28FB6F1900F9CF67 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */;
-			productName = ChineseAstrologyCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

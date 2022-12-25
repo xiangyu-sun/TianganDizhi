@@ -37,8 +37,9 @@ struct CompactShichenView: View {
 
   private var titleView: some View {
     HStack {
-      Text((try? GanzhiDateConverter.nian(date).formatedYear) ?? "")
-      Text((try? GanzhiDateConverter.zodiac(date).rawValue) ?? "")
+        
+      Text(date.nian?.formatedYear ?? "")
+        Text(date.zodiac?.rawValue ?? "")
     }
     .font(title3Font)
   }

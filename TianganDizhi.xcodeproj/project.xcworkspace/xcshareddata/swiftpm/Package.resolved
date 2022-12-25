@@ -15,7 +15,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
         "branch" : "master",
-        "revision" : "d3a1144769b632a86b2a16542c20c6f181631b2e"
+        "revision" : "7d4151af1b0cdc3454ae6fbcfb1555aac8445674"
       }
     },
     {
@@ -24,7 +24,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseTranditionalMusicCore.git",
       "state" : {
         "branch" : "main",
-        "revision" : "af409cca6ba9e8a5cd51ecaf46692f18526ffbaf"
+        "revision" : "06b35d8b1e2db2098ac1ded4d1c5b383dbb5b9d2"
       }
     },
     {
@@ -33,7 +33,7 @@
       "location" : "https://github.com/xiangyu-sun/JingluoShuxueCore.git",
       "state" : {
         "branch" : "main",
-        "revision" : "f389ee9fb42ede0da2b646e4c40b666fbd8d8f7b"
+        "revision" : "1caeef22d084f51dd0549e793f77105939a8b336"
       }
     },
     {

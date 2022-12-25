@@ -35,7 +35,7 @@ private struct DizhiView: View {
   var springFestiveForegroundEnabled = false
 
   var rotation: Double {
-    Double((shichen.rawValue + 7) % 12)
+    Double((shichen.rawValue + 5) % 12)
   }
 
   var body: some View {

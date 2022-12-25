@@ -26,19 +26,19 @@ struct DizhiListView: View {
     var dizhi: [Dizhi] {
       switch self {
       case .name:
-        return Dizhi.orderedAllCases
+        return Dizhi.allCases
       case .month:
-        return Dizhi.xiaDynastyYearOrder
+        return Dizhi.orderedMonthAlCases
       case .time:
-        return Dizhi.orderedAllCases
+        return Dizhi.allCases
       case .organs:
-        return Dizhi.orderedAllCases
+        return Dizhi.allCases
       case .alias:
-        return Dizhi.orderedAllCases
+        return Dizhi.allCases
       case .zodiac:
-        return Dizhi.orderedAllCases
+        return Dizhi.allCases
       case .lvlv:
-        return Dizhi.xiaDynastyYearOrder
+        return Dizhi.orderedMonthAlCases
       }
     }
 

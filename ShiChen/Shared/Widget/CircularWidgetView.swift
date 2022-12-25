@@ -20,20 +20,21 @@ struct CircularWidgetView: View {
   @State var date: Date
 
   var body: some View {
-    let shichen = try! GanzhiDateConverter.shichen(date)
+     
+      let shichen = date.shichen!
 
-    let start = date.timeIntervalSince1970 - shichen.startDate!.timeIntervalSince1970
+    let start = date.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
 
-    let base = shichen.endDate!.timeIntervalSince1970 - shichen.startDate!.timeIntervalSince1970
+    let base = shichen.endDate.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
 
     ProgressView(
       value: start / base,
       label: {
-        Text(shichen.displayHourText)
+          Text(shichen.dizhi.displayHourText)
           .widgetAccentable()
       },
       currentValueLabel: {
-        Text(shichen.displayHourText)
+          Text(shichen.dizhi.displayHourText)
           .widgetAccentable()
         #if os(iOS)
           .font(bodyFont)

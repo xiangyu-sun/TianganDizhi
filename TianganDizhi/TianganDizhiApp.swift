@@ -18,7 +18,7 @@ struct TianganDizhiApp: App {
   @ObservedObject var updater = DateProvider()
 
   var body: some Scene {
-    let dizh = try? GanzhiDateConverter.shichen(Date())
+      let dizh = Date().shichen?.dizhi
     WindowGroup {
       ContentView()
     }

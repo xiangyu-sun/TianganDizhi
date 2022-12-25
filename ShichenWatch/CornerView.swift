@@ -16,10 +16,10 @@ struct CornerView: View {
   @State var date: Date
 
   var body: some View {
-    let shichen = try! GanzhiDateConverter.shichen(date)
-    let start = date.timeIntervalSince1970 - shichen.startDate!.timeIntervalSince1970
+      let shichen = date.shichen!
+      let start = date.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
 
-    let base = shichen.endDate!.timeIntervalSince1970 - shichen.startDate!.timeIntervalSince1970
+      let base = shichen.endDate.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
     ZStack {
       AccessoryWidgetBackground()
       Text(date.chineseDate)
@@ -27,10 +27,10 @@ struct CornerView: View {
     }
     .widgetLabel {
       Gauge(value: start / base) { } currentValueLabel: { } minimumValueLabel: {
-        Text(try! GanzhiDateConverter.shichen(shichen.startDate!).chineseCharactor)
+          Text(shichen.startDate.shichen?.dizhi.chineseCharactor ?? "")
           .foregroundColor(.primary)
       } maximumValueLabel: {
-        Text(shichen.next.chineseCharactor)
+          Text(shichen.dizhi.next.chineseCharactor)
           .foregroundColor(.secondary)
       }
     }

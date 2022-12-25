@@ -13,7 +13,6 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>WeibeiTC-Bold.otf</string>
-		<string>Baoli.ttc</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.</string>

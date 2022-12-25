@@ -126,6 +126,7 @@ struct Cells_Previews: PreviewProvider {
       LvlvCell(dizhi: .zi)
       OrganShichenCell(shichen: .zi)
       DizhiZodiaCell(dizhi: .hai)
+      ShichenMonthCell(shichen: .chen)
     }
   }
 }

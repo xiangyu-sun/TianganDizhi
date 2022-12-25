@@ -20,7 +20,7 @@ struct ShiChenYearMonthDateEntryView: View {
   @Environment(\.widgetFamily) var family
 
   var body: some View {
-    let shichen = try! GanzhiDateConverter.shichen(entry.date)
+      let shichen = entry.date.shichen
 
     switch family {
     case .accessoryInline:
@@ -41,7 +41,7 @@ struct ShiChenYearMonthDateEntryView: View {
         Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
           .font(bodyFont)
           .padding([.leading,.trailing], 15)
-        Text(shichen.displayHourText)
+          Text(shichen?.dizhi.displayHourText ?? "")
           .font(titleFont)
         Spacer()
       }
