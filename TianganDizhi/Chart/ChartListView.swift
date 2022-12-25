@@ -27,7 +27,7 @@ struct ChartListView: View {
 
       }
       .font(bodyFont)
-      .navigationTitle(Text("天干地支相關知識"))
+      .navigationTitle(Text("圖示"))
     }
     #if os(iOS)
     .navigationViewStyle(StackNavigationViewStyle())

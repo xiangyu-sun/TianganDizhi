@@ -23,8 +23,8 @@ struct ShichenTimeLineSceduler {
     }
       let nextShichenStart = currentShichen.nextStartDate
       
-    for hourOffset in 0 ..< 5 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset * 2, to: nextShichenStart)!
+    for hourOffset in 0 ..< 11 {
+      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: nextShichenStart)!
       timeline.append(entryDate)
     }
     return timeline
@@ -33,8 +33,8 @@ struct ShichenTimeLineSceduler {
   static func backup() -> [Date] {
     let currentDate = Date()
     var timeline = [Date]()
-    for hourOffset in 0 ..< 5 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset * 2, to: currentDate)!
+    for hourOffset in 0 ..< 11 {
+      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
       timeline.append(entryDate)
     }
     return timeline

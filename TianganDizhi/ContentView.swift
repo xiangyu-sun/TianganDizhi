@@ -39,7 +39,7 @@ struct ContentView: View {
         ChartListView()
         .tabItem {
           Image(systemName: "table")
-          Text("表格匯總")
+          Text("圖")
         }
 
       SettingsView()

@@ -21,7 +21,7 @@ class TianganDizhiTests: XCTestCase {
 
   func testTimeline() {
     let timeline = ShichenTimeLineSceduler.buildTimeLine()
-    XCTAssertEqual(timeline.count, 6)
+    XCTAssertEqual(timeline.count, 12)
     let comp: Set<Calendar.Component> = [.hour, .minute, .second, .nanosecond]
 
     let second = timeline[1]
@@ -40,11 +40,11 @@ class TianganDizhiTests: XCTestCase {
     let forth = timeline[3]
     let fivth = timeline[4]
 
-    XCTAssertEqual(Calendar.current.dateComponents(comp, from: third, to: forth).hour, 2)
+    XCTAssertEqual(Calendar.current.dateComponents(comp, from: third, to: forth).hour, 1)
     XCTAssertEqual(Calendar.current.dateComponents(comp, from: third, to: forth).minute, 0)
     XCTAssertEqual(Calendar.current.dateComponents(comp, from: third, to: forth).second, 0)
 
-    XCTAssertEqual(Calendar.current.dateComponents(comp, from: forth, to: fivth).hour, 2)
+    XCTAssertEqual(Calendar.current.dateComponents(comp, from: forth, to: fivth).hour, 1)
     XCTAssertEqual(Calendar.current.dateComponents(comp, from: forth, to: fivth).minute, 0)
     XCTAssertEqual(Calendar.current.dateComponents(comp, from: forth, to: fivth).second, 0)
   }
