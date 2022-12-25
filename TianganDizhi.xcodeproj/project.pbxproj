@@ -60,6 +60,10 @@
 		994215CE2958A282003C5CA1 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994215CD2958A282003C5CA1 /* ChineseAstrologyCalendar */; };
 		994215D02958A286003C5CA1 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994215CF2958A286003C5CA1 /* ChineseAstrologyCalendar */; };
 		994215D22958A289003C5CA1 /* ChineseAstrologyCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 994215D12958A289003C5CA1 /* ChineseAstrologyCalendar */; };
+		994215D42958A53D003C5CA1 /* JiaziView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215D32958A53D003C5CA1 /* JiaziView.swift */; };
+		994215D52958A53D003C5CA1 /* JiaziView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215D32958A53D003C5CA1 /* JiaziView.swift */; };
+		994215D72958A7D8003C5CA1 /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215D62958A7D8003C5CA1 /* ChartListView.swift */; };
+		994215D82958A7D8003C5CA1 /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215D62958A7D8003C5CA1 /* ChartListView.swift */; };
 		994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD18E2868F96800BB5BED /* InlineWidgetView.swift */; };
 		994AD1902868F96800BB5BED /* InlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD18E2868F96800BB5BED /* InlineWidgetView.swift */; };
 		994AD1922868FA0400BB5BED /* CircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD1912868FA0400BB5BED /* CircularWidgetView.swift */; };
@@ -319,6 +323,8 @@
 		990FEAE1294CC02D00CB1CEF /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		993843BD285636B800FA7631 /* ShiChenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenEntryView.swift; sourceTree = "<group>"; };
 		993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenYearMonthDateEntryView.swift; sourceTree = "<group>"; };
+		994215D32958A53D003C5CA1 /* JiaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiaziView.swift; sourceTree = "<group>"; };
+		994215D62958A7D8003C5CA1 /* ChartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListView.swift; sourceTree = "<group>"; };
 		994AD18E2868F96800BB5BED /* InlineWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineWidgetView.swift; sourceTree = "<group>"; };
 		994AD1912868FA0400BB5BED /* CircularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularWidgetView.swift; sourceTree = "<group>"; };
 		994AD1942868FA6500BB5BED /* RetangularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetangularWidgetView.swift; sourceTree = "<group>"; };
@@ -517,8 +523,8 @@
 				46339FEA25028DB5007D4137 /* MainView.swift */,
 				9963204A290C32C1000C4A2B /* DateProvider.swift */,
 				994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */,
-				994B3BBE28FB34C800F9CF67 /* TwelveView.swift */,
 				997CD1152954CF9700BECF31 /* SettingsView.swift */,
+				994215D92958A93E003C5CA1 /* Chart */,
 				994190BF285A294700295389 /* Shici */,
 				460BA9A826F24C400025CA39 /* Knowledge */,
 				99FD3F732927EAB70048DCEB /* AppWidgetShared */,
@@ -604,6 +610,16 @@
 				46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		994215D92958A93E003C5CA1 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				994B3BBE28FB34C800F9CF67 /* TwelveView.swift */,
+				994215D32958A53D003C5CA1 /* JiaziView.swift */,
+				994215D62958A7D8003C5CA1 /* ChartListView.swift */,
+			);
+			path = Chart;
 			sourceTree = "<group>";
 		};
 		994AD1972868FBA800BB5BED /* Widget */ = {
@@ -1139,6 +1155,8 @@
 				990FEAE0294CB03900CB1CEF /* WeatherData.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
 				46339FE925028279007D4137 /* KnowledgeView.swift in Sources */,
+				994215D42958A53D003C5CA1 /* JiaziView.swift in Sources */,
+				994215D72958A7D8003C5CA1 /* ChartListView.swift in Sources */,
 				99FD3F752927EBD90048DCEB /* WuxingView.swift in Sources */,
 				460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */,
 				46339FE325024E85007D4137 /* Styler.swift in Sources */,
@@ -1178,7 +1196,9 @@
 				997CD11C2954FE1500BECF31 /* Constants.swift in Sources */,
 				99632077290DE1DE000C4A2B /* JieqiCell.swift in Sources */,
 				99632078290DE1DE000C4A2B /* MainView.swift in Sources */,
+				994215D82958A7D8003C5CA1 /* ChartListView.swift in Sources */,
 				9963206C290DE153000C4A2B /* ContentView.swift in Sources */,
+				994215D52958A53D003C5CA1 /* JiaziView.swift in Sources */,
 				99632082290DE1DE000C4A2B /* DizhiListView.swift in Sources */,
 				9963207B290DE1DE000C4A2B /* DateProvider.swift in Sources */,
 				99632081290DE1DE000C4A2B /* DizhiGridView.swift in Sources */,

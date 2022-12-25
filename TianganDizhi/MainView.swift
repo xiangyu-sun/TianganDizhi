@@ -73,7 +73,7 @@ struct MainView: View {
         .font(bodyFont)
 
       #if os(macOS)
-      CircularContainerView(currentShichen: shichen, padding: 0)
+        CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
         .frame(minWidth: 640)
       #else
       if shouldScaleFont {

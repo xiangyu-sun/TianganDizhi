@@ -30,6 +30,7 @@ struct TwelveView: View {
       }
       .padding()
     }
+    .navigationTitle("十二地支")
   }
 }
 

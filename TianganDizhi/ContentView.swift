@@ -36,17 +36,17 @@ struct ContentView: View {
       //                Text("二十四節氣")
       //            }
 
-      TwelveView()
+        ChartListView()
         .tabItem {
-          Image(systemName: "book")
-          Text("十二地支匯總")
+          Image(systemName: "table")
+          Text("表格匯總")
         }
 
-//      SettingsView()
-//        .tabItem {
-//          Image(systemName: "gear")
-//          Text("設置")
-//        }
+      SettingsView()
+        .tabItem {
+          Image(systemName: "gear")
+          Text("設置")
+        }
     }
     #if os(iOS)
     .onAppear {
