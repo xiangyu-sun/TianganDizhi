@@ -85,7 +85,6 @@ struct MainView: View {
       }
       #endif
       Spacer()
-
       #endif
     }
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
@@ -103,7 +102,8 @@ struct MainView: View {
 //          }
 //        }
 //      }
-
+      #elseif os(macOS)
+      .frame(minHeight: 640)
     #endif
   }
 }

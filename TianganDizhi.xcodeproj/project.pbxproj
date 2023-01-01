@@ -64,6 +64,7 @@
 		994215D52958A53D003C5CA1 /* JiaziView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215D32958A53D003C5CA1 /* JiaziView.swift */; };
 		994215D72958A7D8003C5CA1 /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215D62958A7D8003C5CA1 /* ChartListView.swift */; };
 		994215D82958A7D8003C5CA1 /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215D62958A7D8003C5CA1 /* ChartListView.swift */; };
+		994215DA29621D23003C5CA1 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD18E2868F96800BB5BED /* InlineWidgetView.swift */; };
 		994AD1902868F96800BB5BED /* InlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD18E2868F96800BB5BED /* InlineWidgetView.swift */; };
 		994AD1922868FA0400BB5BED /* CircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD1912868FA0400BB5BED /* CircularWidgetView.swift */; };
@@ -1098,6 +1099,7 @@
 			files = (
 				99FD3F722922994D0048DCEB /* WeibeiTC-Bold.otf in Resources */,
 				99FD3F4E292296180048DCEB /* Assets.xcassets in Resources */,
+				994215DA29621D23003C5CA1 /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
