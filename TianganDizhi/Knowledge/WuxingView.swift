@@ -58,6 +58,9 @@ struct WuxingView: View {
                   HStack {
                     let wuzang = 五臟.allCases.first { $0.wuxing == item } ?? .心
                     Text("\(wuzang.rawValue)")
+                    
+                    let wufu = 五腑.allCases.first { $0.wuxing == item } ?? .小腸
+                    Text("\(wufu.rawValue)")
                     Text("\(wuzang.情緒)")
                   }
                 }
