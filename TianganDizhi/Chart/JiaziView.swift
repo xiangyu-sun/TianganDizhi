@@ -39,15 +39,21 @@ struct JiaziView: View {
                         ZStack(alignment: .bottom) {
                             Text("\(item.description)")
                                 .font(bodyFont)
+                          #if os(iOS)
                                 .frame(minHeight: proxy.size.height / 6)
-                            
-                            if nian == item {
-                                Text("年柱")
-                                    .font(footnote)
-                            } else if yue == item {
-                                Text("月柱")
-                                    .font(footnote)
-                            }
+                          #endif
+                          
+                          #if os(watchOS)
+                          
+                          #else
+                          if nian == item {
+                              Text("年柱")
+                                  .font(footnote)
+                          } else if yue == item {
+                              Text("月柱")
+                                  .font(footnote)
+                          }
+                          #endif
                             
                         }
                         .foregroundColor((nian == item || yue == item) ? .primary : .secondary)
