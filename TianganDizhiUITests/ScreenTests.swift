@@ -41,12 +41,18 @@ final class ScreenTests: XCTestCase {
     }
   }
 
+  #if os(macOS)
+  
+  #else
+  
   func testTakeScreenshotOfMainWindow() {
     app.tabBars.firstMatch.buttons["天干地支"].tap()
     takingScreenShot()
     app.tabBars.firstMatch.buttons["十二地支匯總"].tap()
     takingScreenShot()
   }
+  
+  #endif
 
   func takingScreenShot() {
     let screenshot = app.windows.firstMatch.screenshot()
