@@ -57,7 +57,9 @@ struct KnowledgeView: View {
       .font(bodyFont)
       .navigationTitle(Text("天干地支相關知識"))
     }
+#if os(iOS) || os(watchOS)
     .navigationViewStyle(StackNavigationViewStyle())
+#endif
   }
 }
 
