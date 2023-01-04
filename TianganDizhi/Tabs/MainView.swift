@@ -23,6 +23,8 @@ struct MainView: View {
 
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
+  @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
+  var useTranditionalNaming = false
 
   var body: some View {
     VStack {
@@ -34,7 +36,7 @@ struct MainView: View {
         if let value = weatherData.forcastedWeather {
           Text(value.moonPhaseDisplayName)
         } else {
-          Text(updater.currentDate.chineseDay?.moonPhase.rawValue ?? "")
+          Text(updater.currentDate.chineseDay?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
         }
       }
 
@@ -56,7 +58,7 @@ struct MainView: View {
                 if #available(iOS 16.0, *) {
                   Image(systemName: moonphase.moonPhase.symbolName)
                 }
-                Text(moonphase.rawValue)
+                Text(moonphase.name(traditionnal: useTranditionalNaming))
               }
               .font(bodyFont)
             }

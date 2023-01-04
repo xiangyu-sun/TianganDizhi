@@ -24,8 +24,8 @@ struct ShichenMacWidget: Widget {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
       ShiChenEntryView(entry: entry)
     }
-    .configurationDisplayName("十二时辰")
-    .description("十二地支为名的十二时辰计，俗稱，以及相關臟器")
+    .configurationDisplayName(WidgetConstants.normalWidgetDisplayName)
+    .description(WidgetConstants.normalWidgetDescription)
     .supportedFamilies(supportedFamilies)
   }
 }

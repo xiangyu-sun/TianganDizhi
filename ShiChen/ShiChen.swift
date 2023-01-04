@@ -28,8 +28,8 @@ struct Nongli: Widget {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
       ShiChenYearMonthDateEntryView(entry: entry)
     }
-    .configurationDisplayName("年月日時辰")
-    .description("農曆年月日以及十二時辰")
+    .configurationDisplayName(WidgetConstants.simpleWidgetTitle)
+    .description(WidgetConstants.simpleWidgetDescription)
     #if os(watchOS)
       .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
     #else
@@ -58,8 +58,8 @@ struct ShiChen: Widget {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
       ShiChenEntryView(entry: entry)
     }
-    .configurationDisplayName("十二时辰")
-    .description("十二地支为名的十二时辰计，俗稱，以及相關臟器")
+    .configurationDisplayName(WidgetConstants.normalWidgetDisplayName)
+    .description(WidgetConstants.normalWidgetDescription)
     #if os(watchOS)
       .supportedFamilies([.accessoryInline, .accessoryRectangular])
     #else

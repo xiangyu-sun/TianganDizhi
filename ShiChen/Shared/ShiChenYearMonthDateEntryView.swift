@@ -16,8 +16,15 @@ struct ShiChenYearMonthDateEntryView: View {
   var entry: SimpleEntry
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.titleFont) var titleFont
+  @Environment(\.title2Font) var title2Font
   @Environment(\.title3Font) var title3Font
   @Environment(\.widgetFamily) var family
+  
+  @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
+  var springFestiveBackgroundEnabled = false
+
+  @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
+  var springFestiveForegroundEnabled = false
 
   var body: some View {
       let shichen = entry.date.shichen
@@ -35,6 +42,19 @@ struct ShiChenYearMonthDateEntryView: View {
       if #available(iOSApplicationExtension 16.0, *) {
         RetangularWidgetView(date: entry.date)
       }
+    case .systemMedium:
+      VStack {
+        Spacer()
+        Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+          .font(title2Font)
+          .padding([.leading,.trailing], 15)
+          Text(shichen?.dizhi.displayHourText ?? "")
+          .font(titleFont)
+        Spacer()
+      }
+      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     default:
       VStack {
         Spacer()
@@ -45,6 +65,9 @@ struct ShiChenYearMonthDateEntryView: View {
           .font(titleFont)
         Spacer()
       }
+      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     }
   }
 }

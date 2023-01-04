@@ -39,14 +39,21 @@ struct SettingsView: View {
       }
       .navigationTitle(Text("設置"))
       .onChange(of: springFestiveBackgroundEnabled) { _ in
-        if #available(watchOS 9.0, *) {
+        if #available(watchOS 9.0, iOS 14.0, *) {
+          WidgetCenter.shared.reloadAllTimelines()
+        } else {
+          // Fallback on earlier versions
+        }
+      }
+      .onChange(of: useTranditionalNaming) { _ in
+        if #available(watchOS 9.0, iOS 14.0, *) {
           WidgetCenter.shared.reloadAllTimelines()
         } else {
           // Fallback on earlier versions
         }
       }
       .onChange(of: springFestiveForegroundEnabled) { _ in
-        if #available(watchOS 9.0, *) {
+        if #available(watchOS 9.0, iOS 14.0, *) {
           WidgetCenter.shared.reloadAllTimelines()
         } else {
           // Fallback on earlier versions

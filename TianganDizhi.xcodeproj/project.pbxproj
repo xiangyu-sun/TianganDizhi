@@ -65,6 +65,14 @@
 		994215D72958A7D8003C5CA1 /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215D62958A7D8003C5CA1 /* ChartListView.swift */; };
 		994215D82958A7D8003C5CA1 /* ChartListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215D62958A7D8003C5CA1 /* ChartListView.swift */; };
 		994215DA29621D23003C5CA1 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
+		994215E72965C368003C5CA1 /* WidgetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215E62965C368003C5CA1 /* WidgetConstants.swift */; };
+		994215E82965C368003C5CA1 /* WidgetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215E62965C368003C5CA1 /* WidgetConstants.swift */; };
+		994215E92965C368003C5CA1 /* WidgetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215E62965C368003C5CA1 /* WidgetConstants.swift */; };
+		994215ED2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215EC2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift */; };
+		994215EE2965C80E003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215EC2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift */; };
+		994215EF2965C810003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215EC2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift */; };
+		994215F02965C811003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215EC2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift */; };
+		994215F12965C812003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994215EC2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift */; };
 		994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD18E2868F96800BB5BED /* InlineWidgetView.swift */; };
 		994AD1902868F96800BB5BED /* InlineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD18E2868F96800BB5BED /* InlineWidgetView.swift */; };
 		994AD1922868FA0400BB5BED /* CircularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994AD1912868FA0400BB5BED /* CircularWidgetView.swift */; };
@@ -326,6 +334,8 @@
 		993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenYearMonthDateEntryView.swift; sourceTree = "<group>"; };
 		994215D32958A53D003C5CA1 /* JiaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiaziView.swift; sourceTree = "<group>"; };
 		994215D62958A7D8003C5CA1 /* ChartListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartListView.swift; sourceTree = "<group>"; };
+		994215E62965C368003C5CA1 /* WidgetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetConstants.swift; sourceTree = "<group>"; };
+		994215EC2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChineseMoonPhase+Toggle.swift"; sourceTree = "<group>"; };
 		994AD18E2868F96800BB5BED /* InlineWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineWidgetView.swift; sourceTree = "<group>"; };
 		994AD1912868FA0400BB5BED /* CircularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularWidgetView.swift; sourceTree = "<group>"; };
 		994AD1942868FA6500BB5BED /* RetangularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetangularWidgetView.swift; sourceTree = "<group>"; };
@@ -732,6 +742,7 @@
 				9955E82428FB782600FA8362 /* Content */,
 				996321432911B374000C4A2B /* IntentTimelineProvider */,
 				997C689E2868A81500B40D3F /* SimpleEntry.swift */,
+				994215E62965C368003C5CA1 /* WidgetConstants.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -757,6 +768,7 @@
 				994190BE285A28E900295389 /* ShiChenClock */,
 				990FEAD7294C9EA800CB1CEF /* WeatherData.swift */,
 				997CD1192954FDB600BECF31 /* Constants.swift */,
+				994215EC2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift */,
 			);
 			path = AppWidgetShared;
 			sourceTree = "<group>";
@@ -1124,6 +1136,7 @@
 				993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				996321472911B3F0000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				46B79C462541F962003C0B7F /* Environment.swift in Sources */,
+				994215EE2965C80E003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */,
 				46339FE425024F2B007D4137 /* Styler.swift in Sources */,
 				46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */,
@@ -1140,6 +1153,7 @@
 				997C68782864CB9B00B40D3F /* AllWidgets.swift in Sources */,
 				997C68AB2868A8F600B40D3F /* ShichenTimelineProvider.swift in Sources */,
 				46B7FCEA250630DE008E8D48 /* ShichenTimeLineSceduler.swift in Sources */,
+				994215E72965C368003C5CA1 /* WidgetConstants.swift in Sources */,
 				994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */,
 				997CD11B2954FE1300BECF31 /* Constants.swift in Sources */,
 			);
@@ -1163,6 +1177,7 @@
 				46F9C28C25D137D50017440D /* Cells.swift in Sources */,
 				46B7FCE9250620CC008E8D48 /* ShichenTimeLineSceduler.swift in Sources */,
 				990FEAE0294CB03900CB1CEF /* WeatherData.swift in Sources */,
+				994215ED2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				46E055A524AF2B3A00AC2AE5 /* TianganListView.swift in Sources */,
 				46339FE925028279007D4137 /* KnowledgeView.swift in Sources */,
 				994215D42958A53D003C5CA1 /* JiaziView.swift in Sources */,
@@ -1229,6 +1244,7 @@
 				99632073290DE1DE000C4A2B /* ShichenTimeLineSceduler.swift in Sources */,
 				997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */,
 				99632083290DE1DE000C4A2B /* CircularContainerView.swift in Sources */,
+				994215EF2965C810003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				9963207E290DE1DE000C4A2B /* JieqiContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1274,7 +1290,9 @@
 				994AD1962868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
 				997C689D2868A7EA00B40D3F /* ShichenHStackView.swift in Sources */,
 				997C68B32868ABEE00B40D3F /* ShichenTimelineProvider.swift in Sources */,
+				994215E82965C368003C5CA1 /* WidgetConstants.swift in Sources */,
 				997C68962868A76800B40D3F /* ShiChenYearMonthDateEntryView.swift in Sources */,
+				994215F02965C811003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				994AD1902868F96800BB5BED /* InlineWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1292,7 +1310,9 @@
 				99FD3F662922968B0048DCEB /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				99FD3F612922968B0048DCEB /* MinuteTimelineProvider.swift in Sources */,
 				99FD3F6E2922986C0048DCEB /* ShichenView.swift in Sources */,
+				994215E92965C368003C5CA1 /* WidgetConstants.swift in Sources */,
 				99FD3F702922989F0048DCEB /* ShichenTimeLineSceduler.swift in Sources */,
+				994215F12965C812003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				99FD3F6A292297BE0048DCEB /* Environment.swift in Sources */,
 				997CD11E2954FE1700BECF31 /* Constants.swift in Sources */,
 				99FD3F6D292298650048DCEB /* CircularContainerView.swift in Sources */,

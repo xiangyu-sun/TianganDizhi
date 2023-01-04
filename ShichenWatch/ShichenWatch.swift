@@ -34,8 +34,8 @@ struct HourlyWidget: Widget {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: MinuteTimelineProvider()) { entry in
       ShiChenEntryView(entry: entry)
     }
-    .configurationDisplayName("十二时辰")
-    .description("十二地支为名的十二时辰組件")
+    .configurationDisplayName(WidgetConstants.simpleWidgetTitle)
+    .description(WidgetConstants.simpleWidgetDescription)
     .supportedFamilies([.accessoryCircular, .accessoryCorner])
   }
 }
@@ -49,8 +49,8 @@ struct ShiChen: Widget {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
       ShiChenEntryView(entry: entry)
     }
-    .configurationDisplayName("天干地支年月日，以及時辰")
-    .description("十二地支为名的十二时辰，紀年，紀月")
+    .configurationDisplayName(WidgetConstants.normalWidgetDisplayName)
+    .description(WidgetConstants.normalWidgetDescription)
     .supportedFamilies([.accessoryInline, .accessoryRectangular])
   }
 }

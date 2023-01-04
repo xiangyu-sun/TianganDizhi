@@ -5,11 +5,14 @@ import WidgetKit
 // MARK: - FullDateTitleView
 
 struct FullDateTitleView: View {
+  @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
+  var useTranditionalNaming = false
+  
   var date: Date
   var body: some View {
     HStack {
       Text(date.displayStringOfChineseYearMonthDateWithZodiac)
-      Text(date.chineseDay?.moonPhase.rawValue ?? "")
+      Text(date.chineseDay?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
     }
   }
 }
