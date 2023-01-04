@@ -39,7 +39,7 @@ struct ContentView: View {
         ChartListView()
         .tabItem {
           Image(systemName: "table")
-          Text("圖")
+          Text("綜合圖示")
         }
         #if os(macOS)
         

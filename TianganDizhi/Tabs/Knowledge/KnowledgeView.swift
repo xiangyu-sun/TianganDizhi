@@ -55,9 +55,7 @@ struct KnowledgeView: View {
         }
       }
       .font(bodyFont)
-      #if os(iOS)
-        .navigationBarTitle(Text("天干地支相關知識"))
-      #endif
+      .navigationTitle(Text("天干地支相關知識"))
     }
     #if os(iOS)
     .navigationViewStyle(StackNavigationViewStyle())

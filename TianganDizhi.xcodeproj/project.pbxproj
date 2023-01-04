@@ -455,6 +455,7 @@
 		460BA9A826F24C400025CA39 /* Knowledge */ = {
 			isa = PBXGroup;
 			children = (
+				994190BF285A294700295389 /* Shici */,
 				46339FE825028279007D4137 /* KnowledgeView.swift */,
 				46AB55FC242B5F7100F6604A /* DizhiListView.swift */,
 				46EF7F7D271077AE007030CC /* JieqiListView.swift */,
@@ -521,13 +522,8 @@
 				99632069290DD90A000C4A2B /* TianganDizhi.entitlements */,
 				99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
-				46339FEA25028DB5007D4137 /* MainView.swift */,
 				9963204A290C32C1000C4A2B /* DateProvider.swift */,
-				994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */,
-				997CD1152954CF9700BECF31 /* SettingsView.swift */,
-				994215D92958A93E003C5CA1 /* Chart */,
-				994190BF285A294700295389 /* Shici */,
-				460BA9A826F24C400025CA39 /* Knowledge */,
+				994215E52965C0AB003C5CA1 /* Tabs */,
 				99FD3F732927EAB70048DCEB /* AppWidgetShared */,
 				46EF7F8127108A00007030CC /* JieqiCircularView.swift */,
 				46EF7F8327108D73007030CC /* JieqiContainerView.swift */,
@@ -616,11 +612,23 @@
 		994215D92958A93E003C5CA1 /* Chart */ = {
 			isa = PBXGroup;
 			children = (
+				994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */,
 				994B3BBE28FB34C800F9CF67 /* TwelveView.swift */,
 				994215D32958A53D003C5CA1 /* JiaziView.swift */,
 				994215D62958A7D8003C5CA1 /* ChartListView.swift */,
 			);
 			path = Chart;
+			sourceTree = "<group>";
+		};
+		994215E52965C0AB003C5CA1 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				46339FEA25028DB5007D4137 /* MainView.swift */,
+				997CD1152954CF9700BECF31 /* SettingsView.swift */,
+				994215D92958A93E003C5CA1 /* Chart */,
+				460BA9A826F24C400025CA39 /* Knowledge */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		994AD1972868FBA800BB5BED /* Widget */ = {

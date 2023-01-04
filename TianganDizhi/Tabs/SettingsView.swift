@@ -16,22 +16,28 @@ struct SettingsView: View {
   var springFestiveBackgroundEnabled = false
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
+  
+  @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
+  var useTranditionalNaming = false
 
   var body: some View {
     NavigationView {
       Form {
         Section(header: Text("春節氣氛組件設置")) {
           Toggle(isOn: $springFestiveBackgroundEnabled) {
-            Text("紅底")
+            Text("組件紅底")
           }
           Toggle(isOn: $springFestiveForegroundEnabled) {
-            Text("夜間模式使用黑字")
+            Text("組件夜間模式使用黑字")
+          }
+        }
+        Section(header: Text("通用設置")) {
+          Toggle(isOn: $useTranditionalNaming) {
+            Text("顯示傳統名稱")
           }
         }
       }
-      #if os(iOS)
-      .navigationBarTitle(Text("設置"))
-      #endif
+      .navigationTitle(Text("設置"))
       .onChange(of: springFestiveBackgroundEnabled) { _ in
         if #available(watchOS 9.0, *) {
           WidgetCenter.shared.reloadAllTimelines()

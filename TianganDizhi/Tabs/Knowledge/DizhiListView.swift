@@ -86,9 +86,7 @@ struct DizhiListView: View {
       }
     }
     .font(bodyFont)
-    #if os(iOS)
-      .navigationBarTitle(disppayMode.title)
-    #endif
+    .navigationTitle(disppayMode.title)
   }
 }
 

@@ -17,9 +17,7 @@ struct TianganListView: View {
     List(tiangan, id: \.self) {
       TianganCell(tiangan: $0)
     }
-    #if os(iOS)
-    .navigationBarTitle("十天干")
-    #endif
+    .navigationTitle("十天干")
   }
 }
 

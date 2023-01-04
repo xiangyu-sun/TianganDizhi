@@ -21,7 +21,6 @@ struct CornerView: View {
 
       let base = shichen.endDate.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
     ZStack {
-      AccessoryWidgetBackground()
       Text(date.chineseDate)
         .font(.largeTitle)
     }
