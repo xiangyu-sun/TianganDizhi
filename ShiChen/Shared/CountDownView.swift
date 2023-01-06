@@ -22,7 +22,7 @@ struct CountDownView: View {
   let dayConverter = DayConverter()
   var dateFormatter: RelativeDateTimeFormatter = {
     let formatter = RelativeDateTimeFormatter()
-    formatter.dateTimeStyle = .numeric
+    formatter.dateTimeStyle = .named
     formatter.unitsStyle = .spellOut
     formatter.locale = Locale.current
     return formatter
@@ -49,15 +49,15 @@ struct CountDownView: View {
       VStack(alignment: .leading){
         Text(title)
           .font(title3Font)
-        Text(event.date, style: .relative)
+        Text("\(dateFormatter.localizedString(for: event.date, relativeTo: now))")
           .font(bodyFont)
       }
       .padding([.leading, .trailing])
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      .materialBackground(with: Image("background"), toogle: true)
     default:
       VStack(alignment: .center){
-        Text(event.date, style: .relative)
+        Text("\(dateFormatter.localizedString(for: event.date, relativeTo: now))")
       .font(title2Font)
         Text(title)
           .font(titleFont)
@@ -65,7 +65,7 @@ struct CountDownView: View {
       }
       .padding([.trailing, .leading])
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+        .materialBackground(with: Image("background"), toogle: true)
     }
   }
 }
@@ -78,6 +78,7 @@ struct CountDownView_Previews: PreviewProvider {
     if #available(iOSApplicationExtension 16.0, *) {
       Group {
         CountDownView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+          .environment(\.locale, Locale(identifier: "zh_Hant"))
           .previewContext(WidgetPreviewContext(family: .accessoryInline))
           .previewDisplayName("Inline")
 
@@ -86,7 +87,7 @@ struct CountDownView_Previews: PreviewProvider {
           .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
           .previewDisplayName("Retangular")
       }
-      .environment(\.locale, Locale(identifier: "zh_Hant"))
+      
     }
     Group {
       CountDownView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
