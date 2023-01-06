@@ -155,6 +155,12 @@
 		997CD11D2954FE1600BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
 		997CD11E2954FE1700BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
 		997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
+		99BC3C072968359D004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
+		99BC3C082968359E004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
+		99BC3C092968359E004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
+		99BC3C0C296836AA004AB614 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C0A29683678004AB614 /* CountDownView.swift */; };
+		99BC3C0D296836AB004AB614 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C0A29683678004AB614 /* CountDownView.swift */; };
+		99BC3C0E296836AD004AB614 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C0A29683678004AB614 /* CountDownView.swift */; };
 		99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */; };
 		99D2C78E2943935800327AF7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
 		99FD3EEB291E9DC00048DCEB /* ScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */; };
@@ -369,6 +375,8 @@
 		997CD1102954C92000BECF31 /* MaterialBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialBackground.swift; sourceTree = "<group>"; };
 		997CD1152954CF9700BECF31 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		997CD1192954FDB600BECF31 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		99BC3C052968355E004AB614 /* CountDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownWidget.swift; sourceTree = "<group>"; };
+		99BC3C0A29683678004AB614 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTests.swift; sourceTree = "<group>"; };
 		99FD3F46292296170048DCEB /* ShichenMacWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShichenMacWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FD3F4D292296180048DCEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -481,6 +489,7 @@
 			isa = PBXGroup;
 			children = (
 				462A5F6A24FFE5F20032A125 /* ShiChen.swift */,
+				99BC3C052968355E004AB614 /* CountDownWidget.swift */,
 				997C68762864CB8F00B40D3F /* AllWidgets.swift */,
 				997CD1102954C92000BECF31 /* MaterialBackground.swift */,
 				997C68932868A75300B40D3F /* Shared */,
@@ -743,6 +752,7 @@
 				996321432911B374000C4A2B /* IntentTimelineProvider */,
 				997C689E2868A81500B40D3F /* SimpleEntry.swift */,
 				994215E62965C368003C5CA1 /* WidgetConstants.swift */,
+				99BC3C0A29683678004AB614 /* CountDownView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1133,6 +1143,7 @@
 				997C68A52868A8E900B40D3F /* SimpleEntry.swift in Sources */,
 				994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */,
 				462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */,
+				99BC3C072968359D004AB614 /* CountDownWidget.swift in Sources */,
 				993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				996321472911B3F0000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				46B79C462541F962003C0B7F /* Environment.swift in Sources */,
@@ -1143,6 +1154,7 @@
 				997CD1122954C96B00BECF31 /* MaterialBackground.swift in Sources */,
 				46339FDD2500EA60007D4137 /* ShichenView.swift in Sources */,
 				996321452911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */,
+				99BC3C0C296836AA004AB614 /* CountDownView.swift in Sources */,
 				994AD1922868FA0400BB5BED /* CircularWidgetView.swift in Sources */,
 				46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */,
 				46339FDC2500EA41007D4137 /* CircularContainerView.swift in Sources */,
@@ -1280,9 +1292,11 @@
 				997C68972868A76800B40D3F /* CompactShichenView.swift in Sources */,
 				997C68992868A78400B40D3F /* Styler.swift in Sources */,
 				997C68942868A76800B40D3F /* FullDateTitleView.swift in Sources */,
+				99BC3C0D296836AB004AB614 /* CountDownView.swift in Sources */,
 				997C689A2868A7B600B40D3F /* CornerView.swift in Sources */,
 				996321462911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */,
 				994AD1932868FA0400BB5BED /* CircularWidgetView.swift in Sources */,
+				99BC3C082968359E004AB614 /* CountDownWidget.swift in Sources */,
 				997CD1132954C96C00BECF31 /* MaterialBackground.swift in Sources */,
 				997C68AC2868A92400B40D3F /* CircularContainerView.swift in Sources */,
 				997C68982868A77700B40D3F /* Environment.swift in Sources */,
@@ -1322,7 +1336,9 @@
 				99FD3F652922968B0048DCEB /* CompactShichenView.swift in Sources */,
 				99FD3F6C292297DE0048DCEB /* ShichenHStackView.swift in Sources */,
 				99FD3F602922968B0048DCEB /* CircularWidgetView.swift in Sources */,
+				99BC3C092968359E004AB614 /* CountDownWidget.swift in Sources */,
 				99FD3F6F2922988B0048DCEB /* MinuteTimeLineScheduler.swift in Sources */,
+				99BC3C0E296836AD004AB614 /* CountDownView.swift in Sources */,
 				99FD3F5E2922968B0048DCEB /* SimpleEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,15 @@ import WidgetKit
 // MARK: - ShichenMacWidget
 
 @main
+struct AllWidgets: WidgetBundle {
+  @WidgetBundleBuilder
+  var body: some Widget {
+    ShichenMacWidget()
+    CountDownWidget()
+  }
+}
+
+
 struct ShichenMacWidget: Widget {
   let kind = "ShiChen"
 
