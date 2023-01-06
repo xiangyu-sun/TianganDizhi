@@ -10,7 +10,7 @@ import Intents
 import SwiftUI
 import WidgetKit
 
-// MARK: - ShichenMacWidget
+// MARK: - AllWidgets
 
 @main
 struct AllWidgets: WidgetBundle {
@@ -21,6 +21,7 @@ struct AllWidgets: WidgetBundle {
   }
 }
 
+// MARK: - ShichenMacWidget
 
 struct ShichenMacWidget: Widget {
   let kind = "ShiChen"

@@ -27,7 +27,7 @@ struct ShiChenEntryView: View {
   var springFestiveForegroundEnabled = false
 
   var body: some View {
-      let shichen = entry.date.shichen!
+    let shichen = entry.date.shichen!
 
     switch family {
     case .accessoryInline:
@@ -35,7 +35,7 @@ struct ShiChenEntryView: View {
         if iPad {
           HStack {
             Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
-              Text(shichen.dizhi.displayHourText)
+            Text(shichen.dizhi.displayHourText)
           }
           .font(.custom(.weibeiBold, size: 20, relativeTo: .body))
         } else {
@@ -61,7 +61,7 @@ struct ShiChenEntryView: View {
           .font(title3Font)
         Spacer()
 
-          ShichenHStackView(shichen: shichen.dizhi)
+        ShichenHStackView(shichen: shichen.dizhi)
           .padding([.leading, .trailing], 8)
         Spacer()
       }
@@ -73,7 +73,7 @@ struct ShiChenEntryView: View {
         FullDateTitleView(date: entry.date)
           .font(title3Font)
           .padding(.top, 8)
-          CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
+        CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
           .padding(.bottom, 8)
       }
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
@@ -86,11 +86,11 @@ struct ShiChenEntryView: View {
             FullDateTitleView(date: entry.date)
               .font(titleFont)
             Spacer()
-              ShichenHStackView(shichen: shichen.dizhi)
+            ShichenHStackView(shichen: shichen.dizhi)
             Spacer()
           }
           .padding()
-            CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
+          CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
             .padding()
         }
         .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
@@ -102,7 +102,7 @@ struct ShiChenEntryView: View {
           FullDateTitleView(date: entry.date)
             .font(title3Font)
             .padding(.top, 8)
-            CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
+          CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
             .padding(.bottom, 8)
         }
         .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
@@ -110,7 +110,7 @@ struct ShiChenEntryView: View {
         .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
       }
     default:
-        CompactShichenView(shichen: shichen.dizhi, date: entry.date)
+      CompactShichenView(shichen: shichen.dizhi, date: entry.date)
         .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)

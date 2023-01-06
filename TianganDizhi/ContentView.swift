@@ -36,21 +36,20 @@ struct ContentView: View {
       //                Text("二十四節氣")
       //            }
 
-        ChartListView()
+      ChartListView()
         .tabItem {
           Image(systemName: "table")
           Text("綜合圖示")
         }
-        #if os(macOS)
-        
-        #else
-        SettingsView()
-          .tabItem {
-            Image(systemName: "gear")
-            Text("設置")
-          }
-        #endif
-   
+      #if os(macOS)
+
+      #else
+      SettingsView()
+        .tabItem {
+          Image(systemName: "gear")
+          Text("設置")
+        }
+      #endif
     }
     #if os(iOS)
     .onAppear {

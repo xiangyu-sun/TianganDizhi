@@ -37,9 +37,8 @@ struct CompactShichenView: View {
 
   private var titleView: some View {
     HStack {
-        
       Text(date.nian?.formatedYear ?? "")
-        Text(date.zodiac?.rawValue ?? "")
+      Text(date.zodiac?.rawValue ?? "")
     }
     .font(title3Font)
   }

@@ -16,7 +16,7 @@ struct SettingsView: View {
   var springFestiveBackgroundEnabled = false
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
-  
+
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
 

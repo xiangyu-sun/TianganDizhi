@@ -17,12 +17,12 @@ struct ShichenTimeLineSceduler {
     timeline.append(currentDate)
 
     guard
-        let currentShichen = currentDate.shichen else
+      let currentShichen = currentDate.shichen else
     {
       return backup()
     }
-      let nextShichenStart = currentShichen.nextStartDate
-      
+    let nextShichenStart = currentShichen.nextStartDate
+
     for hourOffset in 0 ..< 11 {
       let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: nextShichenStart)!
       timeline.append(entryDate)

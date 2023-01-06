@@ -3,7 +3,7 @@ import ChineseAstrologyCalendar
 import SwiftUI
 import WidgetKit
 
-// MARK: - ShiChenEntryView
+// MARK: - CountDownView
 
 struct CountDownView: View {
   var entry: ShichenTimelineProvider.Entry
@@ -13,7 +13,7 @@ struct CountDownView: View {
   @Environment(\.titleFont) var titleFont
   @Environment(\.title3Font) var title3Font
   @Environment(\.title2Font) var title2Font
-  
+
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
 
@@ -32,45 +32,47 @@ struct CountDownView: View {
     let now: Date = .init()
     let event = dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
       .init(date: Date(), name: .chuyi, dateComponents: .init())
-    
+    let color = springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary
+
     let title = event.date.displayStringOfChineseYearMonthDateWithZodiac
     switch family {
     case .accessoryInline:
       Text("\(dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
-      .font(bodyFont)
+        .font(bodyFont)
     case .accessoryRectangular:
-      HStack(){
+      HStack {
         Text(title)
           .font(bodyFont)
         Text(event.date, style: .relative)
           .font(bodyFont)
       }
     case .systemSmall:
-      VStack(alignment: .leading){
+      VStack(alignment: .leading) {
         Text(title)
           .font(title3Font)
         Text("\(dateFormatter.localizedString(for: event.date, relativeTo: now))")
           .font(bodyFont)
       }
+      .foregroundColor(color)
       .padding([.leading, .trailing])
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackground(with: Image("background"), toogle: true)
     default:
-      VStack(alignment: .center){
+      VStack(alignment: .center) {
         Text("\(dateFormatter.localizedString(for: event.date, relativeTo: now))")
-      .font(title2Font)
+          .font(title2Font)
         Text(title)
           .font(titleFont)
-           
       }
+      .foregroundColor(color)
       .padding([.trailing, .leading])
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .materialBackground(with: Image("background"), toogle: true)
+      .materialBackground(with: Image("background"), toogle: true)
     }
   }
 }
 
-// MARK: - ShiChenEntryView_Previews
+// MARK: - CountDownView_Previews
 
 struct CountDownView_Previews: PreviewProvider {
   static var previews: some View {
@@ -82,12 +84,10 @@ struct CountDownView_Previews: PreviewProvider {
           .previewContext(WidgetPreviewContext(family: .accessoryInline))
           .previewDisplayName("Inline")
 
-
         CountDownView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
           .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
           .previewDisplayName("Retangular")
       }
-      
     }
     Group {
       CountDownView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))

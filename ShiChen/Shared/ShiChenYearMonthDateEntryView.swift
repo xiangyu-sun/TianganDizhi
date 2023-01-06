@@ -19,7 +19,7 @@ struct ShiChenYearMonthDateEntryView: View {
   @Environment(\.title2Font) var title2Font
   @Environment(\.title3Font) var title3Font
   @Environment(\.widgetFamily) var family
-  
+
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
 
@@ -27,7 +27,7 @@ struct ShiChenYearMonthDateEntryView: View {
   var springFestiveForegroundEnabled = false
 
   var body: some View {
-      let shichen = entry.date.shichen
+    let shichen = entry.date.shichen
 
     switch family {
     case .accessoryInline:
@@ -48,7 +48,7 @@ struct ShiChenYearMonthDateEntryView: View {
         Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
           .font(title2Font)
           .padding([.leading,.trailing], 15)
-          Text(shichen?.dizhi.displayHourText ?? "")
+        Text(shichen?.dizhi.displayHourText ?? "")
           .font(titleFont)
         Spacer()
       }
@@ -61,7 +61,7 @@ struct ShiChenYearMonthDateEntryView: View {
         Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
           .font(bodyFont)
           .padding([.leading,.trailing], 15)
-          Text(shichen?.dizhi.displayHourText ?? "")
+        Text(shichen?.dizhi.displayHourText ?? "")
           .font(titleFont)
         Spacer()
       }

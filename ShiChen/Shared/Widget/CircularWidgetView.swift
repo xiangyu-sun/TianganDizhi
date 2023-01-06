@@ -20,8 +20,7 @@ struct CircularWidgetView: View {
   @State var date: Date
 
   var body: some View {
-     
-      let shichen = date.shichen!
+    let shichen = date.shichen!
 
     let start = date.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
 
@@ -30,11 +29,11 @@ struct CircularWidgetView: View {
     ProgressView(
       value: start / base,
       label: {
-          Text(shichen.dizhi.displayHourText)
+        Text(shichen.dizhi.displayHourText)
           .widgetAccentable()
       },
       currentValueLabel: {
-          Text(shichen.dizhi.displayHourText)
+        Text(shichen.dizhi.displayHourText)
           .widgetAccentable()
         #if os(iOS)
           .font(bodyFont)

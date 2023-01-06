@@ -7,7 +7,7 @@ import WidgetKit
 struct FullDateTitleView: View {
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
-  
+
   var date: Date
   var body: some View {
     HStack {

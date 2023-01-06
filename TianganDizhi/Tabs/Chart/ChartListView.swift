@@ -9,7 +9,7 @@
 import ChineseAstrologyCalendar
 import SwiftUI
 
-// MARK: - KnowledgeView
+// MARK: - ChartListView
 
 struct ChartListView: View {
   @Environment(\.bodyFont) var bodyFont
@@ -17,29 +17,26 @@ struct ChartListView: View {
   var body: some View {
     NavigationView {
       List {
-        
-          NavigationLink(destination: TwelveView()) {
-            Text("十二地支表")
-          }
-          NavigationLink(destination: JiaziView()) {
-              Text("六十甲子")
-          }
-
+        NavigationLink(destination: TwelveView()) {
+          Text("十二地支表")
+        }
+        NavigationLink(destination: JiaziView()) {
+          Text("六十甲子")
+        }
       }
       .font(bodyFont)
       .navigationTitle(Text("圖示"))
     }
-#if os(iOS) || os(watchOS)
+    #if os(iOS) || os(watchOS)
     .navigationViewStyle(StackNavigationViewStyle())
-#endif
-  
+    #endif
   }
 }
 
-// MARK: - KnowledgeView_Previews
+// MARK: - ChartListView_Previews
 
 struct ChartListView_Previews: PreviewProvider {
   static var previews: some View {
-      ChartListView()
+    ChartListView()
   }
 }

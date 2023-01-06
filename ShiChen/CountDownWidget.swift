@@ -6,8 +6,8 @@
 //  Copyright © 2023 孙翔宇. All rights reserved.
 //
 
-import WidgetKit
 import SwiftUI
+import WidgetKit
 
 struct CountDownWidget: Widget {
   let kind = "com.uriphium.tinagandizhi.countdown.widget"
@@ -20,7 +20,7 @@ struct CountDownWidget: Widget {
       return [.systemSmall, .systemMedium]
     }
     #elseif os(watchOS)
-    return [ .accessoryInline, .accessoryRectangular]
+    return [.accessoryInline, .accessoryRectangular]
     #else
     return [.systemSmall, .systemMedium]
     #endif
