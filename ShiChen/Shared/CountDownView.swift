@@ -59,6 +59,8 @@ struct CountDownView: View {
       .materialBackground(with: Image("background"), toogle: true)
     default:
       VStack(alignment: .center) {
+        FullDateTitleView(date: entry.date)
+          .font(title3Font)
         Text("\(dateFormatter.localizedString(for: event.date, relativeTo: now))")
           .font(title2Font)
         Text(title)
