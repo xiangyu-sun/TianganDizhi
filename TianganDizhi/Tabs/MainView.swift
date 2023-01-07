@@ -25,23 +25,28 @@ struct MainView: View {
   var springFestiveForegroundEnabled = false
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
+  let dayConverter = DayConverter()
 
   var body: some View {
     VStack {
       let shichen = updater.currentDate.shichen!
-
+      let event = dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
+        .init(date: Date(), name: .chuyi, dateComponents: .init())
+      
       #if os(watchOS)
-      HStack {
-        Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
-        if let value = weatherData.forcastedWeather {
-          Text(value.moonPhaseDisplayName)
-        } else {
-          Text(updater.currentDate.chineseDay?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
+      Group() {
+        HStack {
+          Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
+          if let value = weatherData.forcastedWeather {
+            Text(value.moonPhaseDisplayName)
+          } else {
+            Text(updater.currentDate.chineseDay?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
+          }
         }
+    
+        CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
       }
-
-      CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
-
+    
       #else
 
       HStack {
@@ -86,6 +91,14 @@ struct MainView: View {
           .padding()
       }
       #endif
+
+      let title = event.date.displayStringOfChineseYearMonthDateWithZodiac
+      HStack(spacing:0) {
+        Text(event.date, style: .relative)
+        Text("後\(title)")
+      }
+      .font(bodyFont)
+      
       Spacer()
       #endif
     }

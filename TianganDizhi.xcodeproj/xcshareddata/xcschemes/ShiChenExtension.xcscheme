@@ -81,7 +81,7 @@
          <EnvironmentVariable
             key = "_XCWidgetKind"
             value = "ShiChen"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "_XCWidgetDefaultView"

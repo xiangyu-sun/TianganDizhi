@@ -20,13 +20,7 @@ struct CountDownView: View {
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
   let dayConverter = DayConverter()
-  var dateFormatter: RelativeDateTimeFormatter = {
-    let formatter = RelativeDateTimeFormatter()
-    formatter.dateTimeStyle = .named
-    formatter.unitsStyle = .spellOut
-    formatter.locale = Locale.current
-    return formatter
-  }()
+ 
 
   var body: some View {
     let now: Date = .init()
@@ -37,7 +31,7 @@ struct CountDownView: View {
     let title = event.date.displayStringOfChineseYearMonthDateWithZodiac
     switch family {
     case .accessoryInline:
-      Text("\(dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
+      Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
         .font(bodyFont)
     case .accessoryRectangular:
       HStack {
@@ -50,7 +44,7 @@ struct CountDownView: View {
       VStack(alignment: .leading) {
         Text(title)
           .font(title3Font)
-        Text("\(dateFormatter.localizedString(for: event.date, relativeTo: now))")
+        Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))")
           .font(bodyFont)
       }
       .foregroundColor(color)
@@ -61,7 +55,7 @@ struct CountDownView: View {
       VStack(alignment: .center) {
         FullDateTitleView(date: entry.date)
           .font(title3Font)
-        Text("\(dateFormatter.localizedString(for: event.date, relativeTo: now))")
+        Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))")
           .font(title2Font)
         Text(title)
           .font(titleFont)
