@@ -93,10 +93,7 @@ struct MainView: View {
       #endif
 
       let title = event.date.displayStringOfChineseYearMonthDateWithZodiac
-      HStack(spacing:0) {
-        Text(event.date, style: .relative)
-        Text("後\(title)")
-      }
+      Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: updater.currentDate))\(title)")
       .font(bodyFont)
       
       Spacer()

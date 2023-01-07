@@ -23,13 +23,15 @@ struct TianganDizhiApp: App {
       ContentView()
     }
     #if os(macOS)
-    MenuBarExtra(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh!.displayHourText) {
-      VStack {
-        Divider()
-        Button("退出") {
-          NSApplication.shared.terminate(nil)
+    if let dizh {
+      MenuBarExtra(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh.displayHourText) {
+        VStack {
+          Divider()
+          Button("退出") {
+            NSApplication.shared.terminate(nil)
 
-        }.keyboardShortcut("q")
+          }.keyboardShortcut("q")
+        }
       }
     }
     #endif
