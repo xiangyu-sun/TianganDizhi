@@ -25,6 +25,8 @@ struct MainView: View {
   var springFestiveForegroundEnabled = false
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
+  @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
+  var useGTM8 = false
   let dayConverter = DayConverter()
 
   var body: some View {
@@ -91,8 +93,7 @@ struct MainView: View {
           .padding()
       }
       #endif
-
-      let title = event.date.displayStringOfChineseYearMonthDateWithZodiac
+      let title = useGTM8 ?  event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8 : event.date.displayStringOfChineseYearMonthDateWithZodiac
       HStack(spacing: 0) {
         Text(event.date, style: .relative)
         Text("後\(title)")

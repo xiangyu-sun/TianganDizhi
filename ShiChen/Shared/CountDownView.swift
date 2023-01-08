@@ -19,6 +19,8 @@ struct CountDownView: View {
 
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
+  @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
+  var useGTM8 = false
   let dayConverter = DayConverter()
  
 
@@ -28,7 +30,7 @@ struct CountDownView: View {
       .init(date: Date(), name: .chuyi, dateComponents: .init())
     let color = springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary
 
-    let title = event.date.displayStringOfChineseYearMonthDateWithZodiac
+    let title = useGTM8 ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8 : event.date.displayStringOfChineseYearMonthDateWithZodiac
     switch family {
     case .accessoryInline:
       Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
