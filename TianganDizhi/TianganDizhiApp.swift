@@ -28,7 +28,7 @@ struct TianganDizhiApp: App {
         Divider()
         Button("退出") {
           NSApplication.shared.terminate(nil)
-          
+
         }.keyboardShortcut("q")
       }
     }

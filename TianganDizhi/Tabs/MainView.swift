@@ -34,9 +34,9 @@ struct MainView: View {
       let shichen = updater.currentDate.shichen!
       let event = dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
         .init(date: Date(), name: .chuyi, dateComponents: .init())
-      
+
       #if os(watchOS)
-      Group() {
+      Group {
         HStack {
           Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
           if let value = weatherData.forcastedWeather {
@@ -45,10 +45,10 @@ struct MainView: View {
             Text(updater.currentDate.chineseDay?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
           }
         }
-    
+
         CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
       }
-    
+
       #else
 
       HStack {
@@ -93,13 +93,15 @@ struct MainView: View {
           .padding()
       }
       #endif
-      let title = useGTM8 ?  event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8 : event.date.displayStringOfChineseYearMonthDateWithZodiac
+      let title = useGTM8
+        ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
+        : event.date.displayStringOfChineseYearMonthDateWithZodiac
       HStack(spacing: 0) {
         Text(event.date, style: .relative)
         Text("後\(title)")
       }
       .font(bodyFont)
-      
+
       Spacer()
       #endif
     }

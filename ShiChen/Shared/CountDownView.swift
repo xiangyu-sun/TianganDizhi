@@ -22,7 +22,6 @@ struct CountDownView: View {
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
   let dayConverter = DayConverter()
- 
 
   var body: some View {
     let now: Date = .init()
@@ -30,7 +29,9 @@ struct CountDownView: View {
       .init(date: Date(), name: .chuyi, dateComponents: .init())
     let color = springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary
 
-    let title = useGTM8 ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8 : event.date.displayStringOfChineseYearMonthDateWithZodiac
+    let title = useGTM8
+      ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
+      : event.date.displayStringOfChineseYearMonthDateWithZodiac
     switch family {
     case .accessoryInline:
       Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
@@ -45,7 +46,7 @@ struct CountDownView: View {
     case .systemSmall:
       VStack(alignment: .leading) {
         Text("距離\(title)")
-          Text(event.date, style: .relative)
+        Text(event.date, style: .relative)
       }
       .font(bodyFont)
       .foregroundColor(color)
@@ -59,7 +60,7 @@ struct CountDownView: View {
         Text("距離\(title)")
           .font(title2Font)
         Text(event.date, style: .relative)
-        .font(title3Font)
+          .font(title3Font)
       }
       .foregroundColor(color)
       .padding([.trailing, .leading])

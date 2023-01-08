@@ -6,9 +6,9 @@
 //  Copyright © 2022 孙翔宇. All rights reserved.
 //
 
+import ChineseAstrologyCalendar
 import SwiftUI
 import WidgetKit
-import ChineseAstrologyCalendar
 
 // MARK: - SettingsView
 
@@ -20,7 +20,7 @@ struct SettingsView: View {
 
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
-  
+
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
 
@@ -39,7 +39,7 @@ struct SettingsView: View {
           Toggle(isOn: $useGTM8) {
             Text("節日使用中國時區(海外用戶)")
           }
-          
+
           Toggle(isOn: $useTranditionalNaming) {
             Text("顯示傳統名稱")
           }
