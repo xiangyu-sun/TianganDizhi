@@ -42,11 +42,10 @@ struct CountDownView: View {
       }
     case .systemSmall:
       VStack(alignment: .leading) {
-        Text(title)
-          .font(title3Font)
-        Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))")
-          .font(bodyFont)
+        Text("距離\(title)")
+          Text(event.date, style: .relative)
       }
+      .font(bodyFont)
       .foregroundColor(color)
       .padding([.leading, .trailing])
       .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -55,10 +54,10 @@ struct CountDownView: View {
       VStack(alignment: .center) {
         FullDateTitleView(date: entry.date)
           .font(title3Font)
-        Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))")
+        Text("距離\(title)")
           .font(title2Font)
-        Text(title)
-          .font(titleFont)
+        Text(event.date, style: .relative)
+        .font(title3Font)
       }
       .foregroundColor(color)
       .padding([.trailing, .leading])
