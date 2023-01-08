@@ -13,7 +13,7 @@ extension RelativeDateTimeFormatter {
   
   static let dateFormatter: RelativeDateTimeFormatter = {
     let formatter = RelativeDateTimeFormatter()
-    formatter.dateTimeStyle = .named
+    formatter.dateTimeStyle = .numeric
     formatter.unitsStyle = .spellOut
     formatter.locale = Locale.current
     return formatter
