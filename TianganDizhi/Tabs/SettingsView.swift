@@ -68,7 +68,6 @@ struct SettingsView: View {
         }
       }
       .onChange(of: useGTM8) { value in
-        CalendarManager.shared.useGTM8 = value
         if #available(watchOS 9.0, iOS 14.0, *) {
           WidgetCenter.shared.reloadAllTimelines()
         } else {

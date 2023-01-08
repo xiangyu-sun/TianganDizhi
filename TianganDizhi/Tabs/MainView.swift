@@ -27,11 +27,12 @@ struct MainView: View {
   var useTranditionalNaming = false
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
-  let dayConverter = DayConverter()
-
+ 
   var body: some View {
     VStack {
       let shichen = updater.currentDate.shichen!
+      let dayConverter = useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
+      
       let event = dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
         .init(date: Date(), name: .chuyi, dateComponents: .init())
 

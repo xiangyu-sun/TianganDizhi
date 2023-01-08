@@ -19,14 +19,20 @@ struct CountDownView: View {
 
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
+  
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
-  let dayConverter = DayConverter()
+  
+ 
 
   var body: some View {
     let now: Date = .init()
+ 
+    let dayConverter = useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
+    
     let event = dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
       .init(date: Date(), name: .chuyi, dateComponents: .init())
+    
     let color = springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary
 
     let title = useGTM8
