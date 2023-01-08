@@ -13,6 +13,8 @@ enum Constants {
   static let springFestiveForegroundEnabled = "springFestiveForegroundEnabled"
 
   static let useTranditionalNaming = "useTranditionalNaming"
+  
+  static let useGTM8 = "useGTM8"
   #if os(macOS)
   static let sharedUserDefault = UserDefaults(suiteName: "group.R45U3GK22z.uriphium.tiangandizhi")
   #else

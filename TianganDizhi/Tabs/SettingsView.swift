@@ -8,6 +8,7 @@
 
 import SwiftUI
 import WidgetKit
+import ChineseAstrologyCalendar
 
 // MARK: - SettingsView
 
@@ -19,6 +20,9 @@ struct SettingsView: View {
 
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
+  
+  @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
+  var useGTM8 = false
 
   var body: some View {
     NavigationView {
@@ -32,6 +36,10 @@ struct SettingsView: View {
           }
         }
         Section(header: Text("通用設置")) {
+          Toggle(isOn: $useGTM8) {
+            Text("節日使用中國時區(海外用戶)")
+          }
+          
           Toggle(isOn: $useTranditionalNaming) {
             Text("顯示傳統名稱")
           }
@@ -53,6 +61,14 @@ struct SettingsView: View {
         }
       }
       .onChange(of: springFestiveForegroundEnabled) { _ in
+        if #available(watchOS 9.0, iOS 14.0, *) {
+          WidgetCenter.shared.reloadAllTimelines()
+        } else {
+          // Fallback on earlier versions
+        }
+      }
+      .onChange(of: useGTM8) { value in
+        CalendarManager.shared.useGTM8 = value
         if #available(watchOS 9.0, iOS 14.0, *) {
           WidgetCenter.shared.reloadAllTimelines()
         } else {
