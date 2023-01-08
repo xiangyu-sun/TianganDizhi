@@ -28,14 +28,25 @@ struct MainView: View {
   
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
+  
+  var dayConverter: DayConverter  {
+    useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
+  }
+  
+  var event: EventModel {
+    return dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
+      .init(date: Date(), name: .chuyi, dateComponents: .init())
+  }
+  
+  var title: String {
+    useGTM8
+    ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
+    : event.date.displayStringOfChineseYearMonthDateWithZodiac
+  }
  
   var body: some View {
     VStack {
       let shichen = updater.currentDate.shichen!
-      let dayConverter = useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
-      
-      let event = dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
-        .init(date: Date(), name: .chuyi, dateComponents: .init())
 
       #if os(watchOS)
       Group {
@@ -95,9 +106,7 @@ struct MainView: View {
           .padding()
       }
       #endif
-      let title = useGTM8
-        ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
-        : event.date.displayStringOfChineseYearMonthDateWithZodiac
+
       HStack(spacing: 0) {
         Text(event.date, style: .relative)
         Text("後\(title)")
