@@ -25,6 +25,7 @@ struct MainView: View {
   var springFestiveForegroundEnabled = false
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
+  
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
  
