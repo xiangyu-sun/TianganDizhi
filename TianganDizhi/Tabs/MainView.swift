@@ -55,7 +55,7 @@ struct MainView: View {
           if let value = weatherData.forcastedWeather {
             Text(value.moonPhaseDisplayName)
           } else {
-            Text(updater.currentDate.chineseDay?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
+            Text(updater.currentDate.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
           }
         }
 
@@ -73,7 +73,7 @@ struct MainView: View {
             Text(value.moonPhaseDisplayName)
               .font(titleFont)
           } else {
-            if let moonphase = updater.currentDate.chineseDay?.moonPhase {
+            if let moonphase = updater.currentDate.chineseDay()?.moonPhase {
               HStack {
                 if #available(iOS 16.0, *) {
                   Image(systemName: moonphase.moonPhase.symbolName)

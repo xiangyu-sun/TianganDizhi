@@ -12,7 +12,7 @@ struct FullDateTitleView: View {
   var body: some View {
     HStack {
       Text(date.displayStringOfChineseYearMonthDateWithZodiac)
-      Text(date.chineseDay?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
+      Text(date.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
     }
   }
 }

@@ -32,13 +32,18 @@ struct CompactShichenView: View {
       ShichenInformationView(shichen: shichen)
     }
   }
+  
+  var components: DateComponents {
+    date.dateComponentsFromChineseCalendar()
+  }
 
   // MARK: Private
 
   private var titleView: some View {
+    
     HStack {
-      Text(date.nian?.formatedYear ?? "")
-      Text(date.zodiac?.rawValue ?? "")
+      Text(components.nian?.formatedYear ?? "")
+      Text(components.zodiac?.rawValue ?? "")
     }
     .font(title3Font)
   }
