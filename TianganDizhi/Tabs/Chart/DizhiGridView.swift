@@ -8,6 +8,7 @@
 
 import ChineseAstrologyCalendar
 import ChineseTranditionalMusicCore
+import MusicTheory
 import JingluoShuxue
 import SwiftUI
 
@@ -41,7 +42,7 @@ struct DizhiGridView: View {
         Text("\(zodiac.rawValue)")
           .font(bodyFont)
 
-        Text(律呂.allCases[dizhi.rawValue - 1].rawValue)
+        Text(Key.shierLvLv[dizhi.rawValue - 1].lvlvDescription)
           .font(bodyFont)
       }
     }

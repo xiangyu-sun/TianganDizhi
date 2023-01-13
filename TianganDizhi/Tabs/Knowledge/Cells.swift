@@ -9,6 +9,7 @@
 import ChineseAstrologyCalendar
 import ChineseTranditionalMusicCore
 import JingluoShuxue
+import MusicTheory
 import SwiftUI
 
 // MARK: - DizhiCell
@@ -110,7 +111,7 @@ struct LvlvCell: View {
       Text(dizhi.chineseCharactor)
 
       Spacer()
-      let value = 律呂.allCases[dizhi.rawValue - 1].rawValue
+      let value = Key.shierLvLv[dizhi.rawValue - 1].lvlvDescription
       Text(value)
       Text("(\(value.transformToPinyin()))")
     }

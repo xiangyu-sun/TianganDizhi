@@ -7,6 +7,8 @@
 //
 
 import ChineseAstrologyCalendar
+import ChineseTranditionalMusicCore
+import MusicTheory
 import JingluoShuxue
 import SwiftUI
 
@@ -62,6 +64,15 @@ struct WuxingView: View {
                     let wufu = 五腑.allCases.first { $0.wuxing == item } ?? .小腸
                     Text("\(wufu.rawValue)")
                     Text("\(wuzang.情緒)")
+                  }
+                }
+                Divider()
+
+                VStack {
+                  Text("五音")
+                    .font(footnote)
+                  HStack {
+                    Text("\(Key.wuyin.first{ $0.wuxing == item}!.wuyinChineseName)")
                   }
                 }
               }

@@ -24,7 +24,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseTranditionalMusicCore.git",
       "state" : {
         "branch" : "main",
-        "revision" : "06b35d8b1e2db2098ac1ded4d1c5b383dbb5b9d2"
+        "revision" : "9b61a9774c520fe3bfda48405026593a30d9b53e"
       }
     },
     {
@@ -34,6 +34,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "1caeef22d084f51dd0549e793f77105939a8b336"
+      }
+    },
+    {
+      "identity" : "musictheory",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xiangyu-sun/MusicTheory",
+      "state" : {
+        "branch" : "master",
+        "revision" : "848677cde4c93681010a8e80dc524b322f37f549"
       }
     },
     {
