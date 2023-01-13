@@ -75,6 +75,21 @@ struct WuxingView: View {
                     Text("\(Key.wuyin.first{ $0.wuxing == item}!.wuyinChineseName)")
                   }
                 }
+                Divider()
+
+                VStack {
+                  Text("方位")
+                    .font(footnote)
+                  HStack {
+                    Text("\(item.fangwei.chineseCharactor)")
+                  }
+                }
+                VStack{
+                  Text("色彩")
+                    .font(footnote)
+                  Text(item.colorDescription)
+                }
+       
               }
               .font(bodyFont)
             }
