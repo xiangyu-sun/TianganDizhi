@@ -111,9 +111,10 @@ struct LvlvCell: View {
       Text(dizhi.chineseCharactor)
 
       Spacer()
-      let value = Key.shierLvLv[dizhi.rawValue - 1].lvlvDescription
-      Text(value)
-      Text("(\(value.transformToPinyin()))")
+      let value = Key.shierLvLv[dizhi.rawValue - 1]
+      Text(value.lvlvDescription)
+      Text(value.description)
+      Text("(\(value.lvlvDescription.transformToPinyin()))")
     }
     .padding()
   }
