@@ -28,7 +28,7 @@ struct WuxingView: View {
       LazyVGrid(columns: columns, alignment: .leading, spacing: 8) {
         ForEach(Wuxing.allCases, id: \.self) { item in
           HStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 0) {
               Text("\(item.chineseCharacter)")
                 .font(title2Font)
               HStack {
