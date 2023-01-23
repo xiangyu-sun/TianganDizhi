@@ -37,6 +37,8 @@ struct JiaziView: View {
     
     let nian = components.nian
     let yue = components.yue
+    let ri = components.riZhu
+    let shi = components.shiZhu
     GeometryReader { proxy in
       ScrollView {
         LazyVGrid(columns: columns, alignment: .center, spacing: 0) {
@@ -54,13 +56,10 @@ struct JiaziView: View {
               if nian == item {
                 Text("年柱")
                   .font(footnote)
-              } else if yue == item {
-                Text("月柱")
-                  .font(footnote)
               }
               #endif
             }
-            .foregroundColor((nian == item || yue == item) ? .primary : .secondary)
+            .foregroundColor((nian == item || yue == item || ri == item) ? .primary : .secondary)
           }
         }
       }
