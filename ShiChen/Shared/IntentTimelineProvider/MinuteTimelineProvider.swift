@@ -9,9 +9,9 @@ struct MinuteTimelineProvider: IntentTimelineProvider {
     SimpleEntry(date: Date(), configuration: ConfigurationIntent())
   }
 
-  @available(iOSApplicationExtension 16.0, *)
+  @available(iOSApplicationExtension 16.0, *, watchOS 9, *)
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
-    defaultDecommendedIntents().map { intent in
+    defaultRecommendedIntents().map { intent in
       let description = Date().shichen?.dizhi.chineseCharactor ?? ""
       return IntentRecommendation(intent: intent, description: description)
     }
@@ -36,7 +36,7 @@ struct MinuteTimelineProvider: IntentTimelineProvider {
 
   // MARK: Private
 
-  private func defaultDecommendedIntents() -> [ConfigurationIntent] {
+  private func defaultRecommendedIntents() -> [ConfigurationIntent] {
     [ConfigurationIntent()]
   }
 }

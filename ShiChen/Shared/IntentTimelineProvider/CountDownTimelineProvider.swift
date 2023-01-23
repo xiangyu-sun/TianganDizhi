@@ -11,9 +11,9 @@ struct CountDownTimelineProvider: IntentTimelineProvider {
     CountDownEntry(date: Date(), configuration: CountDownIntentConfigurationIntent())
   }
 
-  @available(iOSApplicationExtension 16.0, *)
+  @available(iOSApplicationExtension 16.0, *, watchOS 9, *)
   func recommendations() -> [IntentRecommendation<CountDownIntentConfigurationIntent>] {
-    defaultDecommendedIntents().map { intent in
+    defaultRecommendedIntents().map { intent in
       let description = Date().shichen?.dizhi.chineseCharactor ?? ""
       return IntentRecommendation(intent: intent, description: description)
     }
@@ -38,7 +38,7 @@ struct CountDownTimelineProvider: IntentTimelineProvider {
 
   // MARK: Private
 
-  private func defaultDecommendedIntents() -> [CountDownIntentConfigurationIntent] {
+  private func defaultRecommendedIntents() -> [CountDownIntentConfigurationIntent] {
     [CountDownIntentConfigurationIntent()]
   }
 }
