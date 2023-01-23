@@ -107,11 +107,11 @@ struct MainView: View {
       }
       #endif
 
-      HStack(spacing: 0) {
-        Text(event.date, style: .relative)
-        Text("後\(title)")
-      }
-      .font(bodyFont)
+//      HStack(spacing: 0) {
+//        Text(event.date, style: .relative)
+//        Text("後\(title)")
+//      }
+//      .font(bodyFont)
 
       Spacer()
       #endif

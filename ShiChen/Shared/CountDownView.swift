@@ -6,7 +6,7 @@ import WidgetKit
 // MARK: - CountDownView
 
 struct CountDownView: View {
-  var entry: ShichenTimelineProvider.Entry
+  var entry: CountDownEntry
   @Environment(\.widgetFamily) var family
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.bodyFont) var bodyFont
@@ -88,20 +88,20 @@ struct CountDownView_Previews: PreviewProvider {
     #if os(iOS)
     if #available(iOSApplicationExtension 16.0, *) {
       Group {
-        CountDownView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        CountDownView(entry: CountDownEntry(date: Date(), configuration: CountDownIntentConfigurationIntent()))
           .environment(\.locale, Locale(identifier: "zh_Hant"))
           .previewContext(WidgetPreviewContext(family: .accessoryInline))
           .previewDisplayName("Inline")
 
-        CountDownView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        CountDownView(entry: CountDownEntry(date: Date(), configuration: CountDownIntentConfigurationIntent()))
           .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
           .previewDisplayName("Retangular")
       }
     }
     Group {
-      CountDownView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+      CountDownView(entry: CountDownEntry(date: Date(), configuration: CountDownIntentConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
-      CountDownView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+      CountDownView(entry: CountDownEntry(date: Date(), configuration: CountDownIntentConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
     .environment(\.locale, Locale(identifier: "zh_Hant"))

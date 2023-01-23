@@ -27,7 +27,8 @@ struct CountDownWidget: Widget {
   }
 
   var body: some WidgetConfiguration {
-    IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: MinuteTimelineProvider()) { entry in
+    
+    IntentConfiguration(kind: kind, intent: CountDownIntentConfigurationIntent.self, provider: CountDownTimelineProvider()) { entry in
       CountDownView(entry: entry)
     }
     .configurationDisplayName(WidgetConstants.countDownWidgetTitle)
