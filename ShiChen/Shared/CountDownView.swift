@@ -27,15 +27,13 @@ struct CountDownView: View {
     useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
   }
   
-  var event: EventModel {
-    return dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
-      .init(date: Date(), name: .chuyi, dateComponents: .init())
+
+  var title: String {
+    entry.configuration.parameter?.date?.displayStringOfChineseYearMonthDateWithZodiac ?? "n/a"
   }
   
-  var title: String {
-    useGTM8
-    ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
-    : event.date.displayStringOfChineseYearMonthDateWithZodiac
+  var date: Date {
+    entry.configuration.parameter?.date ?? Date()
   }
 
   var body: some View {
@@ -45,19 +43,19 @@ struct CountDownView: View {
 
     switch family {
     case .accessoryInline:
-      Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
+      Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: date, relativeTo: now))\(title)")
         .font(bodyFont)
     case .accessoryRectangular:
       HStack {
         Text(title)
           .font(bodyFont)
-        Text(event.date, style: .relative)
+        Text(date, style: .relative)
           .font(bodyFont)
       }
     case .systemSmall:
       VStack(alignment: .leading) {
         Text("距離\(title)")
-        Text(event.date, style: .relative)
+        Text(date, style: .relative)
       }
       .font(bodyFont)
       .foregroundColor(color)
@@ -70,7 +68,7 @@ struct CountDownView: View {
           .font(title3Font)
         Text("距離\(title)")
           .font(title2Font)
-        Text(event.date, style: .relative)
+        Text(date, style: .relative)
           .font(title3Font)
       }
       .foregroundColor(color)
