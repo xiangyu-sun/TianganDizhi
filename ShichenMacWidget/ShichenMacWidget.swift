@@ -17,7 +17,7 @@ struct AllWidgets: WidgetBundle {
   @WidgetBundleBuilder
   var body: some Widget {
     ShichenMacWidget()
-    CountDownWidget()
+    //CountDownWidget()
   }
 }
 
