@@ -17,6 +17,6 @@ struct AllWidgets: WidgetBundle {
     if #available(iOSApplicationExtension 16.0, *) {
       HourlyWidget()
     }
-    CountDownWidget()
+    //CountDownWidget()
   }
 }
