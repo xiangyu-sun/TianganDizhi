@@ -18,7 +18,7 @@ struct AllWidgets: WidgetBundle {
   var body: some Widget {
     ShiChen()
     HourlyWidget()
-    //CountDownWidget()
+    CountDownWidget()
   }
 }
 

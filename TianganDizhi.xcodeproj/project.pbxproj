@@ -155,16 +155,9 @@
 		997CD11D2954FE1600BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
 		997CD11E2954FE1700BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
 		997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
-		99A2B703297EB78800086CC7 /* CountdownIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B701297EB77200086CC7 /* CountdownIntentHandler.swift */; };
-		99A2B704297EB78900086CC7 /* CountdownIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B701297EB77200086CC7 /* CountdownIntentHandler.swift */; };
-		99A2B705297EB78A00086CC7 /* CountdownIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B701297EB77200086CC7 /* CountdownIntentHandler.swift */; };
 		99A2B708297EBA6B00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B709297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
-		99A2B714297EEFC600086CC7 /* CountDownIntentConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B712297EEFC600086CC7 /* CountDownIntentConfiguration.intentdefinition */; };
-		99A2B717297EEFF600086CC7 /* CountDownIntentConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B712297EEFC600086CC7 /* CountDownIntentConfiguration.intentdefinition */; };
-		99A2B718297EEFF800086CC7 /* CountDownIntentConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B712297EEFC600086CC7 /* CountDownIntentConfiguration.intentdefinition */; };
-		99A2B719297EEFF800086CC7 /* CountDownIntentConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B712297EEFC600086CC7 /* CountDownIntentConfiguration.intentdefinition */; };
 		99BC3C072968359D004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
 		99BC3C082968359E004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
 		99BC3C092968359E004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
@@ -390,10 +383,7 @@
 		997CD1102954C92000BECF31 /* MaterialBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialBackground.swift; sourceTree = "<group>"; };
 		997CD1152954CF9700BECF31 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		997CD1192954FDB600BECF31 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		99A2B701297EB77200086CC7 /* CountdownIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownIntentHandler.swift; sourceTree = "<group>"; };
 		99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimelineProvider.swift; sourceTree = "<group>"; };
-		99A2B713297EEFC600086CC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/CountDownIntentConfiguration.intentdefinition; sourceTree = "<group>"; };
-		99A2B716297EEFE200086CC7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/CountDownIntentConfiguration.strings"; sourceTree = "<group>"; };
 		99BC3C052968355E004AB614 /* CountDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownWidget.swift; sourceTree = "<group>"; };
 		99BC3C0A29683678004AB614 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		99BC3C0F296A2918004AB614 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
@@ -514,7 +504,6 @@
 				997CD1102954C92000BECF31 /* MaterialBackground.swift */,
 				997C68932868A75300B40D3F /* Shared */,
 				46393EE72542F57900E40518 /* ShiChen.intentdefinition */,
-				99A2B712297EEFC600086CC7 /* CountDownIntentConfiguration.intentdefinition */,
 				46B79CB32542F017003C0B7F /* InfoPlist.strings */,
 				462A5F6D24FFE5F20032A125 /* Assets.xcassets */,
 				462A5F6F24FFE5F20032A125 /* Info.plist */,
@@ -775,7 +764,6 @@
 				997C689E2868A81500B40D3F /* SimpleEntry.swift */,
 				994215E62965C368003C5CA1 /* WidgetConstants.swift */,
 				99BC3C0A29683678004AB614 /* CountDownView.swift */,
-				99A2B701297EB77200086CC7 /* CountdownIntentHandler.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1165,7 +1153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				997C68A52868A8E900B40D3F /* SimpleEntry.swift in Sources */,
-				99A2B717297EEFF600086CC7 /* CountDownIntentConfiguration.intentdefinition in Sources */,
 				994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */,
 				462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */,
 				99BC3C072968359D004AB614 /* CountDownWidget.swift in Sources */,
@@ -1195,7 +1182,6 @@
 				994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */,
 				99A2B708297EBA6B00086CC7 /* CountDownTimelineProvider.swift in Sources */,
 				997CD11B2954FE1300BECF31 /* Constants.swift in Sources */,
-				99A2B703297EB78800086CC7 /* CountdownIntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1204,7 +1190,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EF7F8027107968007030CC /* JieqiCell.swift in Sources */,
-				99A2B714297EEFC600086CC7 /* CountDownIntentConfiguration.intentdefinition in Sources */,
 				46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */,
 				990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */,
 				994B3BC128FB35C000F9CF67 /* DizhiGridView.swift in Sources */,
@@ -1322,8 +1307,6 @@
 				996321482911B3F1000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				997C68AD2868A93100B40D3F /* ShichenView.swift in Sources */,
 				997C68972868A76800B40D3F /* CompactShichenView.swift in Sources */,
-				99A2B718297EEFF800086CC7 /* CountDownIntentConfiguration.intentdefinition in Sources */,
-				99A2B704297EB78900086CC7 /* CountdownIntentHandler.swift in Sources */,
 				997C68992868A78400B40D3F /* Styler.swift in Sources */,
 				997C68942868A76800B40D3F /* FullDateTitleView.swift in Sources */,
 				99BC3C0D296836AB004AB614 /* CountDownView.swift in Sources */,
@@ -1363,7 +1346,6 @@
 				99FD3F702922989F0048DCEB /* ShichenTimeLineSceduler.swift in Sources */,
 				994215F12965C812003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				99FD3F6A292297BE0048DCEB /* Environment.swift in Sources */,
-				99A2B719297EEFF800086CC7 /* CountDownIntentConfiguration.intentdefinition in Sources */,
 				997CD11E2954FE1700BECF31 /* Constants.swift in Sources */,
 				99FD3F6D292298650048DCEB /* CircularContainerView.swift in Sources */,
 				99FD3F622922968B0048DCEB /* RetangularWidgetView.swift in Sources */,
@@ -1371,7 +1353,6 @@
 				99FD3F6B292297C50048DCEB /* Styler.swift in Sources */,
 				99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */,
 				997CD1142954C96D00BECF31 /* MaterialBackground.swift in Sources */,
-				99A2B705297EB78A00086CC7 /* CountdownIntentHandler.swift in Sources */,
 				99FD3F652922968B0048DCEB /* CompactShichenView.swift in Sources */,
 				99FD3F6C292297DE0048DCEB /* ShichenHStackView.swift in Sources */,
 				99FD3F602922968B0048DCEB /* CircularWidgetView.swift in Sources */,
@@ -1459,15 +1440,6 @@
 				46B79CDE2542F0B3003C0B7F /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		99A2B712297EEFC600086CC7 /* CountDownIntentConfiguration.intentdefinition */ = {
-			isa = PBXVariantGroup;
-			children = (
-				99A2B713297EEFC600086CC7 /* Base */,
-				99A2B716297EEFE200086CC7 /* zh-Hant */,
-			);
-			name = CountDownIntentConfiguration.intentdefinition;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

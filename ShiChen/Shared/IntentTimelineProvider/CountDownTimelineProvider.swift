@@ -2,29 +2,29 @@ import WidgetKit
 
 struct CountDownTimelineProvider: IntentTimelineProvider {
   typealias Entry = CountDownEntry
-  typealias Intent = CountDownIntentConfigurationIntent
+  typealias Intent = ConfigurationIntent
   
 
   // MARK: Internal
 
   func placeholder(in _: Context) -> CountDownEntry {
-    CountDownEntry(date: Date(), configuration: CountDownIntentConfigurationIntent())
+    CountDownEntry(date: Date(), configuration: Intent())
   }
 
   @available(iOSApplicationExtension 16.0, *, watchOS 9, *)
-  func recommendations() -> [IntentRecommendation<CountDownIntentConfigurationIntent>] {
+  func recommendations() -> [IntentRecommendation<Intent>] {
     defaultRecommendedIntents().map { intent in
       let description = Date().shichen?.dizhi.chineseCharactor ?? ""
       return IntentRecommendation(intent: intent, description: description)
     }
   }
 
-  func getSnapshot(for configuration: CountDownIntentConfigurationIntent, in _: Context, completion: @escaping (CountDownEntry) -> Void) {
+  func getSnapshot(for configuration: Intent, in _: Context, completion: @escaping (CountDownEntry) -> Void) {
     let entry = CountDownEntry(date: Date(), configuration: configuration)
     completion(entry)
   }
 
-  func getTimeline(for configuration: CountDownIntentConfigurationIntent, in _: Context, completion: @escaping (Timeline<CountDownEntry>) -> Void) {
+  func getTimeline(for configuration: Intent, in _: Context, completion: @escaping (Timeline<CountDownEntry>) -> Void) {
     var entries: [CountDownEntry] = []
 
     for date in MinuteTimeLineScheduler.buildTimeLine() {
@@ -38,7 +38,7 @@ struct CountDownTimelineProvider: IntentTimelineProvider {
 
   // MARK: Private
 
-  private func defaultRecommendedIntents() -> [CountDownIntentConfigurationIntent] {
-    [CountDownIntentConfigurationIntent()]
+  private func defaultRecommendedIntents() -> [Intent] {
+    [Intent()]
   }
 }

@@ -8,5 +8,5 @@ struct SimpleEntry: TimelineEntry {
 
 struct CountDownEntry: TimelineEntry {
   let date: Date
-  let configuration: CountDownIntentConfigurationIntent
+  let configuration: ConfigurationIntent
 }

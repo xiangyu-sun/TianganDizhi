@@ -28,12 +28,15 @@ struct CountDownView: View {
   }
   
 
-  var title: String {
-    entry.configuration.parameter?.date?.displayStringOfChineseYearMonthDateWithZodiac ?? "n/a"
+  var event: EventModel {
+    return dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
+      .init(date: Date(), name: .chuyi, dateComponents: .init())
   }
   
-  var date: Date {
-    entry.configuration.parameter?.date ?? Date()
+  var title: String {
+    useGTM8
+    ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
+    : event.date.displayStringOfChineseYearMonthDateWithZodiac
   }
 
   var body: some View {
@@ -43,19 +46,19 @@ struct CountDownView: View {
 
     switch family {
     case .accessoryInline:
-      Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: date, relativeTo: now))\(title)")
+      Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
         .font(bodyFont)
     case .accessoryRectangular:
       HStack {
         Text(title)
           .font(bodyFont)
-        Text(date, style: .relative)
+        Text(event.date, style: .relative)
           .font(bodyFont)
       }
     case .systemSmall:
       VStack(alignment: .leading) {
         Text("距離\(title)")
-        Text(date, style: .relative)
+        Text(event.date, style: .relative)
       }
       .font(bodyFont)
       .foregroundColor(color)
@@ -68,7 +71,7 @@ struct CountDownView: View {
           .font(title3Font)
         Text("距離\(title)")
           .font(title2Font)
-        Text(date, style: .relative)
+        Text(event.date, style: .relative)
           .font(title3Font)
       }
       .foregroundColor(color)
@@ -86,20 +89,20 @@ struct CountDownView_Previews: PreviewProvider {
     #if os(iOS)
     if #available(iOSApplicationExtension 16.0, *) {
       Group {
-        CountDownView(entry: CountDownEntry(date: Date(), configuration: CountDownIntentConfigurationIntent()))
+        CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
           .environment(\.locale, Locale(identifier: "zh_Hant"))
           .previewContext(WidgetPreviewContext(family: .accessoryInline))
           .previewDisplayName("Inline")
 
-        CountDownView(entry: CountDownEntry(date: Date(), configuration: CountDownIntentConfigurationIntent()))
+        CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
           .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
           .previewDisplayName("Retangular")
       }
     }
     Group {
-      CountDownView(entry: CountDownEntry(date: Date(), configuration: CountDownIntentConfigurationIntent()))
+      CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
-      CountDownView(entry: CountDownEntry(date: Date(), configuration: CountDownIntentConfigurationIntent()))
+      CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
     .environment(\.locale, Locale(identifier: "zh_Hant"))
