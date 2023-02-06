@@ -58,7 +58,7 @@ struct JiaziView: View {
               }
               #endif
             }
-            .foregroundColor((nian == item || yue == item || ri == item) ? .primary : .secondary)
+            .foregroundColor((nian == item) ? .primary : .secondary)
           }
         }
       }
