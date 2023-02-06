@@ -8,8 +8,8 @@
 
 import ChineseAstrologyCalendar
 import ChineseTranditionalMusicCore
-import MusicTheory
 import JingluoShuxue
+import MusicTheory
 import SwiftUI
 
 // MARK: - WuxingView
@@ -31,18 +31,16 @@ struct WuxingView: View {
             VStack(alignment: .leading, spacing: 0) {
               Text("\(item.chineseCharacter)")
                 .font(title2Font)
+
               HStack {
-                VStack {
+                VStack(alignment: .leading, spacing: 0) {
                   Text("天干")
                     .font(footnote)
                   HStack {
                     Text("\(item.tiangan.0.chineseCharactor)")
                     Text("\(item.tiangan.1.chineseCharactor)")
                   }
-                }
-                Divider()
-
-                VStack {
+                  Divider()
                   Text("地支")
                     .font(footnote)
                   HStack {
@@ -51,10 +49,11 @@ struct WuxingView: View {
                     }
                   }
                 }
+                .scaledToFit()
 
                 Divider()
 
-                VStack {
+                VStack(alignment: .leading, spacing: 0) {
                   Text("臟腑和情緒")
                     .font(footnote)
                   HStack {
@@ -65,14 +64,24 @@ struct WuxingView: View {
                     Text("\(wufu.rawValue)")
                     Text("\(wuzang.情緒)")
                   }
+
+                  Divider()
+
+                  Text("五味")
+                    .font(footnote)
+                  HStack {
+                    Text("\(item.fiveFlavor)")
+                  }
                 }
+                .scaledToFit()
+
                 Divider()
 
                 VStack {
                   Text("五音")
                     .font(footnote)
                   HStack {
-                    Text("\(Key.wuyin.first{ $0.wuxing == item}!.wuyinChineseName)")
+                    Text("\(Key.wuyin.first { $0.wuxing == item }!.wuyinChineseName)")
                   }
                 }
                 Divider()
@@ -84,12 +93,23 @@ struct WuxingView: View {
                     Text("\(item.fangwei.chineseCharactor)")
                   }
                 }
-                VStack{
+                VStack {
                   Text("色彩")
                     .font(footnote)
                   Text(item.colorDescription)
                 }
-       
+
+                Divider()
+
+                if let season = Season.allCases.first { $0.wuxing == item }?.chineseDescription {
+                  VStack {
+                    Text("四季")
+                      .font(footnote)
+                    HStack {
+                      Text("\(season)")
+                    }
+                  }
+                }
               }
               .font(bodyFont)
             }

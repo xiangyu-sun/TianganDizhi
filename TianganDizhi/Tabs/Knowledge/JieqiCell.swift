@@ -22,7 +22,6 @@ struct JieqiCell: View {
       HStack {
         Text(jieqi.chineseName)
         Text("(\(jieqi.qi ? "氣" : "節"))")
-          
       }
       .font(title3Font)
       Text(jieqi.qishierHou)

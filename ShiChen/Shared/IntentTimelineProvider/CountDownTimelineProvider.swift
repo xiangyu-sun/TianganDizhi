@@ -1,11 +1,11 @@
 import WidgetKit
 
 struct CountDownTimelineProvider: IntentTimelineProvider {
-  typealias Entry = CountDownEntry
-  typealias Intent = ConfigurationIntent
-  
 
   // MARK: Internal
+
+  typealias Entry = CountDownEntry
+  typealias Intent = ConfigurationIntent
 
   func placeholder(in _: Context) -> CountDownEntry {
     CountDownEntry(date: Date(), configuration: Intent())

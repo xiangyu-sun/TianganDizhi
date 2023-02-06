@@ -67,7 +67,7 @@ struct SettingsView: View {
           // Fallback on earlier versions
         }
       }
-      .onChange(of: useGTM8) { value in
+      .onChange(of: useGTM8) { _ in
         if #available(watchOS 9.0, iOS 14.0, *) {
           WidgetCenter.shared.reloadAllTimelines()
         } else {

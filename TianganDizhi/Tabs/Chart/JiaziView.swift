@@ -32,9 +32,8 @@ struct JiaziView: View {
   var components: DateComponents {
     Date().dateComponentsFromChineseCalendar()
   }
-  
+
   var body: some View {
-    
     let nian = components.nian
     let yue = components.yue
     let ri = components.riZhu
