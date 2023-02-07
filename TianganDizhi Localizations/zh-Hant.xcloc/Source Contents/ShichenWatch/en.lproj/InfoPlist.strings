@@ -1,0 +1,6 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "天干地支時辰";
+/* Bundle name */
+"CFBundleName" = "ShichenWatchExtension";
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright © 2022 孙翔宇. All rights reserved.";

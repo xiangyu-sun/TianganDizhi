@@ -1,0 +1,6 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "ShichenMacWidget";
+/* Bundle name */
+"CFBundleName" = "ShichenMacWidgetExtension";
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright © 2022 孙翔宇. All rights reserved.";

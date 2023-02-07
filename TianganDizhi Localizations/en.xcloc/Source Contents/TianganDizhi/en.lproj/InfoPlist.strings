@@ -1,0 +1,6 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "天干地支";
+/* Bundle name */
+"CFBundleName" = "TianganDizhi";
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.";
