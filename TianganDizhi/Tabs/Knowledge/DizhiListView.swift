@@ -71,6 +71,7 @@ struct DizhiListView: View {
       switch disppayMode {
       case .name:
         DizhiCell(dizhi: $0)
+//          .background($0.yin ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground))
       case .time:
         ShichenHourCell(shichen: $0)
       case .month:
