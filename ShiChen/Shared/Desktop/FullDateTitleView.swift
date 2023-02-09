@@ -8,11 +8,16 @@ struct FullDateTitleView: View {
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
 
+  @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
+  var displayMoonPhaseOnWidgets = false
+  
   var date: Date
   var body: some View {
     HStack {
       Text(date.displayStringOfChineseYearMonthDateWithZodiac)
-      Text(date.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
+      if displayMoonPhaseOnWidgets {
+        Text(date.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
+      }
     }
   }
 }

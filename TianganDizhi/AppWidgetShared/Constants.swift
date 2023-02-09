@@ -13,6 +13,7 @@ enum Constants {
   static let springFestiveForegroundEnabled = "springFestiveForegroundEnabled"
 
   static let useTranditionalNaming = "useTranditionalNaming"
+  static let displayMoonPhaseOnWidgets = "displayMoonPhaseOnWidgets"
 
   static let useGTM8 = "useGTM8"
   #if os(macOS)

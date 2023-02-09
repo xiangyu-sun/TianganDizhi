@@ -17,32 +17,37 @@ struct SettingsView: View {
   var springFestiveBackgroundEnabled = false
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
-
+  
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
-
+  
+  @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
+  var displayMoonPhaseOnWidgets = false
+  
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
-
+  
   var body: some View {
-    NavigationView {
-      Form {
-        Section(header: Text("春節氣氛組件設置")) {
-          Toggle(isOn: $springFestiveBackgroundEnabled) {
-            Text("組件紅底")
-          }
-          Toggle(isOn: $springFestiveForegroundEnabled) {
-            Text("組件夜間模式使用黑字")
-          }
+    Form {
+//      Section(header: Text("春節氣氛組件設置")) {
+//        Toggle(isOn: $springFestiveBackgroundEnabled) {
+//          Text("組件紅底")
+//        }
+//        Toggle(isOn: $springFestiveForegroundEnabled) {
+//          Text("組件夜間模式使用黑字")
+//        }
+//      }
+      Section(header: Text("通用設置")) {
+        Toggle(isOn: $useGTM8) {
+          Text("節日使用中國時區(海外用戶)")
         }
-        Section(header: Text("通用設置")) {
-          Toggle(isOn: $useGTM8) {
-            Text("節日使用中國時區(海外用戶)")
-          }
-
-          Toggle(isOn: $useTranditionalNaming) {
-            Text("顯示傳統名稱")
-          }
+        
+        Toggle(isOn: $displayMoonPhaseOnWidgets) {
+          Text("組件顯示月相")
+        }
+        
+        Toggle(isOn: $useTranditionalNaming) {
+          Text("顯示傳統名稱")
         }
       }
       .navigationTitle(Text("設置"))
@@ -68,6 +73,13 @@ struct SettingsView: View {
         }
       }
       .onChange(of: useGTM8) { _ in
+        if #available(watchOS 9.0, iOS 14.0, *) {
+          WidgetCenter.shared.reloadAllTimelines()
+        } else {
+          // Fallback on earlier versions
+        }
+      }
+      .onChange(of: displayMoonPhaseOnWidgets) { _ in
         if #available(watchOS 9.0, iOS 14.0, *) {
           WidgetCenter.shared.reloadAllTimelines()
         } else {

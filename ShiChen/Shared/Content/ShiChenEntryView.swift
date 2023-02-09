@@ -26,6 +26,9 @@ struct ShiChenEntryView: View {
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
 
+  @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
+  var displayMoonPhaseOnWidgets = true
+  
   var body: some View {
     let shichen = entry.date.shichen!
 
