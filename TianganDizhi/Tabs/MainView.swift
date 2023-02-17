@@ -44,6 +44,71 @@ struct MainView: View {
       : event.date.displayStringOfChineseYearMonthDateWithZodiac
   }
 
+  func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
+    HStack {
+      if #available(iOS 16.0, watchOS 9.0, *) {
+        Image(systemName: moonphase.moonPhase.symbolName)
+      }
+      Text(moonphase.name(traditionnal: useTranditionalNaming))
+    }
+    .font(bodyFont)
+  }
+  
+  func moonAndSunView(_ info: WeatherData.Information) -> some View {
+    HStack() {
+      VStack() {
+        HStack {
+          if #available(iOS 16.0, watchOS 9.0, *) {
+            Image(systemName: info.moonPhase.moonPhase.symbolName)
+          }
+          Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
+        }
+        .font(bodyFont)
+        if let moonrise = info.moonRise {
+          HStack() {
+            Text("月升")
+            Text(moonrise, style: .time)
+          }
+          .font(bodyFont)
+        }
+        if let moonset = info.moonset {
+          HStack() {
+            Text("月落")
+            Text(moonset, style: .time)
+          }
+          .font(bodyFont)
+        }
+      }
+      
+      Spacer()
+      
+      VStack() {
+        HStack {
+          if #available(iOS 16.0, watchOS 9.0, *) {
+            Image(systemName: info.moonPhase.moonPhase.symbolName)
+          }
+          Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
+        }
+        .font(bodyFont)
+        if let sunrise = info.sunrise {
+          HStack() {
+            Text("日出")
+            Text(sunrise, style: .time)
+          }
+          .font(bodyFont)
+        }
+        if let sunset = info.sunset {
+          HStack() {
+            Text("日落")
+            Text(sunset, style: .time)
+          }
+          .font(bodyFont)
+        }
+      }
+    }
+
+  }
+  
   var body: some View {
     VStack {
       let shichen = updater.currentDate.shichen!
@@ -53,7 +118,7 @@ struct MainView: View {
         HStack {
           Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
           if let value = weatherData.forcastedWeather {
-            Text(value.moonPhaseDisplayName)
+            Text(value.moonPhase.name(traditionnal: true))
           } else {
             Text(updater.currentDate.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
           }
@@ -70,17 +135,11 @@ struct MainView: View {
             .font(titleFont)
 
           if let value = weatherData.forcastedWeather {
-            Text(value.moonPhaseDisplayName)
-              .font(titleFont)
+            moonAndSunView(value)
+ 
           } else {
             if let moonphase = updater.currentDate.chineseDay()?.moonPhase {
-              HStack {
-                if #available(iOS 16.0, *) {
-                  Image(systemName: moonphase.moonPhase.symbolName)
-                }
-                Text(moonphase.name(traditionnal: useTranditionalNaming))
-              }
-              .font(bodyFont)
+              fixedMoonInformationView(moonphase)
             }
           }
         }
@@ -119,18 +178,18 @@ struct MainView: View {
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     #if os(iOS)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-//      .onAppear {
-//        if #available(iOS 16.0, *) {
-//          Task {
-//            do {
-//              let location = try await LocationManager.shared.startLocationUpdate()
-//              try await self.weatherData.dailyForecast(for: location)
-//            } catch {
-//              print(error)
-//            }
-//          }
-//        }
-//      }
+      .onAppear {
+        if #available(iOS 16.0, *) {
+          Task {
+            do {
+              let location = try await LocationManager.shared.startLocationUpdate()
+              try await self.weatherData.dailyForecast(for: location)
+            } catch {
+              print(error)
+            }
+          }
+        }
+      }
     #elseif os(macOS)
 .frame(minHeight: 640)
     #endif
