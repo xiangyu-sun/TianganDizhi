@@ -1,8 +1,8 @@
 
-import CoreLocation
+@preconcurrency import CoreLocation
 import Foundation
 import os
-import WeatherKit
+@preconcurrency import WeatherKit
 import ChineseAstrologyCalendar
 
 @MainActor
@@ -17,6 +17,11 @@ final class WeatherData: ObservableObject {
     let sunset: Date?
     let noon: Date?
     let midnight: Date?
+    
+    let temperatureHigh: Measurement<UnitTemperature>
+    let temperatureLow: Measurement<UnitTemperature>
+    
+    let condition: String
   }
 
   static let shared = WeatherData()
@@ -37,7 +42,6 @@ final class WeatherData: ObservableObject {
 
     logger.debug("\(dayWeather.debugDescription)")
     
-   
     
     if let dayWeather, let today = dayWeather.forecast.first, let day  = Date().chineseDay() {
       let data = Information(
@@ -47,7 +51,11 @@ final class WeatherData: ObservableObject {
         sunrise: today.sun.sunrise,
         sunset: today.sun.sunset,
         noon: today.sun.solarNoon,
-        midnight: today.sun.solarMidnight
+        midnight: today.sun.solarMidnight,
+        temperatureHigh: today.highTemperature,
+        temperatureLow: today.lowTemperature,
+        condition: today.condition.description
+        
       )
       
       forcastedWeather = data

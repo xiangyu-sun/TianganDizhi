@@ -54,89 +54,27 @@ struct MainView: View {
     .font(bodyFont)
   }
   
-  func moonAndSunView(_ info: WeatherData.Information) -> some View {
-    HStack() {
-      VStack() {
-        HStack {
-          if #available(iOS 16.0, watchOS 9.0, *) {
-            Image(systemName: info.moonPhase.moonPhase.symbolName)
-          }
-          Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
-        }
-        .font(bodyFont)
-        if let moonrise = info.moonRise {
-          HStack() {
-            Text("月升")
-            Text(moonrise, style: .time)
-          }
-          .font(bodyFont)
-        }
-        if let moonset = info.moonset {
-          HStack() {
-            Text("月落")
-            Text(moonset, style: .time)
-          }
-          .font(bodyFont)
-        }
-      }
-      
-      Spacer()
-      
-      VStack() {
-        HStack {
-          if #available(iOS 16.0, watchOS 9.0, *) {
-            Image(systemName: info.moonPhase.moonPhase.symbolName)
-          }
-          Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
-        }
-        .font(bodyFont)
-        if let sunrise = info.sunrise {
-          HStack() {
-            Text("日出")
-            Text(sunrise, style: .time)
-          }
-          .font(bodyFont)
-        }
-        if let sunset = info.sunset {
-          HStack() {
-            Text("日落")
-            Text(sunset, style: .time)
-          }
-          .font(bodyFont)
-        }
-      }
-    }
-
-  }
   
   var body: some View {
     VStack {
       let shichen = updater.currentDate.shichen!
 
       #if os(watchOS)
-      Group {
-        HStack {
-          Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
-          if let value = weatherData.forcastedWeather {
-            Text(value.moonPhase.name(traditionnal: true))
-          } else {
-            Text(updater.currentDate.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
-          }
-        }
-
-        CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
-      }
-
+      WatchMainView(date: updater.currentDate, wetherData: weatherData.forcastedWeather)
       #else
 
       HStack {
         VStack(alignment: .leading) {
           Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
             .font(titleFont)
-
+          
           if let value = weatherData.forcastedWeather {
-            moonAndSunView(value)
- 
+            Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\n天氣\(value.condition)")
+              .font(bodyFont)
+              .foregroundColor(Color.secondary)
+            withAnimation {
+              SunInformationView(info: value)
+            }
           } else {
             if let moonphase = updater.currentDate.chineseDay()?.moonPhase {
               fixedMoonInformationView(moonphase)
@@ -148,31 +86,42 @@ struct MainView: View {
         Spacer()
       }
 
-      Text(shichen.dizhi.aliasName)
-        .font(largeTitleFont)
-      Text(shichen.dizhi.organReference)
-        .font(bodyFont)
-
-      #if os(macOS)
-      CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
-        .frame(minWidth: 640)
-      #else
-      if shouldScaleFont {
+      ZStack() {
+#if os(macOS)
         CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
-      } else {
-        CircularContainerView(currentShichen: shichen.dizhi, padding: -10)
-          .fixedSize(horizontal: false, vertical: true)
-          .padding()
+          .frame(minWidth: 640)
+#else
+        if shouldScaleFont {
+          CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
+        } else {
+          CircularContainerView(currentShichen: shichen.dizhi, padding: -10)
+            .fixedSize(horizontal: false, vertical: true)
+            .padding()
+        }
+#endif
+        VStack() {
+          Text(shichen.dizhi.aliasName)
+            .font(largeTitleFont)
+          Text(shichen.dizhi.organReference)
+            .font(bodyFont)
+        }
       }
-      #endif
+      
+      Spacer()
+      
+      if let value = weatherData.forcastedWeather {
+        withAnimation {
+          MoonInformationView(info: value)
+            .padding(.bottom)
+        }
+      }
 
 //      HStack(spacing: 0) {
 //        Text(event.date, style: .relative)
 //        Text("後\(title)")
 //      }
 //      .font(bodyFont)
-
-      Spacer()
+      
       #endif
     }
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)

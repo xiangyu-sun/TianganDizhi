@@ -115,6 +115,10 @@
 		9963214A2911B8E4000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		9963214B2911B8F3000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		9963214C2911B8F3000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
+		996D2C1629A3DB33008DC1A9 /* SunInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */; };
+		996D2C1929A3DD82008DC1A9 /* WatchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1729A3DCBD008DC1A9 /* WatchMainView.swift */; };
+		996D2C1C29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */; };
+		996D2C1E29A3E188008DC1A9 /* MoonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1D29A3E188008DC1A9 /* MoonInformationView.swift */; };
 		997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68492864CADE00B40D3F /* ShichenWatchApp.swift */; };
 		997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C684D2864CADF00B40D3F /* Assets.xcassets */; };
 		997C68512864CADF00B40D3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C68502864CADF00B40D3F /* Preview Assets.xcassets */; };
@@ -364,6 +368,11 @@
 		996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteTimelineProvider.swift; sourceTree = "<group>"; };
 		996321492911B8E4000C4A2B /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		9963214E2911E0D4000C4A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		996D2C1429A3D9BD008DC1A9 /* ProSubscription.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProSubscription.storekit; sourceTree = "<group>"; };
+		996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunInformationView.swift; sourceTree = "<group>"; };
+		996D2C1729A3DCBD008DC1A9 /* WatchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMainView.swift; sourceTree = "<group>"; };
+		996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurmentFormatterManager.swift; sourceTree = "<group>"; };
+		996D2C1D29A3E188008DC1A9 /* MoonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonInformationView.swift; sourceTree = "<group>"; };
 		997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShichenWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997C68492864CADE00B40D3F /* ShichenWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatchApp.swift; sourceTree = "<group>"; };
 		997C684D2864CADF00B40D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -514,6 +523,7 @@
 		46AB55BE242B5EFD00F6604A = {
 			isa = PBXGroup;
 			children = (
+				996D2C1429A3D9BD008DC1A9 /* ProSubscription.storekit */,
 				46339FEC250296BF007D4137 /* ShiChenExtension.entitlements */,
 				46AB55C9242B5EFD00F6604A /* TianganDizhi */,
 				46AB55E0242B5EFF00F6604A /* TianganDizhiTests */,
@@ -552,6 +562,7 @@
 				99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
 				9963204A290C32C1000C4A2B /* DateProvider.swift */,
+				996D2C1A29A3DD97008DC1A9 /* Watch */,
 				994215E52965C0AB003C5CA1 /* Tabs */,
 				99FD3F732927EAB70048DCEB /* AppWidgetShared */,
 				46EF7F8127108A00007030CC /* JieqiCircularView.swift */,
@@ -653,6 +664,9 @@
 			isa = PBXGroup;
 			children = (
 				46339FEA25028DB5007D4137 /* MainView.swift */,
+				996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */,
+				996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */,
+				996D2C1D29A3E188008DC1A9 /* MoonInformationView.swift */,
 				997CD1152954CF9700BECF31 /* SettingsView.swift */,
 				994215D92958A93E003C5CA1 /* Chart */,
 				460BA9A826F24C400025CA39 /* Knowledge */,
@@ -704,6 +718,14 @@
 				99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */,
 			);
 			path = IntentTimelineProvider;
+			sourceTree = "<group>";
+		};
+		996D2C1A29A3DD97008DC1A9 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				996D2C1729A3DCBD008DC1A9 /* WatchMainView.swift */,
+			);
+			path = Watch;
 			sourceTree = "<group>";
 		};
 		997C68482864CADE00B40D3F /* ShichenWatch Watch App */ = {
@@ -1190,6 +1212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EF7F8027107968007030CC /* JieqiCell.swift in Sources */,
+				996D2C1C29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift in Sources */,
 				46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */,
 				990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */,
 				994B3BC128FB35C000F9CF67 /* DizhiGridView.swift in Sources */,
@@ -1212,7 +1235,9 @@
 				99FD3F752927EBD90048DCEB /* WuxingView.swift in Sources */,
 				460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */,
 				46339FE325024E85007D4137 /* Styler.swift in Sources */,
+				996D2C1629A3DB33008DC1A9 /* SunInformationView.swift in Sources */,
 				46EF7F8227108A00007030CC /* JieqiCircularView.swift in Sources */,
+				996D2C1E29A3E188008DC1A9 /* MoonInformationView.swift in Sources */,
 				996321422911B2CD000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				46EF7F7E271077AE007030CC /* JieqiListView.swift in Sources */,
 				997CD1162954CF9700BECF31 /* SettingsView.swift in Sources */,
@@ -1250,6 +1275,7 @@
 				99632078290DE1DE000C4A2B /* MainView.swift in Sources */,
 				994215D82958A7D8003C5CA1 /* ChartListView.swift in Sources */,
 				9963206C290DE153000C4A2B /* ContentView.swift in Sources */,
+				996D2C1929A3DD82008DC1A9 /* WatchMainView.swift in Sources */,
 				994215D52958A53D003C5CA1 /* JiaziView.swift in Sources */,
 				99632082290DE1DE000C4A2B /* DizhiListView.swift in Sources */,
 				9963207B290DE1DE000C4A2B /* DateProvider.swift in Sources */,
