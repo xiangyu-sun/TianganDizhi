@@ -182,6 +182,9 @@
 		99F19D9029E09C4E005C5949 /* SunInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */; };
 		99F19D9129E09CC1005C5949 /* DateColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9911517529DF3E5500A7CE54 /* DateColorModifier.swift */; };
 		99F19D9229E09D83005C5949 /* MoonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1D29A3E188008DC1A9 /* MoonInformationView.swift */; };
+		99F9DDCB29E0C3A400E69B8E /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */; };
+		99F9DDCC29E0C3A700E69B8E /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */; };
+		99F9DDCD29E0C41700E69B8E /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */; };
 		99FD3EEB291E9DC00048DCEB /* ScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */; };
 		99FD3F47292296170048DCEB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		99FD3F48292296170048DCEB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
@@ -405,6 +408,7 @@
 		99BC3C052968355E004AB614 /* CountDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownWidget.swift; sourceTree = "<group>"; };
 		99BC3C0A29683678004AB614 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		99BC3C0F296A2918004AB614 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
 		99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTests.swift; sourceTree = "<group>"; };
 		99FD3F46292296170048DCEB /* ShichenMacWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShichenMacWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FD3F4D292296180048DCEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -709,6 +713,7 @@
 			children = (
 				993843BD285636B800FA7631 /* ShiChenEntryView.swift */,
 				9911517A29E09A2800A7CE54 /* ExtraLargeWidgetView.swift */,
+				99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -1197,6 +1202,7 @@
 				996321472911B3F0000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				46B79C462541F962003C0B7F /* Environment.swift in Sources */,
 				99F19D9129E09CC1005C5949 /* DateColorModifier.swift in Sources */,
+				99F9DDCB29E0C3A400E69B8E /* MediumWidgetView.swift in Sources */,
 				994215EE2965C80E003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */,
 				46339FE425024F2B007D4137 /* Styler.swift in Sources */,
@@ -1365,6 +1371,7 @@
 				997C68982868A77700B40D3F /* Environment.swift in Sources */,
 				997C68852865FAD200B40D3F /* ShichenWatch.swift in Sources */,
 				994AD1962868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
+				99F9DDCD29E0C41700E69B8E /* MediumWidgetView.swift in Sources */,
 				997C689D2868A7EA00B40D3F /* ShichenHStackView.swift in Sources */,
 				997C68B32868ABEE00B40D3F /* ShichenTimelineProvider.swift in Sources */,
 				994215E82965C368003C5CA1 /* WidgetConstants.swift in Sources */,
@@ -1388,6 +1395,7 @@
 				99FD3F662922968B0048DCEB /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				99FD3F612922968B0048DCEB /* MinuteTimelineProvider.swift in Sources */,
 				99FD3F6E2922986C0048DCEB /* ShichenView.swift in Sources */,
+				99F9DDCC29E0C3A700E69B8E /* MediumWidgetView.swift in Sources */,
 				994215E92965C368003C5CA1 /* WidgetConstants.swift in Sources */,
 				99FD3F702922989F0048DCEB /* ShichenTimeLineSceduler.swift in Sources */,
 				994215F12965C812003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,

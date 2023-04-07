@@ -30,10 +30,6 @@ struct ShiChenEntryView: View {
   @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
   var displayMoonPhaseOnWidgets = true
   
-  #if os(iOS)
-  @StateObject var weatherData = WeatherData.shared
-  #endif
-  
   var body: some View {
     let shichen = entry.date.shichen!
 
@@ -63,27 +59,7 @@ struct ShiChenEntryView: View {
       CornerView(date: entry.date)
     #endif
     case .systemMedium:
-      VStack {
-        Spacer(minLength: 8)
-        FullDateTitleView(date: entry.date)
-          .font(title3Font)
-#if os(iOS)
-        if let value = weatherData.forcastedWeather {
-          Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "，天氣\(value.condition)")
-            .font(footnote)
-            .foregroundColor(Color.secondary)
-        }
-#else
-        Spacer()
-#endif
-
-        ShichenHStackView(shichen: shichen.dizhi)
-          .padding([.leading, .trailing], 8)
-        Spacer()
-      }
-      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      MediumWidgetView(date: entry.date)
     case .systemLarge:
      
       VStack(spacing: 0) {
