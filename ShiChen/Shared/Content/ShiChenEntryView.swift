@@ -17,6 +17,7 @@ struct ShiChenEntryView: View {
   @Environment(\.widgetFamily) var family
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.bodyFont) var bodyFont
+  @Environment(\.footnote) var footnote
   @Environment(\.titleFont) var titleFont
   @Environment(\.title3Font) var title3Font
   @Environment(\.iPad) var iPad
@@ -28,6 +29,10 @@ struct ShiChenEntryView: View {
 
   @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
   var displayMoonPhaseOnWidgets = true
+  
+  #if os(iOS)
+  @StateObject var weatherData = WeatherData.shared
+  #endif
   
   var body: some View {
     let shichen = entry.date.shichen!
@@ -62,7 +67,13 @@ struct ShiChenEntryView: View {
         Spacer()
         FullDateTitleView(date: entry.date)
           .font(title3Font)
-        Spacer()
+#if os(iOS)
+        if let value = weatherData.forcastedWeather {
+          Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "天氣\(value.condition)")
+            .font(footnote)
+            .foregroundColor(Color.secondary)
+        }
+#endif
 
         ShichenHStackView(shichen: shichen.dizhi)
           .padding([.leading, .trailing], 8)
