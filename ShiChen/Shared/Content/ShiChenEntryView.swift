@@ -86,10 +86,10 @@ struct ShiChenEntryView: View {
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     case .systemLarge:
      
-        VStack {
+      VStack(spacing: 0) {
           FullDateTitleView(date: entry.date)
             .font(title3Font)
-            .padding(.top, 8)
+            .padding(.vertical, 8)
           ZStack(alignment: .center) {
             CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
             VStack() {
