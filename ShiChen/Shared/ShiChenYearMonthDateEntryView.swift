@@ -83,7 +83,7 @@ struct ShiChenYearMonthDateEntryView_Previews: PreviewProvider {
       #else
         .previewContext(WidgetPreviewContext(family: .systemSmall))
       #endif
-        .previewDisplayName("Small")
+        .previewDisplayName("systemSmall")
 
       ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
       #if os(watchOS)
@@ -91,22 +91,22 @@ struct ShiChenYearMonthDateEntryView_Previews: PreviewProvider {
       #else
         .previewContext(WidgetPreviewContext(family: .systemMedium))
       #endif
-        .previewDisplayName("Medium")
+        .previewDisplayName("systemMedium")
     }
     #if os(iOS)
     if #available(iOSApplicationExtension 16.0, *) {
       Group {
         ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
           .previewContext(WidgetPreviewContext(family: .accessoryInline))
-          .previewDisplayName("ShiChenYearMonthDateEntryView Inline")
+          .previewDisplayName("ShiChenYearMonthDateEntryView accessoryInline")
 
         ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
           .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-          .previewDisplayName("ShiChenYearMonthDateEntryView Circular")
+          .previewDisplayName("ShiChenYearMonthDateEntryView accessoryCircular")
 
         ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
           .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-          .previewDisplayName("ShiChenYearMonthDateEntryView Retangular")
+          .previewDisplayName("ShiChenYearMonthDateEntryView accessoryRectangular")
       }
     }
     #endif

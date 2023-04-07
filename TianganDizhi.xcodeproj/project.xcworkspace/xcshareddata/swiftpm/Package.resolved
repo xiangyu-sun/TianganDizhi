@@ -46,6 +46,15 @@
       }
     },
     {
+      "identity" : "shangdiankit",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:xiangyu-sun/ShangdianKit.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "495417b1a60d40b63971ee1e4717fe3b104c0740"
+      }
+    },
+    {
       "identity" : "swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/swift",

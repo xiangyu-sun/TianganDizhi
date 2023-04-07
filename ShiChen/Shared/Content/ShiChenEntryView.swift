@@ -72,45 +72,55 @@ struct ShiChenEntryView: View {
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     case .systemLarge:
-      VStack {
-        FullDateTitleView(date: entry.date)
-          .font(title3Font)
-          .padding(.top, 8)
-        CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
-          .padding(.bottom, 8)
-      }
-      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-    case .systemExtraLarge:
-      if iPad {
-        HStack {
-          VStack {
-            FullDateTitleView(date: entry.date)
-              .font(titleFont)
-            Spacer()
-            ShichenHStackView(shichen: shichen.dizhi)
-            Spacer()
-          }
-          .padding()
-          CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
-            .padding()
-        }
-        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-
-      } else {
+      ZStack {
         VStack {
           FullDateTitleView(date: entry.date)
             .font(title3Font)
             .padding(.top, 8)
-          CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
+          
+          CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
             .padding(.bottom, 8)
         }
         .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+        
+        VStack() {
+          Text(shichen.dizhi.aliasName)
+            .font(largeTitleFont)
+          Text(shichen.dizhi.organReference)
+            .font(bodyFont)
+        }
+        .padding(.top, 8)
+      }
+
+    case .systemExtraLarge:
+      if iPad {
+        #if os(iOS)
+        ExtraLargeWidgetView(date: entry.date)
+        #endif
+      } else {
+        ZStack {
+          
+          VStack {
+            FullDateTitleView(date: entry.date)
+              .font(title3Font)
+              .padding(.top, 8)
+            CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
+              .padding(.bottom, 8)
+          }
+          .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+          .frame(maxWidth: .infinity, maxHeight: .infinity)
+          .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+          
+          VStack() {
+            Text(shichen.dizhi.aliasName)
+              .font(largeTitleFont)
+            Text(shichen.dizhi.organReference)
+              .font(bodyFont)
+          }
+          .padding(.top, 8)
+        }
       }
     default:
       CompactShichenView(shichen: shichen.dizhi, date: entry.date)

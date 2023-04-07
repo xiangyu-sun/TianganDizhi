@@ -21,6 +21,7 @@ struct SunInformationView: View {
           Text(sunrise, style: .time)
           Text("日出")
         }
+        .autoColorPastDate(sunrise)
         .font(bodyFont)
       }
       if let sunset = info.sunset {
@@ -29,6 +30,7 @@ struct SunInformationView: View {
           Text("日落")
         }
         .font(bodyFont)
+        .autoColorPastDate(sunset)
       }
     }
   }

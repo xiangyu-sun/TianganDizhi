@@ -7,36 +7,50 @@ struct MoonInformationView: View {
   var useTranditionalNaming = false
   
   var body: some View {
-    HStack() {
-      Spacer()
-      
-      VStack(alignment: .leading) {
-        HStack {
-          if #available(iOS 16.0, watchOS 9.0, *) {
-            Image(systemName: info.moonPhase.moonPhase.symbolName)
-          }
-          Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
+    VStack(alignment: .center) {
+      HStack {
+        if #available(iOS 16.0, watchOS 9.0, *) {
+          Image(systemName: info.moonPhase.moonPhase.symbolName)
         }
-        .font(bodyFont)
-        HStack() {
-          if let moonrise = info.moonRise {
+        Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
+      }
+      .font(bodyFont)
+      HStack() {
+        if let moonrise = info.moonRise, let moonset = info.moonset {
+          if moonrise <= moonset {
             HStack(spacing: 0) {
               Text(moonrise, style: .time)
               Text("月升")
             }
             .font(bodyFont)
-          }
-          if let moonset = info.moonset {
+            .autoColorPastDate(moonrise)
+            
             HStack(spacing: 0) {
               Text(moonset, style: .time)
               Text("月落")
             }
             .font(bodyFont)
+            .autoColorPastDate(moonset)
+          }else {
+            
+            HStack(spacing: 0) {
+              Text(moonset, style: .time)
+              Text("月落")
+            }
+            .font(bodyFont)
+            .autoColorPastDate(moonset)
+            
+            HStack(spacing: 0) {
+              Text(moonrise, style: .time)
+              Text("月升")
+            }
+            .font(bodyFont)
+            .autoColorPastDate(moonrise)
           }
+        
         }
-      }
-      .padding(.trailing)
 
+      }
     }
   }
 }

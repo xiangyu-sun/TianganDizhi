@@ -51,6 +51,9 @@
 		990FEADF294CAFD700CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
 		990FEAE0294CB03900CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
 		990FEAE2294CE89400CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
+		9911517629DF3E5500A7CE54 /* DateColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9911517529DF3E5500A7CE54 /* DateColorModifier.swift */; };
+		9911517929DF43E100A7CE54 /* ShangdianKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9911517829DF43E100A7CE54 /* ShangdianKit */; };
+		9911517C29E09A3300A7CE54 /* ExtraLargeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9911517A29E09A2800A7CE54 /* ExtraLargeWidgetView.swift */; };
 		993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843BD285636B800FA7631 /* ShiChenEntryView.swift */; };
 		993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
 		993CFB9928809F690015252E /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
@@ -175,6 +178,10 @@
 		99BC3C14296A2950004AB614 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C0F296A2918004AB614 /* DateFormatters.swift */; };
 		99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; productRef = 99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */; };
 		99D2C78E2943935800327AF7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B79C3F2541F95F003C0B7F /* Environment.swift */; };
+		99F19D8E29E09C3C005C5949 /* MeasurmentFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */; };
+		99F19D9029E09C4E005C5949 /* SunInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */; };
+		99F19D9129E09CC1005C5949 /* DateColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9911517529DF3E5500A7CE54 /* DateColorModifier.swift */; };
+		99F19D9229E09D83005C5949 /* MoonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1D29A3E188008DC1A9 /* MoonInformationView.swift */; };
 		99FD3EEB291E9DC00048DCEB /* ScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */; };
 		99FD3F47292296170048DCEB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		99FD3F48292296170048DCEB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
@@ -348,6 +355,8 @@
 		990FEAD7294C9EA800CB1CEF /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		990FEADC294CA2FE00CB1CEF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		990FEAE1294CC02D00CB1CEF /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		9911517529DF3E5500A7CE54 /* DateColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateColorModifier.swift; sourceTree = "<group>"; };
+		9911517A29E09A2800A7CE54 /* ExtraLargeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraLargeWidgetView.swift; sourceTree = "<group>"; };
 		993843BD285636B800FA7631 /* ShiChenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenEntryView.swift; sourceTree = "<group>"; };
 		993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenYearMonthDateEntryView.swift; sourceTree = "<group>"; };
 		994215D32958A53D003C5CA1 /* JiaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiaziView.swift; sourceTree = "<group>"; };
@@ -421,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9963204D290D52AA000C4A2B /* AppStoreReviewPrompt in Frameworks */,
+				9911517929DF43E100A7CE54 /* ShangdianKit in Frameworks */,
 				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
 				994215CA2958A0EF003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */,
@@ -645,6 +655,7 @@
 			children = (
 				46339FE225024E85007D4137 /* Styler.swift */,
 				46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */,
+				9911517529DF3E5500A7CE54 /* DateColorModifier.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -684,19 +695,20 @@
 			path = Widget;
 			sourceTree = "<group>";
 		};
-		994AD1982868FBB600BB5BED /* Desktop */ = {
+		994AD1982868FBB600BB5BED /* LockScreen */ = {
 			isa = PBXGroup;
 			children = (
 				994D37522864BFF200A9C99E /* FullDateTitleView.swift */,
 				46701E2C271B2E7E00D6D322 /* CompactShichenView.swift */,
 			);
-			path = Desktop;
+			path = LockScreen;
 			sourceTree = "<group>";
 		};
 		9955E82428FB782600FA8362 /* Content */ = {
 			isa = PBXGroup;
 			children = (
 				993843BD285636B800FA7631 /* ShiChenEntryView.swift */,
+				9911517A29E09A2800A7CE54 /* ExtraLargeWidgetView.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -778,7 +790,7 @@
 		997C68932868A75300B40D3F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				994AD1982868FBB600BB5BED /* Desktop */,
+				994AD1982868FBB600BB5BED /* LockScreen */,
 				994AD1972868FBA800BB5BED /* Widget */,
 				993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */,
 				9955E82428FB782600FA8362 /* Content */,
@@ -864,6 +876,7 @@
 				9963204C290D52AA000C4A2B /* AppStoreReviewPrompt */,
 				99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */,
 				994215C92958A0EF003C5CA1 /* ChineseAstrologyCalendar */,
+				9911517829DF43E100A7CE54 /* ShangdianKit */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -1067,6 +1080,7 @@
 				99CACD7D29379B6B005FCEA0 /* XCRemoteSwiftPackageReference "swift" */,
 				99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */,
 				994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
+				9911517729DF43E100A7CE54 /* XCRemoteSwiftPackageReference "ShangdianKit" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -1178,9 +1192,11 @@
 				994D37542864C05200A9C99E /* FullDateTitleView.swift in Sources */,
 				462A5F6B24FFE5F20032A125 /* ShiChen.swift in Sources */,
 				99BC3C072968359D004AB614 /* CountDownWidget.swift in Sources */,
+				9911517C29E09A3300A7CE54 /* ExtraLargeWidgetView.swift in Sources */,
 				993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				996321472911B3F0000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				46B79C462541F962003C0B7F /* Environment.swift in Sources */,
+				99F19D9129E09CC1005C5949 /* DateColorModifier.swift in Sources */,
 				994215EE2965C80E003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */,
 				46339FE425024F2B007D4137 /* Styler.swift in Sources */,
@@ -1195,11 +1211,14 @@
 				990FEADF294CAFD700CB1CEF /* LocationManager.swift in Sources */,
 				46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */,
 				994AD1952868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
+				99F19D8E29E09C3C005C5949 /* MeasurmentFormatterManager.swift in Sources */,
 				990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */,
 				997C68782864CB9B00B40D3F /* AllWidgets.swift in Sources */,
 				997C68AB2868A8F600B40D3F /* ShichenTimelineProvider.swift in Sources */,
 				46B7FCEA250630DE008E8D48 /* ShichenTimeLineSceduler.swift in Sources */,
+				99F19D9229E09D83005C5949 /* MoonInformationView.swift in Sources */,
 				99BC3C11296A294E004AB614 /* DateFormatters.swift in Sources */,
+				99F19D9029E09C4E005C5949 /* SunInformationView.swift in Sources */,
 				994215E72965C368003C5CA1 /* WidgetConstants.swift in Sources */,
 				994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */,
 				99A2B708297EBA6B00086CC7 /* CountDownTimelineProvider.swift in Sources */,
@@ -1219,6 +1238,7 @@
 				46B79C402541F95F003C0B7F /* Environment.swift in Sources */,
 				997CD11A2954FDB600BECF31 /* Constants.swift in Sources */,
 				46339FEB25028DB5007D4137 /* MainView.swift in Sources */,
+				9911517629DF3E5500A7CE54 /* DateColorModifier.swift in Sources */,
 				46EF7F8427108D73007030CC /* JieqiContainerView.swift in Sources */,
 				46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				99632043290C2D1E000C4A2B /* TianganDizhiApp.swift in Sources */,
@@ -2217,6 +2237,14 @@
 				kind = branch;
 			};
 		};
+		9911517729DF43E100A7CE54 /* XCRemoteSwiftPackageReference "ShangdianKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:xiangyu-sun/ShangdianKit.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git";
@@ -2253,6 +2281,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */;
 			productName = ChineseTranditionalMusicCore;
+		};
+		9911517829DF43E100A7CE54 /* ShangdianKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9911517729DF43E100A7CE54 /* XCRemoteSwiftPackageReference "ShangdianKit" */;
+			productName = ShangdianKit;
 		};
 		994215C92958A0EF003C5CA1 /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;

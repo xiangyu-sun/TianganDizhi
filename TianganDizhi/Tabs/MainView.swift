@@ -64,24 +64,26 @@ struct MainView: View {
       #else
 
       HStack {
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
           Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
             .font(titleFont)
           
           if let value = weatherData.forcastedWeather {
+            
             Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\n天氣\(value.condition)")
               .font(bodyFont)
               .foregroundColor(Color.secondary)
             withAnimation {
               SunInformationView(info: value)
             }
+            
           } else {
             if let moonphase = updater.currentDate.chineseDay()?.moonPhase {
               fixedMoonInformationView(moonphase)
             }
           }
         }
-        .padding(.leading)
+        .padding()
 
         Spacer()
       }
@@ -109,6 +111,7 @@ struct MainView: View {
       
       Spacer()
       
+      // Moon
       if let value = weatherData.forcastedWeather {
         withAnimation {
           MoonInformationView(info: value)
