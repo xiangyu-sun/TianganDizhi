@@ -23,11 +23,20 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
   }
 
   static let shared = LocationManager()
+  
+  let userDefault = Constants.sharedUserDefault
 
   let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.LocationManager", category: "Model")
 
   var isAuthorizedForWidgetUpdates: Bool {
     service.isAuthorizedForWidgetUpdates
+  }
+  
+  var lastLocation: CLLocation? {
+    if let data = userDefault?.object(forKey: Constants.lastlocationKey) as? Data {
+        return try? NSKeyedUnarchiver.unarchivedObject(ofClass: CLLocation.self, from: data)
+    }
+  return nil
   }
 
   func startLocationUpdate() async throws -> CLLocation {
@@ -65,6 +74,10 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     if let location = locations.last {
       locationContinuation?.resume(returning: location)
+      
+      let encodedLocation = NSKeyedArchiver.archivedData(withRootObject: location)
+      userDefault?.set(encodedLocation, forKey: Constants.lastlocationKey)
+      
       manager.stopUpdatingLocation()
     } else {
       locationContinuation?.resume(throwing: OperationError.didNotGetResult)

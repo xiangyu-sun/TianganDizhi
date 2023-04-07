@@ -47,9 +47,6 @@ struct ExtraLargeWidgetView: View {
           Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\n天氣\(value.condition)")
             .font(bodyFont)
             .foregroundColor(Color.secondary)
-          withAnimation {
-            SunInformationView(info: value)
-          }
           
         } else {
           // default
@@ -57,17 +54,11 @@ struct ExtraLargeWidgetView: View {
             fixedMoonInformationView(moonphase)
           }
         }
-        Spacer()
-        
+
         ShichenHStackView(shichen: shichen.dizhi)
+          .padding([.top])
         
         Spacer()
-        
-        if let value = weatherData.forcastedWeather {
-          withAnimation {
-            MoonInformationView(info: value)
-          }
-        }
       }
       .padding([.leading, .top, .bottom])
       
@@ -81,8 +72,14 @@ struct ExtraLargeWidgetView: View {
     .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     .onAppear() {
       if #available(iOS 16.0, *) {
+        
         Task {
           do {
+            if let location = LocationManager.shared.lastLocation {
+              try await self.weatherData.dailyForecast(for: location)
+            }
+         
+            
             let location = try await LocationManager.shared.startLocationUpdate()
             try await self.weatherData.dailyForecast(for: location)
           } catch {

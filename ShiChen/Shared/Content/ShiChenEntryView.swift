@@ -72,27 +72,26 @@ struct ShiChenEntryView: View {
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     case .systemLarge:
-      ZStack {
+     
         VStack {
           FullDateTitleView(date: entry.date)
             .font(title3Font)
             .padding(.top, 8)
-          
-          CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
-            .padding(.bottom, 8)
+          ZStack(alignment: .center) {
+            CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
+            VStack() {
+              Text(shichen.dizhi.aliasName)
+                .font(largeTitleFont)
+              Text(shichen.dizhi.organReference)
+                .font(bodyFont)
+            }
+          }
+          .padding(.bottom, 8)
         }
         .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-        
-        VStack() {
-          Text(shichen.dizhi.aliasName)
-            .font(largeTitleFont)
-          Text(shichen.dizhi.organReference)
-            .font(bodyFont)
-        }
-        .padding(.top, 8)
-      }
+
 
     case .systemExtraLarge:
       if iPad {
