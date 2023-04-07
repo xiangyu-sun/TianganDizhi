@@ -62,44 +62,38 @@ struct MainView: View {
       #if os(watchOS)
       WatchMainView(date: updater.currentDate, wetherData: weatherData.forcastedWeather)
       #else
-
-      HStack {
-        VStack(alignment: .center) {
-          Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
-            .font(titleFont)
+      
+      VStack() {
+        Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
+          .font(titleFont)
+        
+        if let value = weatherData.forcastedWeather {
+          Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
+            .font(bodyFont)
+            .foregroundColor(Color.secondary)
+          Text("天氣\(value.condition)")
+            .font(bodyFont)
+            .foregroundColor(Color.secondary)
+          withAnimation {
+            SunInformationView(info: value)
+          }
           
-          if let value = weatherData.forcastedWeather {
-            
-            Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\n天氣\(value.condition)")
-              .font(bodyFont)
-              .foregroundColor(Color.secondary)
-            withAnimation {
-              SunInformationView(info: value)
-            }
-            
-          } else {
-            if let moonphase = updater.currentDate.chineseDay()?.moonPhase {
-              fixedMoonInformationView(moonphase)
-            }
+        } else {
+          if let moonphase = updater.currentDate.chineseDay()?.moonPhase {
+            fixedMoonInformationView(moonphase)
           }
         }
-        .padding()
-
-        Spacer()
       }
+      .padding()
+      
 
       ZStack() {
 #if os(macOS)
         CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
           .frame(minWidth: 640)
 #else
-        if shouldScaleFont {
-          CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
-        } else {
-          CircularContainerView(currentShichen: shichen.dizhi, padding: -10)
-            .fixedSize(horizontal: false, vertical: true)
-            .padding()
-        }
+        CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
+          .fixedSize(horizontal: false, vertical: true)
 #endif
         VStack() {
           Text(shichen.dizhi.aliasName)

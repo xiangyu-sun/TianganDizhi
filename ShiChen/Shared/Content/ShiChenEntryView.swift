@@ -69,10 +69,12 @@ struct ShiChenEntryView: View {
           .font(title3Font)
 #if os(iOS)
         if let value = weatherData.forcastedWeather {
-          Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "天氣\(value.condition)")
+          Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "，天氣\(value.condition)")
             .font(footnote)
             .foregroundColor(Color.secondary)
         }
+#else
+        Spacer()
 #endif
 
         ShichenHStackView(shichen: shichen.dizhi)
