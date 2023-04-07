@@ -185,6 +185,9 @@
 		99F9DDCB29E0C3A400E69B8E /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */; };
 		99F9DDCC29E0C3A700E69B8E /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */; };
 		99F9DDCD29E0C41700E69B8E /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */; };
+		99F9DDCE29E0CDD000E69B8E /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
+		99F9DDCF29E0CE2B00E69B8E /* MeasurmentFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */; };
+		99F9DDD029E0CE2C00E69B8E /* MeasurmentFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */; };
 		99FD3EEB291E9DC00048DCEB /* ScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */; };
 		99FD3F47292296170048DCEB /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		99FD3F48292296170048DCEB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
@@ -1366,6 +1369,7 @@
 				996321462911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */,
 				994AD1932868FA0400BB5BED /* CircularWidgetView.swift in Sources */,
 				99BC3C082968359E004AB614 /* CountDownWidget.swift in Sources */,
+				99F9DDCF29E0CE2B00E69B8E /* MeasurmentFormatterManager.swift in Sources */,
 				997CD1132954C96C00BECF31 /* MaterialBackground.swift in Sources */,
 				997C68AC2868A92400B40D3F /* CircularContainerView.swift in Sources */,
 				997C68982868A77700B40D3F /* Environment.swift in Sources */,
@@ -1402,9 +1406,11 @@
 				99FD3F6A292297BE0048DCEB /* Environment.swift in Sources */,
 				997CD11E2954FE1700BECF31 /* Constants.swift in Sources */,
 				99FD3F6D292298650048DCEB /* CircularContainerView.swift in Sources */,
+				99F9DDD029E0CE2C00E69B8E /* MeasurmentFormatterManager.swift in Sources */,
 				99FD3F622922968B0048DCEB /* RetangularWidgetView.swift in Sources */,
 				99BC3C14296A2950004AB614 /* DateFormatters.swift in Sources */,
 				99FD3F6B292297C50048DCEB /* Styler.swift in Sources */,
+				99F9DDCE29E0CDD000E69B8E /* WeatherData.swift in Sources */,
 				99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */,
 				997CD1142954C96D00BECF31 /* MaterialBackground.swift in Sources */,
 				99FD3F652922968B0048DCEB /* CompactShichenView.swift in Sources */,
