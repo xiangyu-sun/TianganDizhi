@@ -7,8 +7,6 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.widgetkit-extension</string>
 	</dict>
-	<key>NSLocationUsageDescription</key>
-	<string>TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.</string>
 	<key>NSWidgetWantsLocation </key>
 	<true/>
 	<key>UIAppFonts</key>
