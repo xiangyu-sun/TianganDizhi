@@ -122,10 +122,10 @@ struct MainView: View {
       #endif
     }
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-    #if os(iOS)
+    #if os(iOS) || os(macOS)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
       .onAppear {
-        if #available(iOS 16.0, *) {
+        if #available(iOS 16.0, macOS 13.0, *) {
           Task {
             do {
               let location = try await LocationManager.shared.startLocationUpdate()
@@ -136,7 +136,8 @@ struct MainView: View {
           }
         }
       }
-    #elseif os(macOS)
+#endif
+    #if os(macOS)
 .frame(minHeight: 640)
     #endif
   }

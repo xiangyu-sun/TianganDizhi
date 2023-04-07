@@ -64,7 +64,7 @@ struct ShiChenEntryView: View {
     #endif
     case .systemMedium:
       VStack {
-        Spacer()
+        Spacer(minLength: 8)
         FullDateTitleView(date: entry.date)
           .font(title3Font)
 #if os(iOS)
