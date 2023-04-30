@@ -43,6 +43,7 @@ struct MediumWidgetView: View {
         .padding([.leading, .trailing], 8)
       Spacer()
     }
+#if os(iOS) || os(macOS)
     .onAppear() {
       if #available(iOS 16.0, macOS 13.0, *) {
         
@@ -60,6 +61,7 @@ struct MediumWidgetView: View {
         }
       }
     }
+#endif
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
