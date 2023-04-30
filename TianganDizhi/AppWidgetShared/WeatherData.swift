@@ -31,16 +31,19 @@ final class WeatherData: ObservableObject {
   @Published private(set) var forcastedWeather: Information?
   
   private var lastUpdatedLocation: CLLocation?
+  private var lastUpdatedDate: Date?
 
   @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
   @discardableResult
   func dailyForecast(for location: CLLocation) async throws -> Information? {
-    if let distance = lastUpdatedLocation?.distance(from: location), distance <= 1000 {
-      lastUpdatedLocation = location
+    if let distance = lastUpdatedLocation?.distance(from: location), distance <= 1000,
+       let lastUpdatedDate, lastUpdatedDate.distance(to: Date()) >= 24 * 60 * 60
+    {
       return nil
     }
     
     lastUpdatedLocation = location
+    lastUpdatedDate = Date()
     
     let dayWeather: Forecast<DayWeather>? = await Task.detached(priority: .userInitiated) {
       let forcast = try? await WeatherService.shared.weather(

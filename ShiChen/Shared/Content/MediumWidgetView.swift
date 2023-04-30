@@ -44,7 +44,7 @@ struct MediumWidgetView: View {
       Spacer()
     }
     .onAppear() {
-      if #available(iOS 16.0, *) {
+      if #available(iOS 16.0, macOS 13.0, *) {
         
         Task {
           do {
