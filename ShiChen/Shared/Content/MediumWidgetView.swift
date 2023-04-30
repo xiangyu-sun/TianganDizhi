@@ -43,6 +43,24 @@ struct MediumWidgetView: View {
         .padding([.leading, .trailing], 8)
       Spacer()
     }
+    .onAppear() {
+      if #available(iOS 16.0, *) {
+        
+        Task {
+          do {
+            if let location = LocationManager.shared.lastLocation {
+              try await self.weatherData.dailyForecast(for: location)
+            }
+         
+            
+            let location = try await LocationManager.shared.startLocationUpdate()
+            try await self.weatherData.dailyForecast(for: location)
+          } catch {
+            print(error)
+          }
+        }
+      }
+    }
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)

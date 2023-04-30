@@ -75,10 +75,14 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     if let location = locations.last {
       locationContinuation?.resume(returning: location)
       
-      let encodedLocation = NSKeyedArchiver.archivedData(withRootObject: location)
-      userDefault?.set(encodedLocation, forKey: Constants.lastlocationKey)
-      
-      manager.stopUpdatingLocation()
+      do {
+        let encodedLocation = try NSKeyedArchiver.archivedData(withRootObject: location, requiringSecureCoding: false)
+        userDefault?.set(encodedLocation, forKey: Constants.lastlocationKey)
+        
+        manager.stopUpdatingLocation()
+      } catch {
+        print(error)
+      }
     } else {
       locationContinuation?.resume(throwing: OperationError.didNotGetResult)
     }
