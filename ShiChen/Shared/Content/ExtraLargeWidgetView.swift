@@ -77,11 +77,10 @@ struct ExtraLargeWidgetView: View {
           do {
             if let location = LocationManager.shared.lastLocation {
               try await self.weatherData.dailyForecast(for: location)
+            } else {
+              let location = try await LocationManager.shared.startLocationUpdate()
+              try await self.weatherData.dailyForecast(for: location)
             }
-         
-            
-            let location = try await LocationManager.shared.startLocationUpdate()
-            try await self.weatherData.dailyForecast(for: location)
           } catch {
             print(error)
           }

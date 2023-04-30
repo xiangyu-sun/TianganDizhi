@@ -29,10 +29,19 @@ final class WeatherData: ObservableObject {
   let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.WeatherData", category: "Model")
 
   @Published private(set) var forcastedWeather: Information?
+  
+  private var lastUpdatedLocation: CLLocation?
 
   @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
   @discardableResult
   func dailyForecast(for location: CLLocation) async throws -> Information? {
+    if let distance = lastUpdatedLocation?.distance(from: location), distance <= 1000 {
+      lastUpdatedLocation = location
+      return nil
+    }
+    
+    lastUpdatedLocation = location
+    
     let dayWeather: Forecast<DayWeather>? = await Task.detached(priority: .userInitiated) {
       let forcast = try? await WeatherService.shared.weather(
         for: location,
