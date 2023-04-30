@@ -70,6 +70,11 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
       locationContinuation = nil
     }
   }
+  
+  func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    locationContinuation?.resume(throwing: OperationError.didNotGetResult)
+    locationContinuation = nil
+  }
 
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     if let location = locations.last {
