@@ -47,6 +47,9 @@ struct KnowledgeView: View {
           NavigationLink(destination: WuxingView()) {
             Text("五行")
           }
+          NavigationLink(destination: WuyinView()) {
+            Text("五音")
+          }
         }
         Section(header: Text("詩詞歌賦頌")) {
           NavigationLink(destination: ShiciView()) {

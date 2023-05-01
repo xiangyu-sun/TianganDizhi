@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct MediumWidgetView: View {
   @State var date: Date
@@ -46,7 +47,6 @@ struct MediumWidgetView: View {
 #if os(iOS) || os(macOS)
     .onAppear() {
       if #available(iOS 16.0, macOS 13.0, *) {
-        
         Task {
           do {
             if let location = LocationManager.shared.lastLocation {
@@ -68,8 +68,12 @@ struct MediumWidgetView: View {
   }
 }
 
+#if !os(watchOS)
+
 struct MediumWidgetView_Previews: PreviewProvider {
   static var previews: some View {
     MediumWidgetView(date: Date())
+      .previewContext(WidgetPreviewContext(family: .systemMedium))
   }
 }
+#endif
