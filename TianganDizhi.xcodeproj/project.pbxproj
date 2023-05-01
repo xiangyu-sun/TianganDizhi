@@ -1090,7 +1090,6 @@
 			packageReferences = (
 				46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */,
 				46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */,
-				99CACD7D29379B6B005FCEA0 /* XCRemoteSwiftPackageReference "swift" */,
 				99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */,
 				994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
 				9911517729DF43E100A7CE54 /* XCRemoteSwiftPackageReference "ShangdianKit" */,
@@ -2275,14 +2274,6 @@
 			requirement = {
 				branch = master;
 				kind = branch;
-			};
-		};
-		99CACD7D29379B6B005FCEA0 /* XCRemoteSwiftPackageReference "swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
 			};
 		};
 		99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */ = {
