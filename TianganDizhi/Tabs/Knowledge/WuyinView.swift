@@ -16,16 +16,20 @@ struct WuyinView: View {
   
   var body: some View {
     List(Key.wuyin, id: \.self) { yin in
-      HStack() {
-        Text(yin.wuyinChineseName)
-          .font(title3Font)
-        Text("(\(yin.wuyinChineseName.transformToPinyin()))")
-        
-        Text("唐譜：\(yin.wuyinTangDynastySymbol)")
-        Text("五行：\(yin.wuxing.chineseCharacter)")
-        Text("唱名：\(yin.description)")
-        
+      VStack(alignment: .leading) {
+        HStack() {
+          Text(yin.wuyinChineseName)
+            .font(title3Font)
+          Text("(\(yin.wuyinChineseName.transformToPinyin()))")
+        }
+        HStack() {
+          Text("唐譜：\(yin.wuyinTangDynastySymbol)")
+          Text("五行：\(yin.wuxing.chineseCharacter)")
+          Text("唱名：\(yin.description)")
+          
+        }
       }
+
       .font(bodyFont)
     }
     .navigationTitle("五音")
