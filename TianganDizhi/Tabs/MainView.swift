@@ -16,6 +16,7 @@ struct MainView: View {
   @Environment(\.titleFont) var titleFont
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.bodyFont) var bodyFont
+  @Environment(\.footnote) var footnote
   @Environment(\.shouldScaleFont) var shouldScaleFont
   @StateObject var weatherData = WeatherData.shared
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
@@ -108,8 +109,15 @@ struct MainView: View {
       // Moon
       if let value = weatherData.forcastedWeather {
         withAnimation {
-          MoonInformationView(info: value)
-            .padding(.bottom)
+          VStack() {
+            MoonInformationView(info: value)
+            Text("天氣以及日月信息來自  Weather. 點擊查看數據源信息")
+              .font(footnote)
+              .onTapGesture {
+                      UIApplication.shared.open(URL(string: "https://weatherkit.apple.com/legal-attribution.html")!, options: [:])
+                  }
+          }
+          .padding(.bottom)
         }
       }
 
