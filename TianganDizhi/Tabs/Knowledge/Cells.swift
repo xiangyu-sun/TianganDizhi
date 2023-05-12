@@ -81,7 +81,7 @@ struct OrganShichenCell: View {
     HStack {
       Text(shichen.chineseCharactor)
       Text(shichen.formattedHourRange ?? "")
-      Text(气血循环流注[shichen.rawValue - 1].rawValue)
+      Text(shichen.luizhu.rawValue)
     }
     .padding()
   }
