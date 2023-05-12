@@ -78,8 +78,7 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
   
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     if let location = locations.last {
-      locationContinuation?.resume(returning: location)
-      
+ 
       do {
         let encodedLocation = try NSKeyedArchiver.archivedData(withRootObject: location, requiringSecureCoding: false)
         userDefault?.set(encodedLocation, forKey: Constants.lastlocationKey)
@@ -88,6 +87,9 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
       } catch {
         print(error)
       }
+      
+      locationContinuation?.resume(returning: location)
+     
     } else {
       locationContinuation?.resume(throwing: OperationError.didNotGetResult)
     }

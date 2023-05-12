@@ -85,7 +85,7 @@ struct MainView: View {
           }
         }
       }
-      .padding()
+      .padding([.top, .leading,.trailing])
       
 
       ZStack() {
