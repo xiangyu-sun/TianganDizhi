@@ -41,15 +41,12 @@ struct ContentView: View {
           Image(systemName: "table")
           Text("綜合圖示")
         }
-      #if os(macOS)
-
-      #else
+      
       SettingsView()
         .tabItem {
           Image(systemName: "gear")
           Text("設置")
         }
-      #endif
     }
     #if os(iOS)
     .onAppear {

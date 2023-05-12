@@ -113,8 +113,11 @@ struct MainView: View {
             MoonInformationView(info: value)
             Text("天氣以及日月信息來自  Weather. 點擊查看數據源信息")
               .font(footnote)
+              .foregroundColor(.secondary)
               .onTapGesture {
-                      UIApplication.shared.open(URL(string: "https://weatherkit.apple.com/legal-attribution.html")!, options: [:])
+#if os(iOS)
+                UIApplication.shared.open(URL(string: "https://weatherkit.apple.com/legal-attribution.html")!, options: [:])
+#endif
                   }
           }
           .padding(.bottom)
