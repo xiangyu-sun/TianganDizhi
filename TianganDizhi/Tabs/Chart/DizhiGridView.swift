@@ -10,6 +10,7 @@ import ChineseAstrologyCalendar
 import ChineseTranditionalMusicCore
 import JingluoShuxue
 import MusicTheory
+import JingluoShuxue
 import SwiftUI
 
 // MARK: - DizhiGridView
@@ -27,7 +28,7 @@ struct DizhiGridView: View {
           .font(titleFont)
       }
 
-      Text(气血循环流注[dizhi.rawValue - 1].rawValue)
+      Text(dizhi.luizhu.rawValue)
       .font(bodyFont)
       
       HStack() {
