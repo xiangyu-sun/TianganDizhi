@@ -1,9 +1,10 @@
 
-@preconcurrency import CoreLocation
+import CoreLocation
 import Foundation
 import os
-@preconcurrency import WeatherKit
+import WeatherKit
 import ChineseAstrologyCalendar
+import WidgetKit
 
 @MainActor
 final class WeatherData: ObservableObject {
@@ -54,7 +55,6 @@ final class WeatherData: ObservableObject {
 
     logger.debug("\(dayWeather.debugDescription)")
     
-    
     if let dayWeather, let today = dayWeather.forecast.first, let day  = Date().chineseDay() {
       let data = Information(
         moonPhase: today.moon.phase.moonPhase(day: day),
@@ -71,6 +71,9 @@ final class WeatherData: ObservableObject {
       )
       
       forcastedWeather = data
+      
+      WidgetCenter.shared.reloadAllTimelines()
+      
       return data
     } else {
       return nil
