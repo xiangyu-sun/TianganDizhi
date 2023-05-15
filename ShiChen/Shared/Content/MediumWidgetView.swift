@@ -10,7 +10,7 @@ import SwiftUI
 import WidgetKit
 
 struct MediumWidgetView: View {
-  @State var date: Date
+  let date: Date
   
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
@@ -23,13 +23,15 @@ struct MediumWidgetView: View {
 #if os(iOS) || os(macOS)
   @StateObject var weatherData = WeatherData.shared
 #endif
+  
+  
   var body: some View {
     let shichen = date.shichen!
     
     VStack {
       Spacer(minLength: 8)
       FullDateTitleView(date: date)
-        .font(title3Font)
+        .font(title3Font)ç
 #if os(iOS) || os(macOS)
       if let value = weatherData.forcastedWeather {
         Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "，天氣\(value.condition)")

@@ -11,7 +11,7 @@ import WidgetKit
 import ChineseAstrologyCalendar
 
 struct ExtraLargeWidgetView: View {
-  @State var date: Date
+  let date: Date
   
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
