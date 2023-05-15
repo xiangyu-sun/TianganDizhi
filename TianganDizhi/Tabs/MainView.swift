@@ -72,7 +72,7 @@ struct MainView: View {
           Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
             .font(bodyFont)
             .foregroundColor(Color.secondary)
-          Text("天氣\(value.condition)")
+          Text("\(value.condition)")
             .font(bodyFont)
             .foregroundColor(Color.secondary)
           withAnimation {

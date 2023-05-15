@@ -44,7 +44,7 @@ struct ExtraLargeWidgetView: View {
         
         if let value = weatherData.forcastedWeather {
           
-          Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\n天氣\(value.condition)")
+          Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\n\(value.condition)")
             .font(bodyFont)
             .foregroundColor(Color.secondary)
           
@@ -56,7 +56,7 @@ struct ExtraLargeWidgetView: View {
         }
 
         ShichenHStackView(shichen: shichen.dizhi)
-          .padding([.top])
+   
         
         Spacer()
       }
