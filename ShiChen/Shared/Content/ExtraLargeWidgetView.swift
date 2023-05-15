@@ -56,6 +56,7 @@ struct ExtraLargeWidgetView: View {
         }
 
         ShichenHStackView(shichen: shichen.dizhi)
+          .padding([.top])
    
         
         Spacer()
