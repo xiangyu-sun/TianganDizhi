@@ -162,6 +162,7 @@
 		997CD11D2954FE1600BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
 		997CD11E2954FE1700BECF31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1192954FDB600BECF31 /* Constants.swift */; };
 		997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
+		998C1DB02A16CFB300A413B4 /* AirbnbSwiftFormatTool in Frameworks */ = {isa = PBXBuildFile; productRef = 998C1DAF2A16CFB300A413B4 /* AirbnbSwiftFormatTool */; };
 		99A2B708297EBA6B00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B709297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
@@ -446,6 +447,7 @@
 				994215CA2958A0EF003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */,
 				46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */,
+				998C1DB02A16CFB300A413B4 /* AirbnbSwiftFormatTool in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -890,6 +892,7 @@
 				99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */,
 				994215C92958A0EF003C5CA1 /* ChineseAstrologyCalendar */,
 				9911517829DF43E100A7CE54 /* ShangdianKit */,
+				998C1DAF2A16CFB300A413B4 /* AirbnbSwiftFormatTool */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -1093,6 +1096,7 @@
 				99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */,
 				994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
 				9911517729DF43E100A7CE54 /* XCRemoteSwiftPackageReference "ShangdianKit" */,
+				998C1DAE2A16CFB300A413B4 /* XCRemoteSwiftPackageReference "swift" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -2276,6 +2280,14 @@
 				kind = branch;
 			};
 		};
+		998C1DAE2A16CFB300A413B4 /* XCRemoteSwiftPackageReference "swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/AppStoreReviewPrompt.git";
@@ -2340,6 +2352,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */;
 			productName = ChineseTranditionalMusicCore;
+		};
+		998C1DAF2A16CFB300A413B4 /* AirbnbSwiftFormatTool */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 998C1DAE2A16CFB300A413B4 /* XCRemoteSwiftPackageReference "swift" */;
+			productName = AirbnbSwiftFormatTool;
 		};
 		99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */ = {
 			isa = XCSwiftPackageProductDependency;

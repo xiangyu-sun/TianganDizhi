@@ -10,7 +10,6 @@ import ChineseAstrologyCalendar
 import ChineseTranditionalMusicCore
 import JingluoShuxue
 import MusicTheory
-import JingluoShuxue
 import SwiftUI
 
 // MARK: - DizhiGridView
@@ -18,7 +17,7 @@ import SwiftUI
 struct DizhiGridView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.titleFont) var titleFont
-  
+
   let dizhi: Dizhi
 
   var body: some View {
@@ -29,14 +28,14 @@ struct DizhiGridView: View {
       }
 
       Text(dizhi.luizhu.rawValue)
-      .font(bodyFont)
-      
-      HStack() {
+        .font(bodyFont)
+
+      HStack {
         Text(dizhi.jie.chineseName)
         Text(dizhi.qi.chineseName)
       }
       .font(bodyFont)
-      
+
       HStack {
         let zodiac = Zodiac(dizhi)
         Text("\(zodiac.rawValue)")

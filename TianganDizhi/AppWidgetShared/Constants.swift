@@ -16,7 +16,7 @@ enum Constants {
   static let displayMoonPhaseOnWidgets = "displayMoonPhaseOnWidgets"
 
   static let useGTM8 = "useGTM8"
-  
+
   static let lastlocationKey = "lastlocationKey"
   #if os(macOS)
   static let sharedUserDefault = UserDefaults(suiteName: "group.R45U3GK22z.uriphium.tiangandizhi")

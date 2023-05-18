@@ -36,7 +36,7 @@ struct CountDownWidget: Widget {
       .supportedFamilies([.accessoryInline, .accessoryRectangular])
     #else
 
-      .supportedFamilies(supportedFamilies)
+    .supportedFamilies(supportedFamilies)
     #endif
   }
 }

@@ -10,7 +10,7 @@ struct FullDateTitleView: View {
 
   @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
   var displayMoonPhaseOnWidgets = false
-  
+
   var date: Date
   var body: some View {
     HStack {

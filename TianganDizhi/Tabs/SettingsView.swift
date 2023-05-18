@@ -17,16 +17,16 @@ struct SettingsView: View {
   var springFestiveBackgroundEnabled = false
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
-  
+
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
-  
+
   @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
   var displayMoonPhaseOnWidgets = false
-  
+
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
-  
+
   var body: some View {
     Form {
 //      Section(header: Text("春節氣氛組件設置")) {
@@ -41,11 +41,11 @@ struct SettingsView: View {
         Toggle(isOn: $useGTM8) {
           Text("節日使用中國時區(海外用戶)")
         }
-        
+
         Toggle(isOn: $displayMoonPhaseOnWidgets) {
           Text("組件顯示月相")
         }
-        
+
         Toggle(isOn: $useTranditionalNaming) {
           Text("顯示傳統名稱")
         }

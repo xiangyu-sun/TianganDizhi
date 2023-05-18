@@ -34,7 +34,7 @@ struct Nongli: Widget {
       .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
     #else
 
-      .supportedFamilies(supportedFamilies)
+    .supportedFamilies(supportedFamilies)
     #endif
   }
 }
@@ -63,7 +63,7 @@ struct ShiChen: Widget {
     #if os(watchOS)
       .supportedFamilies([.accessoryInline, .accessoryRectangular])
     #else
-      .supportedFamilies(supportedFamilies)
+    .supportedFamilies(supportedFamilies)
     #endif
   }
 }

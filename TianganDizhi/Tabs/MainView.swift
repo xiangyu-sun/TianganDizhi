@@ -45,17 +45,6 @@ struct MainView: View {
       : event.date.displayStringOfChineseYearMonthDateWithZodiac
   }
 
-  func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
-    HStack {
-      if #available(iOS 16.0, watchOS 9.0, *) {
-        Image(systemName: moonphase.moonPhase.symbolName)
-      }
-      Text(moonphase.name(traditionnal: useTranditionalNaming))
-    }
-    .font(bodyFont)
-  }
-  
-  
   var body: some View {
     VStack {
       let shichen = updater.currentDate.shichen!
@@ -63,11 +52,11 @@ struct MainView: View {
       #if os(watchOS)
       WatchMainView(date: updater.currentDate, wetherData: weatherData.forcastedWeather)
       #else
-      
-      VStack() {
+
+      VStack {
         Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
           .font(titleFont)
-        
+
         if let value = weatherData.forcastedWeather {
           Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
             .font(bodyFont)
@@ -78,7 +67,7 @@ struct MainView: View {
           withAnimation {
             SunInformationView(info: value)
           }
-          
+
         } else {
           if let moonphase = updater.currentDate.chineseDay()?.moonPhase {
             fixedMoonInformationView(moonphase)
@@ -86,39 +75,38 @@ struct MainView: View {
         }
       }
       .padding([.top, .leading,.trailing])
-      
 
-      ZStack() {
-#if os(macOS)
+      ZStack {
+        #if os(macOS)
         CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
           .frame(minWidth: 640)
-#else
+        #else
         CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
           .fixedSize(horizontal: false, vertical: true)
-#endif
-        VStack() {
+        #endif
+        VStack {
           Text(shichen.dizhi.aliasName)
             .font(largeTitleFont)
           Text(shichen.dizhi.organReference)
             .font(bodyFont)
         }
       }
-      
+
       Spacer()
-      
+
       // Moon
       if let value = weatherData.forcastedWeather {
         withAnimation {
-          VStack() {
+          VStack {
             MoonInformationView(info: value)
             Text("天氣以及日月信息來自  Weather. 點擊查看數據源信息")
               .font(footnote)
               .foregroundColor(.secondary)
               .onTapGesture {
-#if os(iOS)
+                #if os(iOS)
                 UIApplication.shared.open(URL(string: "https://weatherkit.apple.com/legal-attribution.html")!, options: [:])
-#endif
-                  }
+                #endif
+              }
           }
           .padding(.bottom)
         }
@@ -129,7 +117,7 @@ struct MainView: View {
 //        Text("後\(title)")
 //      }
 //      .font(bodyFont)
-      
+
       #endif
     }
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
@@ -147,10 +135,20 @@ struct MainView: View {
           }
         }
       }
-#endif
-    #if os(macOS)
-.frame(minHeight: 640)
     #endif
+    #if os(macOS)
+    .frame(minHeight: 640)
+    #endif
+  }
+
+  func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
+    HStack {
+      if #available(iOS 16.0, watchOS 9.0, *) {
+        Image(systemName: moonphase.moonPhase.symbolName)
+      }
+      Text(moonphase.name(traditionnal: useTranditionalNaming))
+    }
+    .font(bodyFont)
   }
 }
 

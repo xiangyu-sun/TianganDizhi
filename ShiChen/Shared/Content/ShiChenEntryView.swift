@@ -29,7 +29,7 @@ struct ShiChenEntryView: View {
 
   @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
   var displayMoonPhaseOnWidgets = true
-  
+
   var body: some View {
     let shichen = entry.date.shichen!
 
@@ -61,26 +61,25 @@ struct ShiChenEntryView: View {
     case .systemMedium:
       MediumWidgetView(date: entry.date)
     case .systemLarge:
-     
-      VStack(spacing: 0) {
-          FullDateTitleView(date: entry.date)
-            .font(title3Font)
-            .padding(.vertical, 8)
-          ZStack(alignment: .center) {
-            CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
-            VStack() {
-              Text(shichen.dizhi.aliasName)
-                .font(largeTitleFont)
-              Text(shichen.dizhi.organReference)
-                .font(bodyFont)
-            }
-          }
-          .padding(.bottom, 8)
-        }
-        .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
+      VStack(spacing: 0) {
+        FullDateTitleView(date: entry.date)
+          .font(title3Font)
+          .padding(.vertical, 8)
+        ZStack(alignment: .center) {
+          CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
+          VStack {
+            Text(shichen.dizhi.aliasName)
+              .font(largeTitleFont)
+            Text(shichen.dizhi.organReference)
+              .font(bodyFont)
+          }
+        }
+        .padding(.bottom, 8)
+      }
+      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
     case .systemExtraLarge:
       if iPad {
@@ -89,7 +88,6 @@ struct ShiChenEntryView: View {
         #endif
       } else {
         ZStack {
-          
           VStack {
             FullDateTitleView(date: entry.date)
               .font(title3Font)
@@ -100,8 +98,8 @@ struct ShiChenEntryView: View {
           .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
           .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-          
-          VStack() {
+
+          VStack {
             Text(shichen.dizhi.aliasName)
               .font(largeTitleFont)
             Text(shichen.dizhi.organReference)

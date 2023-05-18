@@ -1,11 +1,13 @@
 import SwiftUI
 
+// MARK: - MoonInformationView
+
 struct MoonInformationView: View {
   @State var info: WeatherData.Information
   @Environment(\.bodyFont) var bodyFont
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
-  
+
   var body: some View {
     VStack(alignment: .center) {
       HStack {
@@ -15,7 +17,7 @@ struct MoonInformationView: View {
         Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
       }
       .font(bodyFont)
-      HStack() {
+      HStack {
         if let moonrise = info.moonRise, let moonset = info.moonset {
           if moonrise <= moonset {
             HStack(spacing: 0) {
@@ -24,22 +26,21 @@ struct MoonInformationView: View {
             }
             .font(bodyFont)
             .autoColorPastDate(moonrise)
-            
+
             HStack(spacing: 0) {
               Text(moonset, style: .time)
               Text("月落")
             }
             .font(bodyFont)
             .autoColorPastDate(moonset)
-          }else {
-            
+          } else {
             HStack(spacing: 0) {
               Text(moonset, style: .time)
               Text("月落")
             }
             .font(bodyFont)
             .autoColorPastDate(moonset)
-            
+
             HStack(spacing: 0) {
               Text(moonrise, style: .time)
               Text("月升")
@@ -47,27 +48,28 @@ struct MoonInformationView: View {
             .font(bodyFont)
             .autoColorPastDate(moonrise)
           }
-        
         }
-
       }
     }
   }
 }
 
+// MARK: - MoonInformationView_Previews
+
 @available(iOS 15, *)
 struct MoonInformationView_Previews: PreviewProvider {
-    static var previews: some View {
-      SunInformationView(info: WeatherData.Information(moonPhase: .上弦月,
-                                                   moonRise: .now,
-                                                   moonset: .now,
-                                                   sunrise: .now,
-                                                   sunset: .now,
-                                                   noon: .now,
-                                                   midnight: .now,
-                                                   temperatureHigh: .init(value: 12, unit: .celsius), temperatureLow: .init(value: 30, unit: .celsius),
-                                                              condition: "ok"
-                                                             )
-      )
-    }
+  static var previews: some View {
+    SunInformationView(
+      info: WeatherData.Information(
+        moonPhase: .上弦月,
+        moonRise: .now,
+        moonset: .now,
+        sunrise: .now,
+        sunset: .now,
+        noon: .now,
+        midnight: .now,
+        temperatureHigh: .init(value: 12, unit: .celsius),
+        temperatureLow: .init(value: 30, unit: .celsius),
+        condition: "ok"))
+  }
 }

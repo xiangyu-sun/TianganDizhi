@@ -1,8 +1,10 @@
 import SwiftUI
 
+// MARK: - AutoColorPastDate
+
 struct AutoColorPastDate: ViewModifier {
   let date: Date?
-  
+
   func body(content: Content) -> some View {
     guard let date else {
       return content.foregroundColor(.primary)

@@ -6,13 +6,15 @@
 //  Copyright © 2023 孙翔宇. All rights reserved.
 //
 
+import ChineseAstrologyCalendar
 import SwiftUI
 import WidgetKit
-import ChineseAstrologyCalendar
+
+// MARK: - ExtraLargeWidgetView
 
 struct ExtraLargeWidgetView: View {
   let date: Date
-  
+
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
@@ -21,19 +23,9 @@ struct ExtraLargeWidgetView: View {
   @Environment(\.bodyFont) var bodyFont
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
-  
+
   @StateObject var weatherData = WeatherData.shared
-  
-  func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
-    HStack {
-      if #available(iOS 16.0, watchOS 9.0, *) {
-        Image(systemName: moonphase.moonPhase.symbolName)
-      }
-      Text(moonphase.name(traditionnal: useTranditionalNaming))
-    }
-    .font(bodyFont)
-  }
-  
+
   var body: some View {
     let shichen = date.shichen!
 
@@ -41,13 +33,14 @@ struct ExtraLargeWidgetView: View {
       VStack {
         FullDateTitleView(date: date)
           .font(titleFont)
-        
+
         if let value = weatherData.forcastedWeather {
-          
-          Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\n\(value.condition)")
+          Text(
+            MeasurmentFormatterManager
+              .buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\n\(value.condition)")
             .font(bodyFont)
             .foregroundColor(Color.secondary)
-          
+
         } else {
           // default
           if let moonphase = date.chineseDay()?.moonPhase {
@@ -57,12 +50,11 @@ struct ExtraLargeWidgetView: View {
 
         ShichenHStackView(shichen: shichen.dizhi)
           .padding([.top])
-   
-        
+
         Spacer()
       }
       .padding([.leading, .top, .bottom])
-      
+
       ZStack {
         CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
           .padding()
@@ -71,9 +63,8 @@ struct ExtraLargeWidgetView: View {
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-    .onAppear() {
+    .onAppear {
       if #available(iOS 16.0, *) {
-        
         Task {
           do {
             if let location = LocationManager.shared.lastLocation {
@@ -88,14 +79,23 @@ struct ExtraLargeWidgetView: View {
         }
       }
     }
-    
+  }
+
+  func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
+    HStack {
+      if #available(iOS 16.0, watchOS 9.0, *) {
+        Image(systemName: moonphase.moonPhase.symbolName)
+      }
+      Text(moonphase.name(traditionnal: useTranditionalNaming))
+    }
+    .font(bodyFont)
   }
 }
 
 #if os(iOS)
 @available(iOSApplicationExtension 15.0, *)
 struct ExtraLargeWidgetView_Previews: PreviewProvider {
-  
+
   static var previews: some View {
     ExtraLargeWidgetView(date: Date())
       .previewContext(WidgetPreviewContext(family: .systemExtraLarge))

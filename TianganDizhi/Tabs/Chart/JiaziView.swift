@@ -48,7 +48,7 @@ struct JiaziView: View {
 
               #if os(iOS)
                 .frame(minHeight: proxy.size.height / 6)
-              
+
               #endif
 
               #if os(watchOS)

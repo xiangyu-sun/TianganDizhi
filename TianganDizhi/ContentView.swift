@@ -41,7 +41,7 @@ struct ContentView: View {
           Image(systemName: "table")
           Text("綜合圖示")
         }
-      
+
       SettingsView()
         .tabItem {
           Image(systemName: "gear")
