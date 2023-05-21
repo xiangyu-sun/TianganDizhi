@@ -30,11 +30,11 @@ struct ContentView: View {
           Text("天干地支")
         }
 
-      //            JieqiContainerView(padding: 0)
-      //            .tabItem {
-      //                Image(systemName: "sun.max.fill")
-      //                Text("二十四節氣")
-      //            }
+      JieqiContainerView()
+        .tabItem {
+          Image(systemName: "sun.max.fill")
+          Text("二十四節氣")
+        }
 
       ChartListView()
         .tabItem {
