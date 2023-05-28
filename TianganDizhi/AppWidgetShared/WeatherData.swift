@@ -37,8 +37,7 @@ final class WeatherData: ObservableObject {
   @discardableResult
   func dailyForecast(for location: CLLocation) async throws -> Information? {
     if
-      let distance = lastUpdatedLocation?.distance(from: location), distance <= 1000,
-      let lastUpdatedDate, lastUpdatedDate.distance(to: Date()) < 2 * 60 * 60
+      let distance = lastUpdatedLocation?.distance(from: location), let lastUpdatedDate, distance <= 1000 || lastUpdatedDate.distance(to: Date()) <= 60 * 60
     {
       return nil
     }
