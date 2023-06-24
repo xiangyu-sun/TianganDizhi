@@ -16,7 +16,8 @@ struct ShierPiguaView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
   
-
+  @Environment(\.iPad) var iPad
+  
   var body: some View {
     NavigationView() {
       GeometryReader { geometry in
@@ -34,7 +35,7 @@ struct ShierPiguaView: View {
               .offset(angle12Position(for: dizhiIndex, in: geometry.size, z: 1))
             
             
-            Text(dizhi.chineseCalendarMonthName)
+            Text(iPad ? dizhi.chineseCalendarMonthName : dizhi.chineseCharactor)
               .font(bodyFont)
               .offset(angle12Position(for: (dizhiIndex - 2), in: geometry.size, z: 2))
           }
