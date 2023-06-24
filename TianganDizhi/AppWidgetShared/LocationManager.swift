@@ -28,10 +28,12 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
 
   let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.LocationManager", category: "Model")
 
+  #if !os(watchOS)
   var isAuthorizedForWidgetUpdates: Bool {
     service.isAuthorizedForWidgetUpdates
   }
-
+  #endif
+  
   var lastLocation: CLLocation? {
     if let data = userDefault?.object(forKey: Constants.lastlocationKey) as? Data {
       return try? NSKeyedUnarchiver.unarchivedObject(ofClass: CLLocation.self, from: data)

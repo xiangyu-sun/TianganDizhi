@@ -9,11 +9,11 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>88xZPY</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>20G165</string>
+	<string>22F66</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>13A233</string>
+	<string>14E300c</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>13.0</string>
+	<string>14.3.1</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -27,8 +27,61 @@
 			<true/>
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
+			<key>INIntentLastParameterTag</key>
+			<integer>8</integer>
 			<key>INIntentName</key>
 			<string>Configuration</string>
+			<key>INIntentParameters</key>
+			<array>
+				<dict>
+					<key>INIntentParameterDisplayName</key>
+					<string>Date</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>PRkZfC</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>1</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataDateStyle</key>
+						<string>Full</string>
+						<key>INIntentParameterMetadataFormat</key>
+						<string>Style</string>
+						<key>INIntentParameterMetadataTemplateID</key>
+						<string>gxIeyi</string>
+						<key>INIntentParameterMetadataTimeStyle</key>
+						<string>Full</string>
+						<key>INIntentParameterMetadataType</key>
+						<string>DateTime</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>date</string>
+					<key>INIntentParameterTag</key>
+					<integer>2</integer>
+					<key>INIntentParameterType</key>
+					<string>DateComponents</string>
+				</dict>
+				<dict>
+					<key>INIntentParameterDisplayName</key>
+					<string>Location</string>
+					<key>INIntentParameterDisplayNameID</key>
+					<string>sF8D74</string>
+					<key>INIntentParameterDisplayPriority</key>
+					<integer>2</integer>
+					<key>INIntentParameterMetadata</key>
+					<dict>
+						<key>INIntentParameterMetadataCapitalization</key>
+						<string>Sentences</string>
+						<key>INIntentParameterMetadataDefaultValueID</key>
+						<string>f7OdeB</string>
+					</dict>
+					<key>INIntentParameterName</key>
+					<string>location</string>
+					<key>INIntentParameterTag</key>
+					<integer>8</integer>
+					<key>INIntentParameterType</key>
+					<string>String</string>
+				</dict>
+			</array>
 			<key>INIntentResponse</key>
 			<dict>
 				<key>INIntentResponseCodes</key>
