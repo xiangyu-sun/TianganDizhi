@@ -122,6 +122,9 @@ struct MainView: View {
       #endif
     }
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+#if os(watchOS)
+      .edgesIgnoringSafeArea([.bottom,.leading,.trailing])
+#endif
     #if os(iOS) || os(macOS)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
       .onAppear {
