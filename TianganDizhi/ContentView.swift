@@ -33,7 +33,7 @@ struct ContentView: View {
       ShierPiguaView()
         .tabItem {
           Image(systemName: "sun.max.fill")
-          Text("二十四節氣")
+          Text("二十辟卦")
         }
 
       ChartListView()
@@ -48,6 +48,9 @@ struct ContentView: View {
           Text("設置")
         }
     }
+#if os(iOS) || os(watchOS)
+    .navigationViewStyle(StackNavigationViewStyle())
+#endif
     #if os(iOS)
     .onAppear {
       AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()

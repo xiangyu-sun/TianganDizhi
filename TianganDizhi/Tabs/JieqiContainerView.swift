@@ -12,7 +12,7 @@ import ChineseTranditionalMusicCore
 import MusicTheory
 
 struct ShierPiguaView: View {
-
+  
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
   
@@ -39,7 +39,31 @@ struct ShierPiguaView: View {
               .font(bodyFont)
               .offset(angle12Position(for: (dizhiIndex - 2), in: geometry.size, z: 2))
           }
-
+          
+          
+          ForEach(0..<12) { index in
+            Path { path in
+              let segmentAngle = 2 * .pi / Double(12)
+              
+              let circleRadius = min(geometry.size.width, geometry.size.height) / 2
+              let center = CGPoint(x: geometry.size.width * 0.5, y: geometry.size.height * 0.5) // Adjust center coordinates to match the circle's center
+              let angle = 2 * .pi * Double(index) / Double(12) - segmentAngle * 0.5
+              let radius: CGFloat = circleRadius
+              
+              let endPoint = CGPoint(
+                x: center.x + radius * CGFloat(cos(angle)),
+                y: center.y + radius * CGFloat(sin(angle))
+              )
+              
+              path.move(to: center)
+              path.addLine(to: endPoint)
+            }
+            .stroke(Color.secondary, lineWidth: 2)
+          }
+          
+          Circle()
+            .stroke(lineWidth: 4)
+            .foregroundColor(.secondary)
         }
         .frame(width: geometry.size.width, height: geometry.size.height)
       }
@@ -49,9 +73,9 @@ struct ShierPiguaView: View {
   
   private func anglePosition(for index: Int, in size: CGSize) -> CGSize {
     let segmentAngle = 2 * .pi / Double(Jieqi.allCases.count)
-
+    
     let startAngle = segmentAngle * Double(index) + .pi - segmentAngle * 0.5
-
+    
     let radius = min(size.width, size.height) / 2 - 30 // Adjust the spacing between the circle and the Text elements here
     let x = cos(startAngle) * radius
     let y = sin(startAngle) * radius
@@ -60,7 +84,7 @@ struct ShierPiguaView: View {
   
   private func angle12Position(for index: Int, in size: CGSize, z: Double) -> CGSize {
     let segmentAngle = 2 * .pi / Double(12)
-
+    
     let startAngle = segmentAngle * Double(index) + .pi
     let adjustment = z * 90
     let radius = (min(size.width, size.height) -  adjustment) / 2 - 30  // Adjust the spacing between the circle and the Text elements here

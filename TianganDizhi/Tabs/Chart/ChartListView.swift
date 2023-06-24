@@ -27,9 +27,6 @@ struct ChartListView: View {
       .font(bodyFont)
       .navigationTitle(Text("圖示"))
     }
-    #if os(iOS) || os(watchOS)
-    .navigationViewStyle(StackNavigationViewStyle())
-    #endif
   }
 }
 
