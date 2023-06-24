@@ -89,6 +89,7 @@ struct ShierPiguaView: View {
       .edgesIgnoringSafeArea([.bottom,.leading,.trailing])
 #endif
       .navigationTitle("十二辟卦")
+     
     }
   }
   
@@ -119,7 +120,7 @@ struct ShierPiguaView: View {
   
   var innerSpacing: Double {
 #if os(watchOS)
-    30
+    18
 #else
     shouldScaleFont ? 80 : 40
 #endif
