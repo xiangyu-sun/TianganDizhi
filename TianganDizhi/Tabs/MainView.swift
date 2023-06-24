@@ -136,16 +136,17 @@ struct MainView: View {
           }
           
           WidgetCenter.shared.getCurrentConfigurations { result in
-              guard case .success(let widgets) = result else { return }
-
-              if let widget = widgets.first(
-                  where: { widget in
-                      let intent = widget.configuration as? ConfigurationIntent
-                    return intent?.date?.isSameWithCurrentShichen ?? false
-                  }
-              ) {
-                  WidgetCenter.shared.reloadTimelines(ofKind: widget.kind)
-              }
+            guard case .success(let widgets) = result else { return }
+            
+            let validWidgets = widgets.filter{ widget in
+              let intent = widget.configuration as? ConfigurationIntent
+              return intent?.date?.isSameWithCurrentShichen ?? false
+            }
+            
+            validWidgets.forEach{
+              WidgetCenter.shared.reloadTimelines(ofKind: $0.kind)
+            }
+            
           }
         }
       }
