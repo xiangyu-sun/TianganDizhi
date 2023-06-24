@@ -14,9 +14,14 @@ import MusicTheory
 struct ShierPiguaView: View {
   
   @Environment(\.bodyFont) var bodyFont
+  @Environment(\.titleFont) var titleFont
   @Environment(\.footnote) var footnote
   
-  @Environment(\.iPad) var iPad
+  @Environment(\.shouldScaleFont) var shouldScaleFont
+  
+  var font: Font {
+    shouldScaleFont ? titleFont : bodyFont
+  }
   
   var body: some View {
     NavigationView() {
@@ -24,22 +29,31 @@ struct ShierPiguaView: View {
         ZStack {
           ForEach(Jieqi.allCases, id: \.self) { jieqi in
             Text(jieqi.chineseName)
-              .font(bodyFont)
               .offset(anglePosition(for: jieqi.rawValue - 1, in: geometry.size))
             
             let dizhi = Dizhi(rawValue: jieqi.rawValue / 2) ?? .chen
             let dizhiIndex = dizhi.rawValue - 1
             
             Text(Key.shierLvLvMonthOrder[dizhiIndex].lvlvDescription)
-              .font(bodyFont)
+            
               .offset(angle12Position(for: dizhiIndex, in: geometry.size, z: 1))
             
+            Text(shouldScaleFont ? dizhi.chineseCalendarMonthName : dizhi.chineseCharactor)
             
-            Text(iPad ? dizhi.chineseCalendarMonthName : dizhi.chineseCharactor)
-              .font(bodyFont)
               .offset(angle12Position(for: (dizhiIndex - 2), in: geometry.size, z: 2))
+            
+            let gua = ShierPiguas[dizhiIndex]
+            
+            HStack() {
+              if shouldScaleFont {
+                Text(gua.symbol)
+              }
+              Text(gua.chineseCharacter)
+            }
+            .offset(angle12Position(for: dizhiIndex + 3, in: geometry.size, z: 3))
+            
           }
-          
+          .font(font)
           
           ForEach(0..<12) { index in
             Path { path in
@@ -76,7 +90,7 @@ struct ShierPiguaView: View {
     
     let startAngle = segmentAngle * Double(index) + .pi - segmentAngle * 0.5
     
-    let radius = min(size.width, size.height) / 2 - 30 // Adjust the spacing between the circle and the Text elements here
+    let radius = min(size.width, size.height) / 2 - (shouldScaleFont ? 46 : 30) // Adjust the spacing between the circle and the Text elements here
     let x = cos(startAngle) * radius
     let y = sin(startAngle) * radius
     return CGSize(width: x, height: y)
@@ -86,7 +100,7 @@ struct ShierPiguaView: View {
     let segmentAngle = 2 * .pi / Double(12)
     
     let startAngle = segmentAngle * Double(index) + .pi
-    let adjustment = z * 90
+    let adjustment = z * (shouldScaleFont ? 168 : 74)
     let radius = (min(size.width, size.height) -  adjustment) / 2 - 30  // Adjust the spacing between the circle and the Text elements here
     let x = cos(startAngle) * radius
     let y = sin(startAngle) * radius

@@ -181,6 +181,8 @@
 		99ECAED02A475BAE004997FD /* Date+WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */; };
 		99ECAED12A475BAF004997FD /* Date+WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */; };
 		99ECAED22A475BAF004997FD /* Date+WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */; };
+		99ECAED42A4798F0004997FD /* YijingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAED32A4798F0004997FD /* YijingView.swift */; };
+		99ECAED82A47A202004997FD /* YijingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAED32A4798F0004997FD /* YijingView.swift */; };
 		99F0EF3329FEC13F008476B6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
 		99F0EF3529FFEF81008476B6 /* WuyinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F0EF3429FFEF81008476B6 /* WuyinView.swift */; };
 		99F0EF3629FFF0A2008476B6 /* WuyinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F0EF3429FFEF81008476B6 /* WuyinView.swift */; };
@@ -417,6 +419,7 @@
 		99BC3C0A29683678004AB614 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		99BC3C0F296A2918004AB614 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WidgetIntent.swift"; sourceTree = "<group>"; };
+		99ECAED32A4798F0004997FD /* YijingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YijingView.swift; sourceTree = "<group>"; };
 		99F0EF3429FFEF81008476B6 /* WuyinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuyinView.swift; sourceTree = "<group>"; };
 		99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
 		99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTests.swift; sourceTree = "<group>"; };
@@ -693,6 +696,7 @@
 				996D2C1D29A3E188008DC1A9 /* MoonInformationView.swift */,
 				997CD1152954CF9700BECF31 /* SettingsView.swift */,
 				46EF7F8327108D73007030CC /* JieqiContainerView.swift */,
+				99ECAED32A4798F0004997FD /* YijingView.swift */,
 				994215D92958A93E003C5CA1 /* Chart */,
 				460BA9A826F24C400025CA39 /* Knowledge */,
 			);
@@ -1250,6 +1254,7 @@
 			files = (
 				46EF7F8027107968007030CC /* JieqiCell.swift in Sources */,
 				99F0EF3529FFEF81008476B6 /* WuyinView.swift in Sources */,
+				99ECAED42A4798F0004997FD /* YijingView.swift in Sources */,
 				996D2C1C29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift in Sources */,
 				46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */,
 				990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */,
@@ -1316,6 +1321,7 @@
 				9963206C290DE153000C4A2B /* ContentView.swift in Sources */,
 				996D2C1929A3DD82008DC1A9 /* WatchMainView.swift in Sources */,
 				994215D52958A53D003C5CA1 /* JiaziView.swift in Sources */,
+				99ECAED82A47A202004997FD /* YijingView.swift in Sources */,
 				99632082290DE1DE000C4A2B /* DizhiListView.swift in Sources */,
 				9963207B290DE1DE000C4A2B /* DateProvider.swift in Sources */,
 				99632081290DE1DE000C4A2B /* DizhiGridView.swift in Sources */,
