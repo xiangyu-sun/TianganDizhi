@@ -49,6 +49,11 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
   // MARK: Private
 
   private func defaultRecommendedIntents() -> [ConfigurationIntent] {
-    [ConfigurationIntent()]
+    let configuration = ConfigurationIntent()
+    configuration.date = Date().currentCalendarDateCompoenents
+    if let location = LocationManager.shared.lastLocation {
+      configuration.location = "\(String(describing: location))"
+    }
+    return [configuration]
   }
 }
