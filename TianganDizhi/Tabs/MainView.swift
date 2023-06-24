@@ -130,23 +130,22 @@ struct MainView: View {
             do {
               let location = try await LocationManager.shared.startLocationUpdate()
               try await self.weatherData.dailyForecast(for: location)
+              
+              WidgetCenter.shared.getCurrentConfigurations { result in
+                guard case .success(let widgets) = result else { return }
+                
+                let validWidgets = widgets.filter{ widget in
+                  let intent = widget.configuration as? ConfigurationIntent
+                  return intent?.date?.isSameWithCurrentShichen ?? false
+                }
+                print(validWidgets)
+                validWidgets.forEach{
+                  WidgetCenter.shared.reloadTimelines(ofKind: $0.kind)
+                }
+              }
             } catch {
               print(error)
             }
-          }
-          
-          WidgetCenter.shared.getCurrentConfigurations { result in
-            guard case .success(let widgets) = result else { return }
-            
-            let validWidgets = widgets.filter{ widget in
-              let intent = widget.configuration as? ConfigurationIntent
-              return intent?.date?.isSameWithCurrentShichen ?? false
-            }
-            
-            validWidgets.forEach{
-              WidgetCenter.shared.reloadTimelines(ofKind: $0.kind)
-            }
-            
           }
         }
       }

@@ -26,7 +26,7 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
 
   let userDefault = Constants.sharedUserDefault
 
-  let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.LocationManager", category: "Model")
+  let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.LocationManager", category: "Location")
 
   #if !os(watchOS)
   var isAuthorizedForWidgetUpdates: Bool {

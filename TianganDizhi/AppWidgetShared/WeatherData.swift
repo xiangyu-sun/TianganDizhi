@@ -6,12 +6,18 @@ import os
 import WeatherKit
 import WidgetKit
 
+
+extension ChineseMoonPhase: Codable { }
+
 @MainActor
 final class WeatherData: ObservableObject {
+  let dataCacheKey = "come.uriphium.weatherdata"
+
+  let userDefault = Constants.sharedUserDefault
 
   // MARK: Internal
 
-  struct Information {
+  struct Information: Codable {
     let moonPhase: ChineseMoonPhase
     let moonRise: Date?
     let moonset: Date?
@@ -39,7 +45,13 @@ final class WeatherData: ObservableObject {
     if
       let distance = lastUpdatedLocation?.distance(from: location), let lastUpdatedDate, distance <= 1000 || lastUpdatedDate.distance(to: Date()) <= 60 * 60
     {
-      return nil
+      logger.log(level: .debug, "fetching forcast aborted due to not matching requirement")
+      guard let data = userDefault?.data(forKey: dataCacheKey) else {
+        return nil
+      }
+      let decoder = JSONDecoder()
+      
+      return try? decoder.decode(Information.self, from: data)
     }
 
     lastUpdatedLocation = location
@@ -68,9 +80,15 @@ final class WeatherData: ObservableObject {
         condition: today.condition.description)
 
       forcastedWeather = data
-
-      WidgetCenter.shared.reloadAllTimelines()
-
+      
+      Task{
+        let encoder = JSONEncoder()
+        
+        if let data = try? encoder.encode(data) {
+          userDefault?.setValue(data, forKey: dataCacheKey)
+        }
+      }
+      
       return data
     } else {
       return nil
