@@ -29,14 +29,14 @@ struct SettingsView: View {
 
   var body: some View {
     Form {
-//      Section(header: Text("春節氣氛組件設置")) {
-//        Toggle(isOn: $springFestiveBackgroundEnabled) {
-//          Text("組件紅底")
-//        }
-//        Toggle(isOn: $springFestiveForegroundEnabled) {
-//          Text("組件夜間模式使用黑字")
-//        }
-//      }
+      Section(header: Text("春節氣氛組件設置")) {
+        Toggle(isOn: $springFestiveBackgroundEnabled) {
+          Text("組件紅底")
+        }
+        Toggle(isOn: $springFestiveForegroundEnabled) {
+          Text("組件夜間模式使用黑字")
+        }
+      }
       Section(header: Text("通用設置")) {
         Toggle(isOn: $useGTM8) {
           Text("節日使用中國時區(海外用戶)")

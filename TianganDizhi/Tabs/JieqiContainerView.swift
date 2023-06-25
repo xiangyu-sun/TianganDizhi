@@ -28,7 +28,6 @@ struct ShierPiguaView: View {
   }
   
   var body: some View {
-    NavigationView() {
       GeometryReader { geometry in
         ZStack {
           ForEach(Jieqi.allCases, id: \.self) { jieqi in
@@ -89,8 +88,6 @@ struct ShierPiguaView: View {
       .edgesIgnoringSafeArea([.bottom,.leading,.trailing])
 #endif
       .navigationTitle("十二辟卦")
-     
-    }
   }
   
   var strokeLineWidth: Double {
