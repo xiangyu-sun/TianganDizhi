@@ -32,20 +32,8 @@ final class ScreenTests: XCTestCase {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
   }
   
-  func testLaunchPerformance() throws {
-    if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-      // This measures how long it takes to launch your application.
-      measure(metrics: [XCTApplicationLaunchMetric()]) {
-        XCUIApplication().launch()
-      }
-    }
-  }
   
-#if os(macOS)
-  
-#else
-  
-  func testTakeScreenshotOfMusic() {
+  func testTakeScreenshotOfPigua() {
     app.tabBars.firstMatch.buttons["十二辟卦"].tap()
     takingScreenShot()
   }
@@ -67,7 +55,6 @@ final class ScreenTests: XCTestCase {
     app.tabBars.firstMatch.buttons["子午流注"].tap()
     takingScreenShot()
   }
-#endif
   
   func takingScreenShot() {
     let screenshot = app.windows.firstMatch.screenshot()
