@@ -13,5 +13,7 @@
 	<array>
 		<string>WeibeiTC-Bold.otf</string>
 	</array>
+	<key>ATSApplicationFontsPath</key>
+	<string>WeibeiTC-Bold.otf</string>
 </dict>
 </plist>
