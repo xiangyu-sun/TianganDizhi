@@ -34,25 +34,49 @@ final class ScreenTests: XCTestCase {
   
   
   func testTakeScreenshotOfPigua() {
+#if os(macOS)
+    app.tabs["十二辟卦"].click()
+#else
     app.tabBars.firstMatch.buttons["十二辟卦"].tap()
+#endif
     takingScreenShot()
   }
   
   func testTakeScreenshotOfMainWindow() {
+    
+#if os(macOS)
+    app.tabs["天干地支"].click()
+    app.tables.cells.containing(.button, identifier:"十二地支").element.click()
+#else
     app.tabBars.firstMatch.buttons["天干地支"].tap()
     app.tabBars.firstMatch.buttons["十二地支"].tap()
+#endif
+    
+    
+    
     takingScreenShot()
   }
   
   func testTakeScreenshotOfMusic() {
+#if os(macOS)
+    app.tabs["天干地支"].click()
+    app.tables.cells.containing(.button, identifier:"地支，十二律呂，西洋調名").element.click()
+#else
     app.tabBars.firstMatch.buttons["天干地支"].tap()
     app.tabBars.firstMatch.buttons["地支，十二律呂，西洋調名"].tap()
+#endif
     takingScreenShot()
   }
   
   func testTakeScreenshotOfMeridian() {
+#if os(macOS)
+    app.tabs["天干地支"].click()
+    app.tables.cells.containing(.button, identifier:"子午流注").element.click()
+#else
     app.tabBars.firstMatch.buttons["天干地支"].tap()
     app.tabBars.firstMatch.buttons["子午流注"].tap()
+#endif
+
     takingScreenShot()
   }
   
