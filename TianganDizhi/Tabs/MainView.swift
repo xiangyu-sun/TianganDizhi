@@ -104,8 +104,11 @@ struct MainView: View {
               .font(footnote)
               .foregroundColor(.secondary)
               .onTapGesture {
+                let url = URL(string: "https://weatherkit.apple.com/legal-attribution.html")!
                 #if os(iOS)
-                UIApplication.shared.open(URL(string: "https://weatherkit.apple.com/legal-attribution.html")!, options: [:])
+                UIApplication.shared.open(url, options: [:])
+                #elseif os(macOS)
+                NSWorkspace.shared.open(url)
                 #endif
               }
           }
@@ -125,7 +128,7 @@ struct MainView: View {
 #if os(watchOS) 
       .edgesIgnoringSafeArea([.bottom,.leading,.trailing])
 #endif
-    #if os(iOS) || os(macOS)
+#if os(iOS) || os(macOS)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 #endif
       .onAppear {
