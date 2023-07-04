@@ -33,7 +33,7 @@ struct ContentView: View {
       ShierPiguaView()
         .tabItem {
           Image(systemName: "sun.max.fill")
-          Text("二十辟卦")
+          Text("十二辟卦")
         }
 
       ChartListView()
