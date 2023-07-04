@@ -47,7 +47,7 @@ struct DizhiListView: View {
       case .name:
         return "十二地支"
       case .month:
-        return "時辰與月份"
+        return "地支與月份"
       case .time:
         return "時辰與小時"
       case .organs:
@@ -55,9 +55,9 @@ struct DizhiListView: View {
       case .alias:
         return "時辰的別名"
       case .zodiac:
-        return "十二生肖"
+        return "十二生肖與五行"
       case .lvlv:
-        return "十二律呂"
+        return "地支，十二律呂，西洋調名"
       }
     }
   }

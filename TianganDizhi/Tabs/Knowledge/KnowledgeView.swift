@@ -17,10 +17,20 @@ struct KnowledgeView: View {
   var body: some View {
     NavigationView {
       List {
-        Section(header: Text("天干地支")) {
+        Section(header: Text("五行")) {
+          NavigationLink(destination: WuxingView()) {
+            Text("五行以及衍生")
+          }
+          NavigationLink(destination: WuyinView()) {
+            Text("五音")
+          }
+        }
+        Section(header: Text("十天干")) {
           NavigationLink(destination: TianganListView()) {
             Text("十天干")
           }
+        }
+        Section(header: Text("十二地支")) {
           NavigationLink(destination: DizhiListView(disppayMode: .name)) {
             Text(DizhiListView.DisplayMode.name.title)
           }
@@ -33,32 +43,24 @@ struct KnowledgeView: View {
           NavigationLink(destination: DizhiListView(disppayMode: .month)) {
             Text(DizhiListView.DisplayMode.month.title)
           }
-          NavigationLink(destination: JieqiListView()) {
-            Text("二十四節氣")
-          }
           NavigationLink(destination: DizhiListView(disppayMode: .organs)) {
             Text(DizhiListView.DisplayMode.organs.title)
           }
           NavigationLink(destination: DizhiListView(disppayMode: .lvlv)) {
             Text(DizhiListView.DisplayMode.lvlv.title)
           }
-        }
-        Section(header: Text("五行")) {
-          NavigationLink(destination: WuxingView()) {
-            Text("五行")
-          }
-          NavigationLink(destination: WuyinView()) {
-            Text("五音")
-          }
-        }
-        Section(header: Text("詩詞歌賦頌")) {
           NavigationLink(destination: ShiciView()) {
             Text("十二時辰頌")
           }
         }
+        Section() {
+          NavigationLink(destination: JieqiListView()) {
+            Text("二十四節氣")
+          }
+        }
       }
       .font(bodyFont)
-      .navigationTitle(Text("天干地支相關知識"))
+      .navigationTitle(Text("中国古代學術"))
     }
   }
 }

@@ -116,6 +116,9 @@
 		9963214A2911B8E4000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		9963214B2911B8F3000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		9963214C2911B8F3000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
+		996A19C92A543E6700D1C943 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
+		996A19CA2A543E9400D1C943 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
+		996A19CB2A543E9E00D1C943 /* Date+WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */; };
 		996D2C1629A3DB33008DC1A9 /* SunInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */; };
 		996D2C1929A3DD82008DC1A9 /* WatchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1729A3DCBD008DC1A9 /* WatchMainView.swift */; };
 		996D2C1C29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */; };
@@ -1318,10 +1321,13 @@
 				99632077290DE1DE000C4A2B /* JieqiCell.swift in Sources */,
 				99632078290DE1DE000C4A2B /* MainView.swift in Sources */,
 				994215D82958A7D8003C5CA1 /* ChartListView.swift in Sources */,
+				996A19C92A543E6700D1C943 /* LocationManager.swift in Sources */,
 				9963206C290DE153000C4A2B /* ContentView.swift in Sources */,
 				996D2C1929A3DD82008DC1A9 /* WatchMainView.swift in Sources */,
+				996A19CB2A543E9E00D1C943 /* Date+WidgetIntent.swift in Sources */,
 				994215D52958A53D003C5CA1 /* JiaziView.swift in Sources */,
 				99ECAED82A47A202004997FD /* YijingView.swift in Sources */,
+				996A19CA2A543E9400D1C943 /* ShiChen.intentdefinition in Sources */,
 				99632082290DE1DE000C4A2B /* DizhiListView.swift in Sources */,
 				9963207B290DE1DE000C4A2B /* DateProvider.swift in Sources */,
 				99632081290DE1DE000C4A2B /* DizhiGridView.swift in Sources */,
@@ -1545,7 +1551,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1577,7 +1583,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1741,7 +1747,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -1785,7 +1791,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -1913,7 +1919,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1946,7 +1952,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2058,7 +2064,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2089,7 +2095,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2122,7 +2128,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenMacWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -2153,7 +2159,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.7.0;
+				MARKETING_VERSION = 2.7.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenMacWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

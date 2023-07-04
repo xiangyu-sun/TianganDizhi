@@ -127,8 +127,9 @@ struct MainView: View {
 #endif
     #if os(iOS) || os(macOS)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+#endif
       .onAppear {
-        if #available(iOS 16.0, macOS 13.0, *) {
+        if #available(iOS 16.0, macOS 13.0, watchOS 9.0, *) {
           Task {
             do {
               let location = try await LocationManager.shared.startLocationUpdate()
@@ -141,7 +142,7 @@ struct MainView: View {
                   let intent = widget.configuration as? ConfigurationIntent
                   return intent?.date?.isSameWithCurrentShichen ?? false
                 }
-                print(validWidgets)
+                
                 validWidgets.forEach{
                   WidgetCenter.shared.reloadTimelines(ofKind: $0.kind)
                 }
@@ -152,7 +153,7 @@ struct MainView: View {
           }
         }
       }
-    #endif
+
     #if os(macOS)
     .frame(minHeight: 640)
     #endif
