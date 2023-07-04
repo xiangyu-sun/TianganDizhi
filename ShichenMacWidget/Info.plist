@@ -9,5 +9,9 @@
 	</dict>
 	<key>ATSApplicationFontsPath</key>
 	<string>WeibeiTC-Bold.otf</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>WeibeiTC-Bold.otf</string>
+	</array>
 </dict>
 </plist>
