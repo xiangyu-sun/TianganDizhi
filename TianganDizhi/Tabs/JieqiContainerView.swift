@@ -32,17 +32,20 @@ struct ShierPiguaView: View {
         ZStack {
           ForEach(Jieqi.allCases, id: \.self) { jieqi in
             Text(jieqi.chineseName)
+              .rotationEffect(getRotatingAngle(for: jieqi.rawValue - 1, base: 24))
               .offset(anglePosition(for: jieqi.rawValue - 1, in: geometry.size))
+    
             
             let dizhi = Dizhi(rawValue: jieqi.rawValue / 2) ?? .chen
             let dizhiIndex = dizhi.rawValue - 1
             
             Text(Key.shierLvLvMonthOrder[dizhiIndex].lvlvDescription)
-            
+              .rotationEffect(getRotatingAngle(for: dizhiIndex, base: 12))
               .offset(angle12Position(for: dizhiIndex, in: geometry.size, z: 1))
             
-            Text(shouldScaleFont ? dizhi.chineseCalendarMonthName : dizhi.chineseCharactor)
             
+            Text(shouldScaleFont ? dizhi.chineseCalendarMonthName : dizhi.chineseCharactor)
+              .rotationEffect(getRotatingAngle(for: (dizhiIndex - 2), base: 12))
               .offset(angle12Position(for: (dizhiIndex - 2), in: geometry.size, z: 2))
             
             let gua = ShierPiguas[dizhiIndex]
@@ -53,6 +56,7 @@ struct ShierPiguaView: View {
               }
               Text(gua.chineseCharacter)
             }
+            .rotationEffect(getRotatingAngle(for: (dizhiIndex + 3), base: 12))
             .offset(angle12Position(for: dizhiIndex + 3, in: geometry.size, z: 3))
             
           }
@@ -132,6 +136,17 @@ struct ShierPiguaView: View {
     let x = cos(startAngle) * radius
     let y = sin(startAngle) * radius
     return CGSize(width: x, height: y)
+  }
+  
+  func getRotatingAngle(for index: Int, base: Double) -> Angle {
+    let segmentAngle = 2 * .pi / base
+    if base == 12 {
+      return .init(radians: segmentAngle * Double(index) + .pi * 0.5)
+    
+    } else {
+      return .init(radians: segmentAngle * Double(index) + .pi * 0.5  - 0.5 * segmentAngle)
+    }
+   
   }
   
   private func angle12Position(for index: Int, in size: CGSize, z: Double) -> CGSize {
