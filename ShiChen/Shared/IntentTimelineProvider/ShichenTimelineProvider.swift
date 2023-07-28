@@ -1,6 +1,6 @@
 import ChineseAstrologyCalendar
-import WidgetKit
 import CoreLocation
+import WidgetKit
 
 struct ShichenTimelineProvider: IntentTimelineProvider {
 
@@ -12,7 +12,7 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
     if let location = LocationManager.shared.lastLocation {
       configuration.location = "\(String(describing: location))"
     }
-    
+
     return SimpleEntry(date: Date(), configuration: configuration)
   }
 
@@ -31,12 +31,12 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
 
   func getTimeline(for configuration: ConfigurationIntent, in _: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
     var entries: [SimpleEntry] = []
-    
+
     configuration.date = Calendar.current.dateComponents(in: .current, from: Date())
     if let location = LocationManager.shared.lastLocation {
       configuration.location = "\(String(describing: location))"
     }
-    
+
     for date in ShichenTimeLineSceduler.buildTimeLine() {
       let entry = SimpleEntry(date: date, configuration: configuration)
       entries.append(entry)

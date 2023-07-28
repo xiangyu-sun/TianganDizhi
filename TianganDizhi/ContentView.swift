@@ -48,9 +48,9 @@ struct ContentView: View {
           Text("設置")
         }
     }
-#if os(iOS) || os(watchOS)
+    #if os(iOS) || os(watchOS)
     .navigationViewStyle(StackNavigationViewStyle())
-#endif
+    #endif
     #if os(iOS)
     .onAppear {
       AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()

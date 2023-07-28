@@ -53,7 +53,7 @@ struct KnowledgeView: View {
             Text("十二時辰頌")
           }
         }
-        Section() {
+        Section {
           NavigationLink(destination: JieqiListView()) {
             Text("二十四節氣")
           }

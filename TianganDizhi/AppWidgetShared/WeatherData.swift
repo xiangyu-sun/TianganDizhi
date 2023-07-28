@@ -6,14 +6,14 @@ import os
 import WeatherKit
 import WidgetKit
 
+// MARK: - ChineseMoonPhase + Codable
 
 extension ChineseMoonPhase: Codable { }
 
+// MARK: - WeatherData
+
 @MainActor
 final class WeatherData: ObservableObject {
-  let dataCacheKey = "come.uriphium.weatherdata"
-
-  let userDefault = Constants.sharedUserDefault
 
   // MARK: Internal
 
@@ -35,6 +35,10 @@ final class WeatherData: ObservableObject {
 
   static let shared = WeatherData()
 
+  let dataCacheKey = "come.uriphium.weatherdata"
+
+  let userDefault = Constants.sharedUserDefault
+
   let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.WeatherData", category: "Model")
 
   @Published private(set) var forcastedWeather: Information?
@@ -43,14 +47,16 @@ final class WeatherData: ObservableObject {
   @discardableResult
   func dailyForecast(for location: CLLocation) async throws -> Information? {
     if
-      let distance = lastUpdatedLocation?.distance(from: location), let lastUpdatedDate, distance <= 1000 || lastUpdatedDate.distance(to: Date()) <= 60 * 60
+      let distance = lastUpdatedLocation?.distance(from: location), let lastUpdatedDate,
+      distance <= 1000 || lastUpdatedDate
+        .distance(to: Date()) <= 60 * 60
     {
       logger.log(level: .debug, "fetching forcast aborted due to not matching requirement")
       guard let data = userDefault?.data(forKey: dataCacheKey) else {
         return nil
       }
       let decoder = JSONDecoder()
-      
+
       return try? decoder.decode(Information.self, from: data)
     }
 
@@ -80,15 +86,15 @@ final class WeatherData: ObservableObject {
         condition: today.condition.description)
 
       forcastedWeather = data
-      
-      Task{
+
+      Task {
         let encoder = JSONEncoder()
-        
+
         if let data = try? encoder.encode(data) {
           userDefault?.setValue(data, forKey: dataCacheKey)
         }
       }
-      
+
       return data
     } else {
       return nil
