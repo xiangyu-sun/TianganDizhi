@@ -18,7 +18,6 @@ struct AllWidgets: WidgetBundle {
   var body: some Widget {
     ShiChen()
     HourlyWidget()
-    // CountDownWidget()
   }
 }
 
@@ -37,7 +36,7 @@ struct HourlyWidget: Widget {
     }
     .configurationDisplayName(WidgetConstants.simpleWidgetTitle)
     .description(WidgetConstants.simpleWidgetDescription)
-    .supportedFamilies([.accessoryCircular, .accessoryCorner])
+    .supportedFamilies(supportedFamilies)
   }
 }
 
@@ -45,14 +44,16 @@ struct HourlyWidget: Widget {
 
 struct ShiChen: Widget {
   let kind = "ShiChen"
-
+  var supportedFamilies: [WidgetFamily] {
+    [.accessoryInline, .accessoryRectangular]
+  }
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
       ShiChenEntryView(entry: entry)
     }
     .configurationDisplayName(WidgetConstants.normalWidgetDisplayName)
     .description(WidgetConstants.normalWidgetDescription)
-    .supportedFamilies([.accessoryInline, .accessoryRectangular])
+    .supportedFamilies(supportedFamilies)
   }
 }
 

@@ -53,7 +53,7 @@ struct ContentView: View {
     #endif
     #if os(iOS)
     .onAppear {
-      AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()
+      try? AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()
     }
     #endif
   }
