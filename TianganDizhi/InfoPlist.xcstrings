@@ -34,6 +34,18 @@
             "state" : "new",
             "value" : "TianganDizhi"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TianganDizhi"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TianganDizhi"
+          }
         }
       }
     },
@@ -45,6 +57,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支需要获得您的当前位置许可，才能在小部件上显示您当地的月相信息。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支需要獲得您的當前位置許可，才能在小部件上顯示您當地的月相信息。"
           }
         }
       }

@@ -47,6 +47,7 @@ struct ShiChen: Widget {
   var supportedFamilies: [WidgetFamily] {
     [.accessoryInline, .accessoryRectangular]
   }
+
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
       ShiChenEntryView(entry: entry)
