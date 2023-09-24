@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1410"
    wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
@@ -32,6 +32,20 @@
                BlueprintIdentifier = "997C68432864CADE00B40D3F"
                BuildableName = "ShichenWatch Watch App.app"
                BlueprintName = "ShichenWatch Watch App"
+               ReferencedContainer = "container:TianganDizhi.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "46AB55C6242B5EFD00F6604A"
+               BuildableName = "TianganDizhi.app"
+               BlueprintName = "TianganDizhi"
                ReferencedContainer = "container:TianganDizhi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
