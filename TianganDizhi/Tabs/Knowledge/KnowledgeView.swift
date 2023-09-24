@@ -60,7 +60,7 @@ struct KnowledgeView: View {
         }
       }
       .font(bodyFont)
-      .navigationTitle(Text("中国古代學術"))
+      .navigationTitle(Text("天干地支五行"))
     }
   }
 }

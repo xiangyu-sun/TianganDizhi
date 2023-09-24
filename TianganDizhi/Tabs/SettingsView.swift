@@ -26,6 +26,9 @@ struct SettingsView: View {
 
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
+  
+  @AppStorage(Constants.piGuaRotationEnabled, store: Constants.sharedUserDefault)
+  var piGuaRotationEnabled = false
 
   var body: some View {
     Form {
@@ -48,6 +51,10 @@ struct SettingsView: View {
 
         Toggle(isOn: $useTranditionalNaming) {
           Text("顯示傳統名稱")
+        }
+        
+        Toggle(isOn: $piGuaRotationEnabled) {
+          Text("十二辟卦文字方向配圓弧")
         }
       }
       .navigationTitle(Text("設置"))
