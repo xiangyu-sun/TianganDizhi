@@ -619,7 +619,7 @@
 				994215E52965C0AB003C5CA1 /* Tabs */,
 				99FD3F732927EAB70048DCEB /* AppWidgetShared */,
 				994190C0285A296A00295389 /* Utilities */,
-				46B79C0B2541E4B9003C0B7F /* Weibei TC */,
+				46B79C0B2541E4B9003C0B7F /* WeibeiTC */,
 				46AB55D0242B5EFF00F6604A /* Assets.xcassets */,
 				996321492911B8E4000C4A2B /* Shared.xcassets */,
 				990FEAE1294CC02D00CB1CEF /* Location.gpx */,
@@ -667,12 +667,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		46B79C0B2541E4B9003C0B7F /* Weibei TC */ = {
+		46B79C0B2541E4B9003C0B7F /* WeibeiTC */ = {
 			isa = PBXGroup;
 			children = (
 				46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */,
 			);
-			path = "Weibei TC";
+			path = WeibeiTC;
 			sourceTree = "<group>";
 		};
 		994190BE285A28E900295389 /* ShiChenClock */ = {
