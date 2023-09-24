@@ -59,6 +59,7 @@
 		9913E7F72AC0B47300E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
 		9913E7F82AC0B47300E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
 		9913E7F92AC0B47500E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
+		9913E7FB2AC0B63700E459B8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */; };
 		993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843BD285636B800FA7631 /* ShiChenEntryView.swift */; };
 		993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
 		993CFB9928809F690015252E /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
@@ -388,6 +389,7 @@
 		9913E7F12ABDF67000E459B8 /* ShichenStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenStack.swift; sourceTree = "<group>"; };
 		9913E7F32ABDF89900E459B8 /* WatchStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStackView.swift; sourceTree = "<group>"; };
 		9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerBackground.swift; sourceTree = "<group>"; };
+		9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		993843BD285636B800FA7631 /* ShiChenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenEntryView.swift; sourceTree = "<group>"; };
 		993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenYearMonthDateEntryView.swift; sourceTree = "<group>"; };
 		994215D32958A53D003C5CA1 /* JiaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiaziView.swift; sourceTree = "<group>"; };
@@ -823,6 +825,7 @@
 			isa = PBXGroup;
 			children = (
 				997C68842865FAD200B40D3F /* ShichenWatch.swift */,
+				9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */,
 				9913E7F12ABDF67000E459B8 /* ShichenStack.swift */,
 				9913E7F32ABDF89900E459B8 /* WatchStackView.swift */,
 				9913E7EB2ABDF12600E459B8 /* ConfigurationAppIntent.swift */,
@@ -1220,6 +1223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				993CFB9A28809F6A0015252E /* WeibeiTC-Bold.otf in Resources */,
+				9913E7FB2AC0B63700E459B8 /* Localizable.xcstrings in Resources */,
 				997C68882865FAD300B40D3F /* Assets.xcassets in Resources */,
 				998898E42A74514300A4E48C /* ShiChen.xcstrings in Resources */,
 				9963214C2911B8F3000C4A2B /* Shared.xcassets in Resources */,
