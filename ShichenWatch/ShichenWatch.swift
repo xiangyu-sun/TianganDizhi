@@ -20,7 +20,7 @@ struct AllWidgets: WidgetBundle {
     ShiChen()
     HourlyWidget()
     if #available(watchOSApplicationExtension 10.0, *) {
-      ShiChenStack()
+      ShiChenStackWidget()
     }
   }
 }

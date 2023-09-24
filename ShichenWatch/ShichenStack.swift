@@ -13,7 +13,7 @@ struct SimpleAppIntentEntry: TimelineEntry {
 }
 
 @available(watchOSApplicationExtension 10.0, *)
-struct ShiChenStack: Widget {
+struct ShiChenStackWidget: Widget {
 
   var body: some WidgetConfiguration {
     AppIntentConfiguration(kind: "ShiChenStack", intent: ConfigurationAppIntent.self, provider: AppIntentsTimelineProvider()) { entry in
