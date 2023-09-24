@@ -52,6 +52,10 @@
 		9911517629DF3E5500A7CE54 /* DateColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9911517529DF3E5500A7CE54 /* DateColorModifier.swift */; };
 		9911517929DF43E100A7CE54 /* ShangdianKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9911517829DF43E100A7CE54 /* ShangdianKit */; };
 		9911517C29E09A3300A7CE54 /* ExtraLargeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9911517A29E09A2800A7CE54 /* ExtraLargeWidgetView.swift */; };
+		9913E7EC2ABDF12600E459B8 /* ConfigurationAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7EB2ABDF12600E459B8 /* ConfigurationAppIntent.swift */; };
+		9913E7EE2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7ED2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift */; };
+		9913E7F22ABDF67000E459B8 /* ShichenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F12ABDF67000E459B8 /* ShichenStack.swift */; };
+		9913E7F42ABDF89900E459B8 /* WatchStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F32ABDF89900E459B8 /* WatchStackView.swift */; };
 		993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843BD285636B800FA7631 /* ShiChenEntryView.swift */; };
 		993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
 		993CFB9928809F690015252E /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
@@ -376,6 +380,10 @@
 		990FEAE1294CC02D00CB1CEF /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		9911517529DF3E5500A7CE54 /* DateColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateColorModifier.swift; sourceTree = "<group>"; };
 		9911517A29E09A2800A7CE54 /* ExtraLargeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraLargeWidgetView.swift; sourceTree = "<group>"; };
+		9913E7EB2ABDF12600E459B8 /* ConfigurationAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationAppIntent.swift; sourceTree = "<group>"; };
+		9913E7ED2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntentsTimelineProvider.swift; sourceTree = "<group>"; };
+		9913E7F12ABDF67000E459B8 /* ShichenStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenStack.swift; sourceTree = "<group>"; };
+		9913E7F32ABDF89900E459B8 /* WatchStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStackView.swift; sourceTree = "<group>"; };
 		993843BD285636B800FA7631 /* ShiChenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenEntryView.swift; sourceTree = "<group>"; };
 		993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenYearMonthDateEntryView.swift; sourceTree = "<group>"; };
 		994215D32958A53D003C5CA1 /* JiaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiaziView.swift; sourceTree = "<group>"; };
@@ -810,6 +818,10 @@
 			isa = PBXGroup;
 			children = (
 				997C68842865FAD200B40D3F /* ShichenWatch.swift */,
+				9913E7F12ABDF67000E459B8 /* ShichenStack.swift */,
+				9913E7F32ABDF89900E459B8 /* WatchStackView.swift */,
+				9913E7EB2ABDF12600E459B8 /* ConfigurationAppIntent.swift */,
+				9913E7ED2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift */,
 				997C687A2865F80A00B40D3F /* CornerView.swift */,
 				996320ED290DE47A000C4A2B /* Info.plist */,
 				997C68872865FAD300B40D3F /* Assets.xcassets */,
@@ -1393,14 +1405,18 @@
 			files = (
 				997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */,
 				997CD11D2954FE1600BECF31 /* Constants.swift in Sources */,
+				9913E7EC2ABDF12600E459B8 /* ConfigurationAppIntent.swift in Sources */,
 				997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */,
 				99BC3C13296A2950004AB614 /* DateFormatters.swift in Sources */,
 				997C68A42868A86C00B40D3F /* ShichenTimeLineSceduler.swift in Sources */,
 				997C68952868A76800B40D3F /* ShiChenEntryView.swift in Sources */,
+				9913E7F42ABDF89900E459B8 /* WatchStackView.swift in Sources */,
 				996321482911B3F1000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				99ECAECD2A47588E004997FD /* LocationManager.swift in Sources */,
+				9913E7F22ABDF67000E459B8 /* ShichenStack.swift in Sources */,
 				997C68AD2868A93100B40D3F /* ShichenView.swift in Sources */,
 				997C68972868A76800B40D3F /* CompactShichenView.swift in Sources */,
+				9913E7EE2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift in Sources */,
 				997C68992868A78400B40D3F /* Styler.swift in Sources */,
 				997C68942868A76800B40D3F /* FullDateTitleView.swift in Sources */,
 				99BC3C0D296836AB004AB614 /* CountDownView.swift in Sources */,
@@ -1763,7 +1779,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.7.2;
+				MARKETING_VERSION = 2.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -1809,7 +1825,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.7.2;
+				MARKETING_VERSION = 2.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -1942,7 +1958,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.7.2;
+				MARKETING_VERSION = 2.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1975,7 +1991,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.7.2;
+				MARKETING_VERSION = 2.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;

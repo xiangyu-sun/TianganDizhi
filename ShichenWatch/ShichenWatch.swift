@@ -9,6 +9,7 @@
 import Intents
 import SwiftUI
 import WidgetKit
+import AppIntents
 
 // MARK: - AllWidgets
 
@@ -57,6 +58,7 @@ struct ShiChen: Widget {
     .supportedFamilies(supportedFamilies)
   }
 }
+
 
 // MARK: - ShiChen_Previews
 
