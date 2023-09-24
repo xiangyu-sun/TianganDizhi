@@ -81,6 +81,7 @@ struct ShiChenEntryView: View {
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
+
     case .systemExtraLarge:
       if iPad {
         #if os(iOS)
