@@ -42,6 +42,7 @@ struct ShiChenEntryView: View {
             Text(shichen.dizhi.displayHourText)
           }
           .font(.custom(.weibeiBold, size: 20, relativeTo: .body))
+          .widgetAccentable()
         } else {
           InlineWidgetView(date: entry.date)
         }
@@ -51,15 +52,17 @@ struct ShiChenEntryView: View {
         CircularWidgetView(date: entry.date)
       }
     case .accessoryRectangular:
-      if #available(iOSApplicationExtension 16.0, *) {
+      if #available(iOSApplicationExtension 16.0, watchOS 10.0, *) {
         RetangularWidgetView(date: entry.date)
       }
     #if os(watchOS)
     case .accessoryCorner:
       CornerView(date: entry.date)
     #endif
+      
     case .systemMedium:
       MediumWidgetView(date: entry.date)
+      
     case .systemLarge:
 
       VStack(spacing: 0) {
@@ -79,7 +82,7 @@ struct ShiChenEntryView: View {
       }
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
 
     case .systemExtraLarge:
@@ -98,7 +101,7 @@ struct ShiChenEntryView: View {
           }
           .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
-          .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+          .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
           VStack {
             Text(shichen.dizhi.aliasName)
@@ -113,7 +116,7 @@ struct ShiChenEntryView: View {
       CompactShichenView(shichen: shichen.dizhi, date: entry.date)
         .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+        .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     }
   }
 }
@@ -149,6 +152,8 @@ struct ShiChenEntryView_Previews: PreviewProvider {
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemLarge))
         .environment(\.colorScheme, .dark)
+        .previewDisplayName("systemLarge Dark")
+      
       if #available(iOSApplicationExtension 15.0, *) {
         ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
           .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
@@ -158,7 +163,7 @@ struct ShiChenEntryView_Previews: PreviewProvider {
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemMedium))
         .environment(\.sizeCategory, .extraExtraLarge)
-        .previewDisplayName("systemMedium + extraExtraLarge")
+        .previewDisplayName("systemMedium")
     }
     #endif
   }

@@ -34,7 +34,7 @@ struct MaterialBackground: ViewModifier {
 }
 
 extension View {
-  func materialBackground(with image: Image, toogle: Bool) -> some View {
+  func materialBackgroundWidget(with image: Image, toogle: Bool) -> some View {
     if #available(iOS 17.0, watchOS 10.0, macOS 14.0, *) {
       return containerBackground(for: .widget, content: {
         Image("background").resizable(resizingMode: .tile)
@@ -42,5 +42,9 @@ extension View {
     } else {
       return modifier(MaterialBackground(image: image, toogle: toogle))
     }
+  }
+  
+  func materialBackground(with image: Image, toogle: Bool) -> some View {
+    return modifier(MaterialBackground(image: image, toogle: toogle))
   }
 }

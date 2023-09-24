@@ -56,6 +56,9 @@
 		9913E7EE2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7ED2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift */; };
 		9913E7F22ABDF67000E459B8 /* ShichenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F12ABDF67000E459B8 /* ShichenStack.swift */; };
 		9913E7F42ABDF89900E459B8 /* WatchStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F32ABDF89900E459B8 /* WatchStackView.swift */; };
+		9913E7F72AC0B47300E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
+		9913E7F82AC0B47300E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
+		9913E7F92AC0B47500E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
 		993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843BD285636B800FA7631 /* ShiChenEntryView.swift */; };
 		993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */; };
 		993CFB9928809F690015252E /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
@@ -384,6 +387,7 @@
 		9913E7ED2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntentsTimelineProvider.swift; sourceTree = "<group>"; };
 		9913E7F12ABDF67000E459B8 /* ShichenStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenStack.swift; sourceTree = "<group>"; };
 		9913E7F32ABDF89900E459B8 /* WatchStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStackView.swift; sourceTree = "<group>"; };
+		9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerBackground.swift; sourceTree = "<group>"; };
 		993843BD285636B800FA7631 /* ShiChenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenEntryView.swift; sourceTree = "<group>"; };
 		993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenYearMonthDateEntryView.swift; sourceTree = "<group>"; };
 		994215D32958A53D003C5CA1 /* JiaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiaziView.swift; sourceTree = "<group>"; };
@@ -557,6 +561,7 @@
 				997C68762864CB8F00B40D3F /* AllWidgets.swift */,
 				998898E02A74514200A4E48C /* ShiChen.xcstrings */,
 				997CD1102954C92000BECF31 /* MaterialBackground.swift */,
+				9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */,
 				997C68932868A75300B40D3F /* Shared */,
 				46393EE72542F57900E40518 /* ShiChen.intentdefinition */,
 				46B79CB32542F017003C0B7F /* InfoPlist.strings */,
@@ -1246,6 +1251,7 @@
 				9911517C29E09A3300A7CE54 /* ExtraLargeWidgetView.swift in Sources */,
 				993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				996321472911B3F0000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
+				9913E7F92AC0B47500E459B8 /* ContainerBackground.swift in Sources */,
 				46B79C462541F962003C0B7F /* Environment.swift in Sources */,
 				99F19D9129E09CC1005C5949 /* DateColorModifier.swift in Sources */,
 				99F9DDCB29E0C3A400E69B8E /* MediumWidgetView.swift in Sources */,
@@ -1415,6 +1421,7 @@
 				99ECAECD2A47588E004997FD /* LocationManager.swift in Sources */,
 				9913E7F22ABDF67000E459B8 /* ShichenStack.swift in Sources */,
 				997C68AD2868A93100B40D3F /* ShichenView.swift in Sources */,
+				9913E7F72AC0B47300E459B8 /* ContainerBackground.swift in Sources */,
 				997C68972868A76800B40D3F /* CompactShichenView.swift in Sources */,
 				9913E7EE2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift in Sources */,
 				997C68992868A78400B40D3F /* Styler.swift in Sources */,
@@ -1474,6 +1481,7 @@
 				99FD3F652922968B0048DCEB /* CompactShichenView.swift in Sources */,
 				99FD3F6C292297DE0048DCEB /* ShichenHStackView.swift in Sources */,
 				99FD3F602922968B0048DCEB /* CircularWidgetView.swift in Sources */,
+				9913E7F82AC0B47300E459B8 /* ContainerBackground.swift in Sources */,
 				99BC3C092968359E004AB614 /* CountDownWidget.swift in Sources */,
 				99FD3F6F2922988B0048DCEB /* MinuteTimeLineScheduler.swift in Sources */,
 				99BC3C0E296836AD004AB614 /* CountDownView.swift in Sources */,

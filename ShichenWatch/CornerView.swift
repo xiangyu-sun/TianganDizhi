@@ -33,6 +33,7 @@ struct CornerView: View {
           .foregroundColor(.secondary)
       }
     }
+    .widgetAccentable()
   }
 }
 
