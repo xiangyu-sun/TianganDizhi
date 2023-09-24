@@ -111,13 +111,19 @@ struct ShiChen_Previews: PreviewProvider {
     Group {
       ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
+        .previewDisplayName("ShiChenYearMonthDateEntryView systemSmall")
 
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
+        .previewDisplayName("ShiChenEntryView systemSmall")
+      
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemMedium))
+        .previewDisplayName("ShiChenEntryView systemMedium")
+      
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemLarge))
+        .previewDisplayName("ShiChenEntryView systemLarge")
 
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemLarge))

@@ -39,7 +39,7 @@ struct ShiChenYearMonthDateEntryView: View {
         CircularWidgetView(date: entry.date)
       }
     case .accessoryRectangular:
-      if #available(iOSApplicationExtension 16.0, *) {
+      if #available(iOSApplicationExtension 16.0, watchOS 10.0, *) {
         RetangularWidgetView(date: entry.date)
       }
     case .systemMedium:
@@ -54,7 +54,7 @@ struct ShiChenYearMonthDateEntryView: View {
       }
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     default:
       VStack {
         Spacer()
@@ -67,7 +67,7 @@ struct ShiChenYearMonthDateEntryView: View {
       }
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     }
   }
 }
