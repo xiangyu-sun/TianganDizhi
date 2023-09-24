@@ -62,7 +62,7 @@ struct ExtraLargeWidgetView: View {
     }
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+    .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     .onAppear {
       if #available(iOS 16.0, *) {
         Task {

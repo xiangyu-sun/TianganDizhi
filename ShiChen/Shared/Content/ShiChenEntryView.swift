@@ -101,8 +101,7 @@ struct ShiChenEntryView: View {
           }
           .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
-          .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-
+ 
           VStack {
             Text(shichen.dizhi.aliasName)
               .font(largeTitleFont)
@@ -111,6 +110,8 @@ struct ShiChenEntryView: View {
           }
           .padding(.top, 8)
         }
+        .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+
       }
     default:
       CompactShichenView(shichen: shichen.dizhi, date: entry.date)
