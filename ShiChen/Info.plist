@@ -15,5 +15,7 @@
 	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>2.8.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>十二時辰</string>
 </dict>
 </plist>
