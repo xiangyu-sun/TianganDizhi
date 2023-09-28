@@ -52,7 +52,7 @@ struct ShiChenEntryView: View {
         CircularWidgetView(date: entry.date)
       }
     case .accessoryRectangular:
-      if #available(iOSApplicationExtension 16.0, watchOS 10.0, *) {
+      if #available(iOSApplicationExtension 16.0, *) {
         RetangularWidgetView(date: entry.date)
       }
     #if os(watchOS)
