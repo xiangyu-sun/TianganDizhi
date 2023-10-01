@@ -3,7 +3,7 @@ import CoreLocation
 import AppIntents
 import WidgetKit
 
-@available(watchOSApplicationExtension 10.0, *)
+@available(watchOS 10.0, *)
 struct AppIntentsTimelineProvider: AppIntentTimelineProvider {
 
   // MARK: Internal

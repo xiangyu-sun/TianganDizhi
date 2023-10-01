@@ -1,13 +1,11 @@
 import SwiftUI
-import WidgetKit
 import ChineseAstrologyCalendar
 
 // MARK: - MediumWidgetView
-@available(watchOSApplicationExtension 10.0, *)
+@available(watchOS 10.0, *)
 struct WatchStackView: View {
   let date: Date
-  @Environment(\.widgetFamily) var widgetFamily
-  
+
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
@@ -17,8 +15,6 @@ struct WatchStackView: View {
   
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
-
-
 
   var body: some View {
     let shichen = date.shichen!

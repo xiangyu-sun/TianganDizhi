@@ -3,12 +3,6 @@ import AppIntents
 import SwiftUI
 
 @available(watchOS 10.0, *)
-struct SimpleAppIntentEntry: TimelineEntry {
-  let date: Date
-  let configuration: ConfigurationAppIntent
-}
-
-@available(watchOS 10.0, *)
 struct ShiChenStackWidget: Widget {
   
   var body: some WidgetConfiguration {

@@ -747,6 +747,15 @@
 			path = LockScreen;
 			sourceTree = "<group>";
 		};
+		99553A0B2AC9E37500EAA6B1 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				9913E7F32ABDF89900E459B8 /* WatchStackView.swift */,
+				9913E7EB2ABDF12600E459B8 /* ConfigurationAppIntent.swift */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
 		9955E82428FB782600FA8362 /* Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -827,8 +836,7 @@
 				99553A092AC9CC7A00EAA6B1 /* WatchWidgetBundle.swift */,
 				9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */,
 				9913E7F12ABDF67000E459B8 /* ShichenStack.swift */,
-				9913E7F32ABDF89900E459B8 /* WatchStackView.swift */,
-				9913E7EB2ABDF12600E459B8 /* ConfigurationAppIntent.swift */,
+				99553A0B2AC9E37500EAA6B1 /* Stack */,
 				9913E7ED2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift */,
 				997C687A2865F80A00B40D3F /* CornerView.swift */,
 				996320ED290DE47A000C4A2B /* Info.plist */,
