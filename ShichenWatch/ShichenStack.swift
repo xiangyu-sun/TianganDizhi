@@ -15,6 +15,9 @@ struct ShiChenStackWidget: Widget {
     AppIntentConfiguration(kind: "ShiChenStack", intent: ConfigurationAppIntent.self, provider: AppIntentsTimelineProvider()) { entry in
       MediumWidgetView(date: entry.date)
     }
+    .configurationDisplayName(WidgetConstants.normalWidgetDisplayName)
+    .description(WidgetConstants.normalWidgetDescription)
+    .supportedFamilies([.accessoryRectangular])
   }
 }
 

@@ -6,7 +6,6 @@ import WidgetKit
 @available(watchOSApplicationExtension 10.0, *)
 struct AppIntentsTimelineProvider: AppIntentTimelineProvider {
 
-  
   // MARK: Internal
 
   func placeholder(in _: Context) -> SimpleAppIntentEntry {
@@ -21,7 +20,7 @@ struct AppIntentsTimelineProvider: AppIntentTimelineProvider {
 
   func recommendations() -> [AppIntentRecommendation<ConfigurationAppIntent>] {
     defaultRecommendedIntents().map { intent in
-      let description = Date().shichen?.dizhi.chineseCharactor ?? ""
+      let description = String(describing: "天干地支小組件 - \(Date().shichen?.dizhi.chineseCharactor ?? "")")
       return AppIntentRecommendation(intent: intent, description: description)
     }
   }
