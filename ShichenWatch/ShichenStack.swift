@@ -13,20 +13,21 @@ struct ShiChenStackWidget: Widget {
   
   var body: some WidgetConfiguration {
     AppIntentConfiguration(kind: "ShiChenStack", intent: ConfigurationAppIntent.self, provider: AppIntentsTimelineProvider()) { entry in
-      MediumWidgetView(date: entry.date)
+      WatchStackView(date: entry.date)
     }
     .configurationDisplayName(WidgetConstants.normalWidgetDisplayName)
     .description(WidgetConstants.normalWidgetDescription)
     .supportedFamilies([.accessoryRectangular])
   }
 }
-//
-//#Preview(
-//  as: .accessoryRectangular,
-//  widget: {
-//    ShiChenStackWidget()
-//  },
-//  timeline: {
-//    SimpleAppIntentEntry(date: Date(), configuration: .init())
-//  }
-//)
+
+@available(watchOS 10.0, *)
+#Preview(
+  as: .accessoryRectangular,
+  widget: {
+    ShiChenStackWidget()
+  },
+  timeline: {
+    SimpleAppIntentEntry(date: Date(), configuration: .init())
+  }
+)
