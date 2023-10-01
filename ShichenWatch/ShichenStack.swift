@@ -6,10 +6,6 @@ import SwiftUI
 struct SimpleAppIntentEntry: TimelineEntry {
   let date: Date
   let configuration: ConfigurationAppIntent
-  
-  var relevance: TimelineEntryRelevance? {
-    nil
-  }
 }
 
 @available(watchOSApplicationExtension 10.0, *)
