@@ -37,8 +37,6 @@ struct WatchStackView: View {
           .font(footnote)
           .foregroundColor(Color.secondary)
       }
-      #else
-      Spacer()
       #endif
 
       HStack {
@@ -67,7 +65,6 @@ struct WatchStackView: View {
         }
         .foregroundColor(Color.secondary)
       }
-      .padding([.leading, .trailing], 8)
       Spacer()
     }
     .widgetAccentable()
@@ -90,7 +87,6 @@ struct WatchStackView: View {
     }
     #endif
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
     .containerBackground(for: .widget) {
       Color.black
     }
