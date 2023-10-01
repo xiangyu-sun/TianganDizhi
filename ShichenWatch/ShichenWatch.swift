@@ -32,7 +32,7 @@ struct HourlyWidget: Widget {
 
 // MARK: - ShiChen
 
-struct ShiChen: Widget {
+struct ShiChenWidget: Widget {
   let kind = "ShiChen"
   var supportedFamilies: [WidgetFamily] {
     [.accessoryInline, .accessoryRectangular]

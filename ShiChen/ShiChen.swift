@@ -1,6 +1,6 @@
 //
-//  ShiChen.swift
-//  ShiChen
+//  ShiChenWidget.swift
+//  ShiChenWidget
 //
 //  Created by 孙翔宇 on 02/09/2020.
 //  Copyright © 2020 孙翔宇. All rights reserved.
