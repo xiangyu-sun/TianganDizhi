@@ -30,10 +30,10 @@ struct ContentView: View {
           Text("天干地支")
         }
 
-      ShierPiguaView()
+      GuaListView()
         .tabItem {
           Image(systemName: "sun.max.fill")
-          Text("十二辟卦")
+          Text("卦")
         }
 
       ChartListView()
