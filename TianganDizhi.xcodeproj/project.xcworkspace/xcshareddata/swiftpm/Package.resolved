@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "bagua",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:xiangyu-sun/Bagua.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "78c8a59acb3177fabe424b700b66d0daad79d179"
+      }
+    },
+    {
       "identity" : "chineseastrologycalendar",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",

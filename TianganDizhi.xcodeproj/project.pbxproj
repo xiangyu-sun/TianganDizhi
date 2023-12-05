@@ -127,6 +127,8 @@
 		996A19C92A543E6700D1C943 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
 		996A19CA2A543E9400D1C943 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		996A19CB2A543E9E00D1C943 /* Date+WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */; };
+		996C53162B1FBF7D00AC832F /* Bagua in Frameworks */ = {isa = PBXBuildFile; productRef = 996C53152B1FBF7D00AC832F /* Bagua */; };
+		996C53182B1FBF9800AC832F /* Bagua in Frameworks */ = {isa = PBXBuildFile; productRef = 996C53172B1FBF9800AC832F /* Bagua */; };
 		996D2C1629A3DB33008DC1A9 /* SunInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */; };
 		996D2C1929A3DD82008DC1A9 /* WatchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1729A3DCBD008DC1A9 /* WatchMainView.swift */; };
 		996D2C1C29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */; };
@@ -474,6 +476,7 @@
 				46339FF025029C64007D4137 /* JingluoShuxue in Frameworks */,
 				994215CA2958A0EF003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */,
+				996C53162B1FBF7D00AC832F /* Bagua in Frameworks */,
 				46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99632070290DE195000C4A2B /* JingluoShuxue in Frameworks */,
+				996C53182B1FBF9800AC832F /* Bagua in Frameworks */,
 				994215CC2958A27D003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				99632072290DE199000C4A2B /* ChineseTranditionalMusicCore in Frameworks */,
 			);
@@ -936,6 +940,7 @@
 				99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */,
 				994215C92958A0EF003C5CA1 /* ChineseAstrologyCalendar */,
 				9911517829DF43E100A7CE54 /* ShangdianKit */,
+				996C53152B1FBF7D00AC832F /* Bagua */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -998,6 +1003,7 @@
 				9963206F290DE195000C4A2B /* JingluoShuxue */,
 				99632071290DE199000C4A2B /* ChineseTranditionalMusicCore */,
 				994215CB2958A27D003C5CA1 /* ChineseAstrologyCalendar */,
+				996C53172B1FBF9800AC832F /* Bagua */,
 			);
 			productName = "ShichenWatch Watch App";
 			productReference = 997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */;
@@ -1141,6 +1147,7 @@
 				994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
 				9911517729DF43E100A7CE54 /* XCRemoteSwiftPackageReference "ShangdianKit" */,
 				998C1DAE2A16CFB300A413B4 /* XCRemoteSwiftPackageReference "swift" */,
+				996C53142B1FBF6E00AC832F /* XCRemoteSwiftPackageReference "Bagua" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -2356,6 +2363,14 @@
 				kind = branch;
 			};
 		};
+		996C53142B1FBF6E00AC832F /* XCRemoteSwiftPackageReference "Bagua" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:xiangyu-sun/Bagua.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		998C1DAE2A16CFB300A413B4 /* XCRemoteSwiftPackageReference "swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/swift";
@@ -2428,6 +2443,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */;
 			productName = ChineseTranditionalMusicCore;
+		};
+		996C53152B1FBF7D00AC832F /* Bagua */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 996C53142B1FBF6E00AC832F /* XCRemoteSwiftPackageReference "Bagua" */;
+			productName = Bagua;
+		};
+		996C53172B1FBF9800AC832F /* Bagua */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 996C53142B1FBF6E00AC832F /* XCRemoteSwiftPackageReference "Bagua" */;
+			productName = Bagua;
 		};
 		99D2C78C2943912700327AF7 /* AppStoreReviewPrompt */ = {
 			isa = XCSwiftPackageProductDependency;

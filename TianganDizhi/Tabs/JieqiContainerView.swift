@@ -10,6 +10,7 @@ import ChineseAstrologyCalendar
 import ChineseTranditionalMusicCore
 import MusicTheory
 import SwiftUI
+import Bagua
 
 // MARK: - ShierPiguaView
 
