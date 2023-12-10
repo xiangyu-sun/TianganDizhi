@@ -42,7 +42,6 @@ struct BaguaView: View {
   var body: some View {
     GeometryReader { geometry in
       ZStack {
-        
         ForEach(viewData.guas.indices) { index in
           let gua = viewData.guas[index]
           
@@ -54,6 +53,10 @@ struct BaguaView: View {
             .rotationEffect(getRotatingAngle(for: index, base: 8))
             .offset(anglePosition(for: index, in: geometry.size, z: 1))
             .font(font.bold())
+          
+          Text(gua.xiang)
+            .offset(anglePosition(for: index, in: geometry.size, z: 2))
+            .font(bodyFont)
         }
         
       }

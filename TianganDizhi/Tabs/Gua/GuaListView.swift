@@ -22,7 +22,7 @@ struct GuaListView: View {
           NavigationLink(destination: BaguaView(viewData: .init(guas: xiantianBagua, title: "伏羲先天八卦"))) {
             Text("伏羲先天八卦")
           }
-          NavigationLink(destination: BaguaView(viewData: .init(guas: xiantianBagua, title: "文王後天八卦"))) {
+          NavigationLink(destination: BaguaView(viewData: .init(guas: houtianBagua, title: "文王後天八卦"))) {
             Text("文王後天八卦")
           }
         }

@@ -85,6 +85,7 @@ struct MainView: View {
         CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
           .fixedSize(horizontal: false, vertical: true)
         #endif
+        
         VStack {
           Text(shichen.dizhi.aliasName)
             .font(largeTitleFont)

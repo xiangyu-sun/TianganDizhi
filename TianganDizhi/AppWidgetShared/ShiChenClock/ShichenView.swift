@@ -8,6 +8,7 @@
 
 import ChineseAstrologyCalendar
 import SwiftUI
+import Bagua
 
 // MARK: - ShichenView
 
@@ -20,6 +21,7 @@ struct ShichenView: View {
         DizhiView(shichen: dizhi, current: currentShichen == dizhi)
       }
     }
+    
   }
 }
 

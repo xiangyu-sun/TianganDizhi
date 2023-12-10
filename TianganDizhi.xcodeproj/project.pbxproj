@@ -133,6 +133,9 @@
 		996C531C2B1FCFAD00AC832F /* GuaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996C531B2B1FCFAD00AC832F /* GuaListView.swift */; };
 		996C531E2B1FD0B500AC832F /* GuaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996C531B2B1FCFAD00AC832F /* GuaListView.swift */; };
 		996C53202B1FD11C00AC832F /* BaguaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996C53192B1FC68000AC832F /* BaguaView.swift */; };
+		996C53222B2653AF00AC832F /* Bagua in Frameworks */ = {isa = PBXBuildFile; productRef = 996C53212B2653AF00AC832F /* Bagua */; };
+		996C53242B2653B600AC832F /* Bagua in Frameworks */ = {isa = PBXBuildFile; productRef = 996C53232B2653B600AC832F /* Bagua */; };
+		996C53262B2653BC00AC832F /* Bagua in Frameworks */ = {isa = PBXBuildFile; productRef = 996C53252B2653BC00AC832F /* Bagua */; };
 		996D2C1629A3DB33008DC1A9 /* SunInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */; };
 		996D2C1929A3DD82008DC1A9 /* WatchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1729A3DCBD008DC1A9 /* WatchMainView.swift */; };
 		996D2C1C29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */; };
@@ -468,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */,
+				996C53222B2653AF00AC832F /* Bagua in Frameworks */,
 				994215D22958A289003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */,
 			);
@@ -531,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				997C68822865FAD200B40D3F /* SwiftUI.framework in Frameworks */,
+				996C53242B2653B600AC832F /* Bagua in Frameworks */,
 				994215CE2958A282003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				997C68812865FAD200B40D3F /* WidgetKit.framework in Frameworks */,
 			);
@@ -541,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FD3F48292296170048DCEB /* SwiftUI.framework in Frameworks */,
+				996C53262B2653BC00AC832F /* Bagua in Frameworks */,
 				994215D02958A286003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				99FD3F47292296170048DCEB /* WidgetKit.framework in Frameworks */,
 			);
@@ -926,6 +932,7 @@
 			name = ShiChenExtension;
 			packageProductDependencies = (
 				994215D12958A289003C5CA1 /* ChineseAstrologyCalendar */,
+				996C53212B2653AF00AC832F /* Bagua */,
 			);
 			productName = ShiChenExtension;
 			productReference = 462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */;
@@ -1076,6 +1083,7 @@
 			name = ShichenWatchExtension;
 			packageProductDependencies = (
 				994215CD2958A282003C5CA1 /* ChineseAstrologyCalendar */,
+				996C53232B2653B600AC832F /* Bagua */,
 			);
 			productName = ShichenWatchExtension;
 			productReference = 997C68802865FAD200B40D3F /* ShichenWatchExtension.appex */;
@@ -1096,6 +1104,7 @@
 			name = ShichenMacWidgetExtension;
 			packageProductDependencies = (
 				994215CF2958A286003C5CA1 /* ChineseAstrologyCalendar */,
+				996C53252B2653BC00AC832F /* Bagua */,
 			);
 			productName = ShichenMacWidgetExtension;
 			productReference = 99FD3F46292296170048DCEB /* ShichenMacWidgetExtension.appex */;
@@ -2464,6 +2473,21 @@
 			productName = Bagua;
 		};
 		996C53172B1FBF9800AC832F /* Bagua */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 996C53142B1FBF6E00AC832F /* XCRemoteSwiftPackageReference "Bagua" */;
+			productName = Bagua;
+		};
+		996C53212B2653AF00AC832F /* Bagua */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 996C53142B1FBF6E00AC832F /* XCRemoteSwiftPackageReference "Bagua" */;
+			productName = Bagua;
+		};
+		996C53232B2653B600AC832F /* Bagua */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 996C53142B1FBF6E00AC832F /* XCRemoteSwiftPackageReference "Bagua" */;
+			productName = Bagua;
+		};
+		996C53252B2653BC00AC832F /* Bagua */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 996C53142B1FBF6E00AC832F /* XCRemoteSwiftPackageReference "Bagua" */;
 			productName = Bagua;
