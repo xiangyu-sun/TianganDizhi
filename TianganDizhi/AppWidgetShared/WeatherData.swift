@@ -60,9 +60,6 @@ final class WeatherData: ObservableObject {
       return try? decoder.decode(Information.self, from: data)
     }
 
-    lastUpdatedLocation = location
-    lastUpdatedDate = Date()
-
     let dayWeather: Forecast<DayWeather>? = await Task.detached(priority: .userInitiated) {
       let forcast = try? await WeatherService.shared.weather(
         for: location,
@@ -92,6 +89,7 @@ final class WeatherData: ObservableObject {
 
         if let data = try? encoder.encode(data) {
           userDefault?.setValue(data, forKey: dataCacheKey)
+          self.update(location: location)
         }
       }
 
@@ -100,6 +98,13 @@ final class WeatherData: ObservableObject {
       return nil
     }
   }
+  
+  @MainActor
+  func update(location: CLLocation) {
+    lastUpdatedLocation = location
+    lastUpdatedDate = Date()
+  }
+  
 
   // MARK: Private
 

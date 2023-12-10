@@ -740,6 +740,7 @@
 		994AD1972868FBA800BB5BED /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				99BC3C0A29683678004AB614 /* CountDownView.swift */,
 				994AD1942868FA6500BB5BED /* RetangularWidgetView.swift */,
 				994AD1912868FA0400BB5BED /* CircularWidgetView.swift */,
 				994AD18E2868F96800BB5BED /* InlineWidgetView.swift */,
@@ -875,7 +876,6 @@
 				996321432911B374000C4A2B /* IntentTimelineProvider */,
 				997C689E2868A81500B40D3F /* SimpleEntry.swift */,
 				994215E62965C368003C5CA1 /* WidgetConstants.swift */,
-				99BC3C0A29683678004AB614 /* CountDownView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";

@@ -61,9 +61,7 @@ struct CountDownView: View {
       }
       .font(bodyFont)
       .foregroundColor(color)
-      .padding([.leading, .trailing])
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackground(with: Image("background"), toogle: true)
+      .materialBackgroundWidget(with: Image("background"), toogle: true)
     default:
       VStack(alignment: .center) {
         FullDateTitleView(date: entry.date)
@@ -76,7 +74,7 @@ struct CountDownView: View {
       .foregroundColor(color)
       .padding([.trailing, .leading])
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackground(with: Image("background"), toogle: true)
+      .materialBackgroundWidget(with: Image("background"), toogle: true)
     }
   }
 }
