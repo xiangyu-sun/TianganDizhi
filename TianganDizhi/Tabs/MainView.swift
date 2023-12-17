@@ -169,6 +169,9 @@ struct MainView: View {
         Image(systemName: moonphase.moonPhase.symbolName)
       }
       Text(moonphase.name(traditionnal: useTranditionalNaming))
+      if let gua = moonphase.gua {
+        Text(gua.symbol)
+      }
     }
     .font(bodyFont)
   }
