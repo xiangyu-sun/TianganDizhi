@@ -15,6 +15,9 @@ struct MoonInformationView: View {
           Image(systemName: info.moonPhase.moonPhase.symbolName)
         }
         Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
+        if let gua = info.moonPhase.gua {
+          Text(gua.symbol)
+        }
       }
       .font(bodyFont)
       HStack {
@@ -59,17 +62,32 @@ struct MoonInformationView: View {
 @available(iOS 15, *)
 struct MoonInformationView_Previews: PreviewProvider {
   static var previews: some View {
-    SunInformationView(
-      info: WeatherData.Information(
-        moonPhase: .上弦月,
-        moonRise: .now,
-        moonset: .now,
-        sunrise: .now,
-        sunset: .now,
-        noon: .now,
-        midnight: .now,
-        temperatureHigh: .init(value: 12, unit: .celsius),
-        temperatureLow: .init(value: 30, unit: .celsius),
-        condition: "ok"))
+    VStack() {
+      SunInformationView(
+        info: WeatherData.Information(
+          moonPhase: .上弦月,
+          moonRise: .now,
+          moonset: .now,
+          sunrise: .now,
+          sunset: .now,
+          noon: .now,
+          midnight: .now,
+          temperatureHigh: .init(value: 12, unit: .celsius),
+          temperatureLow: .init(value: 30, unit: .celsius),
+          condition: "ok"))
+      
+      MoonInformationView(
+        info: WeatherData.Information(
+          moonPhase: .上弦月,
+          moonRise: .now,
+          moonset: .now,
+          sunrise: .now,
+          sunset: .now,
+          noon: .now,
+          midnight: .now,
+          temperatureHigh: .init(value: 12, unit: .celsius),
+          temperatureLow: .init(value: 30, unit: .celsius),
+          condition: "ok"))
+    }
   }
 }
