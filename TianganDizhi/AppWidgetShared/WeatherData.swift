@@ -57,7 +57,7 @@ final class WeatherData: ObservableObject {
       }
       let decoder = JSONDecoder()
 
-      return try? decoder.decode(Information.self, from: data)
+      return try decoder.decode(Information.self, from: data)
     }
 
     let dayWeather: Forecast<DayWeather>? = await Task.detached(priority: .userInitiated) {
@@ -89,6 +89,7 @@ final class WeatherData: ObservableObject {
 
         if let data = try? encoder.encode(data) {
           userDefault?.setValue(data, forKey: dataCacheKey)
+          
           self.update(location: location)
         }
       }
