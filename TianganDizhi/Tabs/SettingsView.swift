@@ -29,6 +29,8 @@ struct SettingsView: View {
   
   @AppStorage(Constants.piGuaRotationEnabled, store: Constants.sharedUserDefault)
   var piGuaRotationEnabled = false
+  
+  @Environment(\.bodyFont) var bodyFont
 
   var body: some View {
     Form {
@@ -57,41 +59,42 @@ struct SettingsView: View {
           Text("十二辟卦文字方向配圓弧")
         }
       }
-      .navigationTitle(Text("設置"))
-      .onChange(of: springFestiveBackgroundEnabled) { _ in
-        if #available(watchOS 9.0, iOS 14.0, *) {
-          WidgetCenter.shared.reloadAllTimelines()
-        } else {
-          // Fallback on earlier versions
-        }
+    }
+    .font(bodyFont)
+    .navigationTitle(Text("設置"))
+    .onChange(of: springFestiveBackgroundEnabled) { _ in
+      if #available(watchOS 9.0, iOS 14.0, *) {
+        WidgetCenter.shared.reloadAllTimelines()
+      } else {
+        // Fallback on earlier versions
       }
-      .onChange(of: useTranditionalNaming) { _ in
-        if #available(watchOS 9.0, iOS 14.0, *) {
-          WidgetCenter.shared.reloadAllTimelines()
-        } else {
-          // Fallback on earlier versions
-        }
+    }
+    .onChange(of: useTranditionalNaming) { _ in
+      if #available(watchOS 9.0, iOS 14.0, *) {
+        WidgetCenter.shared.reloadAllTimelines()
+      } else {
+        // Fallback on earlier versions
       }
-      .onChange(of: springFestiveForegroundEnabled) { _ in
-        if #available(watchOS 9.0, iOS 14.0, *) {
-          WidgetCenter.shared.reloadAllTimelines()
-        } else {
-          // Fallback on earlier versions
-        }
+    }
+    .onChange(of: springFestiveForegroundEnabled) { _ in
+      if #available(watchOS 9.0, iOS 14.0, *) {
+        WidgetCenter.shared.reloadAllTimelines()
+      } else {
+        // Fallback on earlier versions
       }
-      .onChange(of: useGTM8) { _ in
-        if #available(watchOS 9.0, iOS 14.0, *) {
-          WidgetCenter.shared.reloadAllTimelines()
-        } else {
-          // Fallback on earlier versions
-        }
+    }
+    .onChange(of: useGTM8) { _ in
+      if #available(watchOS 9.0, iOS 14.0, *) {
+        WidgetCenter.shared.reloadAllTimelines()
+      } else {
+        // Fallback on earlier versions
       }
-      .onChange(of: displayMoonPhaseOnWidgets) { _ in
-        if #available(watchOS 9.0, iOS 14.0, *) {
-          WidgetCenter.shared.reloadAllTimelines()
-        } else {
-          // Fallback on earlier versions
-        }
+    }
+    .onChange(of: displayMoonPhaseOnWidgets) { _ in
+      if #available(watchOS 9.0, iOS 14.0, *) {
+        WidgetCenter.shared.reloadAllTimelines()
+      } else {
+        // Fallback on earlier versions
       }
     }
   }
