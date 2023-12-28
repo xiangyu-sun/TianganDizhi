@@ -20,6 +20,7 @@ struct MainView: View {
   @Environment(\.footnote) var footnote
   @Environment(\.shouldScaleFont) var shouldScaleFont
   @StateObject var weatherData = WeatherData.shared
+  @Environment(\.scenePhase) var scenePhase
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
 
@@ -61,6 +62,14 @@ struct MainView: View {
           Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
             .font(bodyFont)
             .foregroundColor(Color.secondary)
+            .onChange(of: scenePhase) { newValue in
+              switch newValue {
+              case .active:
+                refreshLocationAndWeather()
+              default:
+                break
+              }
+            }
           Text("\(value.condition)")
             .font(bodyFont)
             .foregroundColor(Color.secondary)
@@ -135,34 +144,38 @@ struct MainView: View {
     .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     #endif
     .onAppear {
-      if #available(iOS 16.0, macOS 13.0, watchOS 9.0, *) {
-        Task {
-          do {
-            let location = try await LocationManager.shared.startLocationUpdate()
-            try await self.weatherData.dailyForecast(for: location)
-
-            WidgetCenter.shared.getCurrentConfigurations { result in
-              guard case .success(let widgets) = result else { return }
-
-              let validWidgets = widgets.filter { widget in
-                let intent = widget.configuration as? ConfigurationIntent
-                return intent?.date?.isSameWithCurrentShichen ?? false
-              }
-
-              validWidgets.forEach {
-                WidgetCenter.shared.reloadTimelines(ofKind: $0.kind)
-              }
-            }
-          } catch {
-            print(error)
-          }
-        }
-      }
+      refreshLocationAndWeather()
     }
 
     #if os(macOS)
     .frame(minHeight: 640)
     #endif
+  }
+  
+  func refreshLocationAndWeather() {
+    if #available(iOS 16.0, macOS 13.0, watchOS 9.0, *) {
+      Task {
+        do {
+          let location = try await LocationManager.shared.startLocationUpdate()
+          try await self.weatherData.dailyForecast(for: location)
+
+          WidgetCenter.shared.getCurrentConfigurations { result in
+            guard case .success(let widgets) = result else { return }
+
+            let validWidgets = widgets.filter { widget in
+              let intent = widget.configuration as? ConfigurationIntent
+              return intent?.date?.isSameWithCurrentShichen ?? false
+            }
+
+            validWidgets.forEach {
+              WidgetCenter.shared.reloadTimelines(ofKind: $0.kind)
+            }
+          }
+        } catch {
+          print(error)
+        }
+      }
+    }
   }
 
   func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
