@@ -48,8 +48,8 @@ final class WeatherData: ObservableObject {
   func dailyForecast(for location: CLLocation) async throws -> Information? {
     if
       let distance = lastUpdatedLocation?.distance(from: location), let lastUpdatedDate,
-      distance <= 1000 || lastUpdatedDate
-        .distance(to: Date()) <= 60 * 60
+      distance >= 1000 ||
+        lastUpdatedDate.distance(to: Date()) >= 60 * 60
     {
       logger.log(level: .debug, "fetching forcast aborted due to not matching requirement")
       guard let data = userDefault?.data(forKey: dataCacheKey) else {
