@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "BFDBCB14-7F43-45F6-8337-3F2770AF5CA8",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TianganDizhi.xcodeproj",
+      "identifier" : "46AB55C6242B5EFD00F6604A",
+      "name" : "TianganDizhi"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TianganDizhi.xcodeproj",
+        "identifier" : "46AB55DC242B5EFF00F6604A",
+        "name" : "TianganDizhiTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:TianganDizhi.xcodeproj",
+        "identifier" : "46AB55E7242B5EFF00F6604A",
+        "name" : "TianganDizhiUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

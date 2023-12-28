@@ -31,12 +31,12 @@ final class ScreenTests: XCTestCase {
   override func tearDownWithError() throws {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
   }
-
+  
   func testTakeScreenshotOfPigua() {
     #if os(macOS)
-    app.tabs["十二辟卦"].click()
+    app.tabs["卦"].click()
     #else
-    app.tabBars.firstMatch.buttons["十二辟卦"].tap()
+    app.tabBars.firstMatch.buttons["卦"].tap()
     #endif
     takingScreenShot()
   }
@@ -47,7 +47,7 @@ final class ScreenTests: XCTestCase {
     app.tables.cells.containing(.button, identifier: "十二地支").element.click()
     #else
     app.tabBars.firstMatch.buttons["天干地支"].tap()
-    app.tabBars.firstMatch.buttons["十二地支"].tap()
+    app.buttons["十二地支"].tap()
     #endif
 
     takingScreenShot()
@@ -59,7 +59,7 @@ final class ScreenTests: XCTestCase {
     app.tables.cells.containing(.button, identifier: "地支，十二律呂，西洋調名").element.click()
     #else
     app.tabBars.firstMatch.buttons["天干地支"].tap()
-    app.tabBars.firstMatch.buttons["地支，十二律呂，西洋調名"].tap()
+    app.buttons["地支，十二律呂，西洋調名"].tap()
     #endif
     takingScreenShot()
   }
@@ -70,10 +70,12 @@ final class ScreenTests: XCTestCase {
     app.tables.cells.containing(.button, identifier: "子午流注").element.click()
     #else
     app.tabBars.firstMatch.buttons["天干地支"].tap()
-    app.tabBars.firstMatch.buttons["子午流注"].tap()
+    app.buttons["子午流注"].tap()
     #endif
 
     takingScreenShot()
+    
+    
   }
 
   func takingScreenShot() {

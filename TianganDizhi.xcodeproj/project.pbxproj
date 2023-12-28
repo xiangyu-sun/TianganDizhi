@@ -417,6 +417,7 @@
 		99553A092AC9CC7A00EAA6B1 /* WatchWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchWidgetBundle.swift; sourceTree = "<group>"; };
 		995997032B3DF1AB002288D1 /* MultiSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelector.swift; sourceTree = "<group>"; };
 		995997042B3DF1AB002288D1 /* MultiSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
+		9959970B2B3DF69A002288D1 /* TianganDizhi.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TianganDizhi.xctestplan; sourceTree = "<group>"; };
 		99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganDizhiApp.swift; sourceTree = "<group>"; };
 		9963204A290C32C1000C4A2B /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
 		99632069290DD90A000C4A2B /* TianganDizhi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TianganDizhi.entitlements; sourceTree = "<group>"; };
@@ -597,6 +598,7 @@
 		46AB55BE242B5EFD00F6604A = {
 			isa = PBXGroup;
 			children = (
+				9959970B2B3DF69A002288D1 /* TianganDizhi.xctestplan */,
 				996D2C1429A3D9BD008DC1A9 /* ProSubscription.storekit */,
 				46339FEC250296BF007D4137 /* ShiChenExtension.entitlements */,
 				46AB55C9242B5EFD00F6604A /* TianganDizhi */,
