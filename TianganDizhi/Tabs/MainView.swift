@@ -106,12 +106,13 @@ struct MainView: View {
               .font(footnote)
               .foregroundColor(.secondary)
               .onTapGesture {
-                let url = URL(string: "https://weatherkit.apple.com/legal-attribution.html")!
-                #if os(iOS)
-                UIApplication.shared.open(url, options: [:])
-                #elseif os(macOS)
-                NSWorkspace.shared.open(url)
-                #endif
+                if let url = URL(string: "https://weatherkit.apple.com/legal-attribution.html") {
+#if os(iOS)
+                  UIApplication.shared.open(url, options: [:])
+#elseif os(macOS)
+                  NSWorkspace.shared.open(url)
+#endif
+                }
               }
           }
           .padding(.bottom)

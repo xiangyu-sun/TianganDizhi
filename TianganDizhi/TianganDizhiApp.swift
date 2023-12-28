@@ -18,18 +18,20 @@ struct TianganDizhiApp: App {
   @ObservedObject var updater = DateProvider()
 
   var body: some Scene {
-    let dizh = Date().shichen?.dizhi
+    
     WindowGroup {
       ContentView()
     }
     #if os(macOS)
-    MenuBarExtra(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh!.displayHourText) {
-      VStack {
-        Divider()
-        Button("退出") {
-          NSApplication.shared.terminate(nil)
-
-        }.keyboardShortcut("q")
+    if let dizh = Date().shichen?.dizhi {
+      MenuBarExtra(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh.displayHourText) {
+        VStack {
+          Divider()
+          Button("退出") {
+            NSApplication.shared.terminate(nil)
+            
+          }.keyboardShortcut("q")
+        }
       }
     }
     #endif

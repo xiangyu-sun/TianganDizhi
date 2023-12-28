@@ -24,7 +24,7 @@ struct ShichenTimeLineSceduler {
     let nextShichenStart = currentShichen.nextStartDate
 
     for hourOffset in 0 ..< 11 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: nextShichenStart)!
+      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: nextShichenStart) ?? Date()
       timeline.append(entryDate)
     }
     return timeline
@@ -34,7 +34,7 @@ struct ShichenTimeLineSceduler {
     let currentDate = Date()
     var timeline = [Date]()
     for hourOffset in 0 ..< 11 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
+      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate) ?? Date()
       timeline.append(entryDate)
     }
     return timeline
