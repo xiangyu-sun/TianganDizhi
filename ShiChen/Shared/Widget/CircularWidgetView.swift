@@ -20,26 +20,28 @@ struct CircularWidgetView: View {
   @State var date: Date
 
   var body: some View {
-    let shichen = date.shichen!
+    if let shichen = date.shichen {
+      let start = date.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
 
-    let start = date.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
+      let base = shichen.endDate.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
 
-    let base = shichen.endDate.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
-
-    ProgressView(
-      value: start / base,
-      label: {
-        Text(shichen.dizhi.displayHourText)
-          .widgetAccentable()
-      },
-      currentValueLabel: {
-        Text(shichen.dizhi.displayHourText)
-          .widgetAccentable()
-        #if os(iOS)
-          .font(bodyFont)
-        #endif
-      })
-      .progressViewStyle(.circular)
+      ProgressView(
+        value: start / base,
+        label: {
+          Text(shichen.dizhi.displayHourText)
+            .widgetAccentable()
+        },
+        currentValueLabel: {
+          Text(shichen.dizhi.displayHourText)
+            .widgetAccentable()
+          #if os(iOS)
+            .font(bodyFont)
+          #endif
+        })
+        .progressViewStyle(.circular)
+    } else {
+      EmptyView()
+    }
   }
 }
 

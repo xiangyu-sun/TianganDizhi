@@ -13,9 +13,5 @@
 	<array>
 		<string>WeibeiTC-Bold.otf</string>
 	</array>
-	<key>CFBundleShortVersionString</key>
-	<string>2.9.0</string>
-	<key>CFBundleDisplayName</key>
-	<string>十二時辰</string>
 </dict>
 </plist>

@@ -17,37 +17,35 @@ struct WatchStackView: View {
   var useTranditionalNaming = false
 
   var body: some View {
-    let shichen = date.shichen!
-
+ 
     VStack {
       FullDateTitleView(date: date)
         .font(footnote)
-
-      HStack {
-        
-        VStack {
-          Text("\(shichen.dizhi.previous.displayHourText)")
-            .font(footnote)
-          ShichenWatchInformationView(shichen: shichen.dizhi.previous)
-        }
-        .foregroundColor(Color.secondary)
-
-        VStack {
-          Text("\(shichen.dizhi.displayHourText)")
-            .font(footnote)
-            .scaleEffect(1.1)
+      if let shichen = date.shichen {
+        HStack {
+          VStack {
+            Text("\(shichen.dizhi.previous.displayHourText)")
+              .font(footnote)
+            ShichenWatchInformationView(shichen: shichen.dizhi.previous)
+          }
+          .foregroundColor(Color.secondary)
           
-          ShichenWatchInformationView(shichen: shichen.dizhi)
+          VStack {
+            Text("\(shichen.dizhi.displayHourText)")
+              .font(footnote)
+              .scaleEffect(1.1)
+            
+            ShichenWatchInformationView(shichen: shichen.dizhi)
+          }
+          
+          VStack {
+            Text("\(shichen.dizhi.next.displayHourText)")
+              .font(footnote)
+            
+            ShichenWatchInformationView(shichen: shichen.dizhi.next)
+          }
+          .foregroundColor(Color.secondary)
         }
-
-   
-        VStack {
-          Text("\(shichen.dizhi.next.displayHourText)")
-            .font(footnote)
-     
-          ShichenWatchInformationView(shichen: shichen.dizhi.next)
-        }
-        .foregroundColor(Color.secondary)
       }
     }
     .widgetAccentable()

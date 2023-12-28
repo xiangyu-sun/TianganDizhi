@@ -27,7 +27,6 @@ struct ExtraLargeWidgetView: View {
   @StateObject var weatherData = WeatherData.shared
 
   var body: some View {
-    let shichen = date.shichen!
 
     HStack {
       VStack {
@@ -47,17 +46,19 @@ struct ExtraLargeWidgetView: View {
             fixedMoonInformationView(moonphase)
           }
         }
-
-        ShichenHStackView(shichen: shichen.dizhi)
-          .padding([.top])
-
+        if let shichen = date.shichen {
+          ShichenHStackView(shichen: shichen.dizhi)
+            .padding([.top])
+        }
         Spacer()
       }
       .padding([.leading, .top, .bottom])
-
-      ZStack {
-        CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
-          .padding()
+      
+      if let shichen = date.shichen {
+        ZStack {
+          CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
+            .padding()
+        }
       }
     }
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)

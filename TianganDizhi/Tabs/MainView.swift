@@ -48,8 +48,7 @@ struct MainView: View {
 
   var body: some View {
     VStack {
-      let shichen = updater.currentDate.shichen!
-
+ 
       #if os(watchOS)
       WatchMainView(date: updater.currentDate, wetherData: weatherData.forcastedWeather)
       #else
@@ -77,20 +76,22 @@ struct MainView: View {
       }
       .padding([.top, .leading,.trailing])
 
-      ZStack {
-        #if os(macOS)
-        CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
-          .frame(minWidth: 640)
-        #else
-        CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
-          .fixedSize(horizontal: false, vertical: true)
-        #endif
-        
-        VStack {
-          Text(shichen.dizhi.aliasName)
-            .font(largeTitleFont)
-          Text(shichen.dizhi.organReference)
-            .font(bodyFont)
+      if let shichen = updater.currentDate.shichen {
+        ZStack {
+          #if os(macOS)
+          CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
+            .frame(minWidth: 640)
+          #else
+          CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
+            .fixedSize(horizontal: false, vertical: true)
+          #endif
+          
+          VStack {
+            Text(shichen.dizhi.aliasName)
+              .font(largeTitleFont)
+            Text(shichen.dizhi.organReference)
+              .font(bodyFont)
+          }
         }
       }
 

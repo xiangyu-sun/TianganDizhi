@@ -28,8 +28,7 @@ struct MediumWidgetView: View {
   #endif
 
   var body: some View {
-    let shichen = date.shichen!
-
+  
     VStack {
       Spacer(minLength: 8)
       FullDateTitleView(date: date)
@@ -45,9 +44,10 @@ struct MediumWidgetView: View {
       #else
       Spacer()
       #endif
-
-      ShichenHStackView(shichen: shichen.dizhi)
-        .padding([.leading, .trailing], 8)
+      if let shichen = date.shichen {
+        ShichenHStackView(shichen: shichen.dizhi)
+          .padding([.leading, .trailing], 8)
+      }
       Spacer()
     }
     #if os(iOS) || os(macOS)

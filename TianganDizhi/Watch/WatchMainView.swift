@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import ChineseAstrologyCalendar
 
 // MARK: - WatchMainView
 
@@ -16,7 +17,6 @@ struct WatchMainView: View {
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
   var body: some View {
-    let shichen = date.shichen!
     Group {
       HStack {
         Text(date.displayStringOfChineseYearMonthDateWithZodiac)
@@ -26,8 +26,9 @@ struct WatchMainView: View {
           Text(date.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
         }
       }
-
-      CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
+      if let shichen = date.shichen {
+        CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
+      }
     }
   }
 }
