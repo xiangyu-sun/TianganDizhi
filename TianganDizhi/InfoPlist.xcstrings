@@ -14,13 +14,13 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "十二时辰"
+            "value" : "天干地支"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "十二時辰"
+            "value" : "天干地支"
           }
         }
       }
