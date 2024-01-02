@@ -49,7 +49,7 @@ final class WeatherData: ObservableObject {
     if
       let distance = lastUpdatedLocation?.distance(from: location), let lastUpdatedDate,
       distance >= 1000 ||
-        lastUpdatedDate.distance(to: Date()) >= 60 * 60
+      lastUpdatedDate.distance(to: Date()) >= 60 * 60
     {
       logger.log(level: .debug, "fetching forcast aborted due to not matching requirement")
       guard let data = userDefault?.data(forKey: dataCacheKey) else {
@@ -89,7 +89,7 @@ final class WeatherData: ObservableObject {
 
         if let data = try? encoder.encode(data) {
           userDefault?.setValue(data, forKey: dataCacheKey)
-          
+
           self.update(location: location)
         }
       }
@@ -99,13 +99,12 @@ final class WeatherData: ObservableObject {
       return nil
     }
   }
-  
+
   @MainActor
   func update(location: CLLocation) {
     lastUpdatedLocation = location
     lastUpdatedDate = Date()
   }
-  
 
   // MARK: Private
 

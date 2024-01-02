@@ -1,7 +1,8 @@
-import SwiftUI
 import ChineseAstrologyCalendar
+import SwiftUI
 
-// MARK: - MediumWidgetView
+// MARK: - WatchStackView
+
 @available(watchOS 10.0, *)
 struct WatchStackView: View {
   let date: Date
@@ -12,12 +13,11 @@ struct WatchStackView: View {
   var springFestiveBackgroundEnabled = false
 
   @Environment(\.footnote) var footnote
-  
+
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
 
   var body: some View {
- 
     VStack {
       FullDateTitleView(date: date)
         .font(footnote)
@@ -29,19 +29,19 @@ struct WatchStackView: View {
             ShichenWatchInformationView(shichen: shichen.dizhi.previous)
           }
           .foregroundColor(Color.secondary)
-          
+
           VStack {
             Text("\(shichen.dizhi.displayHourText)")
               .font(footnote)
               .scaleEffect(1.1)
-            
+
             ShichenWatchInformationView(shichen: shichen.dizhi)
           }
-          
+
           VStack {
             Text("\(shichen.dizhi.next.displayHourText)")
               .font(footnote)
-            
+
             ShichenWatchInformationView(shichen: shichen.dizhi.next)
           }
           .foregroundColor(Color.secondary)
@@ -56,20 +56,20 @@ struct WatchStackView: View {
   }
 }
 
+// MARK: - ShichenWatchInformationView
+
 struct ShichenWatchInformationView: View {
-  
+
   let shichen: Dizhi
   @Environment(\.footnote) var footnote
-  
+
   var body: some View {
-    
     HStack {
       Text(shichen.aliasName)
       Text(shichen.organReference)
     }
     .widgetAccentable()
     .font(footnote)
-
   }
-  
+
 }

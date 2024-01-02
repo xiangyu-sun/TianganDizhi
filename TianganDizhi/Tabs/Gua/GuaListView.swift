@@ -6,9 +6,9 @@
 //  Copyright © 2023 孙翔宇. All rights reserved.
 //
 
+import Bagua
 import ChineseAstrologyCalendar
 import SwiftUI
-import Bagua
 
 // MARK: - KnowledgeView
 
@@ -26,7 +26,7 @@ struct GuaListView: View {
             Text("文王後天八卦")
           }
         }
-        Section() {
+        Section {
           NavigationLink(destination: ShierPiguaView()) {
             Text("十二辟卦")
           }
@@ -39,6 +39,5 @@ struct GuaListView: View {
 }
 
 #Preview {
-    GuaListView()
+  GuaListView()
 }
-

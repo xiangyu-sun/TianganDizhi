@@ -49,7 +49,6 @@ struct MainView: View {
 
   var body: some View {
     VStack {
- 
       #if os(watchOS)
       WatchMainView(date: updater.currentDate, wetherData: weatherData.forcastedWeather)
       #else
@@ -94,7 +93,7 @@ struct MainView: View {
           CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
             .fixedSize(horizontal: false, vertical: true)
           #endif
-          
+
           VStack {
             Text(shichen.dizhi.aliasName)
               .font(largeTitleFont)
@@ -116,11 +115,11 @@ struct MainView: View {
               .foregroundColor(.secondary)
               .onTapGesture {
                 if let url = URL(string: "https://weatherkit.apple.com/legal-attribution.html") {
-#if os(iOS)
+                  #if os(iOS)
                   UIApplication.shared.open(url, options: [:])
-#elseif os(macOS)
+                  #elseif os(macOS)
                   NSWorkspace.shared.open(url)
-#endif
+                  #endif
                 }
               }
           }
@@ -151,7 +150,7 @@ struct MainView: View {
     .frame(minHeight: 640)
     #endif
   }
-  
+
   func refreshLocationAndWeather() {
     if #available(iOS 16.0, macOS 13.0, watchOS 9.0, *) {
       Task {

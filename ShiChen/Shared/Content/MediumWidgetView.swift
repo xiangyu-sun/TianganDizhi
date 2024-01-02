@@ -28,7 +28,6 @@ struct MediumWidgetView: View {
   #endif
 
   var body: some View {
-  
     VStack {
       Spacer(minLength: 8)
       FullDateTitleView(date: date)

@@ -8,7 +8,7 @@
 
 import Combine
 import SwiftUI
- 
+
 final class DateProvider: ObservableObject {
 
   // MARK: Lifecycle

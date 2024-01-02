@@ -31,7 +31,6 @@ struct ShiChenEntryView: View {
   var displayMoonPhaseOnWidgets = true
 
   var body: some View {
- 
     switch family {
     case .accessoryInline:
       if #available(iOSApplicationExtension 16.0, *) {
@@ -60,10 +59,10 @@ struct ShiChenEntryView: View {
     case .accessoryCorner:
       CornerView(date: entry.date)
     #endif
-      
+
     case .systemMedium:
       MediumWidgetView(date: entry.date)
-      
+
     case .systemLarge:
 
       VStack(spacing: 0) {
@@ -72,7 +71,7 @@ struct ShiChenEntryView: View {
           .padding(.vertical, 8)
         ZStack(alignment: .center) {
           if let shichen = entry.date.shichen {
-          CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
+            CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
             VStack {
               Text(shichen.dizhi.aliasName)
                 .font(largeTitleFont)
@@ -86,7 +85,6 @@ struct ShiChenEntryView: View {
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-
 
     case .systemExtraLarge:
       if iPad {
@@ -117,7 +115,6 @@ struct ShiChenEntryView: View {
           }
         }
         .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-
       }
     default:
       if let shichen = entry.date.shichen {
@@ -164,7 +161,7 @@ struct ShiChenEntryView_Previews: PreviewProvider {
         .previewContext(WidgetPreviewContext(family: .systemLarge))
         .environment(\.colorScheme, .dark)
         .previewDisplayName("systemLarge Dark")
-      
+
       if #available(iOSApplicationExtension 15.0, *) {
         ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
           .previewContext(WidgetPreviewContext(family: .systemExtraLarge))

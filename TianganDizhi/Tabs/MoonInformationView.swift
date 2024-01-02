@@ -62,7 +62,7 @@ struct MoonInformationView: View {
 @available(iOS 15, *)
 struct MoonInformationView_Previews: PreviewProvider {
   static var previews: some View {
-    VStack() {
+    VStack {
       SunInformationView(
         info: WeatherData.Information(
           moonPhase: .上弦月,
@@ -75,7 +75,7 @@ struct MoonInformationView_Previews: PreviewProvider {
           temperatureHigh: .init(value: 12, unit: .celsius),
           temperatureLow: .init(value: 30, unit: .celsius),
           condition: "ok"))
-      
+
       MoonInformationView(
         info: WeatherData.Information(
           moonPhase: .上弦月,

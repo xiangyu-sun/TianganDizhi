@@ -14,7 +14,7 @@ enum Constants {
 
   static let useTranditionalNaming = "useTranditionalNaming"
   static let displayMoonPhaseOnWidgets = "displayMoonPhaseOnWidgets"
-  
+
   static let piGuaRotationEnabled = "piGuaRotationEnabled"
 
   static let useGTM8 = "useGTM8"

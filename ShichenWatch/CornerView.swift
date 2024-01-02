@@ -14,9 +14,8 @@ import WidgetKit
 
 struct CornerView: View {
   @State var date: Date
-  
+
   var body: some View {
-    
     ZStack {
       Text(date.chineseDate)
         .font(.largeTitle)
@@ -24,7 +23,7 @@ struct CornerView: View {
     .widgetLabel {
       if let shichen = date.shichen {
         let start = date.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
-        
+
         let base = shichen.endDate.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
         Gauge(value: start / base) { } currentValueLabel: { } minimumValueLabel: {
           Text(shichen.startDate.shichen?.dizhi.chineseCharactor ?? "")

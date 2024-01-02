@@ -43,8 +43,8 @@ extension View {
       return modifier(MaterialBackground(image: image, toogle: toogle))
     }
   }
-  
+
   func materialBackground(with image: Image, toogle: Bool) -> some View {
-    return modifier(MaterialBackground(image: image, toogle: toogle))
+    modifier(MaterialBackground(image: image, toogle: toogle))
   }
 }

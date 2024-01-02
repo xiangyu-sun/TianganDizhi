@@ -1,6 +1,6 @@
+import AppIntents
 import ChineseAstrologyCalendar
 import CoreLocation
-import AppIntents
 import WidgetKit
 
 @available(watchOS 10.0, *)
@@ -25,13 +25,13 @@ struct AppIntentsTimelineProvider: AppIntentTimelineProvider {
     }
   }
 
-  func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleAppIntentEntry {
+  func snapshot(for configuration: ConfigurationAppIntent, in _: Context) async -> SimpleAppIntentEntry {
     let entry = SimpleAppIntentEntry(date: Date(), configuration: configuration)
-    
+
     return entry
   }
-  
-  func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleAppIntentEntry> {
+
+  func timeline(for configuration: ConfigurationAppIntent, in _: Context) async -> Timeline<SimpleAppIntentEntry> {
     var entries: [Entry] = []
 
     configuration.date = Calendar.current.dateComponents(in: .current, from: Date())
@@ -45,7 +45,7 @@ struct AppIntentsTimelineProvider: AppIntentTimelineProvider {
     }
 
     let timeline = Timeline(entries: entries, policy: .atEnd)
-    
+
     return timeline
   }
 

@@ -6,9 +6,9 @@
 //  Copyright © 2020 孙翔宇. All rights reserved.
 //
 
+import Bagua
 import ChineseAstrologyCalendar
 import SwiftUI
-import Bagua
 
 // MARK: - ShichenView
 
@@ -21,7 +21,6 @@ struct ShichenView: View {
         DizhiView(shichen: dizhi, current: currentShichen == dizhi)
       }
     }
-    
   }
 }
 

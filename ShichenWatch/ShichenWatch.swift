@@ -6,10 +6,10 @@
 //  Copyright © 2022 孙翔宇. All rights reserved.
 //
 
+import AppIntents
 import Intents
 import SwiftUI
 import WidgetKit
-import AppIntents
 
 // MARK: - HourlyWidget
 
@@ -30,7 +30,7 @@ struct HourlyWidget: Widget {
   }
 }
 
-// MARK: - ShiChen
+// MARK: - ShiChenWidget
 
 struct ShiChenWidget: Widget {
   let kind = "ShiChen"
@@ -47,7 +47,6 @@ struct ShiChenWidget: Widget {
     .supportedFamilies(supportedFamilies)
   }
 }
-
 
 // MARK: - ShiChen_Previews
 

@@ -1,12 +1,16 @@
-import WidgetKit
 import AppIntents
 import SwiftUI
+import WidgetKit
 
 @available(watchOS 10.0, *)
 struct ShiChenStackWidget: Widget {
-  
+
   var body: some WidgetConfiguration {
-    AppIntentConfiguration(kind: "ShiChenStack", intent: ConfigurationAppIntent.self, provider: AppIntentsTimelineProvider()) { entry in
+    AppIntentConfiguration(
+      kind: "ShiChenStack",
+      intent: ConfigurationAppIntent.self,
+      provider: AppIntentsTimelineProvider())
+    { entry in
       WatchStackView(date: entry.date)
     }
     .configurationDisplayName(WidgetConstants.normalWidgetDisplayName)
@@ -23,5 +27,4 @@ struct ShiChenStackWidget: Widget {
   },
   timeline: {
     SimpleAppIntentEntry(date: Date(), configuration: .init())
-  }
-)
+  })

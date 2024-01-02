@@ -27,7 +27,6 @@ struct ExtraLargeWidgetView: View {
   @StateObject var weatherData = WeatherData.shared
 
   var body: some View {
-
     HStack {
       VStack {
         FullDateTitleView(date: date)
@@ -53,7 +52,7 @@ struct ExtraLargeWidgetView: View {
         Spacer()
       }
       .padding([.leading, .top, .bottom])
-      
+
       if let shichen = date.shichen {
         ZStack {
           CircularContainerView(currentShichen: shichen.dizhi, padding: -30)

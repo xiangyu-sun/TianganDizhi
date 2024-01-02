@@ -16,9 +16,9 @@ extension String {
 
 private struct TitleFontEnvironmentKey: EnvironmentKey {
   #if os(watchOS)
-  static let defaultValue: Font = .defaultTitleWithSize(size: 28)
+  static let defaultValue: Font = .custom(.weibeiBold, size: 28, relativeTo: .title)
   #else
-  static let defaultValue: Font = .defaultTitleWithSize(size: 40)
+  static let defaultValue: Font = .custom(.weibeiBold, size: 40, relativeTo: .title)
   #endif
 
 }
@@ -26,13 +26,19 @@ private struct TitleFontEnvironmentKey: EnvironmentKey {
 // MARK: - LargeTitleFontEnvironmentKey
 
 private struct LargeTitleFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .defaultLargeTitleWithSize(size: 50)
+  static let defaultValue: Font = .custom(.weibeiBold, size: 50, relativeTo: .largeTitle)
 }
 
 // MARK: - BodyFontEnvironmentKey
 
 private struct BodyFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .defaultBodyWithSize(size: 22)
+  static let defaultValue: Font = .custom(.weibeiBold, size: 22, relativeTo: .body)
+}
+
+// MARK: - CalloutFontEnvironmentKey
+
+private struct CalloutFontEnvironmentKey: EnvironmentKey {
+  static let defaultValue: Font = .custom(.weibeiBold, size: 18, relativeTo: .callout)
 }
 
 // MARK: - HeadlineFontEnvironmentKey
@@ -109,6 +115,11 @@ extension EnvironmentValues {
   var bodyFont: Font {
     get { self[BodyFontEnvironmentKey.self] }
     set { self[BodyFontEnvironmentKey.self] = newValue }
+  }
+
+  var calloutFont: Font {
+    get { self[CalloutFontEnvironmentKey.self] }
+    set { self[CalloutFontEnvironmentKey.self] = newValue }
   }
 
   var footnote: Font {
