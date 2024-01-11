@@ -35,11 +35,13 @@ struct ExtraLargeWidgetView: View {
         if let value = weatherData.forcastedWeather {
           MoonInformationView(info: value)
           Text(
-            MeasurmentFormatterManager
-              .buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\(value.condition)")
+            MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow)
+            )
             .font(bodyFont)
             .foregroundColor(Color.secondary)
-
+          Text("\(value.condition)")
+            .font(bodyFont)
+            .foregroundColor(Color.secondary)
         } else {
           // default
           if let moonphase = date.chineseDay()?.moonPhase {
