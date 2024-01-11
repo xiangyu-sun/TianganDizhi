@@ -29,8 +29,13 @@ struct SettingsView: View {
 
   @AppStorage(Constants.piGuaRotationEnabled, store: Constants.sharedUserDefault)
   var piGuaRotationEnabled = false
+  
+  @AppStorage(Constants.useSystemFont, store: Constants.sharedUserDefault)
+  var useSystemFont = false
 
   @Environment(\.bodyFont) var bodyFont
+  
+  @EnvironmentObject var settingsManager: SettingsManager
 
   var body: some View {
     Form {
@@ -43,6 +48,10 @@ struct SettingsView: View {
         }
       }
       Section(header: Text("通用設置")) {
+        Toggle(isOn: $useSystemFont) {
+          Text("使用系統字體")
+        }
+
         Toggle(isOn: $useGTM8) {
           Text("節日使用中國時區(海外用戶)")
         }
@@ -62,6 +71,14 @@ struct SettingsView: View {
     }
     .font(bodyFont)
     .navigationTitle(Text("設置"))
+    .onChange(of: useSystemFont) { value in
+      settingsManager.useSystemFont = value
+      if #available(watchOS 9.0, iOS 14.0, *) {
+        WidgetCenter.shared.reloadAllTimelines()
+      } else {
+        // Fallback on earlier versions
+      }
+    }
     .onChange(of: springFestiveBackgroundEnabled) { _ in
       if #available(watchOS 9.0, iOS 14.0, *) {
         WidgetCenter.shared.reloadAllTimelines()

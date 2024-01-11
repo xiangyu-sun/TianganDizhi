@@ -12,51 +12,70 @@ extension String {
   static let weibeiBold = "Weibei TC Bold"
 }
 
+extension Font {
+  static let weiBeiLargeTitle: Font = .custom(.weibeiBold, size: 50, relativeTo: .largeTitle)
+  static let weiBeiTitle: Font = .custom(.weibeiBold, size: 40, relativeTo: .title)
+  static let weiBeiTitle2: Font = .custom(.weibeiBold, size: 30, relativeTo: .title2)
+  static let weiBeiTitle3: Font = .custom(.weibeiBold, size: 26, relativeTo: .title3)
+  static let weiBeiBody: Font = .custom(.weibeiBold, size: 22, relativeTo: .body)
+  static let weiBeiCallOut: Font = .custom(.weibeiBold, size: 18, relativeTo: .callout)
+  static let weiBeiHeadline: Font = .custom(.weibeiBold, size: 18, relativeTo: .headline)
+  static let weiBeiFootNote: Font = .custom(.weibeiBold, size: 18, relativeTo: .footnote)
+  
+  static let weiBeiTitleWatch: Font = .custom(.weibeiBold, size: 28, relativeTo: .title)
+}
+
 // MARK: - TitleFontEnvironmentKey
 
 private struct TitleFontEnvironmentKey: EnvironmentKey {
   #if os(watchOS)
-  static let defaultValue: Font = .custom(.weibeiBold, size: 28, relativeTo: .title)
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title : .weiBeiTitleWatch
   #else
-  static let defaultValue: Font = .custom(.weibeiBold, size: 40, relativeTo: .title)
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title : .weiBeiTitle
   #endif
-
 }
 
 // MARK: - LargeTitleFontEnvironmentKey
 
 private struct LargeTitleFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .custom(.weibeiBold, size: 50, relativeTo: .largeTitle)
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .largeTitle : .weiBeiLargeTitle
 }
 
 // MARK: - BodyFontEnvironmentKey
 
 private struct BodyFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .custom(.weibeiBold, size: 22, relativeTo: .body)
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .body : .weiBeiBody
 }
 
 // MARK: - CalloutFontEnvironmentKey
 
 private struct CalloutFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .custom(.weibeiBold, size: 18, relativeTo: .callout)
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .callout : .weiBeiCallOut
 }
+
+// MARK: - FootnoteFontEnvironmentKey
+
+private struct FootnoteFontEnvironmentKey: EnvironmentKey {
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .footnote : .weiBeiFootNote
+}
+
 
 // MARK: - HeadlineFontEnvironmentKey
 
 private struct HeadlineFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .custom(.weibeiBold, size: 22, relativeTo: .headline)
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .headline : .weiBeiHeadline
 }
 
 // MARK: - Title3FontEnvironmentKey
 
 private struct Title3FontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .custom(.weibeiBold, size: 26, relativeTo: .title3)
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title3 :.weiBeiTitle3
 }
 
 // MARK: - Title2FontEnvironmentKey
 
 private struct Title2FontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .custom(.weibeiBold, size: 30, relativeTo: .title2)
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title2 : .weiBeiTitle2
 }
 
 // MARK: - iPadEnvironmentKey
@@ -69,12 +88,6 @@ private struct iPadEnvironmentKey: EnvironmentKey {
     false
     #endif
   }
-}
-
-// MARK: - FootnoteFontEnvironmentKey
-
-private struct FootnoteFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .custom(.weibeiBold, size: 12, relativeTo: .footnote)
 }
 
 // MARK: - ShouldScaleFontEnvironmentKey

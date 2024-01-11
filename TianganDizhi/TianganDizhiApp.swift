@@ -20,7 +20,9 @@ struct TianganDizhiApp: App {
   var body: some Scene {
     WindowGroup {
       ContentView()
+        .environmentObject(SettingsManager.shared)
     }
+   
     #if os(macOS)
     let dizh = Date().shichen?.dizhi ?? .zi
 
