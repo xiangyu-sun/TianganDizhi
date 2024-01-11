@@ -66,10 +66,12 @@ struct CountDownView: View {
       VStack(alignment: .center) {
         FullDateTitleView(date: entry.date)
           .font(title3Font)
+        Spacer(minLength: 4)
         Text("距離\(title)")
-          .font(title2Font)
+          .font(title3Font)
         Text(event.date, style: .relative)
           .font(title3Font)
+        Spacer()
       }
       .foregroundColor(color)
       .padding([.trailing, .leading])

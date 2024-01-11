@@ -33,6 +33,7 @@ struct MediumWidgetView: View {
       FullDateTitleView(date: date)
         .font(title3Font)
       #if os(iOS) || os(macOS)
+      Spacer(minLength: 4)
       if let value = weatherData.forcastedWeather {
         Text(
           MeasurmentFormatterManager
@@ -40,6 +41,7 @@ struct MediumWidgetView: View {
           .font(footnote)
           .foregroundColor(Color.secondary)
       }
+      Spacer(minLength: 4)
       #else
       Spacer()
       #endif

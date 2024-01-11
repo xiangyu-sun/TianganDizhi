@@ -31,11 +31,12 @@ struct ExtraLargeWidgetView: View {
       VStack {
         FullDateTitleView(date: date)
           .font(titleFont)
-
+        Spacer(minLength: 4)
         if let value = weatherData.forcastedWeather {
+          MoonInformationView(info: value)
           Text(
             MeasurmentFormatterManager
-              .buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\n\(value.condition)")
+              .buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\(value.condition)")
             .font(bodyFont)
             .foregroundColor(Color.secondary)
 
@@ -46,6 +47,7 @@ struct ExtraLargeWidgetView: View {
           }
         }
         if let shichen = date.shichen {
+          Spacer(minLength: 4)
           ShichenHStackView(shichen: shichen.dizhi)
             .padding([.top])
         }
@@ -55,7 +57,7 @@ struct ExtraLargeWidgetView: View {
 
       if let shichen = date.shichen {
         ZStack {
-          CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
+          CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
             .padding()
         }
       }
