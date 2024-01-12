@@ -31,6 +31,9 @@ struct CompactShichenView: View {
 
       ShichenInformationView(shichen: shichen)
     }
+    .containerBackgroundForWidget {
+      Color.clear
+    }
   }
 
   var components: DateComponents {

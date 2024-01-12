@@ -16,11 +16,11 @@ extension Font {
   static let weiBeiLargeTitle: Font = .custom(.weibeiBold, size: 50, relativeTo: .largeTitle)
   static let weiBeiTitle: Font = .custom(.weibeiBold, size: 40, relativeTo: .title)
   static let weiBeiTitle2: Font = .custom(.weibeiBold, size: 30, relativeTo: .title2)
-  static let weiBeiTitle3: Font = .custom(.weibeiBold, size: 26, relativeTo: .title3)
+  static let weiBeiTitle3: Font = .custom(.weibeiBold, size: 24, relativeTo: .title3)
   static let weiBeiBody: Font = .custom(.weibeiBold, size: 22, relativeTo: .body)
   static let weiBeiCallOut: Font = .custom(.weibeiBold, size: 18, relativeTo: .callout)
-  static let weiBeiHeadline: Font = .custom(.weibeiBold, size: 18, relativeTo: .headline)
-  static let weiBeiFootNote: Font = .custom(.weibeiBold, size: 18, relativeTo: .footnote)
+  static let weiBeiHeadline: Font = .custom(.weibeiBold, size: 20, relativeTo: .headline)
+  static let weiBeiFootNote: Font = .custom(.weibeiBold, size: 12, relativeTo: .footnote)
   
   static let weiBeiTitleWatch: Font = .custom(.weibeiBold, size: 28, relativeTo: .title)
 }

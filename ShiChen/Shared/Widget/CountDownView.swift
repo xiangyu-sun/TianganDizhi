@@ -10,6 +10,7 @@ struct CountDownView: View {
   @Environment(\.widgetFamily) var family
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.bodyFont) var bodyFont
+  @Environment(\.headlineFont) var headlineFont
   @Environment(\.titleFont) var titleFont
   @Environment(\.title3Font) var title3Font
   @Environment(\.title2Font) var title2Font
@@ -47,12 +48,17 @@ struct CountDownView: View {
     case .accessoryInline:
       Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
         .font(bodyFont)
+        .containerBackgroundForWidget {
+          Color.clear
+        }
     case .accessoryRectangular:
       HStack {
         Text(title)
-          .font(bodyFont)
         Text(event.date, style: .relative)
-          .font(bodyFont)
+      }
+      .font(headlineFont)
+      .containerBackgroundForWidget {
+        Color.clear
       }
     case .systemSmall:
       VStack(alignment: .leading) {

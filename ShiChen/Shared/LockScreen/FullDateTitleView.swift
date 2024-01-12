@@ -19,6 +19,9 @@ struct FullDateTitleView: View {
         Text(date.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
       }
     }
+    .containerBackgroundForWidget {
+      Color.clear
+    }
   }
 }
 
