@@ -16,6 +16,9 @@ struct WatchMainView: View {
   @State var wetherData: WeatherData.Information?
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
+  @Environment(\.titleFont) var titleFont
+  @Environment(\.footnote) var footnote
+  
   var body: some View {
     Group {
       HStack {
@@ -27,7 +30,16 @@ struct WatchMainView: View {
         }
       }
       if let shichen = date.shichen {
-        CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
+        ZStack {
+          CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
+          
+          VStack {
+            Text(shichen.dizhi.aliasName)
+              .font(titleFont)
+            Text(shichen.dizhi.organReference)
+              .font(footnote)
+          }
+        }
       }
     }
   }

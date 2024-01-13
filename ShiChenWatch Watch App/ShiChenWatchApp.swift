@@ -13,6 +13,7 @@ struct ShichenWatch_Watch_AppApp: App {
   var body: some Scene {
     WindowGroup {
       ContentView()
+        .environmentObject(SettingsManager.shared)
     }
   }
 }

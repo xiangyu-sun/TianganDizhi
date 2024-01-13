@@ -29,7 +29,7 @@ extension Font {
 
 private struct TitleFontEnvironmentKey: EnvironmentKey {
   #if os(watchOS)
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title : .weiBeiTitleWatch
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title.bold() : .weiBeiTitleWatch
   #else
   static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title.bold() : .weiBeiTitle
   #endif

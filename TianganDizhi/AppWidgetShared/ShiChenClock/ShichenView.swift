@@ -30,6 +30,8 @@ private struct DizhiView: View {
   let shichen: Dizhi
 
   @Environment(\.titleFont) var titleFont
+  @Environment(\.title3Font) var title3Font
+  
   let current: Bool
 
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
@@ -43,7 +45,11 @@ private struct DizhiView: View {
     VStack {
       let color = springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary
       Text("\(shichen.chineseCharactor)")
+      #if os(watchOS)
+        .font(title3Font)
+      #else
         .font(titleFont)
+      #endif
         .foregroundColor(current ? color : Color.secondary)
         .scaleEffect(current ? 1.2 : 1)
         .rotationEffect(.radians(-(Double.pi * 2 / 12 * rotation)))
