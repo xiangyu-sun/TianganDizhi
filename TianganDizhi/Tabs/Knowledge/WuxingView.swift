@@ -95,7 +95,7 @@ struct WuxingView: View {
           .scaledToFit()
 
           Divider()
-          makeTopicView(title: "五音", detail: "\(Key.wuyin.first { $0.wuxing == item }!.wuyinChineseName)")
+          makeTopicView(title: "五音", detail: "\(Key.wuyin.first { $0.wuxing == item }?.wuyinChineseName ?? "")")
 
           Divider()
 

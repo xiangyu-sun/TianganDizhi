@@ -31,7 +31,7 @@ private struct DizhiView: View {
 
   @Environment(\.titleFont) var titleFont
   @Environment(\.title3Font) var title3Font
-  
+
   let current: Bool
 
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)

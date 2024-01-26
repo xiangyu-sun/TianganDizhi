@@ -29,12 +29,12 @@ struct SettingsView: View {
 
   @AppStorage(Constants.piGuaRotationEnabled, store: Constants.sharedUserDefault)
   var piGuaRotationEnabled = false
-  
+
   @AppStorage(Constants.useSystemFont, store: Constants.sharedUserDefault)
   var useSystemFont = false
 
   @Environment(\.bodyFont) var bodyFont
-  
+
   @EnvironmentObject var settingsManager: SettingsManager
 
   var body: some View {

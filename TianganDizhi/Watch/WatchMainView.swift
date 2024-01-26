@@ -18,7 +18,7 @@ struct WatchMainView: View {
   var useTranditionalNaming = false
   @Environment(\.titleFont) var titleFont
   @Environment(\.footnote) var footnote
-  
+
   var body: some View {
     Group {
       HStack {
@@ -32,7 +32,7 @@ struct WatchMainView: View {
       if let shichen = date.shichen {
         ZStack {
           CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
-          
+
           VStack {
             Text(shichen.dizhi.aliasName)
               .font(titleFont)

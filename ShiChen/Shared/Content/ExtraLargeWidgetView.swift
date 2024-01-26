@@ -35,8 +35,7 @@ struct ExtraLargeWidgetView: View {
         if let value = weatherData.forcastedWeather {
           MoonInformationView(info: value)
           Text(
-            MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow)
-            )
+            MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
             .font(bodyFont)
             .foregroundColor(Color.secondary)
           Text("\(value.condition)")

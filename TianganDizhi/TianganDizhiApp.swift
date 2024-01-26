@@ -22,7 +22,7 @@ struct TianganDizhiApp: App {
       ContentView()
         .environmentObject(SettingsManager.shared)
     }
-   
+
     #if os(macOS)
     let dizh = Date().shichen?.dizhi ?? .zi
 

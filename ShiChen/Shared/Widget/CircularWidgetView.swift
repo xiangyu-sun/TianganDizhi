@@ -39,12 +39,12 @@ struct CircularWidgetView: View {
           #endif
         })
         .progressViewStyle(.circular)
-        .containerBackgroundForWidget{
+        .containerBackgroundForWidget {
           Color.clear
         }
     } else {
       EmptyView()
-        .containerBackgroundForWidget{
+        .containerBackgroundForWidget {
           Color.clear
         }
     }

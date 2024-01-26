@@ -137,14 +137,14 @@ struct MainView: View {
     }
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     #if os(iOS) || os(macOS)
-    .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     #endif
-    .onAppear {
-      refreshLocationAndWeather()
-    }
+      .onAppear {
+        refreshLocationAndWeather()
+      }
 
     #if os(macOS)
-    .frame(minHeight: 640)
+      .frame(minHeight: 640)
     #endif
   }
 

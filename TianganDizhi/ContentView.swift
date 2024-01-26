@@ -15,9 +15,9 @@ import AppStoreReviewPrompt
 // MARK: - ContentView
 
 struct ContentView: View {
-  
+
   @EnvironmentObject var settingsManager: SettingsManager
-  
+
   var body: some View {
     TabView {
       MainView()
@@ -25,47 +25,47 @@ struct ContentView: View {
           Image(systemName: "clock.fill")
           Text("時辰")
         }
-      
+
       KnowledgeView()
         .tabItem {
           Image(systemName: "moon")
           Text("天干地支")
         }
-      
+
       GuaListView()
         .tabItem {
           Image(systemName: "sun.max.fill")
           Text("卦")
         }
-      
+
       ChartListView()
         .tabItem {
           Image(systemName: "table")
           Text("綜合圖示")
         }
-      
+
       SettingsView()
         .tabItem {
           Image(systemName: "gear")
           Text("設置")
         }
     }
-    .environment(\.titleFont, settingsManager.useSystemFont ? .title :  .weiBeiTitle)
-    .environment(\.title2Font, settingsManager.useSystemFont ? .title2 :  .weiBeiTitle2)
-    .environment(\.title3Font, settingsManager.useSystemFont ? .title3 :  .weiBeiTitle3)
-    .environment(\.largeTitleFont, settingsManager.useSystemFont ? .largeTitle :  .weiBeiLargeTitle)
-    .environment(\.bodyFont, settingsManager.useSystemFont ? .body :  .weiBeiBody)
-    .environment(\.headlineFont, settingsManager.useSystemFont ? .headline :  .weiBeiHeadline)
-    .environment(\.footnote, settingsManager.useSystemFont ? .footnote :  .weiBeiFootNote)
-    .environment(\.calloutFont, settingsManager.useSystemFont ? .callout :  .weiBeiCallOut)
-#if os(iOS) || os(watchOS)
-    .navigationViewStyle(StackNavigationViewStyle())
-#endif
-#if os(iOS)
+    .environment(\.titleFont, settingsManager.useSystemFont ? .title : .weiBeiTitle)
+    .environment(\.title2Font, settingsManager.useSystemFont ? .title2 : .weiBeiTitle2)
+    .environment(\.title3Font, settingsManager.useSystemFont ? .title3 : .weiBeiTitle3)
+    .environment(\.largeTitleFont, settingsManager.useSystemFont ? .largeTitle : .weiBeiLargeTitle)
+    .environment(\.bodyFont, settingsManager.useSystemFont ? .body : .weiBeiBody)
+    .environment(\.headlineFont, settingsManager.useSystemFont ? .headline : .weiBeiHeadline)
+    .environment(\.footnote, settingsManager.useSystemFont ? .footnote : .weiBeiFootNote)
+    .environment(\.calloutFont, settingsManager.useSystemFont ? .callout : .weiBeiCallOut)
+    #if os(iOS) || os(watchOS)
+      .navigationViewStyle(StackNavigationViewStyle())
+    #endif
+    #if os(iOS)
     .onAppear {
       try? AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()
     }
-#endif
+    #endif
   }
 }
 

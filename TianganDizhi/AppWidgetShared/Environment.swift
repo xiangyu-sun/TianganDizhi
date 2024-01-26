@@ -21,7 +21,7 @@ extension Font {
   static let weiBeiCallOut: Font = .custom(.weibeiBold, size: 18, relativeTo: .callout)
   static let weiBeiHeadline: Font = .custom(.weibeiBold, size: 20, relativeTo: .headline)
   static let weiBeiFootNote: Font = .custom(.weibeiBold, size: 12, relativeTo: .footnote)
-  
+
   static let weiBeiTitleWatch: Font = .custom(.weibeiBold, size: 28, relativeTo: .title)
 }
 
@@ -59,7 +59,6 @@ private struct FootnoteFontEnvironmentKey: EnvironmentKey {
   static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .footnote.bold() : .weiBeiFootNote
 }
 
-
 // MARK: - HeadlineFontEnvironmentKey
 
 private struct HeadlineFontEnvironmentKey: EnvironmentKey {
@@ -69,7 +68,7 @@ private struct HeadlineFontEnvironmentKey: EnvironmentKey {
 // MARK: - Title3FontEnvironmentKey
 
 private struct Title3FontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title3.bold() :.weiBeiTitle3
+  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title3.bold() : .weiBeiTitle3
 }
 
 // MARK: - Title2FontEnvironmentKey
