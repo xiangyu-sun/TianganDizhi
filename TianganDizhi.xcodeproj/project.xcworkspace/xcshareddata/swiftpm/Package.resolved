@@ -1,4 +1,5 @@
 {
+  "originHash" : "f7b9812c0517b30923dafb106813684f20bba837b141b03388c6062cacbba105",
   "pins" : [
     {
       "identity" : "appstorereviewprompt",
@@ -24,7 +25,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
         "branch" : "master",
-        "revision" : "e955998721798071316c4faa54999f00dffd2117"
+        "revision" : "877b09f837c47f45570425b33ca816da4db82fe3"
       }
     },
     {
@@ -33,7 +34,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseTranditionalMusicCore.git",
       "state" : {
         "branch" : "main",
-        "revision" : "9b61a9774c520fe3bfda48405026593a30d9b53e"
+        "revision" : "6667922e134a3b199d66f409664de18291c5b5fc"
       }
     },
     {
@@ -68,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/swift",
       "state" : {
-        "revision" : "6900f5ab7ab7394ac85eb9da52b2528ee329b206",
-        "version" : "1.0.4"
+        "revision" : "fa3ae574d0b9c93a1655424bd4381044274c5cb4",
+        "version" : "1.0.7"
       }
     },
     {
@@ -77,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser",
       "state" : {
-        "revision" : "fee6933f37fde9a5e12a1e4aeaa93fe60116ff2a",
-        "version" : "1.2.2"
+        "revision" : "41982a3656a71c768319979febd796c6fd111d5c",
+        "version" : "1.5.0"
       }
     },
     {
@@ -91,5 +92,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

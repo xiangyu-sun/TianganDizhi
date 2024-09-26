@@ -15,6 +15,7 @@ struct KnowledgeView: View {
   @Environment(\.bodyFont) var bodyFont
 
   var body: some View {
+    let _ = print("Loaded  GuaListView")
     NavigationView {
       List {
         Section(header: Text("五行")) {

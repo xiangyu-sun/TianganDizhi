@@ -1635,7 +1635,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 2.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.ganzhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1668,7 +1668,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 2.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.ganzhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1843,7 +1843,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.ganzhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
@@ -1890,7 +1890,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.ganzhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
@@ -2023,7 +2023,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.ganzhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2057,7 +2057,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.ganzhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2078,7 +2078,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				GENERATE_INFOPLIST_FILE = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.TianganDizhi.ShichenWatch-Watch-AppTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.ganzhi.ShichenWatch-Watch-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -2098,7 +2098,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				GENERATE_INFOPLIST_FILE = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.TianganDizhi.ShichenWatch-Watch-AppTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.ganzhi.ShichenWatch-Watch-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -2117,7 +2117,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				GENERATE_INFOPLIST_FILE = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.TianganDizhi.ShichenWatch-Watch-AppUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.ganzhi.ShichenWatch-Watch-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -2136,7 +2136,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 46S3S784AR;
 				GENERATE_INFOPLIST_FILE = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.TianganDizhi.ShichenWatch-Watch-AppUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.uriphium.ganzhi.ShichenWatch-Watch-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -2166,7 +2166,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MARKETING_VERSION = 2.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.ganzhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2198,7 +2198,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MARKETING_VERSION = 2.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.ganzhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2233,7 +2233,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 2.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenMacWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.ganzhi.ShichenMacWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -2266,7 +2266,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 2.11;
-				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenMacWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.ganzhi.ShichenMacWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
