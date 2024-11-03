@@ -1,4 +1,4 @@
-app_identifier("com.uriphium.TianganDizhi") # The bundle identifier of your app
+app_identifier("com.uriphium.ganzhi") # The bundle identifier of your app
 apple_id("luc.alexander.sun@icloud.com") # Your Apple email address
 
 itc_team_id("1077822") # App Store Connect Team ID

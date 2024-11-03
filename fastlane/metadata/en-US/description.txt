@@ -1,0 +1,18 @@
+This is an application that integrates ancient Chinese philosophy, calendrical systems, and the art of divination, aimed at providing a deep understanding and experience of the essence of traditional Chinese culture. Through this app, you can explore the mysteries of Heavenly Stems and Earthly Branches, the theory of the Five Elements, conversions between the lunar and solar calendars, the Eight Trigrams, and the divination of the Sixty-Four Hexagrams.
+
+Features:
+
+Calendar Conversion and Analysis: Offers tools for converting between lunar and solar calendars, allowing you to easily check lunar and Gregorian dates, along with associated Heavenly Stems and Earthly Branches explanations.
+Five Elements Knowledge Base: Delve deep into the generative and overcoming relationships of the Five Elements (Metal, Wood, Water, Fire, Earth), and their applications in Feng Shui, medicine, and philosophy.
+Interpretation of Eight Trigrams and Sixty-Four Hexagrams: Learn and understand the basics of the Eight Trigrams in the I Ching, as well as the symbolic meanings and divination applications of the Sixty-Four Hexagrams.
+Interactive Experience: Offers a fun and educational way to learn
+
+After iOS 15, there are customized desktop widgets to facilitate viewing the current time and lunar year on the mobile desktop
+After iOS 16, there are customized lock screen widgets to facilitate the mobile desktop to view the current time and lunar year
+
+The app provides Apple Watch app as well as Complications. 
+
+FAQ:
+
+- After the application is upgraded, the components are all black, you can click to enter the application to solve it
+- AppleWatch may need to enter the AppleWatch component configuration interface to re-add after each application upgrade
