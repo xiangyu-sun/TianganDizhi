@@ -1,11 +1,10 @@
 import ChineseAstrologyCalendar
 import CoreLocation
 import WidgetKit
-
+@MainActor
 struct ShichenTimelineProvider: IntentTimelineProvider {
 
   // MARK: Internal
-
   func placeholder(in _: Context) -> SimpleEntry {
     let configuration = ConfigurationIntent()
     configuration.date = Date().currentCalendarDateCompoenents
@@ -15,7 +14,7 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
 
     return SimpleEntry(date: Date(), configuration: configuration)
   }
-
+  
   @available(iOSApplicationExtension 16.0, *, watchOS 9, *)
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
     defaultRecommendedIntents().map { intent in
@@ -47,7 +46,6 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
   }
 
   // MARK: Private
-
   private func defaultRecommendedIntents() -> [ConfigurationIntent] {
     let configuration = ConfigurationIntent()
     configuration.date = Date().currentCalendarDateCompoenents

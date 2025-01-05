@@ -1,4 +1,5 @@
 import Foundation
+@MainActor
 struct MeasurmentFormatterManager {
   static let formatter = MeasurementFormatter()
 

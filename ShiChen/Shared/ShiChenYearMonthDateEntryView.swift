@@ -31,15 +31,15 @@ struct ShiChenYearMonthDateEntryView: View {
 
     switch family {
     case .accessoryInline:
-      if #available(iOSApplicationExtension 16.0, *) {
+      if #available(iOSApplicationExtension 16.1, *) {
         InlineWidgetView(date: entry.date)
       }
     case .accessoryCircular:
-      if #available(iOSApplicationExtension 16.0, *) {
+      if #available(iOSApplicationExtension 16.1, *) {
         CircularWidgetView(date: entry.date)
       }
     case .accessoryRectangular:
-      if #available(iOSApplicationExtension 16.0, watchOS 10.0, *) {
+      if #available(iOSApplicationExtension 16.1, watchOS 10.0, *) {
         RetangularWidgetView(date: entry.date)
       }
     case .systemMedium:

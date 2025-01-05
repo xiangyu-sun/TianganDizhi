@@ -10,7 +10,7 @@ import Foundation
 
 extension RelativeDateTimeFormatter {
 
-  static let dateFormatter: RelativeDateTimeFormatter = {
+  @MainActor static let dateFormatter: RelativeDateTimeFormatter = {
     let formatter = RelativeDateTimeFormatter()
     formatter.dateTimeStyle = .numeric
     formatter.unitsStyle = .spellOut

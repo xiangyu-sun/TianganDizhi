@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 
+@MainActor
 enum WidgetConstants {
   static let simpleWidgetTitle: LocalizedStringKey = "農曆年月日"
   static let simpleWidgetDescription: LocalizedStringKey = "顯示十二地支為命名基礎的農曆年，月，日以及時辰的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。"
