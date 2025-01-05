@@ -14,7 +14,7 @@ struct AllWidgets: WidgetBundle {
   var body: some Widget {
     ShiChen()
     Nongli()
-    if #available(iOSApplicationExtension 16.0, *) {
+    if #available(iOS 16.1, *) {
       HourlyWidget()
     }
     CountDownWidget()
