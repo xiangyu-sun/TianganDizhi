@@ -34,6 +34,7 @@ struct MinuteTimelineProvider: IntentTimelineProvider {
     completion(timeline)
   }
   
+  @available(macOSApplicationExtension 15.0, *)
   @available(watchOSApplicationExtension 11.0, *)
   @available(iOSApplicationExtension 18.0, *)
   func relevance() async -> WidgetRelevance<ConfigurationIntent> {
