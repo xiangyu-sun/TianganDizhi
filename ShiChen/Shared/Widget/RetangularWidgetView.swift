@@ -13,7 +13,7 @@ import ChineseAstrologyCalendar
 
 // MARK: - RetangularWidgetView
 
-@available(iOSApplicationExtension 16.0, *)
+@available(iOS 16.0, *)
 struct RetangularWidgetView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.calloutFont) var calloutFont

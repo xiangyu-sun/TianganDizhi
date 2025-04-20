@@ -12,7 +12,7 @@ import WidgetKit
 
 // MARK: - CircularWidgetView
 
-@available(iOSApplicationExtension 16.0, *)
+@available(iOS 16.0, *)
 struct CircularWidgetView: View {
 
   @Environment(\.bodyFont) var bodyFont

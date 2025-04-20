@@ -12,7 +12,7 @@ import WidgetKit
 
 // MARK: - InlineWidgetView
 
-@available(iOSApplicationExtension 16.1, *)
+@available(iOS 16.1, *)
 struct InlineWidgetView: View {
 
   @Environment(\.bodyFont) var bodyFont
