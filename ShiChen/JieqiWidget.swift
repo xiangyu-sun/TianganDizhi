@@ -16,21 +16,23 @@ import SwiftUI
 struct JieqiWidget: Widget {
   let kind = "Jieqi"
   @Environment(\.largeTitleFont) var largeTitleFont
-  @Environment(\.calloutFont) var calloutFont
   var iosSupportedFamilies: [WidgetFamily] {
     return [.systemSmall]
   }
+
 
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: JieqiTimelineProvider()) { entry in
       if let jieqi = entry.date.jieqi {
         VStack(alignment: .center) {
           Text(entry.date, style: .date)
-            .font(calloutFont)
-            .ignoresSafeArea(.all)
+            .font(.callout)
+            .environment(\.locale, .init(identifier: "zh-Hant"))
+   
           Text(jieqi.chineseName)
             .font(largeTitleFont)
         }
+        .frame(maxWidth: .infinity)
         .materialBackgroundWidget(with: Image(uiImage: jieqi.image))
       }
       else {
