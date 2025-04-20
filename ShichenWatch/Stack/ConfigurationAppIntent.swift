@@ -9,10 +9,10 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
   static let description: IntentDescription? = IntentDescription("TianganDizhi Widgets")
 
   @Parameter(title: "Date")
-  var date: DateComponents
+  var date: DateComponents?
 
   @Parameter(title: "Location")
-  var location: String
+  var location: String?
 }
 
 // MARK: - SimpleAppIntentEntry
