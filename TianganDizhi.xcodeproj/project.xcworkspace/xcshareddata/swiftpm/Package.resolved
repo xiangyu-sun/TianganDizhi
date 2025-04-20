@@ -11,12 +11,21 @@
       }
     },
     {
+      "identity" : "astral",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:xiangyu-sun/Astral.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9bb7f1131dbbcc7eb81a165825a1338ce94888fc"
+      }
+    },
+    {
       "identity" : "bagua",
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:xiangyu-sun/Bagua.git",
       "state" : {
         "branch" : "main",
-        "revision" : "584934478ff56ee74b48b8c8cd2111a249ab626e"
+        "revision" : "a14862efb07ff7383c04ba214ea891abca68d795"
       }
     },
     {
@@ -25,7 +34,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
         "branch" : "master",
-        "revision" : "789cf34286de32fd18ff5f4412ee405775131ae5"
+        "revision" : "ad0e267235bc9c6f78491e77bb88dd5df4861887"
       }
     },
     {
@@ -69,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/swift",
       "state" : {
-        "revision" : "6900f5ab7ab7394ac85eb9da52b2528ee329b206",
-        "version" : "1.0.4"
+        "revision" : "c7e833face3f893b8defde66eecb66f24b55ca35",
+        "version" : "1.0.8"
       }
     },
     {
@@ -78,8 +87,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser",
       "state" : {
-        "revision" : "fee6933f37fde9a5e12a1e4aeaa93fe60116ff2a",
-        "version" : "1.2.2"
+        "revision" : "41982a3656a71c768319979febd796c6fd111d5c",
+        "version" : "1.5.0"
       }
     },
     {
@@ -87,8 +96,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-numerics",
       "state" : {
-        "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
-        "version" : "1.0.2"
+        "revision" : "e0ec0f5f3af6f3e4d5e7a19d2af26b481acb6ba8",
+        "version" : "1.0.3"
       }
     }
   ],
