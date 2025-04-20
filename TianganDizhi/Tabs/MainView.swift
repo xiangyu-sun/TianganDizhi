@@ -23,7 +23,7 @@ struct MainView: View {
   @Environment(\.scenePhase) var scenePhase
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
-
+  
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)

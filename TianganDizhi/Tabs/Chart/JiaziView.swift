@@ -66,7 +66,7 @@ struct JiaziView: View {
                   .font(footnote)
               }
               if shi == item {
-                Text("时柱")
+                Text("時柱")
                   .font(footnote)
               }
               #endif

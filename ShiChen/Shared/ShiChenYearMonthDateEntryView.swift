@@ -15,6 +15,7 @@ import WidgetKit
 struct ShiChenYearMonthDateEntryView: View {
   var entry: SimpleEntry
   @Environment(\.bodyFont) var bodyFont
+  @Environment(\.footnote) var footnote
   @Environment(\.titleFont) var titleFont
   @Environment(\.title2Font) var title2Font
   @Environment(\.title3Font) var title3Font
@@ -42,6 +43,19 @@ struct ShiChenYearMonthDateEntryView: View {
       if #available(iOSApplicationExtension 16.1, watchOS 10.0, *) {
         RetangularWidgetView(date: entry.date)
       }
+    case .systemSmall:
+      VStack {
+        Spacer()
+        Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+          .font(footnote)
+        Text(shichen?.dizhi.displayHourText ?? "")
+          .font(titleFont)
+        Spacer()
+      }
+      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
+      .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      
     case .systemMedium:
       VStack {
         Spacer()
