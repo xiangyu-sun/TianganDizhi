@@ -4,10 +4,11 @@ import CoreLocation
 import WidgetKit
 
 @available(watchOS 10.0, *)
-struct AppIntentsTimelineProvider: AppIntentTimelineProvider {
+struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
 
   // MARK: Internal
 
+  @MainActor
   func placeholder(in _: Context) -> SimpleAppIntentEntry {
     let configuration = ConfigurationAppIntent()
     configuration.date = Date().currentCalendarDateCompoenents
@@ -18,6 +19,7 @@ struct AppIntentsTimelineProvider: AppIntentTimelineProvider {
     return SimpleAppIntentEntry(date: Date(), configuration: configuration)
   }
 
+  @MainActor
   func recommendations() -> [AppIntentRecommendation<ConfigurationAppIntent>] {
     defaultRecommendedIntents().map { intent in
       let description = String(describing: "天干地支小組件 - \(Date().shichen?.dizhi.chineseCharactor ?? "")")
@@ -35,7 +37,7 @@ struct AppIntentsTimelineProvider: AppIntentTimelineProvider {
     var entries: [Entry] = []
 
     configuration.date = Calendar.current.dateComponents(in: .current, from: Date())
-    if let location = LocationManager.shared.lastLocation {
+    if let location = await LocationManager.shared.lastLocation {
       configuration.location = "\(String(describing: location))"
     }
 
@@ -51,6 +53,7 @@ struct AppIntentsTimelineProvider: AppIntentTimelineProvider {
 
   // MARK: Private
 
+  @MainActor
   private func defaultRecommendedIntents() -> [ConfigurationAppIntent] {
     let configuration = ConfigurationAppIntent()
     configuration.date = Date().currentCalendarDateCompoenents

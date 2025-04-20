@@ -45,7 +45,6 @@ struct JiaziView: View {
             ZStack(alignment: .bottom) {
               Text("\(item.description)")
                 .font(bodyFont)
-
               #if os(iOS)
                 .frame(minHeight: proxy.size.height / 6)
 
@@ -56,6 +55,18 @@ struct JiaziView: View {
               #else
               if nian == item {
                 Text("年柱")
+                  .font(footnote)
+              }
+              if yue == item {
+                Text("月柱")
+                  .font(footnote)
+              }
+              if ri == item {
+                Text("日柱")
+                  .font(footnote)
+              }
+              if shi == item {
+                Text("時柱")
                   .font(footnote)
               }
               #endif

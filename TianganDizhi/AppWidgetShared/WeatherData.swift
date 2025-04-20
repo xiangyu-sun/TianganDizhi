@@ -3,7 +3,7 @@ import ChineseAstrologyCalendar
 import CoreLocation
 import Foundation
 import os
-import WeatherKit
+@preconcurrency import WeatherKit
 import WidgetKit
 
 // MARK: - ChineseMoonPhase + Codable

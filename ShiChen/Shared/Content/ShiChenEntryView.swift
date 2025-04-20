@@ -33,7 +33,7 @@ struct ShiChenEntryView: View {
   var body: some View {
     switch family {
     case .accessoryInline:
-      if #available(iOSApplicationExtension 16.0, *) {
+      if #available(iOSApplicationExtension 16.1, *) {
         if iPad {
           HStack {
             Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)

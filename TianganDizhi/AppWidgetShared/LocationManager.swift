@@ -4,6 +4,7 @@ import Foundation
 import os
 import WeatherKit
 
+@MainActor
 final class LocationManager: NSObject, CLLocationManagerDelegate {
 
   // MARK: Lifecycle

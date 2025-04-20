@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor
 final class SettingsManager: ObservableObject {
 
   // MARK: Lifecycle

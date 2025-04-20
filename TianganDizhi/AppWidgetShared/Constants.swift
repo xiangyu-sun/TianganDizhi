@@ -24,6 +24,6 @@ enum Constants {
   #if os(macOS)
   static let sharedUserDefault = UserDefaults(suiteName: "group.R45U3GK22z.uriphium.tiangandizhi")
   #else
-  static let sharedUserDefault = UserDefaults(suiteName: "group.uriphium.tiangandizhi")
+  @MainActor static let sharedUserDefault = UserDefaults(suiteName: "group.uriphium.tiangandizhi")
   #endif
 }

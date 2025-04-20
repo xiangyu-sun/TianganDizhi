@@ -11,40 +11,12 @@ import Intents
 import SwiftUI
 import WidgetKit
 
-// MARK: - Nongli
-
-struct Nongli: Widget {
-  let kind = "Nongli"
-
-  var supportedFamilies: [WidgetFamily] {
-    if #available(iOSApplicationExtension 16.0, *) {
-      return [.systemSmall, .systemMedium, .accessoryInline, .accessoryCircular, .accessoryRectangular]
-    } else {
-      return [.systemSmall, .systemMedium]
-    }
-  }
-
-  var body: some WidgetConfiguration {
-    IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
-      ShiChenYearMonthDateEntryView(entry: entry)
-    }
-    .configurationDisplayName(WidgetConstants.simpleWidgetTitle)
-    .description(WidgetConstants.simpleWidgetDescription)
-    #if os(watchOS)
-      .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
-    #else
-
-    .supportedFamilies(supportedFamilies)
-    #endif
-  }
-}
-
 // MARK: - ShiChen
 
 struct ShiChen: Widget {
   let kind = "ShiChen"
 
-  var supportedFamilies: [WidgetFamily] {
+  var iosSupportedFamilies: [WidgetFamily] {
     if #available(iOSApplicationExtension 16.0, *) {
       return [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge, .accessoryInline, .accessoryRectangular]
     } else if #available(iOSApplicationExtension 15.0, *) {
@@ -63,28 +35,8 @@ struct ShiChen: Widget {
     #if os(watchOS)
       .supportedFamilies([.accessoryInline, .accessoryRectangular])
     #else
-    .supportedFamilies(supportedFamilies)
+    .supportedFamilies(iosSupportedFamilies)
     #endif
-  }
-}
-
-// MARK: - HourlyWidget
-
-@available(iOSApplicationExtension 16.0, *)
-struct HourlyWidget: Widget {
-  let kind = "ShiChenByMinute"
-
-  var supportedFamilies: [WidgetFamily] {
-    [.accessoryCircular]
-  }
-
-  var body: some WidgetConfiguration {
-    IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: MinuteTimelineProvider()) { entry in
-      ShiChenEntryView(entry: entry)
-    }
-    .configurationDisplayName("十二时辰")
-    .description("十二地支为名的十二时辰組件")
-    .supportedFamilies([.accessoryCircular])
   }
 }
 

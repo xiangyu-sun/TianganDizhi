@@ -5,14 +5,14 @@ import WidgetKit
 
 @available(watchOS 10.0, *)
 struct ConfigurationAppIntent: WidgetConfigurationIntent {
-  static var title: LocalizedStringResource = "Configuration"
-  static var description: IntentDescription? = IntentDescription("TianganDizhi Widgets")
+  static let title: LocalizedStringResource = "Configuration"
+  static let description: IntentDescription? = IntentDescription("TianganDizhi Widgets")
 
   @Parameter(title: "Date")
-  var date: DateComponents
+  var date: DateComponents?
 
   @Parameter(title: "Location")
-  var location: String
+  var location: String?
 }
 
 // MARK: - SimpleAppIntentEntry

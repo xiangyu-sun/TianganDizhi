@@ -1,5 +1,6 @@
 import Foundation
-struct MeasurmentFormatterManager {
+@MainActor
+enum MeasurmentFormatterManager {
   static let formatter = MeasurementFormatter()
 
   static func buildTemperatureDescription(high: Measurement<UnitTemperature>, low: Measurement<UnitTemperature>) -> String {

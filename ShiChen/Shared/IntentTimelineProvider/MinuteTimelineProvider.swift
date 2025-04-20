@@ -33,6 +33,12 @@ struct MinuteTimelineProvider: IntentTimelineProvider {
     let timeline = Timeline(entries: entries, policy: .atEnd)
     completion(timeline)
   }
+  
+  @available(watchOSApplicationExtension 11.0, *)
+  @available(iOSApplicationExtension 18.0, *)
+  func relevance() async -> WidgetRelevance<ConfigurationIntent> {
+    .init([.init(configuration: ConfigurationIntent(), context: .date(Date()))])
+  }
 
   // MARK: Private
 

@@ -43,7 +43,7 @@ struct BaguaView: View {
   var body: some View {
     GeometryReader { geometry in
       ZStack {
-        ForEach(viewData.guas.indices) { index in
+        ForEach(viewData.guas.indices, id: \.self) { index in
           let gua = viewData.guas[index]
 
           Text(gua.chineseCharacter)
