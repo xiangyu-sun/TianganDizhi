@@ -130,6 +130,8 @@
 		9963214A2911B8E4000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		9963214B2911B8F3000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		9963214C2911B8F3000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
+		9968961D2DB550AE0082B667 /* Nongli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968961C2DB550AE0082B667 /* Nongli.swift */; };
+		9968961F2DB550D50082B667 /* HourlyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968961E2DB550D50082B667 /* HourlyWidget.swift */; };
 		996A19C92A543E6700D1C943 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
 		996A19CA2A543E9400D1C943 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		996A19CB2A543E9E00D1C943 /* Date+WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */; };
@@ -426,6 +428,8 @@
 		996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteTimelineProvider.swift; sourceTree = "<group>"; };
 		996321492911B8E4000C4A2B /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		9963214E2911E0D4000C4A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9968961C2DB550AE0082B667 /* Nongli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nongli.swift; sourceTree = "<group>"; };
+		9968961E2DB550D50082B667 /* HourlyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWidget.swift; sourceTree = "<group>"; };
 		996C53192B1FC68000AC832F /* BaguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaguaView.swift; sourceTree = "<group>"; };
 		996C531B2B1FCFAD00AC832F /* GuaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuaListView.swift; sourceTree = "<group>"; };
 		996D2C1429A3D9BD008DC1A9 /* ProSubscription.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProSubscription.storekit; sourceTree = "<group>"; };
@@ -582,6 +586,8 @@
 			isa = PBXGroup;
 			children = (
 				462A5F6A24FFE5F20032A125 /* ShiChen.swift */,
+				9968961C2DB550AE0082B667 /* Nongli.swift */,
+				9968961E2DB550D50082B667 /* HourlyWidget.swift */,
 				99BC3C052968355E004AB614 /* CountDownWidget.swift */,
 				997C68762864CB8F00B40D3F /* AllWidgets.swift */,
 				998898E02A74514200A4E48C /* ShiChen.xcstrings */,
@@ -1322,9 +1328,11 @@
 				46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */,
 				46339FDC2500EA41007D4137 /* CircularContainerView.swift in Sources */,
 				990FEADF294CAFD700CB1CEF /* LocationManager.swift in Sources */,
+				9968961D2DB550AE0082B667 /* Nongli.swift in Sources */,
 				46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */,
 				994AD1952868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
 				99F19D8E29E09C3C005C5949 /* MeasurmentFormatterManager.swift in Sources */,
+				9968961F2DB550D50082B667 /* HourlyWidget.swift in Sources */,
 				990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */,
 				997C68782864CB9B00B40D3F /* AllWidgets.swift in Sources */,
 				997C68AB2868A8F600B40D3F /* ShichenTimelineProvider.swift in Sources */,

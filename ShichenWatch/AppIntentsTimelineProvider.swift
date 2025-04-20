@@ -7,6 +7,7 @@ import WidgetKit
 struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
 
   // MARK: Internal
+
   @MainActor
   func placeholder(in _: Context) -> SimpleAppIntentEntry {
     let configuration = ConfigurationAppIntent()
@@ -17,6 +18,7 @@ struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
 
     return SimpleAppIntentEntry(date: Date(), configuration: configuration)
   }
+
   @MainActor
   func recommendations() -> [AppIntentRecommendation<ConfigurationAppIntent>] {
     defaultRecommendedIntents().map { intent in
@@ -50,6 +52,7 @@ struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
   }
 
   // MARK: Private
+
   @MainActor
   private func defaultRecommendedIntents() -> [ConfigurationAppIntent] {
     let configuration = ConfigurationAppIntent()

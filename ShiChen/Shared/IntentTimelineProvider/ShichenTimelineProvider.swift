@@ -5,6 +5,7 @@ import WidgetKit
 struct ShichenTimelineProvider: IntentTimelineProvider {
 
   // MARK: Internal
+
   func placeholder(in _: Context) -> SimpleEntry {
     let configuration = ConfigurationIntent()
     configuration.date = Date().currentCalendarDateCompoenents
@@ -14,7 +15,7 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
 
     return SimpleEntry(date: Date(), configuration: configuration)
   }
-  
+
   @available(iOSApplicationExtension 16.0, *, watchOS 9, *)
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
     defaultRecommendedIntents().map { intent in
@@ -44,8 +45,15 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
     let timeline = Timeline(entries: entries, policy: .atEnd)
     completion(timeline)
   }
+  
+  @available(watchOSApplicationExtension 11.0, *)
+  @available(iOSApplicationExtension 18.0, *)
+  func relevance() async -> WidgetRelevance<ConfigurationIntent> {
+    .init([.init(configuration: ConfigurationIntent(), context: .date(Date()))])
+  }
 
   // MARK: Private
+
   private func defaultRecommendedIntents() -> [ConfigurationIntent] {
     let configuration = ConfigurationIntent()
     configuration.date = Date().currentCalendarDateCompoenents

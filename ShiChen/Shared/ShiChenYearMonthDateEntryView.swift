@@ -55,20 +55,10 @@ struct ShiChenYearMonthDateEntryView: View {
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-      
+
     case .systemMedium:
-      VStack {
-        Spacer()
-        Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
-          .font(title2Font)
-          .padding([.leading,.trailing], 15)
-        Text(shichen?.dizhi.displayHourText ?? "")
-          .font(titleFont)
-        Spacer()
-      }
-      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      WidgetMediumView(entry: entry)
+      
     default:
       VStack {
         Spacer()
@@ -83,6 +73,40 @@ struct ShiChenYearMonthDateEntryView: View {
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     }
+  }
+}
+
+private struct WidgetMediumView: View {
+  @Environment(\.bodyFont) var bodyFont
+  @Environment(\.footnote) var footnote
+  @Environment(\.titleFont) var titleFont
+  @Environment(\.title2Font) var title2Font
+  @Environment(\.title3Font) var title3Font
+  
+  @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
+  var springFestiveBackgroundEnabled = false
+
+  @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
+  var springFestiveForegroundEnabled = false
+
+  var entry: SimpleEntry
+  var shichen: Shichen? {
+    entry.date.shichen
+  }
+  
+  var body: some View {
+    VStack {
+      Spacer()
+      Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+        .font(title2Font)
+        .padding([.leading,.trailing], 15)
+      Text(shichen?.dizhi.displayHourText ?? "")
+        .font(titleFont)
+      Spacer()
+    }
+    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
   }
 }
 
