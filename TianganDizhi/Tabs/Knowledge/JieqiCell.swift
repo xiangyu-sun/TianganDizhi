@@ -45,9 +45,17 @@ struct JieqiCell: View {
         Text(jieqi.qishierHou)
           .font(bodyFont)
       }
+      #if os(macOS)
+      Image(nsImage: jieqi.image)
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+      #else
       Image(uiImage: jieqi.image)
         .resizable()
         .aspectRatio(contentMode: .fit)
+      
+      #endif
+     
     }
     #endif
   }
