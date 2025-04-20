@@ -18,15 +18,38 @@ struct JieqiCell: View {
   let jieqi: Jieqi
 
   var body: some View {
-    VStack(alignment: .leading) {
-      HStack {
-        Text(jieqi.chineseName)
-        Text("(\(jieqi.qi ? "氣" : "節"))")
+    #if os(watchOS)
+
+      VStack(alignment: .leading) {
+        HStack {
+          Text(jieqi.chineseName)
+          Text("(\(jieqi.qi ? "氣" : "節"))")
+        }
+        .font(title3Font)
+        Text(jieqi.qishierHou)
+          .font(bodyFont)
+        
+        Image(uiImage: jieqi.image)
+          .resizable()
+          .aspectRatio(contentMode: .fit)
       }
-      .font(title3Font)
-      Text(jieqi.qishierHou)
-        .font(bodyFont)
+  
+    #else
+    HStack() {
+      VStack(alignment: .leading) {
+        HStack {
+          Text(jieqi.chineseName)
+          Text("(\(jieqi.qi ? "氣" : "節"))")
+        }
+        .font(title3Font)
+        Text(jieqi.qishierHou)
+          .font(bodyFont)
+      }
+      Image(uiImage: jieqi.image)
+        .resizable()
+        .aspectRatio(contentMode: .fit)
     }
+    #endif
   }
 }
 

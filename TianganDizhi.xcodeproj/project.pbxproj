@@ -200,6 +200,20 @@
 		998898E52A74514300A4E48C /* ShiChen.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 998898E02A74514200A4E48C /* ShiChen.xcstrings */; };
 		999B068A2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */; };
 		999B068B2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */; };
+		99A0B7932DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
+		99A0B7942DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
+		99A0B7952DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
+		99A0B7962DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
+		99A0B7972DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
+		99A0B79B2DB582A4000F2AD7 /* Jieqi.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A0B7982DB582A4000F2AD7 /* Jieqi.xcassets */; };
+		99A0B79C2DB582A4000F2AD7 /* Jieqi.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A0B7982DB582A4000F2AD7 /* Jieqi.xcassets */; };
+		99A0B79F2DB58937000F2AD7 /* JieqiWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B79E2DB58937000F2AD7 /* JieqiWidget.swift */; };
+		99A0B7A12DB5895F000F2AD7 /* JieqiTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7A02DB5895F000F2AD7 /* JieqiTimelineProvider.swift */; };
+		99A0B7A22DB5895F000F2AD7 /* JieqiTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7A02DB5895F000F2AD7 /* JieqiTimelineProvider.swift */; };
+		99A0B7A32DB5895F000F2AD7 /* JieqiTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7A02DB5895F000F2AD7 /* JieqiTimelineProvider.swift */; };
+		99A0B7A72DB59093000F2AD7 /* JieqiWidget.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A0B7A62DB59093000F2AD7 /* JieqiWidget.xcassets */; };
+		99A0B7A92DB590A7000F2AD7 /* JieqiWidget.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A0B7A62DB59093000F2AD7 /* JieqiWidget.xcassets */; };
+		99A0B7AA2DB590A7000F2AD7 /* JieqiWidget.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A0B7A62DB59093000F2AD7 /* JieqiWidget.xcassets */; };
 		99A2B708297EBA6B00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B709297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
@@ -465,6 +479,11 @@
 		998898DE2A74514200A4E48C /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		998898E02A74514200A4E48C /* ShiChen.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = ShiChen.xcstrings; sourceTree = "<group>"; };
 		999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jieqi+Image.swift"; sourceTree = "<group>"; };
+		99A0B7982DB582A4000F2AD7 /* Jieqi.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Jieqi.xcassets; sourceTree = "<group>"; };
+		99A0B79E2DB58937000F2AD7 /* JieqiWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiWidget.swift; sourceTree = "<group>"; };
+		99A0B7A02DB5895F000F2AD7 /* JieqiTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiTimelineProvider.swift; sourceTree = "<group>"; };
+		99A0B7A62DB59093000F2AD7 /* JieqiWidget.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JieqiWidget.xcassets; sourceTree = "<group>"; };
 		99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimelineProvider.swift; sourceTree = "<group>"; };
 		99BC3C052968355E004AB614 /* CountDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownWidget.swift; sourceTree = "<group>"; };
 		99BC3C0A29683678004AB614 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
@@ -595,7 +614,9 @@
 				9968961C2DB550AE0082B667 /* Nongli.swift */,
 				9968961E2DB550D50082B667 /* HourlyWidget.swift */,
 				99BC3C052968355E004AB614 /* CountDownWidget.swift */,
+				99A0B79E2DB58937000F2AD7 /* JieqiWidget.swift */,
 				997C68762864CB8F00B40D3F /* AllWidgets.swift */,
+				99A0B7A62DB59093000F2AD7 /* JieqiWidget.xcassets */,
 				998898E02A74514200A4E48C /* ShiChen.xcstrings */,
 				997CD1102954C92000BECF31 /* MaterialBackground.swift */,
 				9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */,
@@ -819,6 +840,7 @@
 			children = (
 				997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */,
 				996321442911B3BB000C4A2B /* MinuteTimelineProvider.swift */,
+				99A0B7A02DB5895F000F2AD7 /* JieqiTimelineProvider.swift */,
 				99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */,
 			);
 			path = IntentTimelineProvider;
@@ -926,6 +948,8 @@
 				990FEADC294CA2FE00CB1CEF /* LocationManager.swift */,
 				46B79C3F2541F95F003C0B7F /* Environment.swift */,
 				99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */,
+				99A0B7982DB582A4000F2AD7 /* Jieqi.xcassets */,
+				99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */,
 				996321402911B2A4000C4A2B /* Timeline */,
 				46339FE525027DA8007D4137 /* ShichenHStackView.swift */,
 				994190BE285A28E900295389 /* ShiChenClock */,
@@ -1222,6 +1246,7 @@
 				46B79C0E2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */,
 				462A5F6E24FFE5F20032A125 /* Assets.xcassets in Resources */,
 				998898E22A74514300A4E48C /* ShiChen.xcstrings in Resources */,
+				99A0B7A72DB59093000F2AD7 /* JieqiWidget.xcassets in Resources */,
 				9963214B2911B8F3000C4A2B /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1234,6 +1259,7 @@
 				999B068A2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */,
 				998898DF2A74514200A4E48C /* InfoPlist.xcstrings in Resources */,
 				46B79C0D2541E4B9003C0B7F /* WeibeiTC-Bold.otf in Resources */,
+				99A0B79C2DB582A4000F2AD7 /* Jieqi.xcassets in Resources */,
 				46AB55D4242B5EFF00F6604A /* Preview Assets.xcassets in Resources */,
 				46AB55D1242B5EFF00F6604A /* Assets.xcassets in Resources */,
 				9963214A2911B8E4000C4A2B /* Shared.xcassets in Resources */,
@@ -1260,6 +1286,7 @@
 			files = (
 				999B068B2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */,
 				997C68512864CADF00B40D3F /* Preview Assets.xcassets in Resources */,
+				99A0B79B2DB582A4000F2AD7 /* Jieqi.xcassets in Resources */,
 				998898E32A74514300A4E48C /* ShiChen.xcstrings in Resources */,
 				997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */,
 				997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */,
@@ -1287,6 +1314,7 @@
 			files = (
 				993CFB9A28809F6A0015252E /* WeibeiTC-Bold.otf in Resources */,
 				9913E7FB2AC0B63700E459B8 /* Localizable.xcstrings in Resources */,
+				99A0B7A92DB590A7000F2AD7 /* JieqiWidget.xcassets in Resources */,
 				997C68882865FAD300B40D3F /* Assets.xcassets in Resources */,
 				998898E42A74514300A4E48C /* ShiChen.xcstrings in Resources */,
 				9963214C2911B8F3000C4A2B /* Shared.xcassets in Resources */,
@@ -1300,6 +1328,7 @@
 				99FD3F722922994D0048DCEB /* WeibeiTC-Bold.otf in Resources */,
 				99FD3F4E292296180048DCEB /* Assets.xcassets in Resources */,
 				998898E52A74514300A4E48C /* ShiChen.xcstrings in Resources */,
+				99A0B7AA2DB590A7000F2AD7 /* JieqiWidget.xcassets in Resources */,
 				994215DA29621D23003C5CA1 /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1331,12 +1360,15 @@
 				997CD1122954C96B00BECF31 /* MaterialBackground.swift in Sources */,
 				46339FDD2500EA60007D4137 /* ShichenView.swift in Sources */,
 				996321452911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */,
+				99A0B7962DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */,
 				99BC3C0C296836AA004AB614 /* CountDownView.swift in Sources */,
 				994AD1922868FA0400BB5BED /* CircularWidgetView.swift in Sources */,
 				46339FE725027E6F007D4137 /* ShichenHStackView.swift in Sources */,
+				99A0B7A32DB5895F000F2AD7 /* JieqiTimelineProvider.swift in Sources */,
 				46339FDC2500EA41007D4137 /* CircularContainerView.swift in Sources */,
 				990FEADF294CAFD700CB1CEF /* LocationManager.swift in Sources */,
 				9968961D2DB550AE0082B667 /* Nongli.swift in Sources */,
+				99A0B79F2DB58937000F2AD7 /* JieqiWidget.swift in Sources */,
 				46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */,
 				994AD1952868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
 				99F19D8E29E09C3C005C5949 /* MeasurmentFormatterManager.swift in Sources */,
@@ -1394,6 +1426,7 @@
 				995997052B3DF1AB002288D1 /* MultiSelector.swift in Sources */,
 				996321422911B2CD000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				46EF7F7E271077AE007030CC /* JieqiListView.swift in Sources */,
+				99A0B7952DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */,
 				997CD1162954CF9700BECF31 /* SettingsView.swift in Sources */,
 				46B7FCE725061F81008E8D48 /* ChinesePinyin.swift in Sources */,
 				996C531C2B1FCFAD00AC832F /* GuaListView.swift in Sources */,
@@ -1446,6 +1479,7 @@
 				9963207A290DE1DE000C4A2B /* ShiciView.swift in Sources */,
 				99D2C78E2943935800327AF7 /* Environment.swift in Sources */,
 				99632075290DE1DE000C4A2B /* JieqiListView.swift in Sources */,
+				99A0B7972DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */,
 				997CD1172954D0EC00BECF31 /* SettingsView.swift in Sources */,
 				99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */,
 				996C531E2B1FD0B500AC832F /* GuaListView.swift in Sources */,
@@ -1493,6 +1527,7 @@
 				997CD11D2954FE1600BECF31 /* Constants.swift in Sources */,
 				9913E7EC2ABDF12600E459B8 /* ConfigurationAppIntent.swift in Sources */,
 				997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */,
+				99A0B7A12DB5895F000F2AD7 /* JieqiTimelineProvider.swift in Sources */,
 				99BC3C13296A2950004AB614 /* DateFormatters.swift in Sources */,
 				99553A0A2AC9CC7A00EAA6B1 /* WatchWidgetBundle.swift in Sources */,
 				997C68A42868A86C00B40D3F /* ShichenTimeLineSceduler.swift in Sources */,
@@ -1509,6 +1544,7 @@
 				9913E7EE2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift in Sources */,
 				997C68942868A76800B40D3F /* FullDateTitleView.swift in Sources */,
 				99BC3C0D296836AB004AB614 /* CountDownView.swift in Sources */,
+				99A0B7932DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */,
 				997C689A2868A7B600B40D3F /* CornerView.swift in Sources */,
 				996321462911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */,
 				994AD1932868FA0400BB5BED /* CircularWidgetView.swift in Sources */,
@@ -1555,6 +1591,8 @@
 				99FD3F6D292298650048DCEB /* CircularContainerView.swift in Sources */,
 				99ECAED22A475BAF004997FD /* Date+WidgetIntent.swift in Sources */,
 				99F9DDD029E0CE2C00E69B8E /* MeasurmentFormatterManager.swift in Sources */,
+				99A0B7A22DB5895F000F2AD7 /* JieqiTimelineProvider.swift in Sources */,
+				99A0B7942DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */,
 				99FD3F622922968B0048DCEB /* RetangularWidgetView.swift in Sources */,
 				991A857F2B5090E700C1D1BC /* SettingsManager.swift in Sources */,
 				99BC3C14296A2950004AB614 /* DateFormatters.swift in Sources */,

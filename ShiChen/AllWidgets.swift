@@ -13,6 +13,7 @@ struct AllWidgets: WidgetBundle {
   @WidgetBundleBuilder
   var body: some Widget {
     ShiChen()
+    JieqiWidget()
     Nongli()
     if #available(iOS 16.1, *) {
       HourlyWidget()

@@ -19,5 +19,8 @@ enum WidgetConstants {
 
   static let countDownWidgetTitle: LocalizedStringKey = "節日倒數"
   static let countDownWidgetDescription: LocalizedStringKey = "農曆新年倒數組件"
+  
+  static let jieqiWidgetTitle: LocalizedStringKey = "二十四節氣"
+  static let jieqiWidgetDescription: LocalizedStringKey = "小組件隨節氣變換"
 
 }
