@@ -1,6 +1,5 @@
 import SwiftUI
 
-@MainActor
 final class SettingsManager: ObservableObject {
 
   // MARK: Lifecycle
@@ -10,7 +9,7 @@ final class SettingsManager: ObservableObject {
   }
 
   // MARK: Internal
-
+  @MainActor 
   static let shared = SettingsManager()
 
   @Published
