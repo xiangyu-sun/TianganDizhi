@@ -9,7 +9,6 @@
 import ChineseAstrologyCalendar
 import SwiftUI
 import WidgetKit
-import Astral
 
 // MARK: - MainView
 
@@ -48,24 +47,7 @@ struct MainView: View {
       : event.date.displayStringOfChineseYearMonthDateWithZodiac
   }
   
-  var jieqiText: String {
-    if let jieqi = Jieqi.current {
-      let nextDate = preciseNextSolarTermDate()
-    
-      let interval = nextDate.timeIntervalSince(Date())
-      let days = Int(interval / 86_400)  // floor of full days
-      
-      if days > 6 {
-        return "\(days)天之後\(nextDate.jieqi?.chineseName ?? "")"
-      } else {
-        return jieqi.chineseName
-      }
-      
-    } else {
-      return ""
-    }
-  }
-  
+
   var body: some View {
     VStack {
       #if os(watchOS)
@@ -76,7 +58,7 @@ struct MainView: View {
         Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
           .font(titleFont)
         
-        Text(jieqiText)
+        Text(updater.currentDate.jieQiText)
           .font(bodyFont)
         
         if let value = weatherData.forcastedWeather {

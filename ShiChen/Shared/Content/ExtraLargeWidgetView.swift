@@ -32,6 +32,10 @@ struct ExtraLargeWidgetView: View {
         FullDateTitleView(date: date)
           .font(titleFont)
         Spacer(minLength: 4)
+        
+        Text(date.jieQiText)
+          .font(bodyFont)
+        
         if let value = weatherData.forcastedWeather {
           MoonInformationView(info: value)
           Text(
