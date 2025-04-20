@@ -47,7 +47,7 @@ struct DizhiListView: View {
       case .name:
         return "十二地支"
       case .month:
-        return "地支與月份"
+        return "地支與陰曆月份"
       case .time:
         return "時辰與小時"
       case .organs:
