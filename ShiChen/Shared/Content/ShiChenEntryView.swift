@@ -94,17 +94,20 @@ struct ShiChenEntryView: View {
         #endif
       } else {
         ZStack {
-          VStack {
+          VStack(spacing: 0) {
             FullDateTitleView(date: entry.date)
               .font(title3Font)
-              .padding(.top, 8)
+            
+            Text(entry.date.jieQiText)
+              .font(bodyFont)
+            
             if let shichen = entry.date.shichen {
-              CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
-                .padding(.bottom, 8)
+              CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
             }
           }
           .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
+          
           if let shichen = entry.date.shichen {
             VStack {
               Text(shichen.dizhi.aliasName)

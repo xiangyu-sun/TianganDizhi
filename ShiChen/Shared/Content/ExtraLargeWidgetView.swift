@@ -95,7 +95,7 @@ struct ExtraLargeWidgetView: View {
       }
       Text(moonphase.name(traditionnal: useTranditionalNaming))
       if let gua = moonphase.gua {
-        Text(gua.symbol)
+        Text(gua.description)
       }
     }
     .font(bodyFont)
