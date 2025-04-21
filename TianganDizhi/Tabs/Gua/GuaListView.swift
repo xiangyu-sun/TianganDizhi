@@ -29,8 +29,11 @@ struct GuaListView: View {
         }
         Section {
           NavigationLink(destination: ShierPiguaView()) {
-            Text("十二辟卦")
+            Text("陰曆十二辟卦")
           }
+//          NavigationLink(destination: YangliShierPiguaView()) {
+//            Text("陽曆十二辟卦")
+//          }
         }
       }
       .font(bodyFont)

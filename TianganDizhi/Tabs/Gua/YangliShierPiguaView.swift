@@ -36,7 +36,22 @@ struct YangliShierPiguaView: View {
     shouldScaleFont ? titleFont : bodyFont
     #endif
   }
+  func localizedMonthName(from number: Int, locale: Locale = Locale.current) -> String? {
+      guard (1...12).contains(number) else { return nil }
 
+      var dateComponents = DateComponents()
+      dateComponents.month = number
+      let calendar = Calendar(identifier: .gregorian)
+
+      if let date = calendar.date(from: dateComponents) {
+          let formatter = DateFormatter()
+          formatter.locale = locale
+          formatter.dateFormat = "LLLL"  // Full month name
+          return formatter.string(from: date)
+      }
+
+      return nil
+  }
   var body: some View {
     GeometryReader { geometry in
       ZStack {
@@ -47,7 +62,11 @@ struct YangliShierPiguaView: View {
           
           let dizhi = Dizhi(rawValue: (jieqi.rawValue / 2) + 1) ?? .chen
           let dizhiIndex = dizhi.rawValue - 1
-
+          
+          let monthName = localizedMonthName(from: dizhi.rawValue) ?? ""
+          Text(monthName)
+            .rotationEffect(getRotatingAngle(for: dizhiIndex - 3, base: 12))
+            .offset(angle12Position(for: dizhiIndex - 3, in: geometry.size, z: 1))
 
           let gua = ShierPiguas[dizhiIndex]
 
