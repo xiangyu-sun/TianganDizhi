@@ -13,7 +13,7 @@ struct MinuteTimelineProvider: IntentTimelineProvider {
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
     defaultRecommendedIntents().map { intent in
       let description = Date().shichen?.dizhi.chineseCharactor ?? ""
-      return IntentRecommendation(intent: intent, description: description)
+      return IntentRecommendation(intent: intent, description: "當前時辰" + description)
     }
   }
 

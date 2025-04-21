@@ -30,7 +30,7 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
     defaultRecommendedIntents().map { intent in
       let description = Date().shichen?.dizhi.chineseCharactor ?? ""
-      return IntentRecommendation(intent: intent, description: description)
+      return IntentRecommendation(intent: intent, description: "節氣組件" + description)
     }
   }
 
