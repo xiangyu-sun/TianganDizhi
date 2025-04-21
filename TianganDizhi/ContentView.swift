@@ -28,7 +28,7 @@ struct ContentView: View {
 
       KnowledgeView()
         .tabItem {
-          Image(systemName: "moon")
+          Image(systemName: "moon.stars.fill")
           Text("天干地支")
         }
 
@@ -40,13 +40,13 @@ struct ContentView: View {
 
       ChartListView()
         .tabItem {
-          Image(systemName: "table")
+          Image(systemName: "chart.bar.xaxis")
           Text("綜合圖示")
         }
 
       SettingsView()
         .tabItem {
-          Image(systemName: "gear")
+          Image(systemName: "gear.circle.fill")
           Text("設置")
         }
     }
@@ -74,5 +74,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
+      .environmentObject(SettingsManager.shared)
   }
 }
