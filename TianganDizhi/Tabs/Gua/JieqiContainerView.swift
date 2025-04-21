@@ -42,10 +42,10 @@ struct ShierPiguaView: View {
       ZStack {
         ForEach(Jieqi.allCases, id: \.self) { jieqi in
           Text(jieqi.chineseName)
-            .rotationEffect(getRotatingAngle(for: jieqi.rawValue - 1, base: 24))
-            .offset(anglePosition(for: jieqi.rawValue - 1, in: geometry.size))
-
-          let dizhi = Dizhi(rawValue: jieqi.rawValue / 2) ?? .chen
+            .rotationEffect(getRotatingAngle(for: jieqi.rawValue, base: 24))
+            .offset(anglePosition(for: jieqi.rawValue, in: geometry.size))
+          // add one to make sure the rest of system works
+          let dizhi = Dizhi(rawValue: (jieqi.rawValue + 1) / 2) ?? .chen
           let dizhiIndex = dizhi.rawValue - 1
 
           Text(Key.shierLvLvMonthOrder[dizhiIndex].lvlvDescription)
