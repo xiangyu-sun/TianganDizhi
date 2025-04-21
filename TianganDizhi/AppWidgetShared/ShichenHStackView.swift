@@ -68,6 +68,7 @@ struct ShichenInformationView: View {
   @Environment(\.title3Font) var title3Font
   @Environment(\.widgetFamily) var family
   @Environment(\.calloutFont) var calloutFont
+
   let shichen: Dizhi
 
   var scaleFont: Bool {

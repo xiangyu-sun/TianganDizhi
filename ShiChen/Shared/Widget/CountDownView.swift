@@ -40,7 +40,7 @@ struct CountDownView: View {
   }
 
   var body: some View {
-    let now: Date = .init()
+    let now = Date()
 
     let color = springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary
 
@@ -51,6 +51,7 @@ struct CountDownView: View {
         .containerBackgroundForWidget {
           Color.clear
         }
+
     case .accessoryRectangular:
       HStack {
         Text(title)
@@ -60,6 +61,7 @@ struct CountDownView: View {
       .containerBackgroundForWidget {
         Color.clear
       }
+
     case .systemSmall:
       VStack(alignment: .leading) {
         Text("距離\(title)")
@@ -69,6 +71,7 @@ struct CountDownView: View {
       .font(bodyFont)
       .foregroundColor(color)
       .materialBackgroundWidget(with: Image("background"), toogle: true)
+
     default:
       VStack(alignment: .center) {
         FullDateTitleView(date: entry.date)

@@ -12,7 +12,7 @@ import ChineseTranditionalMusicCore
 import MusicTheory
 import SwiftUI
 
-// MARK: - ShierPiguaView
+// MARK: - YangliShierPiguaView
 
 struct YangliShierPiguaView: View {
 
@@ -36,22 +36,7 @@ struct YangliShierPiguaView: View {
     shouldScaleFont ? titleFont : bodyFont
     #endif
   }
-  func localizedMonthName(from number: Int, locale: Locale = Locale.current) -> String? {
-      guard (1...12).contains(number) else { return nil }
 
-      var dateComponents = DateComponents()
-      dateComponents.month = number
-      let calendar = Calendar(identifier: .gregorian)
-
-      if let date = calendar.date(from: dateComponents) {
-          let formatter = DateFormatter()
-          formatter.locale = locale
-          formatter.dateFormat = "LLLL"  // Full month name
-          return formatter.string(from: date)
-      }
-
-      return nil
-  }
   var body: some View {
     GeometryReader { geometry in
       ZStack {
@@ -59,25 +44,28 @@ struct YangliShierPiguaView: View {
           Text(jieqi.chineseName)
             .rotationEffect(getRotatingAngle(for: jieqi.rawValue, base: 24))
             .offset(anglePosition(for: jieqi.rawValue, in: geometry.size))
-          
-          let dizhi = Dizhi(rawValue: (jieqi.rawValue / 2) + 1) ?? .chen
-          let dizhiIndex = dizhi.rawValue - 1
-          
-          let monthName = localizedMonthName(from: dizhi.rawValue) ?? ""
-          Text(monthName)
-            .rotationEffect(getRotatingAngle(for: dizhiIndex - 3, base: 12))
-            .offset(angle12Position(for: dizhiIndex - 3, in: geometry.size, z: 1))
 
-          let gua = ShierPiguas[dizhiIndex]
+          if jieqi.rawValue.isMultiple(of: 2) {
+            let dizhi = Dizhi(rawValue: (jieqi.rawValue / 2) + 1) ?? .chen
+            let dizhiIndex = dizhi.rawValue - 1
 
-          HStack {
-            if shouldScaleFont {
-              Text(gua.symbol)
+            let monthIndex = jieqi.monthFromCelestialLongitude
+            let monthName = localizedMonthName(from: monthIndex) ?? ""
+
+            Text(monthName)
+              .rotationEffect(getRotatingAngle(for: dizhiIndex, base: 12))
+              .offset(angle12Position(for: dizhiIndex, in: geometry.size, z: 1))
+
+            let gua = ShierPiguas[dizhiIndex]
+            HStack {
+              if shouldScaleFont {
+                Text(gua.symbol)
+              }
+              Text(gua.chineseCharacter)
             }
-            Text(gua.chineseCharacter)
+            .rotationEffect(getRotatingAngle(for: dizhiIndex - 1, base: 12))
+            .offset(angle12Position(for: dizhiIndex - 1, in: geometry.size, z: 2))
           }
-          .rotationEffect(getRotatingAngle(for: dizhiIndex, base: 12))
-          .offset(angle12Position(for: dizhiIndex, in: geometry.size, z: 2))
         }
         .font(font)
 
@@ -110,12 +98,12 @@ struct YangliShierPiguaView: View {
       .frame(width: geometry.size.width, height: geometry.size.height)
     }
     #if os(watchOS)
-    .edgesIgnoringSafeArea([.bottom,.leading,.trailing])
+    .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
     #endif
     #if os(iOS) || os(watchOS)
     .navigationViewStyle(StackNavigationViewStyle())
     #endif
-    .navigationTitle("十二辟卦")
+    .navigationTitle("陽曆十二辟卦")
   }
 
   var strokeLineWidth: Double {
@@ -148,6 +136,23 @@ struct YangliShierPiguaView: View {
     #else
     shouldScaleFont ? 80 : 40
     #endif
+  }
+
+  func localizedMonthName(from number: Int, locale: Locale = Locale.current) -> String? {
+    guard (1...12).contains(number) else { return nil }
+
+    var dateComponents = DateComponents()
+    dateComponents.month = number
+    let calendar = Calendar(identifier: .gregorian)
+
+    if let date = calendar.date(from: dateComponents) {
+      let formatter = DateFormatter()
+      formatter.locale = locale
+      formatter.dateFormat = "LLLL" // Full month name
+      return formatter.string(from: date)
+    }
+
+    return nil
   }
 
   func getRotatingAngle(for index: Int, base: Double) -> Angle {
@@ -190,7 +195,7 @@ struct YangliShierPiguaView: View {
   }
 }
 
-// MARK: - ShierPiguaView_Previews
+// MARK: - YangliShierPiguaView_Previews
 
 struct YangliShierPiguaView_Previews: PreviewProvider {
   static var previews: some View {

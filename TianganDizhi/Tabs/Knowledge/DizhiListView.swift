@@ -26,38 +26,38 @@ struct DizhiListView: View {
     var dizhi: [Dizhi] {
       switch self {
       case .name:
-        return Dizhi.allCases
+        Dizhi.allCases
       case .month:
-        return Dizhi.orderedMonthAlCases
+        Dizhi.orderedMonthAlCases
       case .time:
-        return Dizhi.allCases
+        Dizhi.allCases
       case .organs:
-        return Dizhi.allCases
+        Dizhi.allCases
       case .alias:
-        return Dizhi.allCases
+        Dizhi.allCases
       case .zodiac:
-        return Dizhi.allCases
+        Dizhi.allCases
       case .lvlv:
-        return Dizhi.orderedMonthAlCases
+        Dizhi.orderedMonthAlCases
       }
     }
 
     var title: String {
       switch self {
       case .name:
-        return "十二地支"
+        "十二地支"
       case .month:
-        return "地支與陰曆月份"
+        "地支與陰曆月份"
       case .time:
-        return "時辰與小時"
+        "時辰與小時"
       case .organs:
-        return "子午流注"
+        "子午流注"
       case .alias:
-        return "時辰的別名"
+        "時辰的別名"
       case .zodiac:
-        return "十二生肖與五行"
+        "十二生肖與五行"
       case .lvlv:
-        return "地支，十二律呂，西洋調名"
+        "地支，十二律呂，西洋調名"
       }
     }
   }

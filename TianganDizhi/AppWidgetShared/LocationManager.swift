@@ -48,11 +48,14 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
       case .authorizedAlways, .authorizedWhenInUse:
         service.startUpdatingLocation()
         locationContinuation = continuation
+
       case .notDetermined:
         service.requestWhenInUseAuthorization()
         locationContinuation = continuation
+
       case .denied, .restricted:
         continuation.resume(throwing: OperationError.perimissionDeclied)
+
       @unknown default:
         continuation.resume(throwing: OperationError.didNotGetResult)
       }
@@ -63,11 +66,14 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     switch manager.authorizationStatus {
     case .authorizedAlways, .authorizedWhenInUse:
       service.startUpdatingLocation()
+
     case .notDetermined:
       break
+
     case .denied, .restricted:
       locationContinuation?.resume(throwing: OperationError.perimissionDeclied)
       locationContinuation = nil
+
     @unknown default:
       locationContinuation?.resume(throwing: OperationError.perimissionDeclied)
       locationContinuation = nil

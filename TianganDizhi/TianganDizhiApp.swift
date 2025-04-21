@@ -8,8 +8,8 @@ struct TianganDizhiApp: App {
 
   init() {
     #if os(iOS)
-    UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: .weibeiBold, size: 34)!]
-    UITabBarItem.appearance().setTitleTextAttributes([.font : UIFont(name: .weibeiBold, size: 12)!], for: [])
+    UINavigationBar.appearance().largeTitleTextAttributes = [.font: UIFont(name: .weibeiBold, size: 34)!]
+    UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont(name: .weibeiBold, size: 12)!], for: [])
     #endif
   }
 

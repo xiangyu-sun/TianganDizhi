@@ -6,49 +6,46 @@
 //  Copyright © 2025 孙翔宇. All rights reserved.
 //
 
-import WidgetKit
+import Astral
 import ChineseAstrologyCalendar
 import Intents
 import SwiftUI
-import Astral
+import WidgetKit
 
- // MARK: - Jieqi
-
+// MARK: - JieqiWidget
 
 struct JieqiWidget: Widget {
   let kind = "Jieqi"
   @Environment(\.largeTitleFont) var largeTitleFont
   var iosSupportedFamilies: [WidgetFamily] {
-    return [.systemSmall]
+    [.systemSmall]
   }
 
   func getDate(date: Date) -> Date {
-
     let nextDate = preciseNextSolarTermDate(from: date)
-    
+
     let interval = nextDate.timeIntervalSince(date)
-    let days = Int(ceil(interval / 86_400))  // floor of full days
-    
+    let days = Int(ceil(interval / 86_400)) // floor of full days
+
     if days <= 14 {
       return nextDate
     } else {
       return date
     }
-    
   }
 
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: JieqiTimelineProvider()) { entry in
       let date = getDate(date: entry.date)
       let sameDate = date == entry.date
-      
+
       if let jieqi = date.jieqi {
         VStack(alignment: .center) {
           if sameDate {
             Text(date, style: .date)
               .font(.callout)
               .environment(\.locale, Locale.current)
-            
+
             Text(jieqi.chineseName)
               .font(largeTitleFont)
           } else {
@@ -59,7 +56,7 @@ struct JieqiWidget: Widget {
               .font(.callout)
               .foregroundColor(.secondary)
               .environment(\.locale, Locale.current)
-            
+
             Text(jieqi.chineseName)
               .foregroundColor(.secondary)
               .font(largeTitleFont)
@@ -67,11 +64,9 @@ struct JieqiWidget: Widget {
         }
         .frame(maxWidth: .infinity)
         .materialBackgroundWidget(with: Image(uiImage: jieqi.image))
-      }
-      else {
+      } else {
         EmptyView()
       }
-      
     }
     .configurationDisplayName(WidgetConstants.jieqiWidgetTitle)
     .description(WidgetConstants.jieqiWidgetDescription)

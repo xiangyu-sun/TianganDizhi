@@ -61,10 +61,9 @@ final class WeatherData: ObservableObject {
     }
 
     let dayWeather: Forecast<DayWeather>? = await Task.detached(priority: .userInitiated) {
-      let forcast = try? await WeatherService.shared.weather(
+      try? await WeatherService.shared.weather(
         for: location,
         including: .daily)
-      return forcast
     }.value
 
     logger.debug("\(dayWeather.debugDescription)")

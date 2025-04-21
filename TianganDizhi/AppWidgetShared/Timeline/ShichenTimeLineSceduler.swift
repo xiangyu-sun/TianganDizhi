@@ -9,7 +9,7 @@
 import ChineseAstrologyCalendar
 import Foundation
 
-struct ShichenTimeLineSceduler {
+enum ShichenTimeLineSceduler {
   static func buildTimeLine() -> [Date] {
     var timeline = [Date]()
     let currentDate = Date()
@@ -17,8 +17,8 @@ struct ShichenTimeLineSceduler {
     timeline.append(currentDate)
 
     guard
-      let currentShichen = currentDate.shichen else
-    {
+      let currentShichen = currentDate.shichen
+    else {
       return backup()
     }
     let nextShichenStart = currentShichen.nextStartDate

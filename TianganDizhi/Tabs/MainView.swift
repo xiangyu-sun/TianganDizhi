@@ -46,7 +46,6 @@ struct MainView: View {
       ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
       : event.date.displayStringOfChineseYearMonthDateWithZodiac
   }
-  
 
   var body: some View {
     VStack {
@@ -57,13 +56,13 @@ struct MainView: View {
       VStack {
         Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
           .font(titleFont)
-        
+
         Text(updater.currentDate.jieQiText)
           .font(bodyFont)
-        
+
         if let value = weatherData.forcastedWeather {
           if horizontalSizeClass == .regular {
-            HStack() {
+            HStack {
               Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
                 .font(bodyFont)
                 .foregroundColor(Color.secondary)
@@ -105,7 +104,7 @@ struct MainView: View {
           }
         }
       }
-      .padding([.top, .leading,.trailing])
+      .padding([.top, .leading, .trailing])
 
       if let shichen = updater.currentDate.shichen {
         ZStack {
@@ -186,8 +185,8 @@ struct MainView: View {
               return intent?.date?.isSameWithCurrentShichen ?? false
             }
 
-            validWidgets.forEach {
-              WidgetCenter.shared.reloadTimelines(ofKind: $0.kind)
+            for validWidget in validWidgets {
+              WidgetCenter.shared.reloadTimelines(ofKind: validWidget.kind)
             }
           }
         } catch {

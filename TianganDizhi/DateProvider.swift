@@ -19,6 +19,5 @@ final class DateProvider: ObservableObject {
 
   // MARK: Internal
 
-  @Published
-  var currentDate = Date()
+  @Published var currentDate = Date()
 }

@@ -17,9 +17,9 @@ struct Nongli: Widget {
 
   var supportedFamilies: [WidgetFamily] {
     if #available(iOSApplicationExtension 16.0, *) {
-      return [.systemSmall, .systemMedium, .accessoryInline, .accessoryCircular, .accessoryRectangular]
+      [.systemSmall, .systemMedium, .accessoryInline, .accessoryCircular, .accessoryRectangular]
     } else {
-      return [.systemSmall, .systemMedium]
+      [.systemSmall, .systemMedium]
     }
   }
 
@@ -33,7 +33,7 @@ struct Nongli: Widget {
       .supportedFamilies([.accessoryInline, .accessoryCircular, .accessoryRectangular])
     #else
 
-    .supportedFamilies(supportedFamilies)
+      .supportedFamilies(supportedFamilies)
     #endif
   }
 }

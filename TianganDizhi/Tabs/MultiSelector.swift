@@ -49,7 +49,7 @@ struct MultiSelector<LabelView: View, Selectable: Identifiable & Hashable & Comp
 
 struct MultiSelector_Previews: PreviewProvider {
   struct IdentifiableString: Identifiable, Hashable, Comparable {
-    static func < (lhs: MultiSelector_Previews.IdentifiableString, rhs: MultiSelector_Previews.IdentifiableString) -> Bool {
+    static func <(lhs: MultiSelector_Previews.IdentifiableString, rhs: MultiSelector_Previews.IdentifiableString) -> Bool {
       lhs.string < rhs.string
     }
 

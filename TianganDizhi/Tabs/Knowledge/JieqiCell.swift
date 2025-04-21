@@ -20,22 +20,22 @@ struct JieqiCell: View {
   var body: some View {
     #if os(watchOS)
 
-      VStack(alignment: .leading) {
-        HStack {
-          Text(jieqi.chineseName)
-          Text("(\(jieqi.qi ? "氣" : "節"))")
-        }
-        .font(title3Font)
-        Text(jieqi.qishierHou)
-          .font(bodyFont)
-        
-        Image(uiImage: jieqi.image)
-          .resizable()
-          .aspectRatio(contentMode: .fit)
+    VStack(alignment: .leading) {
+      HStack {
+        Text(jieqi.chineseName)
+        Text("(\(jieqi.qi ? "氣" : "節"))")
       }
-  
+      .font(title3Font)
+      Text(jieqi.qishierHou)
+        .font(bodyFont)
+
+      Image(uiImage: jieqi.image)
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+    }
+
     #else
-    HStack() {
+    HStack {
       VStack(alignment: .leading) {
         HStack {
           Text(jieqi.chineseName)
@@ -53,9 +53,8 @@ struct JieqiCell: View {
       Image(uiImage: jieqi.image)
         .resizable()
         .aspectRatio(contentMode: .fit)
-      
+
       #endif
-     
     }
     #endif
   }

@@ -35,14 +35,17 @@ struct ShiChenYearMonthDateEntryView: View {
       if #available(iOSApplicationExtension 16.1, *) {
         InlineWidgetView(date: entry.date)
       }
+
     case .accessoryCircular:
       if #available(iOSApplicationExtension 16.1, *) {
         CircularWidgetView(date: entry.date)
       }
+
     case .accessoryRectangular:
       if #available(iOSApplicationExtension 16.1, watchOS 10.0, *) {
         RetangularWidgetView(date: entry.date)
       }
+
     case .systemSmall:
       VStack {
         Spacer()
@@ -58,13 +61,13 @@ struct ShiChenYearMonthDateEntryView: View {
 
     case .systemMedium:
       WidgetMediumView(entry: entry)
-      
+
     default:
       VStack {
         Spacer()
         Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
           .font(bodyFont)
-          .padding([.leading,.trailing], 15)
+          .padding([.leading, .trailing], 15)
         Text(shichen?.dizhi.displayHourText ?? "")
           .font(titleFont)
         Spacer()
@@ -76,13 +79,15 @@ struct ShiChenYearMonthDateEntryView: View {
   }
 }
 
+// MARK: - WidgetMediumView
+
 private struct WidgetMediumView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
   @Environment(\.titleFont) var titleFont
   @Environment(\.title2Font) var title2Font
   @Environment(\.title3Font) var title3Font
-  
+
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
 
@@ -90,16 +95,17 @@ private struct WidgetMediumView: View {
   var springFestiveForegroundEnabled = false
 
   var entry: SimpleEntry
+
   var shichen: Shichen? {
     entry.date.shichen
   }
-  
+
   var body: some View {
     VStack {
       Spacer()
       Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
         .font(title2Font)
-        .padding([.leading,.trailing], 15)
+        .padding([.leading, .trailing], 15)
       Text(shichen?.dizhi.displayHourText ?? "")
         .font(titleFont)
       Spacer()

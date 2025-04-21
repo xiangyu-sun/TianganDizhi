@@ -44,7 +44,7 @@ struct ShierPiguaView: View {
           Text(jieqi.chineseName)
             .rotationEffect(getRotatingAngle(for: jieqi.rawValue, base: 24))
             .offset(anglePosition(for: jieqi.rawValue, in: geometry.size))
-          
+
           let dizhi = Dizhi(rawValue: max((jieqi.rawValue + 1) / 2, 1)) ?? .chen
           let dizhiIndex = dizhi.rawValue - 1
 
@@ -98,7 +98,7 @@ struct ShierPiguaView: View {
       .frame(width: geometry.size.width, height: geometry.size.height)
     }
     #if os(watchOS)
-    .edgesIgnoringSafeArea([.bottom,.leading,.trailing])
+    .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
     #endif
     #if os(iOS) || os(watchOS)
     .navigationViewStyle(StackNavigationViewStyle())

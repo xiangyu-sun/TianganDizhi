@@ -18,11 +18,11 @@ struct ShiChen: Widget {
 
   var iosSupportedFamilies: [WidgetFamily] {
     if #available(iOSApplicationExtension 16.0, *) {
-      return [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge, .accessoryInline, .accessoryRectangular]
+      [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge, .accessoryInline, .accessoryRectangular]
     } else if #available(iOSApplicationExtension 15.0, *) {
-      return [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge]
+      [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge]
     } else {
-      return [.systemSmall, .systemMedium, .systemLarge]
+      [.systemSmall, .systemMedium, .systemLarge]
     }
   }
 
@@ -35,7 +35,7 @@ struct ShiChen: Widget {
     #if os(watchOS)
       .supportedFamilies([.accessoryInline, .accessoryRectangular])
     #else
-    .supportedFamilies(iosSupportedFamilies)
+      .supportedFamilies(iosSupportedFamilies)
     #endif
   }
 }

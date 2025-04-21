@@ -6,10 +6,11 @@
 //  Copyright © 2025 孙翔宇. All rights reserved.
 //
 
-
 import ChineseAstrologyCalendar
 import CoreLocation
 import WidgetKit
+
+// MARK: - JieqiTimelineProvider
 
 @MainActor
 struct JieqiTimelineProvider: IntentTimelineProvider {
@@ -55,7 +56,7 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
     let timeline = Timeline(entries: entries, policy: .atEnd)
     completion(timeline)
   }
-  
+
   @available(macOSApplicationExtension 15.0, *)
   @available(watchOSApplicationExtension 11.0, *)
   @available(iOSApplicationExtension 18.0, *)
@@ -75,7 +76,9 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
   }
 }
 
-struct DailyTimeLineSceduler {
+// MARK: - DailyTimeLineSceduler
+
+enum DailyTimeLineSceduler {
   static func buildTimeLine() -> [Date] {
     var timeline = [Date]()
     let currentDate = Date()
@@ -83,11 +86,11 @@ struct DailyTimeLineSceduler {
     timeline.append(currentDate)
 
     guard
-      let currentShichen = currentDate.shichen else
-    {
+      let currentShichen = currentDate.shichen
+    else {
       return backup()
     }
-    
+
     let entryDate = Calendar.current.date(byAdding: .second, value: 2, to: Date()) ?? Date()
     timeline.append(entryDate)
 

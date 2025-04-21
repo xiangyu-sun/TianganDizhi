@@ -33,7 +33,7 @@ struct MinuteTimelineProvider: IntentTimelineProvider {
     let timeline = Timeline(entries: entries, policy: .atEnd)
     completion(timeline)
   }
-  
+
   @available(macOSApplicationExtension 15.0, *)
   @available(watchOSApplicationExtension 11.0, *)
   @available(iOSApplicationExtension 18.0, *)

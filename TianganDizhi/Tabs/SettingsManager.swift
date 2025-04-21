@@ -9,9 +9,8 @@ final class SettingsManager: ObservableObject {
   }
 
   // MARK: Internal
-  @MainActor 
-  static let shared = SettingsManager()
 
-  @Published
-  var useSystemFont: Bool
+  @MainActor static let shared = SettingsManager()
+
+  @Published var useSystemFont: Bool
 }

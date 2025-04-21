@@ -63,7 +63,7 @@ struct BaguaView: View {
       .frame(width: geometry.size.width, height: geometry.size.height)
     }
     #if os(watchOS)
-    .edgesIgnoringSafeArea([.bottom,.leading,.trailing])
+    .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
     #endif
     #if os(iOS) || os(watchOS)
     .navigationViewStyle(StackNavigationViewStyle())

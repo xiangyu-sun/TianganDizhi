@@ -28,9 +28,7 @@ struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
   }
 
   func snapshot(for configuration: ConfigurationAppIntent, in _: Context) async -> SimpleAppIntentEntry {
-    let entry = SimpleAppIntentEntry(date: Date(), configuration: configuration)
-
-    return entry
+    SimpleAppIntentEntry(date: Date(), configuration: configuration)
   }
 
   func timeline(for configuration: ConfigurationAppIntent, in _: Context) async -> Timeline<SimpleAppIntentEntry> {
@@ -46,9 +44,7 @@ struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
       entries.append(entry)
     }
 
-    let timeline = Timeline(entries: entries, policy: .atEnd)
-
-    return timeline
+    return Timeline(entries: entries, policy: .atEnd)
   }
 
   // MARK: Private

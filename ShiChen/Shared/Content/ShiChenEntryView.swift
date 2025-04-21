@@ -47,10 +47,12 @@ struct ShiChenEntryView: View {
           InlineWidgetView(date: entry.date)
         }
       }
+
     case .accessoryCircular:
       if #available(iOSApplicationExtension 16.0, *) {
         CircularWidgetView(date: entry.date)
       }
+
     case .accessoryRectangular:
       if #available(iOSApplicationExtension 16.0, *) {
         RetangularWidgetView(date: entry.date)
@@ -97,17 +99,17 @@ struct ShiChenEntryView: View {
           VStack(spacing: 0) {
             FullDateTitleView(date: entry.date)
               .font(title3Font)
-            
+
             Text(entry.date.jieQiText)
               .font(bodyFont)
-            
+
             if let shichen = entry.date.shichen {
               CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
             }
           }
           .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
-          
+
           if let shichen = entry.date.shichen {
             VStack {
               Text(shichen.dizhi.aliasName)
@@ -120,6 +122,7 @@ struct ShiChenEntryView: View {
         }
         .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
       }
+
     default:
       if let shichen = entry.date.shichen {
         CompactShichenView(shichen: shichen.dizhi, date: entry.date)
