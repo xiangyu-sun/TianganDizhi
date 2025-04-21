@@ -16,7 +16,7 @@ struct MoonInformationView: View {
         }
         Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
         if let gua = info.moonPhase.gua {
-          Text(gua.symbol)
+          Text(gua.description)
         }
       }
       .font(bodyFont)

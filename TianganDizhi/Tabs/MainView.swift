@@ -31,7 +31,7 @@ struct MainView: View {
 
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
-
+  @Environment(\.horizontalSizeClass) var horizontalSizeClass
   var dayConverter: DayConverter {
     useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
   }
@@ -62,20 +62,39 @@ struct MainView: View {
           .font(bodyFont)
         
         if let value = weatherData.forcastedWeather {
-          Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
-            .font(bodyFont)
-            .foregroundColor(Color.secondary)
-            .onChange(of: scenePhase) { newValue in
-              switch newValue {
-              case .active:
-                refreshLocationAndWeather()
-              default:
-                break
-              }
+          if horizontalSizeClass == .regular {
+            HStack() {
+              Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
+                .font(bodyFont)
+                .foregroundColor(Color.secondary)
+                .onChange(of: scenePhase) { newValue in
+                  switch newValue {
+                  case .active:
+                    refreshLocationAndWeather()
+                  default:
+                    break
+                  }
+                }
+              Text("\(value.condition)")
+                .font(bodyFont)
+                .foregroundColor(Color.secondary)
             }
-          Text("\(value.condition)")
-            .font(bodyFont)
-            .foregroundColor(Color.secondary)
+          } else {
+            Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
+              .font(bodyFont)
+              .foregroundColor(Color.secondary)
+              .onChange(of: scenePhase) { newValue in
+                switch newValue {
+                case .active:
+                  refreshLocationAndWeather()
+                default:
+                  break
+                }
+              }
+            Text("\(value.condition)")
+              .font(bodyFont)
+              .foregroundColor(Color.secondary)
+          }
           withAnimation {
             SunInformationView(info: value)
           }
@@ -185,7 +204,7 @@ struct MainView: View {
       }
       Text(moonphase.name(traditionnal: useTranditionalNaming))
       if let gua = moonphase.gua {
-        Text(gua.symbol)
+        Text(gua.description)
       }
     }
     .font(bodyFont)
