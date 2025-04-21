@@ -49,12 +49,12 @@ struct ShierPiguaView: View {
           let dizhiIndex = dizhi.rawValue - 1
 
           Text(Key.shierLvLvMonthOrder[dizhiIndex].lvlvDescription)
-            .rotationEffect(getRotatingAngle(for: dizhiIndex, base: 12))
-            .offset(angle12Position(for: dizhiIndex, in: geometry.size, z: 1))
+            .rotationEffect(getRotatingAngle(for: dizhiIndex - 3, base: 12))
+            .offset(angle12Position(for: dizhiIndex - 3, in: geometry.size, z: 1))
 
           Text(shouldScaleFont ? dizhi.chineseCalendarMonthName : dizhi.chineseCharactor)
-            .rotationEffect(getRotatingAngle(for: dizhiIndex - 2, base: 12))
-            .offset(angle12Position(for: dizhiIndex - 2, in: geometry.size, z: 2))
+            .rotationEffect(getRotatingAngle(for: dizhiIndex - 3, base: 12))
+            .offset(angle12Position(for: dizhiIndex - 3, in: geometry.size, z: 2))
 
           let gua = ShierPiguas[dizhiIndex]
 
@@ -64,8 +64,8 @@ struct ShierPiguaView: View {
             }
             Text(gua.chineseCharacter)
           }
-          .rotationEffect(getRotatingAngle(for: dizhiIndex, base: 12))
-          .offset(angle12Position(for: dizhiIndex, in: geometry.size, z: 3))
+          .rotationEffect(getRotatingAngle(for: dizhiIndex - 1, base: 12))
+          .offset(angle12Position(for: dizhiIndex - 1, in: geometry.size, z: 3))
         }
         .font(font)
 

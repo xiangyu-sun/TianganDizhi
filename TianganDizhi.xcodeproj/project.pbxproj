@@ -39,7 +39,7 @@
 		46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E055B724B065BD00AC2AE5 /* ShichenView.swift */; };
 		46EF7F7E271077AE007030CC /* JieqiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F7D271077AE007030CC /* JieqiListView.swift */; };
 		46EF7F8027107968007030CC /* JieqiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F7F27107968007030CC /* JieqiCell.swift */; };
-		46EF7F8427108D73007030CC /* JieqiContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* JieqiContainerView.swift */; };
+		46EF7F8427108D73007030CC /* ShierPiguaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* ShierPiguaView.swift */; };
 		46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 46F9C28425D137020017440D /* ChineseTranditionalMusicCore */; };
 		46F9C28C25D137D50017440D /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9C28B25D137D50017440D /* Cells.swift */; };
 		990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
@@ -118,7 +118,7 @@
 		9963207A290DE1DE000C4A2B /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
 		9963207B290DE1DE000C4A2B /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963204A290C32C1000C4A2B /* DateProvider.swift */; };
 		9963207C290DE1DE000C4A2B /* TwelveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994B3BBE28FB34C800F9CF67 /* TwelveView.swift */; };
-		9963207E290DE1DE000C4A2B /* JieqiContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* JieqiContainerView.swift */; };
+		9963207E290DE1DE000C4A2B /* ShierPiguaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* ShierPiguaView.swift */; };
 		99632080290DE1DE000C4A2B /* KnowledgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE825028279007D4137 /* KnowledgeView.swift */; };
 		99632081290DE1DE000C4A2B /* DizhiGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994B3BC028FB35C000F9CF67 /* DizhiGridView.swift */; };
 		99632082290DE1DE000C4A2B /* DizhiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55FC242B5F7100F6604A /* DizhiListView.swift */; };
@@ -214,6 +214,8 @@
 		99A0B7A72DB59093000F2AD7 /* JieqiWidget.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A0B7A62DB59093000F2AD7 /* JieqiWidget.xcassets */; };
 		99A0B7A92DB590A7000F2AD7 /* JieqiWidget.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A0B7A62DB59093000F2AD7 /* JieqiWidget.xcassets */; };
 		99A0B7AA2DB590A7000F2AD7 /* JieqiWidget.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99A0B7A62DB59093000F2AD7 /* JieqiWidget.xcassets */; };
+		99A0B7B32DB68CBE000F2AD7 /* YangliShierPiguaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7B22DB68CBE000F2AD7 /* YangliShierPiguaView.swift */; };
+		99A0B7B42DB68CBE000F2AD7 /* YangliShierPiguaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7B22DB68CBE000F2AD7 /* YangliShierPiguaView.swift */; };
 		99A2B708297EBA6B00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B709297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
@@ -409,7 +411,7 @@
 		46E055B724B065BD00AC2AE5 /* ShichenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenView.swift; sourceTree = "<group>"; };
 		46EF7F7D271077AE007030CC /* JieqiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiListView.swift; sourceTree = "<group>"; };
 		46EF7F7F27107968007030CC /* JieqiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiCell.swift; sourceTree = "<group>"; };
-		46EF7F8327108D73007030CC /* JieqiContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiContainerView.swift; sourceTree = "<group>"; };
+		46EF7F8327108D73007030CC /* ShierPiguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShierPiguaView.swift; sourceTree = "<group>"; };
 		46F9C28B25D137D50017440D /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		990FEAD7294C9EA800CB1CEF /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		990FEADC294CA2FE00CB1CEF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -486,6 +488,7 @@
 		99A0B7A62DB59093000F2AD7 /* JieqiWidget.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JieqiWidget.xcassets; sourceTree = "<group>"; };
 		99A0B7AD2DB679DC000F2AD7 /* ShichenWatchExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShichenWatchExtension.entitlements; sourceTree = "<group>"; };
 		99A0B7AE2DB67A03000F2AD7 /* ShichenWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShichenWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		99A0B7B22DB68CBE000F2AD7 /* YangliShierPiguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YangliShierPiguaView.swift; sourceTree = "<group>"; };
 		99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimelineProvider.swift; sourceTree = "<group>"; };
 		99BC3C052968355E004AB614 /* CountDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownWidget.swift; sourceTree = "<group>"; };
 		99BC3C0A29683678004AB614 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
@@ -853,7 +856,8 @@
 			isa = PBXGroup;
 			children = (
 				99ECAED32A4798F0004997FD /* LiushisiGuaView.swift */,
-				46EF7F8327108D73007030CC /* JieqiContainerView.swift */,
+				46EF7F8327108D73007030CC /* ShierPiguaView.swift */,
+				99A0B7B22DB68CBE000F2AD7 /* YangliShierPiguaView.swift */,
 				996C53192B1FC68000AC832F /* BaguaView.swift */,
 				996C531B2B1FCFAD00AC832F /* GuaListView.swift */,
 			);
@@ -1406,10 +1410,11 @@
 				46B79C402541F95F003C0B7F /* Environment.swift in Sources */,
 				992A7E602DB56A8100B372CA /* Date+Jieqi.swift in Sources */,
 				997CD11A2954FDB600BECF31 /* Constants.swift in Sources */,
+				99A0B7B42DB68CBE000F2AD7 /* YangliShierPiguaView.swift in Sources */,
 				46339FEB25028DB5007D4137 /* MainView.swift in Sources */,
 				9911517629DF3E5500A7CE54 /* DateColorModifier.swift in Sources */,
 				99ECAECF2A475BAA004997FD /* Date+WidgetIntent.swift in Sources */,
-				46EF7F8427108D73007030CC /* JieqiContainerView.swift in Sources */,
+				46EF7F8427108D73007030CC /* ShierPiguaView.swift in Sources */,
 				46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				99632043290C2D1E000C4A2B /* TianganDizhiApp.swift in Sources */,
 				46E055B224B02FA900AC2AE5 /* CircularContainerView.swift in Sources */,
@@ -1492,6 +1497,7 @@
 				990FEAE2294CE89400CB1CEF /* WeatherData.swift in Sources */,
 				99632074290DE1DE000C4A2B /* Cells.swift in Sources */,
 				99632080290DE1DE000C4A2B /* KnowledgeView.swift in Sources */,
+				99A0B7B32DB68CBE000F2AD7 /* YangliShierPiguaView.swift in Sources */,
 				99632084290DE1DE000C4A2B /* ShichenView.swift in Sources */,
 				9963207C290DE1DE000C4A2B /* TwelveView.swift in Sources */,
 				99632086290DE1DE000C4A2B /* TianganListView.swift in Sources */,
@@ -1501,7 +1507,7 @@
 				99632083290DE1DE000C4A2B /* CircularContainerView.swift in Sources */,
 				99F0EF3629FFF0A2008476B6 /* WuyinView.swift in Sources */,
 				994215EF2965C810003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
-				9963207E290DE1DE000C4A2B /* JieqiContainerView.swift in Sources */,
+				9963207E290DE1DE000C4A2B /* ShierPiguaView.swift in Sources */,
 				995997082B3DF1AB002288D1 /* MultiSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
