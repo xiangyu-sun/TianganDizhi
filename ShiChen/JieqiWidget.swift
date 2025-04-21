@@ -47,18 +47,18 @@ struct JieqiWidget: Widget {
           if sameDate {
             Text(date, style: .date)
               .font(.callout)
-              .environment(\.locale, .init(identifier: "zh-Hant"))
+              .environment(\.locale, Locale.current)
             
             Text(jieqi.chineseName)
               .font(largeTitleFont)
           } else {
             Text(entry.date, style: .date)
               .font(.callout)
-              .environment(\.locale, .init(identifier: "zh-Hant"))
+              .environment(\.locale, Locale.current)
             Text(date, style: .date)
               .font(.callout)
               .foregroundColor(.secondary)
-              .environment(\.locale, .init(identifier: "zh-Hant"))
+              .environment(\.locale, Locale.current)
             
             Text(jieqi.chineseName)
               .foregroundColor(.secondary)

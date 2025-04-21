@@ -64,6 +64,7 @@ struct CountDownView: View {
       VStack(alignment: .leading) {
         Text("距離\(title)")
         Text(event.date, style: .relative)
+          .environment(\.locale, Locale.current)
       }
       .font(bodyFont)
       .foregroundColor(color)
@@ -76,6 +77,7 @@ struct CountDownView: View {
         Text("距離\(title)")
           .font(title3Font)
         Text(event.date, style: .relative)
+          .environment(\.locale, Locale.current)
           .font(title3Font)
         Spacer()
       }
@@ -95,7 +97,6 @@ struct CountDownView_Previews: PreviewProvider {
     if #available(iOSApplicationExtension 16.0, *) {
       Group {
         CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-          .environment(\.locale, Locale(identifier: "zh_Hant"))
           .previewContext(WidgetPreviewContext(family: .accessoryInline))
           .previewDisplayName("Inline")
 
@@ -110,7 +111,6 @@ struct CountDownView_Previews: PreviewProvider {
       CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
-    .environment(\.locale, Locale(identifier: "zh_Hant"))
     #endif
   }
 }
