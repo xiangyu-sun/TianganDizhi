@@ -44,8 +44,8 @@ struct ShierPiguaView: View {
           Text(jieqi.chineseName)
             .rotationEffect(getRotatingAngle(for: jieqi.rawValue, base: 24))
             .offset(anglePosition(for: jieqi.rawValue, in: geometry.size))
-          // add one to make sure the rest of system works
-          let dizhi = Dizhi(rawValue: (jieqi.rawValue + 1) / 2) ?? .chen
+          
+          let dizhi = Dizhi(rawValue: max((jieqi.rawValue + 1) / 2, 1)) ?? .chen
           let dizhiIndex = dizhi.rawValue - 1
 
           Text(Key.shierLvLvMonthOrder[dizhiIndex].lvlvDescription)
@@ -64,8 +64,8 @@ struct ShierPiguaView: View {
             }
             Text(gua.chineseCharacter)
           }
-          .rotationEffect(getRotatingAngle(for: dizhiIndex + 3, base: 12))
-          .offset(angle12Position(for: dizhiIndex + 3, in: geometry.size, z: 3))
+          .rotationEffect(getRotatingAngle(for: dizhiIndex, base: 12))
+          .offset(angle12Position(for: dizhiIndex, in: geometry.size, z: 3))
         }
         .font(font)
 
