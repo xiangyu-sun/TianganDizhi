@@ -14,17 +14,17 @@ import WidgetKit
 
 @available(iOS 16.0, *)
 struct CircularWidgetView: View {
-
+  
   @Environment(\.bodyFont) var bodyFont
-
+  
   @State var date: Date
-
+  
   var body: some View {
     if let shichen = date.shichen {
       let start = date.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
-
+      
       let base = shichen.endDate.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
-
+      
       ProgressView(
         value: start / base,
         label: {
@@ -34,14 +34,15 @@ struct CircularWidgetView: View {
         currentValueLabel: {
           Text(shichen.dizhi.displayHourText)
             .widgetAccentable()
-          #if os(iOS)
+#if os(iOS)
             .font(bodyFont)
-          #endif
+#endif
         })
-        .progressViewStyle(.circular)
-        .containerBackgroundForWidget {
-          Color.clear
-        }
+      .widgetAccentable()
+      .progressViewStyle(.circular)
+      .containerBackgroundForWidget {
+        Color.clear
+      }
     } else {
       EmptyView()
         .containerBackgroundForWidget {
@@ -56,12 +57,12 @@ struct CircularWidgetView: View {
 @available(iOSApplicationExtension 16.0, *)
 struct CircularWidgetView_Previews: PreviewProvider {
   static var previews: some View {
-    #if os(macOS)
+#if os(macOS)
     CircularWidgetView(date: .now)
       .previewContext(WidgetPreviewContext(family: .systemLarge))
-    #else
+#else
     CircularWidgetView(date: .now)
       .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-    #endif
+#endif
   }
 }

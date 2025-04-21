@@ -58,6 +58,7 @@ struct ShiChenEntryView: View {
     #if os(watchOS)
     case .accessoryCorner:
       CornerView(date: entry.date)
+        .widgetAccentable()
     #endif
 
     case .systemMedium:
