@@ -108,8 +108,8 @@ struct ExtraLargeWidgetView_Previews: PreviewProvider {
 
   static var previews: some View {
     ExtraLargeWidgetView(date: Date())
+      .previewDevice(.init(stringLiteral: "iPad Pro 13-inch (M4)"))
       .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
-      .previewDisplayName("systemExtraLarge")
   }
 }
 #endif
