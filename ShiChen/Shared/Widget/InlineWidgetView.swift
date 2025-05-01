@@ -31,7 +31,7 @@ struct InlineWidgetView: View {
 
 // MARK: - InlineWidgetView_Previews
 
-@available(iOSApplicationExtension 16.1, *)
+@available(iOS 16.1, *)
 struct InlineWidgetView_Previews: PreviewProvider {
   static var previews: some View {
     #if os(macOS)

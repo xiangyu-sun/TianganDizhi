@@ -8,10 +8,28 @@
 
 import SwiftUI
 import WidgetKit
-
+import Astral
 import ChineseAstrologyCalendar
 
 // MARK: - RetangularWidgetView
+
+extension Date {
+  var jieQi: String? {
+    if let jieqi = Jieqi.current {
+      let nextDate = preciseNextSolarTermDate()
+
+      let interval = nextDate.timeIntervalSince(Date())
+      let days = Int(floor(interval / 86_400))
+
+      if days < 1 {
+        return jieqi.chineseName
+      }
+
+    }
+    return nil
+  }
+}
+
 
 @available(iOS 16.0, *)
 struct RetangularWidgetView: View {
@@ -26,10 +44,11 @@ struct RetangularWidgetView: View {
     let shichen = date.shichen
 
     HStack {
-      Text(date.displayStringOfChineseYearMonthDateWithZodiac)
-        .font(.callout)
+      Text(date.displayStringOfChineseYearMonthDateWithZodiac + (date.jieQi ?? ""))
+        .font(.body)
       Text(shichen?.dizhi.displayHourText ?? "")
-        .font(.callout)
+        .font(.body)
+
     }
     .widgetAccentable()
     .containerBackgroundForWidget(content: { Color.clear })
@@ -38,7 +57,7 @@ struct RetangularWidgetView: View {
 
 // MARK: - RetangularWidgetView_Previews
 
-@available(iOSApplicationExtension 16.0, *)
+@available(iOS 16.0, *)
 struct RetangularWidgetView_Previews: PreviewProvider {
   static var previews: some View {
     #if os(macOS)

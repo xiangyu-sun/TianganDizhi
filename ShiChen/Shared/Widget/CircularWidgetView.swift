@@ -52,7 +52,7 @@ struct CircularWidgetView: View {
 
 // MARK: - CircularWidgetView_Previews
 
-@available(iOSApplicationExtension 16.0, *)
+@available(iOS 16.0, *)
 struct CircularWidgetView_Previews: PreviewProvider {
   static var previews: some View {
     #if os(macOS)
