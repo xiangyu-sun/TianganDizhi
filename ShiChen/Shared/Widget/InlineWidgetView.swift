@@ -15,8 +15,6 @@ import WidgetKit
 @available(iOS 16.1, *)
 struct InlineWidgetView: View {
 
-  @Environment(\.bodyFont) var bodyFont
-
   @State var date: Date
 
   var body: some View {
@@ -26,7 +24,7 @@ struct InlineWidgetView: View {
       Text("\(date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen?.dizhi.displayHourText ?? "")")
       Text(shichen?.dizhi.displayHourText ?? "")
     }
-    .font(bodyFont)
+    .font(.body)
     .widgetAccentable()
   }
 }

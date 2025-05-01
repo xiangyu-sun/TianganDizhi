@@ -27,13 +27,9 @@ struct RetangularWidgetView: View {
 
     HStack {
       Text(date.displayStringOfChineseYearMonthDateWithZodiac)
-        .font(calloutFont)
+        .font(.callout)
       Text(shichen?.dizhi.displayHourText ?? "")
-      #if os(watchOS)
-        .font(titleFont)
-      #else
-        .font(title3Font)
-      #endif
+        .font(.callout)
     }
     .widgetAccentable()
     .containerBackgroundForWidget(content: { Color.clear })

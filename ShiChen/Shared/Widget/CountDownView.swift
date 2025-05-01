@@ -47,7 +47,7 @@ struct CountDownView: View {
     switch family {
     case .accessoryInline:
       Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
-        .font(bodyFont)
+        .font(.body)
         .containerBackgroundForWidget {
           Color.clear
         }
@@ -57,7 +57,7 @@ struct CountDownView: View {
         Text(title)
         Text(event.date, style: .relative)
       }
-      .font(headlineFont)
+      .font(.headline)
       .containerBackgroundForWidget {
         Color.clear
       }

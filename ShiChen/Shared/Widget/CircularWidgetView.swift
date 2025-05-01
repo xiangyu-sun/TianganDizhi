@@ -15,8 +15,6 @@ import WidgetKit
 @available(iOS 16.0, *)
 struct CircularWidgetView: View {
 
-  @Environment(\.bodyFont) var bodyFont
-
   @State var date: Date
 
   var body: some View {
@@ -35,7 +33,7 @@ struct CircularWidgetView: View {
           Text(shichen.dizhi.displayHourText)
             .widgetAccentable()
           #if os(iOS)
-            .font(bodyFont)
+            .font(.body)
           #endif
         })
         .widgetAccentable()
