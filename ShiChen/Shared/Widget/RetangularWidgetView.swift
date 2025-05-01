@@ -44,10 +44,10 @@ struct RetangularWidgetView: View {
     let shichen = date.shichen
 
     HStack {
-      Text(date.displayStringOfChineseYearMonthDateWithZodiac + (date.jieQi ?? ""))
+      Text(date.displayStringOfChineseYearMonthDateWithZodiac + (date.jieQi.map{ "·" + $0 } ?? ""))
         .font(.body)
       Text(shichen?.dizhi.displayHourText ?? "")
-        .font(.body)
+        .font(.headline)
 
     }
     .widgetAccentable()
