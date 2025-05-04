@@ -27,6 +27,10 @@ extension Date {
     }
     return nil
   }
+  
+  var nextJieqiWithConnector: String {
+    (nextJieQi ?? "") + (nextJieQi.map { _ in "·" } ?? "")
+  }
 }
 
 @available(iOS 16.0, *)

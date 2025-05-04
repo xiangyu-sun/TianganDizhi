@@ -28,13 +28,12 @@ struct ExtraLargeWidgetView: View {
 
   var body: some View {
     HStack {
-      VStack {
+      VStack(alignment: .center) {
         FullDateTitleView(date: date)
           .font(titleFont)
-        Spacer(minLength: 4)
-
-        Text(date.jieQiText)
-          .font(bodyFont)
+        
+//        Text(date.jieQiText)
+//        .font(bodyFont)
 
         if let value = weatherData.forcastedWeather {
           MoonInformationView(info: value)
@@ -52,11 +51,9 @@ struct ExtraLargeWidgetView: View {
           }
         }
         if let shichen = date.shichen {
-          Spacer(minLength: 4)
           ShichenHStackView(shichen: shichen.dizhi)
             .padding([.top])
         }
-        Spacer()
       }
       .padding([.leading, .top, .bottom])
 
