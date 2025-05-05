@@ -15,6 +15,7 @@ struct FullDateTitleView: View {
   var body: some View {
     HStack {
       Text(date.displayStringOfChineseYearMonthDateWithZodiac)
+      date.nextJieQi.map{ Text($0.description) }
       if displayMoonPhaseOnWidgets {
         Text(date.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
       }

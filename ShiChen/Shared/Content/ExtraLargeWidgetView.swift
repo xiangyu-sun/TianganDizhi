@@ -29,7 +29,9 @@ struct ExtraLargeWidgetView: View {
   var body: some View {
     HStack {
       VStack(alignment: .center) {
-        FullDateTitleView(date: date)
+        HStack() {
+          Text(date.displayStringOfChineseYearMonthDateWithZodiac)
+        }
           .font(titleFont)
         
         date.nextJieQi.map{ Text($0.description) }
