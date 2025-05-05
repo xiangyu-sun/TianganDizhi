@@ -99,7 +99,7 @@ struct ShiChenEntryView: View {
           VStack(spacing: 0) {
             FullDateTitleView(date: entry.date)
               .font(title3Font)
-
+            
             Text(entry.date.jieQiText)
               .font(bodyFont)
 

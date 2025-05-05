@@ -32,6 +32,7 @@ struct MediumWidgetView: View {
       Spacer(minLength: 8)
       FullDateTitleView(date: date)
         .font(title3Font)
+
       #if os(iOS) || os(macOS)
       Spacer(minLength: 4)
       if let value = weatherData.forcastedWeather {

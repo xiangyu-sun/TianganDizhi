@@ -19,9 +19,9 @@ extension Date {
       let nextDate = preciseNextSolarTermDate()
 
       let interval = nextDate.timeIntervalSince(Date())
-      let days = Int(floor(interval / 3600))
+      let days = Int(floor(interval / 86_400)) // floor of full days
 
-      if days < 1 {
+      if days < 1 || days > 14 {
         return jieqi.chineseName
       }
     }
@@ -29,7 +29,7 @@ extension Date {
   }
   
   var nextJieqiWithConnector: String {
-    (nextJieQi ?? "") + (nextJieQi.map { _ in "·" } ?? "")
+    (nextJieQi.map { _ in "·" } ?? "") + (nextJieQi ?? "")
   }
 }
 

@@ -15,9 +15,9 @@ extension Date {
       let nextDate = preciseNextSolarTermDate()
 
       let interval = nextDate.timeIntervalSince(Date())
-      let days = Int(ceil(interval / 86_400)) // floor of full days
+      let days = Int(floor(interval / 86_400)) // floor of full days
 
-      if days < 14 {
+      if days >= 1 && days <= 14 {
         return "\(days)天之後\(nextDate.jieqi?.chineseName ?? "")"
       } else {
         return jieqi.chineseName
