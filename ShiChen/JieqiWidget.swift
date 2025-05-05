@@ -27,7 +27,7 @@ struct JieqiWidget: Widget {
     let interval = nextDate.timeIntervalSince(date)
     let days = Int(ceil(interval / 86_400)) // floor of full days
 
-    if days <= 14 {
+    if days >= 1 && days <= 14 {
       return nextDate
     } else {
       return date
