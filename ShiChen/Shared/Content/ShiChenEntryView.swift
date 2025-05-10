@@ -100,7 +100,7 @@ struct ShiChenEntryView: View {
             FullDateTitleView(date: entry.date)
               .font(title3Font)
             
-            Text(entry.date.jieQiText)
+            Text(entry.date.jieQiDisplayText)
               .font(bodyFont)
 
             if let shichen = entry.date.shichen {

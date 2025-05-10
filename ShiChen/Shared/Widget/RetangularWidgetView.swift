@@ -14,22 +14,18 @@ import WidgetKit
 // MARK: - RetangularWidgetView
 
 extension Date {
-  var nextJieQi: String? {
+  var nextJieJiWithinOneDay: String? {
     if let jieqi = Jieqi.current {
       let nextDate = preciseNextSolarTermDate()
 
       let interval = nextDate.timeIntervalSince(Date())
-      let days = Int(floor(interval / 86_400)) // floor of full days
+      let days = Int(ceil(interval / 86_400)) // floor of full days
 
-      if days < 1 || days > 14 {
+      if days < 1 {
         return jieqi.chineseName
       }
     }
     return nil
-  }
-  
-  var nextJieqiWithConnector: String {
-    (nextJieQi.map { _ in "·" } ?? "") + (nextJieQi ?? "")
   }
 }
 
@@ -46,7 +42,7 @@ struct RetangularWidgetView: View {
     let shichen = date.shichen
 
     HStack {
-      Text(date.displayStringOfChineseYearMonthDateWithZodiac + (date.nextJieQi.map { "·" + $0 } ?? ""))
+      Text(date.displayStringOfChineseYearMonthDateWithZodiac + (date.nextJieJiWithinOneDay.map { "·" + $0 } ?? ""))
         .font(.body)
       Text(shichen?.dizhi.displayHourText ?? "")
         .font(.headline)

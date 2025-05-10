@@ -10,15 +10,15 @@ import ChineseAstrologyCalendar
 import Foundation
 
 extension Date {
-  var jieQiText: String {
+  var jieQiDisplayText: String {
     if let jieqi = Jieqi.current {
       let nextDate = preciseNextSolarTermDate()
 
       let interval = nextDate.timeIntervalSince(Date())
-      let days = Int(floor(interval / 86_400)) // floor of full days
+      let days = Int(round(interval / 86_400)) // floor of full days
 
       if days >= 1 && days <= 14 {
-        return "\(days)天之後\(nextDate.jieqi?.chineseName ?? "")"
+        return "\(days)日後\(nextDate.jieqi?.chineseName ?? "")"
       } else {
         return jieqi.chineseName
       }

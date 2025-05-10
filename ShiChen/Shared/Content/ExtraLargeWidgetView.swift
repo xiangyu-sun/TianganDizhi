@@ -34,7 +34,7 @@ struct ExtraLargeWidgetView: View {
         }
           .font(titleFont)
         
-        date.nextJieQi.map{ Text($0.description) }
+        date.nextJieJiWithinOneDay.map{ Text($0) }
           .font(bodyFont)
 
         if let value = weatherData.forcastedWeather {

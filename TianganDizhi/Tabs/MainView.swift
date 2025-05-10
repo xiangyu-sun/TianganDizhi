@@ -57,7 +57,7 @@ struct MainView: View {
         Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
           .font(titleFont)
 
-        Text(updater.currentDate.jieQiText)
+        Text(updater.currentDate.jieQiDisplayText)
           .font(bodyFont)
 
         if let value = weatherData.forcastedWeather {
