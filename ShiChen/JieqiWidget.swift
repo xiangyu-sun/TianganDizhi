@@ -23,9 +23,8 @@ struct JieqiWidget: Widget {
 
   func getDate(date: Date) -> Date {
     let nextDate = preciseNextSolarTermDate(from: date)
-
-    let interval = nextDate.timeIntervalSince(date)
-    let days = Int(floor(interval / 86_400)) // floor of full days
+    
+    let days = nextDate.dayDifference(date)
 
     if days >= 1 && days <= 14 {
       return nextDate
