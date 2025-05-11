@@ -31,7 +31,7 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
     defaultRecommendedIntents().map { intent in
       let description = Date().shichen?.dizhi.chineseCharactor ?? ""
-      return IntentRecommendation(intent: intent, description: "節氣組件" + description)
+      return IntentRecommendation(intent: intent, description: "二十四節氣桌面組件" + description)
     }
   }
 
@@ -48,7 +48,7 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
       configuration.location = "\(String(describing: location))"
     }
 
-    for date in DailyTimeLineSceduler.buildTimeLine() {
+    for date in ShichenTimeLineSceduler.buildTimeLine() {
       let entry = SimpleEntry(date: date, configuration: configuration)
       entries.append(entry)
     }
