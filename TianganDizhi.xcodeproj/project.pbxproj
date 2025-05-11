@@ -246,6 +246,7 @@
 		99F19D9029E09C4E005C5949 /* SunInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */; };
 		99F19D9129E09CC1005C5949 /* DateColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9911517529DF3E5500A7CE54 /* DateColorModifier.swift */; };
 		99F19D9229E09D83005C5949 /* MoonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1D29A3E188008DC1A9 /* MoonInformationView.swift */; };
+		99F6B6F92DD0E93C0080D4CB /* DayDifferenceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F6B6F82DD0E93C0080D4CB /* DayDifferenceTest.swift */; };
 		99F9DDCB29E0C3A400E69B8E /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */; };
 		99F9DDCC29E0C3A700E69B8E /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */; };
 		99F9DDCD29E0C41700E69B8E /* MediumWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */; };
@@ -496,6 +497,7 @@
 		99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WidgetIntent.swift"; sourceTree = "<group>"; };
 		99ECAED32A4798F0004997FD /* LiushisiGuaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiushisiGuaView.swift; sourceTree = "<group>"; };
 		99F0EF3429FFEF81008476B6 /* WuyinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuyinView.swift; sourceTree = "<group>"; };
+		99F6B6F82DD0E93C0080D4CB /* DayDifferenceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDifferenceTest.swift; sourceTree = "<group>"; };
 		99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetView.swift; sourceTree = "<group>"; };
 		99FD3EEA291E9DC00048DCEB /* ScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTests.swift; sourceTree = "<group>"; };
 		99FD3F46292296170048DCEB /* ShichenMacWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShichenMacWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -706,6 +708,7 @@
 			isa = PBXGroup;
 			children = (
 				46AB55E1242B5EFF00F6604A /* TianganDizhiTests.swift */,
+				99F6B6F82DD0E93C0080D4CB /* DayDifferenceTest.swift */,
 				46AB55E3242B5EFF00F6604A /* Info.plist */,
 			);
 			path = TianganDizhiTests;
@@ -1453,6 +1456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46AB55E2242B5EFF00F6604A /* TianganDizhiTests.swift in Sources */,
+				99F6B6F92DD0E93C0080D4CB /* DayDifferenceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
