@@ -32,12 +32,16 @@ struct JiaziView: View {
   var components: DateComponents {
     Date().dateComponentsFromChineseCalendar()
   }
+  
+  var normalCompoenent: DateComponents {
+    Date().dateComponentsFromCurrentCalendar
+  }
 
   var body: some View {
     let nian = components.nian
     let yue = components.yue
-    let ri = components.riZhu
-    let shi = components.shiZhu
+    let ri = normalCompoenent.riZhu
+    let shi = normalCompoenent.shiZhu
     GeometryReader { proxy in
       ScrollView {
         LazyVGrid(columns: columns, alignment: .center, spacing: 0) {

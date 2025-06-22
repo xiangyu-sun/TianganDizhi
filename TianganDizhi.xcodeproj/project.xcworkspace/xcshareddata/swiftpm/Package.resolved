@@ -25,7 +25,7 @@
       "location" : "git@github.com:xiangyu-sun/Bagua.git",
       "state" : {
         "branch" : "main",
-        "revision" : "fe18bf3f68f3a02d8d92c2066ae0028dbb5a9ec9"
+        "revision" : "831d1b978b58bb1d890df27c11811c97c00475d2"
       }
     },
     {
@@ -34,7 +34,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
         "branch" : "master",
-        "revision" : "86d5e6c29b8d41cf299b0b72342ce99954497653"
+        "revision" : "b2d7f0f38651f6063e96b32e6f92d7533c649660"
       }
     },
     {
@@ -87,8 +87,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser",
       "state" : {
-        "revision" : "41982a3656a71c768319979febd796c6fd111d5c",
-        "version" : "1.5.0"
+        "revision" : "011f0c765fb46d9cac61bca19be0527e99c98c8b",
+        "version" : "1.5.1"
       }
     },
     {
