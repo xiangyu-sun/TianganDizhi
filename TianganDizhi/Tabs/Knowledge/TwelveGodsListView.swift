@@ -20,7 +20,7 @@ struct TwelveGodsListView: View {
       ForEach(twelveGods, id: \.self) { god in
         Image(god.pinYinWithoutAccent)
           .resizable()
-          .scaledToFit()
+          .scaledToFill()
           .ignoresSafeArea()
           .tag(god)
           .overlay(
@@ -43,13 +43,12 @@ struct TwelveGodCell: View {
         Spacer()
         Group() {
           Text("\(god.meaning)")
-          Text("\(god.do)")
+          Text("宜：\(god.do)")
           Text("\(god.dontDo)")
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding([.leading, .trailing])
         .background(.ultraThinMaterial)
       }
+      .padding()
       .font(bodyFont)
       
     } else {
