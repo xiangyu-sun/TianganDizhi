@@ -58,8 +58,9 @@ struct MainView: View {
         {
           Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
           Text(updater.currentDate.twelveGod().map { "·" + $0.chinese } ?? "")
-          
         }
+        .lineLimit(1)
+        .minimumScaleFactor(0.8)
         .font(titleFont)
 
         Text(updater.currentDate.jieQiDisplayText)
