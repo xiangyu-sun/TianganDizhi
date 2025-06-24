@@ -20,7 +20,7 @@ struct TwelveGodsListView: View {
     List(twelveGods, id: \.self) {
       TwelveGodCell(god: $0)
     }
-#else
+#elseif os(iOS)
     TabView(selection: $currentPage) {
       ForEach(twelveGods, id: \.self) { god in
         Image(god.pinYinWithoutAccent)
@@ -34,6 +34,19 @@ struct TwelveGodsListView: View {
       }
     }
     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+#else
+    TabView(selection: $currentPage) {
+      ForEach(twelveGods, id: \.self) { god in
+        Image(god.pinYinWithoutAccent)
+          .resizable()
+          .scaledToFill()
+          .ignoresSafeArea()
+          .tag(god)
+          .overlay(
+            TwelveGodCell(god: god)
+          )
+      }
+    }
 #endif
 
   }
