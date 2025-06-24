@@ -221,6 +221,8 @@
 		99A2B708297EBA6B00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B709297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
+		99B59A442E0AFC8B0068FDED /* Jianchu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B59A432E0AFC8B0068FDED /* Jianchu.xcassets */; };
+		99B59A452E0AFC8B0068FDED /* Jianchu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B59A432E0AFC8B0068FDED /* Jianchu.xcassets */; };
 		99BC3C072968359D004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
 		99BC3C082968359E004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
 		99BC3C092968359E004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
@@ -494,6 +496,7 @@
 		99A0B7AE2DB67A03000F2AD7 /* ShichenWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShichenWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		99A0B7B22DB68CBE000F2AD7 /* YangliShierPiguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YangliShierPiguaView.swift; sourceTree = "<group>"; };
 		99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimelineProvider.swift; sourceTree = "<group>"; };
+		99B59A432E0AFC8B0068FDED /* Jianchu.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Jianchu.xcassets; sourceTree = "<group>"; };
 		99BC3C052968355E004AB614 /* CountDownWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownWidget.swift; sourceTree = "<group>"; };
 		99BC3C0A29683678004AB614 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		99BC3C0F296A2918004AB614 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
@@ -614,6 +617,7 @@
 				99FD3F742927EBD90048DCEB /* WuxingView.swift */,
 				99F0EF3429FFEF81008476B6 /* WuyinView.swift */,
 				995904162E0AE5BF00E625A4 /* TwelveGodsListView.swift */,
+				99B59A432E0AFC8B0068FDED /* Jianchu.xcassets */,
 			);
 			path = Knowledge;
 			sourceTree = "<group>";
@@ -1278,6 +1282,7 @@
 				46AB55D4242B5EFF00F6604A /* Preview Assets.xcassets in Resources */,
 				46AB55D1242B5EFF00F6604A /* Assets.xcassets in Resources */,
 				9963214A2911B8E4000C4A2B /* Shared.xcassets in Resources */,
+				99B59A442E0AFC8B0068FDED /* Jianchu.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1305,6 +1310,7 @@
 				998898E32A74514300A4E48C /* ShiChen.xcstrings in Resources */,
 				997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */,
 				997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */,
+				99B59A452E0AFC8B0068FDED /* Jianchu.xcassets in Resources */,
 				993CFB9928809F690015252E /* WeibeiTC-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

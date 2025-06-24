@@ -10,13 +10,25 @@ import ChineseAstrologyCalendar
 import SwiftUI
 
 
+
 struct TwelveGodsListView: View {
-  let tiangan = TwelveGods.allCases
+  let twelveGods = TwelveGods.allCases
+  @State private var currentPage:TwelveGods = .jian
+  
   var body: some View {
-    List(tiangan, id: \.self) {
-      TwelveGodCell(god: $0)
+    TabView(selection: $currentPage) {
+      ForEach(twelveGods, id: \.self) { god in
+        Image(god.pinYinWithoutAccent)
+          .resizable()
+          .scaledToFit()
+          .ignoresSafeArea()
+          .tag(god)
+          .overlay(
+            TwelveGodCell(god: god)
+          )
+      }
     }
-    .navigationTitle("十天干")
+    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
   }
 }
 
@@ -26,16 +38,30 @@ struct TwelveGodCell: View {
   let god: TwelveGods
   @Environment(\.bodyFont) var bodyFont
   var body: some View {
-    HStack {
-      Text(god.chinese)
-      Text("(\(god.chinese.transformToPinyin()))")
-      Spacer()
-      Text("\(god.meaning)")
-      Text("\(god.do)")
-      Text("\(god.dontDo)")
+    if #available(iOS 15.0, watchOS 10.0, *) {
+      VStack(alignment: .leading){
+        Spacer()
+        Group() {
+          Text("\(god.meaning)")
+          Text("\(god.do)")
+          Text("\(god.dontDo)")
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding([.leading, .trailing])
+        .background(.ultraThinMaterial)
+      }
+      .font(bodyFont)
+      
+    } else {
+      VStack(alignment: .leading){
+        Spacer()
+        Text("\(god.meaning)")
+        Text("\(god.do)")
+        Text("\(god.dontDo)")
+      }
+      .padding()
+      .font(bodyFont)
     }
-    .padding()
-    .font(bodyFont)
   }
 }
 

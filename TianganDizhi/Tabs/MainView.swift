@@ -154,7 +154,7 @@ struct MainView: View {
           .padding(.bottom)
         }
       }
-
+// TODO: adding the New YEar Count down for next year Jan
 //      HStack(spacing: 0) {
 //        Text(event.date, style: .relative)
 //        Text("後\(title)")
