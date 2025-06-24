@@ -31,7 +31,7 @@ struct MediumWidgetView: View {
     VStack {
       Spacer(minLength: 8)
       FullDateTitleView(date: date)
-        .font(title3Font)
+          .font(title3Font)
   
       #if os(iOS) || os(macOS)
       Spacer(minLength: 4)

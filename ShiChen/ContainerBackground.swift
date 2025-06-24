@@ -2,7 +2,6 @@ import SwiftUI
 
 extension View {
   func containerBackgroundForWidget(
-    alignment _: Alignment = .center,
     @ViewBuilder content: @escaping () -> some View)
     -> some View
   {

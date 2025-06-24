@@ -16,6 +16,11 @@ struct TwelveGodsListView: View {
   @State private var currentPage:TwelveGods = .jian
   
   var body: some View {
+#if os(watchOS)
+    List(twelveGods, id: \.self) {
+      TwelveGodCell(god: $0)
+    }
+#else
     TabView(selection: $currentPage) {
       ForEach(twelveGods, id: \.self) { god in
         Image(god.pinYinWithoutAccent)
@@ -29,6 +34,8 @@ struct TwelveGodsListView: View {
       }
     }
     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+#endif
+
   }
 }
 
@@ -42,6 +49,9 @@ struct TwelveGodCell: View {
       VStack(alignment: .leading){
         Spacer()
         Group() {
+#if os(watchOS)
+          Text("\(god.chinese)")
+#endif
           Text("\(god.meaning)")
           Text("宜：\(god.do)")
           Text("\(god.dontDo)")

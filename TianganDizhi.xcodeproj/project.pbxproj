@@ -222,7 +222,6 @@
 		99A2B709297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A2B706297EBA5A00086CC7 /* CountDownTimelineProvider.swift */; };
 		99B59A442E0AFC8B0068FDED /* Jianchu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B59A432E0AFC8B0068FDED /* Jianchu.xcassets */; };
-		99B59A452E0AFC8B0068FDED /* Jianchu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B59A432E0AFC8B0068FDED /* Jianchu.xcassets */; };
 		99BC3C072968359D004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
 		99BC3C082968359E004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
 		99BC3C092968359E004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
@@ -1310,7 +1309,6 @@
 				998898E32A74514300A4E48C /* ShiChen.xcstrings in Resources */,
 				997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */,
 				997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */,
-				99B59A452E0AFC8B0068FDED /* Jianchu.xcassets in Resources */,
 				993CFB9928809F690015252E /* WeibeiTC-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
