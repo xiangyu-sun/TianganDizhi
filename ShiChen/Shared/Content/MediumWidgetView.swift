@@ -32,7 +32,7 @@ struct MediumWidgetView: View {
       Spacer(minLength: 8)
       FullDateTitleView(date: date)
         .font(title3Font)
-
+  
       #if os(iOS) || os(macOS)
       Spacer(minLength: 4)
       if let value = weatherData.forcastedWeather {
@@ -52,6 +52,8 @@ struct MediumWidgetView: View {
       }
       Spacer()
     }
+    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+    .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     #if os(iOS) || os(macOS)
     .onAppear {
       if #available(iOS 16.0, macOS 13.0, *) {
@@ -70,9 +72,6 @@ struct MediumWidgetView: View {
       }
     }
     #endif
-    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
   }
 }
 

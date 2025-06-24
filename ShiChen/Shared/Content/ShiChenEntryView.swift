@@ -35,13 +35,13 @@ struct ShiChenEntryView: View {
     case .accessoryInline:
       if #available(iOSApplicationExtension 16.1, *) {
         if iPad {
-          HStack {
+          HStack(spacing: 0) {
             Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
             if let shichen = entry.date.shichen {
               Text(shichen.dizhi.displayHourText)
             }
           }
-          .font(.custom(.weibeiBold, size: 20, relativeTo: .body))
+          .font(.body)
           .widgetAccentable()
         } else {
           InlineWidgetView(date: entry.date)
@@ -86,7 +86,6 @@ struct ShiChenEntryView: View {
         .padding(.bottom, 8)
       }
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
     case .systemExtraLarge:

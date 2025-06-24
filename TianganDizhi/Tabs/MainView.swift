@@ -54,8 +54,13 @@ struct MainView: View {
       #else
 
       VStack {
-        Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
-          .font(titleFont)
+        HStack
+        {
+          Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
+          Text(updater.currentDate.twelveGod().map { "·" + $0.chinese } ?? "")
+          
+        }
+        .font(titleFont)
 
         Text(updater.currentDate.jieQiDisplayText)
           .font(bodyFont)

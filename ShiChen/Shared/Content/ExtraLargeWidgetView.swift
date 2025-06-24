@@ -32,7 +32,7 @@ struct ExtraLargeWidgetView: View {
         HStack() {
           Text(date.displayStringOfChineseYearMonthDateWithZodiac)
         }
-          .font(titleFont)
+        .font(titleFont)
         
         date.nextJieJiWithinOneDay.map{ Text($0) }
           .font(bodyFont)
@@ -63,6 +63,9 @@ struct ExtraLargeWidgetView: View {
         ZStack {
           CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
             .padding()
+          Text(date.twelveGod()?.chinese ?? "")
+            .font(titleFont)
+            .minimumScaleFactor(0.8)
         }
       }
     }

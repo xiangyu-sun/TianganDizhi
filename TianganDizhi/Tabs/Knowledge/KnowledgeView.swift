@@ -15,7 +15,6 @@ struct KnowledgeView: View {
   @Environment(\.bodyFont) var bodyFont
 
   var body: some View {
-    let _ = print("Loaded  GuaListView")
     NavigationView {
       List {
         Section(header: Text("五行")) {
@@ -52,6 +51,9 @@ struct KnowledgeView: View {
           }
           NavigationLink(destination: ShiciView()) {
             Text("十二時辰頌")
+          }
+          NavigationLink(destination: TwelveGodsListView()) {
+            Text("十二建除神")
           }
         }
         Section {

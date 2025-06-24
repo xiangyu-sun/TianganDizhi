@@ -12,6 +12,9 @@ struct FullDateTitleView: View {
   var displayMoonPhaseOnWidgets = false
 
   var date: Date
+  var god: String {
+    date.twelveGod().map { "·" + $0.chinese } ?? ""
+  }
   var body: some View {
     HStack {
       Text(date.displayStringOfChineseYearMonthDateWithZodiac)

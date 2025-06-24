@@ -31,18 +31,18 @@ extension Date {
 
 @available(iOS 16.0, *)
 struct RetangularWidgetView: View {
-  @Environment(\.bodyFont) var bodyFont
-  @Environment(\.calloutFont) var calloutFont
-  @Environment(\.titleFont) var titleFont
-  @Environment(\.title3Font) var title3Font
-
   @State var date: Date
+  
+  var god: String {
+    date.twelveGod().map { "·" + $0.chinese } ?? ""
+  }
 
   var body: some View {
     let shichen = date.shichen
 
     HStack {
-      Text(date.displayStringOfChineseYearMonthDateWithZodiac + (date.nextJieJiWithinOneDay.map { "·" + $0 } ?? ""))
+     
+      Text(date.displayStringOfChineseYearMonthDateWithZodiac + (date.nextJieJiWithinOneDay.map { "·" + $0 } ?? "") + god)
         .font(.body)
       Text(shichen?.dizhi.displayHourText ?? "")
         .font(.headline)
