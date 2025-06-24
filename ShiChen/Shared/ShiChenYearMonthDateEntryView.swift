@@ -26,7 +26,7 @@ struct ShiChenYearMonthDateEntryView: View {
 
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
-
+  
   var body: some View {
     let shichen = entry.date.shichen
 
@@ -103,11 +103,15 @@ private struct WidgetMediumView: View {
   var body: some View {
     VStack {
       Spacer()
-      Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
-        .font(title2Font)
-        .padding([.leading, .trailing], 15)
+      HStack() {
+        Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+        Text(entry.date.twelveGod()?.chinese ?? "")
+      }
+      .font(title2Font)
+      .padding([.leading, .trailing], 15)
       Text(shichen?.dizhi.displayHourText ?? "")
         .font(titleFont)
+      
       Spacer()
     }
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
