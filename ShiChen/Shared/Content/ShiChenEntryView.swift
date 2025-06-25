@@ -70,8 +70,9 @@ struct ShiChenEntryView: View {
 
       VStack(spacing: 0) {
         FullDateTitleView(date: entry.date)
-          .font(title3Font)
-          .padding(.vertical, 8)
+        .font(title3Font)
+        .padding(.vertical, 8)
+        
         ZStack(alignment: .center) {
           if let shichen = entry.date.shichen {
             CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
