@@ -38,7 +38,7 @@ struct MediumWidgetView: View {
       if let value = weatherData.forcastedWeather {
         Text(
           MeasurmentFormatterManager
-            .buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "，\(value.condition)")
+            .buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\(value.condition)")
           .font(footnote)
           .foregroundColor(Color.secondary)
       }

@@ -72,6 +72,7 @@ struct MainView: View {
             Text("\(god.map{ $0.xiongjiL } ?? "")")
               .underline()
               .font(calloutFont)
+              .foregroundColor(Color.secondary)
           }
         } else {
           HStack() {
@@ -79,6 +80,7 @@ struct MainView: View {
             Text("宜：\(god.map{ $0.do } ?? "")")
             Text("忌：\(god.map{ $0.dontDo } ?? "")")
           }
+          .foregroundColor(Color.secondary)
           .font(calloutFont)
         }
 
