@@ -25,7 +25,7 @@ struct TwelveGodsListView: View {
       ForEach(twelveGods, id: \.self) { god in
         Image(god.pinYinWithoutAccent)
           .resizable()
-          .scaledToFill()
+          .scaledToFit()
           .ignoresSafeArea()
           .tag(god)
           .overlay(
@@ -39,7 +39,7 @@ struct TwelveGodsListView: View {
       ForEach(twelveGods, id: \.self) { god in
         Image(god.pinYinWithoutAccent)
           .resizable()
-          .scaledToFill()
+          .scaledToFit()
           .ignoresSafeArea()
           .tag(god)
           .overlay(
@@ -77,6 +77,9 @@ struct TwelveGodCell: View {
     } else {
       VStack(alignment: .leading){
         Spacer()
+#if os(watchOS)
+          Text("\(god.chinese)")
+#endif
         Text("\(god.meaning)")
         Text("\(god.do)")
         Text("\(god.dontDo)")

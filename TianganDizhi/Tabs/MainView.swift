@@ -18,6 +18,7 @@ struct MainView: View {
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
+  @Environment(\.calloutFont) var calloutFont
   @Environment(\.shouldScaleFont) var shouldScaleFont
   @StateObject var weatherData = WeatherData.shared
   @Environment(\.scenePhase) var scenePhase
@@ -52,54 +53,28 @@ struct MainView: View {
       #if os(watchOS)
       WatchMainView(date: updater.currentDate, wetherData: weatherData.forcastedWeather)
       #else
-
-      VStack {
+      let god = updater.currentDate.twelveGod()
+      
+      VStack(spacing: 0) {
         HStack
         {
           Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
-          Text(updater.currentDate.twelveGod().map { "·" + $0.chinese } ?? "")
+          Text(god.map { "·" + $0.chinese } ?? "")
         }
         .lineLimit(1)
         .minimumScaleFactor(0.8)
         .font(titleFont)
+        Text("\(god.map{ $0.xiongjiL } ?? "")")
+          .font(calloutFont)
+        Text("宜：\(god.map{ $0.do } ?? "")")
+          .font(calloutFont)
+        Text("忌：\(god.map{ $0.dontDo } ?? "")")
+          .font(calloutFont)
 
         Text(updater.currentDate.jieQiDisplayText)
           .font(bodyFont)
 
         if let value = weatherData.forcastedWeather {
-          if horizontalSizeClass == .regular {
-            HStack {
-              Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
-                .font(bodyFont)
-                .foregroundColor(Color.secondary)
-                .onChange(of: scenePhase) { newValue in
-                  switch newValue {
-                  case .active:
-                    refreshLocationAndWeather()
-                  default:
-                    break
-                  }
-                }
-              Text("\(value.condition)")
-                .font(bodyFont)
-                .foregroundColor(Color.secondary)
-            }
-          } else {
-            Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
-              .font(bodyFont)
-              .foregroundColor(Color.secondary)
-              .onChange(of: scenePhase) { newValue in
-                switch newValue {
-                case .active:
-                  refreshLocationAndWeather()
-                default:
-                  break
-                }
-              }
-            Text("\(value.condition)")
-              .font(bodyFont)
-              .foregroundColor(Color.secondary)
-          }
           withAnimation {
             SunInformationView(info: value)
           }
@@ -110,7 +85,7 @@ struct MainView: View {
           }
         }
       }
-      .padding([.top, .leading, .trailing])
+
 
       if let shichen = updater.currentDate.shichen {
         ZStack {
@@ -138,6 +113,40 @@ struct MainView: View {
         withAnimation {
           VStack {
             MoonInformationView(info: value)
+            if horizontalSizeClass == .regular {
+              HStack {
+                Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
+                  .font(calloutFont)
+                  .foregroundColor(Color.secondary)
+                  .onChange(of: scenePhase) { newValue in
+                    switch newValue {
+                    case .active:
+                      refreshLocationAndWeather()
+                    default:
+                      break
+                    }
+                  }
+                Text("\(value.condition)")
+                  .font(calloutFont)
+                  .foregroundColor(Color.secondary)
+              }
+            } else {
+              Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
+                .font(calloutFont)
+                .foregroundColor(Color.secondary)
+                .onChange(of: scenePhase) { newValue in
+                  switch newValue {
+                  case .active:
+                    refreshLocationAndWeather()
+                  default:
+                    break
+                  }
+                }
+              Text("\(value.condition)")
+                .font(calloutFont)
+                .foregroundColor(Color.secondary)
+            }
+            
             Text("天氣以及日月信息來自  Weather. 點擊查看數據源信息")
               .font(footnote)
               .foregroundColor(.secondary)
