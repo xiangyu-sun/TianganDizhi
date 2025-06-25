@@ -188,9 +188,10 @@ struct MainView: View {
         let god = updater.currentDate.twelveGod()
         
         Text("宜：\(god.map{ $0.do } ?? "")")
-          .font(calloutFont)
+          .font(titleFont)
+          .padding(.bottom)
         Text("忌：\(god.map{ $0.dontDo } ?? "")")
-          .font(calloutFont)
+          .font(titleFont)
       }
       .padding()
     }
