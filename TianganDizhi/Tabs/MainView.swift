@@ -47,15 +47,15 @@ struct MainView: View {
       ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
       : event.date.displayStringOfChineseYearMonthDateWithZodiac
   }
+  @State private var showingPopover = false
 
   var body: some View {
     VStack {
       #if os(watchOS)
       WatchMainView(date: updater.currentDate, wetherData: weatherData.forcastedWeather)
       #else
-      let god = updater.currentDate.twelveGod()
-      
       VStack(spacing: 0) {
+        let god = updater.currentDate.twelveGod()
         HStack
         {
           Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
@@ -64,12 +64,23 @@ struct MainView: View {
         .lineLimit(1)
         .minimumScaleFactor(0.8)
         .font(titleFont)
-        Text("\(god.map{ $0.xiongjiL } ?? "")")
+ 
+        if horizontalSizeClass == .compact {
+          Button {
+            showingPopover.toggle()
+          } label: {
+            Text("\(god.map{ $0.xiongjiL } ?? "")")
+              .underline()
+              .font(calloutFont)
+          }
+        } else {
+          HStack() {
+            Text("\(god.map{ $0.xiongjiL } ?? "")")
+            Text("宜：\(god.map{ $0.do } ?? "")")
+            Text("忌：\(god.map{ $0.dontDo } ?? "")")
+          }
           .font(calloutFont)
-        Text("宜：\(god.map{ $0.do } ?? "")")
-          .font(calloutFont)
-        Text("忌：\(god.map{ $0.dontDo } ?? "")")
-          .font(calloutFont)
+        }
 
         Text(updater.currentDate.jieQiDisplayText)
           .font(bodyFont)
@@ -85,7 +96,6 @@ struct MainView: View {
           }
         }
       }
-
 
       if let shichen = updater.currentDate.shichen {
         ZStack {
@@ -172,6 +182,19 @@ struct MainView: View {
 
       #endif
     }
+#if os(iOS) || os(macOS)
+    .popover(isPresented: $showingPopover, arrowEdge: .bottom) {
+      VStack(alignment: .leading) {
+        let god = updater.currentDate.twelveGod()
+        
+        Text("宜：\(god.map{ $0.do } ?? "")")
+          .font(calloutFont)
+        Text("忌：\(god.map{ $0.dontDo } ?? "")")
+          .font(calloutFont)
+      }
+      .padding()
+    }
+#endif
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     #if os(iOS) || os(macOS)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
