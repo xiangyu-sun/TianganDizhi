@@ -75,11 +75,7 @@ struct MainView: View {
               .foregroundColor(Color.secondary)
           }
         } else {
-          HStack() {
-            Text("\(god.map{ $0.xiongjiL } ?? "")")
-            Text("宜：\(god.map{ $0.do } ?? "")")
-            Text("忌：\(god.map{ $0.dontDo } ?? "")")
-          }
+          Text("\(god.map{ $0.xiongjiL } ?? "")" + " 宜：\(god.map{ $0.do } ?? "")" + " 忌：\(god.map{ $0.dontDo } ?? "")")
           .foregroundColor(Color.secondary)
           .font(calloutFont)
         }
@@ -186,16 +182,23 @@ struct MainView: View {
     }
 #if os(iOS) || os(macOS)
     .popover(isPresented: $showingPopover, arrowEdge: .bottom) {
+  
       VStack(alignment: .leading) {
         let god = updater.currentDate.twelveGod()
-        
         Text("宜：\(god.map{ $0.do } ?? "")")
           .font(titleFont)
           .padding(.bottom)
         Text("忌：\(god.map{ $0.dontDo } ?? "")")
           .font(titleFont)
+        
       }
-      .padding()
+      .frame(maxWidth: .infinity,  maxHeight: .infinity)
+      .background(
+        Image("background")
+          .resizable(resizingMode: .tile)
+          .scaledToFill()
+          .ignoresSafeArea(.all)
+      )
     }
 #endif
     .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
