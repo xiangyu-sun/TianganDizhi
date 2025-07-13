@@ -63,7 +63,9 @@ struct ContentView: View {
     #endif
     #if os(iOS)
     .onAppear {
-      try? AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()
+      if !ProcessInfo.processInfo.arguments.contains("UITestMode") {
+        try? AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()
+      }
     }
     #endif
   }
