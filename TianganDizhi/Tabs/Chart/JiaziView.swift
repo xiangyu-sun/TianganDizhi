@@ -49,7 +49,7 @@ struct JiaziView: View {
             ZStack(alignment: .bottom) {
               Text("\(item.description)")
                 .font(bodyFont)
-              #if os(iOS)
+              #if os(iOS) || os(macOS)
                 .frame(minHeight: proxy.size.height / 6)
 
               #endif
