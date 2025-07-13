@@ -24,7 +24,7 @@ struct WuxingView: View {
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.footnote) var footnote
 
-  @Environment(\.iPad) var iPad
+  @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
   let columns = [
     GridItem(.flexible(), spacing: 0),
@@ -45,7 +45,7 @@ struct WuxingView: View {
     HStack {
       VStack(alignment: .leading, spacing: 0) {
         Text("\(item.chineseCharacter)")
-          .font(iPad ? largeTitleFont : title2Font)
+          .font(horizontalSizeClass != .compact ? largeTitleFont : title2Font)
 
         HStack {
           VStack(alignment: .leading, spacing: 0) {
@@ -55,14 +55,14 @@ struct WuxingView: View {
               Text("\(item.tiangan.0.chineseCharactor)")
               Text("\(item.tiangan.1.chineseCharactor)")
             }
-            .font(iPad ? title3Font : bodyFont)
+            .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
             Divider()
             Text("地支")
               .font(footnote)
             HStack {
               ForEach(item.dizhi) {
                 Text("\($0.chineseCharactor)")
-                  .font(iPad ? title3Font : bodyFont)
+                  .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
               }
             }
           }
@@ -81,7 +81,7 @@ struct WuxingView: View {
               Text("\(wufu.rawValue)")
               Text("\(wuzang.情緒)")
             }
-            .font(iPad ? title3Font : bodyFont)
+            .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
 
             Divider()
 
@@ -89,7 +89,7 @@ struct WuxingView: View {
               .font(footnote)
             HStack {
               Text("\(item.fiveFlavor)")
-                .font(iPad ? title3Font : bodyFont)
+                .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
             }
           }
           .scaledToFit()
@@ -120,7 +120,7 @@ struct WuxingView: View {
         .font(footnote)
       HStack {
         Text(detail)
-          .font(iPad ? title3Font : bodyFont)
+          .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
       }
     }
   }

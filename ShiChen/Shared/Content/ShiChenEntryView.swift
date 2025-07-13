@@ -20,7 +20,8 @@ struct ShiChenEntryView: View {
   @Environment(\.footnote) var footnote
   @Environment(\.titleFont) var titleFont
   @Environment(\.title3Font) var title3Font
-  @Environment(\.iPad) var iPad
+  @Environment(\.horizontalSizeClass) var horizontalSizeClass
+
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
 
@@ -34,7 +35,7 @@ struct ShiChenEntryView: View {
     switch family {
     case .accessoryInline:
       if #available(iOSApplicationExtension 16.1, *) {
-        if iPad {
+        if horizontalSizeClass != .compact {
           HStack(spacing: 0) {
             Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
             if let shichen = entry.date.shichen {
@@ -91,7 +92,7 @@ struct ShiChenEntryView: View {
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
     case .systemExtraLarge:
-      if iPad {
+      if horizontalSizeClass != .compact {
         #if os(iOS)
         ExtraLargeWidgetView(date: entry.date)
           .modifier(WidgetAccentable())

@@ -77,17 +77,6 @@ private struct Title2FontEnvironmentKey: EnvironmentKey {
   static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title2.bold() : .weiBeiTitle2
 }
 
-// MARK: - iPadEnvironmentKey
-
-private struct iPadEnvironmentKey: EnvironmentKey {
-  static var defaultValue: Bool {
-    #if os(iOS)
-    UIDevice.current.userInterfaceIdiom == .pad
-    #else
-    false
-    #endif
-  }
-}
 
 // MARK: - ShouldScaleFontEnvironmentKey
 
@@ -142,11 +131,6 @@ extension EnvironmentValues {
   var headlineFont: Font {
     get { self[HeadlineFontEnvironmentKey.self] }
     set { self[HeadlineFontEnvironmentKey.self] = newValue }
-  }
-
-  var iPad: Bool {
-    get { self[iPadEnvironmentKey.self] }
-    set { }
   }
 
   var shouldScaleFont: Bool {
