@@ -24,9 +24,11 @@ struct TianganDizhiApp: App {
     }
 
     #if os(macOS)
-    let dizh = Date().shichen?.dizhi ?? .zi
+    let dizh = updater.currentDate.shichen?.dizhi ?? .zi
 
-    MenuBarExtra(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh.displayHourText) {
+    let god = updater.currentDate.twelveGod().map { "·" + $0.chinese } ?? ""
+    
+    MenuBarExtra(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh.displayHourText + god) {
       VStack {
         Divider()
         Button("退出") {
