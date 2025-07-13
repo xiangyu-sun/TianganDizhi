@@ -61,6 +61,7 @@ struct JieqiWidget: Widget {
               .font(largeTitleFont)
           }
         }
+        .modifier(WidgetAccentable())
         .frame(maxWidth: .infinity)
         .materialBackgroundWidget(with: Image(uiImage: jieqi.image))
       } else {

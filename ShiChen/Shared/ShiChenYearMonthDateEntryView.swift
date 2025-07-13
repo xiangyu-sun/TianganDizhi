@@ -20,7 +20,7 @@ struct ShiChenYearMonthDateEntryView: View {
   @Environment(\.title2Font) var title2Font
   @Environment(\.title3Font) var title3Font
   @Environment(\.widgetFamily) var family
-
+  
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
 
@@ -39,11 +39,15 @@ struct ShiChenYearMonthDateEntryView: View {
     case .accessoryCircular:
       if #available(iOSApplicationExtension 16.1, *) {
         CircularWidgetView(date: entry.date)
+          .containerBackgroundForWidget {
+            Color.clear
+          }
       }
 
     case .accessoryRectangular:
       if #available(iOSApplicationExtension 16.1, watchOS 10.0, *) {
         RetangularWidgetView(date: entry.date)
+          .containerBackgroundForWidget(content: { Color.clear })
       }
 
     case .systemSmall:
@@ -55,6 +59,7 @@ struct ShiChenYearMonthDateEntryView: View {
           .font(titleFont)
         Spacer()
       }
+      .modifier(WidgetAccentable())
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
@@ -72,6 +77,7 @@ struct ShiChenYearMonthDateEntryView: View {
           .font(titleFont)
         Spacer()
       }
+      .modifier(WidgetAccentable())
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
@@ -109,8 +115,10 @@ private struct WidgetMediumView: View {
       }
       .font(title2Font)
       .padding([.leading, .trailing], 15)
+      .modifier(WidgetAccentable())
       Text(shichen?.dizhi.displayHourText ?? "")
         .font(titleFont)
+        .modifier(WidgetAccentable())
       
       Spacer()
     }

@@ -48,7 +48,6 @@ struct RetangularWidgetView: View {
         .font(.headline)
     }
     .widgetAccentable()
-    .containerBackgroundForWidget(content: { Color.clear })
   }
 }
 

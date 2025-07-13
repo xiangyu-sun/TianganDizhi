@@ -86,6 +86,7 @@ struct ShiChenEntryView: View {
         }
         .padding(.bottom, 8)
       }
+      .modifier(WidgetAccentable())
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
@@ -93,6 +94,7 @@ struct ShiChenEntryView: View {
       if iPad {
         #if os(iOS)
         ExtraLargeWidgetView(date: entry.date)
+          .modifier(WidgetAccentable())
         #endif
       } else {
         ZStack {
@@ -120,12 +122,14 @@ struct ShiChenEntryView: View {
             .padding(.top, 8)
           }
         }
+        .modifier(WidgetAccentable())
         .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
       }
 
     default:
       if let shichen = entry.date.shichen {
         CompactShichenView(shichen: shichen.dizhi, date: entry.date)
+          .modifier(WidgetAccentable())
           .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
           .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)

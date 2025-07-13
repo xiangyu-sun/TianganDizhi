@@ -21,3 +21,16 @@ struct WidgetContainerBackground<V: View>: ViewModifier {
     }
   }
 }
+
+
+
+struct WidgetAccentable: ViewModifier {
+
+  func body(content: Content) -> some View {
+    if #available(iOS 16.0, watchOS 10.0, macOS 14.0, *) {
+      return content.widgetAccentable()
+    } else {
+      return content
+    }
+  }
+}

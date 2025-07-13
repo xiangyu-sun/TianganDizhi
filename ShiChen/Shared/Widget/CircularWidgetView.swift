@@ -38,14 +38,8 @@ struct CircularWidgetView: View {
         })
         .widgetAccentable()
         .progressViewStyle(.circular)
-        .containerBackgroundForWidget {
-          Color.clear
-        }
     } else {
       EmptyView()
-        .containerBackgroundForWidget {
-          Color.clear
-        }
     }
   }
 }
