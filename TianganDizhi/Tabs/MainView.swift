@@ -75,7 +75,10 @@ struct MainView: View {
               .foregroundColor(Color.secondary)
           }
         } else {
-          Text("\(god.map{ $0.xiongjiL } ?? "")" + " 宜：\(god.map{ $0.do } ?? "")" + " 忌：\(god.map{ $0.dontDo } ?? "")")
+          Group() {
+            Text("\(god.map{ $0.xiongjiL } ?? "")")
+            Text("宜：\(god.map{ $0.do } ?? "")" + " 忌：\(god.map{ $0.dontDo } ?? "")")
+          }
           .foregroundColor(Color.secondary)
           .font(calloutFont)
         }
@@ -101,8 +104,12 @@ struct MainView: View {
           CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
             .frame(minWidth: 640)
           #else
-          CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
-            .fixedSize(horizontal: false, vertical: true)
+          if horizontalSizeClass == .compact {
+            CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
+              .fixedSize(horizontal: false, vertical: true)
+          } else {
+            CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
+          }
           #endif
 
           VStack {
@@ -180,6 +187,7 @@ struct MainView: View {
 
       #endif
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
 #if os(iOS) || os(macOS)
     .popover(isPresented: $showingPopover, arrowEdge: .bottom) {
   
