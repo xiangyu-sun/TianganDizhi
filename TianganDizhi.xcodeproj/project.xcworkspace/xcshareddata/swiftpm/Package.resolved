@@ -16,7 +16,7 @@
       "location" : "git@github.com:xiangyu-sun/Astral.git",
       "state" : {
         "branch" : "main",
-        "revision" : "f8b9c0914bacfea3973290eee9faa66858b2ec46"
+        "revision" : "ae7705656b7e6d0dbd741ee8490931133b42129f"
       }
     },
     {
@@ -25,7 +25,7 @@
       "location" : "git@github.com:xiangyu-sun/Bagua.git",
       "state" : {
         "branch" : "main",
-        "revision" : "831d1b978b58bb1d890df27c11811c97c00475d2"
+        "revision" : "e8f43fb9b27d51ac7517315ecc2efdbcacff2749"
       }
     },
     {
@@ -34,7 +34,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
         "branch" : "master",
-        "revision" : "4f58aeb520fd5d0564d26b71dc4b4f27e6fb9fde"
+        "revision" : "6050cfdb6390491320a5e48a2c3794e319bd66ba"
       }
     },
     {

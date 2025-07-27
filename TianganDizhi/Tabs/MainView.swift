@@ -64,24 +64,25 @@ struct MainView: View {
         .lineLimit(1)
         .minimumScaleFactor(0.8)
         .font(titleFont)
+      
  
-        if horizontalSizeClass == .compact {
-          Button {
-            showingPopover.toggle()
-          } label: {
-            Text("\(god.map{ $0.xiongjiL } ?? "")")
-              .underline()
-              .font(calloutFont)
-              .foregroundColor(Color.secondary)
-          }
-        } else {
-          Group() {
-            Text("\(god.map{ $0.xiongjiL } ?? "")")
-            Text("宜：\(god.map{ $0.do } ?? "")" + " 忌：\(god.map{ $0.dontDo } ?? "")")
-          }
-          .foregroundColor(Color.secondary)
-          .font(calloutFont)
-        }
+//        if horizontalSizeClass == .compact {
+//          Button {
+//            showingPopover.toggle()
+//          } label: {
+//            Text("\(god.map{ $0.xiongjiL } ?? "")")
+//              .underline()
+//              .font(calloutFont)
+//              .foregroundColor(Color.secondary)
+//          }
+//        } else {
+//          Group() {
+//            Text("\(god.map{ $0.xiongjiL } ?? "")")
+//            Text("宜：\(god.map{ $0.do } ?? "")" + " 忌：\(god.map{ $0.dontDo } ?? "")")
+//          }
+//          .foregroundColor(Color.secondary)
+//          .font(calloutFont)
+//        }
 
         Text(updater.currentDate.jieQiDisplayText)
           .font(bodyFont)
@@ -122,7 +123,14 @@ struct MainView: View {
       }
 
       Spacer()
-
+      
+      HStack() {
+        Text(LunarMansion.lunarMansion(date: updater.currentDate).fourSymbol.rawValue)
+        Text(LunarMansion.lunarMansion(date: updater.currentDate).rawValue)
+      }
+      .foregroundColor(Color.secondary)
+      .font(calloutFont)
+      
       // Moon
       if let value = weatherData.forcastedWeather {
         withAnimation {
