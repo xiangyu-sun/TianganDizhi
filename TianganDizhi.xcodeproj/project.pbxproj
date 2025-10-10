@@ -470,7 +470,6 @@
 		9968961E2DB550D50082B667 /* HourlyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWidget.swift; sourceTree = "<group>"; };
 		996C53192B1FC68000AC832F /* BaguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaguaView.swift; sourceTree = "<group>"; };
 		996C531B2B1FCFAD00AC832F /* GuaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuaListView.swift; sourceTree = "<group>"; };
-		996D2C1429A3D9BD008DC1A9 /* ProSubscription.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = ProSubscription.storekit; sourceTree = "<group>"; };
 		996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunInformationView.swift; sourceTree = "<group>"; };
 		996D2C1729A3DCBD008DC1A9 /* WatchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMainView.swift; sourceTree = "<group>"; };
 		996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurmentFormatterManager.swift; sourceTree = "<group>"; };
@@ -662,7 +661,6 @@
 			children = (
 				99A0B7AD2DB679DC000F2AD7 /* ShichenWatchExtension.entitlements */,
 				9959970B2B3DF69A002288D1 /* TianganDizhi.xctestplan */,
-				996D2C1429A3D9BD008DC1A9 /* ProSubscription.storekit */,
 				996E547F2E994413004CD36F /* TianGanDizhiIcon.icon */,
 				46339FEC250296BF007D4137 /* ShiChenExtension.entitlements */,
 				46AB55C9242B5EFD00F6604A /* TianganDizhi */,
