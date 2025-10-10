@@ -16,11 +16,7 @@ struct Nongli: Widget {
   let kind = "Nongli"
 
   var supportedFamilies: [WidgetFamily] {
-    if #available(iOSApplicationExtension 16.0, *) {
-      [.systemSmall, .systemMedium, .accessoryInline, .accessoryCircular, .accessoryRectangular]
-    } else {
-      [.systemSmall, .systemMedium]
-    }
+    [.systemSmall, .systemMedium, .accessoryInline, .accessoryCircular, .accessoryRectangular]
   }
 
   var body: some WidgetConfiguration {

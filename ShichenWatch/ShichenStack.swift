@@ -2,7 +2,6 @@ import AppIntents
 import SwiftUI
 import WidgetKit
 
-@available(watchOS 10.0, *)
 struct ShiChenStackWidget: Widget {
 
   var body: some WidgetConfiguration {
@@ -19,7 +18,6 @@ struct ShiChenStackWidget: Widget {
   }
 }
 
-@available(watchOS 10.0, *)
 #Preview(
   as: .accessoryRectangular,
   widget: {

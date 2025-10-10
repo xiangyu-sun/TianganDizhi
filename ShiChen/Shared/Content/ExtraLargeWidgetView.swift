@@ -73,18 +73,16 @@ struct ExtraLargeWidgetView: View {
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     .onAppear {
-      if #available(iOS 16.0, *) {
-        Task {
-          do {
-            if let location = LocationManager.shared.lastLocation {
-              try await self.weatherData.dailyForecast(for: location)
-            } else {
-              let location = try await LocationManager.shared.startLocationUpdate()
-              try await self.weatherData.dailyForecast(for: location)
-            }
-          } catch {
-            print(error)
+      Task {
+        do {
+          if let location = LocationManager.shared.lastLocation {
+            try await self.weatherData.dailyForecast(for: location)
+          } else {
+            let location = try await LocationManager.shared.startLocationUpdate()
+            try await self.weatherData.dailyForecast(for: location)
           }
+        } catch {
+          print(error)
         }
       }
     }
@@ -92,9 +90,7 @@ struct ExtraLargeWidgetView: View {
 
   func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
     HStack {
-      if #available(iOS 16.0, watchOS 9.0, *) {
-        Image(systemName: moonphase.moonPhase.symbolName)
-      }
+      Image(systemName: moonphase.moonPhase.symbolName)
       Text(moonphase.name(traditionnal: useTranditionalNaming))
       if let gua = moonphase.gua {
         Text(gua.description)
@@ -105,7 +101,6 @@ struct ExtraLargeWidgetView: View {
 }
 
 #if os(iOS)
-@available(iOSApplicationExtension 15.0, *)
 struct ExtraLargeWidgetView_Previews: PreviewProvider {
 
   static var previews: some View {

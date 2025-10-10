@@ -14,11 +14,7 @@ struct CountDownWidget: Widget {
 
   var supportedFamilies: [WidgetFamily] {
     #if os(iOS)
-    if #available(iOSApplicationExtension 16.0, *) {
-      return [.systemSmall, .systemMedium, .accessoryInline, .accessoryRectangular]
-    } else {
-      return [.systemSmall, .systemMedium]
-    }
+    return [.systemSmall, .systemMedium, .accessoryInline, .accessoryRectangular]
     #elseif os(watchOS)
     return [.accessoryInline, .accessoryRectangular]
     #else

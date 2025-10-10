@@ -45,10 +45,8 @@ struct ShiChenYearMonthDateEntryView: View {
       }
 
     case .accessoryRectangular:
-      if #available(iOSApplicationExtension 16.1, watchOS 10.0, *) {
-        RetangularWidgetView(date: entry.date)
-          .containerBackgroundForWidget(content: { Color.clear })
-      }
+      RetangularWidgetView(date: entry.date)
+        .containerBackgroundForWidget(content: { Color.clear })
 
     case .systemSmall:
       VStack {

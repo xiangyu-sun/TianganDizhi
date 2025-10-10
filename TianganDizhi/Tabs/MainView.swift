@@ -231,36 +231,32 @@ struct MainView: View {
   }
 
   func refreshLocationAndWeather() {
-    if #available(iOS 16.0, macOS 13.0, watchOS 9.0, *) {
-      Task {
-        do {
-          let location = try await LocationManager.shared.startLocationUpdate()
-          try await self.weatherData.dailyForecast(for: location)
+    Task {
+      do {
+        let location = try await LocationManager.shared.startLocationUpdate()
+        try await self.weatherData.dailyForecast(for: location)
 
-          WidgetCenter.shared.getCurrentConfigurations { result in
-            guard case .success(let widgets) = result else { return }
+        WidgetCenter.shared.getCurrentConfigurations { result in
+          guard case .success(let widgets) = result else { return }
 
-            let validWidgets = widgets.filter { widget in
-              let intent = widget.configuration as? ConfigurationIntent
-              return intent?.date?.isSameWithCurrentShichen ?? false
-            }
-
-            for validWidget in validWidgets {
-              WidgetCenter.shared.reloadTimelines(ofKind: validWidget.kind)
-            }
+          let validWidgets = widgets.filter { widget in
+            let intent = widget.configuration as? ConfigurationIntent
+            return intent?.date?.isSameWithCurrentShichen ?? false
           }
-        } catch {
-          print(error)
+
+          for validWidget in validWidgets {
+            WidgetCenter.shared.reloadTimelines(ofKind: validWidget.kind)
+          }
         }
+      } catch {
+        print(error)
       }
     }
   }
 
   func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
     HStack {
-      if #available(iOS 16.0, watchOS 9.0, *) {
-        Image(systemName: moonphase.moonPhase.symbolName)
-      }
+      Image(systemName: moonphase.moonPhase.symbolName)
       Text(moonphase.name(traditionnal: useTranditionalNaming))
       if let gua = moonphase.gua {
         Text(gua.description)

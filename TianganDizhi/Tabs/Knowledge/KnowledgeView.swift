@@ -13,57 +13,76 @@ import SwiftUI
 
 struct KnowledgeView: View {
   @Environment(\.bodyFont) var bodyFont
+  @State private var navigationPath = NavigationPath()
 
   var body: some View {
-    NavigationView {
+    NavigationStack(path: $navigationPath) {
       List {
         Section(header: Text("五行")) {
-          NavigationLink(destination: WuxingView()) {
+          NavigationLink(value: KnowledgeRoute.wuxing) {
             Text("五行以及衍生")
           }
-          NavigationLink(destination: WuyinView()) {
+          NavigationLink(value: KnowledgeRoute.wuyin) {
             Text("五音")
           }
         }
         Section(header: Text("十天干")) {
-          NavigationLink(destination: TianganListView()) {
+          NavigationLink(value: KnowledgeRoute.tianganList) {
             Text("十天干")
           }
         }
         Section(header: Text("十二地支")) {
-          NavigationLink(destination: DizhiListView(disppayMode: .name)) {
+          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .name)) {
             Text(DizhiListView.DisplayMode.name.title)
           }
-          NavigationLink(destination: DizhiListView(disppayMode: .zodiac)) {
+          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .zodiac)) {
             Text(DizhiListView.DisplayMode.zodiac.title)
           }
-          NavigationLink(destination: DizhiListView(disppayMode: .time)) {
+          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .time)) {
             Text(DizhiListView.DisplayMode.time.title)
           }
-          NavigationLink(destination: DizhiListView(disppayMode: .month)) {
+          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .month)) {
             Text(DizhiListView.DisplayMode.month.title)
           }
-          NavigationLink(destination: DizhiListView(disppayMode: .organs)) {
+          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .organs)) {
             Text(DizhiListView.DisplayMode.organs.title)
           }
-          NavigationLink(destination: DizhiListView(disppayMode: .lvlv)) {
+          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .lvlv)) {
             Text(DizhiListView.DisplayMode.lvlv.title)
           }
-          NavigationLink(destination: ShiciView()) {
+          NavigationLink(value: KnowledgeRoute.shici) {
             Text("十二時辰頌")
           }
-          NavigationLink(destination: TwelveGodsListView()) {
+          NavigationLink(value: KnowledgeRoute.twelveGods) {
             Text("十二建除神")
           }
         }
         Section {
-          NavigationLink(destination: JieqiListView()) {
+          NavigationLink(value: KnowledgeRoute.jieqiList) {
             Text("二十四節氣")
           }
         }
       }
       .font(bodyFont)
       .navigationTitle(Text("天干地支五行"))
+      .navigationDestination(for: KnowledgeRoute.self) { route in
+        switch route {
+        case .wuxing:
+          WuxingView()
+        case .wuyin:
+          WuyinView()
+        case .tianganList:
+          TianganListView()
+        case .dizhiList(let mode):
+          DizhiListView(disppayMode: mode)
+        case .shici:
+          ShiciView()
+        case .twelveGods:
+          TwelveGodsListView()
+        case .jieqiList:
+          JieqiListView()
+        }
+      }
     }
   }
 }

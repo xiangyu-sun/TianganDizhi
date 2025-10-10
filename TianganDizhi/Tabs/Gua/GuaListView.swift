@@ -14,30 +14,41 @@ import SwiftUI
 
 struct GuaListView: View {
   @Environment(\.bodyFont) var bodyFont
+  @State private var navigationPath = NavigationPath()
 
   var body: some View {
     let _ = print("Loaded  GuaListView")
-    NavigationView {
+    NavigationStack(path: $navigationPath) {
       List {
         Section(header: Text("八卦")) {
-          NavigationLink(destination: BaguaView(viewData: .init(guas: xiantianBagua, title: "伏羲先天八卦"))) {
+          NavigationLink(value: GuaRoute.bagua(guas: xiantianBagua, title: "伏羲先天八卦")) {
             Text("伏羲先天八卦")
           }
-          NavigationLink(destination: BaguaView(viewData: .init(guas: houtianBagua, title: "文王後天八卦"))) {
+          NavigationLink(value: GuaRoute.bagua(guas: houtianBagua, title: "文王後天八卦")) {
             Text("文王後天八卦")
           }
         }
         Section {
-          NavigationLink(destination: ShierPiguaView()) {
+          NavigationLink(value: GuaRoute.shierPigua) {
             Text("陰曆十二辟卦")
           }
-          NavigationLink(destination: YangliShierPiguaView()) {
+          NavigationLink(value: GuaRoute.yangliShierPigua) {
             Text("陽曆十二辟卦")
           }
         }
       }
       .font(bodyFont)
       .navigationTitle(Text("卦"))
+      .navigationDestination(for: GuaRoute.self) { route in
+        switch route {
+        case .bagua(let guas, let title):
+          BaguaView(viewData: .init(guas: guas, title: title))
+        case .shierPigua:
+          ShierPiguaView()
+        case .yangliShierPigua:
+          YangliShierPiguaView()
+        }
+      }
     }
   }
 }

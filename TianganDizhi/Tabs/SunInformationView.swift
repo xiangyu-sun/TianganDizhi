@@ -40,7 +40,6 @@ struct SunInformationView: View {
 
 // MARK: - MoonAndSunInformationView_Previews
 
-@available(iOS 15, *)
 struct MoonAndSunInformationView_Previews: PreviewProvider {
   static var previews: some View {
     SunInformationView(

@@ -73,46 +73,22 @@ struct SettingsView: View {
     .navigationTitle(Text("設置"))
     .onChange(of: useSystemFont) { value in
       settingsManager.useSystemFont = value
-      if #available(watchOS 9.0, iOS 14.0, *) {
-        WidgetCenter.shared.reloadAllTimelines()
-      } else {
-        // Fallback on earlier versions
-      }
+      WidgetCenter.shared.reloadAllTimelines()
     }
     .onChange(of: springFestiveBackgroundEnabled) { _ in
-      if #available(watchOS 9.0, iOS 14.0, *) {
-        WidgetCenter.shared.reloadAllTimelines()
-      } else {
-        // Fallback on earlier versions
-      }
+      WidgetCenter.shared.reloadAllTimelines()
     }
     .onChange(of: useTranditionalNaming) { _ in
-      if #available(watchOS 9.0, iOS 14.0, *) {
-        WidgetCenter.shared.reloadAllTimelines()
-      } else {
-        // Fallback on earlier versions
-      }
+      WidgetCenter.shared.reloadAllTimelines()
     }
     .onChange(of: springFestiveForegroundEnabled) { _ in
-      if #available(watchOS 9.0, iOS 14.0, *) {
-        WidgetCenter.shared.reloadAllTimelines()
-      } else {
-        // Fallback on earlier versions
-      }
+      WidgetCenter.shared.reloadAllTimelines()
     }
     .onChange(of: useGTM8) { _ in
-      if #available(watchOS 9.0, iOS 14.0, *) {
-        WidgetCenter.shared.reloadAllTimelines()
-      } else {
-        // Fallback on earlier versions
-      }
+      WidgetCenter.shared.reloadAllTimelines()
     }
     .onChange(of: displayMoonPhaseOnWidgets) { _ in
-      if #available(watchOS 9.0, iOS 14.0, *) {
-        WidgetCenter.shared.reloadAllTimelines()
-      } else {
-        // Fallback on earlier versions
-      }
+      WidgetCenter.shared.reloadAllTimelines()
     }
   }
 }

@@ -15,9 +15,7 @@ struct AllWidgets: WidgetBundle {
     ShiChen()
     JieqiWidget()
     Nongli()
-    if #available(iOS 16.1, *) {
-      HourlyWidget()
-    }
+    HourlyWidget()
     CountDownWidget()
   }
 

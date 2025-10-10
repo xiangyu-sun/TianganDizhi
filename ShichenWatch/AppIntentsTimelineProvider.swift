@@ -3,7 +3,6 @@ import ChineseAstrologyCalendar
 import CoreLocation
 import WidgetKit
 
-@available(watchOS 10.0, *)
 struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
 
   // MARK: Internal

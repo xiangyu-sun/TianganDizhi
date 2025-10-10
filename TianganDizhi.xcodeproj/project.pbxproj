@@ -163,6 +163,8 @@
 		996D2C1E29A3E188008DC1A9 /* MoonInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D2C1D29A3E188008DC1A9 /* MoonInformationView.swift */; };
 		996E54802E994496004CD36F /* TianGanDizhiIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 996E547F2E994413004CD36F /* TianGanDizhiIcon.icon */; };
 		996E54812E994497004CD36F /* TianGanDizhiIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 996E547F2E994413004CD36F /* TianGanDizhiIcon.icon */; };
+		996E548E2E996231004CD36F /* NavigationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996E548C2E996231004CD36F /* NavigationModels.swift */; };
+		996E548F2E996231004CD36F /* NavigationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996E548C2E996231004CD36F /* NavigationModels.swift */; };
 		997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68492864CADE00B40D3F /* ShichenWatchApp.swift */; };
 		997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C684D2864CADF00B40D3F /* Assets.xcassets */; };
 		997C68512864CADF00B40D3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997C68502864CADF00B40D3F /* Preview Assets.xcassets */; };
@@ -475,6 +477,7 @@
 		996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurmentFormatterManager.swift; sourceTree = "<group>"; };
 		996D2C1D29A3E188008DC1A9 /* MoonInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonInformationView.swift; sourceTree = "<group>"; };
 		996E547F2E994413004CD36F /* TianGanDizhiIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = TianGanDizhiIcon.icon; sourceTree = "<group>"; };
+		996E548C2E996231004CD36F /* NavigationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModels.swift; sourceTree = "<group>"; };
 		997C68442864CADE00B40D3F /* ShichenWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShichenWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997C68492864CADE00B40D3F /* ShichenWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenWatchApp.swift; sourceTree = "<group>"; };
 		997C684D2864CADF00B40D3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -700,6 +703,7 @@
 				99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
 				9963204A290C32C1000C4A2B /* DateProvider.swift */,
+				996E548D2E996231004CD36F /* Navigation */,
 				992A7E5F2DB56A8100B372CA /* Date+Jieqi.swift */,
 				996D2C1A29A3DD97008DC1A9 /* Watch */,
 				994215E52965C0AB003C5CA1 /* Tabs */,
@@ -894,6 +898,14 @@
 				996D2C1729A3DCBD008DC1A9 /* WatchMainView.swift */,
 			);
 			path = Watch;
+			sourceTree = "<group>";
+		};
+		996E548D2E996231004CD36F /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				996E548C2E996231004CD36F /* NavigationModels.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		997C68482864CADE00B40D3F /* ShichenWatch Watch App */ = {
@@ -1429,6 +1441,7 @@
 				991A857B2B508FA700C1D1BC /* SettingsManager.swift in Sources */,
 				46EF7F8027107968007030CC /* JieqiCell.swift in Sources */,
 				99F0EF3529FFEF81008476B6 /* WuyinView.swift in Sources */,
+				996E548F2E996231004CD36F /* NavigationModels.swift in Sources */,
 				99ECAED42A4798F0004997FD /* LiushisiGuaView.swift in Sources */,
 				996D2C1C29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift in Sources */,
 				46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */,
@@ -1529,6 +1542,7 @@
 				99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */,
 				996C531E2B1FD0B500AC832F /* GuaListView.swift in Sources */,
 				996C53202B1FD11C00AC832F /* BaguaView.swift in Sources */,
+				996E548E2E996231004CD36F /* NavigationModels.swift in Sources */,
 				99632085290DE1DE000C4A2B /* ChinesePinyin.swift in Sources */,
 				990FEAE2294CE89400CB1CEF /* WeatherData.swift in Sources */,
 				99632074290DE1DE000C4A2B /* Cells.swift in Sources */,
@@ -1733,7 +1747,7 @@
 				INFOPLIST_FILE = ShiChen/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_NSLocationUsageDescription = "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1768,7 +1782,7 @@
 				INFOPLIST_FILE = ShiChen/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_NSLocationUsageDescription = "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1951,7 +1965,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2000,7 +2014,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2027,7 +2041,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = TianganDizhiTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2052,7 +2066,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = TianganDizhiTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2076,7 +2090,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = TianganDizhiUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2100,7 +2114,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = TianganDizhiUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2150,7 +2164,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -2186,7 +2200,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -2206,7 +2220,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShichenWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShichenWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -2226,7 +2240,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShichenWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ShichenWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -2245,7 +2259,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "ShichenWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -2264,7 +2278,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "ShichenWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -2297,7 +2311,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -2330,7 +2344,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
-				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};

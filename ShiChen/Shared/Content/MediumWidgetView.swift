@@ -57,18 +57,16 @@ struct MediumWidgetView: View {
     .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     #if os(iOS) || os(macOS)
     .onAppear {
-      if #available(iOS 16.0, macOS 13.0, *) {
-        Task {
-          do {
-            if let location = LocationManager.shared.lastLocation {
-              try await self.weatherData.dailyForecast(for: location)
-            } else {
-              let location = try await LocationManager.shared.startLocationUpdate()
-              try await self.weatherData.dailyForecast(for: location)
-            }
-          } catch {
-            print(error)
+      Task {
+        do {
+          if let location = LocationManager.shared.lastLocation {
+            try await self.weatherData.dailyForecast(for: location)
+          } else {
+            let location = try await LocationManager.shared.startLocationUpdate()
+            try await self.weatherData.dailyForecast(for: location)
           }
+        } catch {
+          print(error)
         }
       }
     }

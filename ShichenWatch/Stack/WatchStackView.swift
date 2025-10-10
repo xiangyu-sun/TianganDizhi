@@ -3,7 +3,6 @@ import SwiftUI
 
 // MARK: - WatchStackView
 
-@available(watchOS 10.0, *)
 struct WatchStackView: View {
   let date: Date
 

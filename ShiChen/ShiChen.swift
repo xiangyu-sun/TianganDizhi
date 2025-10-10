@@ -17,13 +17,7 @@ struct ShiChen: Widget {
   let kind = "ShiChen"
 
   var iosSupportedFamilies: [WidgetFamily] {
-    if #available(iOSApplicationExtension 16.0, *) {
-      [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge, .accessoryInline, .accessoryRectangular]
-    } else if #available(iOSApplicationExtension 15.0, *) {
-      [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge]
-    } else {
-      [.systemSmall, .systemMedium, .systemLarge]
-    }
+    [.systemSmall, .systemMedium, .systemLarge, .systemExtraLarge, .accessoryInline, .accessoryRectangular]
   }
 
   var body: some WidgetConfiguration {
@@ -45,18 +39,16 @@ struct ShiChen: Widget {
 struct ShiChen_Previews: PreviewProvider {
   static var previews: some View {
     Group {
-      if #available(iOSApplicationExtension 16.0, *) {
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryInline))
-          .previewDisplayName("ShiChenEntryView Inline")
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-          .previewDisplayName("ShiChenEntryView Circular")
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryInline))
+        .previewDisplayName("ShiChenEntryView Inline")
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+        .previewDisplayName("ShiChenEntryView Circular")
 
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-          .previewDisplayName("ShiChenEntryView Retangular")
-      }
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+        .previewDisplayName("ShiChenEntryView Retangular")
     }
 
     #if os(iOS)
@@ -80,11 +72,10 @@ struct ShiChen_Previews: PreviewProvider {
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemLarge))
         .environment(\.colorScheme, .dark)
-      if #available(iOSApplicationExtension 15.0, *) {
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
-          .previewDisplayName("systemExtraLarge")
-      }
+
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
+        .previewDisplayName("systemExtraLarge")
 
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemMedium))

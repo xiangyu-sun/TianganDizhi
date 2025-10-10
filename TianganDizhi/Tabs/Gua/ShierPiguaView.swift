@@ -100,9 +100,6 @@ struct ShierPiguaView: View {
     #if os(watchOS)
     .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
     #endif
-    #if os(iOS) || os(watchOS)
-    .navigationViewStyle(StackNavigationViewStyle())
-    #endif
     .navigationTitle("十二辟卦")
   }
 

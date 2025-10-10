@@ -58,7 +58,6 @@ struct TwelveGodCell: View {
   let god: TwelveGods
   @Environment(\.bodyFont) var bodyFont
   var body: some View {
-    if #available(iOS 15.0, watchOS 10.0, *) {
       VStack(alignment: .leading){
         Spacer()
         Group() {
@@ -73,20 +72,6 @@ struct TwelveGodCell: View {
       }
       .padding()
       .font(bodyFont)
-      
-    } else {
-      VStack(alignment: .leading){
-        Spacer()
-#if os(watchOS)
-          Text("\(god.chinese)")
-#endif
-        Text("\(god.meaning)")
-        Text("\(god.do)")
-        Text("\(god.dontDo)")
-      }
-      .padding()
-      .font(bodyFont)
-    }
   }
 }
 

@@ -13,19 +13,28 @@ import SwiftUI
 
 struct ChartListView: View {
   @Environment(\.bodyFont) var bodyFont
+  @State private var navigationPath = NavigationPath()
 
   var body: some View {
-    NavigationView {
+    NavigationStack(path: $navigationPath) {
       List {
-        NavigationLink(destination: TwelveView()) {
+        NavigationLink(value: ChartRoute.twelveView) {
           Text("十二地支表")
         }
-        NavigationLink(destination: JiaziView()) {
+        NavigationLink(value: ChartRoute.jiaziView) {
           Text("六十甲子")
         }
       }
       .font(bodyFont)
       .navigationTitle(Text("圖示"))
+      .navigationDestination(for: ChartRoute.self) { route in
+        switch route {
+        case .twelveView:
+          TwelveView()
+        case .jiaziView:
+          JiaziView()
+        }
+      }
     }
   }
 }

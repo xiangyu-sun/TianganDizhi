@@ -11,9 +11,7 @@ struct MoonInformationView: View {
   var body: some View {
     VStack(alignment: .center) {
       HStack {
-        if #available(iOS 16.0, watchOS 9.0, *) {
-          Image(systemName: info.moonPhase.moonPhase.symbolName)
-        }
+        Image(systemName: info.moonPhase.moonPhase.symbolName)
         Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
         if let gua = info.moonPhase.gua {
           Text(gua.description)
@@ -59,7 +57,6 @@ struct MoonInformationView: View {
 
 // MARK: - MoonInformationView_Previews
 
-@available(iOS 15, *)
 struct MoonInformationView_Previews: PreviewProvider {
   static var previews: some View {
     VStack {

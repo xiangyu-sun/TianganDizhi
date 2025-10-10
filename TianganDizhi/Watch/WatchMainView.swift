@@ -47,7 +47,6 @@ struct WatchMainView: View {
 
 // MARK: - WatchMainView_Previews
 
-@available(iOS 15, *)
 struct WatchMainView_Previews: PreviewProvider {
   static var previews: some View {
     WatchMainView(date: .now)

@@ -58,9 +58,6 @@ struct ContentView: View {
     .environment(\.headlineFont, settingsManager.useSystemFont ? .headline : .weiBeiHeadline)
     .environment(\.footnote, settingsManager.useSystemFont ? .footnote : .weiBeiFootNote)
     .environment(\.calloutFont, settingsManager.useSystemFont ? .callout : .weiBeiCallOut)
-    #if os(iOS) || os(watchOS)
-      .navigationViewStyle(StackNavigationViewStyle())
-    #endif
     #if os(iOS)
     .onAppear {
       if !ProcessInfo.processInfo.arguments.contains("UITestMode") {
