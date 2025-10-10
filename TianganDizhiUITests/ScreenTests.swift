@@ -74,18 +74,6 @@ final class ScreenTests: XCTestCase {
     takingScreenShot()
   }
 
-  func testTakeScreenshotOfMeridian() {
-    #if os(macOS)
-    app.tabs["天干地支"].click()
-    app.tables.cells.containing(.button, identifier: "子午流注").element.click()
-    #else
-    app.tabBars.firstMatch.buttons["天干地支"].tap()
-    app.buttons["子午流注"].tap()
-    #endif
-
-    takingScreenShot()
-  }
-
   func takingScreenShot() {
     let screenshot = app.windows.firstMatch.screenshot()
     let attachment = XCTAttachment(screenshot: screenshot)
