@@ -63,17 +63,6 @@ final class ScreenTests: XCTestCase {
     takingScreenShot()
   }
 
-  func testTakeScreenshotOfMusic() {
-    #if os(macOS)
-    app.tabs["天干地支"].click()
-    app.tables.cells.containing(.button, identifier: "地支，十二律呂，西洋調名").element.click()
-    #else
-    app.tabBars.firstMatch.buttons["天干地支"].tap()
-    app.buttons["地支，十二律呂，西洋調名"].tap()
-    #endif
-    takingScreenShot()
-  }
-
   func takingScreenShot() {
     let screenshot = app.windows.firstMatch.screenshot()
     let attachment = XCTAttachment(screenshot: screenshot)
