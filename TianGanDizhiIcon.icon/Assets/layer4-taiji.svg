@@ -1,0 +1,9 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Layer 4: Taiji symbol only -->
+  <g transform="translate(512, 512)">
+    <circle r="140" fill="#000000"/>
+    <path d="M 0 -140 A 70 70 0 0 1 0 0 A 70 70 0 0 0 0 140 A 140 140 0 0 1 0 -140" fill="#FFFFFF"/>
+    <circle cy="-70" r="24" fill="#000000"/>
+    <circle cy="70" r="24" fill="#FFFFFF"/>
+  </g>
+</svg>
