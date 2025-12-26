@@ -80,13 +80,11 @@ struct ShiChenEntryView: View {
 //                "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
 //              )
 //              .font(titleFont)      
-              HStack() {
-                Text(shichen.dizhi.aliasName)
-                  .font(bodyFont)
-                Text(shichen.dizhi.organReference)
-              }
-              .font(titleFont)
-              
+            
+              Text(shichen.dizhi.aliasName)
+                .font(titleFont)
+              Text(shichen.dizhi.organReference)
+                .font(bodyFont)
             }
           }
         }

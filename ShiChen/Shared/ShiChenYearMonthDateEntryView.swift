@@ -53,11 +53,12 @@ struct ShiChenYearMonthDateEntryView: View {
         Spacer()
         Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
           .font(footnote)
+        Spacer()
         Text(
           "\(shichen?.dizhi.displayHourText ?? "")"
         )
           .font(titleFont)
-        
+        Spacer()
 //        Text(
 //          "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
 //        )
