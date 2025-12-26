@@ -103,7 +103,7 @@ struct MainView: View {
 
           VStack {
             Text(
-              "\(shichen.currentKe.chineseSpelledOut)刻"
+              "\(shichen.currentKeSpellOut)刻"
             )
               .font(largeTitleFont)
             HStack {
