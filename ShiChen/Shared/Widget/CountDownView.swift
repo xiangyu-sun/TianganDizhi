@@ -63,11 +63,7 @@ struct CountDownView: View {
       }
 
     case .systemSmall:
-      VStack(alignment: .leading) {
-        Text("距離\(title)")
-        Text(event.date, style: .relative)
-          .environment(\.locale, Locale.current)
-      }
+      Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now)) \(title)")
       .font(bodyFont)
       .foregroundColor(color)
       .materialBackgroundWidget(with: Image("background"), toogle: true)
@@ -75,18 +71,12 @@ struct CountDownView: View {
     default:
       VStack(alignment: .center) {
         FullDateTitleView(date: entry.date)
+          .font(bodyFont)
+        
+        Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
           .font(title3Font)
-        Spacer(minLength: 4)
-        Text("距離\(title)")
-          .font(title3Font)
-        Text(event.date, style: .relative)
-          .environment(\.locale, Locale.current)
-          .font(title3Font)
-        Spacer()
       }
       .foregroundColor(color)
-      .padding([.trailing, .leading])
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: true)
     }
   }

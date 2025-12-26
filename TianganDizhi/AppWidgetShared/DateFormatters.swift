@@ -14,7 +14,7 @@ extension RelativeDateTimeFormatter {
     let formatter = RelativeDateTimeFormatter()
     formatter.dateTimeStyle = .numeric
     formatter.unitsStyle = .spellOut
-    formatter.locale = Locale.current
+    formatter.locale = Locale(identifier: "zh-Hant")
     return formatter
   }()
 
