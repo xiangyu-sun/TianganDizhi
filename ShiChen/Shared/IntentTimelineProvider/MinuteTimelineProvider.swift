@@ -12,7 +12,7 @@ struct MinuteTimelineProvider: IntentTimelineProvider {
   @available(iOSApplicationExtension 16.0, *, watchOS 9, *)
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
     defaultRecommendedIntents().map { intent in
-      let description = Date().shichen?.dizhi.chineseCharactor ?? ""
+      let description = Date().shichen?.dizhi.chineseCharacter ?? ""
       return IntentRecommendation(intent: intent, description: "當前時辰" + description)
     }
   }

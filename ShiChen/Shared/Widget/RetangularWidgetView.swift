@@ -29,7 +29,6 @@ extension Date {
   }
 }
 
-@available(iOS 16.0, *)
 struct RetangularWidgetView: View {
   @State var date: Date
   
@@ -44,7 +43,11 @@ struct RetangularWidgetView: View {
      
       Text(date.displayStringOfChineseYearMonthDateWithZodiac + (date.nextJieJiWithinOneDay.map { "·" + $0 } ?? "") + god)
         .font(.body)
-      Text(shichen?.dizhi.displayHourText ?? "")
+      
+      VStack() {
+        Text(shichen?.dizhi.displayHourText ?? "" )
+        Text("\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻")
+      }
         .font(.headline)
     }
     .widgetAccentable()

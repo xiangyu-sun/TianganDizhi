@@ -44,7 +44,7 @@ private struct DizhiView: View {
   var body: some View {
     VStack {
       let color = springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary
-      Text("\(shichen.chineseCharactor)")
+      Text("\(shichen.chineseCharacter)")
       #if os(watchOS)
         .font(title3Font)
       #else

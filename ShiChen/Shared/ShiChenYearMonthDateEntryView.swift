@@ -53,9 +53,16 @@ struct ShiChenYearMonthDateEntryView: View {
         Spacer()
         Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
           .font(footnote)
-        Text(shichen?.dizhi.displayHourText ?? "")
+        Text(
+          "\(shichen?.dizhi.displayHourText ?? "")"
+        )
           .font(titleFont)
-        Spacer()
+        
+        Text(
+          "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
+        )
+        .font(bodyFont)
+        
       }
       .modifier(WidgetAccentable())
       .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
@@ -114,9 +121,16 @@ private struct WidgetMediumView: View {
       .font(title2Font)
       .padding([.leading, .trailing], 15)
       .modifier(WidgetAccentable())
-      Text(shichen?.dizhi.displayHourText ?? "")
-        .font(titleFont)
-        .modifier(WidgetAccentable())
+      
+      HStack() {
+        Text(shichen?.dizhi.displayHourText ?? "")
+        
+        Text(
+          "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
+        )
+      }
+      .font(titleFont)
+      .modifier(WidgetAccentable())
       
       Spacer()
     }

@@ -12,17 +12,17 @@ import WidgetKit
 
 // MARK: - InlineWidgetView
 
-@available(iOS 16.1, *)
 struct InlineWidgetView: View {
 
   @State var date: Date
 
   var body: some View {
     let shichen = date.shichen
-
+    let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
+    
     ViewThatFits(in: .horizontal) {
-      Text("\(date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen?.dizhi.displayHourText ?? "")")
-      Text(shichen?.dizhi.displayHourText ?? "")
+      Text("\(date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen?.dizhi.displayHourText ?? "")\(keString)")
+      Text(shichen?.dizhi.displayHourText ?? "" + keString)
     }
     .font(.body)
     .widgetAccentable()
@@ -31,7 +31,6 @@ struct InlineWidgetView: View {
 
 // MARK: - InlineWidgetView_Previews
 
-@available(iOS 16.1, *)
 struct InlineWidgetView_Previews: PreviewProvider {
   static var previews: some View {
     #if os(macOS)

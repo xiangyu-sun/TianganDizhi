@@ -30,7 +30,7 @@ struct ExtraLargeWidgetView: View {
     HStack {
       VStack(alignment: .center) {
         HStack() {
-          Text(date.displayStringOfChineseYearMonthDateWithZodiac)
+          Text(date.displayStringOfChineseYearMonthDateWithZodiac + " \(date.twelveGod()?.chinese ?? "")")
         }
         .font(titleFont)
         
@@ -63,9 +63,11 @@ struct ExtraLargeWidgetView: View {
         ZStack {
           CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
             .padding()
-          Text(date.twelveGod()?.chinese ?? "")
-            .font(titleFont)
-            .minimumScaleFactor(0.8)
+
+          Text(
+            "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
+          )
+          .font(titleFont)
         }
       }
     }

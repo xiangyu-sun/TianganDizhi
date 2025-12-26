@@ -26,10 +26,10 @@ struct CornerView: View {
 
         let base = shichen.endDate.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
         Gauge(value: start / base) { } currentValueLabel: { } minimumValueLabel: {
-          Text(shichen.startDate.shichen?.dizhi.chineseCharactor ?? "")
+          Text(shichen.startDate.shichen?.dizhi.chineseCharacter ?? "")
             .foregroundColor(.primary)
         } maximumValueLabel: {
-          Text(shichen.dizhi.next.chineseCharactor)
+          Text(shichen.dizhi.next.chineseCharacter)
             .foregroundColor(.secondary)
         }
       }

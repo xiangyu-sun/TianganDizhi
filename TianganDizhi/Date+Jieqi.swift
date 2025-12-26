@@ -41,7 +41,7 @@ extension Date {
       let diff = nextDate.dayDifference(Date())
       
       if diff >= 1 && diff <= 14 {
-        return "\(Self.formatter.string(from: NSNumber(value: diff)) ?? "")日後\(nextDate.jieqi?.chineseName ?? "")"
+        return "\(Self.formatter.string(from: NSNumber(value: diff)) ?? "")日後\(nextDate.jieqi?.chineseName ?? "")\((nextDate.jieqi?.qi == true) ? "(氣)" : "(節)")"
       } else {
         return jieqi.chineseName
       }

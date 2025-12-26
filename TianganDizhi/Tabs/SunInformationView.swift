@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-// MARK: - SunInformationView
+// MARK: - SunInformationView   <<<                                                                                                                                             
 
 struct SunInformationView: View {
   @State var info: WeatherData.Information

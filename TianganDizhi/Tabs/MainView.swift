@@ -64,25 +64,13 @@ struct MainView: View {
         .lineLimit(1)
         .minimumScaleFactor(0.8)
         .font(titleFont)
-      
- 
-//        if horizontalSizeClass == .compact {
-//          Button {
-//            showingPopover.toggle()
-//          } label: {
-//            Text("\(god.map{ $0.xiongjiL } ?? "")")
-//              .underline()
-//              .font(calloutFont)
-//              .foregroundColor(Color.secondary)
-//          }
-//        } else {
-//          Group() {
-//            Text("\(god.map{ $0.xiongjiL } ?? "")")
-//            Text("宜：\(god.map{ $0.do } ?? "")" + " 忌：\(god.map{ $0.dontDo } ?? "")")
-//          }
-//          .foregroundColor(Color.secondary)
-//          .font(calloutFont)
-//        }
+        
+        
+        HStack(spacing: 0) {
+          Text(event.date, style: .relative)
+          Text("後\(title)")
+        }
+        .font(bodyFont)
 
         Text(updater.currentDate.jieQiDisplayText)
           .font(bodyFont)
@@ -114,10 +102,15 @@ struct MainView: View {
           #endif
 
           VStack {
-            Text(shichen.dizhi.aliasName)
+            Text(
+              "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: .init(value: shichen.currentKe)) ?? "")刻"
+            )
               .font(largeTitleFont)
-            Text(shichen.dizhi.organReference)
-              .font(bodyFont)
+            HStack {
+              Text(shichen.dizhi.aliasName)
+              Text(shichen.dizhi.organReference)
+            }
+            .font(bodyFont)
           }
         }
       }
@@ -125,8 +118,8 @@ struct MainView: View {
       Spacer()
       
       HStack() {
-        Text(LunarMansion.lunarMansion(date: updater.currentDate).fourSymbol.rawValue)
-        Text(LunarMansion.lunarMansion(date: updater.currentDate).rawValue)
+        Text("象: \(LunarMansion.lunarMansion(date: updater.currentDate).fourSymbol.rawValue)")
+        Text("宿: \(LunarMansion.lunarMansion(date: updater.currentDate).rawValue)")
       }
       .foregroundColor(Color.secondary)
       .font(calloutFont)
@@ -186,12 +179,6 @@ struct MainView: View {
           .padding(.bottom)
         }
       }
-// TODO: adding the New YEar Count down for next year Jan
-//      HStack(spacing: 0) {
-//        Text(event.date, style: .relative)
-//        Text("後\(title)")
-//      }
-//      .font(bodyFont)
 
       #endif
     }

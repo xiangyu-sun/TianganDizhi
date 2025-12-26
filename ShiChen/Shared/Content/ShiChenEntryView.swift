@@ -34,12 +34,13 @@ struct ShiChenEntryView: View {
   var body: some View {
     switch family {
     case .accessoryInline:
-      if #available(iOSApplicationExtension 16.1, *) {
         if horizontalSizeClass != .compact {
           HStack(spacing: 0) {
             Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
             if let shichen = entry.date.shichen {
-              Text(shichen.dizhi.displayHourText)
+              let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
+              
+              Text(shichen.dizhi.displayHourText + keString)
             }
           }
           .font(.body)
@@ -47,17 +48,15 @@ struct ShiChenEntryView: View {
         } else {
           InlineWidgetView(date: entry.date)
         }
-      }
+      
 
     case .accessoryCircular:
-      if #available(iOSApplicationExtension 16.0, *) {
         CircularWidgetView(date: entry.date)
-      }
+      
 
     case .accessoryRectangular:
-      if #available(iOSApplicationExtension 16.0, *) {
         RetangularWidgetView(date: entry.date)
-      }
+      
     #if os(watchOS)
     case .accessoryCorner:
       CornerView(date: entry.date)
@@ -78,10 +77,18 @@ struct ShiChenEntryView: View {
           if let shichen = entry.date.shichen {
             CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
             VStack {
-              Text(shichen.dizhi.aliasName)
-                .font(largeTitleFont)
-              Text(shichen.dizhi.organReference)
-                .font(bodyFont)
+              Text(
+                "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
+              )
+              .font(titleFont)
+              
+              HStack() {
+                Text(shichen.dizhi.aliasName)
+                  .font(bodyFont)
+                Text(shichen.dizhi.organReference)
+              }
+              .font(bodyFont)
+              
             }
           }
         }
