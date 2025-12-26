@@ -149,21 +149,21 @@ struct ShiChenEntryView: View {
 struct ShiChenEntryView_Previews: PreviewProvider {
   static var previews: some View {
     #if os(iOS)
-    if #available(iOSApplicationExtension 16.0, *) {
-      Group {
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryInline))
-          .previewDisplayName("Inline")
 
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-          .previewDisplayName("Circular")
-
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-          .previewDisplayName("Retangular")
-      }
+    Group {
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryInline))
+        .previewDisplayName("Inline")
+      
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+        .previewDisplayName("Circular")
+      
+      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+        .previewDisplayName("Retangular")
     }
+    
     Group {
       ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemSmall))

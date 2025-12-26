@@ -87,17 +87,17 @@ struct CountDownView: View {
 struct CountDownView_Previews: PreviewProvider {
   static var previews: some View {
     #if os(iOS)
-    if #available(iOSApplicationExtension 16.0, *) {
-      Group {
-        CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryInline))
-          .previewDisplayName("Inline")
 
-        CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-          .previewDisplayName("Retangular")
-      }
+    Group {
+      CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryInline))
+        .previewDisplayName("Inline")
+      
+      CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+        .previewDisplayName("Retangular")
     }
+    
     Group {
       CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
         .previewContext(WidgetPreviewContext(family: .systemSmall))

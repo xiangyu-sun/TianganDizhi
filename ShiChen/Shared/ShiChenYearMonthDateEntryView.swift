@@ -162,21 +162,21 @@ struct ShiChenYearMonthDateEntryView_Previews: PreviewProvider {
         .previewDisplayName("systemMedium")
     }
     #if os(iOS)
-    if #available(iOSApplicationExtension 16.0, *) {
-      Group {
-        ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryInline))
-          .previewDisplayName("ShiChenYearMonthDateEntryView accessoryInline")
-
-        ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-          .previewDisplayName("ShiChenYearMonthDateEntryView accessoryCircular")
-
-        ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-          .previewDisplayName("ShiChenYearMonthDateEntryView accessoryRectangular")
-      }
+    
+    Group {
+      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryInline))
+        .previewDisplayName("ShiChenYearMonthDateEntryView accessoryInline")
+      
+      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+        .previewDisplayName("ShiChenYearMonthDateEntryView accessoryCircular")
+      
+      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+        .previewDisplayName("ShiChenYearMonthDateEntryView accessoryRectangular")
     }
+    
     #endif
   }
 }

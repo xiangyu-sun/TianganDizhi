@@ -12,7 +12,6 @@ import WidgetKit
 
 // MARK: - CircularWidgetView
 
-@available(iOS 16.0, *)
 struct CircularWidgetView: View {
 
   @State var date: Date
@@ -46,7 +45,6 @@ struct CircularWidgetView: View {
 
 // MARK: - CircularWidgetView_Previews
 
-@available(iOS 16.0, *)
 struct CircularWidgetView_Previews: PreviewProvider {
   static var previews: some View {
     #if os(macOS)

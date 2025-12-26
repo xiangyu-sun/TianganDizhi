@@ -56,7 +56,6 @@ struct RetangularWidgetView: View {
 
 // MARK: - RetangularWidgetView_Previews
 
-@available(iOS 16.0, *)
 struct RetangularWidgetView_Previews: PreviewProvider {
   static var previews: some View {
     #if os(macOS)

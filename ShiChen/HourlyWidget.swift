@@ -13,7 +13,6 @@ import WidgetKit
 
 // MARK: - HourlyWidget
 
-@available(iOSApplicationExtension 16.0, *)
 struct HourlyWidget: Widget {
   let kind = "ShiChenByMinute"
 
