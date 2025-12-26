@@ -18,11 +18,11 @@ struct InlineWidgetView: View {
 
   var body: some View {
     let shichen = date.shichen
-    let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
-    
+//    let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
+//    
     ViewThatFits(in: .horizontal) {
-      Text("\(date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen?.dizhi.displayHourText ?? "")\(keString)")
-      Text(shichen?.dizhi.displayHourText ?? "" + keString)
+      Text("\(date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen?.dizhi.displayHourText ?? "")")
+      Text(shichen?.dizhi.displayHourText ?? "")
     }
     .font(.body)
     .widgetAccentable()

@@ -64,10 +64,10 @@ struct ExtraLargeWidgetView: View {
           CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
             .padding()
 
-          Text(
-            "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
-          )
-          .font(titleFont)
+//          Text(
+//            "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
+//          )
+//          .font(titleFont)
         }
       }
     }

@@ -38,9 +38,8 @@ struct ShiChenEntryView: View {
           HStack(spacing: 0) {
             Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
             if let shichen = entry.date.shichen {
-              let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
-              
-              Text(shichen.dizhi.displayHourText + keString)
+              //let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
+              Text(shichen.dizhi.displayHourText)
             }
           }
           .font(.body)
@@ -77,17 +76,16 @@ struct ShiChenEntryView: View {
           if let shichen = entry.date.shichen {
             CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
             VStack {
-              Text(
-                "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
-              )
-              .font(titleFont)
-              
+//              Text(
+//                "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
+//              )
+//              .font(titleFont)      
               HStack() {
                 Text(shichen.dizhi.aliasName)
                   .font(bodyFont)
                 Text(shichen.dizhi.organReference)
               }
-              .font(bodyFont)
+              .font(titleFont)
               
             }
           }
