@@ -58,10 +58,10 @@ struct ShiChenYearMonthDateEntryView: View {
         )
           .font(titleFont)
         
-        Text(
-          "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
-        )
-        .font(bodyFont)
+//        Text(
+//          "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
+//        )
+//        .font(bodyFont)
         
       }
       .modifier(WidgetAccentable())
@@ -124,10 +124,9 @@ private struct WidgetMediumView: View {
       
       HStack() {
         Text(shichen?.dizhi.displayHourText ?? "")
-        
-        Text(
-          "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
-        )
+//        Text(
+//          "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
+//        )
       }
       .font(titleFont)
       .modifier(WidgetAccentable())

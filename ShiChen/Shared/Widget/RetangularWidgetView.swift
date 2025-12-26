@@ -46,7 +46,7 @@ struct RetangularWidgetView: View {
       
       VStack() {
         Text(shichen?.dizhi.displayHourText ?? "" )
-        Text("\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻")
+        //Text("\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻")
       }
         .font(.headline)
     }
