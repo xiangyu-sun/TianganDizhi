@@ -6,22 +6,21 @@
 //  Copyright © 2020 孙翔宇. All rights reserved.
 //
 
-import XCTest
+import Testing
+import Foundation
 @testable import TianganDizhi
 
-class TianganDizhiTests: XCTestCase {
+struct ShichenTimeLineSchedulerTests {
 
-  override func setUp() {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-  }
-
-  override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-  }
-
-  func testTimeline() {
+  @Test("Timeline contains exactly 12 entries")
+  func timelineCount() {
     let timeline = ShichenTimeLineSceduler.buildTimeLine()
-    XCTAssertEqual(timeline.count, 12)
+    #expect(timeline.count == 12)
+  }
+
+  @Test("Timeline entries have normalized time components at hour boundaries")
+  func timelineEntriesNormalized() {
+    let timeline = ShichenTimeLineSceduler.buildTimeLine()
     let comp: Set<Calendar.Component> = [.hour, .minute, .second, .nanosecond]
 
     let second = timeline[1]
@@ -29,24 +28,32 @@ class TianganDizhiTests: XCTestCase {
     let secondDP = Calendar.current.dateComponents(comp, from: second)
     let thirdDP = Calendar.current.dateComponents(comp, from: third)
 
-    XCTAssertEqual(secondDP.minute, 0)
-    XCTAssertEqual(secondDP.second, 0)
-    XCTAssertEqual(secondDP.nanosecond, 0)
+    #expect(secondDP.minute == 0)
+    #expect(secondDP.second == 0)
+    #expect(secondDP.nanosecond == 0)
 
-    XCTAssertEqual(thirdDP.minute, 0)
-    XCTAssertEqual(thirdDP.second, 0)
-    XCTAssertEqual(thirdDP.nanosecond, 0)
+    #expect(thirdDP.minute == 0)
+    #expect(thirdDP.second == 0)
+    #expect(thirdDP.nanosecond == 0)
+  }
 
+  @Test("Timeline entries are spaced exactly 1 hour apart")
+  func timelineHourlySpacing() {
+    let timeline = ShichenTimeLineSceduler.buildTimeLine()
+    let comp: Set<Calendar.Component> = [.hour, .minute, .second, .nanosecond]
+
+    let third = timeline[2]
     let forth = timeline[3]
     let fivth = timeline[4]
 
-    XCTAssertEqual(Calendar.current.dateComponents(comp, from: third, to: forth).hour, 1)
-    XCTAssertEqual(Calendar.current.dateComponents(comp, from: third, to: forth).minute, 0)
-    XCTAssertEqual(Calendar.current.dateComponents(comp, from: third, to: forth).second, 0)
+    let thirdToForth = Calendar.current.dateComponents(comp, from: third, to: forth)
+    #expect(thirdToForth.hour == 1)
+    #expect(thirdToForth.minute == 0)
+    #expect(thirdToForth.second == 0)
 
-    XCTAssertEqual(Calendar.current.dateComponents(comp, from: forth, to: fivth).hour, 1)
-    XCTAssertEqual(Calendar.current.dateComponents(comp, from: forth, to: fivth).minute, 0)
-    XCTAssertEqual(Calendar.current.dateComponents(comp, from: forth, to: fivth).second, 0)
+    let forthToFivth = Calendar.current.dateComponents(comp, from: forth, to: fivth)
+    #expect(forthToFivth.hour == 1)
+    #expect(forthToFivth.minute == 0)
+    #expect(forthToFivth.second == 0)
   }
-
 }

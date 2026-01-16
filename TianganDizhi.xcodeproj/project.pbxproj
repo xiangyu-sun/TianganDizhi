@@ -292,6 +292,10 @@
 		99FD3F722922994D0048DCEB /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
 		99FD3F752927EBD90048DCEB /* WuxingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3F742927EBD90048DCEB /* WuxingView.swift */; };
 		99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3F742927EBD90048DCEB /* WuxingView.swift */; };
+		9F015737F8114B29890E69D2 /* DizhiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28917186827EE23E04091F2D /* DizhiTests.swift */; };
+		A86338E8CCA9C14C9A2F40C1 /* ChinesePinyinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B42510547F456786FE480 /* ChinesePinyinTests.swift */; };
+		C4DB0A9BF1BA67BEDC774198 /* MinuteTimeLineSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DDA231B606C239EFED7F58 /* MinuteTimeLineSchedulerTests.swift */; };
+		D4C79F9545A80E9B9D743669 /* DateGanzhiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEF3708EE80F98E995CC435 /* DateGanzhiTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -391,6 +395,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C8B42510547F456786FE480 /* ChinesePinyinTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChinesePinyinTests.swift; sourceTree = "<group>"; };
+		28917186827EE23E04091F2D /* DizhiTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DizhiTests.swift; sourceTree = "<group>"; };
+		2CEF3708EE80F98E995CC435 /* DateGanzhiTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateGanzhiTests.swift; sourceTree = "<group>"; };
 		460BA9AB26F24DAD0025CA39 /* ShiciView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiciView.swift; sourceTree = "<group>"; };
 		462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiChenExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		462A5F6524FFE5F20032A125 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -525,6 +532,7 @@
 		99FD3F50292296180048DCEB /* ShichenMacWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShichenMacWidget.entitlements; sourceTree = "<group>"; };
 		99FD3F68292297030048DCEB /* ShichenMacWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShichenMacWidget.swift; sourceTree = "<group>"; };
 		99FD3F742927EBD90048DCEB /* WuxingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuxingView.swift; sourceTree = "<group>"; };
+		E5DDA231B606C239EFED7F58 /* MinuteTimeLineSchedulerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MinuteTimeLineSchedulerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -735,6 +743,10 @@
 				46AB55E1242B5EFF00F6604A /* TianganDizhiTests.swift */,
 				99F6B6F82DD0E93C0080D4CB /* DayDifferenceTest.swift */,
 				46AB55E3242B5EFF00F6604A /* Info.plist */,
+				28917186827EE23E04091F2D /* DizhiTests.swift */,
+				2CEF3708EE80F98E995CC435 /* DateGanzhiTests.swift */,
+				E5DDA231B606C239EFED7F58 /* MinuteTimeLineSchedulerTests.swift */,
+				0C8B42510547F456786FE480 /* ChinesePinyinTests.swift */,
 			);
 			path = TianganDizhiTests;
 			sourceTree = "<group>";
@@ -1074,8 +1086,6 @@
 				46AB55DF242B5EFF00F6604A /* PBXTargetDependency */,
 			);
 			name = TianganDizhiTests;
-			packageProductDependencies = (
-			);
 			productName = TianganDizhiTests;
 			productReference = 46AB55DD242B5EFF00F6604A /* TianganDizhiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1498,6 +1508,10 @@
 			files = (
 				46AB55E2242B5EFF00F6604A /* TianganDizhiTests.swift in Sources */,
 				99F6B6F92DD0E93C0080D4CB /* DayDifferenceTest.swift in Sources */,
+				9F015737F8114B29890E69D2 /* DizhiTests.swift in Sources */,
+				D4C79F9545A80E9B9D743669 /* DateGanzhiTests.swift in Sources */,
+				C4DB0A9BF1BA67BEDC774198 /* MinuteTimeLineSchedulerTests.swift in Sources */,
+				A86338E8CCA9C14C9A2F40C1 /* ChinesePinyinTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
