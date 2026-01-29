@@ -52,7 +52,7 @@ struct ShierPiguaView: View {
             .rotationEffect(getRotatingAngle(for: dizhiIndex - 3, base: 12))
             .offset(angle12Position(for: dizhiIndex - 3, in: geometry.size, z: 1))
 
-          Text(shouldScaleFont ? dizhi.chineseCalendarMonthName : dizhi.chineseCharactor)
+          Text(shouldScaleFont ? dizhi.chineseCalendarMonthName : dizhi.chineseCharacter)
             .rotationEffect(getRotatingAngle(for: dizhiIndex - 3, base: 12))
             .offset(angle12Position(for: dizhiIndex - 3, in: geometry.size, z: 2))
 

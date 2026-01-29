@@ -28,8 +28,8 @@ struct TianganCell: View {
   @Environment(\.bodyFont) var bodyFont
   var body: some View {
     HStack {
-      Text(tiangan.chineseCharactor)
-      Text("(\(tiangan.chineseCharactor.transformToPinyin()))")
+      Text(tiangan.chineseCharacter)
+      Text("(\(tiangan.chineseCharacter.transformToPinyin()))")
     }
     .padding()
     .font(bodyFont)

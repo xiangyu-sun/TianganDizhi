@@ -90,7 +90,7 @@ struct TianganNodeView: View {
       Circle()
         .fill(color.opacity(stem.yin ? 0.5 : 0.7))
         .frame(width: 50, height: 50)
-        .overlay(Text(stem.chineseCharactor).font(.title2).bold().foregroundColor(.primary))
+        .overlay(Text(stem.chineseCharacter).font(.title2).bold().foregroundColor(.primary))
       Text(stem.yin ? "陰" : "陽").font(.caption)
     }
   }

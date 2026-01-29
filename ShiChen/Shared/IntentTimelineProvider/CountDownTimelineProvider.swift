@@ -13,7 +13,7 @@ struct CountDownTimelineProvider: IntentTimelineProvider {
 
   func recommendations() -> [IntentRecommendation<Intent>] {
     defaultRecommendedIntents().map { intent in
-      let description = Date().shichen?.dizhi.chineseCharactor ?? ""
+      let description = Date().shichen?.dizhi.chineseCharacter ?? ""
       return IntentRecommendation(intent: intent, description: description)
     }
   }

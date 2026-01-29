@@ -18,7 +18,7 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
 
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
     defaultRecommendedIntents().map { intent in
-      let description = Date().shichen?.dizhi.chineseCharactor ?? ""
+      let description = Date().shichen?.dizhi.chineseCharacter ?? ""
       return IntentRecommendation(intent: intent, description: "當前時辰" + description)
     }
   }

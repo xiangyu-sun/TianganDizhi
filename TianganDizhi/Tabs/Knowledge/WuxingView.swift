@@ -52,8 +52,8 @@ struct WuxingView: View {
             Text("天干")
               .font(footnote)
             HStack {
-              Text("\(item.tiangan.0.chineseCharactor)")
-              Text("\(item.tiangan.1.chineseCharactor)")
+              Text("\(item.tiangan.0.chineseCharacter)")
+              Text("\(item.tiangan.1.chineseCharacter)")
             }
             .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
             Divider()
@@ -61,7 +61,7 @@ struct WuxingView: View {
               .font(footnote)
             HStack {
               ForEach(item.dizhi) {
-                Text("\($0.chineseCharactor)")
+                Text("\($0.chineseCharacter)")
                   .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
               }
             }
@@ -99,7 +99,7 @@ struct WuxingView: View {
 
           Divider()
 
-          makeTopicView(title: "方位", detail: "\(item.fangwei.chineseCharactor)")
+          makeTopicView(title: "方位", detail: "\(item.fangwei.chineseCharacter)")
           makeTopicView(title: "色彩", detail: "\(item.colorDescription)")
 
           Divider()

@@ -19,8 +19,8 @@ struct DizhiCell: View {
 
   var body: some View {
     HStack {
-      Text(dizhi.chineseCharactor)
-      Text("(\(dizhi.chineseCharactor.transformToPinyin()))")
+      Text(dizhi.chineseCharacter)
+      Text("(\(dizhi.chineseCharacter.transformToPinyin()))")
     }
     .padding()
   }
@@ -35,7 +35,7 @@ struct DizhiZodiaCell: View {
     HStack {
       let zodiac = Zodiac(dizhi)
       Text(zodiac.emoji)
-      Text(dizhi.chineseCharactor)
+      Text(dizhi.chineseCharacter)
       Text("\(zodiac.rawValue)")
       Spacer()
       Text(dizhi.wuxing.chineseCharacter)
@@ -50,7 +50,7 @@ struct ShichenMonthCell: View {
   let shichen: Dizhi
   var body: some View {
     HStack {
-      Text(shichen.chineseCharactor)
+      Text(shichen.chineseCharacter)
       Spacer()
       Text(shichen.formattedMonth)
     }
@@ -64,7 +64,7 @@ struct ShichenHourCell: View {
   let shichen: Dizhi
   var body: some View {
     HStack {
-      Text(shichen.chineseCharactor)
+      Text(shichen.chineseCharacter)
       Spacer()
       Text(shichen.formattedHourRange ?? "")
     }
@@ -79,7 +79,7 @@ struct OrganShichenCell: View {
 
   var body: some View {
     HStack {
-      Text(shichen.chineseCharactor)
+      Text(shichen.chineseCharacter)
       Text(shichen.formattedHourRange ?? "")
       Text(shichen.luizhu.rawValue)
     }
@@ -93,7 +93,7 @@ struct AliasShichenCell: View {
   let shichen: Dizhi
   var body: some View {
     HStack {
-      Text(shichen.chineseCharactor)
+      Text(shichen.chineseCharacter)
       Spacer()
       Text(shichen.aliasName)
     }
@@ -108,7 +108,7 @@ struct LvlvCell: View {
 
   var body: some View {
     HStack {
-      Text(dizhi.chineseCharactor)
+      Text(dizhi.chineseCharacter)
 
       Spacer()
       let value = Key.shierLvLv[dizhi.rawValue - 1]

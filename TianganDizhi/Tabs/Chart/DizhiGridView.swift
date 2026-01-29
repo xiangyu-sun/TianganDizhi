@@ -23,7 +23,7 @@ struct DizhiGridView: View {
   var body: some View {
     VStack {
       HStack {
-        Text(dizhi.chineseCharactor)
+        Text(dizhi.chineseCharacter)
           .font(titleFont)
       }
 
