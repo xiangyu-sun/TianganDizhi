@@ -50,11 +50,11 @@ struct JieqiWidget: Widget {
           } else {
             Text(entry.date, style: .date)
               .font(.callout)
-              .environment(\.locale, Locale.current)
+              .environment(\.locale, Locale(identifier: "zh-hant"))
             Text(date, style: .date)
               .font(.callout)
               .foregroundColor(.secondary)
-              .environment(\.locale, Locale.current)
+              .environment(\.locale, Locale(identifier: "zh-hant"))
 
             Text(jieqi.chineseName)
               .foregroundColor(.secondary)
