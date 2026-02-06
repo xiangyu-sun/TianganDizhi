@@ -22,26 +22,53 @@ struct ShichenLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: ShichenActivityAttributes.self) { context in
             // Lock Screen presentation
-            ShichenLockScreenView(date: context.state.currentDate)
+            ShichenLockScreenView(
+                date: context.state.currentDate,
+                nextShichenCountdown: context.state.nextShichenCountdown,
+                keProgress: context.state.keProgress
+            )
+            .widgetURL(URL(string: "tiangandizhi://main"))
         } dynamicIsland: { context in
             DynamicIsland {
                 expandedContent(for: context)
             } compactLeading: {
-                // Compact leading - Shichen character
-                let dizhi = context.state.currentDate.shichen?.dizhi
-                Text(dizhi?.chineseCharacter ?? "")
-                    .font(.caption2)
-                    .fontWeight(.bold)
+                // Compact leading - Shichen character with progress ring
+                ZStack {
+                    // Progress ring
+                    Circle()
+                        .stroke(Color.primary.opacity(0.3), lineWidth: 2)
+                        .frame(width: 20, height: 20)
+                    
+                    Circle()
+                        .trim(from: 0, to: context.state.keProgress)
+                        .stroke(Color.primary, style: StrokeStyle(lineWidth: 2, lineCap: .round))
+                        .frame(width: 20, height: 20)
+                        .rotationEffect(.degrees(-90))
+                    
+                    let dizhi = context.state.currentDate.shichen?.dizhi
+                    Text(dizhi?.chineseCharacter ?? "")
+                        .font(.system(size: 9))
+                        .fontWeight(.bold)
+                }
             } compactTrailing: {
-                // Compact trailing - Current Shichen name
-                Text(context.state.currentDate.shichen?.dizhi.displayHourText ?? "")
-                    .font(.caption2)
+                // Compact trailing - Current Ke
+                if let shichen = context.state.currentDate.shichen {
+                    Text("\(shichen.currentKeSpellOut)刻")
+                        .font(.caption2)
+                }
             } minimal: {
-                // Minimal presentation - Just the Shichen character
-                let dizhi = context.state.currentDate.shichen?.dizhi
-                Text(dizhi?.chineseCharacter ?? "")
-                    .font(.caption2)
-                    .fontWeight(.bold)
+                // Minimal presentation - Shichen character with Ke superscript
+                if let shichen = context.state.currentDate.shichen {
+                    HStack(spacing: 1) {
+                        Text(shichen.dizhi.chineseCharacter)
+                            .font(.caption2)
+                            .fontWeight(.bold)
+                        Text("\(shichen.currentKe)")
+                            .font(.system(size: 8))
+                            .fontWeight(.medium)
+                            .baselineOffset(4)
+                    }
+                }
             }
         }
     }
@@ -52,32 +79,80 @@ struct ShichenLiveActivity: Widget {
         let god = context.state.currentDate.twelveGod()
         
         DynamicIslandExpandedRegion(.leading) {
-            VStack {
+            VStack(alignment: .leading, spacing: 4) {
+                // Shichen character
                 Text(shichen?.dizhi.chineseCharacter ?? "")
                     .font(titleFont)
-                Text("\(shichen?.currentKeSpellOut ?? "")刻")
-                    .font(calloutFont)
-                Text(shichen?.dizhi.aliasName ?? "")
-                    .font(.caption2)
+                
+                // Ke with progress
+                HStack(spacing: 4) {
+                    Text("\(shichen?.currentKeSpellOut ?? "")刻")
+                        .font(calloutFont)
+                    
+                    // Mini progress indicator
+                    ZStack(alignment: .leading) {
+                        RoundedRectangle(cornerRadius: 1.5)
+                            .fill(Color.primary.opacity(0.2))
+                            .frame(width: 30, height: 3)
+                        
+                        RoundedRectangle(cornerRadius: 1.5)
+                            .fill(Color.primary)
+                            .frame(width: 30 * context.state.keProgress, height: 3)
+                    }
+                }
+                
+                // Alias name with organ icon
+                HStack(spacing: 2) {
+                    Image(systemName: "waveform.path.ecg")
+                        .font(.system(size: 8))
+                    Text(shichen?.dizhi.aliasName ?? "")
+                        .font(.caption2)
+                    Text("•")
+                        .font(.caption2)
+                    Text(shichen?.dizhi.organReference ?? "")
+                        .font(.caption2)
+                }
             }
         }
         
         DynamicIslandExpandedRegion(.trailing) {
-            VStack {
+            VStack(alignment: .trailing, spacing: 4) {
+                // Current time
                 Text(context.state.currentDate, style: .time)
                     .font(title3Font)
                     .monospacedDigit()
-                Text(shichen?.dizhi.organReference ?? "")
-                    .font(.caption2)
+                
+                // Next Shichen indicator (shortened)
+                if !context.state.nextShichenCountdown.isEmpty {
+                    let shortCountdown = context.state.nextShichenCountdown
+                        .replacingOccurrences(of: "距离", with: "")
+                        .replacingOccurrences(of: "还有", with: "")
+                    Text(shortCountdown)
+                        .font(.caption2)
+                        .multilineTextAlignment(.trailing)
+                }
             }
         }
         
         DynamicIslandExpandedRegion(.bottom) {
-            HStack {
-                Text(context.state.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
-                    .font(calloutFont)
-                Text(god?.chinese ?? "")
-                    .font(calloutFont)
+            VStack(spacing: 6) {
+                // Chinese date
+                HStack(spacing: 4) {
+                    Image(systemName: "calendar")
+                        .font(.caption2)
+                    Text(context.state.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
+                        .font(calloutFont)
+                }
+                
+                // Twelve God
+                if let god = god {
+                    HStack(spacing: 4) {
+                        Image(systemName: "sparkles")
+                            .font(.caption2)
+                        Text(god.chinese)
+                            .font(.caption)
+                    }
+                }
             }
             .padding(.top, 8)
         }

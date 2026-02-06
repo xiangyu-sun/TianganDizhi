@@ -16,9 +16,13 @@ public struct ShichenActivityAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         // Dynamic content that changes over time
         public var currentDate: Date
+        public var keProgress: Double // 0.0 to 1.0 representing progress through current Ke
+        public var nextShichenCountdown: String // e.g., "距离丑时还有 45 分钟"
         
-        public init(currentDate: Date) {
+        public init(currentDate: Date, keProgress: Double = 0.0, nextShichenCountdown: String = "") {
             self.currentDate = currentDate
+            self.keProgress = keProgress
+            self.nextShichenCountdown = nextShichenCountdown
         }
     }
     

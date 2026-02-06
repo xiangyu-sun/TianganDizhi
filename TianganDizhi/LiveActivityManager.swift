@@ -59,8 +59,11 @@ class LiveActivityManager: ObservableObject {
         }
         
         // Create initial content state
+        let now = Date()
         let initialContentState = ShichenActivityAttributes.ContentState(
-            currentDate: Date()
+            currentDate: now,
+            keProgress: now.keProgress,
+            nextShichenCountdown: now.nextShichenCountdown
         )
         
         // Create activity content
@@ -122,8 +125,11 @@ class LiveActivityManager: ObservableObject {
             return
         }
         
+        let now = Date()
         let updatedContentState = ShichenActivityAttributes.ContentState(
-            currentDate: Date()
+            currentDate: now,
+            keProgress: now.keProgress,
+            nextShichenCountdown: now.nextShichenCountdown
         )
         
         let updatedContent = ActivityContent(
@@ -197,8 +203,11 @@ class LiveActivityManager: ObservableObject {
             return
         }
         
+        let now = Date()
         let finalContentState = ShichenActivityAttributes.ContentState(
-            currentDate: Date()
+            currentDate: now,
+            keProgress: now.keProgress,
+            nextShichenCountdown: now.nextShichenCountdown
         )
         
         let finalContent = ActivityContent(

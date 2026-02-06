@@ -24,6 +24,9 @@ struct TianganDizhiApp: App {
       ContentView()
         .environmentObject(fontProvider)
         .environmentObject(SettingsManager.shared)
+        .onOpenURL { url in
+          handleDeepLink(url)
+        }
     }
 
     #if os(macOS)
@@ -42,5 +45,16 @@ struct TianganDizhiApp: App {
     }
 
     #endif
+  }
+  
+  // MARK: - Deep Link Handling
+  
+  private func handleDeepLink(_ url: URL) {
+    guard url.scheme == "tiangandizhi" else { return }
+    
+    // Handle different deep link paths
+    // For now, just opening the app to main view is sufficient
+    // Can be extended to navigate to specific tabs if needed
+    print("Deep link received: \(url)")
   }
 }

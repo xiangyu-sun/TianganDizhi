@@ -17,5 +17,18 @@
 	<true/>
 	<key>NSSupportsLiveActivitiesFrequentUpdates</key>
 	<true/>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.uriphium.tiangandizhi</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tiangandizhi</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>
