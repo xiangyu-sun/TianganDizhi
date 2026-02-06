@@ -29,52 +29,70 @@ extension Font {
 
 private struct TitleFontEnvironmentKey: EnvironmentKey {
   #if os(watchOS)
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title.bold() : .weiBeiTitleWatch
+  static var defaultValue: Font {
+    SettingsManager.shared.useSystemFont ? .title.bold() : .weiBeiTitleWatch
+  }
   #else
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title.bold() : .weiBeiTitle
+  static var defaultValue: Font {
+    SettingsManager.shared.useSystemFont ? .title.bold() : .weiBeiTitle
+  }
   #endif
 }
 
 // MARK: - LargeTitleFontEnvironmentKey
 
 private struct LargeTitleFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .largeTitle.bold() : .weiBeiLargeTitle
+  static var defaultValue: Font {
+    SettingsManager.shared.useSystemFont ? .largeTitle.bold() : .weiBeiLargeTitle
+  }
 }
 
 // MARK: - BodyFontEnvironmentKey
 
 private struct BodyFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .body.bold() : .weiBeiBody
+  static var defaultValue: Font {
+    SettingsManager.shared.useSystemFont ? .body.bold() : .weiBeiBody
+  }
 }
 
 // MARK: - CalloutFontEnvironmentKey
 
 private struct CalloutFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .callout.bold() : .weiBeiCallOut
+  static var defaultValue: Font {
+    SettingsManager.shared.useSystemFont ? .callout.bold() : .weiBeiCallOut
+  }
 }
 
 // MARK: - FootnoteFontEnvironmentKey
 
 private struct FootnoteFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .footnote.bold() : .weiBeiFootNote
+  static var defaultValue: Font {
+    SettingsManager.shared.useSystemFont ? .footnote.bold() : .weiBeiFootNote
+  }
 }
 
 // MARK: - HeadlineFontEnvironmentKey
 
 private struct HeadlineFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .headline.bold() : .weiBeiHeadline
+  static var defaultValue: Font {
+    SettingsManager.shared.useSystemFont ? .headline.bold() : .weiBeiHeadline
+  }
 }
 
 // MARK: - Title3FontEnvironmentKey
 
 private struct Title3FontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title3.bold() : .weiBeiTitle3
+  static var defaultValue: Font {
+    SettingsManager.shared.useSystemFont ? .title3.bold() : .weiBeiTitle3
+  }
 }
 
 // MARK: - Title2FontEnvironmentKey
 
 private struct Title2FontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = SettingsManager.shared.useSystemFont ? .title2.bold() : .weiBeiTitle2
+  static var defaultValue: Font {
+    SettingsManager.shared.useSystemFont ? .title2.bold() : .weiBeiTitle2
+  }
 }
 
 

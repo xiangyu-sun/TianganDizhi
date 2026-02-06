@@ -221,6 +221,10 @@
 		998F9E8C2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */; };
 		998F9E8D2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */; };
 		998F9E8E2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */; };
+		998F9E902F363B5D00650E5E /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E8F2F363B5D00650E5E /* FontManager.swift */; };
+		998F9E912F363B5D00650E5E /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E8F2F363B5D00650E5E /* FontManager.swift */; };
+		998F9E922F363B5D00650E5E /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E8F2F363B5D00650E5E /* FontManager.swift */; };
+		998F9E932F363B5D00650E5E /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E8F2F363B5D00650E5E /* FontManager.swift */; };
 		999B068A2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */; };
 		999B068B2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */; };
 		99A0B7932DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
@@ -521,6 +525,7 @@
 		998F9E842F36368300650E5E /* ShichenLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenLiveActivity.swift; sourceTree = "<group>"; };
 		998F9E862F3636A400650E5E /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
 		998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenActivityAttributes.swift; sourceTree = "<group>"; };
+		998F9E8F2F363B5D00650E5E /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jieqi+Image.swift"; sourceTree = "<group>"; };
 		99A0B7982DB582A4000F2AD7 /* Jieqi.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Jieqi.xcassets; sourceTree = "<group>"; };
@@ -818,6 +823,7 @@
 				996D2C1B29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift */,
 				46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */,
 				9911517529DF3E5500A7CE54 /* DateColorModifier.swift */,
+				998F9E8F2F363B5D00650E5E /* FontManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1470,6 +1476,7 @@
 				994215E72965C368003C5CA1 /* WidgetConstants.swift in Sources */,
 				994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */,
 				99A2B708297EBA6B00086CC7 /* CountDownTimelineProvider.swift in Sources */,
+				998F9E932F363B5D00650E5E /* FontManager.swift in Sources */,
 				997CD11B2954FE1300BECF31 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1500,6 +1507,7 @@
 				46EF7F8427108D73007030CC /* ShierPiguaView.swift in Sources */,
 				46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				99632043290C2D1E000C4A2B /* TianganDizhiApp.swift in Sources */,
+				998F9E902F363B5D00650E5E /* FontManager.swift in Sources */,
 				46E055B224B02FA900AC2AE5 /* CircularContainerView.swift in Sources */,
 				46F9C28C25D137D50017440D /* Cells.swift in Sources */,
 				995997072B3DF1AB002288D1 /* MultiSelectionView.swift in Sources */,
@@ -1637,6 +1645,7 @@
 				997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */,
 				99A0B7A12DB5895F000F2AD7 /* JieqiTimelineProvider.swift in Sources */,
 				99BC3C13296A2950004AB614 /* DateFormatters.swift in Sources */,
+				998F9E922F363B5D00650E5E /* FontManager.swift in Sources */,
 				99553A0A2AC9CC7A00EAA6B1 /* WatchWidgetBundle.swift in Sources */,
 				997C68A42868A86C00B40D3F /* ShichenTimeLineSceduler.swift in Sources */,
 				997C68952868A76800B40D3F /* ShiChenEntryView.swift in Sources */,
@@ -1691,6 +1700,7 @@
 				99F0EF3329FEC13F008476B6 /* LocationManager.swift in Sources */,
 				99FD3F612922968B0048DCEB /* MinuteTimelineProvider.swift in Sources */,
 				99FD3F6E2922986C0048DCEB /* ShichenView.swift in Sources */,
+				998F9E912F363B5D00650E5E /* FontManager.swift in Sources */,
 				99F9DDCC29E0C3A700E69B8E /* MediumWidgetView.swift in Sources */,
 				992A7E642DB56AA400B372CA /* Date+Jieqi.swift in Sources */,
 				994215E92965C368003C5CA1 /* WidgetConstants.swift in Sources */,
