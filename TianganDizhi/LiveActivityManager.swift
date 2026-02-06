@@ -25,9 +25,9 @@ class LiveActivityManager: ObservableObject {
         set { _currentActivity = newValue }
     }
     #endif
-    private var updateTimer: Timer?
     private var activityStartTime: Date?
     private var restartCheckTimer: Timer?
+    private var updateTask: Task<Void, Never>?
     
     var isActivityRunning: Bool {
         #if canImport(ActivityKit) && os(iOS)
@@ -62,14 +62,16 @@ class LiveActivityManager: ObservableObject {
         let now = Date()
         let initialContentState = ShichenActivityAttributes.ContentState(
             currentDate: now,
-            keProgress: now.keProgress,
             nextShichenCountdown: now.nextShichenCountdown
         )
+        
+        // Set stale date to 1 minute from now to trigger system refresh
+        let staleDate = Calendar.current.date(byAdding: .minute, value: 1, to: now)
         
         // Create activity content
         let activityContent = ActivityContent(
             state: initialContentState,
-            staleDate: nil // Never stale since we update frequently
+            staleDate: staleDate
         )
         
         // Start the Live Activity
@@ -83,8 +85,8 @@ class LiveActivityManager: ObservableObject {
             currentActivity = activity
             activityStartTime = Date()
             
-            // Start timer for updates
-            startUpdateTimer()
+            // Start background task to update activity
+            startBackgroundUpdates()
             
             // Start timer to check for automatic restart (check every hour)
             startRestartCheckTimer()
@@ -99,21 +101,43 @@ class LiveActivityManager: ObservableObject {
     
     // MARK: - Update Live Activity
     
-    private func startUpdateTimer() {
-        // Stop existing timer if any
-        updateTimer?.invalidate()
+    private func startBackgroundUpdates() {
+        // Start observing app lifecycle to update when app becomes active
+        #if canImport(ActivityKit) && os(iOS)
+        guard #available(iOS 16.1, *) else { return }
         
-        // Create timer that fires every 5 minutes (300 seconds)
-        updateTimer = Timer.scheduledTimer(withTimeInterval: 300.0, repeats: true) { [weak self] _ in
-            Task { @MainActor in
-                await self?.updateLiveActivity()
+        // Start a task that updates periodically while the app is running
+        updateTask = Task { [weak self] in
+            guard let self = self else { return }
+            
+            // Initial immediate update
+            await self.updateLiveActivity()
+            
+            while !Task.isCancelled {
+                // Wait 60 seconds
+                try? await Task.sleep(nanoseconds: 60_000_000_000)
+                
+                if Task.isCancelled { break }
+                
+                // Check if activity is still running
+                guard await self.isActivityRunning else { break }
+                
+                // Update the activity
+                print("🔄 Updating Live Activity at \(Date())")
+                await self.updateLiveActivity()
             }
         }
-        
-        // Ensure timer runs in common run loop modes
-        if let timer = updateTimer {
-            RunLoop.main.add(timer, forMode: .common)
-        }
+        #endif
+    }
+    
+    private func stopBackgroundUpdates() {
+        updateTask?.cancel()
+        updateTask = nil
+    }
+    
+    // Call this when app becomes active to refresh the activity
+    func refreshActivity() async {
+        await updateLiveActivity()
     }
     
     private func updateLiveActivity() async {
@@ -121,29 +145,25 @@ class LiveActivityManager: ObservableObject {
         guard #available(iOS 16.2, *) else { return }
         guard let activity = currentActivity,
               activity.activityState == .active else {
-            stopUpdateTimer()
             return
         }
         
         let now = Date()
         let updatedContentState = ShichenActivityAttributes.ContentState(
             currentDate: now,
-            keProgress: now.keProgress,
             nextShichenCountdown: now.nextShichenCountdown
         )
         
+        // Set next stale date to 1 minute from now
+        let staleDate = Calendar.current.date(byAdding: .minute, value: 1, to: now)
+        
         let updatedContent = ActivityContent(
             state: updatedContentState,
-            staleDate: nil
+            staleDate: staleDate
         )
         
         await activity.update(updatedContent)
         #endif
-    }
-    
-    private func stopUpdateTimer() {
-        updateTimer?.invalidate()
-        updateTimer = nil
     }
     
     // MARK: - Auto-Restart Logic
@@ -193,7 +213,7 @@ class LiveActivityManager: ObservableObject {
     // MARK: - End Live Activity
     
     func endLiveActivity() async {
-        stopUpdateTimer()
+        stopBackgroundUpdates()
         stopRestartCheckTimer()
         activityStartTime = nil
         
@@ -206,7 +226,6 @@ class LiveActivityManager: ObservableObject {
         let now = Date()
         let finalContentState = ShichenActivityAttributes.ContentState(
             currentDate: now,
-            keProgress: now.keProgress,
             nextShichenCountdown: now.nextShichenCountdown
         )
         

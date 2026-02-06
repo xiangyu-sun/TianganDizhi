@@ -24,30 +24,17 @@ struct ShichenLiveActivity: Widget {
             // Lock Screen presentation
             ShichenLockScreenView(
                 date: context.state.currentDate,
-                nextShichenCountdown: context.state.nextShichenCountdown,
-                keProgress: context.state.keProgress
+                nextShichenCountdown: context.state.nextShichenCountdown
             )
             .widgetURL(URL(string: "tiangandizhi://main"))
         } dynamicIsland: { context in
             DynamicIsland {
                 expandedContent(for: context)
             } compactLeading: {
-                // Compact leading - Shichen character with progress ring
-                ZStack {
-                    // Progress ring
-                    Circle()
-                        .stroke(Color.primary.opacity(0.3), lineWidth: 2)
-                        .frame(width: 20, height: 20)
-                    
-                    Circle()
-                        .trim(from: 0, to: context.state.keProgress)
-                        .stroke(Color.primary, style: StrokeStyle(lineWidth: 2, lineCap: .round))
-                        .frame(width: 20, height: 20)
-                        .rotationEffect(.degrees(-90))
-                    
-                    let dizhi = context.state.currentDate.shichen?.dizhi
-                    Text(dizhi?.chineseCharacter ?? "")
-                        .font(.system(size: 9))
+                // Compact leading - Shichen character
+                if let dizhi = context.state.currentDate.shichen?.dizhi {
+                    Text(dizhi.chineseCharacter)
+                        .font(.system(size: 12))
                         .fontWeight(.bold)
                 }
             } compactTrailing: {
@@ -84,22 +71,9 @@ struct ShichenLiveActivity: Widget {
                 Text(shichen?.dizhi.chineseCharacter ?? "")
                     .font(titleFont)
                 
-                // Ke with progress
-                HStack(spacing: 4) {
-                    Text("\(shichen?.currentKeSpellOut ?? "")刻")
-                        .font(calloutFont)
-                    
-                    // Mini progress indicator
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 1.5)
-                            .fill(Color.primary.opacity(0.2))
-                            .frame(width: 30, height: 3)
-                        
-                        RoundedRectangle(cornerRadius: 1.5)
-                            .fill(Color.primary)
-                            .frame(width: 30 * context.state.keProgress, height: 3)
-                    }
-                }
+                // Ke display
+                Text("\(shichen?.currentKeSpellOut ?? "")刻")
+                    .font(calloutFont)
                 
                 // Alias name with organ icon
                 HStack(spacing: 2) {
@@ -122,7 +96,7 @@ struct ShichenLiveActivity: Widget {
                     .font(title3Font)
                     .monospacedDigit()
                 
-                // Next Shichen indicator (shortened)
+                // Next Shichen countdown
                 if !context.state.nextShichenCountdown.isEmpty {
                     let shortCountdown = context.state.nextShichenCountdown
                         .replacingOccurrences(of: "距離", with: "")

@@ -18,6 +18,7 @@ struct TianganDizhiApp: App {
 
   @StateObject private var fontProvider = FontProvider()
   @ObservedObject var updater = DateProvider()
+  // @Environment(\.scenePhase) private var scenePhase
 
   var body: some Scene {
     WindowGroup {
@@ -28,6 +29,16 @@ struct TianganDizhiApp: App {
           handleDeepLink(url)
         }
     }
+    // .onChange(of: scenePhase) { newPhase in
+    //   #if os(iOS)
+    //   if newPhase == .active {
+    //     // Refresh Live Activity when app becomes active
+    //     Task {
+    //       await LiveActivityManager.shared.refreshActivity()
+    //     }
+    //   }
+    //   #endif
+    // }
 
     #if os(macOS)
     let dizh = updater.currentDate.shichen?.dizhi ?? .zi

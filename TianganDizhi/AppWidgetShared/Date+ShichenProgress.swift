@@ -12,15 +12,11 @@ import ChineseAstrologyCalendar
 extension Date {
     /// Calculate progress through the current Ke (0.0 to 1.0)
     var keProgress: Double {
-        guard let shichen = self.shichen else { return 0.0 }
+        guard self.shichen != nil else { return 0.0 }
         
-        // Each Ke is approximately 14.4 minutes (1/8 of a 2-hour Shichen)
-        let keMinutes: Double = 14.4
-        let currentKe = shichen.currentKe // 1-8
-        
-        // Calculate the start time of current Ke within the Shichen
-        let keStartMinute = Double(currentKe - 1) * keMinutes
-        let keEndMinute = Double(currentKe) * keMinutes
+        // Each Shichen is 2 hours (120 minutes), divided into 8 Ke
+        let shichenMinutes: Double = 120.0
+        let keMinutes: Double = shichenMinutes / 8.0 // 15 minutes per Ke
         
         // Get current time components
         let calendar = Calendar.current
@@ -44,11 +40,43 @@ extension Date {
             minutesIntoShichen += 1440 // Add 24 hours if wrapped
         }
         
-        // Progress within current Ke
-        let minutesIntoKe = minutesIntoShichen - keStartMinute
-        let progress = minutesIntoKe / keMinutes
+        // Calculate which Ke we're in and progress within it
+        // This gives us a precise position regardless of library's Ke calculation
+        let kePosition = minutesIntoShichen / keMinutes // e.g., 5.7 means 70% through 6th Ke
+        let progressInCurrentKe = kePosition.truncatingRemainder(dividingBy: 1.0) // Get fractional part
         
-        return min(max(progress, 0.0), 1.0)
+        return min(max(progressInCurrentKe, 0.0), 1.0)
+    }
+    
+    /// Calculate the exact Date when the next Shichen starts
+    var nextShichenTime: Date {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute, .second], from: self)
+        let hour = components.hour ?? 0
+        
+        // Get current Shichen start hour (odd hour)
+        let shichenStartHour = (hour % 2 == 1) ? hour : hour - 1
+        let adjustedStartHour = (shichenStartHour < 0) ? 23 : shichenStartHour
+        
+        // Calculate next Shichen start hour (start + 2, wrapping at 24)
+        let nextShichenStartHour = (adjustedStartHour + 2) % 24
+        
+        // Create date for next Shichen start
+        var dateComponents = calendar.dateComponents([.year, .month, .day], from: self)
+        dateComponents.hour = nextShichenStartHour
+        dateComponents.minute = 0
+        dateComponents.second = 0
+        
+        guard let nextTime = calendar.date(from: dateComponents) else {
+            return self
+        }
+        
+        // If the time is in the past (wrapped around midnight), add a day
+        if nextTime < self {
+            return calendar.date(byAdding: .day, value: 1, to: nextTime) ?? nextTime
+        }
+        
+        return nextTime
     }
     
     /// Calculate countdown string to next Shichen
