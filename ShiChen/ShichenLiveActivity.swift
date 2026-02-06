@@ -125,8 +125,8 @@ struct ShichenLiveActivity: Widget {
                 // Next Shichen indicator (shortened)
                 if !context.state.nextShichenCountdown.isEmpty {
                     let shortCountdown = context.state.nextShichenCountdown
-                        .replacingOccurrences(of: "距离", with: "")
-                        .replacingOccurrences(of: "还有", with: "")
+                        .replacingOccurrences(of: "距離", with: "")
+                        .replacingOccurrences(of: "還有", with: "")
                     Text(shortCountdown)
                         .font(.caption2)
                         .multilineTextAlignment(.trailing)

@@ -54,14 +54,14 @@ extension Date {
         let nextShichen = currentShichen.dizhi.next
         
         if minutesUntilEnd < 60 {
-            return "距离\(nextShichen.displayHourText)还有 \(minutesUntilEnd) 分钟"
+            return "距離\(nextShichen.displayHourText)還有 \(minutesUntilEnd) 分鐘"
         } else {
             let hours = minutesUntilEnd / 60
             let mins = minutesUntilEnd % 60
             if mins == 0 {
-                return "距离\(nextShichen.displayHourText)还有 \(hours) 小时"
+                return "距離\(nextShichen.displayHourText)還有 \(hours) 小時"
             } else {
-                return "距离\(nextShichen.displayHourText)还有 \(hours) 小时 \(mins) 分钟"
+                return "距離\(nextShichen.displayHourText)還有 \(hours) 小時 \(mins) 分鐘"
             }
         }
     }
