@@ -29,61 +29,48 @@ struct ShichenLockScreenView: View {
     @Environment(\.calloutFont) var calloutFont
 
     var body: some View {
-        VStack(spacing: 0) {
-            Spacer(minLength: 6)
-            
+        VStack(spacing: 4) {
             // Top: Chinese date
             FullDateTitleView(date: date)
                 .font(title3Font)
-                .padding(.bottom, 4)
-            
-            // Moon phase icon (if enabled)
-            if displayMoonPhaseOnWidgets, let moonPhase = date.chineseDay()?.moonPhase {
-                HStack(spacing: 4) {
-                    Image(systemName: moonPhaseIcon(for: moonPhase))
-                        .font(.caption)
-                    Text(moonPhase.name(traditionnal: false))
-                        .font(.caption2)
-                }
-                .padding(.bottom, 6)
-            }
-
-            Spacer(minLength: 4)
             
             if let shichen = date.shichen {
-                // Ke display with progress bar
-                VStack(spacing: 2) {
+                // Ke display with fixed-width progress bar
+                VStack(spacing: 3) {
                     Text("\(shichen.currentKeSpellOut)刻")
-                        .font(largeTitleFont)
+                        .font(title2Font)
                     
-                    // Ke progress bar
-                    GeometryReader { geometry in
+                    // Ke progress bar with fixed width
+                    HStack {
+                        Spacer()
                         ZStack(alignment: .leading) {
                             RoundedRectangle(cornerRadius: 2)
                                 .fill(Color.primary.opacity(0.2))
-                                .frame(height: 4)
+                                .frame(width: 120, height: 3)
                             
                             RoundedRectangle(cornerRadius: 2)
                                 .fill(Color.primary)
-                                .frame(width: geometry.size.width * keProgress, height: 4)
+                                .frame(width: 120 * keProgress, height: 3)
                         }
+                        Spacer()
                     }
-                    .frame(height: 4)
-                    .padding(.horizontal, 40)
                 }
-                .padding(.bottom, 8)
                 
-                // Countdown
-                Text(nextShichenCountdown)
-                    .font(calloutFont)
-                    .padding(.bottom, 6)
+                // Countdown - smaller font
+                if !nextShichenCountdown.isEmpty {
+                    Text(nextShichenCountdown)
+                        .font(.caption)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                }
                 
                 // Shichen progression
                 ShichenHStackView(shichen: shichen.dizhi)
-                    .padding([.leading, .trailing], 8)
+                    .padding(.horizontal, 4)
             }
-            Spacer(minLength: 6)
         }
+        .padding(.vertical, 8)
+        .padding(.horizontal, 12)
         .modifier(WidgetAccentable())
         .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
         #if canImport(ActivityKit) && os(iOS)

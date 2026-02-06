@@ -14,24 +14,38 @@ extension Date {
     var keProgress: Double {
         guard let shichen = self.shichen else { return 0.0 }
         
-        // Each Shichen is 2 hours = 120 minutes
-        // Each Ke is 1/8 of a Shichen = 15 minutes
-        let keMinutes: Double = 15.0
-        let currentKe = shichen.currentKe
+        // Each Ke is approximately 14.4 minutes (1/8 of a 2-hour Shichen)
+        let keMinutes: Double = 14.4
+        let currentKe = shichen.currentKe // 1-8
         
-        // Calculate minutes into current Ke
-        // currentKe ranges from 1 to 8
+        // Calculate the start time of current Ke within the Shichen
+        let keStartMinute = Double(currentKe - 1) * keMinutes
+        let keEndMinute = Double(currentKe) * keMinutes
+        
+        // Get current time components
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.minute, .second], from: self)
+        let components = calendar.dateComponents([.hour, .minute, .second], from: self)
+        let hour = components.hour ?? 0
         let minute = components.minute ?? 0
         let second = components.second ?? 0
         
-        // Get the minute within the 120-minute Shichen cycle
-        let minuteInShichen = minute % 120
+        // Convert to total minutes in day
+        let totalMinutesNow = Double(hour * 60 + minute) + Double(second) / 60.0
         
-        // Calculate which Ke we're in and progress
-        let keStartMinute = Double(currentKe - 1) * keMinutes
-        let minutesIntoKe = Double(minuteInShichen) - keStartMinute + Double(second) / 60.0
+        // Calculate start of current Shichen in minutes
+        // Shichen starts at odd hours: 23, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21
+        let shichenStartHour = (hour % 2 == 1) ? hour : hour - 1
+        let adjustedStartHour = (shichenStartHour < 0) ? 23 : shichenStartHour
+        let shichenStartMinute = Double(adjustedStartHour * 60)
+        
+        // Minutes into current Shichen
+        var minutesIntoShichen = totalMinutesNow - shichenStartMinute
+        if minutesIntoShichen < 0 {
+            minutesIntoShichen += 1440 // Add 24 hours if wrapped
+        }
+        
+        // Progress within current Ke
+        let minutesIntoKe = minutesIntoShichen - keStartMinute
         let progress = minutesIntoKe / keMinutes
         
         return min(max(progress, 0.0), 1.0)
@@ -41,15 +55,32 @@ extension Date {
     var nextShichenCountdown: String {
         guard let currentShichen = self.shichen else { return "" }
         
-        // Calculate minutes until next Shichen (2 hours from start of current Shichen)
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.minute, .second], from: self)
+        let components = calendar.dateComponents([.hour, .minute, .second], from: self)
+        let hour = components.hour ?? 0
         let minute = components.minute ?? 0
         let second = components.second ?? 0
         
-        // Each Shichen is 120 minutes
-        let minuteInShichen = minute % 120
-        let minutesUntilEnd = 120 - minuteInShichen - (second > 0 ? 1 : 0)
+        // Get current Shichen start hour (odd hour)
+        let shichenStartHour = (hour % 2 == 1) ? hour : hour - 1
+        let adjustedStartHour = (shichenStartHour < 0) ? 23 : shichenStartHour
+        
+        // Calculate end hour (start + 2, wrapping at 24)
+        let shichenEndHour = (adjustedStartHour + 2) % 24
+        
+        // Calculate minutes until end
+        var minutesUntilEnd: Int
+        if hour < shichenEndHour {
+            minutesUntilEnd = (shichenEndHour - hour - 1) * 60 + (60 - minute)
+        } else {
+            // Handle wrap around midnight
+            minutesUntilEnd = (24 - hour + shichenEndHour - 1) * 60 + (60 - minute)
+        }
+        
+        // Adjust for seconds
+        if second > 0 && minutesUntilEnd > 0 {
+            minutesUntilEnd -= 1
+        }
         
         let nextShichen = currentShichen.dizhi.next
         
