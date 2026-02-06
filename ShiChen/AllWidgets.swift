@@ -17,6 +17,9 @@ struct AllWidgets: WidgetBundle {
     Nongli()
     HourlyWidget()
     CountDownWidget()
+    if #available(iOS 16.1, *) {
+      ShichenLiveActivity()
+    }
   }
 
 }

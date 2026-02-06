@@ -36,9 +36,42 @@ struct SettingsView: View {
   @Environment(\.bodyFont) var bodyFont
 
   @EnvironmentObject var settingsManager: SettingsManager
+  
+  @State private var liveActivityManager = LiveActivityManager.shared
+  @State private var isTogglingLiveActivity = false
+  @State private var liveActivityError: String?
 
   var body: some View {
     Form {
+      #if os(iOS)
+      Section(header: Text("靈動島與鎖屏"), footer: Text("靈動島每5分鐘更新一次。系統限制靈動島最多顯示12小時，本應用會在11小時後自動重啟以保持持續顯示。")) {
+        Toggle(isOn: Binding(
+          get: { liveActivityManager.isActivityRunning },
+          set: { _ in
+            Task {
+              isTogglingLiveActivity = true
+              liveActivityError = nil
+              do {
+                try await liveActivityManager.toggleLiveActivity()
+              } catch {
+                liveActivityError = error.localizedDescription
+              }
+              isTogglingLiveActivity = false
+            }
+          }
+        )) {
+          Text("時辰靈動島")
+        }
+        .disabled(isTogglingLiveActivity)
+        
+        if let error = liveActivityError {
+          Text(error)
+            .font(.caption)
+            .foregroundColor(.red)
+        }
+      }
+      #endif
+      
       Section(header: Text("春節氣氛組件設置")) {
         Toggle(isOn: $springFestiveBackgroundEnabled) {
           Text("組件紅底")
