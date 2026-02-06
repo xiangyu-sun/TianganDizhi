@@ -48,6 +48,10 @@ final class ScreenTests: XCTestCase {
     #else
     app.tabBars.firstMatch.buttons["卦"].tap()
     #endif
+    
+    // Wait for UI to stabilize after font provider initialization
+    sleep(1)
+    
     takingScreenShot()
   }
 
@@ -60,6 +64,9 @@ final class ScreenTests: XCTestCase {
     app.buttons["十二地支"].tap()
     #endif
 
+    // Wait for UI to stabilize after navigation and font provider initialization
+    sleep(1)
+    
     takingScreenShot()
   }
 
