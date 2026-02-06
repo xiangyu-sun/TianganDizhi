@@ -16,9 +16,11 @@ import WidgetKit
 struct CompactShichenView: View {
 
   // MARK: Internal
-
-  @Environment(\.largeTitleFont) var largeTitleFont
-  @Environment(\.title3Font) var title3Font
+  
+  @StateObject private var fontProvider = FontProvider()
+  
+  private var largeTitleFont: Font { fontProvider.largeTitleFont }
+  private var title3Font: Font { fontProvider.title3Font }
 
   let shichen: Dizhi
   let date: Date

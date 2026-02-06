@@ -15,12 +15,10 @@ import WidgetKit
 struct ShiChenEntryView: View {
   var entry: ShichenTimelineProvider.Entry
   @Environment(\.widgetFamily) var family
-  @Environment(\.largeTitleFont) var largeTitleFont
-  @Environment(\.bodyFont) var bodyFont
-  @Environment(\.footnote) var footnote
-  @Environment(\.titleFont) var titleFont
-  @Environment(\.title3Font) var title3Font
   @Environment(\.horizontalSizeClass) var horizontalSizeClass
+  
+  // Create local font provider for widgets that reads from shared UserDefaults
+  @StateObject private var fontProvider = FontProvider()
 
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
@@ -30,6 +28,13 @@ struct ShiChenEntryView: View {
 
   @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
   var displayMoonPhaseOnWidgets = true
+  
+  // Computed font properties for convenience
+  private var largeTitleFont: Font { fontProvider.largeTitleFont }
+  private var bodyFont: Font { fontProvider.bodyFont }
+  private var footnote: Font { fontProvider.footnoteFont }
+  private var titleFont: Font { fontProvider.titleFont }
+  private var title3Font: Font { fontProvider.title3Font }
 
   var body: some View {
     switch family {

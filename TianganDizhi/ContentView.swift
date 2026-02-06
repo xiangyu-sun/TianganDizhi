@@ -16,6 +16,7 @@ import AppStoreReviewPrompt
 
 struct ContentView: View {
 
+  @EnvironmentObject var fontProvider: FontProvider
   @EnvironmentObject var settingsManager: SettingsManager
 
   var body: some View {
@@ -50,14 +51,14 @@ struct ContentView: View {
           Text("設置")
         }
     }
-    .environment(\.titleFont, settingsManager.useSystemFont ? .title : .weiBeiTitle)
-    .environment(\.title2Font, settingsManager.useSystemFont ? .title2 : .weiBeiTitle2)
-    .environment(\.title3Font, settingsManager.useSystemFont ? .title3 : .weiBeiTitle3)
-    .environment(\.largeTitleFont, settingsManager.useSystemFont ? .largeTitle : .weiBeiLargeTitle)
-    .environment(\.bodyFont, settingsManager.useSystemFont ? .body : .weiBeiBody)
-    .environment(\.headlineFont, settingsManager.useSystemFont ? .headline : .weiBeiHeadline)
-    .environment(\.footnote, settingsManager.useSystemFont ? .footnote : .weiBeiFootNote)
-    .environment(\.calloutFont, settingsManager.useSystemFont ? .callout : .weiBeiCallOut)
+    .environment(\.titleFont, fontProvider.titleFont)
+    .environment(\.title2Font, fontProvider.title2Font)
+    .environment(\.title3Font, fontProvider.title3Font)
+    .environment(\.largeTitleFont, fontProvider.largeTitleFont)
+    .environment(\.bodyFont, fontProvider.bodyFont)
+    .environment(\.headlineFont, fontProvider.headlineFont)
+    .environment(\.footnote, fontProvider.footnoteFont)
+    .environment(\.calloutFont, fontProvider.calloutFont)
     #if os(iOS)
     .onAppear {
       if !ProcessInfo.processInfo.arguments.contains("UITestMode") {
@@ -73,6 +74,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
+      .environmentObject(FontProvider())
       .environmentObject(SettingsManager.shared)
   }
 }

@@ -33,8 +33,7 @@ struct SettingsView: View {
   @AppStorage(Constants.useSystemFont, store: Constants.sharedUserDefault)
   var useSystemFont = false
 
-  @Environment(\.bodyFont) var bodyFont
-
+  @EnvironmentObject var fontProvider: FontProvider
   @EnvironmentObject var settingsManager: SettingsManager
   
   @State private var liveActivityManager = LiveActivityManager.shared
@@ -102,9 +101,10 @@ struct SettingsView: View {
         }
       }
     }
-    .font(bodyFont)
+    .font(fontProvider.bodyFont)
     .navigationTitle(Text("設置"))
     .onChange(of: useSystemFont) { value in
+      fontProvider.useSystemFont = value
       settingsManager.useSystemFont = value
       WidgetCenter.shared.reloadAllTimelines()
     }

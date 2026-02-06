@@ -25,74 +25,43 @@ extension Font {
   static let weiBeiTitleWatch: Font = .custom(.weibeiBold, size: 28, relativeTo: .title)
 }
 
-// MARK: - TitleFontEnvironmentKey
+// MARK: - Font Environment Keys
+// Note: These are now simple storage keys. FontProvider handles font selection logic.
 
 private struct TitleFontEnvironmentKey: EnvironmentKey {
   #if os(watchOS)
-  static var defaultValue: Font {
-    SettingsManager.shared.useSystemFont ? .title.bold() : .weiBeiTitleWatch
-  }
+  static let defaultValue: Font = .weiBeiTitleWatch
   #else
-  static var defaultValue: Font {
-    SettingsManager.shared.useSystemFont ? .title.bold() : .weiBeiTitle
-  }
+  static let defaultValue: Font = .weiBeiTitle
   #endif
 }
 
-// MARK: - LargeTitleFontEnvironmentKey
-
 private struct LargeTitleFontEnvironmentKey: EnvironmentKey {
-  static var defaultValue: Font {
-    SettingsManager.shared.useSystemFont ? .largeTitle.bold() : .weiBeiLargeTitle
-  }
+  static let defaultValue: Font = .weiBeiLargeTitle
 }
-
-// MARK: - BodyFontEnvironmentKey
 
 private struct BodyFontEnvironmentKey: EnvironmentKey {
-  static var defaultValue: Font {
-    SettingsManager.shared.useSystemFont ? .body.bold() : .weiBeiBody
-  }
+  static let defaultValue: Font = .weiBeiBody
 }
-
-// MARK: - CalloutFontEnvironmentKey
 
 private struct CalloutFontEnvironmentKey: EnvironmentKey {
-  static var defaultValue: Font {
-    SettingsManager.shared.useSystemFont ? .callout.bold() : .weiBeiCallOut
-  }
+  static let defaultValue: Font = .weiBeiCallOut
 }
-
-// MARK: - FootnoteFontEnvironmentKey
 
 private struct FootnoteFontEnvironmentKey: EnvironmentKey {
-  static var defaultValue: Font {
-    SettingsManager.shared.useSystemFont ? .footnote.bold() : .weiBeiFootNote
-  }
+  static let defaultValue: Font = .weiBeiFootNote
 }
-
-// MARK: - HeadlineFontEnvironmentKey
 
 private struct HeadlineFontEnvironmentKey: EnvironmentKey {
-  static var defaultValue: Font {
-    SettingsManager.shared.useSystemFont ? .headline.bold() : .weiBeiHeadline
-  }
+  static let defaultValue: Font = .weiBeiHeadline
 }
-
-// MARK: - Title3FontEnvironmentKey
 
 private struct Title3FontEnvironmentKey: EnvironmentKey {
-  static var defaultValue: Font {
-    SettingsManager.shared.useSystemFont ? .title3.bold() : .weiBeiTitle3
-  }
+  static let defaultValue: Font = .weiBeiTitle3
 }
 
-// MARK: - Title2FontEnvironmentKey
-
 private struct Title2FontEnvironmentKey: EnvironmentKey {
-  static var defaultValue: Font {
-    SettingsManager.shared.useSystemFont ? .title2.bold() : .weiBeiTitle2
-  }
+  static let defaultValue: Font = .weiBeiTitle2
 }
 
 
@@ -158,51 +127,7 @@ extension EnvironmentValues {
 
 }
 
-extension View {
-  func titleFont(_ myCustomValue: Font) -> some View {
-    #if os(iOS)
-    if UIDevice.current.userInterfaceIdiom == .pad {
-      return environment(\.titleFont, myCustomValue)
-    }
-    #endif
+// MARK: - Removed broken iPad view modifiers
+// These modifiers were ignoring the passed-in parameter on non-iPad devices.
+// Font injection now happens at the root level via FontProvider.
 
-    return environment(\.titleFont, TitleFontEnvironmentKey.defaultValue)
-  }
-
-  func title3Font(_ myCustomValue: Font) -> some View {
-    #if os(iOS)
-    if UIDevice.current.userInterfaceIdiom == .pad {
-      return environment(\.title3Font, myCustomValue)
-    }
-    #endif
-    return environment(\.title3Font, Title3FontEnvironmentKey.defaultValue)
-  }
-
-  func largeTitleFont(_ myCustomValue: Font) -> some View {
-    #if os(iOS)
-    if UIDevice.current.userInterfaceIdiom == .pad {
-      return environment(\.largeTitleFont, myCustomValue)
-    }
-    #endif
-    return environment(\.largeTitleFont, LargeTitleFontEnvironmentKey.defaultValue)
-  }
-
-  func bodyFont(_ myCustomValue: Font) -> some View {
-    #if os(iOS)
-    if UIDevice.current.userInterfaceIdiom == .pad {
-      return environment(\.bodyFont, myCustomValue)
-    }
-    #endif
-    return environment(\.bodyFont, BodyFontEnvironmentKey.defaultValue)
-  }
-
-  func headlineFont(_ myCustomValue: Font) -> some View {
-    #if os(iOS)
-    if UIDevice.current.userInterfaceIdiom == .pad {
-      return environment(\.headlineFont, myCustomValue)
-    }
-    #endif
-    return environment(\.headlineFont, HeadlineFontEnvironmentKey.defaultValue)
-  }
-
-}

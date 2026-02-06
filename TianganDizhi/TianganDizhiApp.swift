@@ -16,11 +16,13 @@ struct TianganDizhiApp: App {
 
   // MARK: Internal
 
+  @StateObject private var fontProvider = FontProvider()
   @ObservedObject var updater = DateProvider()
 
   var body: some Scene {
     WindowGroup {
       ContentView()
+        .environmentObject(fontProvider)
         .environmentObject(SettingsManager.shared)
     }
 

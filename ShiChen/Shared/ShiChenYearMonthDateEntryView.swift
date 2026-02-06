@@ -14,12 +14,15 @@ import WidgetKit
 
 struct ShiChenYearMonthDateEntryView: View {
   var entry: SimpleEntry
-  @Environment(\.bodyFont) var bodyFont
-  @Environment(\.footnote) var footnote
-  @Environment(\.titleFont) var titleFont
-  @Environment(\.title2Font) var title2Font
-  @Environment(\.title3Font) var title3Font
   @Environment(\.widgetFamily) var family
+  
+  @StateObject private var fontProvider = FontProvider()
+  
+  private var bodyFont: Font { fontProvider.bodyFont }
+  private var footnote: Font { fontProvider.footnoteFont }
+  private var titleFont: Font { fontProvider.titleFont }
+  private var title2Font: Font { fontProvider.title2Font }
+  private var title3Font: Font { fontProvider.title3Font }
   
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false

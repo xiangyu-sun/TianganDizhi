@@ -225,6 +225,11 @@
 		998F9E912F363B5D00650E5E /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E8F2F363B5D00650E5E /* FontManager.swift */; };
 		998F9E922F363B5D00650E5E /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E8F2F363B5D00650E5E /* FontManager.swift */; };
 		998F9E932F363B5D00650E5E /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E8F2F363B5D00650E5E /* FontManager.swift */; };
+		998F9E952F363CF400650E5E /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E942F363CF400650E5E /* FontProvider.swift */; };
+		998F9E962F363CF400650E5E /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E942F363CF400650E5E /* FontProvider.swift */; };
+		998F9E972F363CF400650E5E /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E942F363CF400650E5E /* FontProvider.swift */; };
+		998F9E982F363CF400650E5E /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E942F363CF400650E5E /* FontProvider.swift */; };
+		998F9E992F363CF400650E5E /* FontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E942F363CF400650E5E /* FontProvider.swift */; };
 		999B068A2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */; };
 		999B068B2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */; };
 		99A0B7932DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
@@ -526,6 +531,7 @@
 		998F9E862F3636A400650E5E /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
 		998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenActivityAttributes.swift; sourceTree = "<group>"; };
 		998F9E8F2F363B5D00650E5E /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		998F9E942F363CF400650E5E /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
 		999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jieqi+Image.swift"; sourceTree = "<group>"; };
 		99A0B7982DB582A4000F2AD7 /* Jieqi.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Jieqi.xcassets; sourceTree = "<group>"; };
@@ -1046,6 +1052,7 @@
 				994215EC2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift */,
 				99BC3C0F296A2918004AB614 /* DateFormatters.swift */,
 				998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */,
+				998F9E942F363CF400650E5E /* FontProvider.swift */,
 			);
 			path = AppWidgetShared;
 			sourceTree = "<group>";
@@ -1461,6 +1468,7 @@
 				99A0B79F2DB58937000F2AD7 /* JieqiWidget.swift in Sources */,
 				46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */,
 				994AD1952868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
+				998F9E992F363CF400650E5E /* FontProvider.swift in Sources */,
 				99F19D8E29E09C3C005C5949 /* MeasurmentFormatterManager.swift in Sources */,
 				9968961F2DB550D50082B667 /* HourlyWidget.swift in Sources */,
 				990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */,
@@ -1511,6 +1519,7 @@
 				46E055B224B02FA900AC2AE5 /* CircularContainerView.swift in Sources */,
 				46F9C28C25D137D50017440D /* Cells.swift in Sources */,
 				995997072B3DF1AB002288D1 /* MultiSelectionView.swift in Sources */,
+				998F9E972F363CF400650E5E /* FontProvider.swift in Sources */,
 				46B7FCE9250620CC008E8D48 /* ShichenTimeLineSceduler.swift in Sources */,
 				990FEAE0294CB03900CB1CEF /* WeatherData.swift in Sources */,
 				994215ED2965C79C003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
@@ -1598,6 +1607,7 @@
 				996C531E2B1FD0B500AC832F /* GuaListView.swift in Sources */,
 				996C53202B1FD11C00AC832F /* BaguaView.swift in Sources */,
 				996E548E2E996231004CD36F /* NavigationModels.swift in Sources */,
+				998F9E982F363CF400650E5E /* FontProvider.swift in Sources */,
 				99632085290DE1DE000C4A2B /* ChinesePinyin.swift in Sources */,
 				990FEAE2294CE89400CB1CEF /* WeatherData.swift in Sources */,
 				99632074290DE1DE000C4A2B /* Cells.swift in Sources */,
@@ -1640,6 +1650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */,
+				998F9E952F363CF400650E5E /* FontProvider.swift in Sources */,
 				997CD11D2954FE1600BECF31 /* Constants.swift in Sources */,
 				9913E7EC2ABDF12600E459B8 /* ConfigurationAppIntent.swift in Sources */,
 				997C68B12868ABD700B40D3F /* ShiChen.intentdefinition in Sources */,
@@ -1721,6 +1732,7 @@
 				99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */,
 				997CD1142954C96D00BECF31 /* MaterialBackground.swift in Sources */,
 				99FD3F652922968B0048DCEB /* CompactShichenView.swift in Sources */,
+				998F9E962F363CF400650E5E /* FontProvider.swift in Sources */,
 				99FD3F6C292297DE0048DCEB /* ShichenHStackView.swift in Sources */,
 				99FD3F602922968B0048DCEB /* CircularWidgetView.swift in Sources */,
 				9913E7F82AC0B47300E459B8 /* ContainerBackground.swift in Sources */,

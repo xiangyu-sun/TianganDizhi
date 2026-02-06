@@ -19,10 +19,13 @@ struct ExtraLargeWidgetView: View {
   var springFestiveForegroundEnabled = false
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
-  @Environment(\.titleFont) var titleFont
-  @Environment(\.bodyFont) var bodyFont
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
+  
+  @StateObject private var fontProvider = FontProvider()
+  
+  private var titleFont: Font { fontProvider.titleFont }
+  private var bodyFont: Font { fontProvider.bodyFont }
 
   @StateObject var weatherData = WeatherData.shared
 

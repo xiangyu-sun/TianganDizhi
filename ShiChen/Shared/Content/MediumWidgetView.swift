@@ -18,10 +18,13 @@ struct MediumWidgetView: View {
   var springFestiveForegroundEnabled = false
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
-  @Environment(\.title3Font) var title3Font
-  @Environment(\.footnote) var footnote
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
+  
+  @StateObject private var fontProvider = FontProvider()
+  
+  private var title3Font: Font { fontProvider.title3Font }
+  private var footnote: Font { fontProvider.footnoteFont }
 
   #if os(iOS) || os(macOS)
   @StateObject var weatherData = WeatherData.shared
