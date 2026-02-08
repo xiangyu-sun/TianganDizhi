@@ -46,13 +46,7 @@ struct TianganDizhiApp: App {
     let god = updater.currentDate.twelveGod().map { "·" + $0.chinese } ?? ""
     
     MenuBarExtra(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh.displayHourText + god) {
-      VStack {
-        Divider()
-        Button("退出") {
-          NSApplication.shared.terminate(nil)
-
-        }.keyboardShortcut("q")
-      }
+      MenuBarContentView(updater: updater)
     }
 
     #endif
