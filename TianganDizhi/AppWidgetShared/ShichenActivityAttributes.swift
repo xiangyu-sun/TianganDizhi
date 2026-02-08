@@ -6,7 +6,7 @@
 //  Copyright © 2026 孙翔宇. All rights reserved.
 //
 
-#if canImport(ActivityKit)
+#if canImport(ActivityKit) && os(iOS)
 import ActivityKit
 import Foundation
 
