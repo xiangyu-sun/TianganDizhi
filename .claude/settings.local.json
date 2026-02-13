@@ -14,7 +14,18 @@
       "Bash(RBENV_VERSION=3.3.0 ruby:*)",
       "Bash(rbenv versions:*)",
       "Bash(RBENV_VERSION=3.2.0 ruby:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(bundle exec fastlane:*)",
+      "Bash(rbenv exec ruby:*)",
+      "Bash(rbenv exec gem list:*)",
+      "Bash(rbenv exec bundle install:*)",
+      "Bash(rbenv exec gem install:*)",
+      "Bash(rbenv exec bundle exec fastlane deliver:*)",
+      "Bash(git -C /Users/xiangyu.sun/TianganDizhi log --oneline -40)",
+      "Bash(git -C /Users/xiangyu.sun/TianganDizhi log --oneline dceaec6^..HEAD)",
+      "Bash(git -C /Users/xiangyu.sun/TianganDizhi log --oneline dceaec6~1..dceaec6~30)",
+      "Bash(git -C /Users/xiangyu.sun/TianganDizhi log --oneline d80ff9b~1..42c4cb3)",
+      "Bash(git -C /Users/xiangyu.sun/TianganDizhi log --oneline 42c4cb3^..dceaec6)"
     ],
     "deny": []
   }

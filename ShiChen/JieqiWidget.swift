@@ -17,6 +17,7 @@ import WidgetKit
 struct JieqiWidget: Widget {
   let kind = "Jieqi"
   @Environment(\.largeTitleFont) var largeTitleFont
+  
   var iosSupportedFamilies: [WidgetFamily] {
     [.systemSmall]
   }
@@ -51,6 +52,7 @@ struct JieqiWidget: Widget {
             Text(entry.date, style: .date)
               .font(.callout)
               .environment(\.locale, Locale(identifier: "zh-hant"))
+            
             Text(date, style: .date)
               .font(.callout)
               .foregroundColor(.secondary)
@@ -61,7 +63,7 @@ struct JieqiWidget: Widget {
               .font(largeTitleFont)
           }
         }
-        .modifier(WidgetAccentable())
+        .widgetAccentable()
         .frame(maxWidth: .infinity)
         .materialBackgroundWidget(with: Image(uiImage: jieqi.image))
       } else {

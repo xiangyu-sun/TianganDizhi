@@ -1,1 +1,10 @@
-fixed Apple Watch app crash
+What's New in v2.42:
+
+- Live Activity & Dynamic Island: See your current Shichen, Chinese date, and meridian info right on your Lock Screen and Dynamic Island
+- New app icon and Apple Watch icon
+- Redesigned font system with reactive FontProvider for smoother switching
+- Spring Festival countdown widget re-enabled
+- Updated Jieqi (Solar Terms) widget localization
+- Improved widget display across all sizes
+- Updated Chinese Astrology Calendar and Moon Mansion data
+- Bug fixes and performance improvements

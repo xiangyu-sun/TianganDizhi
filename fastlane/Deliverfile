@@ -3,13 +3,13 @@
 # https://docs.fastlane.tools/actions/deliver/
 require 'open-uri'
 
-app_version "2.11.0"
+app_version "2.42"
 
 # modify the following parameter for different purpose
 skip_app_version_update true
 skip_screenshots false
 skip_binary_upload false
-skip_metadata true
+skip_metadata false
 overwrite_screenshots false
 phased_release true
 
