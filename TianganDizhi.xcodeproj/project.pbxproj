@@ -210,8 +210,6 @@
 		998F9E822F36367200650E5E /* ShichenLockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E802F36367200650E5E /* ShichenLockScreenView.swift */; };
 		998F9E832F36367200650E5E /* ShichenLockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E802F36367200650E5E /* ShichenLockScreenView.swift */; };
 		998F9E852F36368300650E5E /* ShichenLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E842F36368300650E5E /* ShichenLiveActivity.swift */; };
-		998F9E872F3636A400650E5E /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E862F3636A400650E5E /* LiveActivityManager.swift */; };
-		998F9E882F3636A400650E5E /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E862F3636A400650E5E /* LiveActivityManager.swift */; };
 		998F9E8A2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */; };
 		998F9E8B2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */; };
 		998F9E8C2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */; };
@@ -534,7 +532,6 @@
 		998898E02A74514200A4E48C /* ShiChen.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = ShiChen.xcstrings; sourceTree = "<group>"; };
 		998F9E802F36367200650E5E /* ShichenLockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenLockScreenView.swift; sourceTree = "<group>"; };
 		998F9E842F36368300650E5E /* ShichenLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenLiveActivity.swift; sourceTree = "<group>"; };
-		998F9E862F3636A400650E5E /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
 		998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenActivityAttributes.swift; sourceTree = "<group>"; };
 		998F9E8F2F363B5D00650E5E /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		998F9E942F363CF400650E5E /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
@@ -757,7 +754,6 @@
 				46AB55D8242B5EFF00F6604A /* Info.plist */,
 				998898DE2A74514200A4E48C /* InfoPlist.xcstrings */,
 				46AB55D2242B5EFF00F6604A /* Preview Content */,
-				998F9E862F3636A400650E5E /* LiveActivityManager.swift */,
 				991A85432F3896270079C89A /* MenuBarContentView.swift */,
 			);
 			path = TianganDizhi;
@@ -1502,7 +1498,6 @@
 				46EF7F8027107968007030CC /* JieqiCell.swift in Sources */,
 				99F0EF3529FFEF81008476B6 /* WuyinView.swift in Sources */,
 				996E548F2E996231004CD36F /* NavigationModels.swift in Sources */,
-				998F9E882F3636A400650E5E /* LiveActivityManager.swift in Sources */,
 				99ECAED42A4798F0004997FD /* LiushisiGuaView.swift in Sources */,
 				996D2C1C29A3DEDE008DC1A9 /* MeasurmentFormatterManager.swift in Sources */,
 				46E055B824B065BD00AC2AE5 /* ShichenView.swift in Sources */,
@@ -1626,7 +1621,6 @@
 				9963207C290DE1DE000C4A2B /* TwelveView.swift in Sources */,
 				99632086290DE1DE000C4A2B /* TianganListView.swift in Sources */,
 				99632073290DE1DE000C4A2B /* ShichenTimeLineSceduler.swift in Sources */,
-				998F9E872F3636A400650E5E /* LiveActivityManager.swift in Sources */,
 				997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */,
 				99BC3C12296A294F004AB614 /* DateFormatters.swift in Sources */,
 				99632083290DE1DE000C4A2B /* CircularContainerView.swift in Sources */,
