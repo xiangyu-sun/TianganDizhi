@@ -1,5 +1,5 @@
 {
-  "originHash" : "f7b9812c0517b30923dafb106813684f20bba837b141b03388c6062cacbba105",
+  "originHash" : "c8621ebf3952eac19555088d6b9a3c511aac9eabbabc35e3175be5e5f3ee0d24",
   "pins" : [
     {
       "identity" : "appstorereviewprompt",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/xiangyu-sun/AppStoreReviewPrompt.git",
       "state" : {
         "branch" : "main",
-        "revision" : "c16e812f689df5ef9819257c27b28c9e7006f483"
+        "revision" : "05cd70bad863bab5cf8491c82084e2a663047e07"
       }
     },
     {
@@ -16,16 +16,16 @@
       "location" : "https://github.com/xiangyu-sun/Astral.git",
       "state" : {
         "branch" : "main",
-        "revision" : "4b407fb3d220c80aeb566083b93373449608ba6f"
+        "revision" : "b78dcf1e6d78e2a816d8e3f00102608b47419f86"
       }
     },
     {
       "identity" : "bagua",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:xiangyu-sun/Bagua.git",
+      "location" : "https://github.com/xiangyu-sun/Bagua",
       "state" : {
         "branch" : "main",
-        "revision" : "e8f43fb9b27d51ac7517315ecc2efdbcacff2749"
+        "revision" : "4a93eb846ae701e0172a21ae434f28e1c5da76b0"
       }
     },
     {
@@ -34,7 +34,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
         "branch" : "master",
-        "revision" : "62e19ffa59e668e2d3117a55a77aab4b03a62c00"
+        "revision" : "a348dbc3851633b760d7d0e8206b6b70297fba73"
       }
     },
     {
@@ -43,7 +43,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseTranditionalMusicCore.git",
       "state" : {
         "branch" : "main",
-        "revision" : "6667922e134a3b199d66f409664de18291c5b5fc"
+        "revision" : "7e847fadde2d94ec16257535d95d1d76555641b7"
       }
     },
     {
@@ -52,7 +52,7 @@
       "location" : "https://github.com/xiangyu-sun/JingluoShuxueCore.git",
       "state" : {
         "branch" : "main",
-        "revision" : "e9228a9dfc01e07f11984ff4b79e0936ddbe329c"
+        "revision" : "4b5e5d9ee9d93cfc2f3ea89873e42f6ee5c039f2"
       }
     },
     {
@@ -65,21 +65,12 @@
       }
     },
     {
-      "identity" : "shangdiankit",
-      "kind" : "remoteSourceControl",
-      "location" : "git@github.com:xiangyu-sun/ShangdianKit.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "495417b1a60d40b63971ee1e4717fe3b104c0740"
-      }
-    },
-    {
       "identity" : "swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/swift",
       "state" : {
-        "revision" : "a702f58d25ca2d1d58026ccf12fac8ccb6e2b475",
-        "version" : "1.1.0"
+        "revision" : "6c09dd57c2254b14bb48c15e209ed6e93058104f",
+        "version" : "1.2.0"
       }
     },
     {
@@ -87,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser",
       "state" : {
-        "revision" : "cdd0ef3755280949551dc26dee5de9ddeda89f54",
-        "version" : "1.6.2"
+        "revision" : "c5d11a805e765f52ba34ec7284bd4fcd6ba68615",
+        "version" : "1.7.0"
       }
     },
     {
