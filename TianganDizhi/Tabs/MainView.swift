@@ -65,6 +65,15 @@ struct MainView: View {
         .minimumScaleFactor(0.8)
         .font(titleFont)
         
+        if let nextChineseNewYear = dayConverter.nextChineseNewYear(),
+           dayConverter.isWithinMonths(3, beforeChineseNewYearFrom: nextChineseNewYear){
+          HStack(spacing: 0) {
+            Text(event.date, style: .relative)
+            Text("後\(title)")
+          }
+          .font(bodyFont)
+        }
+        
         Text(updater.currentDate.jieQiDisplayText)
           .font(bodyFont)
 
