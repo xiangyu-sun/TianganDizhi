@@ -35,19 +35,18 @@ extension Date {
   
   
   var jieQiDisplayText: String {
-    if let jieqi = Jieqi.current {
-      let nextDate = preciseNextSolarTermDate()
-      
-      let diff = nextDate.dayDifference(Date())
-      
-      if diff >= 1 && diff <= 14 {
-        return "\(Self.formatter.string(from: NSNumber(value: diff)) ?? "")日後\(nextDate.jieqi?.chineseName ?? "")\((nextDate.jieqi?.qi == true) ? "(氣)" : "(節)")"
-      } else {
-        return jieqi.chineseName
-      }
-      
-    } else {
-      return ""
-    }
-  }
+     if let jieqi = Jieqi.current {
+       let nextJieqi = jieqi.next
+       let nextDate = preciseNextSolarTermDate()
+       let diff = nextDate.dayDifference(Date())
+
+       if diff >= 1 && diff <= 14 {
+         return "\(Self.formatter.string(from: NSNumber(value: diff)) ?? "")日後\(nextJieqi.chineseName)\(nextJieqi.qi ? "(氣)" : "(節)")"
+       } else {
+         return jieqi.chineseName
+       }
+     } else {
+       return ""
+     }
+   }
 }
