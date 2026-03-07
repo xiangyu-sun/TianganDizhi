@@ -58,7 +58,7 @@ struct JieqiWidget: Widget {
               .foregroundColor(.secondary)
               .environment(\.locale, Locale(identifier: "zh-hant"))
 
-            Text(jieqi.chineseName)
+            Text(jieqi.next.chineseName)
               .foregroundColor(.secondary)
               .font(largeTitleFont)
           }
