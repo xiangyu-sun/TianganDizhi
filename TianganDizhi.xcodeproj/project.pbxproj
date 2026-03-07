@@ -254,6 +254,7 @@
 		99A7D0B82F5B22D30087AF73 /* Bagua in Frameworks */ = {isa = PBXBuildFile; productRef = 99A7D0B72F5B22D30087AF73 /* Bagua */; };
 		99A7D0BA2F5B22EA0087AF73 /* Bagua in Frameworks */ = {isa = PBXBuildFile; productRef = 99A7D0B92F5B22EA0087AF73 /* Bagua */; };
 		99A7D0BC2F5B22F50087AF73 /* Bagua in Frameworks */ = {isa = PBXBuildFile; productRef = 99A7D0BB2F5B22F50087AF73 /* Bagua */; };
+		99A7D0BE2F5C63C60087AF73 /* Bagua in Frameworks */ = {isa = PBXBuildFile; productRef = 99A7D0BD2F5C63C60087AF73 /* Bagua */; };
 		99B59A442E0AFC8B0068FDED /* Jianchu.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B59A432E0AFC8B0068FDED /* Jianchu.xcassets */; };
 		99BC3C072968359D004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
 		99BC3C082968359E004AB614 /* CountDownWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BC3C052968355E004AB614 /* CountDownWidget.swift */; };
@@ -645,6 +646,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FD3F48292296170048DCEB /* SwiftUI.framework in Frameworks */,
+				99A7D0BE2F5C63C60087AF73 /* Bagua in Frameworks */,
 				994215D02958A286003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
 				99FD3F47292296170048DCEB /* WidgetKit.framework in Frameworks */,
 			);
@@ -1247,6 +1249,7 @@
 			name = ShichenMacWidgetExtension;
 			packageProductDependencies = (
 				994215CF2958A286003C5CA1 /* ChineseAstrologyCalendar */,
+				99A7D0BD2F5C63C60087AF73 /* Bagua */,
 			);
 			productName = ShichenMacWidgetExtension;
 			productReference = 99FD3F46292296170048DCEB /* ShichenMacWidgetExtension.appex */;
@@ -2049,6 +2052,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 2.50.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2098,6 +2102,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 2.50.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2705,6 +2710,11 @@
 			productName = Bagua;
 		};
 		99A7D0BB2F5B22F50087AF73 /* Bagua */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99A7D0B42F5B21190087AF73 /* XCRemoteSwiftPackageReference "Bagua" */;
+			productName = Bagua;
+		};
+		99A7D0BD2F5C63C60087AF73 /* Bagua */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 99A7D0B42F5B21190087AF73 /* XCRemoteSwiftPackageReference "Bagua" */;
 			productName = Bagua;
