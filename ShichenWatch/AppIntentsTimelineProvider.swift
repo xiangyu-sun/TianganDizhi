@@ -33,13 +33,15 @@ struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
   func timeline(for configuration: ConfigurationAppIntent, in _: Context) async -> Timeline<SimpleAppIntentEntry> {
     var entries: [Entry] = []
 
-    configuration.date = Calendar.current.dateComponents(in: .current, from: Date())
-    if let location = await LocationManager.shared.lastLocation {
-      configuration.location = "\(String(describing: location))"
-    }
+    let location = await LocationManager.shared.lastLocation
 
     for date in ShichenTimeLineSceduler.buildTimeLine() {
-      let entry = SimpleAppIntentEntry(date: date, configuration: configuration)
+      let config = ConfigurationAppIntent()
+      config.date = Calendar.current.dateComponents(in: .current, from: date)
+      if let location {
+        config.location = "\(String(describing: location))"
+      }
+      let entry = SimpleAppIntentEntry(date: date, configuration: config)
       entries.append(entry)
     }
 

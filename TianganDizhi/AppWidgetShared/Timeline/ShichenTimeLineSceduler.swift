@@ -23,7 +23,7 @@ enum ShichenTimeLineSceduler {
     }
     let nextShichenStart = currentShichen.nextStartDate
 
-    for hourOffset in 0 ..< 11 {
+    for hourOffset in 0 ..< 12 {
       let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: nextShichenStart) ?? Date()
       timeline.append(entryDate)
     }
@@ -33,7 +33,7 @@ enum ShichenTimeLineSceduler {
   static func backup() -> [Date] {
     let currentDate = Date()
     var timeline = [Date]()
-    for hourOffset in 0 ..< 11 {
+    for hourOffset in 0 ..< 12 {
       let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate) ?? Date()
       timeline.append(entryDate)
     }
