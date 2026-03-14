@@ -34,6 +34,19 @@ extension Date {
   }()
   
   
+  /// Returns the date to display in the Jieqi widget.
+  /// If the next solar term is 1–14 days away, returns that future date so the
+  /// widget can preview the upcoming jieqi; otherwise returns self (today).
+  func jieqiWidgetDisplayDate() -> Date {
+    let nextDate = preciseNextSolarTermDate(from: self)
+    let days = nextDate.dayDifference(self)
+    if days >= 1 && days <= 14 {
+      return nextDate
+    } else {
+      return self
+    }
+  }
+
   var jieQiDisplayText: String {
      if let jieqi = Jieqi.current {
        let nextJieqi = jieqi.next

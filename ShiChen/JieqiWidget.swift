@@ -23,15 +23,7 @@ struct JieqiWidget: Widget {
   }
 
   func getDate(date: Date) -> Date {
-    let nextDate = preciseNextSolarTermDate(from: date)
-    
-    let days = nextDate.dayDifference(date)
-
-    if days >= 1 && days <= 14 {
-      return nextDate
-    } else {
-      return date
-    }
+    date.jieqiWidgetDisplayDate()
   }
 
   var body: some WidgetConfiguration {
