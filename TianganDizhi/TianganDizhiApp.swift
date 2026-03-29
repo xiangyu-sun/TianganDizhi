@@ -8,10 +8,6 @@ struct TianganDizhiApp: App {
 
   init() {
     FontManager.loadCustomFonts()
-    #if os(iOS)
-    UINavigationBar.appearance().largeTitleTextAttributes = [.font: FontManager.safeUIFont(size: 34)]
-    UITabBarItem.appearance().setTitleTextAttributes([.font: FontManager.safeUIFont(size: 12)], for: [])
-    #endif
   }
 
   // MARK: Internal

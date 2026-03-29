@@ -93,15 +93,4 @@ final class FontProvider: ObservableObject {
     }
 }
 
-// MARK: - FontProvider Environment Key
 
-private struct FontProviderEnvironmentKey: EnvironmentKey {
-    static let defaultValue: FontProvider = FontProvider()
-}
-
-extension EnvironmentValues {
-    var fontProvider: FontProvider {
-        get { self[FontProviderEnvironmentKey.self] }
-        set { self[FontProviderEnvironmentKey.self] = newValue }
-    }
-}

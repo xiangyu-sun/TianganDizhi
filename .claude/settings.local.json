@@ -28,7 +28,18 @@
       "Bash(git -C /Users/xiangyu.sun/TianganDizhi log --oneline 42c4cb3^..dceaec6)",
       "Bash(git add fastlane/Deliverfile fastlane/metadata/ fastlane/screenshots/)",
       "Bash(git commit -m \"$\\(cat <<'EOF'\nUpdate fastlane metadata and screenshots for v2.50.0\n\nSync metadata and screenshots from App Store Connect, update release\nnotes for v2.50.0 highlighting Astral accuracy improvements and widget\nbug fixes.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(fastlane run:*)",
+      "Read(//Users/xiangyu.sun/.fastlane/**)",
+      "Read(//Users/xiangyu.sun/Library/Preferences/**)",
+      "Bash(env)",
+      "Bash(chmod:*)",
+      "Bash(for lang:*)",
+      "Bash(do)",
+      "Bash(echo \"=== $lang ===\")",
+      "Read(//Users/xiangyu.sun/TianganDizhi/fastlane/metadata/$lang/**)",
+      "Bash(done)",
+      "Bash(python3:*)"
     ],
     "deny": []
   }

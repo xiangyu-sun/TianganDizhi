@@ -1,0 +1,55 @@
+Découvrez la sagesse de l'astronomie, du calendrier et de la philosophie traditionnelle chinoise——réunissant Tiangan Dizhi, Shichen, Jieqi, Bagua et Ziwuliuzhu dans une application soigneusement conçue. Compatible iPhone, iPad, Mac et Apple Watch.
+
+LES DOUZE SHICHEN
+- Horloge circulaire en temps réel affichant les 12 périodes de deux heures traditionnelles
+- Suivi de la progression des quarts d'heure (Ke) au sein de chaque Shichen
+- Noms alternatifs et contexte culturel pour chaque période
+- Prise en charge des Live Activity et Dynamic Island pour les infos Shichen sur l'écran de verrouillage
+
+TIANGAN DIZHI & CALENDRIER
+- Conversion luni-solaire avec les Tiges Célestes et Branches Terrestres (天干地支)
+- Affichage complet du Cycle sexagésimal (六十甲子)
+- 24 Termes Solaires (Jieqi) avec compte à rebours jusqu'au prochain terme
+- 12 Animaux du Zodiaque et leurs correspondances aux Cinq Éléments
+- Douze Divinités Constructrices avec activités fastes et néfastes du jour
+- Suivi des 28 Maisons Lunaires
+
+I CHING & BAGUA
+- Dispositions Pré-Ciel de Fuxi et Post-Ciel du Roi Wen
+- Les 64 Hexagrammes complets avec symboles et interprétations
+- 12 Hexagrammes Mensuels pour les calendriers lunaire et solaire
+- Corrélation entre phases lunaires et hexagrammes du I Ching
+
+MÉDECINE TRADITIONNELLE CHINOISE
+- Horloge des Organes Méridiens (Ziwuliuzhu): quel organe est le plus actif à chaque Shichen
+- Système des Cinq Éléments avec organe, émotion, saveur, couleur et direction
+- Conseils santé pratiques basés sur les principes d'acupuncture temporelle
+
+THÉORIE MUSICALE TRADITIONNELLE
+- Les Cinq Notes (五音) avec équivalents de la Dynastie Tang et occidentaux
+- Les Douze Gammes (十二律呂) corrélées aux Branches Terrestres
+
+MÉTÉO & ASTRONOMIE
+- Heures de lever et coucher du soleil et de la lune via Apple WeatherKit
+- Affichage des phases lunaires avec noms traditionnels chinois
+- Température et conditions météo quotidiennes
+
+WIDGETS
+- Widgets écran d'accueil en tailles petite, moyenne, grande et très grande
+- Widgets écran de verrouillage affichant Shichen, date lunaire et comptes à rebours des Jieqi
+- Widget compte à rebours du Nouvel An Chinois
+- Complications et widgets Apple Watch
+- Affichage dans la barre de menus macOS avec copie rapide
+
+APPLE WATCH
+- Application dédiée avec horloge Shichen circulaire
+- Plusieurs types de complications pour votre cadran
+- Infos méridiens et organes sur votre poignet
+
+PERSONNALISATION
+- Style de nommage chinois traditionnel ou simplifié
+- Police calligraphique (WeibeiTC-Bold) ou police système
+- Thème rouge pour le Nouvel An Chinois
+- Option de fuseau horaire GMT+8 pour les utilisateurs à l'étranger
+
+Que vous étudiiez l'astrologie chinoise, pratiquez la médecine traditionnelle ou souhaitiez simplement vous connecter à des millénaires de sagesse culturelle——TianganDizhi est votre compagnon indispensable.

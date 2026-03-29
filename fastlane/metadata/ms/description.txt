@@ -1,0 +1,55 @@
+Terokai kebijaksanaan astronomi, takwim, dan falsafah tradisional China——menggabungkan Thiangan Dizhi, Shichen, Jieqi, Bagua, dan Ziwuliuzhu dalam satu aplikasi yang indah. Menyokong iPhone, iPad, Mac, dan Apple Watch.
+
+Dua Belas Shichen
+- Jam bulat masa nyata memaparkan 12 tempoh dua jam tradisional (Zi, Chou, Yin, Mao, Chen, Si, Wu, Wei, Shen, You, Xu, Hai)
+- Penjejakan kemajuan Ke (seperempat jam) dalam setiap Shichen
+- Nama alternatif dan konteks budaya bagi setiap tempoh masa
+- Sokongan Live Activity & Dynamic Island untuk info Shichen di skrin kunci
+
+Thiangan Dizhi & Takwim
+- Penukaran takwim lunar-solar dengan Batang Syurgawi dan Cabang Bumi (天干地支)
+- Paparan lengkap Kitaran Seksagenary 60 tahun (六十甲子)
+- 24 Terma Suria (Jieqi) dengan kiraan undur ke terma berikutnya
+- 12 Haiwan Zodiak dengan perkaitan Lima Unsur
+- Dua Belas Dewa Pembina dengan aktiviti bertuah dan tidak bertuah harian
+- Penjejakan 28 Rumah Lunar
+
+I Ching & Bagua
+- Susunan Lapan Trigram Pra-Syurga Fuxi dan Pasca-Syurga Raja Wen
+- Semua 64 Heksagram dengan simbol dan tafsiran
+- 12 Heksagram Bulanan untuk takwim lunar dan solar
+- Korelasi fasa bulan dengan heksagram I Ching
+
+Perubatan Tradisional Cina
+- Jam Organ Meridian (Ziwuliuzhu): lihat organ yang paling aktif pada setiap Shichen
+- Sistem Lima Unsur dengan organ, emosi, rasa, warna, dan perkaitan arah
+- Panduan kesihatan praktikal berasaskan prinsip akupunktur temporal
+
+Teori Muzik Tradisional
+- Lima Nota Muzik (五音) dengan padanan Dinasti Tang dan Barat
+- Dua Belas Skala Pic (十二律呂) yang berkorelasi dengan Cabang Bumi
+
+Cuaca & Astronomi
+- Masa matahari terbit/terbenam dan bulan terbit/terbenam melalui Apple WeatherKit
+- Paparan fasa bulan dengan nama fasa lunar tradisional Cina
+- Suhu dan keadaan cuaca harian
+
+Widget
+- Widget skrin utama dalam saiz kecil, sederhana, besar, dan ganda besar
+- Widget skrin kunci menunjukkan Shichen, tarikh lunar, dan kiraan undur Jieqi
+- Widget kiraan undur Tahun Baru Lunar
+- Komplikasi dan widget Apple Watch
+- Paparan bar menu macOS dengan salin pantas
+
+Apple Watch
+- Aplikasi jam tangan khusus dengan jam Shichen bulat
+- Pelbagai jenis komplikasi untuk muka jam anda
+- Rujukan organ dan meridian ringkas di pergelangan tangan
+
+Penyesuaian
+- Gaya penamaan Cina tradisional atau ringkas
+- Fon kaligrafi (WeibeiTC-Bold) atau fon sistem
+- Tema merah Tahun Baru Cina
+- Pilihan zon waktu GMT+8 untuk pengguna luar negara
+
+Sama ada anda mengkaji astrologi Cina, mengamalkan perubatan tradisional, atau ingin menghubungkan diri dengan ribuan tahun kebijaksanaan budaya——TianganDizhi adalah teman setia anda.

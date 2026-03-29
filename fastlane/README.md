@@ -13,6 +13,27 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
+## Mac
+
+### mac metadata
+
+```sh
+[bundle exec] fastlane mac metadata
+```
+
+Push metadata to the Mac App Store
+
+### mac release
+
+```sh
+[bundle exec] fastlane mac release
+```
+
+Push a new release build to the Mac App Store
+
+----
+
+
 ## iOS
 
 ### ios tests
@@ -30,6 +51,14 @@ Test on iphone 8 plus and iPad Air
 ```
 
 
+
+### ios metadata
+
+```sh
+[bundle exec] fastlane ios metadata
+```
+
+Push metadata only to the iOS App Store
 
 ### ios release
 

@@ -1,0 +1,3 @@
+- Thêm hỗ trợ bản địa hóa tiếng Nhật, Hàn, Việt, Mã Lai, Thái và Pháp
+- Cải thiện độ chính xác tính toán mặt trăng và mặt trời bằng thuật toán Meeus độ chính xác cao: pha mặt trăng (±1.5 ngày), mọc/lặn (±15 phút) và tiết khí
+- Sửa lỗi widget: complication đồng hồ nay bao phủ đúng toàn bộ 12 thời thần và hiển thị đúng khoảng thời gian cho mỗi mục

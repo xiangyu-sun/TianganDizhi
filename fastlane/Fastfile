@@ -15,6 +15,36 @@
 
 default_platform(:ios)
 
+platform :mac do
+  desc "Push metadata to the Mac App Store"
+  lane :metadata do
+    deliver(
+      app_identifier: "com.uriphium.TianganDizhi",
+      platform: "osx",
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      skip_app_version_update: true,
+      metadata_path: "fastlane/metadata"
+    )
+  end
+
+  desc "Push a new release build to the Mac App Store"
+  lane :release do
+    build_app(
+      scheme: "TianganDizhi",
+      destination: "generic/platform=macOS",
+      export_method: "app-store"
+    )
+    deliver(
+      app_identifier: "com.uriphium.TianganDizhi",
+      platform: "osx",
+      skip_metadata: false,
+      skip_screenshots: true,
+      metadata_path: "fastlane/metadata"
+    )
+  end
+end
+
 platform :ios do
   desc "Test on iphone 8 plus and iPad Air"
   lane :tests do
@@ -24,6 +54,16 @@ platform :ios do
     lane :screenshots do
     capture_screenshots
     upload_to_app_store
+  end
+
+  desc "Push metadata only to the iOS App Store"
+  lane :metadata do
+    deliver(
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      skip_app_version_update: true,
+      metadata_path: "fastlane/metadata"
+    )
   end
 
   desc "Push a new release build to the App Store"

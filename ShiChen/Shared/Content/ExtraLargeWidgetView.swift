@@ -60,7 +60,7 @@ struct ExtraLargeWidgetView: View {
             .padding([.top])
         }
       }
-      .padding([.leading, .top, .bottom])
+      .padding([.top, .bottom])
 
       if let shichen = date.shichen {
         ZStack {

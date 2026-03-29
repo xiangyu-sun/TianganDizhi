@@ -1,2 +1,3 @@
+- Added Japanese, Korean, Vietnamese, Malay, Thai, and French localizations
 - Improved accuracy of lunar and solar calculations using high-precision Meeus algorithms: moon phase (±1.5 days), moonrise/moonset (±15 minutes), and solar terms
 - Fixed widget bugs: watch complication now correctly covers all 12 shichen boundaries and displays the right time period for each entry

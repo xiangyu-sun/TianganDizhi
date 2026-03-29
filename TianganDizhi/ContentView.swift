@@ -11,6 +11,9 @@ import SwiftUI
 #if canImport(AppStoreReviewPrompt)
 import AppStoreReviewPrompt
 #endif
+#if os(iOS)
+import UIKit
+#endif
 
 // MARK: - ContentView
 
@@ -61,12 +64,36 @@ struct ContentView: View {
     .environment(\.calloutFont, fontProvider.calloutFont)
     #if os(iOS)
     .onAppear {
+      applyUIKitFontAppearance(useSystemFont: fontProvider.useSystemFont)
       if !ProcessInfo.processInfo.arguments.contains("UITestMode") {
         try? AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()
       }
     }
+    .onChange(of: fontProvider.useSystemFont) { newValue in
+      applyUIKitFontAppearance(useSystemFont: newValue)
+    }
     #endif
   }
+
+  #if os(iOS)
+  private func applyUIKitFontAppearance(useSystemFont: Bool) {
+    if useSystemFont {
+      UINavigationBar.appearance().largeTitleTextAttributes = [
+        .font: UIFont.systemFont(ofSize: 34, weight: .bold)
+      ]
+      UITabBarItem.appearance().setTitleTextAttributes(
+        [.font: UIFont.systemFont(ofSize: 12, weight: .medium)], for: []
+      )
+    } else {
+      UINavigationBar.appearance().largeTitleTextAttributes = [
+        .font: FontManager.safeUIFont(size: 34)
+      ]
+      UITabBarItem.appearance().setTitleTextAttributes(
+        [.font: FontManager.safeUIFont(size: 12)], for: []
+      )
+    }
+  }
+  #endif
 }
 
 // MARK: - ContentView_Previews

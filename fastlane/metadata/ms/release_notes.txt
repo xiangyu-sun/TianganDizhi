@@ -1,0 +1,3 @@
+- Tambah sokongan penyetempatan Jepun, Korea, Vietnam, Melayu, Thai, dan Perancis
+- Tingkatkan ketepatan pengiraan bulan dan matahari menggunakan algoritma Meeus ketepatan tinggi: fasa bulan (±1.5 hari), naik/terbenam bulan (±15 minit), dan Jieqi
+- Perbaiki pepijat widget: komplikasi jam kini merangkumi semua 12 sempadan Shichen dengan betul dan memaparkan tempoh masa yang tepat untuk setiap entri
