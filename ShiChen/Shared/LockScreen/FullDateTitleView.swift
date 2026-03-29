@@ -26,15 +26,11 @@ struct FullDateTitleView: View {
   }
 }
 
-// MARK: - FullDateTitleView_Previews
-
-struct FullDateTitleView_Previews: PreviewProvider {
-  static var previews: some View {
-    FullDateTitleView(date: Date())
-    #if os(watchOS)
-      .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-    #else
-      .previewContext(WidgetPreviewContext(family: .systemMedium))
-    #endif
-  }
+#Preview {
+  FullDateTitleView(date: Date())
+  #if os(watchOS)
+    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+  #else
+    .previewContext(WidgetPreviewContext(family: .systemMedium))
+  #endif
 }

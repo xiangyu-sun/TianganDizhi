@@ -91,17 +91,31 @@ struct DizhiListView: View {
   }
 }
 
-// MARK: - DizhiListView_Time_Previews
+#Preview {
+  DizhiListView(disppayMode: .time)
+    .environment(\.locale, Locale(identifier: "jp_JP"))
+}
 
-struct DizhiListView_Time_Previews: PreviewProvider {
-  static var previews: some View {
-    DizhiListView(disppayMode: .time)
-      .environment(\.locale, Locale(identifier: "jp_JP"))
-    DizhiListView(disppayMode: .name)
-    DizhiListView(disppayMode: .month)
-    DizhiListView(disppayMode: .organs)
-    DizhiListView(disppayMode: .alias)
-    DizhiListView(disppayMode: .zodiac)
-    DizhiListView(disppayMode: .lvlv)
-  }
+#Preview {
+  DizhiListView(disppayMode: .name)
+}
+
+#Preview {
+  DizhiListView(disppayMode: .month)
+}
+
+#Preview {
+  DizhiListView(disppayMode: .organs)
+}
+
+#Preview {
+  DizhiListView(disppayMode: .alias)
+}
+
+#Preview {
+  DizhiListView(disppayMode: .zodiac)
+}
+
+#Preview {
+  DizhiListView(disppayMode: .lvlv)
 }

@@ -48,37 +48,37 @@ struct ShiChenWidget: Widget {
   }
 }
 
-// MARK: - ShiChen_Previews
+#Preview("YearMonth Inline") {
+  ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryInline))
+}
 
-struct ShiChen_Previews: PreviewProvider {
-  static var previews: some View {
-    Group {
-      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryInline))
-        .previewDisplayName("YearMonth Inline")
+#Preview("YearMonth Circular") {
+  ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+}
 
-      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-        .previewDisplayName("YearMonth Circular")
+#Preview("YearMonth Retangular") {
+  ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+}
 
-      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-        .previewDisplayName("YearMonth Retangular")
+#Preview("ShiChenEntryView Inline") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryInline))
+}
 
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryInline))
-        .previewDisplayName("ShiChenEntryView Inline")
+#Preview("ShiChenEntryView Circular") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+}
 
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-        .previewDisplayName("ShiChenEntryView Circular")
+#Preview("ShiChenEntryView Retangular") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+}
 
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-        .previewDisplayName("ShiChenEntryView Retangular")
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryCorner))
-        .previewDisplayName("ShiChenEntryView accessoryCorner")
-    }
-  }
+#Preview("ShiChenEntryView accessoryCorner") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryCorner))
 }

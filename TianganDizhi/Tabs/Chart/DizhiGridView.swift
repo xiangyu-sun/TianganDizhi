@@ -48,10 +48,6 @@ struct DizhiGridView: View {
   }
 }
 
-// MARK: - DizhiGridView_Previews
-
-struct DizhiGridView_Previews: PreviewProvider {
-  static var previews: some View {
-    DizhiGridView(dizhi: .zi)
-  }
+#Preview {
+  DizhiGridView(dizhi: .zi)
 }

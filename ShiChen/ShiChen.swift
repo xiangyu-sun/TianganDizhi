@@ -34,53 +34,56 @@ struct ShiChen: Widget {
   }
 }
 
-// MARK: - ShiChen_Previews
-
-struct ShiChen_Previews: PreviewProvider {
-  static var previews: some View {
-    Group {
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryInline))
-        .previewDisplayName("ShiChenEntryView Inline")
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-        .previewDisplayName("ShiChenEntryView Circular")
-
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-        .previewDisplayName("ShiChenEntryView Retangular")
-    }
-
-    #if os(iOS)
-    Group {
-      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemSmall))
-        .previewDisplayName("ShiChenYearMonthDateEntryView systemSmall")
-
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemSmall))
-        .previewDisplayName("ShiChenEntryView systemSmall")
-
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemMedium))
-        .previewDisplayName("ShiChenEntryView systemMedium")
-
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemLarge))
-        .previewDisplayName("ShiChenEntryView systemLarge")
-
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemLarge))
-        .environment(\.colorScheme, .dark)
-
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
-        .previewDisplayName("systemExtraLarge")
-
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemMedium))
-        .environment(\.sizeCategory, .extraExtraLarge)
-    }
-    #endif
-  }
+#Preview("ShiChenEntryView Inline") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryInline))
 }
+
+#Preview("ShiChenEntryView Circular") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+}
+
+#Preview("ShiChenEntryView Retangular") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+}
+
+#if os(iOS)
+#Preview("ShiChenYearMonthDateEntryView systemSmall") {
+  ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemSmall))
+}
+
+#Preview("ShiChenEntryView systemSmall") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemSmall))
+}
+
+#Preview("ShiChenEntryView systemMedium") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemMedium))
+}
+
+#Preview("ShiChenEntryView systemLarge") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemLarge))
+}
+
+#Preview {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemLarge))
+    .environment(\.colorScheme, .dark)
+}
+
+#Preview("systemExtraLarge") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
+}
+
+#Preview {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemMedium))
+    .environment(\.sizeCategory, .extraExtraLarge)
+}
+#endif

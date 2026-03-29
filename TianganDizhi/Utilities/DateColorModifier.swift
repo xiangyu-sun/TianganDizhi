@@ -8,10 +8,10 @@ struct AutoColorPastDate: ViewModifier {
 
   func body(content: Content) -> some View {
     guard let date else {
-      return content.foregroundColor(.primary)
+      return content.foregroundStyle(.primary)
     }
     return content
-      .foregroundColor(date <= now ? .secondary : .primary)
+      .foregroundStyle(date <= now ? .secondary : .primary)
   }
 }
 

@@ -13,7 +13,7 @@ struct TianganDizhiApp: App {
   // MARK: Internal
 
   @StateObject private var fontProvider = FontProvider()
-  @ObservedObject var updater = DateProvider()
+  @StateObject private var dateProvider = DateProvider()
   // @Environment(\.scenePhase) private var scenePhase
 
   var body: some Scene {
@@ -21,6 +21,7 @@ struct TianganDizhiApp: App {
       ContentView()
         .environmentObject(fontProvider)
         .environmentObject(SettingsManager.shared)
+        .environmentObject(dateProvider)
         .onOpenURL { url in
           handleDeepLink(url)
         }
@@ -37,12 +38,12 @@ struct TianganDizhiApp: App {
     // }
 
     #if os(macOS)
-    let dizh = updater.currentDate.shichen?.dizhi ?? .zi
+    let dizh = dateProvider.currentDate.shichen?.dizhi ?? .zi
 
-    let god = updater.currentDate.twelveGod().map { "·" + $0.chinese } ?? ""
+    let god = dateProvider.currentDate.twelveGod().map { "·" + $0.chinese } ?? ""
     
-    MenuBarExtra(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh.displayHourText + god) {
-      MenuBarContentView(updater: updater)
+    MenuBarExtra(dateProvider.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh.displayHourText + god) {
+      MenuBarContentView(updater: dateProvider)
     }
 
     #endif

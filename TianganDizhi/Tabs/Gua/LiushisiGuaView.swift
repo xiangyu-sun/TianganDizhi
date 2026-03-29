@@ -38,10 +38,6 @@ struct LiushisiGuaView: View {
   }
 }
 
-// MARK: - YijingView_Previews
-
-struct YijingView_Previews: PreviewProvider {
-  static var previews: some View {
-    LiushisiGuaView()
-  }
+#Preview {
+  LiushisiGuaView()
 }

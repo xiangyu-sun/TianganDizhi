@@ -29,7 +29,7 @@ struct MaterialBackground: ViewModifier {
             .resizable(resizingMode: .tile)
             .renderingMode(.template)
             .ignoresSafeArea(.all)
-            .foregroundColor(Color("sprintfestivaltint")))
+            .foregroundStyle(Color("sprintfestivaltint")))
     }
   }
 }

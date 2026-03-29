@@ -12,7 +12,7 @@ import WidgetKit
 #if os(macOS)
 struct MenuBarContentView: View {
   @ObservedObject var updater: DateProvider
-  @StateObject var weatherData = WeatherData.shared
+  @ObservedObject var weatherData = WeatherData.shared
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
   @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
@@ -51,7 +51,7 @@ struct MenuBarContentView: View {
           // Miniature circular clock
           Circle()
             .stroke(lineWidth: 2)
-            .foregroundColor(.secondary.opacity(0.3))
+            .foregroundStyle(.secondary.opacity(0.3))
             .frame(width: 120, height: 120)
           
           // Simplified Shichen indicators
@@ -72,7 +72,7 @@ struct MenuBarContentView: View {
               .font(.title2.bold())
             Text("\(shichen.currentKeSpellOut)刻")
               .font(.caption)
-              .foregroundColor(.secondary)
+              .foregroundStyle(.secondary)
           }
         }
       }
@@ -87,7 +87,7 @@ struct MenuBarContentView: View {
         HStack {
           Text("時辰")
             .font(.caption)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
           Spacer()
           Text(shichen.dizhi.displayHourText)
             .font(.subheadline)
@@ -96,7 +96,7 @@ struct MenuBarContentView: View {
         HStack {
           Text("別名")
             .font(.caption)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
           Spacer()
           Text(shichen.dizhi.aliasName)
             .font(.subheadline)
@@ -106,7 +106,7 @@ struct MenuBarContentView: View {
           HStack {
             Text("十二神")
               .font(.caption)
-              .foregroundColor(.secondary)
+              .foregroundStyle(.secondary)
             Spacer()
             Text(god.chinese)
               .font(.subheadline)
@@ -123,7 +123,7 @@ struct MenuBarContentView: View {
       // Jieqi
       HStack {
         Image(systemName: "calendar")
-          .foregroundColor(.accentColor)
+          .foregroundStyle(.accentColor)
         Text(updater.currentDate.jieQiDisplayText)
           .font(.subheadline)
           .lineLimit(2)
@@ -133,14 +133,14 @@ struct MenuBarContentView: View {
       if displayMoonPhase, let moonphase = updater.currentDate.chineseDay()?.moonPhase {
         HStack {
           Image(systemName: moonphase.moonPhase.symbolName)
-            .foregroundColor(.accentColor)
+            .foregroundStyle(.accentColor)
           VStack(alignment: .leading, spacing: 2) {
             Text(moonphase.name(traditionnal: useTranditionalNaming))
               .font(.subheadline)
             if let gua = moonphase.gua {
               Text(gua.description)
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
             }
           }
         }
@@ -150,13 +150,13 @@ struct MenuBarContentView: View {
       if let weather = weatherData.forcastedWeather {
         HStack {
           Image(systemName: "cloud.sun")
-            .foregroundColor(.accentColor)
+            .foregroundStyle(.accentColor)
           Text(weather.condition)
             .font(.subheadline)
           Spacer()
           Text(MeasurmentFormatterManager.buildTemperatureDescription(high: weather.temperatureHigh, low: weather.temperatureLow))
             .font(.caption)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
         }
       }
     }
@@ -173,7 +173,7 @@ struct MenuBarContentView: View {
           Spacer()
           Text("⌘O")
             .font(.caption)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
         }
       }
       .buttonStyle(.plain)
@@ -185,7 +185,7 @@ struct MenuBarContentView: View {
           Spacer()
           Text("⌘C")
             .font(.caption)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
         }
       }
       .buttonStyle(.plain)
@@ -197,7 +197,7 @@ struct MenuBarContentView: View {
           Spacer()
           Text("⌘,")
             .font(.caption)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
         }
       }
       .buttonStyle(.plain)
@@ -211,7 +211,7 @@ struct MenuBarContentView: View {
           Spacer()
           Text("⌘Q")
             .font(.caption)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
         }
       }
       .buttonStyle(.plain)
@@ -221,7 +221,7 @@ struct MenuBarContentView: View {
   // MARK: - Actions
   
   private func openMainWindow() {
-    NSApplication.shared.activate(ignoringOtherApps: true)
+    NSApplication.shared.activate()
     // Find and bring the main window to front
     if let window = NSApplication.shared.windows.first(where: { $0.title.contains("TianganDizhi") || $0.isMainWindow }) {
       window.makeKeyAndOrderFront(nil)
@@ -247,9 +247,8 @@ struct MenuBarContentView: View {
   }
   
   private func openSettings() {
-    openMainWindow()
-    // Post notification to switch to settings tab
-    NotificationCenter.default.post(name: NSNotification.Name("ShowSettings"), object: nil)
+    NSApplication.shared.activate()
+    NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
   }
   
   private func quitApp() {
@@ -257,13 +256,9 @@ struct MenuBarContentView: View {
   }
 }
 
-// MARK: - Preview
-
-struct MenuBarContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    MenuBarContentView(updater: DateProvider())
-      .frame(width: 280)
-  }
+#Preview {
+  MenuBarContentView(updater: DateProvider())
+    .frame(width: 280)
 }
 
 #endif

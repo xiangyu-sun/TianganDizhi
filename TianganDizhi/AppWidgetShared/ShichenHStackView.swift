@@ -30,7 +30,7 @@ struct ShichenHStackView: View {
         #endif
         ShichenInformationView(shichen: shichen.previous)
       }
-      .foregroundColor(Color.secondary)
+      .foregroundStyle(Color.secondary)
 
       Spacer()
 
@@ -56,7 +56,7 @@ struct ShichenHStackView: View {
         #endif
         ShichenInformationView(shichen: shichen.next)
       }
-      .foregroundColor(Color.secondary)
+      .foregroundStyle(Color.secondary)
     }
   }
 }
@@ -98,15 +98,11 @@ struct ShichenInformationView: View {
   }
 }
 
-// MARK: - ShichenHStackView_Previews
-
-struct ShichenHStackView_Previews: PreviewProvider {
-  static var previews: some View {
-    ShichenHStackView(shichen: .zi)
-    #if os(watchOS)
-      .previewContext(WidgetPreviewContext(family: .accessoryInline))
-    #else
-      .previewContext(WidgetPreviewContext(family: .systemMedium))
-    #endif
-  }
+#Preview {
+  ShichenHStackView(shichen: .zi)
+  #if os(watchOS)
+    .previewContext(WidgetPreviewContext(family: .accessoryInline))
+  #else
+    .previewContext(WidgetPreviewContext(family: .systemMedium))
+  #endif
 }

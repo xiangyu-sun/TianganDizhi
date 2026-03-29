@@ -32,7 +32,10 @@ struct JieqiCell: View {
       Image(uiImage: jieqi.image)
         .resizable()
         .aspectRatio(contentMode: .fit)
+        .accessibilityHidden(true)
     }
+    .accessibilityElement(children: .combine)
+    .accessibilityLabel("\(jieqi.chineseName)，\(jieqi.qi ? "氣" : "節")，\(jieqi.qishierHou)")
 
     #else
     HStack {
@@ -49,21 +52,20 @@ struct JieqiCell: View {
       Image(nsImage: jieqi.image)
         .resizable()
         .aspectRatio(contentMode: .fit)
+        .accessibilityHidden(true)
       #else
       Image(uiImage: jieqi.image)
         .resizable()
         .aspectRatio(contentMode: .fit)
-
+        .accessibilityHidden(true)
       #endif
     }
+    .accessibilityElement(children: .combine)
+    .accessibilityLabel("\(jieqi.chineseName)，\(jieqi.qi ? "氣" : "節")，\(jieqi.qishierHou)")
     #endif
   }
 }
 
-// MARK: - JieqiCell_Previews
-
-struct JieqiCell_Previews: PreviewProvider {
-  static var previews: some View {
-    JieqiCell(jieqi: .bailu)
-  }
+#Preview {
+  JieqiCell(jieqi: .bailu)
 }

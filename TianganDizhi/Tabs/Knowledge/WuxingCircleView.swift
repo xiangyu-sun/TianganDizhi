@@ -58,9 +58,7 @@ struct WuxingCircleView: View {
   }
 }
 
-struct WuxingCircleView_Previews: PreviewProvider {
-  static var previews: some View {
-    WuxingCircleView()
-      .padding()
-  }
+#Preview {
+  WuxingCircleView()
+    .padding()
 }

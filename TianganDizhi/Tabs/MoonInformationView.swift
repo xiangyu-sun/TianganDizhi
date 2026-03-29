@@ -3,7 +3,7 @@ import SwiftUI
 // MARK: - MoonInformationView
 
 struct MoonInformationView: View {
-  @State var info: WeatherData.Information
+  let info: WeatherData.Information
   @Environment(\.bodyFont) var bodyFont
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
@@ -12,6 +12,7 @@ struct MoonInformationView: View {
     VStack(alignment: .center) {
       HStack {
         Image(systemName: info.moonPhase.moonPhase.symbolName)
+          .accessibilityHidden(true)
         Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
         if let gua = info.moonPhase.gua {
           Text(gua.description)
@@ -52,39 +53,36 @@ struct MoonInformationView: View {
         }
       }
     }
+    .accessibilityElement(children: .combine)
   }
 }
 
-// MARK: - MoonInformationView_Previews
+#Preview {
+  VStack {
+    SunInformationView(
+      info: WeatherData.Information(
+        moonPhase: .上弦月,
+        moonRise: .now,
+        moonset: .now,
+        sunrise: .now,
+        sunset: .now,
+        noon: .now,
+        midnight: .now,
+        temperatureHigh: .init(value: 12, unit: .celsius),
+        temperatureLow: .init(value: 30, unit: .celsius),
+        condition: "ok"))
 
-struct MoonInformationView_Previews: PreviewProvider {
-  static var previews: some View {
-    VStack {
-      SunInformationView(
-        info: WeatherData.Information(
-          moonPhase: .上弦月,
-          moonRise: .now,
-          moonset: .now,
-          sunrise: .now,
-          sunset: .now,
-          noon: .now,
-          midnight: .now,
-          temperatureHigh: .init(value: 12, unit: .celsius),
-          temperatureLow: .init(value: 30, unit: .celsius),
-          condition: "ok"))
-
-      MoonInformationView(
-        info: WeatherData.Information(
-          moonPhase: .上弦月,
-          moonRise: .now,
-          moonset: .now,
-          sunrise: .now,
-          sunset: .now,
-          noon: .now,
-          midnight: .now,
-          temperatureHigh: .init(value: 12, unit: .celsius),
-          temperatureLow: .init(value: 30, unit: .celsius),
-          condition: "ok"))
-    }
+    MoonInformationView(
+      info: WeatherData.Information(
+        moonPhase: .上弦月,
+        moonRise: .now,
+        moonset: .now,
+        sunrise: .now,
+        sunset: .now,
+        noon: .now,
+        midnight: .now,
+        temperatureHigh: .init(value: 12, unit: .celsius),
+        temperatureLow: .init(value: 30, unit: .celsius),
+        condition: "ok"))
   }
 }

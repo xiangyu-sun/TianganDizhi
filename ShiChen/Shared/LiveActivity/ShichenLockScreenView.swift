@@ -48,13 +48,13 @@ struct ShichenLockScreenView: View {
         if !nextShichenCountdown.isEmpty {
           Text(nextShichenCountdown)
             .font(calloutFont)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
         }
       }
     }
 
     .modifier(WidgetAccentable())
-    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+    .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
 #if canImport(ActivityKit) && os(iOS)
     .activityBackgroundTint(springFestiveBackgroundEnabled ? Color("background").opacity(0.3) : Color.clear)
 #endif
@@ -62,14 +62,12 @@ struct ShichenLockScreenView: View {
 }
 
 #if DEBUG && !os(watchOS)
-struct ShichenLockScreenView_Previews: PreviewProvider {
-  static var previews: some View {
-    let now = Date()
-    ShichenLockScreenView(
-      date: now,
-      nextShichenCountdown: now.nextShichenCountdown
-    )
-    .previewContext(WidgetPreviewContext(family: .systemMedium))
-  }
+#Preview {
+  let now = Date()
+  ShichenLockScreenView(
+    date: now,
+    nextShichenCountdown: now.nextShichenCountdown
+  )
+  .previewContext(WidgetPreviewContext(family: .systemMedium))
 }
 #endif

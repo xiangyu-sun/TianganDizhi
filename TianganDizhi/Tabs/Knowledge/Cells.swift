@@ -120,15 +120,18 @@ struct LvlvCell: View {
   }
 }
 
-// MARK: - Cells_Previews
+#Preview {
+  LvlvCell(dizhi: .zi)
+}
 
-struct Cells_Previews: PreviewProvider {
-  static var previews: some View {
-    Group {
-      LvlvCell(dizhi: .zi)
-      OrganShichenCell(shichen: .zi)
-      DizhiZodiaCell(dizhi: .hai)
-      ShichenMonthCell(shichen: .chen)
-    }
-  }
+#Preview {
+  OrganShichenCell(shichen: .zi)
+}
+
+#Preview {
+  DizhiZodiaCell(dizhi: .hai)
+}
+
+#Preview {
+  ShichenMonthCell(shichen: .chen)
 }

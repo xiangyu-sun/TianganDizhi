@@ -50,7 +50,7 @@ private struct DizhiView: View {
       #else
         .font(titleFont)
       #endif
-        .foregroundColor(current ? color : Color.secondary)
+        .foregroundStyle(current ? color : Color.secondary)
         .scaleEffect(current ? 1.2 : 1)
         .rotationEffect(.radians(-(Double.pi * 2 / 12 * rotation)))
 
@@ -61,11 +61,7 @@ private struct DizhiView: View {
   }
 }
 
-// MARK: - ShichenView_Previews
-
-struct ShichenView_Previews: PreviewProvider {
-  static var previews: some View {
-    ShichenView(currentShichen: .zi)
-      .scaledToFit()
-  }
+#Preview {
+  ShichenView(currentShichen: .zi)
+    .scaledToFit()
 }

@@ -19,10 +19,6 @@ struct JieqiListView: View {
   }
 }
 
-// MARK: - JIeqiListView_Previews
-
-struct JIeqiListView_Previews: PreviewProvider {
-  static var previews: some View {
-    JieqiListView()
-  }
+#Preview {
+  JieqiListView()
 }

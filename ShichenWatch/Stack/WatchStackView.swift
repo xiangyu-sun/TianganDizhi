@@ -27,7 +27,7 @@ struct WatchStackView: View {
               .font(footnote)
             ShichenWatchInformationView(shichen: shichen.dizhi.previous)
           }
-          .foregroundColor(Color.secondary)
+          .foregroundStyle(Color.secondary)
 
           VStack {
             Text("\(shichen.dizhi.displayHourText)")
@@ -43,13 +43,13 @@ struct WatchStackView: View {
 
             ShichenWatchInformationView(shichen: shichen.dizhi.next)
           }
-          .foregroundColor(Color.secondary)
+          .foregroundStyle(Color.secondary)
         }
       }
     }
     .widgetAccentable()
-    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-    .containerBackground(for: .widget) {
+    .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+    .containerBackgroundForWidget {
       Color.black
     }
   }

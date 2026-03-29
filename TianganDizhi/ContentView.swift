@@ -96,12 +96,8 @@ struct ContentView: View {
   #endif
 }
 
-// MARK: - ContentView_Previews
-
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
-      .environmentObject(FontProvider())
-      .environmentObject(SettingsManager.shared)
-  }
+#Preview {
+  ContentView()
+    .environmentObject(FontProvider())
+    .environmentObject(SettingsManager.shared)
 }

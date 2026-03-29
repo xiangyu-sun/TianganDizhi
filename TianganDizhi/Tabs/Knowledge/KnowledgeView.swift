@@ -87,10 +87,6 @@ struct KnowledgeView: View {
   }
 }
 
-// MARK: - KnowledgeView_Previews
-
-struct KnowledgeView_Previews: PreviewProvider {
-  static var previews: some View {
-    KnowledgeView()
-  }
+#Preview {
+  KnowledgeView()
 }

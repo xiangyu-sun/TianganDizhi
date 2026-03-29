@@ -19,20 +19,19 @@ struct CircularContainerView: View {
     ZStack {
       Circle()
         .stroke(lineWidth: 4)
-        .foregroundColor(.secondary)
+        .foregroundStyle(.secondary)
+        .accessibilityHidden(true)
       ShichenView(currentShichen: currentShichen)
         .padding(padding)
     }
+    // Treat the whole clock as a single accessible element describing the current shichen
+    .accessibilityElement(children: .ignore)
+    .accessibilityLabel(Text("當前時辰：\(currentShichen.chineseCharacter)，\(currentShichen.displayHourText)"))
+    .accessibilityAddTraits(.updatesFrequently)
   }
 }
 
-// MARK: - CircularContainerView_Previews
-
-struct CircularContainerView_Previews: PreviewProvider {
-  static var previews: some View {
-    Group {
-      CircularContainerView(currentShichen: .chen, padding: 0)
-        .fixedSize(horizontal: false, vertical: true)
-    }
-  }
+#Preview {
+  CircularContainerView(currentShichen: .chen, padding: 0)
+    .fixedSize(horizontal: false, vertical: true)
 }

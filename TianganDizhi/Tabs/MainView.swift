@@ -13,14 +13,14 @@ import WidgetKit
 // MARK: - MainView
 
 struct MainView: View {
-  @ObservedObject var updater = DateProvider()
+  @EnvironmentObject var updater: DateProvider
   @Environment(\.titleFont) var titleFont
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
   @Environment(\.calloutFont) var calloutFont
   @Environment(\.shouldScaleFont) var shouldScaleFont
-  @StateObject var weatherData = WeatherData.shared
+  @ObservedObject var weatherData = WeatherData.shared
   @Environment(\.scenePhase) var scenePhase
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
@@ -33,20 +33,22 @@ struct MainView: View {
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
   @Environment(\.horizontalSizeClass) var horizontalSizeClass
-  var dayConverter: DayConverter {
-    useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
+
+  // Cached computed values — rebuilt only when useGTM8 changes or on appear.
+  // These are expensive (date scanning), so must NOT live in `body`.
+  @State private var cachedEvent: EventModel = .init(date: Date(), name: .chuyi, dateComponents: .init())
+  @State private var cachedTitle: String = ""
+
+  private func rebuildCachedValues() {
+    let converter = useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
+    let ev = converter.find(day: .chuyi, month: .yin, inNextYears: 1).first
+      ?? EventModel(date: Date(), name: .chuyi, dateComponents: .init())
+    cachedEvent = ev
+    cachedTitle = useGTM8
+      ? ev.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
+      : ev.date.displayStringOfChineseYearMonthDateWithZodiac
   }
 
-  var event: EventModel {
-    dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
-      .init(date: Date(), name: .chuyi, dateComponents: .init())
-  }
-
-  var title: String {
-    useGTM8
-      ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
-      : event.date.displayStringOfChineseYearMonthDateWithZodiac
-  }
   @State private var showingPopover = false
 
   var body: some View {
@@ -56,32 +58,28 @@ struct MainView: View {
       #else
       VStack(spacing: 0) {
         let god = updater.currentDate.twelveGod()
-        HStack
-        {
+        HStack {
           Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
           Text(god.map { "·" + $0.chinese } ?? "")
         }
         .lineLimit(1)
         .minimumScaleFactor(0.8)
         .font(titleFont)
-        
-        if let nextChineseNewYear = dayConverter.nextChineseNewYear(),
-           dayConverter.isWithinMonths(3, beforeChineseNewYearFrom: nextChineseNewYear){
+
+        if let nextChineseNewYear = (useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()).nextChineseNewYear(),
+           (useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()).isWithinMonths(3, beforeChineseNewYearFrom: nextChineseNewYear) {
           HStack(spacing: 0) {
-            Text(event.date, style: .relative)
-            Text("後\(title)")
+            Text(cachedEvent.date, style: .relative)
+            Text("後\(cachedTitle)")
           }
           .font(bodyFont)
         }
-        
+
         Text(updater.currentDate.jieQiDisplayText)
           .font(bodyFont)
 
         if let value = weatherData.forcastedWeather {
-          withAnimation {
-            SunInformationView(info: value)
-          }
-
+          SunInformationView(info: value)
         } else {
           if let moonphase = updater.currentDate.chineseDay()?.moonPhase {
             fixedMoonInformationView(moonphase)
@@ -104,9 +102,7 @@ struct MainView: View {
           #endif
 
           VStack {
-            Text(
-              "\(shichen.currentKeSpellOut)刻"
-            )
+            Text("\(shichen.currentKeSpellOut)刻")
               .font(largeTitleFont)
             HStack {
               Text(shichen.dizhi.aliasName)
@@ -114,90 +110,69 @@ struct MainView: View {
             }
             .font(bodyFont)
           }
+          .accessibilityElement(children: .combine)
+          .accessibilityLabel("\(shichen.dizhi.aliasName)時，第\(shichen.currentKeSpellOut)刻，\(shichen.dizhi.organReference)")
+          .accessibilityAddTraits(.updatesFrequently)
         }
       }
 
       Spacer()
-      
-      HStack() {
-        Text("星象: \(LunarMansion.lunarMansion(date: updater.currentDate).fourSymbol.rawValue)")
-        Text("星宿: \(LunarMansion.lunarMansion(date: updater.currentDate).rawValue)")
+
+      // Compute once to avoid duplicate calls every render
+      let mansion = LunarMansion.lunarMansion(date: updater.currentDate)
+      HStack {
+        Text("星象: \(mansion.fourSymbol.rawValue)")
+        Text("星宿: \(mansion.rawValue)")
       }
-      .foregroundColor(Color.secondary)
+      .foregroundStyle(Color.secondary)
       .font(calloutFont)
-      
-      // Moon
+      .accessibilityElement(children: .combine)
+      .accessibilityLabel("星象：\(mansion.fourSymbol.rawValue)，星宿：\(mansion.rawValue)")
+
+      // Moon / weather detail
       if let value = weatherData.forcastedWeather {
-        withAnimation {
-          VStack {
-            MoonInformationView(info: value)
-            if horizontalSizeClass == .regular {
-              HStack {
-                Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
-                  .font(calloutFont)
-                  .foregroundColor(Color.secondary)
-                  .onChange(of: scenePhase) { newValue in
-                    switch newValue {
-                    case .active:
-                      refreshLocationAndWeather()
-                    default:
-                      break
-                    }
-                  }
-                Text("\(value.condition)")
-                  .font(calloutFont)
-                  .foregroundColor(Color.secondary)
-              }
-            } else {
+        VStack {
+          MoonInformationView(info: value)
+          if horizontalSizeClass == .regular {
+            HStack {
               Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
                 .font(calloutFont)
-                .foregroundColor(Color.secondary)
-                .onChange(of: scenePhase) { newValue in
-                  switch newValue {
-                  case .active:
-                    refreshLocationAndWeather()
-                  default:
-                    break
-                  }
-                }
+                .foregroundStyle(Color.secondary)
               Text("\(value.condition)")
                 .font(calloutFont)
-                .foregroundColor(Color.secondary)
+                .foregroundStyle(Color.secondary)
             }
-            
-            Text("天氣以及日月信息來自  Weather. 點擊查看數據源信息")
-              .font(footnote)
-              .foregroundColor(.secondary)
-              .onTapGesture {
-                if let url = URL(string: "https://weatherkit.apple.com/legal-attribution.html") {
-                  #if os(iOS)
-                  UIApplication.shared.open(url, options: [:])
-                  #elseif os(macOS)
-                  NSWorkspace.shared.open(url)
-                  #endif
-                }
-              }
+          } else {
+            Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
+              .font(calloutFont)
+              .foregroundStyle(Color.secondary)
+            Text("\(value.condition)")
+              .font(calloutFont)
+              .foregroundStyle(Color.secondary)
           }
-          .padding(.bottom)
+
+          Link("天氣以及日月信息來自  Weather. 點擊查看數據源信息",
+               destination: URL(string: "https://weatherkit.apple.com/legal-attribution.html")!)
+            .font(footnote)
+            .foregroundStyle(.secondary)
         }
+        .padding(.bottom)
       }
 
       #endif
     }
     .frame(maxWidth: .infinity, maxHeight: .infinity)
-#if os(iOS) || os(macOS)
+    #if os(iOS) || os(macOS)
     .popover(isPresented: $showingPopover, arrowEdge: .bottom) {
-  
       VStack(alignment: .leading) {
         let god = updater.currentDate.twelveGod()
-        Text("宜：\(god.map{ $0.do } ?? "")")
+        Text("宜：\(god.map { $0.do } ?? "")")
           .font(titleFont)
           .padding(.bottom)
-        Text("忌：\(god.map{ $0.dontDo } ?? "")")
+        Text("忌：\(god.map { $0.dontDo } ?? "")")
           .font(titleFont)
-        
       }
-      .frame(maxWidth: .infinity,  maxHeight: .infinity)
+      .frame(maxWidth: .infinity, maxHeight: .infinity)
       .background(
         Image("background")
           .resizable(resizingMode: .tile)
@@ -205,17 +180,26 @@ struct MainView: View {
           .ignoresSafeArea(.all)
       )
     }
-#endif
-    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-    #if os(iOS) || os(macOS)
-      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     #endif
-      .onAppear {
+    .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+    #if os(iOS) || os(macOS)
+    .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+    #endif
+    .onAppear {
+      rebuildCachedValues()
+      refreshLocationAndWeather()
+    }
+    .onChange(of: useGTM8) { _ in
+      rebuildCachedValues()
+    }
+    // Consolidated single scenePhase handler (was duplicated inside if/else branches)
+    .onChange(of: scenePhase) { newValue in
+      if newValue == .active {
         refreshLocationAndWeather()
       }
-
+    }
     #if os(macOS)
-      .frame(minHeight: 640)
+    .frame(minHeight: 640)
     #endif
   }
 
@@ -255,13 +239,12 @@ struct MainView: View {
   }
 }
 
-// MARK: - MainView_Previews
+#Preview {
+  MainView()
+    .environment(\.locale, Locale(identifier: "zh_Hant"))
+}
 
-struct MainView_Previews: PreviewProvider {
-  static var previews: some View {
-    MainView()
-      .environment(\.locale, Locale(identifier: "zh_Hant"))
-    MainView()
-      .environment(\.locale, Locale(identifier: "ja_JP"))
-  }
+#Preview {
+  MainView()
+    .environment(\.locale, Locale(identifier: "ja_JP"))
 }

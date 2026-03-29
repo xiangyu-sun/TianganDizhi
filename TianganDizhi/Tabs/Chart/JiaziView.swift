@@ -75,7 +75,7 @@ struct JiaziView: View {
               }
               #endif
             }
-            .foregroundColor((nian == item) ? .primary : .secondary)
+            .foregroundStyle((nian == item) ? .primary : .secondary)
           }
         }
       }
@@ -85,10 +85,6 @@ struct JiaziView: View {
   }
 }
 
-// MARK: - JiaziView_Previews
-
-struct JiaziView_Previews: PreviewProvider {
-  static var previews: some View {
-    JiaziView()
-  }
+#Preview {
+  JiaziView()
 }

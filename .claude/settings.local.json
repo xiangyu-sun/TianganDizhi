@@ -39,7 +39,11 @@
       "Bash(echo \"=== $lang ===\")",
       "Read(//Users/xiangyu.sun/TianganDizhi/fastlane/metadata/$lang/**)",
       "Bash(done)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "WebSearch",
+      "WebFetch(domain:docs.fastlane.tools)",
+      "WebFetch(domain:splitmetrics.com)",
+      "WebFetch(domain:www.mobileaction.co)"
     ],
     "deny": []
   }

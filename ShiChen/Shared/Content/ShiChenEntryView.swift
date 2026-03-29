@@ -96,7 +96,7 @@ struct ShiChenEntryView: View {
         .padding(.bottom, 8)
       }
       .modifier(WidgetAccentable())
-      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+      .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
     case .systemExtraLarge:
@@ -118,7 +118,7 @@ struct ShiChenEntryView: View {
               CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
             }
           }
-          .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+          .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
 
           if let shichen = entry.date.shichen {
@@ -139,7 +139,7 @@ struct ShiChenEntryView: View {
       if let shichen = entry.date.shichen {
         CompactShichenView(shichen: shichen.dizhi, date: entry.date)
           .modifier(WidgetAccentable())
-          .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+          .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
           .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
       } else {
@@ -149,50 +149,51 @@ struct ShiChenEntryView: View {
   }
 }
 
-// MARK: - ShiChenEntryView_Previews
-
-struct ShiChenEntryView_Previews: PreviewProvider {
-  static var previews: some View {
-    #if os(iOS)
-
-    Group {
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryInline))
-        .previewDisplayName("Inline")
-      
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-        .previewDisplayName("Circular")
-      
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-        .previewDisplayName("Retangular")
-    }
-    
-    Group {
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemSmall))
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemMedium))
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemLarge))
-
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemLarge))
-        .environment(\.colorScheme, .dark)
-        .previewDisplayName("systemLarge Dark")
-
-      if #available(iOSApplicationExtension 15.0, *) {
-        ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-          .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
-          .previewDisplayName("systemExtraLarge")
-      }
-
-      ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemMedium))
-        .environment(\.sizeCategory, .extraExtraLarge)
-        .previewDisplayName("systemMedium")
-    }
-    #endif
-  }
+#if os(iOS)
+#Preview("Inline") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryInline))
 }
+
+#Preview("Circular") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+}
+
+#Preview("Retangular") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+}
+
+#Preview {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemSmall))
+}
+
+#Preview {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemMedium))
+}
+
+#Preview {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemLarge))
+}
+
+#Preview("systemLarge Dark") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemLarge))
+    .environment(\.colorScheme, .dark)
+}
+
+#Preview("systemExtraLarge") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
+}
+
+#Preview("systemMedium") {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemMedium))
+    .environment(\.sizeCategory, .extraExtraLarge)
+}
+#endif

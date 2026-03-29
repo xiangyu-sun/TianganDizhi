@@ -27,7 +27,7 @@ struct ExtraLargeWidgetView: View {
   private var titleFont: Font { fontProvider.titleFont }
   private var bodyFont: Font { fontProvider.bodyFont }
 
-  @StateObject var weatherData = WeatherData.shared
+  @ObservedObject var weatherData = WeatherData.shared
 
   var body: some View {
     HStack {
@@ -45,10 +45,10 @@ struct ExtraLargeWidgetView: View {
           Text(
             MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
             .font(bodyFont)
-            .foregroundColor(Color.secondary)
+            .foregroundStyle(Color.secondary)
           Text("\(value.condition)")
             .font(bodyFont)
-            .foregroundColor(Color.secondary)
+            .foregroundStyle(Color.secondary)
         } else {
           // default
           if let moonphase = date.chineseDay()?.moonPhase {
@@ -74,7 +74,7 @@ struct ExtraLargeWidgetView: View {
         }
       }
     }
-    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+    .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     .onAppear {
@@ -106,12 +106,9 @@ struct ExtraLargeWidgetView: View {
 }
 
 #if os(iOS)
-struct ExtraLargeWidgetView_Previews: PreviewProvider {
-
-  static var previews: some View {
-    ExtraLargeWidgetView(date: Date())
-      .previewDevice(.init(stringLiteral: "iPad Pro 13-inch (M4)"))
-      .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
-  }
+#Preview {
+  ExtraLargeWidgetView(date: Date())
+    .previewDevice(.init(stringLiteral: "iPad Pro 13-inch (M4)"))
+    .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
 }
 #endif

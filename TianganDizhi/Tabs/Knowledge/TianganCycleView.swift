@@ -56,9 +56,7 @@ struct TianganHeView: View {
   }
 }
 
-struct TianganHeView_Previews: PreviewProvider {
-  static var previews: some View {
-    TianganHeView()
-      .padding()
-  }
+#Preview {
+  TianganHeView()
+    .padding()
 }

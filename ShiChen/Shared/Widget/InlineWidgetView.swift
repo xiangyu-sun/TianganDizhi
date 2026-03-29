@@ -14,7 +14,7 @@ import WidgetKit
 
 struct InlineWidgetView: View {
 
-  @State var date: Date
+  let date: Date
 
   var body: some View {
     let shichen = date.shichen
@@ -29,16 +29,12 @@ struct InlineWidgetView: View {
   }
 }
 
-// MARK: - InlineWidgetView_Previews
-
-struct InlineWidgetView_Previews: PreviewProvider {
-  static var previews: some View {
-    #if os(macOS)
-    InlineWidgetView(date: .now)
-      .previewContext(WidgetPreviewContext(family: .systemSmall))
-    #else
-    InlineWidgetView(date: .now)
-      .previewContext(WidgetPreviewContext(family: .accessoryInline))
-    #endif
-  }
+#Preview {
+  #if os(macOS)
+  InlineWidgetView(date: .now)
+    .previewContext(WidgetPreviewContext(family: .systemSmall))
+  #else
+  InlineWidgetView(date: .now)
+    .previewContext(WidgetPreviewContext(family: .accessoryInline))
+  #endif
 }

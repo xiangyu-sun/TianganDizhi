@@ -65,7 +65,7 @@ struct CountDownView: View {
     case .systemSmall:
       Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now)) \(title)")
       .font(bodyFont)
-      .foregroundColor(color)
+      .foregroundStyle(color)
       .materialBackgroundWidget(with: Image("background"), toogle: true)
 
     default:
@@ -76,34 +76,30 @@ struct CountDownView: View {
         Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
           .font(title3Font)
       }
-      .foregroundColor(color)
+      .foregroundStyle(color)
       .materialBackgroundWidget(with: Image("background"), toogle: true)
     }
   }
 }
 
-// MARK: - CountDownView_Previews
-
-struct CountDownView_Previews: PreviewProvider {
-  static var previews: some View {
-    #if os(iOS)
-
-    Group {
-      CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryInline))
-        .previewDisplayName("Inline")
-      
-      CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-        .previewDisplayName("Retangular")
-    }
-    
-    Group {
-      CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemSmall))
-      CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .systemMedium))
-    }
-    #endif
-  }
+#if os(iOS)
+#Preview("Inline") {
+  CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryInline))
 }
+
+#Preview("Retangular") {
+  CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+}
+
+#Preview {
+  CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemSmall))
+}
+
+#Preview {
+  CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemMedium))
+}
+#endif

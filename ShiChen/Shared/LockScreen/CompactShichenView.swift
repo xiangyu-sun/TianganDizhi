@@ -54,10 +54,8 @@ struct CompactShichenView: View {
 }
 
 #if os(iOS)
-struct CompactShichenView_Previews: PreviewProvider {
-  static var previews: some View {
-    CompactShichenView(shichen: .zi, date: Date())
-      .previewContext(WidgetPreviewContext(family: .systemSmall))
-  }
+#Preview {
+  CompactShichenView(shichen: .zi, date: Date())
+    .previewContext(WidgetPreviewContext(family: .systemSmall))
 }
 #endif

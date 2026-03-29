@@ -12,8 +12,8 @@ import SwiftUI
 // MARK: - WatchMainView
 
 struct WatchMainView: View {
-  @State var date: Date
-  @State var wetherData: WeatherData.Information?
+  let date: Date
+  let wetherData: WeatherData.Information?
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
   @Environment(\.titleFont) var titleFont
@@ -45,10 +45,21 @@ struct WatchMainView: View {
   }
 }
 
-// MARK: - WatchMainView_Previews
-
-struct WatchMainView_Previews: PreviewProvider {
-  static var previews: some View {
-    WatchMainView(date: .now)
-  }
+#Preview {
+  WatchMainView(
+    date: .now,
+    wetherData: WeatherData
+      .Information(
+        moonPhase: .上弦月,
+        moonRise: Date(),
+        moonset: Date(),
+        sunrise: Date(),
+        sunset: Date(),
+        noon: Date(),
+        midnight: Date(),
+        temperatureHigh: .init(value: 1, unit: .celsius),
+        temperatureLow: .init(value: 1, unit: .celsius),
+        condition: ""
+      )
+  )
 }

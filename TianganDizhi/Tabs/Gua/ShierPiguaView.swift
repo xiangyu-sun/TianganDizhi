@@ -27,7 +27,7 @@ struct ShierPiguaView: View {
   @AppStorage(Constants.piGuaRotationEnabled, store: Constants.sharedUserDefault)
   var piGuaRotationEnabled = false
 
-  @State var rotationOn = false
+  @State private var rotationOn = false
 
   var font: Font {
     #if os(watchOS)
@@ -92,7 +92,7 @@ struct ShierPiguaView: View {
 
         Circle()
           .stroke(lineWidth: circleLineWidth)
-          .foregroundColor(.secondary)
+          .foregroundStyle(.secondary)
       }
 
       .frame(width: geometry.size.width, height: geometry.size.height)
@@ -175,10 +175,6 @@ struct ShierPiguaView: View {
   }
 }
 
-// MARK: - ShierPiguaView_Previews
-
-struct ShierPiguaView_Previews: PreviewProvider {
-  static var previews: some View {
-    ShierPiguaView()
-  }
+#Preview {
+  ShierPiguaView()
 }

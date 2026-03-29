@@ -28,9 +28,9 @@ struct BaguaView: View {
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.footnote) var footnote
 
-  @State var viewData: ViewData
+  let viewData: ViewData
 
-  @State var rotationOn = false
+  @State private var rotationOn = false
 
   var font: Font {
     #if os(watchOS)
@@ -105,13 +105,10 @@ struct BaguaView: View {
 
 }
 
-// MARK: - BaguaView_Preview
+#Preview {
+  BaguaView(viewData: .init(guas: xiantianBagua, title: "先天八卦"))
+}
 
-struct BaguaView_Preview: PreviewProvider {
-  static var previews: some View {
-    Group {
-      BaguaView(viewData: .init(guas: xiantianBagua, title: "先天八卦"))
-      BaguaView(viewData: .init(guas: houtianBagua, title: "後天八卦"))
-    }
-  }
+#Preview {
+  BaguaView(viewData: .init(guas: houtianBagua, title: "後天八卦"))
 }

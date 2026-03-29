@@ -40,11 +40,7 @@ struct ShichenMacWidget: Widget {
   }
 }
 
-// MARK: - ShichenMacWidget_Previews
-
-struct ShichenMacWidget_Previews: PreviewProvider {
-  static var previews: some View {
-    ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-      .previewContext(WidgetPreviewContext(family: .systemSmall))
-  }
+#Preview {
+  ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .systemSmall))
 }

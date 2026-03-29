@@ -5,18 +5,22 @@ import CoreGraphics
 // MARK: - Traditional Color for Heavenly Stems (五行色彩)
 extension Wuxing {
   /// Traditional color linked to the stem's Five-Element association.
+  /// Colors are chosen for sufficient contrast in both light and dark mode:
+  ///   - Metal (白): uses a warm silver-gray instead of pure white (avoids 1:1 contrast on light bg)
+  ///   - Water (黑): uses a dark navy instead of pure black (avoids 1:1 contrast on dark bg)
+  ///   - Earth (黃): uses a deeper amber-gold instead of bright yellow (improves contrast on white)
   public var traditionalColor: Color {
     switch self {
-    case .jin:   // Metal (金) -> 白 (white)
-      return Color(red: 1.0, green: 1.0, blue: 1.0)
+    case .jin:   // Metal (金) -> 白/銀 (silver-white)
+      return Color(red: 0.75, green: 0.75, blue: 0.80)
     case .mu:     // Wood (木) -> 青 (cyan-green)
       return Color(red: 0.0, green: 153.0/255.0, blue: 102.0/255.0)
-    case .shui:    // Water (水) -> 黑 (black)
-      return Color(red: 0.0, green: 0.0, blue: 0.0)
+    case .shui:    // Water (水) -> 黑/深藍 (dark navy)
+      return Color(red: 0.10, green: 0.12, blue: 0.35)
     case .huo:  // Fire (火) -> 赤 (scarlet red)
       return Color(red: 230.0/255.0, green: 0.0, blue: 38.0/255.0)
-    case .tu:      // Earth (土) -> 黃 (bright yellow)
-      return Color(red: 1.0, green: 204.0/255.0, blue: 0.0)
+    case .tu:      // Earth (土) -> 黃/琥珀 (deep amber-gold)
+      return Color(red: 0.80, green: 0.55, blue: 0.0)
     }
   }
 }
@@ -90,7 +94,7 @@ struct TianganNodeView: View {
       Circle()
         .fill(color.opacity(stem.yin ? 0.5 : 0.7))
         .frame(width: 50, height: 50)
-        .overlay(Text(stem.chineseCharacter).font(.title2).bold().foregroundColor(.primary))
+        .overlay(Text(stem.chineseCharacter).font(.title2).bold().foregroundStyle(.primary))
       Text(stem.yin ? "陰" : "陽").font(.caption)
     }
   }
@@ -105,7 +109,7 @@ struct WuxingNodeView: View {
       Circle()
         .stroke(color.opacity(0.7))
         .frame(width: 100, height: 100)
-      Text(wuxing.chineseCharacter).font(.title2).bold().foregroundColor(.primary)
+      Text(wuxing.chineseCharacter).font(.title2).bold().foregroundStyle(.primary)
       
       HStack() {
         TianganNodeView(stem: wuxing.tiangan.0, color: wuxing.tiangan.0.traditionalColor)
@@ -156,9 +160,7 @@ struct Triangle: Shape {
   }
 }
 
-struct TianganCycleView_Previews: PreviewProvider {
-  static var previews: some View {
-    TianganCycleView()
-      .padding()
-  }
+#Preview {
+  TianganCycleView()
+    .padding()
 }

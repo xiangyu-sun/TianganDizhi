@@ -30,7 +30,7 @@ extension Date {
 }
 
 struct RetangularWidgetView: View {
-  @State var date: Date
+  let date: Date
   
   var god: String {
     date.twelveGod().map { "·" + $0.chinese } ?? ""
@@ -54,17 +54,12 @@ struct RetangularWidgetView: View {
   }
 }
 
-// MARK: - RetangularWidgetView_Previews
-
-struct RetangularWidgetView_Previews: PreviewProvider {
-  static var previews: some View {
-    #if os(macOS)
-    RetangularWidgetView(date: .now)
-      .previewContext(WidgetPreviewContext(family: .systemSmall))
-    #else
-
-    RetangularWidgetView(date: .now)
-      .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-    #endif
-  }
+#Preview {
+  #if os(macOS)
+  RetangularWidgetView(date: .now)
+    .previewContext(WidgetPreviewContext(family: .systemSmall))
+  #else
+  RetangularWidgetView(date: .now)
+    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+  #endif
 }

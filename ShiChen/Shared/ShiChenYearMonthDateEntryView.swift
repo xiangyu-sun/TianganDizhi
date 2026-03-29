@@ -69,7 +69,7 @@ struct ShiChenYearMonthDateEntryView: View {
         
       }
       .modifier(WidgetAccentable())
-      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+      .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
 
@@ -87,7 +87,7 @@ struct ShiChenYearMonthDateEntryView: View {
         Spacer()
       }
       .modifier(WidgetAccentable())
-      .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+      .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     }
@@ -137,49 +137,43 @@ private struct WidgetMediumView: View {
       
       Spacer()
     }
-    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+    .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
   }
 }
 
-// MARK: - ShiChenYearMonthDateEntryView_Previews
-
-struct ShiChenYearMonthDateEntryView_Previews: PreviewProvider {
-  static var previews: some View {
-    Group {
-      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-      #if os(watchOS)
-        .previewContext(WidgetPreviewContext(family: .accessoryInline))
-      #else
-        .previewContext(WidgetPreviewContext(family: .systemSmall))
-      #endif
-        .previewDisplayName("systemSmall")
-
-      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-      #if os(watchOS)
-        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-      #else
-        .previewContext(WidgetPreviewContext(family: .systemMedium))
-      #endif
-        .previewDisplayName("systemMedium")
-    }
-    #if os(iOS)
-    
-    Group {
-      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryInline))
-        .previewDisplayName("ShiChenYearMonthDateEntryView accessoryInline")
-      
-      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-        .previewDisplayName("ShiChenYearMonthDateEntryView accessoryCircular")
-      
-      ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-        .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-        .previewDisplayName("ShiChenYearMonthDateEntryView accessoryRectangular")
-    }
-    
-    #endif
-  }
+#Preview("systemSmall") {
+  ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+  #if os(watchOS)
+    .previewContext(WidgetPreviewContext(family: .accessoryInline))
+  #else
+    .previewContext(WidgetPreviewContext(family: .systemSmall))
+  #endif
 }
+
+#Preview("systemMedium") {
+  ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+  #if os(watchOS)
+    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+  #else
+    .previewContext(WidgetPreviewContext(family: .systemMedium))
+  #endif
+}
+
+#if os(iOS)
+#Preview("ShiChenYearMonthDateEntryView accessoryInline") {
+  ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryInline))
+}
+
+#Preview("ShiChenYearMonthDateEntryView accessoryCircular") {
+  ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+}
+
+#Preview("ShiChenYearMonthDateEntryView accessoryRectangular") {
+  ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+}
+#endif

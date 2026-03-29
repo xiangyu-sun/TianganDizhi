@@ -34,10 +34,6 @@ struct TwelveView: View {
   }
 }
 
-// MARK: - TwelveView_Previews
-
-struct TwelveView_Previews: PreviewProvider {
-  static var previews: some View {
-    TwelveView()
-  }
+#Preview {
+  TwelveView()
 }

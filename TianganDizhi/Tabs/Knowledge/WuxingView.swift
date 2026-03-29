@@ -110,6 +110,7 @@ struct WuxingView: View {
         }
       }
     }
+    .accessibilityElement(children: .combine)
   }
 
   // MARK: Fileprivate
@@ -126,10 +127,6 @@ struct WuxingView: View {
   }
 }
 
-// MARK: - WuxingView_Previews
-
-struct WuxingView_Previews: PreviewProvider {
-  static var previews: some View {
-    WuxingView()
-  }
+#Preview {
+  WuxingView()
 }

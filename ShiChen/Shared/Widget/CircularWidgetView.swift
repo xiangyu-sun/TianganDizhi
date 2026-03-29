@@ -14,7 +14,7 @@ import WidgetKit
 
 struct CircularWidgetView: View {
 
-  @State var date: Date
+  let date: Date
 
   var body: some View {
     if let shichen = date.shichen {
@@ -43,16 +43,12 @@ struct CircularWidgetView: View {
   }
 }
 
-// MARK: - CircularWidgetView_Previews
-
-struct CircularWidgetView_Previews: PreviewProvider {
-  static var previews: some View {
-    #if os(macOS)
-    CircularWidgetView(date: .now)
-      .previewContext(WidgetPreviewContext(family: .systemLarge))
-    #else
-    CircularWidgetView(date: .now)
-      .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-    #endif
-  }
+#Preview {
+  #if os(macOS)
+  CircularWidgetView(date: .now)
+    .previewContext(WidgetPreviewContext(family: .systemLarge))
+  #else
+  CircularWidgetView(date: .now)
+    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
+  #endif
 }

@@ -66,7 +66,7 @@ struct SettingsView: View {
       //   if let error = liveActivityError {
       //     Text(error)
       //       .font(.caption)
-      //       .foregroundColor(.red)
+      //       .foregroundStyle(.red)
       //   }
       // }
       // #endif
@@ -126,10 +126,6 @@ struct SettingsView: View {
   }
 }
 
-// MARK: - SettingsView_Previews
-
-struct SettingsView_Previews: PreviewProvider {
-  static var previews: some View {
-    SettingsView()
-  }
+#Preview {
+  SettingsView()
 }

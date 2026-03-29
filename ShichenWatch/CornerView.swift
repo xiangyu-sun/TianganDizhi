@@ -13,7 +13,7 @@ import WidgetKit
 // MARK: - CornerView
 
 struct CornerView: View {
-  @State var date: Date
+  let date: Date
 
   var body: some View {
     ZStack {
@@ -27,10 +27,10 @@ struct CornerView: View {
         let base = shichen.endDate.timeIntervalSince1970 - shichen.startDate.timeIntervalSince1970
         Gauge(value: start / base) { } currentValueLabel: { } minimumValueLabel: {
           Text(shichen.dizhi.chineseCharacter)
-            .foregroundColor(.primary)
+            .foregroundStyle(.primary)
         } maximumValueLabel: {
           Text(shichen.dizhi.next.chineseCharacter)
-            .foregroundColor(.secondary)
+            .foregroundStyle(.secondary)
         }
       }
     }
@@ -38,11 +38,7 @@ struct CornerView: View {
   }
 }
 
-// MARK: - CornerView_Previews
-
-struct CornerView_Previews: PreviewProvider {
-  static var previews: some View {
-    CornerView(date: .now)
-      .previewContext(WidgetPreviewContext(family: .accessoryCorner))
-  }
+#Preview {
+  CornerView(date: .now)
+    .previewContext(WidgetPreviewContext(family: .accessoryCorner))
 }

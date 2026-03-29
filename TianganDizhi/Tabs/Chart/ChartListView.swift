@@ -39,10 +39,6 @@ struct ChartListView: View {
   }
 }
 
-// MARK: - ChartListView_Previews
-
-struct ChartListView_Previews: PreviewProvider {
-  static var previews: some View {
-    ChartListView()
-  }
+#Preview {
+  ChartListView()
 }

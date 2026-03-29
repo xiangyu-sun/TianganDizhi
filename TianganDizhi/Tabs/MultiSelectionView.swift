@@ -51,22 +51,22 @@ struct MultiSelectionView<Selectable: Identifiable & Hashable>: View {
   }
 }
 
-// MARK: - MultiSelectionView_Previews
-
-struct MultiSelectionView_Previews: PreviewProvider {
+#Preview {
   struct IdentifiableString: Identifiable, Hashable {
     let string: String
     var id: String { string }
   }
 
-  @State static var selected: Set<IdentifiableString> = Set(["A", "C"].map { IdentifiableString(string: $0) })
-
-  static var previews: some View {
-    NavigationView {
-      MultiSelectionView(
-        options: ["A", "B", "C", "D"].map { IdentifiableString(string: $0) },
-        optionToString: { $0.string },
-        selected: $selected)
+  struct PreviewWrapper: View {
+    @State var selected: Set<IdentifiableString> = Set(["A", "C"].map { IdentifiableString(string: $0) })
+    var body: some View {
+      NavigationView {
+        MultiSelectionView(
+          options: ["A", "B", "C", "D"].map { IdentifiableString(string: $0) },
+          optionToString: { $0.string },
+          selected: $selected)
+      }
     }
   }
+  return PreviewWrapper()
 }

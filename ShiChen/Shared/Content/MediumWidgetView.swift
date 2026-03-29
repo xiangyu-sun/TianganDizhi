@@ -27,7 +27,7 @@ struct MediumWidgetView: View {
   private var footnote: Font { fontProvider.footnoteFont }
 
   #if os(iOS) || os(macOS)
-  @StateObject var weatherData = WeatherData.shared
+  @ObservedObject var weatherData = WeatherData.shared
   #endif
 
   var body: some View {
@@ -43,7 +43,7 @@ struct MediumWidgetView: View {
           MeasurmentFormatterManager
             .buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\(value.condition)")
           .font(footnote)
-          .foregroundColor(Color.secondary)
+          .foregroundStyle(Color.secondary)
       }
       Spacer(minLength: 4)
       #else
@@ -56,7 +56,7 @@ struct MediumWidgetView: View {
       Spacer()
     }
     .modifier(WidgetAccentable())
-    .foregroundColor(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+    .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     #if os(iOS) || os(macOS)
     .onAppear {
@@ -78,11 +78,8 @@ struct MediumWidgetView: View {
 }
 
 #if !os(watchOS)
-
-struct MediumWidgetView_Previews: PreviewProvider {
-  static var previews: some View {
-    MediumWidgetView(date: Date())
-      .previewContext(WidgetPreviewContext(family: .systemMedium))
-  }
+#Preview {
+  MediumWidgetView(date: Date())
+    .previewContext(WidgetPreviewContext(family: .systemMedium))
 }
 #endif

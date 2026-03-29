@@ -47,11 +47,11 @@ struct JieqiWidget: Widget {
             
             Text(date, style: .date)
               .font(.callout)
-              .foregroundColor(.secondary)
+              .foregroundStyle(.secondary)
               .environment(\.locale, Locale(identifier: "zh-hant"))
 
             Text(jieqi.next.chineseName)
-              .foregroundColor(.secondary)
+              .foregroundStyle(.secondary)
               .font(largeTitleFont)
           }
         }

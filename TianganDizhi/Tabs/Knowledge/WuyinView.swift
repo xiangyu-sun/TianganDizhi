@@ -37,12 +37,8 @@ struct WuyinView: View {
   }
 }
 
-// MARK: - WuyinView_Previews
-
-struct WuyinView_Previews: PreviewProvider {
-  static var previews: some View {
-    NavigationView {
-      WuyinView()
-    }
+#Preview {
+  NavigationView {
+    WuyinView()
   }
 }

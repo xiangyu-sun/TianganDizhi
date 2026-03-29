@@ -36,10 +36,6 @@ struct TianganCell: View {
   }
 }
 
-// MARK: - TianganListView_Previews
-
-struct TianganListView_Previews: PreviewProvider {
-  static var previews: some View {
-    TianganListView()
-  }
+#Preview {
+  TianganListView()
 }

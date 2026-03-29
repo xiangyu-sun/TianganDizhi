@@ -82,10 +82,6 @@ struct ShiciView: View {
   }
 }
 
-// MARK: - ShiciView_Previews
-
-struct ShiciView_Previews: PreviewProvider {
-  static var previews: some View {
-    ShiciView()
-  }
+#Preview {
+  ShiciView()
 }

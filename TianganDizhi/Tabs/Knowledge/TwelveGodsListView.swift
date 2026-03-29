@@ -27,6 +27,7 @@ struct TwelveGodsListView: View {
           .resizable()
           .scaledToFit()
           .ignoresSafeArea()
+          .accessibilityHidden(true)
           .tag(god)
           .overlay(
             TwelveGodCell(god: god)
@@ -41,6 +42,7 @@ struct TwelveGodsListView: View {
           .resizable()
           .scaledToFit()
           .ignoresSafeArea()
+          .accessibilityHidden(true)
           .tag(god)
           .overlay(
             TwelveGodCell(god: god)
@@ -72,13 +74,11 @@ struct TwelveGodCell: View {
       }
       .padding()
       .font(bodyFont)
+      .accessibilityElement(children: .combine)
+      .accessibilityLabel("\(god.chinese)，\(god.meaning)，宜：\(god.do)，\(god.dontDo)")
   }
 }
 
-// MARK: - TianganListView_Previews
-
-struct TwelveGodsListView_Previews: PreviewProvider {
-  static var previews: some View {
-    TwelveGodsListView()
-  }
+#Preview {
+  TwelveGodsListView()
 }
