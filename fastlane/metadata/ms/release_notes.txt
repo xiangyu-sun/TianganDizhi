@@ -1,3 +1,5 @@
-- Tambah sokongan penyetempatan Jepun, Korea, Vietnam, Melayu, Thai, dan Perancis
-- Tingkatkan ketepatan pengiraan bulan dan matahari menggunakan algoritma Meeus ketepatan tinggi: fasa bulan (±1.5 hari), naik/terbenam bulan (±15 minit), dan Jieqi
-- Perbaiki pepijat widget: komplikasi jam kini merangkumi semua 12 sempadan Shichen dengan betul dan memaparkan tempoh masa yang tepat untuk setiap entri
+- Peningkatan prestasi: kurangkan kemas kini UI yang tidak perlu untuk pengalaman lebih lancar
+- Peningkatan kebolehcapaian VoiceOver untuk jam, terma solar, dua belas dewa, fasa bulan dan lima unsur
+- Kontras warna yang lebih baik untuk unsur Logam (金), Air (水) dan Tanah (土)
+- Pembetulan butang Tetapan di bar menu macOS
+- Pembetulan pautan atribusi cuaca

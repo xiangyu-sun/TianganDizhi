@@ -25,6 +25,8 @@ struct SunInformationView: View {
         }
         .autoColorPastDate(sunrise)
         .font(bodyFont)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("日出 \(sunrise.formatted(date: .omitted, time: .shortened))")
       }
       if let sunset = info.sunset {
         HStack(spacing: 0) {
@@ -33,6 +35,8 @@ struct SunInformationView: View {
         }
         .font(bodyFont)
         .autoColorPastDate(sunset)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("日落 \(sunset.formatted(date: .omitted, time: .shortened))")
       }
     }
   }

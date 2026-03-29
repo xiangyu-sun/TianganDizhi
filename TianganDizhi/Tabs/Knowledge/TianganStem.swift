@@ -116,7 +116,7 @@ struct WuxingNodeView: View {
       }
       .offset(.init(width: -40, height: 0))
       HStack() {
-        TianganNodeView(stem: wuxing.tiangan.1, color: wuxing.tiangan.0.traditionalColor)
+        TianganNodeView(stem: wuxing.tiangan.1, color: wuxing.tiangan.1.traditionalColor)
       }
       .offset(.init(width: 40, height: 0))
     }

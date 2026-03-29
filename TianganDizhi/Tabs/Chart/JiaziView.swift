@@ -29,13 +29,9 @@ struct JiaziView: View {
     GridItem(.flexible(), spacing: 0),
   ]
 
-  var components: DateComponents {
-    Date().dateComponentsFromChineseCalendar()
-  }
-  
-  var normalCompoenent: DateComponents {
-    Date().dateComponentsFromCurrentCalendar
-  }
+  // Cached at view init time — not recomputed on every body call
+  let components: DateComponents = Date().dateComponentsFromChineseCalendar()
+  let normalCompoenent: DateComponents = Date().dateComponentsFromCurrentCalendar
 
   var body: some View {
     let nian = components.nian
@@ -50,7 +46,7 @@ struct JiaziView: View {
               Text("\(item.description)")
                 .font(bodyFont)
               #if os(iOS) || os(macOS)
-                .frame(minHeight: proxy.size.height / 6)
+                .frame(minHeight: min(proxy.size.height / 6, 100))
 
               #endif
 
@@ -76,6 +72,15 @@ struct JiaziView: View {
               #endif
             }
             .foregroundStyle((nian == item) ? .primary : .secondary)
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel({
+              var label = item.description
+              if nian == item { label += "，年柱" }
+              if yue == item { label += "，月柱" }
+              if ri == item { label += "，日柱" }
+              if shi == item { label += "，時柱" }
+              return label
+            }())
           }
         }
       }

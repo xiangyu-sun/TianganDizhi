@@ -49,18 +49,23 @@ struct BaguaView: View {
           Text(gua.chineseCharacter)
             .offset(anglePosition(for: index, in: geometry.size, z: 0))
             .font(font)
+            .accessibilityHidden(true)
 
           Text(gua.symbol)
             .rotationEffect(getRotatingAngle(for: index, base: 8))
             .offset(anglePosition(for: index, in: geometry.size, z: 1))
             .font(font.bold())
+            .accessibilityHidden(true)
 
           Text(gua.xiang)
             .offset(anglePosition(for: index, in: geometry.size, z: 2))
             .font(bodyFont)
+            .accessibilityHidden(true)
         }
       }
       .frame(width: geometry.size.width, height: geometry.size.height)
+      .accessibilityElement(children: .ignore)
+      .accessibilityLabel(viewData.title + "：" + viewData.guas.map { "\($0.chineseCharacter)\($0.xiang)" }.joined(separator: "、"))
     }
     #if os(watchOS)
     .edgesIgnoringSafeArea([.bottom, .leading, .trailing])

@@ -10,8 +10,9 @@ struct AutoColorPastDate: ViewModifier {
     guard let date else {
       return content.foregroundStyle(.primary)
     }
+    let isPast = (date <= now)
     return content
-      .foregroundStyle(date <= now ? .secondary : .primary)
+      .foregroundStyle(isPast ? .secondary : .primary)
   }
 }
 

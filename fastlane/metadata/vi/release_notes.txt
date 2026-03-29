@@ -1,3 +1,5 @@
-- Thêm hỗ trợ bản địa hóa tiếng Nhật, Hàn, Việt, Mã Lai, Thái và Pháp
-- Cải thiện độ chính xác tính toán mặt trăng và mặt trời bằng thuật toán Meeus độ chính xác cao: pha mặt trăng (±1.5 ngày), mọc/lặn (±15 phút) và tiết khí
-- Sửa lỗi widget: complication đồng hồ nay bao phủ đúng toàn bộ 12 thời thần và hiển thị đúng khoảng thời gian cho mỗi mục
+- Cải thiện hiệu suất: giảm cập nhật giao diện không cần thiết, mượt mà hơn
+- Cải thiện khả năng truy cập VoiceOver cho đồng hồ, tiết khí, thập nhị thần, pha mặt trăng và ngũ hành
+- Cải thiện độ tương phản màu sắc cho các nguyên tố Kim (金), Thủy (水) và Thổ (土)
+- Sửa lỗi nút Cài đặt trên thanh menu macOS
+- Sửa lỗi liên kết nguồn thời tiết

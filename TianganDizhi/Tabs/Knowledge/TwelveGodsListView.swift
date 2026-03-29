@@ -68,14 +68,14 @@ struct TwelveGodCell: View {
 #endif
           Text("\(god.meaning)")
           Text("宜：\(god.do)")
-          Text("\(god.dontDo)")
+          Text("忌：\(god.dontDo)")
         }
         .background(.ultraThinMaterial)
       }
       .padding()
       .font(bodyFont)
       .accessibilityElement(children: .combine)
-      .accessibilityLabel("\(god.chinese)，\(god.meaning)，宜：\(god.do)，\(god.dontDo)")
+      .accessibilityLabel("\(god.chinese)，\(god.meaning)，宜：\(god.do)，忌：\(god.dontDo)")
   }
 }
 

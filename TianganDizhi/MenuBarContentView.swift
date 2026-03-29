@@ -123,7 +123,7 @@ struct MenuBarContentView: View {
       // Jieqi
       HStack {
         Image(systemName: "calendar")
-          .foregroundStyle(.accentColor)
+          .foregroundStyle(Color.accentColor)
         Text(updater.currentDate.jieQiDisplayText)
           .font(.subheadline)
           .lineLimit(2)
@@ -133,7 +133,7 @@ struct MenuBarContentView: View {
       if displayMoonPhase, let moonphase = updater.currentDate.chineseDay()?.moonPhase {
         HStack {
           Image(systemName: moonphase.moonPhase.symbolName)
-            .foregroundStyle(.accentColor)
+            .foregroundStyle(Color.accentColor)
           VStack(alignment: .leading, spacing: 2) {
             Text(moonphase.name(traditionnal: useTranditionalNaming))
               .font(.subheadline)
@@ -150,7 +150,7 @@ struct MenuBarContentView: View {
       if let weather = weatherData.forcastedWeather {
         HStack {
           Image(systemName: "cloud.sun")
-            .foregroundStyle(.accentColor)
+            .foregroundStyle(Color.accentColor)
           Text(weather.condition)
             .font(.subheadline)
           Spacer()

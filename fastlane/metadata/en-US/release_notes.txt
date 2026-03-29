@@ -1,3 +1,5 @@
-- Added Japanese, Korean, Vietnamese, Malay, Thai, and French localizations
-- Improved accuracy of lunar and solar calculations using high-precision Meeus algorithms: moon phase (±1.5 days), moonrise/moonset (±15 minutes), and solar terms
-- Fixed widget bugs: watch complication now correctly covers all 12 shichen boundaries and displays the right time period for each entry
+- Performance improvements: reduced unnecessary UI updates for a smoother experience
+- Improved VoiceOver accessibility for the clock, solar terms, twelve gods, moon phase, and five elements views
+- Better color contrast for Metal (金), Water (水), and Earth (土) elements
+- Fixed macOS menu bar Settings button
+- Fixed weather attribution link behavior
