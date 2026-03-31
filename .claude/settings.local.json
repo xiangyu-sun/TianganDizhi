@@ -43,7 +43,8 @@
       "WebSearch",
       "WebFetch(domain:docs.fastlane.tools)",
       "WebFetch(domain:splitmetrics.com)",
-      "WebFetch(domain:www.mobileaction.co)"
+      "WebFetch(domain:www.mobileaction.co)",
+      "Bash(do cat:*)"
     ],
     "deny": []
   }
