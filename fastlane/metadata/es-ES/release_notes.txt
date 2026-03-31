@@ -1,0 +1,5 @@
+- Mejoras de rendimiento: menos actualizaciones de interfaz innecesarias para una experiencia más fluida
+- Accesibilidad VoiceOver mejorada para el reloj, términos solares, doce dioses, fase lunar y vistas de los cinco elementos
+- Mejor contraste de color para los elementos Metal (金), Agua (水) y Tierra (土)
+- Corregido el botón de Configuración en la barra de menú de macOS
+- Corregido el comportamiento del enlace de atribución del clima
