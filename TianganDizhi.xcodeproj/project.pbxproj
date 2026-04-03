@@ -156,6 +156,10 @@
 		9968B2CD2F800202005E242A /* BaziView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CB2F800202005E242A /* BaziView.swift */; };
 		9968B2CF2F800214005E242A /* FangweiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CE2F800214005E242A /* FangweiView.swift */; };
 		9968B2D02F800214005E242A /* FangweiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CE2F800214005E242A /* FangweiView.swift */; };
+		9968B2D22F8062E2005E242A /* JieqiHealthWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */; };
+		9968B2D42F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */; };
+		9968B2D52F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */; };
+		9968B2D62F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */; };
 		996A19C92A543E6700D1C943 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
 		996A19CA2A543E9400D1C943 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		996A19CB2A543E9E00D1C943 /* Date+WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */; };
@@ -518,6 +522,8 @@
 		9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingFestivalsView.swift; sourceTree = "<group>"; };
 		9968B2CB2F800202005E242A /* BaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaziView.swift; sourceTree = "<group>"; };
 		9968B2CE2F800214005E242A /* FangweiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FangweiView.swift; sourceTree = "<group>"; };
+		9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiHealthWidget.swift; sourceTree = "<group>"; };
+		9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiHealthMediumView.swift; sourceTree = "<group>"; };
 		996C53192B1FC68000AC832F /* BaguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaguaView.swift; sourceTree = "<group>"; };
 		996C531B2B1FCFAD00AC832F /* GuaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuaListView.swift; sourceTree = "<group>"; };
 		996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunInformationView.swift; sourceTree = "<group>"; };
@@ -715,6 +721,7 @@
 				462A5F6D24FFE5F20032A125 /* Assets.xcassets */,
 				462A5F6F24FFE5F20032A125 /* Info.plist */,
 				998F9E842F36368300650E5E /* ShichenLiveActivity.swift */,
+				9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */,
 			);
 			path = ShiChen;
 			sourceTree = "<group>";
@@ -924,6 +931,7 @@
 				993843BD285636B800FA7631 /* ShiChenEntryView.swift */,
 				9911517A29E09A2800A7CE54 /* ExtraLargeWidgetView.swift */,
 				99F9DDC929E0C38800E69B8E /* MediumWidgetView.swift */,
+				9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -1493,6 +1501,7 @@
 				990FEADF294CAFD700CB1CEF /* LocationManager.swift in Sources */,
 				9968961D2DB550AE0082B667 /* Nongli.swift in Sources */,
 				99A0B79F2DB58937000F2AD7 /* JieqiWidget.swift in Sources */,
+				9968B2D62F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */,
 				46701E2E271B2EDA00D6D322 /* CompactShichenView.swift in Sources */,
 				994AD1952868FA6500BB5BED /* RetangularWidgetView.swift in Sources */,
 				998F9E992F363CF400650E5E /* FontProvider.swift in Sources */,
@@ -1507,6 +1516,7 @@
 				998F9E832F36367200650E5E /* ShichenLockScreenView.swift in Sources */,
 				99F19D9229E09D83005C5949 /* MoonInformationView.swift in Sources */,
 				99BC3C11296A294E004AB614 /* DateFormatters.swift in Sources */,
+				9968B2D22F8062E2005E242A /* JieqiHealthWidget.swift in Sources */,
 				99F19D9029E09C4E005C5949 /* SunInformationView.swift in Sources */,
 				994215E72965C368003C5CA1 /* WidgetConstants.swift in Sources */,
 				994AD18F2868F96800BB5BED /* InlineWidgetView.swift in Sources */,
@@ -1689,6 +1699,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9968B2D52F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */,
 				997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */,
 				998F9E952F363CF400650E5E /* FontProvider.swift in Sources */,
 				997CD11D2954FE1600BECF31 /* Constants.swift in Sources */,
@@ -1772,6 +1783,7 @@
 				99F9DDCE29E0CDD000E69B8E /* WeatherData.swift in Sources */,
 				99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */,
 				997CD1142954C96D00BECF31 /* MaterialBackground.swift in Sources */,
+				9968B2D42F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */,
 				99FD3F652922968B0048DCEB /* CompactShichenView.swift in Sources */,
 				998F9E962F363CF400650E5E /* FontProvider.swift in Sources */,
 				998F9E9B2F3640F300650E5E /* Date+ShichenProgress.swift in Sources */,
