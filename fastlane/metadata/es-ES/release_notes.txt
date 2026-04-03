@@ -1,5 +1,8 @@
-- Mejoras de rendimiento: menos actualizaciones de interfaz innecesarias para una experiencia más fluida
-- Accesibilidad VoiceOver mejorada para el reloj, términos solares, doce dioses, fase lunar y vistas de los cinco elementos
-- Mejor contraste de color para los elementos Metal (金), Agua (水) y Tierra (土)
-- Corregido el botón de Configuración en la barra de menú de macOS
-- Corregido el comportamiento del enlace de atribución del clima
+- Muestra el festival chino tradicional del día en la pantalla principal
+- Consejos de salud y alimentos de temporada añadidos a los detalles de los términos solares
+- Nayin (六十納音) mostrado para cada Ganzhi en la tabla Jiazi
+- Nuevo: Diagrama de relaciones Dizhi (六冲、六合、三合、六害)
+- Nuevo: Calculadora de Bazi (四柱八字) — introduce la fecha y hora de nacimiento para ver tus Cuatro Pilares
+- Nuevo: Calendario de próximos festivales chinos tradicionales
+- Nuevo: Lista de los 30 Nayin con sus pares Ganzhi
+- Nuevo: Brújula Fangwei (五方) — direcciones cardinales con elementos, tallos y ramas asociados

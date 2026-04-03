@@ -2,6 +2,31 @@
 
 ## [Unreleased]
 
+## [Next Release] — New Features
+
+### New Screens
+- **DizhiRelationshipView** — Shows 六冲, 六合, 三合, 六害 relationships for each Earth Branch (地支). Accessible from the Earth Branch knowledge section.
+- **BaziView** — Four Pillars of Destiny (四柱八字) calculator. Enter a birth date and time to compute year/month/day/hour pillars, element balance bars, dominant element, missing elements, and beneficial element.
+- **UpcomingFestivalsView** — Lists all traditional Chinese festivals sorted by next occurrence. Respects GMT+8 / local timezone setting.
+- **NayinListView** — All 30 Five-Element Overtones (六十納音) with their Ganzhi pairs, displayed as a scrollable list.
+- **FangweiView** — Five Directions (五方) compass drawn with a polar layout, plus a detail list of each direction's associated Wuxing element, Tiangan stems, and Dizhi branches.
+
+### Enhancements to Existing Views
+- **MainView** — Today's traditional Chinese festival name now displayed below the Jieqi line when a festival falls on the current day.
+- **JieqiCell** — Each solar term cell now shows `healthTip` and `seasonalFoods` from the updated ChineseAstrologyCalendar API.
+- **JiaziView** — Each Ganzhi in the 60-cycle table now shows its Nayin (納音) name as a secondary label.
+- **DizhiListView** — Added "Relationships" display mode with navigation links to DizhiRelationshipView.
+- **KnowledgeView** — Added navigation entries for: 地支沖合害, 四柱八字推算, 節日曆, 六十納音.
+- **ChartListView** — Added navigation entry for: 五方.
+
+### Package Updates
+- Updated `ChineseAstrologyCalendar` dependency; fixed all breaking enum renames across main app and transitive dependencies (`Bagua`, `JingluoShuxueCore`, `ChineseTranditionalMusicCore`):
+  - `Wuxing`: `.jin→.metal`, `.mu→.wood`, `.shui→.water`, `.huo→.fire`, `.tu→.earth`
+  - `Day`: Chinese names → `.day1`–`.day30`
+  - `ChineseMoonPhase`: Chinese character names → English names
+  - `TwelveGods`: `.jian→.establish`
+  - `Jieqi`: `.bailu→.whiteDew`
+
 ### Performance
 - **Single DateProvider instance** — `DateProvider` is now created once as `@StateObject` in `TianganDizhiApp` and injected via `@EnvironmentObject`. Previously two independent instances existed (one in the app, one in `MainView`), causing two parallel 1-second timers and redundant re-renders.
 - **Smart timer filtering** — `DateProvider` timer fires every second but only publishes when the minute changes (shichen/ke granularity), eliminating unnecessary view updates every second.

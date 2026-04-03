@@ -1,5 +1,8 @@
-- Performance improvements: reduced unnecessary UI updates for a smoother experience
-- Improved VoiceOver accessibility for the clock, solar terms, twelve gods, moon phase, and five elements views
-- Better color contrast for Metal (金), Water (水), and Earth (土) elements
-- Fixed macOS menu bar Settings button
-- Fixed weather attribution link behavior
+- Chinese Festival display: today's traditional Chinese festival now shown on the main screen
+- Solar term health tips and seasonal foods added to each Jieqi detail
+- Nayin (六十納音) now shown for each Ganzhi in the Jiazi table
+- New: Dizhi Relationship chart (六冲、六合、三合、六害) in Earth Branch Knowledge
+- New: Bazi (四柱八字) calculator — enter a birth date and time to see your Four Pillars
+- New: Upcoming Chinese Festivals calendar
+- New: Nayin list — all 30 Five-Element Overtones with their Ganzhi pairs
+- New: Fangwei (五方) compass — cardinal directions with their associated elements, stems, and branches

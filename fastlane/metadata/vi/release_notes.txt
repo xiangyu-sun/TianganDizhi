@@ -1,5 +1,8 @@
-- Cải thiện hiệu suất: giảm cập nhật giao diện không cần thiết, mượt mà hơn
-- Cải thiện khả năng truy cập VoiceOver cho đồng hồ, tiết khí, thập nhị thần, pha mặt trăng và ngũ hành
-- Cải thiện độ tương phản màu sắc cho các nguyên tố Kim (金), Thủy (水) và Thổ (土)
-- Sửa lỗi nút Cài đặt trên thanh menu macOS
-- Sửa lỗi liên kết nguồn thời tiết
+- Hiển thị lễ hội truyền thống Trung Quốc hôm nay trên màn hình chính
+- Thêm mẹo sức khỏe và thực phẩm theo mùa vào chi tiết Tiết Khí
+- Hiển thị Nạp Âm (六十納音) cho từng Can Chi trong bảng Lục Thập Hoa Giáp
+- Mới: Biểu đồ quan hệ Địa Chi (六冲、六合、三合、六害)
+- Mới: Máy tính Tứ Trụ Bát Tự (四柱八字) — nhập ngày giờ sinh để xem tứ trụ
+- Mới: Lịch các lễ hội truyền thống Trung Quốc sắp tới
+- Mới: Danh sách 30 Nạp Âm kèm các cặp Can Chi
+- Mới: La bàn Ngũ Phương (五方) — phương vị với hành, can, chi tương ứng

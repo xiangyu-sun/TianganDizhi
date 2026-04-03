@@ -1,5 +1,8 @@
-- Peningkatan prestasi: kurangkan kemas kini UI yang tidak perlu untuk pengalaman lebih lancar
-- Peningkatan kebolehcapaian VoiceOver untuk jam, terma solar, dua belas dewa, fasa bulan dan lima unsur
-- Kontras warna yang lebih baik untuk unsur Logam (金), Air (水) dan Tanah (土)
-- Pembetulan butang Tetapan di bar menu macOS
-- Pembetulan pautan atribusi cuaca
+- Paparan perayaan Cina tradisional hari ini pada skrin utama
+- Tip kesihatan dan makanan bermusim ditambah pada butiran Jieqi
+- Nayin (六十納音) dipaparkan untuk setiap Ganzhi dalam jadual Jiazi
+- Baharu: Carta hubungan Dizhi (六冲、六合、三合、六害)
+- Baharu: Kalkulator Bazi (四柱八字) — masukkan tarikh lahir untuk melihat Empat Tiang anda
+- Baharu: Kalendar perayaan Cina tradisional yang akan datang
+- Baharu: Senarai 30 Nayin dengan pasangan Ganzhi mereka
+- Baharu: Kompas Fangwei (五方) — arah kardinal dengan unsur, batang, dan cabang yang berkaitan
