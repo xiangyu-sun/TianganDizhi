@@ -45,7 +45,7 @@ struct SunInformationView: View {
 #Preview {
   SunInformationView(
     info: WeatherData.Information(
-      moonPhase: .上弦月,
+      moonPhase: .firstQuarter,
       moonRise: .now,
       moonset: .now,
       sunrise: .now,

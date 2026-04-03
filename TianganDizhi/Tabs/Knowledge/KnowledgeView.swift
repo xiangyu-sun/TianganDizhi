@@ -50,6 +50,9 @@ struct KnowledgeView: View {
           NavigationLink(value: KnowledgeRoute.dizhiList(mode: .lvlv)) {
             Text(DizhiListView.DisplayMode.lvlv.title)
           }
+          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .relationships)) {
+            Text(DizhiListView.DisplayMode.relationships.title)
+          }
           NavigationLink(value: KnowledgeRoute.shici) {
             Text("十二時辰頌")
           }
@@ -60,6 +63,19 @@ struct KnowledgeView: View {
         Section {
           NavigationLink(value: KnowledgeRoute.jieqiList) {
             Text("二十四節氣")
+          }
+        }
+        Section(header: Text("推算")) {
+          NavigationLink(value: KnowledgeRoute.bazi) {
+            Text("四柱八字推算")
+          }
+          NavigationLink(value: KnowledgeRoute.upcomingFestivals) {
+            Text("節日曆")
+          }
+        }
+        Section(header: Text("參考")) {
+          NavigationLink(value: KnowledgeRoute.nayin) {
+            Text("六十納音")
           }
         }
       }
@@ -75,12 +91,20 @@ struct KnowledgeView: View {
           TianganListView()
         case .dizhiList(let mode):
           DizhiListView(disppayMode: mode)
+        case .dizhiRelationship(let dizhi):
+          DizhiRelationshipView(dizhi: dizhi)
         case .shici:
           ShiciView()
         case .twelveGods:
           TwelveGodsListView()
         case .jieqiList:
           JieqiListView()
+        case .nayin:
+          NayinListView()
+        case .upcomingFestivals:
+          UpcomingFestivalsView()
+        case .bazi:
+          BaziView()
         }
       }
     }

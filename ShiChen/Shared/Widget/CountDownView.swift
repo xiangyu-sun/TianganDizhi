@@ -29,8 +29,8 @@ struct CountDownView: View {
   }
 
   var event: EventModel {
-    dayConverter.find(day: .chuyi, month: .yin, inNextYears: 1).first ??
-      .init(date: Date(), name: .chuyi, dateComponents: .init())
+    dayConverter.find(day: .day1, month: .yin, inNextYears: 1).first ??
+      .init(date: Date(), name: .day1, dateComponents: .init())
   }
 
   var title: String {

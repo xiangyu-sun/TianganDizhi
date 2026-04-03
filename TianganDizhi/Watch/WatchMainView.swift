@@ -50,7 +50,7 @@ struct WatchMainView: View {
     date: .now,
     wetherData: WeatherData
       .Information(
-        moonPhase: .上弦月,
+        moonPhase: .firstQuarter,
         moonRise: Date(),
         moonset: Date(),
         sunrise: Date(),

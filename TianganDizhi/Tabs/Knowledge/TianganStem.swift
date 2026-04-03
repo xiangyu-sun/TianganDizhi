@@ -11,15 +11,15 @@ extension Wuxing {
   ///   - Earth (黃): uses a deeper amber-gold instead of bright yellow (improves contrast on white)
   public var traditionalColor: Color {
     switch self {
-    case .jin:   // Metal (金) -> 白/銀 (silver-white)
+    case .metal:   // Metal (金) -> 白/銀 (silver-white)
       return Color(red: 0.75, green: 0.75, blue: 0.80)
-    case .mu:     // Wood (木) -> 青 (cyan-green)
+    case .wood:     // Wood (木) -> 青 (cyan-green)
       return Color(red: 0.0, green: 153.0/255.0, blue: 102.0/255.0)
-    case .shui:    // Water (水) -> 黑/深藍 (dark navy)
+    case .water:    // Water (水) -> 黑/深藍 (dark navy)
       return Color(red: 0.10, green: 0.12, blue: 0.35)
-    case .huo:  // Fire (火) -> 赤 (scarlet red)
+    case .fire:  // Fire (火) -> 赤 (scarlet red)
       return Color(red: 230.0/255.0, green: 0.0, blue: 38.0/255.0)
-    case .tu:      // Earth (土) -> 黃/琥珀 (deep amber-gold)
+    case .earth:      // Earth (土) -> 黃/琥珀 (deep amber-gold)
       return Color(red: 0.80, green: 0.55, blue: 0.0)
     }
   }
@@ -39,7 +39,7 @@ extension Tiangan: Identifiable {
 
 struct TianganCycleView: View {
   let stems = Tiangan.allCases
-  let wuxings = [.mu, .huo, Wuxing.jin, .shui]
+  let wuxings = [.wood, .fire, Wuxing.metal, .water]
   
   let radius: CGFloat = 140
   
@@ -59,7 +59,7 @@ struct TianganCycleView: View {
             .position(pos)
         }
         
-        WuxingNodeView(wuxing: .tu, color: Wuxing.tu.traditionalColor)
+        WuxingNodeView(wuxing: .earth, color: Wuxing.earth.traditionalColor)
           .position(center)
         
 //        // 冲 Cycle

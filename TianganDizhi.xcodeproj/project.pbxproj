@@ -146,6 +146,16 @@
 		9963214C2911B8F3000C4A2B /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996321492911B8E4000C4A2B /* Shared.xcassets */; };
 		9968961D2DB550AE0082B667 /* Nongli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968961C2DB550AE0082B667 /* Nongli.swift */; };
 		9968961F2DB550D50082B667 /* HourlyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968961E2DB550D50082B667 /* HourlyWidget.swift */; };
+		9968B2C32F80019E005E242A /* DizhiRelationshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2C22F80019E005E242A /* DizhiRelationshipView.swift */; };
+		9968B2C42F80019E005E242A /* DizhiRelationshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2C22F80019E005E242A /* DizhiRelationshipView.swift */; };
+		9968B2C62F8001E1005E242A /* NayinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2C52F8001E1005E242A /* NayinListView.swift */; };
+		9968B2C72F8001E1005E242A /* NayinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2C52F8001E1005E242A /* NayinListView.swift */; };
+		9968B2C92F8001EA005E242A /* UpcomingFestivalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */; };
+		9968B2CA2F8001EA005E242A /* UpcomingFestivalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */; };
+		9968B2CC2F800202005E242A /* BaziView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CB2F800202005E242A /* BaziView.swift */; };
+		9968B2CD2F800202005E242A /* BaziView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CB2F800202005E242A /* BaziView.swift */; };
+		9968B2CF2F800214005E242A /* FangweiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CE2F800214005E242A /* FangweiView.swift */; };
+		9968B2D02F800214005E242A /* FangweiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CE2F800214005E242A /* FangweiView.swift */; };
 		996A19C92A543E6700D1C943 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
 		996A19CA2A543E9400D1C943 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		996A19CB2A543E9E00D1C943 /* Date+WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */; };
@@ -503,6 +513,11 @@
 		9963214E2911E0D4000C4A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9968961C2DB550AE0082B667 /* Nongli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nongli.swift; sourceTree = "<group>"; };
 		9968961E2DB550D50082B667 /* HourlyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWidget.swift; sourceTree = "<group>"; };
+		9968B2C22F80019E005E242A /* DizhiRelationshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizhiRelationshipView.swift; sourceTree = "<group>"; };
+		9968B2C52F8001E1005E242A /* NayinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NayinListView.swift; sourceTree = "<group>"; };
+		9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingFestivalsView.swift; sourceTree = "<group>"; };
+		9968B2CB2F800202005E242A /* BaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaziView.swift; sourceTree = "<group>"; };
+		9968B2CE2F800214005E242A /* FangweiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FangweiView.swift; sourceTree = "<group>"; };
 		996C53192B1FC68000AC832F /* BaguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaguaView.swift; sourceTree = "<group>"; };
 		996C531B2B1FCFAD00AC832F /* GuaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuaListView.swift; sourceTree = "<group>"; };
 		996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunInformationView.swift; sourceTree = "<group>"; };
@@ -674,6 +689,10 @@
 				994E36A02E26BB0300584B83 /* TianganCycleView.swift */,
 				994E36A32E26ECC600584B83 /* WuxingCircleView.swift */,
 				99B59A432E0AFC8B0068FDED /* Jianchu.xcassets */,
+				9968B2C22F80019E005E242A /* DizhiRelationshipView.swift */,
+				9968B2C52F8001E1005E242A /* NayinListView.swift */,
+				9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */,
+				9968B2CB2F800202005E242A /* BaziView.swift */,
 			);
 			path = Knowledge;
 			sourceTree = "<group>";
@@ -848,6 +867,7 @@
 				994B3BBE28FB34C800F9CF67 /* TwelveView.swift */,
 				994215D32958A53D003C5CA1 /* JiaziView.swift */,
 				994215D62958A7D8003C5CA1 /* ChartListView.swift */,
+				9968B2CE2F800214005E242A /* FangweiView.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -1510,6 +1530,9 @@
 				990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */,
 				994E369F2E26B44F00584B83 /* TianganStem.swift in Sources */,
 				994B3BC128FB35C000F9CF67 /* DizhiGridView.swift in Sources */,
+				9968B2CD2F800202005E242A /* BaziView.swift in Sources */,
+				9968B2C92F8001EA005E242A /* UpcomingFestivalsView.swift in Sources */,
+				9968B2C62F8001E1005E242A /* NayinListView.swift in Sources */,
 				46B79C402541F95F003C0B7F /* Environment.swift in Sources */,
 				992A7E602DB56A8100B372CA /* Date+Jieqi.swift in Sources */,
 				997CD11A2954FDB600BECF31 /* Constants.swift in Sources */,
@@ -1540,10 +1563,12 @@
 				996D2C1629A3DB33008DC1A9 /* SunInformationView.swift in Sources */,
 				996D2C1E29A3E188008DC1A9 /* MoonInformationView.swift in Sources */,
 				991A85442F3896270079C89A /* MenuBarContentView.swift in Sources */,
+				9968B2CF2F800214005E242A /* FangweiView.swift in Sources */,
 				995997052B3DF1AB002288D1 /* MultiSelector.swift in Sources */,
 				996321422911B2CD000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
 				46EF7F7E271077AE007030CC /* JieqiListView.swift in Sources */,
 				99A0B7952DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */,
+				9968B2C42F80019E005E242A /* DizhiRelationshipView.swift in Sources */,
 				994E36A12E26BB0300584B83 /* TianganCycleView.swift in Sources */,
 				998F9E8C2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */,
 				997CD1162954CF9700BECF31 /* SettingsView.swift in Sources */,
@@ -1601,6 +1626,7 @@
 				992A7E612DB56A8100B372CA /* Date+Jieqi.swift in Sources */,
 				994E369E2E26B44F00584B83 /* TianganStem.swift in Sources */,
 				99ECAED82A47A202004997FD /* LiushisiGuaView.swift in Sources */,
+				9968B2CC2F800202005E242A /* BaziView.swift in Sources */,
 				996A19CA2A543E9400D1C943 /* ShiChen.intentdefinition in Sources */,
 				994E36A22E26BB0300584B83 /* TianganCycleView.swift in Sources */,
 				99632082290DE1DE000C4A2B /* DizhiListView.swift in Sources */,
@@ -1608,6 +1634,7 @@
 				995997062B3DF1AB002288D1 /* MultiSelector.swift in Sources */,
 				99632081290DE1DE000C4A2B /* DizhiGridView.swift in Sources */,
 				995904182E0AE5BF00E625A4 /* TwelveGodsListView.swift in Sources */,
+				9968B2C32F80019E005E242A /* DizhiRelationshipView.swift in Sources */,
 				9963207A290DE1DE000C4A2B /* ShiciView.swift in Sources */,
 				99D2C78E2943935800327AF7 /* Environment.swift in Sources */,
 				99632075290DE1DE000C4A2B /* JieqiListView.swift in Sources */,
@@ -1627,12 +1654,15 @@
 				99632084290DE1DE000C4A2B /* ShichenView.swift in Sources */,
 				9963207C290DE1DE000C4A2B /* TwelveView.swift in Sources */,
 				99632086290DE1DE000C4A2B /* TianganListView.swift in Sources */,
+				9968B2D02F800214005E242A /* FangweiView.swift in Sources */,
 				99632073290DE1DE000C4A2B /* ShichenTimeLineSceduler.swift in Sources */,
+				9968B2C72F8001E1005E242A /* NayinListView.swift in Sources */,
 				997C684A2864CADE00B40D3F /* ShichenWatchApp.swift in Sources */,
 				99BC3C12296A294F004AB614 /* DateFormatters.swift in Sources */,
 				99632083290DE1DE000C4A2B /* CircularContainerView.swift in Sources */,
 				99F0EF3629FFF0A2008476B6 /* WuyinView.swift in Sources */,
 				994215EF2965C810003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
+				9968B2CA2F8001EA005E242A /* UpcomingFestivalsView.swift in Sources */,
 				9963207E290DE1DE000C4A2B /* ShierPiguaView.swift in Sources */,
 				995997082B3DF1AB002288D1 /* MultiSelectionView.swift in Sources */,
 			);

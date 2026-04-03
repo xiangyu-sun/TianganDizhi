@@ -16,7 +16,7 @@
       "location" : "https://github.com/xiangyu-sun/Astral.git",
       "state" : {
         "branch" : "main",
-        "revision" : "b78dcf1e6d78e2a816d8e3f00102608b47419f86"
+        "revision" : "e9d873f744021db6f69a06877562ee0ed1091360"
       }
     },
     {
@@ -34,7 +34,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
         "branch" : "master",
-        "revision" : "a9697678e88295ec4a1d9b9564981cff52eced6f"
+        "revision" : "d404e41af8fe401214b220f40679d04740deeb77"
       }
     },
     {
@@ -69,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/airbnb/swift",
       "state" : {
-        "revision" : "a702f58d25ca2d1d58026ccf12fac8ccb6e2b475",
-        "version" : "1.1.0"
+        "revision" : "6c09dd57c2254b14bb48c15e209ed6e93058104f",
+        "version" : "1.2.0"
       }
     },
     {
@@ -78,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-argument-parser",
       "state" : {
-        "revision" : "cdd0ef3755280949551dc26dee5de9ddeda89f54",
-        "version" : "1.6.2"
+        "revision" : "626b5b7b2f45e1b0b1c6f4a309296d1d21d7311b",
+        "version" : "1.7.1"
       }
     },
     {

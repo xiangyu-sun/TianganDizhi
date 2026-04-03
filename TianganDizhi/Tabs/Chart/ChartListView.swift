@@ -22,7 +22,10 @@ struct ChartListView: View {
           Text("十二地支表")
         }
         NavigationLink(value: ChartRoute.jiaziView) {
-          Text("六十甲子")
+          Text("六十甲子（含納音）")
+        }
+        NavigationLink(value: ChartRoute.fangwei) {
+          Text("五方")
         }
       }
       .font(bodyFont)
@@ -33,6 +36,8 @@ struct ChartListView: View {
           TwelveView()
         case .jiaziView:
           JiaziView()
+        case .fangwei:
+          FangweiView()
         }
       }
     }

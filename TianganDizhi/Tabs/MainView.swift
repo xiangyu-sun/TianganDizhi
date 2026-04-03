@@ -36,13 +36,13 @@ struct MainView: View {
 
   // Cached computed values — rebuilt only when useGTM8 changes or on appear.
   // These are expensive (date scanning), so must NOT live in `body`.
-  @State private var cachedEvent: EventModel = .init(date: Date(), name: .chuyi, dateComponents: .init())
+  @State private var cachedEvent: EventModel = .init(date: Date(), name: .day1, dateComponents: .init())
   @State private var cachedTitle: String = ""
 
   private func rebuildCachedValues() {
     let converter = useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
-    let ev = converter.find(day: .chuyi, month: .yin, inNextYears: 1).first
-      ?? EventModel(date: Date(), name: .chuyi, dateComponents: .init())
+    let ev = converter.find(day: .day1, month: .yin, inNextYears: 1).first
+      ?? EventModel(date: Date(), name: .day1, dateComponents: .init())
     cachedEvent = ev
     cachedTitle = useGTM8
       ? ev.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
@@ -77,6 +77,13 @@ struct MainView: View {
 
         Text(updater.currentDate.jieQiDisplayText)
           .font(bodyFont)
+
+        if let festival = updater.currentDate.chineseFestival {
+          Text(festival.chineseName)
+            .font(bodyFont)
+            .foregroundStyle(.orange)
+            .accessibilityLabel("今日節日：\(festival.chineseName)")
+        }
 
         if let value = weatherData.forcastedWeather {
           SunInformationView(info: value)

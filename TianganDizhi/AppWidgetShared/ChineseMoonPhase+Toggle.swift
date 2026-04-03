@@ -10,6 +10,6 @@ import ChineseAstrologyCalendar
 
 extension ChineseMoonPhase {
   func name(traditionnal: Bool) -> String {
-    traditionnal ? acientChineseName(.chuba) : modernChineseName(.chuba)
+    traditionnal ? acientChineseName(.day8) : modernChineseName(.day8)
   }
 }

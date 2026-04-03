@@ -7,6 +7,7 @@
 //
 
 import Bagua
+import ChineseAstrologyCalendar
 import Foundation
 import SwiftUI
 
@@ -17,9 +18,13 @@ enum KnowledgeRoute: Hashable {
   case wuyin
   case tianganList
   case dizhiList(mode: DizhiListView.DisplayMode)
+  case dizhiRelationship(Dizhi)
   case shici
   case twelveGods
   case jieqiList
+  case nayin
+  case upcomingFestivals
+  case bazi
 }
 
 // MARK: - Gua Tab Routes
@@ -65,4 +70,5 @@ enum GuaRoute: Hashable {
 enum ChartRoute: Hashable {
   case twelveView
   case jiaziView
+  case fangwei
 }

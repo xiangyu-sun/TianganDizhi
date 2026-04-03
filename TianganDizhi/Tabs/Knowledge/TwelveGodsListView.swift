@@ -13,7 +13,7 @@ import SwiftUI
 
 struct TwelveGodsListView: View {
   let twelveGods = TwelveGods.allCases
-  @State private var currentPage:TwelveGods = .jian
+  @State private var currentPage:TwelveGods = .establish
   
   var body: some View {
 #if os(watchOS)

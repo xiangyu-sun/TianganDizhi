@@ -61,7 +61,7 @@ struct MoonInformationView: View {
   VStack {
     SunInformationView(
       info: WeatherData.Information(
-        moonPhase: .上弦月,
+        moonPhase: .firstQuarter,
         moonRise: .now,
         moonset: .now,
         sunrise: .now,
@@ -74,7 +74,7 @@ struct MoonInformationView: View {
 
     MoonInformationView(
       info: WeatherData.Information(
-        moonPhase: .上弦月,
+        moonPhase: .firstQuarter,
         moonRise: .now,
         moonset: .now,
         sunrise: .now,

@@ -28,6 +28,10 @@ struct JieqiCell: View {
       .font(title3Font)
       Text(jieqi.qishierHou)
         .font(bodyFont)
+      Text(jieqi.healthTip)
+        .font(bodyFont)
+      Text(jieqi.seasonalFoods)
+        .font(bodyFont)
 
       Image(uiImage: jieqi.image)
         .resizable()
@@ -46,6 +50,10 @@ struct JieqiCell: View {
         }
         .font(title3Font)
         Text(jieqi.qishierHou)
+          .font(bodyFont)
+        Text(jieqi.healthTip)
+          .font(bodyFont)
+        Text(jieqi.seasonalFoods)
           .font(bodyFont)
       }
       #if os(macOS)
@@ -67,5 +75,5 @@ struct JieqiCell: View {
 }
 
 #Preview {
-  JieqiCell(jieqi: .bailu)
+  JieqiCell(jieqi: .whiteDew)
 }

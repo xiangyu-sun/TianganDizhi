@@ -43,8 +43,13 @@ struct JiaziView: View {
         LazyVGrid(columns: columns, alignment: .center, spacing: 0) {
           ForEach(data, id: \.description) { item in
             ZStack(alignment: .bottom) {
-              Text("\(item.description)")
-                .font(bodyFont)
+              VStack(spacing: 2) {
+                Text("\(item.description)")
+                  .font(bodyFont)
+                Text(item.nayin.traditionalChineseName)
+                  .font(footnote)
+                  .foregroundStyle(.secondary)
+              }
               #if os(iOS) || os(macOS)
                 .frame(minHeight: min(proxy.size.height / 6, 100))
 

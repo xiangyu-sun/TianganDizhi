@@ -20,6 +20,7 @@ struct DizhiListView: View {
     case zodiac
     case alias
     case lvlv
+    case relationships
 
     // MARK: Internal
 
@@ -39,6 +40,8 @@ struct DizhiListView: View {
         Dizhi.allCases
       case .lvlv:
         Dizhi.orderedMonthAlCases
+      case .relationships:
+        Dizhi.allCases
       }
     }
 
@@ -58,6 +61,8 @@ struct DizhiListView: View {
         "十二生肖與五行"
       case .lvlv:
         "地支，十二律呂，西洋調名"
+      case .relationships:
+        "地支沖合害"
       }
     }
   }
@@ -67,23 +72,32 @@ struct DizhiListView: View {
   let disppayMode: DisplayMode
 
   var body: some View {
-    List(disppayMode.dizhi, id: \.self) {
+    List(disppayMode.dizhi, id: \.self) { dz in
       switch disppayMode {
       case .name:
-        DizhiCell(dizhi: $0)
-//          .background($0.yin ? Color(UIColor.secondarySystemBackground) : Color(UIColor.systemBackground))
+        DizhiCell(dizhi: dz)
       case .time:
-        ShichenHourCell(shichen: $0)
+        ShichenHourCell(shichen: dz)
       case .month:
-        ShichenMonthCell(shichen: $0)
+        ShichenMonthCell(shichen: dz)
       case .organs:
-        OrganShichenCell(shichen: $0)
+        OrganShichenCell(shichen: dz)
       case .alias:
-        AliasShichenCell(shichen: $0)
+        AliasShichenCell(shichen: dz)
       case .zodiac:
-        DizhiZodiaCell(dizhi: $0)
+        DizhiZodiaCell(dizhi: dz)
       case .lvlv:
-        LvlvCell(dizhi: $0)
+        LvlvCell(dizhi: dz)
+      case .relationships:
+        NavigationLink(value: KnowledgeRoute.dizhiRelationship(dz)) {
+          HStack {
+            Text(dz.chineseCharacter)
+            Spacer()
+            Text("冲\(dz.chong.chineseCharacter)")
+              .foregroundStyle(.secondary)
+          }
+          .padding(.vertical, 4)
+        }
       }
     }
     .font(bodyFont)
