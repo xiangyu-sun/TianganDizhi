@@ -54,9 +54,15 @@ struct JieqiHealthMediumView: View {
       .padding(.horizontal, 8)
       .modifier(WidgetAccentable())
       .containerBackground(for: .widget) {
+#if os(macOS)
+        Image(nsImage: jieqi.image)
+          .resizable()
+          .scaledToFill()
+#else
         Image(uiImage: jieqi.image)
           .resizable()
           .scaledToFill()
+#endif
       }
     } else {
       Text(date.jieQiDisplayText)
