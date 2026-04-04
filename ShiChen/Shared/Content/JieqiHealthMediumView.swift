@@ -24,8 +24,11 @@ struct JieqiHealthMediumView: View {
 
   var body: some View {
     let displayDate = date.jieqiWidgetDisplayDate()
+    // Use nextSolarTermJieqi() when displayDate is a future solar term boundary
+    // to correctly resolve the new jieqi rather than the previous one
+    let jieqi = displayDate > date ? displayDate.nextSolarTermJieqi() : displayDate.jieqi
 
-    if let jieqi = displayDate.jieqi {
+    if let jieqi {
       HStack(alignment: .top, spacing: 10) {
 
         // Right: Text content

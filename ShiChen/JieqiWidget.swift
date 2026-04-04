@@ -29,12 +29,16 @@ struct JieqiWidget: Widget {
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: JieqiTimelineProvider()) { entry in
       let date = getDate(date: entry.date)
-      let sameDate = date == entry.date
+      let calendar = Calendar.current
+      // sameCalendarDay: the solar term is today (either past or still upcoming later today)
+      let sameCalendarDay = calendar.isDate(date, inSameDayAs: entry.date)
+      // Use nextSolarTermJieqi() when date is the exact solar term boundary to get the new jieqi
+      let jieqi = date > entry.date ? date.nextSolarTermJieqi() : date.jieqi
 
-      if let jieqi = date.jieqi {
+      if let jieqi {
         VStack(alignment: .center) {
-          if sameDate {
-            Text(date, style: .date)
+          if sameCalendarDay {
+            Text(entry.date, style: .date)
               .font(.callout)
               .environment(\.locale, Locale.current)
 
@@ -50,7 +54,7 @@ struct JieqiWidget: Widget {
               .foregroundStyle(.secondary)
               .environment(\.locale, Locale(identifier: "zh-hant"))
 
-            Text(jieqi.next.chineseName)
+            Text(jieqi.chineseName)
               .foregroundStyle(.secondary)
               .font(largeTitleFont)
           }
