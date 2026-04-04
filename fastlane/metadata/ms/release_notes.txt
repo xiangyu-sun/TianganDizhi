@@ -6,3 +6,4 @@
 - Baharu: Kalendar perayaan Cina tradisional yang akan datang
 - Baharu: Senarai 30 Nayin dengan pasangan Ganzhi mereka
 - Baharu: Kompas Fangwei (五方) — arah kardinal dengan unsur, batang, dan cabang yang berkaitan
+- Baharu: Widget Kesihatan Jieqi saiz sederhana — tip kesihatan dan makanan bermusim dalam pandangan sepintas (iOS & macOS)

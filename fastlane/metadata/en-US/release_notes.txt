@@ -6,3 +6,4 @@
 - New: Upcoming Chinese Festivals calendar
 - New: Nayin list — all 30 Five-Element Overtones with their Ganzhi pairs
 - New: Fangwei (五方) compass — cardinal directions with their associated elements, stems, and branches
+- New: Medium Jieqi Health widget — seasonal wellness tips and foods at a glance (iOS & macOS)

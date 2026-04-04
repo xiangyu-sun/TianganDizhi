@@ -6,3 +6,4 @@
 - Mới: Lịch các lễ hội truyền thống Trung Quốc sắp tới
 - Mới: Danh sách 30 Nạp Âm kèm các cặp Can Chi
 - Mới: La bàn Ngũ Phương (五方) — phương vị với hành, can, chi tương ứng
+- Mới: Widget Sức Khỏe Tiết Khí cỡ vừa — mẹo dưỡng sinh và thực phẩm theo mùa (iOS & macOS)

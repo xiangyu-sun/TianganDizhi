@@ -44,7 +44,10 @@
       "WebFetch(domain:docs.fastlane.tools)",
       "WebFetch(domain:splitmetrics.com)",
       "WebFetch(domain:www.mobileaction.co)",
-      "Bash(do cat:*)"
+      "Bash(do cat:*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//Users/xiangyu.sun/TianganDizhi/fastlane/metadata/$f/**)"
     ],
     "deny": []
   }

@@ -6,3 +6,4 @@
 - Nouveau : Calendrier des prochains festivals chinois traditionnels
 - Nouveau : Liste des 30 Nayin avec leurs paires Ganzhi
 - Nouveau : Boussole Fangwei (五方) — directions cardinales avec éléments, tiges et branches associés
+- Nouveau : Widget Jieqi Santé taille moyenne — conseils de bien-être et aliments de saison d'un coup d'œil (iOS & macOS)

@@ -14,6 +14,7 @@ struct ShichenWatch_Watch_AppApp: App {
     WindowGroup {
       ContentView()
         .environmentObject(SettingsManager.shared)
+        .environmentObject(FontProvider())
     }
   }
 }
