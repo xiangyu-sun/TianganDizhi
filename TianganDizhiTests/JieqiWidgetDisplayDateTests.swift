@@ -69,4 +69,54 @@ struct JieqiWidgetDisplayDateTests {
     #expect(displayDate != today)
     #expect(days == 1)
   }
+
+  // MARK: - Regression: same-day solar term (occurs later today) → widget shows new jieqi
+
+  @Test("Returns next jieqi date when solar term occurs later the same UTC day")
+  func returnsNextJieqiWhenSolarTermIsLaterToday() throws {
+    // Qingming 2026 occurs at 18:28 UTC on Apr 4.
+    // UTC noon (12:00) is before the transition, so dayDifference == 0 but nextDate > now.
+    // The widget should return the solar term date (not self) so it can display Qingming.
+    let today = try utcNoon(year: 2026, month: 4, day: 4)
+    let displayDate = today.jieqiWidgetDisplayDate()
+    #expect(displayDate > today, "Should return the solar term date, not today")
+    let days = displayDate.dayDifference(today)
+    #expect(days == 0, "Solar term is same calendar day in UTC")
+  }
+
+  @Test("nextSolarTermJieqi resolves to Qingming when called on the solar term boundary date")
+  func nextSolarTermJieqiResolvesCorrectly() throws {
+    // date.jieqi at the exact boundary still returns the previous jieqi (Chunfen);
+    // nextSolarTermJieqi() adds 1 second to cross the threshold and returns the new one.
+    let today = try utcNoon(year: 2026, month: 4, day: 4)
+    let displayDate = today.jieqiWidgetDisplayDate()
+    // displayDate is the Qingming boundary; .jieqi here is still Chunfen
+    #expect(displayDate.jieqi?.chineseName == "春分", "At the exact boundary, jieqi is still the previous term")
+    // nextSolarTermJieqi() should give us Qingming
+    let resolved = displayDate.nextSolarTermJieqi()
+    #expect(resolved?.chineseName == "清明", "nextSolarTermJieqi should return Qingming (清明)")
+  }
+
+  @Test("Widget shows correct jieqi name on a day when solar term starts later that UTC day")
+  func widgetShowsCorrectJieqiOnSameDayTransition() throws {
+    // Full widget logic: jieqiWidgetDisplayDate() returns the boundary, then
+    // nextSolarTermJieqi() resolves it. The displayed name should be Qingming, not Chunfen.
+    let today = try utcNoon(year: 2026, month: 4, day: 4)
+    let displayDate = today.jieqiWidgetDisplayDate()
+    let jieqi = displayDate > today ? displayDate.nextSolarTermJieqi() : displayDate.jieqi
+    #expect(jieqi?.chineseName == "清明", "Should show Qingming (清明), not Chunfen (春分)")
+  }
+
+  @Test("Day after solar term transition shows new jieqi via date.jieqi without nextSolarTermJieqi")
+  func dayAfterTransitionShowsNewJieqi() throws {
+    // Apr 5 UTC noon is well past Qingming (18:28 Apr 4 UTC); date.jieqi should resolve directly.
+    let dayAfter = try utcNoon(year: 2026, month: 4, day: 5)
+    let jieqi = dayAfter.jieqi
+    #expect(jieqi?.chineseName == "清明", "After the transition, date.jieqi should return Qingming (清明)")
+    // No same-day case: next solar term (Guyu) is weeks away, widget shows self
+    let displayDate = dayAfter.jieqiWidgetDisplayDate()
+    #expect(Calendar.current.isDate(displayDate, inSameDayAs: dayAfter) == false || displayDate.dayDifference(dayAfter) >= 1
+            || displayDate == dayAfter,
+            "Widget display date should be self or a future date beyond today")
+  }
 }
