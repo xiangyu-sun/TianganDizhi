@@ -23,10 +23,13 @@ struct JieqiHealthMediumView: View {
   private var calloutFont: Font { fontProvider.calloutFont }
 
   var body: some View {
-    let displayDate = date.jieqiWidgetDisplayDate()
-    // Use nextSolarTermJieqi() when displayDate is a future solar term boundary
-    // to correctly resolve the new jieqi rather than the previous one
-    let jieqi = displayDate > date ? displayDate.nextSolarTermJieqi() : displayDate.jieqi
+    // Use the new package API: show upcoming jieqi if within 14 days, otherwise current.
+    let jieqi: Jieqi? = {
+      if let upcoming = date.nextJieqi, upcoming.days <= 14 {
+        return upcoming.jieqi
+      }
+      return date.jieqi
+    }()
 
     if let jieqi {
       HStack(alignment: .top, spacing: 10) {

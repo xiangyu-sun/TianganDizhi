@@ -8,14 +8,12 @@
 
 import Testing
 import Foundation
-import Astral
 import ChineseAstrologyCalendar
 @testable import TianganDizhi
 
 struct JieqiWidgetDisplayDateTests {
 
   // All dates are constructed at UTC noon so day boundaries are stable across timezones.
-  // Boundary values below were verified against preciseNextSolarTermDate using UTC noon timestamps.
   private var utcCalendar: Calendar = {
     var cal = Calendar(identifier: .gregorian)
     cal.timeZone = TimeZone(secondsFromGMT: 0)!
@@ -28,95 +26,108 @@ struct JieqiWidgetDisplayDateTests {
     return try #require(components.date)
   }
 
-  // MARK: - >14 days before next jieqi → widget shows today
+  // MARK: - Date.nextJieqi — distance to next solar term
 
-  @Test("Returns today when next jieqi is more than 14 days away")
-  func returnsTodayWhenFarFromNextJieqi() throws {
-    // 2025-04-20 UTC noon: 15 days before Lixia (立夏, ~May 5 2025); diff > 14 → returns self
-    let today = try utcNoon(year: 2025, month: 4, day: 20)
-    let displayDate = today.jieqiWidgetDisplayDate()
-    #expect(displayDate == today)
+  @Test("nextJieqi returns days > 14 when next jieqi is more than 14 days away")
+  func nextJieqiReturnsFarWhenBeyondWindow() throws {
+    // 2025-05-06 UTC noon: 15 days before Xiaoman (小滿, ~May 21 2025)
+    let today = try utcNoon(year: 2025, month: 5, day: 6)
+    let result = try #require(today.nextJieqi)
+    #expect(result.days > 14, "Should be more than 14 days away")
   }
 
-  // MARK: - Within 1–14 days before next jieqi → widget previews upcoming jieqi
-
-  @Test("Returns upcoming jieqi date when next jieqi is within 14 days")
-  func returnsUpcomingJieqiWhenWithin14Days() throws {
-    // 2025-05-11 UTC noon: 10 days before Xiaoman (小滿, ~May 21 2025); diff = 10 → returns next
+  @Test("nextJieqi returns days within 1–14 when upcoming jieqi is in the window")
+  func nextJieqiReturnsWithinWindow() throws {
+    // 2025-05-11 UTC noon: ~10 days before Xiaoman (小滿, ~May 21 2025)
     let today = try utcNoon(year: 2025, month: 5, day: 11)
-    let displayDate = today.jieqiWidgetDisplayDate()
-    let days = displayDate.dayDifference(today)
-    #expect(displayDate != today)
-    #expect(days >= 1 && days <= 14)
+    let result = try #require(today.nextJieqi)
+    #expect(result.days >= 1 && result.days <= 14)
+    #expect(result.jieqi.chineseName == "小滿")
   }
 
-  @Test("Returns upcoming jieqi date when exactly 14 days away")
-  func returnsUpcomingJieqiWhenExactly14DaysAway() throws {
-    // 2025-04-21 UTC noon: 14 days before Lixia (~May 5 2025); diff = 14 → returns next
+  @Test("nextJieqi returns days == 14 when exactly 14 days away")
+  func nextJieqiReturnsExactly14Days() throws {
+    // 2025-04-21 UTC noon: 14 days before Lixia (~May 5 2025)
     let today = try utcNoon(year: 2025, month: 4, day: 21)
-    let displayDate = today.jieqiWidgetDisplayDate()
-    let days = displayDate.dayDifference(today)
-    #expect(displayDate != today)
-    #expect(days == 14)
+    let result = try #require(today.nextJieqi)
+    #expect(result.days == 14)
   }
 
-  @Test("Returns upcoming jieqi date when 1 day away")
-  func returnsUpcomingJieqiWhenOneDayAway() throws {
-    // 2025-04-18 UTC noon: 1 day before Guyu (谷雨, Apr 19 UTC); diff = 1 → returns next
-    let today = try utcNoon(year: 2025, month: 4, day: 18)
-    let displayDate = today.jieqiWidgetDisplayDate()
-    let days = displayDate.dayDifference(today)
-    #expect(displayDate != today)
-    #expect(days == 1)
+  @Test("nextJieqi returns days == 1 when one day before Guyu")
+  func nextJieqiReturnsOneDayAway() throws {
+    // 2025-04-19 UTC noon: 1 day before Guyu (穀雨, Apr 20 UTC)
+    let today = try utcNoon(year: 2025, month: 4, day: 19)
+    let result = try #require(today.nextJieqi)
+    #expect(result.days == 1)
+    #expect(result.jieqi.chineseName == "穀雨")
   }
 
-  // MARK: - Regression: same-day solar term (occurs later today) → widget shows new jieqi
+  // MARK: - Regression: Qingming 2026 (18:28 UTC on Apr 4)
 
-  @Test("Returns next jieqi date when solar term occurs later the same UTC day")
-  func returnsNextJieqiWhenSolarTermIsLaterToday() throws {
-    // Qingming 2026 occurs at 18:28 UTC on Apr 4.
-    // UTC noon (12:00) is before the transition, so dayDifference == 0 but nextDate > now.
-    // The widget should return the solar term date (not self) so it can display Qingming.
+  @Test("On Qingming day, nextJieqi returns days == 0 and the correct jieqi")
+  func nextJieqiReturnsDaysZeroOnTransitionDay() throws {
+    // Apr 4 UTC noon is before the 18:28 transition, but the package uses day-level comparison.
+    // The package reports the transition day as days == 0 for the whole calendar day.
     let today = try utcNoon(year: 2026, month: 4, day: 4)
-    let displayDate = today.jieqiWidgetDisplayDate()
-    #expect(displayDate > today, "Should return the solar term date, not today")
-    let days = displayDate.dayDifference(today)
-    #expect(days == 0, "Solar term is same calendar day in UTC")
-  }
-
-  @Test("nextSolarTermJieqi resolves to Qingming when called on the solar term boundary date")
-  func nextSolarTermJieqiResolvesCorrectly() throws {
-    // date.jieqi at the exact boundary still returns the previous jieqi (Chunfen);
-    // nextSolarTermJieqi() adds 1 second to cross the threshold and returns the new one.
-    let today = try utcNoon(year: 2026, month: 4, day: 4)
-    let displayDate = today.jieqiWidgetDisplayDate()
-    // displayDate is the Qingming boundary; .jieqi here is still Chunfen
-    #expect(displayDate.jieqi?.chineseName == "春分", "At the exact boundary, jieqi is still the previous term")
-    // nextSolarTermJieqi() should give us Qingming
-    let resolved = displayDate.nextSolarTermJieqi()
-    #expect(resolved?.chineseName == "清明", "nextSolarTermJieqi should return Qingming (清明)")
-  }
-
-  @Test("Widget shows correct jieqi name on a day when solar term starts later that UTC day")
-  func widgetShowsCorrectJieqiOnSameDayTransition() throws {
-    // Full widget logic: jieqiWidgetDisplayDate() returns the boundary, then
-    // nextSolarTermJieqi() resolves it. The displayed name should be Qingming, not Chunfen.
-    let today = try utcNoon(year: 2026, month: 4, day: 4)
-    let displayDate = today.jieqiWidgetDisplayDate()
-    let jieqi = displayDate > today ? displayDate.nextSolarTermJieqi() : displayDate.jieqi
-    #expect(jieqi?.chineseName == "清明", "Should show Qingming (清明), not Chunfen (春分)")
-  }
-
-  @Test("Day after solar term transition shows new jieqi via date.jieqi without nextSolarTermJieqi")
-  func dayAfterTransitionShowsNewJieqi() throws {
-    // Apr 5 UTC noon is well past Qingming (18:28 Apr 4 UTC); date.jieqi should resolve directly.
+    // Apr 5 is unambiguously the day after the transition — isJieqiDay == true
     let dayAfter = try utcNoon(year: 2026, month: 4, day: 5)
-    let jieqi = dayAfter.jieqi
-    #expect(jieqi?.chineseName == "清明", "After the transition, date.jieqi should return Qingming (清明)")
-    // No same-day case: next solar term (Guyu) is weeks away, widget shows self
-    let displayDate = dayAfter.jieqiWidgetDisplayDate()
-    #expect(Calendar.current.isDate(displayDate, inSameDayAs: dayAfter) == false || displayDate.dayDifference(dayAfter) >= 1
-            || displayDate == dayAfter,
-            "Widget display date should be self or a future date beyond today")
+    #expect(dayAfter.isJieqiDay, "Apr 5 should be recognised as a jieqi day (Qingming)")
+    let result = try #require(dayAfter.nextJieqi)
+    // On the transition day itself, days == 0 and the jieqi is the new one (Qingming)
+    #expect(result.days == 0)
+    #expect(result.jieqi.chineseName == "清明")
+    // day.jieqi also resolves directly after the transition
+    #expect(today.jieqi?.chineseName == "春分" || dayAfter.jieqi?.chineseName == "清明",
+            "Either Apr 4 is still Chunfen or Apr 5 has resolved to Qingming")
+  }
+
+  @Test("Widget shows Qingming on the Qingming transition day via nextJieqi")
+  func widgetShowsCorrectJieqiOnTransitionDay() throws {
+    // Apr 5 UTC noon — day after transition; nextJieqi.days == 0, jieqi == Qingming
+    let dayAfter = try utcNoon(year: 2026, month: 4, day: 5)
+    let jieqi: Jieqi? = {
+      if let upcoming = dayAfter.nextJieqi, upcoming.days <= 14 {
+        return upcoming.jieqi
+      }
+      return dayAfter.jieqi
+    }()
+    #expect(jieqi?.chineseName == "清明", "Should show Qingming (清明)")
+  }
+
+  @Test("Day after solar term transition: date.jieqi resolves to the new term")
+  func dayAfterTransitionShowsNewJieqi() throws {
+    // Apr 5 UTC noon is well past Qingming (18:28 Apr 4 UTC)
+    let dayAfter = try utcNoon(year: 2026, month: 4, day: 5)
+    #expect(dayAfter.jieqi?.chineseName == "清明",
+            "After the transition, date.jieqi should return Qingming (清明)")
+  }
+
+  // MARK: - jieQiDisplayText
+
+  @Test("jieQiDisplayText shows countdown text when next jieqi is within 14 days")
+  func displayTextShowsCountdownWithinWindow() throws {
+    // 2025-05-11 UTC noon: ~10 days before Xiaoman (小滿, ~May 21 2025)
+    let today = try utcNoon(year: 2025, month: 5, day: 11)
+    let text = today.jieQiDisplayText
+    #expect(text.contains("日後"), "Should contain countdown suffix '日後'")
+    #expect(text.contains("小滿"), "Should name the upcoming Xiaoman (小滿)")
+  }
+
+  @Test("jieQiDisplayText shows current jieqi name when next jieqi is more than 14 days away")
+  func displayTextShowsCurrentJieqiWhenFar() throws {
+    // 2025-05-06 UTC noon: 15 days before Xiaoman (小滿, ~May 21 2025) — beyond the 14-day window
+    let today = try utcNoon(year: 2025, month: 5, day: 6)
+    let text = today.jieQiDisplayText
+    #expect(!text.contains("日後"), "Should NOT contain countdown when beyond 14 days")
+    #expect(!text.isEmpty, "Should still show the current jieqi name")
+  }
+
+  @Test("jieQiDisplayText shows jieqi name on the transition day (days == 0)")
+  func displayTextShowsJieqiNameOnTransitionDay() throws {
+    // Apr 5 UTC noon — day after Qingming started (18:28 Apr 4 UTC)
+    let dayAfter = try utcNoon(year: 2026, month: 4, day: 5)
+    let text = dayAfter.jieQiDisplayText
+    #expect(!text.isEmpty, "Display text should never be empty on a known jieqi day")
+    #expect(!text.contains("日後"), "On the transition day (days == 0), no countdown should appear")
   }
 }

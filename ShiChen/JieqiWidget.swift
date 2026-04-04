@@ -6,7 +6,6 @@
 //  Copyright © 2025 孙翔宇. All rights reserved.
 //
 
-import Astral
 import ChineseAstrologyCalendar
 import Intents
 import SwiftUI
@@ -22,18 +21,18 @@ struct JieqiWidget: Widget {
     [.systemSmall]
   }
 
-  func getDate(date: Date) -> Date {
-    date.jieqiWidgetDisplayDate()
-  }
-
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: JieqiTimelineProvider()) { entry in
-      let date = getDate(date: entry.date)
-      let calendar = Calendar.current
-      // sameCalendarDay: the solar term is today (either past or still upcoming later today)
-      let sameCalendarDay = calendar.isDate(date, inSameDayAs: entry.date)
-      // Use nextSolarTermJieqi() when date is the exact solar term boundary to get the new jieqi
-      let jieqi = date > entry.date ? date.nextSolarTermJieqi() : date.jieqi
+      // Show upcoming jieqi if within 14 days, otherwise show current.
+      let upcomingResult = entry.date.nextJieqi
+      let jieqi: Jieqi? = {
+        if let upcoming = upcomingResult, upcoming.days <= 14 {
+          return upcoming.jieqi
+        }
+        return entry.date.jieqi
+      }()
+      // sameCalendarDay: the solar term is today (days == 0)
+      let sameCalendarDay = upcomingResult?.days == 0
 
       if let jieqi {
         VStack(alignment: .center) {
@@ -48,11 +47,13 @@ struct JieqiWidget: Widget {
             Text(entry.date, style: .date)
               .font(.callout)
               .environment(\.locale, Locale(identifier: "zh-hant"))
-            
-            Text(date, style: .date)
-              .font(.callout)
-              .foregroundStyle(.secondary)
-              .environment(\.locale, Locale(identifier: "zh-hant"))
+
+            if let jieqiDate = jieqi.nextDate(after: entry.date) {
+              Text(jieqiDate, style: .date)
+                .font(.callout)
+                .foregroundStyle(.secondary)
+                .environment(\.locale, Locale(identifier: "zh-hant"))
+            }
 
             Text(jieqi.chineseName)
               .foregroundStyle(.secondary)
