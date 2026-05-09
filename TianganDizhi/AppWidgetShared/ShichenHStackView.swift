@@ -9,6 +9,7 @@
 import ChineseAstrologyCalendar
 import SwiftUI
 import WidgetKit
+import JingluoShuxue
 
 // MARK: - ShichenHStackView
 
@@ -87,7 +88,7 @@ struct ShichenInformationView: View {
     if #available(iOSApplicationExtension 15.0, *) {
       HStack {
         Text(shichen.aliasName)
-        Text(shichen.organReference)
+        Text(shichen.luizhu.organReference)
       }
       #if os(iOS)
       .font(scaleFont ? title3Font : calloutFont)

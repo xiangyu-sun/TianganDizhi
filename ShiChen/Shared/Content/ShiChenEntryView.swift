@@ -9,6 +9,7 @@
 import ChineseAstrologyCalendar
 import SwiftUI
 import WidgetKit
+import JingluoShuxue
 
 // MARK: - ShiChenEntryView
 
@@ -88,7 +89,7 @@ struct ShiChenEntryView: View {
             
               Text(shichen.dizhi.aliasName)
                 .font(titleFont)
-              Text(shichen.dizhi.organReference)
+              Text(shichen.dizhi.luizhu.organReference)
                 .font(bodyFont)
             }
           }
@@ -125,7 +126,7 @@ struct ShiChenEntryView: View {
             VStack {
               Text(shichen.dizhi.aliasName)
                 .font(largeTitleFont)
-              Text(shichen.dizhi.organReference)
+              Text(shichen.dizhi.luizhu.organReference)
                 .font(bodyFont)
             }
             .padding(.top, 8)

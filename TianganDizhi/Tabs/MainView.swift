@@ -111,9 +111,10 @@ struct MainView: View {
           VStack {
             Text("\(shichen.currentKeSpellOut)刻")
               .font(largeTitleFont)
-            HStack {
+            HStack() {
               Text(shichen.dizhi.aliasName)
-              Text(shichen.dizhi.organReference)
+              Text(shichen.dizhi.luizhu.organReference)
+                .foregroundStyle(shichen.dizhi.luizhu.是表经 ? Color.primary : Color.secondary)
             }
             .font(bodyFont)
           }

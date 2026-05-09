@@ -36,7 +36,7 @@ struct WatchMainView: View {
           VStack {
             Text(shichen.dizhi.aliasName)
               .font(titleFont)
-            Text(shichen.dizhi.organReference)
+            Text(shichen.dizhi.luizhu.organReference)
               .font(footnote)
           }
         }

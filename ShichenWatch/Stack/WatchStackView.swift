@@ -1,5 +1,6 @@
 import ChineseAstrologyCalendar
 import SwiftUI
+import JingluoShuxue
 
 // MARK: - WatchStackView
 
@@ -65,7 +66,7 @@ struct ShichenWatchInformationView: View {
   var body: some View {
     HStack {
       Text(shichen.aliasName)
-      Text(shichen.organReference)
+      Text(shichen.luizhu.organReference)
     }
     .widgetAccentable()
     .font(footnote)
