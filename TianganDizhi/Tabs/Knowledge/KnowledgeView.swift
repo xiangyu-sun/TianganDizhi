@@ -84,7 +84,7 @@ struct KnowledgeView: View {
       .navigationDestination(for: KnowledgeRoute.self) { route in
         switch route {
         case .wuxing:
-          WuxingView()
+          WuxingRelationshipView()
         case .wuyin:
           WuyinView()
         case .tianganList:

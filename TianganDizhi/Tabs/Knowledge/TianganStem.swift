@@ -103,14 +103,21 @@ struct TianganNodeView: View {
 struct WuxingNodeView: View {
   let wuxing: Wuxing
   let color: Color
-  
+  var isSelected: Bool = false
+
   var body: some View {
     ZStack {
+      // Fill circle when selected to make selection visually clear
+      if isSelected {
+        Circle()
+          .fill(color.opacity(0.25))
+          .frame(width: 100, height: 100)
+      }
       Circle()
-        .stroke(color.opacity(0.7))
+        .stroke(color.opacity(isSelected ? 1.0 : 0.7), lineWidth: isSelected ? 3 : 1)
         .frame(width: 100, height: 100)
       Text(wuxing.chineseCharacter).font(.title2).bold().foregroundStyle(.primary)
-      
+
       HStack() {
         TianganNodeView(stem: wuxing.tiangan.0, color: wuxing.tiangan.0.traditionalColor)
       }
@@ -128,7 +135,15 @@ struct Arrow: View {
   let to: CGPoint
   let color: Color
   var curved: Bool = false
-  
+
+  /// Angle of the line at the tip (from → to direction).
+  private var tipAngle: Angle {
+    let dx = to.x - from.x
+    let dy = to.y - from.y
+    // atan2 gives angle from positive-x axis; add 90° because Triangle points up by default
+    return Angle(radians: atan2(dy, dx) + .pi / 2)
+  }
+
   var body: some View {
     Path { path in
       path.move(to: from)
@@ -143,7 +158,8 @@ struct Arrow: View {
     .overlay(
       Triangle()
         .fill(color)
-        .frame(width: 10, height: 10)
+        .frame(width: 12, height: 12)
+        .rotationEffect(tipAngle)
         .position(to)
     )
   }

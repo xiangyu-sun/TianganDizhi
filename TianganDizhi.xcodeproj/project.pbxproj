@@ -224,7 +224,6 @@
 		998F9E812F36367200650E5E /* ShichenLockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E802F36367200650E5E /* ShichenLockScreenView.swift */; };
 		998F9E822F36367200650E5E /* ShichenLockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E802F36367200650E5E /* ShichenLockScreenView.swift */; };
 		998F9E832F36367200650E5E /* ShichenLockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E802F36367200650E5E /* ShichenLockScreenView.swift */; };
-		998F9E852F36368300650E5E /* ShichenLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E842F36368300650E5E /* ShichenLiveActivity.swift */; };
 		998F9E8A2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */; };
 		998F9E8B2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */; };
 		998F9E8C2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */; };
@@ -246,6 +245,11 @@
 		998F9E9F2F3640F300650E5E /* Date+ShichenProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E9A2F3640F300650E5E /* Date+ShichenProgress.swift */; };
 		999B068A2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */; };
 		999B068B2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */; };
+		99A0363F2FAFEADF008764DA /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 99A0363E2FAFEADF008764DA /* JingluoShuxue */; };
+		99A036412FAFEAEE008764DA /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 99A036402FAFEAEE008764DA /* JingluoShuxue */; };
+		99A036432FAFEB17008764DA /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 99A036422FAFEB17008764DA /* JingluoShuxue */; };
+		99A036452FAFEC72008764DA /* WuxingRelationshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A036442FAFEC72008764DA /* WuxingRelationshipView.swift */; };
+		99A036462FAFEC72008764DA /* WuxingRelationshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A036442FAFEC72008764DA /* WuxingRelationshipView.swift */; };
 		99A0B7932DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
 		99A0B7942DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
 		99A0B7952DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
@@ -555,12 +559,12 @@
 		998898DE2A74514200A4E48C /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		998898E02A74514200A4E48C /* ShiChen.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = ShiChen.xcstrings; sourceTree = "<group>"; };
 		998F9E802F36367200650E5E /* ShichenLockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenLockScreenView.swift; sourceTree = "<group>"; };
-		998F9E842F36368300650E5E /* ShichenLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenLiveActivity.swift; sourceTree = "<group>"; };
 		998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenActivityAttributes.swift; sourceTree = "<group>"; };
 		998F9E8F2F363B5D00650E5E /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		998F9E942F363CF400650E5E /* FontProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontProvider.swift; sourceTree = "<group>"; };
 		998F9E9A2F3640F300650E5E /* Date+ShichenProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ShichenProgress.swift"; sourceTree = "<group>"; };
 		999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		99A036442FAFEC72008764DA /* WuxingRelationshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuxingRelationshipView.swift; sourceTree = "<group>"; };
 		99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jieqi+Image.swift"; sourceTree = "<group>"; };
 		99A0B7982DB582A4000F2AD7 /* Jieqi.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Jieqi.xcassets; sourceTree = "<group>"; };
 		99A0B79E2DB58937000F2AD7 /* JieqiWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiWidget.swift; sourceTree = "<group>"; };
@@ -597,6 +601,7 @@
 				462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */,
 				99A7D0BA2F5B22EA0087AF73 /* Bagua in Frameworks */,
 				994215D22958A289003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
+				99A0363F2FAFEADF008764DA /* JingluoShuxue in Frameworks */,
 				462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,6 +665,7 @@
 				997C68822865FAD200B40D3F /* SwiftUI.framework in Frameworks */,
 				99A7D0BC2F5B22F50087AF73 /* Bagua in Frameworks */,
 				994215CE2958A282003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
+				99A036412FAFEAEE008764DA /* JingluoShuxue in Frameworks */,
 				997C68812865FAD200B40D3F /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,6 +677,7 @@
 				99FD3F48292296170048DCEB /* SwiftUI.framework in Frameworks */,
 				99A7D0BE2F5C63C60087AF73 /* Bagua in Frameworks */,
 				994215D02958A286003C5CA1 /* ChineseAstrologyCalendar in Frameworks */,
+				99A036432FAFEB17008764DA /* JingluoShuxue in Frameworks */,
 				99FD3F47292296170048DCEB /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,6 +706,7 @@
 				9968B2C52F8001E1005E242A /* NayinListView.swift */,
 				9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */,
 				9968B2CB2F800202005E242A /* BaziView.swift */,
+				99A036442FAFEC72008764DA /* WuxingRelationshipView.swift */,
 			);
 			path = Knowledge;
 			sourceTree = "<group>";
@@ -720,7 +728,6 @@
 				46393EE72542F57900E40518 /* ShiChen.intentdefinition */,
 				462A5F6D24FFE5F20032A125 /* Assets.xcassets */,
 				462A5F6F24FFE5F20032A125 /* Info.plist */,
-				998F9E842F36368300650E5E /* ShichenLiveActivity.swift */,
 				9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */,
 			);
 			path = ShiChen;
@@ -1112,6 +1119,7 @@
 			packageProductDependencies = (
 				994215D12958A289003C5CA1 /* ChineseAstrologyCalendar */,
 				99A7D0B92F5B22EA0087AF73 /* Bagua */,
+				99A0363E2FAFEADF008764DA /* JingluoShuxue */,
 			);
 			productName = ShiChenExtension;
 			productReference = 462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */;
@@ -1260,6 +1268,7 @@
 			packageProductDependencies = (
 				994215CD2958A282003C5CA1 /* ChineseAstrologyCalendar */,
 				99A7D0BB2F5B22F50087AF73 /* Bagua */,
+				99A036402FAFEAEE008764DA /* JingluoShuxue */,
 			);
 			productName = ShichenWatchExtension;
 			productReference = 997C68802865FAD200B40D3F /* ShichenWatchExtension.appex */;
@@ -1281,6 +1290,7 @@
 			packageProductDependencies = (
 				994215CF2958A286003C5CA1 /* ChineseAstrologyCalendar */,
 				99A7D0BD2F5C63C60087AF73 /* Bagua */,
+				99A036422FAFEB17008764DA /* JingluoShuxue */,
 			);
 			productName = ShichenMacWidgetExtension;
 			productReference = 99FD3F46292296170048DCEB /* ShichenMacWidgetExtension.appex */;
@@ -1510,7 +1520,6 @@
 				990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */,
 				997C68782864CB9B00B40D3F /* AllWidgets.swift in Sources */,
 				998F9E8E2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */,
-				998F9E852F36368300650E5E /* ShichenLiveActivity.swift in Sources */,
 				997C68AB2868A8F600B40D3F /* ShichenTimelineProvider.swift in Sources */,
 				46B7FCEA250630DE008E8D48 /* ShichenTimeLineSceduler.swift in Sources */,
 				998F9E832F36367200650E5E /* ShichenLockScreenView.swift in Sources */,
@@ -1572,6 +1581,7 @@
 				460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */,
 				996D2C1629A3DB33008DC1A9 /* SunInformationView.swift in Sources */,
 				996D2C1E29A3E188008DC1A9 /* MoonInformationView.swift in Sources */,
+				99A036462FAFEC72008764DA /* WuxingRelationshipView.swift in Sources */,
 				991A85442F3896270079C89A /* MenuBarContentView.swift in Sources */,
 				9968B2CF2F800214005E242A /* FangweiView.swift in Sources */,
 				995997052B3DF1AB002288D1 /* MultiSelector.swift in Sources */,
@@ -1650,6 +1660,7 @@
 				99632075290DE1DE000C4A2B /* JieqiListView.swift in Sources */,
 				994E36A52E26ECC600584B83 /* WuxingCircleView.swift in Sources */,
 				99A0B7972DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */,
+				99A036452FAFEC72008764DA /* WuxingRelationshipView.swift in Sources */,
 				997CD1172954D0EC00BECF31 /* SettingsView.swift in Sources */,
 				99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */,
 				996C531E2B1FD0B500AC832F /* GuaListView.swift in Sources */,
@@ -2739,6 +2750,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */;
 			productName = ChineseTranditionalMusicCore;
+		};
+		99A0363E2FAFEADF008764DA /* JingluoShuxue */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */;
+			productName = JingluoShuxue;
+		};
+		99A036402FAFEAEE008764DA /* JingluoShuxue */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */;
+			productName = JingluoShuxue;
+		};
+		99A036422FAFEB17008764DA /* JingluoShuxue */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */;
+			productName = JingluoShuxue;
 		};
 		99A7D0B52F5B22CC0087AF73 /* Bagua */ = {
 			isa = XCSwiftPackageProductDependency;
