@@ -75,14 +75,14 @@ struct MainView: View {
           .font(bodyFont)
         }
 
-        Text(updater.currentDate.jieQiDisplayText)
-          .font(bodyFont)
-
         if let festival = updater.currentDate.chineseFestival {
           Text(festival.chineseName)
             .font(bodyFont)
-            .foregroundStyle(.orange)
+            .foregroundStyle(.primary)
             .accessibilityLabel("今日節日：\(festival.chineseName)")
+        } else {
+          Text(updater.currentDate.jieQiDisplayText)
+            .font(bodyFont)
         }
 
         if let value = weatherData.forcastedWeather {

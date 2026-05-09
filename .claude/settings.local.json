@@ -47,7 +47,10 @@
       "Bash(do cat:*)",
       "Bash(for f:*)",
       "Bash(do echo:*)",
-      "Read(//Users/xiangyu.sun/TianganDizhi/fastlane/metadata/$f/**)"
+      "Read(//Users/xiangyu.sun/TianganDizhi/fastlane/metadata/$f/**)",
+      "Bash(xcrun simctl *)",
+      "Bash(gem list *)",
+      "Bash(ruby -)"
     ],
     "deny": []
   }
