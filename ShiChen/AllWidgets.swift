@@ -17,7 +17,7 @@ struct AllWidgets: WidgetBundle {
     Nongli()
     HourlyWidget()
     CountDownWidget()
-    ChineseFestivalWidget()
+    SpecialDayWidget()
     if #available(iOSApplicationExtension 17.0, *) {
       JieqiHealthWidget()
     }

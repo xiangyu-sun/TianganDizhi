@@ -11,67 +11,41 @@ import Intents
 import SwiftUI
 import WidgetKit
 
+// MARK: - SpecialDayWidget
 
-// MARK: - ChineseFestivalWidget
-
-struct ChineseFestivalWidget: Widget {
-  let kind = "ChineseFestival"
+struct SpecialDayWidget: Widget {
+  let kind = "SpecialDay"
   @Environment(\.largeTitleFont) var largeTitleFont
 
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: JieqiTimelineProvider()) { entry in
-      let festival = entry.date.chineseFestival
-
-      // Find the next upcoming festival within 14 days
-      let converter = DayConverter()
-      let upcoming: (festival: ChineseFestival, date: Date, days: Int)? = {
-        let upcomingFestivals = ChineseFestival.allCases.compactMap { f -> (festival: ChineseFestival, date: Date, days: Int)? in
-          guard let nextDate = f.nextDate(from: entry.date, converter: converter) else { return nil }
-          let days = Calendar.current.dateComponents([.day], from: entry.date, to: nextDate).day ?? Int.max
-          return (f, nextDate, days)
-        }
-        return upcomingFestivals.min(by: { $0.days < $1.days })
-      }()
+      let upcoming: (day: SpecialDay, daysUntil: Int)? = entry.date.nextSpecialDay(
+        sources: [JieqiSource(), FestivalSource()]
+      )
 
       VStack(alignment: .center) {
-        if let festival {
-          // Today is a festival
+        if let upcoming, upcoming.daysUntil == 0 {
+          // Today is a special day
           Text(entry.date, style: .date)
             .font(.callout)
             .environment(\.locale, Locale.current)
 
-          Text(festival.chineseName)
-            .font(largeTitleFont)
-            .minimumScaleFactor(0.6)
-            .lineLimit(1)
-        } else if let upcoming, upcoming.days <= 14 {
-          // Upcoming festival within 14 days
-          Text(entry.date, style: .date)
-            .font(.callout)
-            .environment(\.locale, Locale(identifier: "zh-hant"))
-
-          Text(upcoming.date, style: .date)
-            .font(.callout)
-            .foregroundStyle(.secondary)
-            .environment(\.locale, Locale(identifier: "zh-hant"))
-
-          Text(upcoming.festival.chineseName)
-            .foregroundStyle(.secondary)
+          Text(upcoming.day.name)
             .font(largeTitleFont)
             .minimumScaleFactor(0.6)
             .lineLimit(1)
         } else if let upcoming {
-          // Show next festival even if far away — same layout as within-14-days
+          // Upcoming special day — show today + its date + name
           Text(entry.date, style: .date)
             .font(.callout)
             .environment(\.locale, Locale(identifier: "zh-hant"))
 
-          Text(upcoming.date, style: .date)
+          Text(upcoming.day.date, style: .date)
             .font(.callout)
             .foregroundStyle(.secondary)
             .environment(\.locale, Locale(identifier: "zh-hant"))
 
-          Text(upcoming.festival.chineseName)
+          Text(upcoming.day.name)
             .foregroundStyle(.secondary)
             .font(largeTitleFont)
             .minimumScaleFactor(0.6)
@@ -82,8 +56,8 @@ struct ChineseFestivalWidget: Widget {
       .frame(maxWidth: .infinity)
       .materialBackgroundWidget(with: Image("background"))
     }
-    .configurationDisplayName(WidgetConstants.chineseFestivalWidgetTitle)
-    .description(WidgetConstants.chineseFestivalWidgetDescription)
+    .configurationDisplayName(WidgetConstants.specialDayWidgetTitle)
+    .description(WidgetConstants.specialDayWidgetDescription)
     .supportedFamilies([.systemSmall])
   }
 }
@@ -110,21 +84,21 @@ private extension Date {
 
 @available(iOSApplicationExtension 17.0, *)
 #Preview("今日節日", as: .systemSmall, widget: {
-  ChineseFestivalWidget()
+  SpecialDayWidget()
 }, timeline: {
   SimpleEntry(date: .springFestival2026, configuration: ConfigurationIntent())
 })
 
 @available(iOSApplicationExtension 17.0, *)
 #Preview("即將到來", as: .systemSmall, widget: {
-  ChineseFestivalWidget()
+  SpecialDayWidget()
 }, timeline: {
   SimpleEntry(date: .beforeSpringFestival2026, configuration: ConfigurationIntent())
 })
 
 @available(iOSApplicationExtension 17.0, *)
 #Preview("遙遠節日", as: .systemSmall, widget: {
-  ChineseFestivalWidget()
+  SpecialDayWidget()
 }, timeline: {
   SimpleEntry(date: Date(), configuration: ConfigurationIntent())
 })
