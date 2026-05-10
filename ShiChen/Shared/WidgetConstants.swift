@@ -26,4 +26,7 @@ enum WidgetConstants {
   static let jieqiHealthWidgetTitle: LocalizedStringKey = "節氣養生"
   static let jieqiHealthWidgetDescription: LocalizedStringKey = "顯示當前節氣養生提示及時令食物的中尺寸組件"
 
+  static let chineseFestivalWidgetTitle: LocalizedStringKey = "傳統節日"
+  static let chineseFestivalWidgetDescription: LocalizedStringKey = "顯示當前或即將到來的傳統中國節日"
+
 }

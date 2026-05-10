@@ -22,11 +22,11 @@ extension Date {
     // days 1-14: upcoming within the display window.
     if let upcoming = nextJieqi {
       if upcoming.days == 0 {
-        return upcoming.jieqi.chineseName
+        return upcoming.jieqi.chineseName + (upcoming.jieqi.qi ? "氣" : "節")
         
       } else if upcoming.days >= 1 && upcoming.days <= 14 {
         let daysString = Self.formatter.string(from: NSNumber(value: upcoming.days)) ?? ""
-        return "\(daysString)日後\(upcoming.jieqi.chineseName)\(upcoming.jieqi.qi ? "(氣)" : "(節)")"
+        return "\(daysString)日後\(upcoming.jieqi.chineseName)\(upcoming.jieqi.qi ? "氣" : "節")"
         
       }
     }

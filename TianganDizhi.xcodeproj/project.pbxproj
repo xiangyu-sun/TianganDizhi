@@ -250,6 +250,7 @@
 		99A036432FAFEB17008764DA /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 99A036422FAFEB17008764DA /* JingluoShuxue */; };
 		99A036452FAFEC72008764DA /* WuxingRelationshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A036442FAFEC72008764DA /* WuxingRelationshipView.swift */; };
 		99A036462FAFEC72008764DA /* WuxingRelationshipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A036442FAFEC72008764DA /* WuxingRelationshipView.swift */; };
+		99A036482FB09A5D008764DA /* ChineseFestivalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A036472FB09A5D008764DA /* ChineseFestivalWidget.swift */; };
 		99A0B7932DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
 		99A0B7942DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
 		99A0B7952DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */; };
@@ -565,6 +566,7 @@
 		998F9E9A2F3640F300650E5E /* Date+ShichenProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ShichenProgress.swift"; sourceTree = "<group>"; };
 		999B06892A76BC1E00F752CD /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		99A036442FAFEC72008764DA /* WuxingRelationshipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuxingRelationshipView.swift; sourceTree = "<group>"; };
+		99A036472FB09A5D008764DA /* ChineseFestivalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseFestivalWidget.swift; sourceTree = "<group>"; };
 		99A0B7922DB5824A000F2AD7 /* Jieqi+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Jieqi+Image.swift"; sourceTree = "<group>"; };
 		99A0B7982DB582A4000F2AD7 /* Jieqi.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Jieqi.xcassets; sourceTree = "<group>"; };
 		99A0B79E2DB58937000F2AD7 /* JieqiWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiWidget.swift; sourceTree = "<group>"; };
@@ -729,6 +731,7 @@
 				462A5F6D24FFE5F20032A125 /* Assets.xcassets */,
 				462A5F6F24FFE5F20032A125 /* Info.plist */,
 				9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */,
+				99A036472FB09A5D008764DA /* ChineseFestivalWidget.swift */,
 			);
 			path = ShiChen;
 			sourceTree = "<group>";
@@ -1500,6 +1503,7 @@
 				99ECAED02A475BAE004997FD /* Date+WidgetIntent.swift in Sources */,
 				46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				997CD1122954C96B00BECF31 /* MaterialBackground.swift in Sources */,
+				99A036482FB09A5D008764DA /* ChineseFestivalWidget.swift in Sources */,
 				46339FDD2500EA60007D4137 /* ShichenView.swift in Sources */,
 				996321452911B3BB000C4A2B /* MinuteTimelineProvider.swift in Sources */,
 				99A0B7962DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */,

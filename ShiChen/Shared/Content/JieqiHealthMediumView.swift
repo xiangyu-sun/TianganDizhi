@@ -32,31 +32,23 @@ struct JieqiHealthMediumView: View {
     }()
 
     if let jieqi {
-      HStack(alignment: .top, spacing: 10) {
-
-        // Right: Text content
-        VStack(alignment: .leading, spacing: 4) {
-          // Jieqi name + type indicator
-          HStack(alignment: .firstTextBaseline, spacing: 2) {
-            Text(jieqi.chineseName)
-              .font(title3Font)
-            Text("(\(jieqi.qi ? "氣" : "節"))")
-              .font(calloutFont)
-              .foregroundStyle(.secondary)
-          }
-
-          // Health tip
-          Text(jieqi.healthTip)
-            .font(footnoteFont)
-            .lineLimit(2)
-
-          // Seasonal foods
-          Text(jieqi.seasonalFoods)
-            .font(footnoteFont)
-            .lineLimit(2)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
+      VStack(alignment: .leading, spacing: 4) {
+        Text(date.jieQiDisplayText)
+          .frame(alignment: .leading)
+          .lineLimit(1)
+          .font(title3Font)
+        
+        // Health tip
+        Text(jieqi.healthTip)
+          .font(footnoteFont)
+          .lineLimit(2)
+        
+        // Seasonal foods
+        Text(jieqi.seasonalFoods)
+          .font(footnoteFont)
+          .lineLimit(2)
       }
+      .frame(maxWidth: .infinity, alignment: .leading)
       .padding(.horizontal, 8)
       .modifier(WidgetAccentable())
       .containerBackground(for: .widget) {
