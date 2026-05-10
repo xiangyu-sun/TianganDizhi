@@ -1,9 +1,3 @@
-- Chinese Festival display: today's traditional Chinese festival now shown on the main screen
-- Solar term health tips and seasonal foods added to each Jieqi detail
-- Nayin (六十納音) now shown for each Ganzhi in the Jiazi table
-- New: Dizhi Relationship chart (六冲、六合、三合、六害) in Earth Branch Knowledge
-- New: Bazi (四柱八字) calculator — enter a birth date and time to see your Four Pillars
-- New: Upcoming Chinese Festivals calendar
-- New: Nayin list — all 30 Five-Element Overtones with their Ganzhi pairs
-- New: Fangwei (五方) compass — cardinal directions with their associated elements, stems, and branches
-- New: Medium Jieqi Health widget — seasonal wellness tips and foods at a glance (iOS & macOS)
+- New: Five Elements (五行) interactive chart — visualize Sheng (生) and Ke (克) relationships with color-coded flows
+- New: Festival widget — display upcoming traditional Chinese festivals on your Home Screen
+- Jieqi detail page improvements with Festival integration

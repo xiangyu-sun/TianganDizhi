@@ -26,16 +26,6 @@ struct TianganDizhiApp: App {
           handleDeepLink(url)
         }
     }
-    // .onChange(of: scenePhase) { newPhase in
-    //   #if os(iOS)
-    //   if newPhase == .active {
-    //     // Refresh Live Activity when app becomes active
-    //     Task {
-    //       await LiveActivityManager.shared.refreshActivity()
-    //     }
-    //   }
-    //   #endif
-    // }
 
     #if os(macOS)
     let dizh = dateProvider.currentDate.shichen?.dizhi ?? .zi

@@ -1,9 +1,3 @@
-- Paparan perayaan Cina tradisional hari ini pada skrin utama
-- Tip kesihatan dan makanan bermusim ditambah pada butiran Jieqi
-- Nayin (六十納音) dipaparkan untuk setiap Ganzhi dalam jadual Jiazi
-- Baharu: Carta hubungan Dizhi (六冲、六合、三合、六害)
-- Baharu: Kalkulator Bazi (四柱八字) — masukkan tarikh lahir untuk melihat Empat Tiang anda
-- Baharu: Kalendar perayaan Cina tradisional yang akan datang
-- Baharu: Senarai 30 Nayin dengan pasangan Ganzhi mereka
-- Baharu: Kompas Fangwei (五方) — arah kardinal dengan unsur, batang, dan cabang yang berkaitan
-- Baharu: Widget Kesihatan Jieqi saiz sederhana — tip kesihatan dan makanan bermusim dalam pandangan sepintas (iOS & macOS)
+- Baharu: Carta interaktif Lima Elemen (五行) — lihat hubungan Sheng dan Ke dengan aliran berwarna
+- Widget Festival baharu: papar festival tradisional Cina yang akan datang di Skrin Utama anda
+- Penambahbaikan halaman butiran Jieqi dengan integrasi festival

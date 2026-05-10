@@ -1,9 +1,3 @@
-- Hiển thị lễ hội truyền thống Trung Quốc hôm nay trên màn hình chính
-- Thêm mẹo sức khỏe và thực phẩm theo mùa vào chi tiết Tiết Khí
-- Hiển thị Nạp Âm (六十納音) cho từng Can Chi trong bảng Lục Thập Hoa Giáp
-- Mới: Biểu đồ quan hệ Địa Chi (六冲、六合、三合、六害)
-- Mới: Máy tính Tứ Trụ Bát Tự (四柱八字) — nhập ngày giờ sinh để xem tứ trụ
-- Mới: Lịch các lễ hội truyền thống Trung Quốc sắp tới
-- Mới: Danh sách 30 Nạp Âm kèm các cặp Can Chi
-- Mới: La bàn Ngũ Phương (五方) — phương vị với hành, can, chi tương ứng
-- Mới: Widget Sức Khỏe Tiết Khí cỡ vừa — mẹo dưỡng sinh và thực phẩm theo mùa (iOS & macOS)
+- Mới: Biểu đồ tương tác Ngũ Hành (五行) — hiển thị quan hệ Sinh và Khắc bằng màu sắc trực quan
+- Widget Lễ hội mới: hiển thị các lễ hội truyền thống Trung Hoa sắp tới trên Màn hình chính
+- Cải tiến trang chi tiết Tiết khí với tích hợp lễ hội

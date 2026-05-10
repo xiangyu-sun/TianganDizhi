@@ -1,9 +1,3 @@
-- Affichage du festival chinois traditionnel du jour sur l'écran principal
-- Conseils de santé et aliments de saison ajoutés aux détails des termes solaires
-- Nayin (六十納音) affiché pour chaque Ganzhi dans le tableau Jiazi
-- Nouveau : Diagramme des relations Dizhi (六冲、六合、三合、六害)
-- Nouveau : Calculateur de Bazi (四柱八字) — entrez une date de naissance pour voir vos Quatre Piliers
-- Nouveau : Calendrier des prochains festivals chinois traditionnels
-- Nouveau : Liste des 30 Nayin avec leurs paires Ganzhi
-- Nouveau : Boussole Fangwei (五方) — directions cardinales avec éléments, tiges et branches associés
-- Nouveau : Widget Jieqi Santé taille moyenne — conseils de bien-être et aliments de saison d'un coup d'œil (iOS & macOS)
+- Nouveau : Diagramme interactif des Cinq Éléments (五行) — visualisez les relations Sheng et Ke avec des flux colorés
+- Nouveau widget Festival : affichez les prochains festivals traditionnels chinois sur votre écran d'accueil
+- Améliorations de la page de détails Jieqi avec intégration des festivals
