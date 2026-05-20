@@ -81,21 +81,21 @@ enum DailyTimeLineSceduler {
   static func buildTimeLine() -> [Date] {
     var timeline = [Date]()
     let currentDate = Date()
+    let calendar = Calendar.current
 
     timeline.append(currentDate)
 
-    guard
-      let currentShichen = currentDate.shichen
-    else {
+    guard currentDate.shichen != nil else {
       return backup()
     }
 
-    let entryDate = Calendar.current.date(byAdding: .second, value: 2, to: Date()) ?? Date()
-    timeline.append(entryDate)
-
+    // Anchor future entries at midnight boundaries so the widget refreshes
+    // at the start of each calendar day, keeping the countdown in sync with
+    // the main screen's real-time display.
+    let startOfToday = calendar.startOfDay(for: currentDate)
     for dayOffset in 1 ..< 15 {
-      let entryDate = Calendar.current.date(byAdding: .day, value: dayOffset, to: Date()) ?? Date()
-      timeline.append(entryDate)
+      let startOfDay = calendar.date(byAdding: .day, value: dayOffset, to: startOfToday) ?? currentDate
+      timeline.append(startOfDay)
     }
     return timeline
   }
