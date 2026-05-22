@@ -23,14 +23,10 @@ struct JieqiWidget: Widget {
 
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: JieqiTimelineProvider()) { entry in
-      // Show upcoming jieqi if within 14 days, otherwise show current.
+      
       let upcomingResult = entry.date.nextJieqi
-      let jieqi: Jieqi? = {
-        if let upcoming = upcomingResult, upcoming.days <= 14 {
-          return upcoming.jieqi
-        }
-        return entry.date.jieqi
-      }()
+      let jieqi = upcomingResult?.jieqi ?? entry.date.jieqi
+      
       // sameCalendarDay: the solar term is today (days == 0)
       let sameCalendarDay = upcomingResult?.days == 0
 

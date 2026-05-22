@@ -23,13 +23,8 @@ struct JieqiHealthMediumView: View {
   private var calloutFont: Font { fontProvider.calloutFont }
 
   var body: some View {
-    // Use the new package API: show upcoming jieqi if within 14 days, otherwise current.
-    let jieqi: Jieqi? = {
-      if let upcoming = date.nextJieqi, upcoming.days <= 14 {
-        return upcoming.jieqi
-      }
-      return date.jieqi
-    }()
+    let upcomingResult = date.nextJieqi
+    let jieqi = upcomingResult?.jieqi ?? date.jieqi
 
     if let jieqi {
       VStack(alignment: .leading, spacing: 4) {
