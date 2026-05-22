@@ -1,3 +1,1 @@
-- New: Five Elements (五行) interactive chart — visualize Sheng (生) and Ke (克) relationships with color-coded flows
-- New: Festival widget — display upcoming traditional Chinese festivals on your Home Screen
-- Jieqi detail page improvements with Festival integration
+- Fixed Jieqi date calculation accuracy

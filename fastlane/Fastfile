@@ -24,6 +24,7 @@ platform :mac do
       skip_binary_upload: true,
       skip_screenshots: true,
       skip_app_version_update: true,
+      force: true,
       metadata_path: "fastlane/metadata"
     )
   end
@@ -62,6 +63,7 @@ platform :ios do
       skip_binary_upload: true,
       skip_screenshots: true,
       skip_app_version_update: true,
+      force: true,
       metadata_path: "fastlane/metadata"
     )
   end

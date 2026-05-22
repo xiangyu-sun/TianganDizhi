@@ -1,3 +1,1 @@
-- Mới: Biểu đồ tương tác Ngũ Hành (五行) — hiển thị quan hệ Sinh và Khắc bằng màu sắc trực quan
-- Widget Lễ hội mới: hiển thị các lễ hội truyền thống Trung Hoa sắp tới trên Màn hình chính
-- Cải tiến trang chi tiết Tiết khí với tích hợp lễ hội
+- Sửa lỗi tính toán ngày Tiết khí

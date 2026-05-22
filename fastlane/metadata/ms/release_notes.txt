@@ -1,3 +1,1 @@
-- Baharu: Carta interaktif Lima Elemen (五行) — lihat hubungan Sheng dan Ke dengan aliran berwarna
-- Widget Festival baharu: papar festival tradisional Cina yang akan datang di Skrin Utama anda
-- Penambahbaikan halaman butiran Jieqi dengan integrasi festival
+- Pembetulan pengiraan tarikh Jieqi

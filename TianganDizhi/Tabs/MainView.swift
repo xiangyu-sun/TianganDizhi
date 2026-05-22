@@ -160,7 +160,7 @@ struct MainView: View {
           }
 
           if let weatherURL = URL(string: "https://weatherkit.apple.com/legal-attribution.html") {
-            Link("天氣以及日月信息來自  Weather. 點擊查看數據源信息",
+            Link("天氣以及日月信息來自Weather. 點擊查看數據源信息",
                  destination: weatherURL)
             .font(footnote)
             .foregroundStyle(.secondary)

@@ -1,3 +1,1 @@
-- Nouveau : Diagramme interactif des Cinq Éléments (五行) — visualisez les relations Sheng et Ke avec des flux colorés
-- Nouveau widget Festival : affichez les prochains festivals traditionnels chinois sur votre écran d'accueil
-- Améliorations de la page de détails Jieqi avec intégration des festivals
+- Correction du calcul des dates Jieqi
