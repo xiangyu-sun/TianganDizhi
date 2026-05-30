@@ -25,109 +25,19 @@ extension Font {
   static let weiBeiTitleWatch: Font = .custom(.weibeiBold, size: 28, relativeTo: .title)
 }
 
-// MARK: - Font Environment Keys
-// Note: These are now simple storage keys. FontProvider handles font selection logic.
-
-private struct TitleFontEnvironmentKey: EnvironmentKey {
-  #if os(watchOS)
-  static let defaultValue: Font = .weiBeiTitleWatch
-  #else
-  static let defaultValue: Font = .weiBeiTitle
-  #endif
-}
-
-private struct LargeTitleFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .weiBeiLargeTitle
-}
-
-private struct BodyFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .weiBeiBody
-}
-
-private struct CalloutFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .weiBeiCallOut
-}
-
-private struct FootnoteFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .weiBeiFootNote
-}
-
-private struct HeadlineFontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .weiBeiHeadline
-}
-
-private struct Title3FontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .weiBeiTitle3
-}
-
-private struct Title2FontEnvironmentKey: EnvironmentKey {
-  static let defaultValue: Font = .weiBeiTitle2
-}
-
-
-// MARK: - ShouldScaleFontEnvironmentKey
-
-private struct ShouldScaleFontEnvironmentKey: EnvironmentKey {
-  static var defaultValue: Bool {
-    #if os(iOS)
-    UIScreen.main.bounds.width > 744
-    #else
-    false
-    #endif
-  }
-
-}
-
 extension EnvironmentValues {
-
-  var titleFont: Font {
-    get { self[TitleFontEnvironmentKey.self] }
-    set { self[TitleFontEnvironmentKey.self] = newValue }
-  }
-
-  var largeTitleFont: Font {
-    get { self[LargeTitleFontEnvironmentKey.self] }
-    set { self[LargeTitleFontEnvironmentKey.self] = newValue }
-  }
-
-  var title2Font: Font {
-    get { self[Title2FontEnvironmentKey.self] }
-    set { self[Title2FontEnvironmentKey.self] = newValue }
-  }
-
-  var title3Font: Font {
-    get { self[Title3FontEnvironmentKey.self] }
-    set { self[Title3FontEnvironmentKey.self] = newValue }
-  }
-
-  var bodyFont: Font {
-    get { self[BodyFontEnvironmentKey.self] }
-    set { self[BodyFontEnvironmentKey.self] = newValue }
-  }
-
-  var calloutFont: Font {
-    get { self[CalloutFontEnvironmentKey.self] }
-    set { self[CalloutFontEnvironmentKey.self] = newValue }
-  }
-
-  var footnote: Font {
-    get { self[FootnoteFontEnvironmentKey.self] }
-    set { self[FootnoteFontEnvironmentKey.self] = newValue }
-  }
-
-  var headlineFont: Font {
-    get { self[HeadlineFontEnvironmentKey.self] }
-    set { self[HeadlineFontEnvironmentKey.self] = newValue }
-  }
-
-  var shouldScaleFont: Bool {
-    get { self[ShouldScaleFontEnvironmentKey.self] }
-    set { }
-  }
-
+  #if os(watchOS)
+  @Entry var titleFont: Font = .weiBeiTitleWatch
+  #else
+  @Entry var titleFont: Font = .weiBeiTitle
+  #endif
+  @Entry var largeTitleFont: Font = .weiBeiLargeTitle
+  @Entry var title2Font: Font = .weiBeiTitle2
+  @Entry var title3Font: Font = .weiBeiTitle3
+  @Entry var bodyFont: Font = .weiBeiBody
+  @Entry var calloutFont: Font = .weiBeiCallOut
+  @Entry var headlineFont: Font = .weiBeiHeadline
+  @Entry var footnote: Font = .weiBeiFootNote
+  // Derived from horizontalSizeClass in views that need it; kept for backward compat
+  @Entry var shouldScaleFont: Bool = false
 }
-
-// MARK: - Removed broken iPad view modifiers
-// These modifiers were ignoring the passed-in parameter on non-iPad devices.
-// Font injection now happens at the root level via FontProvider.
-

@@ -29,25 +29,21 @@ struct ContentView: View {
           Image(systemName: "clock.fill")
           Text("時辰")
         }
-
       KnowledgeView()
         .tabItem {
           Image(systemName: "moon.stars.fill")
           Text("天干地支")
         }
-
       GuaListView()
         .tabItem {
           Image(systemName: "sun.max.fill")
           Text("卦")
         }
-
       ChartListView()
         .tabItem {
           Image(systemName: "chart.bar.xaxis")
           Text("綜合圖示")
         }
-
       SettingsView()
         .tabItem {
           Image(systemName: "gear.circle.fill")

@@ -49,7 +49,7 @@ final class WeatherData: ObservableObject {
     if
       let distance = lastUpdatedLocation?.distance(from: location), let lastUpdatedDate,
       distance < 1000 ||
-      lastUpdatedDate.distance(to: Date()) < 60 * 60
+      lastUpdatedDate.distance(to: Date.now) < 60 * 60
     {
       logger.log(level: .debug, "fetching forcast aborted due to not matching requirement")
       guard let data = userDefault?.data(forKey: dataCacheKey) else {
@@ -60,15 +60,13 @@ final class WeatherData: ObservableObject {
       return try decoder.decode(Information.self, from: data)
     }
 
-    let dayWeather: Forecast<DayWeather>? = await Task.detached(priority: .userInitiated) {
-      try? await WeatherService.shared.weather(
-        for: location,
-        including: .daily)
-    }.value
+    let dayWeather: Forecast<DayWeather>? = try? await WeatherService.shared.weather(
+      for: location,
+      including: .daily)
 
     logger.debug("\(dayWeather.debugDescription)")
 
-    if let dayWeather, let today = dayWeather.forecast.first, let day = Date().chineseDay() {
+    if let dayWeather, let today = dayWeather.forecast.first, let day = Date.now.chineseDay() {
       let data = Information(
         moonPhase: today.moon.phase.moonPhase(day: day),
         moonRise: today.moon.moonrise,
@@ -86,9 +84,8 @@ final class WeatherData: ObservableObject {
       Task {
         let encoder = JSONEncoder()
 
-        if let data = try? encoder.encode(data) {
-          userDefault?.setValue(data, forKey: dataCacheKey)
-
+        if let encoded = try? encoder.encode(data) {
+          userDefault?.setValue(encoded, forKey: dataCacheKey)
           self.update(location: location)
         }
       }
@@ -102,7 +99,7 @@ final class WeatherData: ObservableObject {
   @MainActor
   func update(location: CLLocation) {
     lastUpdatedLocation = location
-    lastUpdatedDate = Date()
+    lastUpdatedDate = Date.now
   }
 
   // MARK: Private

@@ -7,10 +7,8 @@ struct BaziView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
   @Environment(\.title3Font) var title3Font
-  @Environment(\.title2Font) var title2Font
 
   @State private var birthDate = Date()
-  @State private var showingPicker = false
 
   private var bazi: Bazi? {
     Bazi(date: birthDate)
@@ -19,7 +17,6 @@ struct BaziView: View {
   var body: some View {
     ScrollView {
       VStack(spacing: 20) {
-        // Date picker
         VStack(alignment: .leading, spacing: 8) {
           Text("出生日期時辰")
             .font(footnote)
@@ -30,28 +27,33 @@ struct BaziView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
-        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 12))
+        .background(.regularMaterial, in: .rect(cornerRadius: 12))
 
         if let bazi {
-          // Four Pillars
-          pillarsSection(bazi: bazi)
-
-          // Element balance
-          elementBalanceSection(bazi: bazi)
+          BaziPillarsSection(bazi: bazi)
+          BaziElementBalanceSection(bazi: bazi)
         }
       }
       .padding()
     }
     .navigationTitle("四柱八字推算")
   }
+}
 
-  @ViewBuilder
-  private func pillarsSection(bazi: Bazi) -> some View {
+// MARK: - BaziPillarsSection
+
+struct BaziPillarsSection: View {
+  let bazi: Bazi
+  @Environment(\.bodyFont) var bodyFont
+  @Environment(\.footnote) var footnote
+  @Environment(\.title3Font) var title3Font
+  @Environment(\.title2Font) var title2Font
+
+  var body: some View {
     VStack(alignment: .leading, spacing: 12) {
       Text("四柱")
         .font(title3Font)
 
-      // allCharacters: [nianGan, nianZhi, yueGan, yueZhi, riGan, riZhi, shiGan, shiZhi]
       let chars = bazi.allCharacters
       HStack(spacing: 0) {
         ForEach(Array(zip(["年柱", "月柱", "日柱", "時柱"], bazi.pillars)), id: \.0) { label, ganzhi in
@@ -80,7 +82,7 @@ struct BaziView: View {
               ? AnyShapeStyle(Color.accentColor.opacity(0.12))
               : AnyShapeStyle(Color.clear)
           )
-          .clipShape(RoundedRectangle(cornerRadius: 8))
+          .clipShape(.rect(cornerRadius: 8))
         }
       }
 
@@ -97,16 +99,23 @@ struct BaziView: View {
       }
     }
     .padding()
-    .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 12))
+    .background(.regularMaterial, in: .rect(cornerRadius: 12))
   }
+}
 
-  @ViewBuilder
-  private func elementBalanceSection(bazi: Bazi) -> some View {
+// MARK: - BaziElementBalanceSection
+
+struct BaziElementBalanceSection: View {
+  let bazi: Bazi
+  @Environment(\.bodyFont) var bodyFont
+  @Environment(\.footnote) var footnote
+  @Environment(\.title3Font) var title3Font
+
+  var body: some View {
     VStack(alignment: .leading, spacing: 12) {
       Text("五行分析")
         .font(title3Font)
 
-      // Element count bars
       ForEach(Wuxing.allCases, id: \.self) { element in
         let count = bazi.elementCounts[element] ?? 0
         let isMissing = bazi.missingElements.contains(element)
@@ -171,11 +180,9 @@ struct BaziView: View {
       }
     }
     .padding()
-    .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 12))
+    .background(.regularMaterial, in: .rect(cornerRadius: 12))
   }
 }
-
-// Reuse color extension from TianganStem.swift (Wuxing.traditionalColor)
 
 #Preview {
   NavigationStack {

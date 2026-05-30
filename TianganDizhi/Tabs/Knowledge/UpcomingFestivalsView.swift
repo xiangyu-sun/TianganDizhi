@@ -10,14 +10,7 @@ struct UpcomingFestivalsView: View {
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
 
-  private var upcomingEvents: [(festival: ChineseFestival, date: Date)] {
-    let converter = useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
-    return ChineseFestival.allCases.compactMap { festival in
-      guard let date = festival.nextDate(from: Date(), converter: converter) else { return nil }
-      return (festival, date)
-    }
-    .sorted { $0.date < $1.date }
-  }
+  @State private var upcomingEvents: [(festival: ChineseFestival, date: Date)] = []
 
   var body: some View {
     List(upcomingEvents, id: \.festival) { item in
@@ -42,6 +35,23 @@ struct UpcomingFestivalsView: View {
       .accessibilityLabel("\(item.festival.chineseName)，\(item.date.formatted(date: .long, time: .omitted))，\(item.festival.meaning)")
     }
     .navigationTitle("節日曆")
+    .onAppear {
+      if upcomingEvents.isEmpty {
+        upcomingEvents = buildUpcomingEvents()
+      }
+    }
+    .onChange(of: useGTM8) { _ in
+      upcomingEvents = buildUpcomingEvents()
+    }
+  }
+
+  private func buildUpcomingEvents() -> [(festival: ChineseFestival, date: Date)] {
+    let converter = useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
+    return ChineseFestival.allCases.compactMap { festival in
+      guard let date = festival.nextDate(from: Date.now, converter: converter) else { return nil }
+      return (festival, date)
+    }
+    .sorted { $0.date < $1.date }
   }
 }
 
