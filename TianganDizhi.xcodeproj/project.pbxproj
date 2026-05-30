@@ -152,20 +152,19 @@
 		9968B2CA2F8001EA005E242A /* UpcomingFestivalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */; };
 		9968B2CC2F800202005E242A /* BaziView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CB2F800202005E242A /* BaziView.swift */; };
 		9968B2CD2F800202005E242A /* BaziView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CB2F800202005E242A /* BaziView.swift */; };
-		9968B3102F900000005E242A /* DaYunCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B30F2F900000005E242A /* DaYunCalculator.swift */; };
-		9968B3112F900000005E242A /* DaYunCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B30F2F900000005E242A /* DaYunCalculator.swift */; };
 		9968B2CF2F800214005E242A /* FangweiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CE2F800214005E242A /* FangweiView.swift */; };
 		9968B2D02F800214005E242A /* FangweiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CE2F800214005E242A /* FangweiView.swift */; };
 		9968B2D22F8062E2005E242A /* JieqiHealthWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */; };
-		9968B3222F910000005E242A /* LuckWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3202F910000005E242A /* LuckWidget.swift */; };
-		9968B3232F910000005E242A /* LuckWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3202F910000005E242A /* LuckWidget.swift */; };
-		9968B3242F910000005E242A /* LuckWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3202F910000005E242A /* LuckWidget.swift */; };
-		9968B3252F910000005E242A /* LuckRectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3212F910000005E242A /* LuckRectangularWidgetView.swift */; };
-		9968B3262F910000005E242A /* LuckRectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3212F910000005E242A /* LuckRectangularWidgetView.swift */; };
-		9968B3272F910000005E242A /* LuckRectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3212F910000005E242A /* LuckRectangularWidgetView.swift */; };
 		9968B2D42F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */; };
 		9968B2D52F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */; };
 		9968B2D62F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */; };
+		9968B3102F900000005E242A /* DaYunCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B30F2F900000005E242A /* DaYunCalculator.swift */; };
+		9968B3112F900000005E242A /* DaYunCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B30F2F900000005E242A /* DaYunCalculator.swift */; };
+		9968B3222F910000005E242A /* LuckWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3202F910000005E242A /* LuckWidget.swift */; };
+		9968B3232F910000005E242A /* LuckWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3202F910000005E242A /* LuckWidget.swift */; };
+		9968B3252F910000005E242A /* LuckRectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3212F910000005E242A /* LuckRectangularWidgetView.swift */; };
+		9968B3262F910000005E242A /* LuckRectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3212F910000005E242A /* LuckRectangularWidgetView.swift */; };
+		9968B3272F910000005E242A /* LuckRectangularWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3212F910000005E242A /* LuckRectangularWidgetView.swift */; };
 		996A19C92A543E6700D1C943 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
 		996A19CA2A543E9400D1C943 /* ShiChen.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 46393EE72542F57900E40518 /* ShiChen.intentdefinition */; };
 		996A19CB2A543E9E00D1C943 /* Date+WidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECAECE2A475BAA004997FD /* Date+WidgetIntent.swift */; };
@@ -531,12 +530,12 @@
 		9968B2C52F8001E1005E242A /* NayinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NayinListView.swift; sourceTree = "<group>"; };
 		9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingFestivalsView.swift; sourceTree = "<group>"; };
 		9968B2CB2F800202005E242A /* BaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaziView.swift; sourceTree = "<group>"; };
-		9968B30F2F900000005E242A /* DaYunCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaYunCalculator.swift; sourceTree = "<group>"; };
 		9968B2CE2F800214005E242A /* FangweiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FangweiView.swift; sourceTree = "<group>"; };
 		9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiHealthWidget.swift; sourceTree = "<group>"; };
+		9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiHealthMediumView.swift; sourceTree = "<group>"; };
+		9968B30F2F900000005E242A /* DaYunCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaYunCalculator.swift; sourceTree = "<group>"; };
 		9968B3202F910000005E242A /* LuckWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckWidget.swift; sourceTree = "<group>"; };
 		9968B3212F910000005E242A /* LuckRectangularWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckRectangularWidgetView.swift; sourceTree = "<group>"; };
-		9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiHealthMediumView.swift; sourceTree = "<group>"; };
 		996C53192B1FC68000AC832F /* BaguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaguaView.swift; sourceTree = "<group>"; };
 		996C531B2B1FCFAD00AC832F /* GuaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuaListView.swift; sourceTree = "<group>"; };
 		996D2C1529A3DB33008DC1A9 /* SunInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunInformationView.swift; sourceTree = "<group>"; };
@@ -1807,7 +1806,6 @@
 				99A0B7A22DB5895F000F2AD7 /* JieqiTimelineProvider.swift in Sources */,
 				99A0B7942DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */,
 				99FD3F622922968B0048DCEB /* RetangularWidgetView.swift in Sources */,
-				9968B3242F910000005E242A /* LuckWidget.swift in Sources */,
 				9968B3272F910000005E242A /* LuckRectangularWidgetView.swift in Sources */,
 				991A857F2B5090E700C1D1BC /* SettingsManager.swift in Sources */,
 				99BC3C14296A2950004AB614 /* DateFormatters.swift in Sources */,
