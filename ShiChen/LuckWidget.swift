@@ -49,6 +49,27 @@ struct LuckTimelineProvider: AppIntentTimelineProvider {
   }
 }
 
+// MARK: - LuckEntryView
+
+@available(iOSApplicationExtension 17.0, *)
+struct LuckEntryView: View {
+  let date: Date
+  @Environment(\.widgetFamily) var family
+
+  var body: some View {
+    #if os(watchOS)
+    LuckRectangularWidgetView(date: date)
+    #else
+    switch family {
+    case .systemMedium:
+      LuckMediumWidgetView(date: date)
+    default:
+      LuckRectangularWidgetView(date: date)
+    }
+    #endif
+  }
+}
+
 // MARK: - LuckWidget
 
 @available(iOSApplicationExtension 17.0, *)
@@ -61,11 +82,15 @@ struct LuckWidget: Widget {
       intent: LuckConfigurationIntent.self,
       provider: LuckTimelineProvider()
     ) { entry in
-      LuckRectangularWidgetView(date: entry.date)
+      LuckEntryView(date: entry.date)
     }
     .configurationDisplayName("今日宜忌")
     .description("顯示今日建除神、宜忌事項及日支沖")
+    #if os(watchOS)
     .supportedFamilies([.accessoryRectangular])
+    #else
+    .supportedFamilies([.accessoryRectangular, .systemMedium])
+    #endif
   }
 }
 
