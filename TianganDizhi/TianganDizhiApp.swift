@@ -13,40 +13,35 @@ struct TianganDizhiApp: App {
   // MARK: Internal
 
   @StateObject private var fontProvider = FontProvider()
-  @StateObject private var dateProvider = DateProvider()
-  // @Environment(\.scenePhase) private var scenePhase
 
   var body: some Scene {
     WindowGroup {
       ContentView()
         .environmentObject(fontProvider)
         .environmentObject(SettingsManager.shared)
-        .environmentObject(dateProvider)
         .onOpenURL { url in
           handleDeepLink(url)
         }
     }
 
     #if os(macOS)
-    let dizh = dateProvider.currentDate.shichen?.dizhi ?? .zi
-
-    let god = dateProvider.currentDate.twelveGod().map { "·" + $0.chinese } ?? ""
-    
-    MenuBarExtra(dateProvider.currentDate.displayStringOfChineseYearMonthDateWithZodiac + dizh.displayHourText + god) {
-      MenuBarContentView(updater: dateProvider)
+    MenuBarExtra {
+      MenuBarContentView()
+    } label: {
+      TimelineView(.everyMinute) { context in
+        let date = context.date
+        let dizh = date.shichen?.dizhi ?? .zi
+        let god = date.twelveGod().map { "·" + $0.chinese } ?? ""
+        Text(date.displayStringOfChineseYearMonthDateWithZodiac + dizh.displayHourText + god)
+      }
     }
-
     #endif
   }
-  
+
   // MARK: - Deep Link Handling
-  
+
   private func handleDeepLink(_ url: URL) {
     guard url.scheme == "tiangandizhi" else { return }
-    
-    // Handle different deep link paths
-    // For now, just opening the app to main view is sufficient
-    // Can be extended to navigate to specific tabs if needed
     print("Deep link received: \(url)")
   }
 }

@@ -13,7 +13,6 @@ import WidgetKit
 // MARK: - MainView
 
 struct MainView: View {
-  @EnvironmentObject var updater: DateProvider
   @Environment(\.titleFont) var titleFont
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.bodyFont) var bodyFont
@@ -52,97 +51,105 @@ struct MainView: View {
   @State private var showingPopover = false
 
   var body: some View {
-    VStack {
-      #if os(watchOS)
-      WatchMainView(date: updater.currentDate, wetherData: weatherData.forcastedWeather)
-      #else
-      VStack(spacing: 0) {
-        let god = updater.currentDate.twelveGod()
-        HStack {
-          Text(updater.currentDate.displayStringOfChineseYearMonthDateWithZodiac)
-          Text(god.map { "·" + $0.chinese } ?? "")
-        }
-        .lineLimit(1)
-        .minimumScaleFactor(0.8)
-        .font(titleFont)
-
-        if let nextChineseNewYear = (useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()).nextChineseNewYear(),
-           (useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()).isWithinMonths(3, beforeChineseNewYearFrom: nextChineseNewYear) {
-          HStack(spacing: 0) {
-            Text(cachedEvent.date, style: .relative)
-            Text("後\(cachedTitle)")
+    TimelineView(.everyMinute) { context in
+      let date = context.date
+      VStack {
+        #if os(watchOS)
+        WatchMainView(date: date, wetherData: weatherData.forcastedWeather)
+        #else
+        VStack(spacing: 0) {
+          let god = date.twelveGod()
+          HStack {
+            Text(date.displayStringOfChineseYearMonthDateWithZodiac)
+            Text(god.map { "·" + $0.chinese } ?? "")
           }
-          .font(bodyFont)
-        }
+          .lineLimit(1)
+          .minimumScaleFactor(0.8)
+          .font(titleFont)
 
-        if let festival = updater.currentDate.chineseFestival {
-          Text(festival.chineseName)
-            .font(bodyFont)
-            .foregroundStyle(.primary)
-            .accessibilityLabel("今日節日：\(festival.chineseName)")
-        } else {
-          Text(updater.currentDate.jieQiDisplayText)
-            .font(bodyFont)
-        }
-
-        if let value = weatherData.forcastedWeather {
-          SunInformationView(info: value)
-        } else {
-          if let moonphase = updater.currentDate.chineseDay()?.moonPhase {
-            fixedMoonInformationView(moonphase)
-          }
-        }
-      }
-
-      if let shichen = updater.currentDate.shichen {
-        ZStack {
-          #if os(macOS)
-          CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
-            .frame(minWidth: 640)
-          #else
-          if horizontalSizeClass == .compact {
-            CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
-              .fixedSize(horizontal: false, vertical: true)
-          } else {
-            CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
-          }
-          #endif
-
-          VStack {
-            Text("\(shichen.currentKeSpellOut)刻")
-              .font(largeTitleFont)
-            HStack() {
-              Text(shichen.dizhi.aliasName)
-              Text(shichen.dizhi.luizhu.organReference)
-                .foregroundStyle(shichen.dizhi.luizhu.是表经 ? Color.primary : Color.secondary)
+          if let nextChineseNewYear = (useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()).nextChineseNewYear(),
+             (useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()).isWithinMonths(3, beforeChineseNewYearFrom: nextChineseNewYear) {
+            HStack(spacing: 0) {
+              Text(cachedEvent.date, style: .relative)
+              Text("後\(cachedTitle)")
             }
             .font(bodyFont)
           }
-          .accessibilityElement(children: .combine)
-          .accessibilityLabel("\(shichen.dizhi.aliasName)時，第\(shichen.currentKeSpellOut)刻，\(shichen.dizhi.organReference)")
-          .accessibilityAddTraits(.updatesFrequently)
+
+          if let festival = date.chineseFestival {
+            Text(festival.chineseName)
+              .font(bodyFont)
+              .foregroundStyle(.primary)
+              .accessibilityLabel("今日節日：\(festival.chineseName)")
+          } else {
+            Text(date.jieQiDisplayText)
+              .font(bodyFont)
+          }
+
+          if let value = weatherData.forcastedWeather {
+            SunInformationView(info: value)
+          } else {
+            if let moonphase = date.chineseDay()?.moonPhase {
+              fixedMoonInformationView(moonphase)
+            }
+          }
         }
-      }
 
-      Spacer()
+        if let shichen = date.shichen {
+          ZStack {
+            #if os(macOS)
+            CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
+              .frame(minWidth: 640)
+            #else
+            if horizontalSizeClass == .compact {
+              CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
+                .fixedSize(horizontal: false, vertical: true)
+            } else {
+              CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
+            }
+            #endif
 
-      // Compute once to avoid duplicate calls every render
-      let mansion = LunarMansion.lunarMansion(date: updater.currentDate)
-      HStack {
-        Text("星象: \(mansion.fourSymbol.rawValue)")
-        Text("星宿: \(mansion.rawValue)")
-      }
-      .foregroundStyle(Color.secondary)
-      .font(calloutFont)
-      .accessibilityElement(children: .combine)
-      .accessibilityLabel("星象：\(mansion.fourSymbol.rawValue)，星宿：\(mansion.rawValue)")
+            VStack {
+              Text("\(shichen.currentKeSpellOut)刻")
+                .font(largeTitleFont)
+              HStack() {
+                Text(shichen.dizhi.aliasName)
+                Text(shichen.dizhi.luizhu.organReference)
+                  .foregroundStyle(shichen.dizhi.luizhu.是表经 ? Color.primary : Color.secondary)
+              }
+              .font(bodyFont)
+            }
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("\(shichen.dizhi.aliasName)時，第\(shichen.currentKeSpellOut)刻，\(shichen.dizhi.organReference)")
+            .accessibilityAddTraits(.updatesFrequently)
+          }
+        }
 
-      // Moon / weather detail
-      if let value = weatherData.forcastedWeather {
-        VStack {
-          MoonInformationView(info: value)
-          if horizontalSizeClass == .regular {
-            HStack {
+        Spacer()
+
+        let mansion = LunarMansion.lunarMansion(date: date)
+        HStack {
+          Text("星象: \(mansion.fourSymbol.rawValue)")
+          Text("星宿: \(mansion.rawValue)")
+        }
+        .foregroundStyle(Color.secondary)
+        .font(calloutFont)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("星象：\(mansion.fourSymbol.rawValue)，星宿：\(mansion.rawValue)")
+
+        if let value = weatherData.forcastedWeather {
+          VStack {
+            MoonInformationView(info: value)
+            if horizontalSizeClass == .regular {
+              HStack {
+                Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
+                  .font(calloutFont)
+                  .foregroundStyle(Color.secondary)
+                Text("\(value.condition)")
+                  .font(calloutFont)
+                  .foregroundStyle(Color.secondary)
+              }
+            } else {
               Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
                 .font(calloutFont)
                 .foregroundStyle(Color.secondary)
@@ -150,51 +157,47 @@ struct MainView: View {
                 .font(calloutFont)
                 .foregroundStyle(Color.secondary)
             }
-          } else {
-            Text(MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
-              .font(calloutFont)
-              .foregroundStyle(Color.secondary)
-            Text("\(value.condition)")
-              .font(calloutFont)
-              .foregroundStyle(Color.secondary)
-          }
 
-          if let weatherURL = URL(string: "https://weatherkit.apple.com/legal-attribution.html") {
-            Link("天氣以及日月信息來自Weather. 點擊查看數據源信息",
-                 destination: weatherURL)
-            .font(footnote)
-            .foregroundStyle(.secondary)
+            if let weatherURL = URL(string: "https://weatherkit.apple.com/legal-attribution.html") {
+              Link("天氣以及日月信息來自Weather. 點擊查看數據源信息",
+                   destination: weatherURL)
+              .font(footnote)
+              .foregroundStyle(.secondary)
+            }
           }
-        }
-        .padding(.bottom)
-      }
-
-      #endif
-    }
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
-    #if os(iOS) || os(macOS)
-    .popover(isPresented: $showingPopover, arrowEdge: .bottom) {
-      VStack(alignment: .leading) {
-        let god = updater.currentDate.twelveGod()
-        Text("宜：\(god.map { $0.do } ?? "")")
-          .font(titleFont)
           .padding(.bottom)
-        Text("忌：\(god.map { $0.dontDo } ?? "")")
-          .font(titleFont)
+        }
+
+        #endif
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .background(
-        Image("background")
-          .resizable(resizingMode: .tile)
-          .scaledToFill()
-          .ignoresSafeArea(.all)
-      )
+      #if os(iOS) || os(macOS)
+      .popover(isPresented: $showingPopover, arrowEdge: .bottom) {
+        VStack(alignment: .leading) {
+          let god = date.twelveGod()
+          Text("宜：\(god.map { $0.do } ?? "")")
+            .font(titleFont)
+            .padding(.bottom)
+          Text("忌：\(god.map { $0.dontDo } ?? "")")
+            .font(titleFont)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(
+          Image("background")
+            .resizable(resizingMode: .tile)
+            .scaledToFill()
+            .ignoresSafeArea(.all)
+        )
+      }
+      #endif
+      .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
+      #if os(iOS) || os(macOS)
+      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      #endif
+      #if os(macOS)
+      .frame(minHeight: 640)
+      #endif
     }
-    #endif
-    .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-    #if os(iOS) || os(macOS)
-    .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-    #endif
     .onAppear {
       rebuildCachedValues()
       refreshLocationAndWeather()
@@ -202,15 +205,11 @@ struct MainView: View {
     .onChange(of: useGTM8) { _ in
       rebuildCachedValues()
     }
-    // Consolidated single scenePhase handler (was duplicated inside if/else branches)
     .onChange(of: scenePhase) { newValue in
       if newValue == .active {
         refreshLocationAndWeather()
       }
     }
-    #if os(macOS)
-    .frame(minHeight: 640)
-    #endif
   }
 
   func refreshLocationAndWeather() {

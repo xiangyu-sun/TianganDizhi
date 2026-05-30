@@ -15,7 +15,6 @@ struct ShichenWatch_Watch_AppApp: App {
       ContentView()
         .environmentObject(SettingsManager.shared)
         .environmentObject(FontProvider())
-        .environmentObject(DateProvider())
     }
   }
 }

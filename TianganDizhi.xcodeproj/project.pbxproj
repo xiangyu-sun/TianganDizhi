@@ -114,7 +114,6 @@
 		995997072B3DF1AB002288D1 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995997042B3DF1AB002288D1 /* MultiSelectionView.swift */; };
 		995997082B3DF1AB002288D1 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995997042B3DF1AB002288D1 /* MultiSelectionView.swift */; };
 		99632043290C2D1E000C4A2B /* TianganDizhiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */; };
-		9963204B290C32C1000C4A2B /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963204A290C32C1000C4A2B /* DateProvider.swift */; };
 		9963204D290D52AA000C4A2B /* AppStoreReviewPrompt in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 9963204C290D52AA000C4A2B /* AppStoreReviewPrompt */; settings = {ATTRIBUTES = (Required, ); }; };
 		9963206C290DE153000C4A2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB55CE242B5EFD00F6604A /* ContentView.swift */; };
 		99632070290DE195000C4A2B /* JingluoShuxue in Frameworks */ = {isa = PBXBuildFile; productRef = 9963206F290DE195000C4A2B /* JingluoShuxue */; };
@@ -125,7 +124,6 @@
 		99632077290DE1DE000C4A2B /* JieqiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F7F27107968007030CC /* JieqiCell.swift */; };
 		99632078290DE1DE000C4A2B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FEA25028DB5007D4137 /* MainView.swift */; };
 		9963207A290DE1DE000C4A2B /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
-		9963207B290DE1DE000C4A2B /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963204A290C32C1000C4A2B /* DateProvider.swift */; };
 		9963207C290DE1DE000C4A2B /* TwelveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994B3BBE28FB34C800F9CF67 /* TwelveView.swift */; };
 		9963207E290DE1DE000C4A2B /* ShierPiguaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* ShierPiguaView.swift */; };
 		99632080290DE1DE000C4A2B /* KnowledgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46339FE825028279007D4137 /* KnowledgeView.swift */; };
@@ -513,7 +511,6 @@
 		995997042B3DF1AB002288D1 /* MultiSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
 		9959970B2B3DF69A002288D1 /* TianganDizhi.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TianganDizhi.xctestplan; sourceTree = "<group>"; };
 		99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TianganDizhiApp.swift; sourceTree = "<group>"; };
-		9963204A290C32C1000C4A2B /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
 		99632069290DD90A000C4A2B /* TianganDizhi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TianganDizhi.entitlements; sourceTree = "<group>"; };
 		996320ED290DE47A000C4A2B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		996321412911B2CD000C4A2B /* MinuteTimeLineScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinuteTimeLineScheduler.swift; sourceTree = "<group>"; };
@@ -779,7 +776,6 @@
 				99632069290DD90A000C4A2B /* TianganDizhi.entitlements */,
 				99632042290C2D1E000C4A2B /* TianganDizhiApp.swift */,
 				46AB55CE242B5EFD00F6604A /* ContentView.swift */,
-				9963204A290C32C1000C4A2B /* DateProvider.swift */,
 				996E548D2E996231004CD36F /* Navigation */,
 				992A7E5F2DB56A8100B372CA /* Date+Jieqi.swift */,
 				996D2C1A29A3DD97008DC1A9 /* Watch */,
@@ -1600,7 +1596,6 @@
 				996C531C2B1FCFAD00AC832F /* GuaListView.swift in Sources */,
 				994B3BBF28FB34C800F9CF67 /* TwelveView.swift in Sources */,
 				46AB55CF242B5EFD00F6604A /* ContentView.swift in Sources */,
-				9963204B290C32C1000C4A2B /* DateProvider.swift in Sources */,
 				996C531A2B1FC68000AC832F /* BaguaView.swift in Sources */,
 				997CD1182954D44100BECF31 /* MaterialBackground.swift in Sources */,
 				994E36A42E26ECC600584B83 /* WuxingCircleView.swift in Sources */,
@@ -1654,7 +1649,6 @@
 				996A19CA2A543E9400D1C943 /* ShiChen.intentdefinition in Sources */,
 				994E36A22E26BB0300584B83 /* TianganCycleView.swift in Sources */,
 				99632082290DE1DE000C4A2B /* DizhiListView.swift in Sources */,
-				9963207B290DE1DE000C4A2B /* DateProvider.swift in Sources */,
 				995997062B3DF1AB002288D1 /* MultiSelector.swift in Sources */,
 				99632081290DE1DE000C4A2B /* DizhiGridView.swift in Sources */,
 				995904182E0AE5BF00E625A4 /* TwelveGodsListView.swift in Sources */,
@@ -1896,7 +1890,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.54.0;
+				MARKETING_VERSION = 2.55.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1931,7 +1925,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.54.0;
+				MARKETING_VERSION = 2.55.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -2114,7 +2108,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.54.0;
+				MARKETING_VERSION = 2.55.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -2164,7 +2158,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.54.0;
+				MARKETING_VERSION = 2.55.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -2299,7 +2293,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.54.0;
+				MARKETING_VERSION = 2.55.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2335,7 +2329,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.54.0;
+				MARKETING_VERSION = 2.55.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2446,7 +2440,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 2.54.0;
+				MARKETING_VERSION = 2.55.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2479,7 +2473,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 2.54.0;
+				MARKETING_VERSION = 2.55.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2514,7 +2508,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.54.0;
+				MARKETING_VERSION = 2.55.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenMacWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -2547,7 +2541,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.54.0;
+				MARKETING_VERSION = 2.55.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenMacWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
