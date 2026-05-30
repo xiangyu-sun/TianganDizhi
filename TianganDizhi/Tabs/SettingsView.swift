@@ -71,6 +71,12 @@ struct SettingsView: View {
       // }
       // #endif
       
+      Section {
+        ShareLink(item: shareText()) {
+          Label("分享今日時辰資訊", systemImage: "square.and.arrow.up")
+        }
+      }
+
       Section(header: Text("春節氣氛組件設置")) {
         Toggle(isOn: $springFestiveBackgroundEnabled) {
           Text("組件紅底")
@@ -123,6 +129,28 @@ struct SettingsView: View {
     .onChange(of: displayMoonPhaseOnWidgets) { _ in
       WidgetCenter.shared.reloadAllTimelines()
     }
+  }
+
+  private func shareText() -> String {
+    let date = Date.now
+    var lines: [String] = []
+    lines.append("日期：\(date.displayStringOfChineseYearMonthDateWithZodiac)")
+    if let shichen = date.shichen {
+      lines.append("時辰：\(shichen.dizhi.aliasName)（\(shichen.dizhi.displayHourText)）")
+    }
+    if let festival = date.chineseFestival {
+      lines.append("今日：\(festival.chineseName)")
+    } else {
+      let jieqi = date.jieQiDisplayText
+      if !jieqi.isEmpty { lines.append("節氣：\(jieqi)") }
+    }
+    let mansion = LunarMansion.lunarMansion(date: date)
+    lines.append("星象：\(mansion.fourSymbol.rawValue)·\(mansion.rawValue)")
+    if let god = date.twelveGod() {
+      lines.append("宜：\(god.do)")
+      lines.append("忌：\(god.dontDo)")
+    }
+    return lines.joined(separator: "\n")
   }
 }
 

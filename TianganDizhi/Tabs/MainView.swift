@@ -177,13 +177,6 @@ struct MainView: View {
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       #if os(iOS) || os(macOS)
-      .overlay(alignment: .topTrailing) {
-        ShareLink(item: shareText(date: date)) {
-          Image(systemName: "square.and.arrow.up")
-            .padding(12)
-        }
-        .accessibilityLabel("分享今日時辰資訊")
-      }
       .popover(isPresented: $showingPopover, arrowEdge: .bottom) {
         VStack(alignment: .leading) {
           let god = date.twelveGod()

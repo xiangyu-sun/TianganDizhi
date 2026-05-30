@@ -45,8 +45,15 @@ struct BaziView: View {
           .pickerStyle(.segmented)
           #endif
 
-          Toggle("使用中國標準時間（CST）", isOn: $useChinaTimezone)
-            .font(bodyFont)
+          VStack(alignment: .leading, spacing: 4) {
+            Toggle("出生地在中國大陸／港澳台", isOn: $useChinaTimezone)
+              .font(bodyFont)
+            if useChinaTimezone && TimeZone.current.secondsFromGMT() != 8 * 3600 {
+              Text("換算後：\(adjustedBirthDate.formatted(date: .abbreviated, time: .shortened))")
+                .font(footnote)
+                .foregroundStyle(.secondary)
+            }
+          }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
