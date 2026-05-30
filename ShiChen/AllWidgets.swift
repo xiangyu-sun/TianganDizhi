@@ -19,6 +19,7 @@ struct AllWidgets: WidgetBundle {
     CountDownWidget()
     SpecialDayWidget()
     if #available(iOSApplicationExtension 17.0, *) {
+      LuckWidget()
       JieqiHealthWidget()
     }
     // if #available(iOS 16.1, *) {
