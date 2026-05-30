@@ -57,14 +57,21 @@ The app relies heavily on custom Swift packages for Chinese astrology calculatio
 ### Key Architecture Patterns
 
 #### Date Management
-- `DateProvider` - Observable object for current date updates
+- Views use `TimelineView(.everyMinute)` for live date updates — there is no `DateProvider` class
 - Custom date extensions (`Date+Ganzhi.swift`, `Date+Jieqi.swift`) for Chinese calendar calculations
 - `DayConverter` - Handles timezone conversions (GTM8 support)
 
 #### Settings Management  
-- `SettingsManager` - Centralized app settings using `@AppStorage`
+- `SettingsManager` - Centralized app settings (`ObservableObject`, injected via `environmentObject`)
+- `FontProvider` - Reactive font management (`ObservableObject`, owns font selection logic, watches shared UserDefaults)
 - Shared UserDefaults between app and extensions via app groups
 - Constants defined in `Constants.swift` for consistent setting keys
+
+#### Deployment Targets and API Constraints
+- iOS 16.0 minimum — cannot use `@Observable`, `Tab` API, or 0/2-param `onChange` (all require iOS 17+)
+- macOS 13.0 minimum
+- Use `ObservableObject`/`@Published`/`@EnvironmentObject` for shared state
+- Custom `EnvironmentValues` keys use the `@Entry` macro (works on iOS 16+)
 
 #### Widget Timeline Architecture
 - `ShichenTimeLineSceduler` - Manages widget update timelines
