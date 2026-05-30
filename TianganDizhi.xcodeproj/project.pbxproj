@@ -1375,6 +1375,7 @@
 				994215C82958A0EF003C5CA1 /* XCRemoteSwiftPackageReference "ChineseAstrologyCalendar" */,
 				998C1DAE2A16CFB300A413B4 /* XCRemoteSwiftPackageReference "swift" */,
 				99A7D0B42F5B21190087AF73 /* XCRemoteSwiftPackageReference "Bagua" */,
+				9968B3302F930000005E242A /* XCRemoteSwiftPackageReference "ChineseTranditionalCalendarUI" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -2725,7 +2726,15 @@
 				kind = branch;
 			};
 		};
-/* End XCRemoteSwiftPackageReference section */
+		9968B3302F930000005E242A /* XCRemoteSwiftPackageReference "ChineseTranditionalCalendarUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xiangyu-sun/ChineseTranditionalCalendarUI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+	/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		46339FEF25029C64007D4137 /* JingluoShuxue */ = {

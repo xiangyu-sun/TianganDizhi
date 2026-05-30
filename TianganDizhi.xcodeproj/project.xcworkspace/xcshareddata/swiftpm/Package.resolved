@@ -1,5 +1,5 @@
 {
-  "originHash" : "c8621ebf3952eac19555088d6b9a3c511aac9eabbabc35e3175be5e5f3ee0d24",
+  "originHash" : "b672ceba58d1f0d177e95f8d610c28e6658cbb1dfac71d13145a60b96cdd7639",
   "pins" : [
     {
       "identity" : "appstorereviewprompt",
@@ -35,6 +35,15 @@
       "state" : {
         "branch" : "master",
         "revision" : "8af9f43f166dcef07cf00634a55b4ef398341fb8"
+      }
+    },
+    {
+      "identity" : "chinesetranditionalcalendarui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xiangyu-sun/ChineseTranditionalCalendarUI.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "dfd7bebe61d94838e1e06dd302ca59b836cba628"
       }
     },
     {
