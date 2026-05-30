@@ -46,7 +46,7 @@ struct BaziView: View {
           #endif
 
           VStack(alignment: .leading, spacing: 4) {
-            Toggle("出生地在中國大陸／港澳台", isOn: $useChinaTimezone)
+            Toggle("出生地使用 UTC+8 時區（北京、台北、新加坡）", isOn: $useChinaTimezone)
               .font(bodyFont)
             if useChinaTimezone && TimeZone.current.secondsFromGMT() != 8 * 3600 {
               Text("換算後：\(adjustedBirthDate.formatted(date: .abbreviated, time: .shortened))")
