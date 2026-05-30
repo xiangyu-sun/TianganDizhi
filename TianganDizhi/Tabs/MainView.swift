@@ -92,6 +92,11 @@ struct MainView: View {
             if let moonphase = date.chineseDay()?.moonPhase {
               fixedMoonInformationView(moonphase)
             }
+            Button("位置資料不可用，點擊重試") {
+              refreshLocationAndWeather()
+            }
+            .font(footnote)
+            .foregroundStyle(.secondary)
           }
         }
 
@@ -172,6 +177,13 @@ struct MainView: View {
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       #if os(iOS) || os(macOS)
+      .overlay(alignment: .topTrailing) {
+        ShareLink(item: shareText(date: date)) {
+          Image(systemName: "square.and.arrow.up")
+            .padding(12)
+        }
+        .accessibilityLabel("分享今日時辰資訊")
+      }
       .popover(isPresented: $showingPopover, arrowEdge: .bottom) {
         VStack(alignment: .leading) {
           let god = date.twelveGod()
@@ -245,6 +257,27 @@ struct MainView: View {
       }
     }
     .font(bodyFont)
+  }
+
+  private func shareText(date: Date) -> String {
+    var lines: [String] = []
+    lines.append("日期：\(date.displayStringOfChineseYearMonthDateWithZodiac)")
+    if let shichen = date.shichen {
+      lines.append("時辰：\(shichen.dizhi.aliasName)（\(shichen.dizhi.displayHourText)）")
+    }
+    if let festival = date.chineseFestival {
+      lines.append("今日：\(festival.chineseName)")
+    } else {
+      let jieqi = date.jieQiDisplayText
+      if !jieqi.isEmpty { lines.append("節氣：\(jieqi)") }
+    }
+    let mansion = LunarMansion.lunarMansion(date: date)
+    lines.append("星象：\(mansion.fourSymbol.rawValue)·\(mansion.rawValue)")
+    if let god = date.twelveGod() {
+      lines.append("宜：\(god.do)")
+      lines.append("忌：\(god.dontDo)")
+    }
+    return lines.joined(separator: "\n")
   }
 }
 

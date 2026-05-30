@@ -152,6 +152,8 @@
 		9968B2CA2F8001EA005E242A /* UpcomingFestivalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */; };
 		9968B2CC2F800202005E242A /* BaziView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CB2F800202005E242A /* BaziView.swift */; };
 		9968B2CD2F800202005E242A /* BaziView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CB2F800202005E242A /* BaziView.swift */; };
+		9968B3102F900000005E242A /* DaYunCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B30F2F900000005E242A /* DaYunCalculator.swift */; };
+		9968B3112F900000005E242A /* DaYunCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B30F2F900000005E242A /* DaYunCalculator.swift */; };
 		9968B2CF2F800214005E242A /* FangweiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CE2F800214005E242A /* FangweiView.swift */; };
 		9968B2D02F800214005E242A /* FangweiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CE2F800214005E242A /* FangweiView.swift */; };
 		9968B2D22F8062E2005E242A /* JieqiHealthWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */; };
@@ -523,6 +525,7 @@
 		9968B2C52F8001E1005E242A /* NayinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NayinListView.swift; sourceTree = "<group>"; };
 		9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingFestivalsView.swift; sourceTree = "<group>"; };
 		9968B2CB2F800202005E242A /* BaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaziView.swift; sourceTree = "<group>"; };
+		9968B30F2F900000005E242A /* DaYunCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaYunCalculator.swift; sourceTree = "<group>"; };
 		9968B2CE2F800214005E242A /* FangweiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FangweiView.swift; sourceTree = "<group>"; };
 		9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiHealthWidget.swift; sourceTree = "<group>"; };
 		9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiHealthMediumView.swift; sourceTree = "<group>"; };
@@ -705,6 +708,7 @@
 				9968B2C52F8001E1005E242A /* NayinListView.swift */,
 				9968B2C82F8001EA005E242A /* UpcomingFestivalsView.swift */,
 				9968B2CB2F800202005E242A /* BaziView.swift */,
+				9968B30F2F900000005E242A /* DaYunCalculator.swift */,
 				99A036442FAFEC72008764DA /* WuxingRelationshipView.swift */,
 			);
 			path = Knowledge;
@@ -1550,6 +1554,7 @@
 				994E369F2E26B44F00584B83 /* TianganStem.swift in Sources */,
 				994B3BC128FB35C000F9CF67 /* DizhiGridView.swift in Sources */,
 				9968B2CD2F800202005E242A /* BaziView.swift in Sources */,
+				9968B3112F900000005E242A /* DaYunCalculator.swift in Sources */,
 				9968B2C92F8001EA005E242A /* UpcomingFestivalsView.swift in Sources */,
 				9968B2C62F8001E1005E242A /* NayinListView.swift in Sources */,
 				46B79C402541F95F003C0B7F /* Environment.swift in Sources */,
@@ -1646,6 +1651,7 @@
 				994E369E2E26B44F00584B83 /* TianganStem.swift in Sources */,
 				99ECAED82A47A202004997FD /* LiushisiGuaView.swift in Sources */,
 				9968B2CC2F800202005E242A /* BaziView.swift in Sources */,
+				9968B3102F900000005E242A /* DaYunCalculator.swift in Sources */,
 				996A19CA2A543E9400D1C943 /* ShiChen.intentdefinition in Sources */,
 				994E36A22E26BB0300584B83 /* TianganCycleView.swift in Sources */,
 				99632082290DE1DE000C4A2B /* DizhiListView.swift in Sources */,

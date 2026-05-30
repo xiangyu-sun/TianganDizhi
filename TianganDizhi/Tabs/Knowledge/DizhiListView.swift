@@ -68,11 +68,20 @@ struct DizhiListView: View {
   }
 
   @Environment(\.bodyFont) var bodyFont
+  @State private var searchText = ""
 
   let disppayMode: DisplayMode
 
+  private var filteredDizhi: [Dizhi] {
+    guard !searchText.isEmpty else { return disppayMode.dizhi }
+    return disppayMode.dizhi.filter { dz in
+      dz.chineseCharacter.localizedStandardContains(searchText) ||
+      dz.aliasName.localizedStandardContains(searchText)
+    }
+  }
+
   var body: some View {
-    List(disppayMode.dizhi, id: \.self) { dz in
+    List(filteredDizhi, id: \.self) { dz in
       switch disppayMode {
       case .name:
         DizhiCell(dizhi: dz)
@@ -100,6 +109,18 @@ struct DizhiListView: View {
         }
       }
     }
+    .overlay {
+      if filteredDizhi.isEmpty {
+        VStack(spacing: 8) {
+          Image(systemName: "magnifyingglass")
+            .font(.largeTitle)
+            .foregroundStyle(.secondary)
+          Text("無結果")
+            .foregroundStyle(.secondary)
+        }
+      }
+    }
+    .searchable(text: $searchText)
     .font(bodyFont)
     .navigationTitle(disppayMode.title)
   }

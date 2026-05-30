@@ -9,20 +9,43 @@ struct BaziView: View {
   @Environment(\.title3Font) var title3Font
 
   @State private var birthDate = Date()
+  @State private var isMale = true
+  @State private var useChinaTimezone = false
 
-  private var bazi: Bazi? {
-    Bazi(date: birthDate)
+  private var adjustedBirthDate: Date {
+    guard useChinaTimezone else { return birthDate }
+    let chinaOffset = 8 * 3600
+    let localOffset = TimeZone.current.secondsFromGMT(for: birthDate)
+    return birthDate.addingTimeInterval(TimeInterval(chinaOffset - localOffset))
+  }
+
+  private var bazi: Bazi? { Bazi(date: adjustedBirthDate) }
+
+  private var daYun: (startAge: Int, cycles: [DaYun])? {
+    DaYunCalculator.calculate(birthDate: adjustedBirthDate, isMale: isMale)
   }
 
   var body: some View {
     ScrollView {
       VStack(spacing: 20) {
+        // Date + options picker
         VStack(alignment: .leading, spacing: 8) {
           Text("出生日期時辰")
             .font(footnote)
             .foregroundStyle(.secondary)
           DatePicker("", selection: $birthDate, displayedComponents: [.date, .hourAndMinute])
             .labelsHidden()
+            .font(bodyFont)
+
+          Picker("性別", selection: $isMale) {
+            Text("男").tag(true)
+            Text("女").tag(false)
+          }
+          #if !os(watchOS)
+          .pickerStyle(.segmented)
+          #endif
+
+          Toggle("使用中國標準時間（CST）", isOn: $useChinaTimezone)
             .font(bodyFont)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -32,6 +55,10 @@ struct BaziView: View {
         if let bazi {
           BaziPillarsSection(bazi: bazi)
           BaziElementBalanceSection(bazi: bazi)
+        }
+
+        if let daYun {
+          BaziDaYunSection(startAge: daYun.startAge, cycles: daYun.cycles)
         }
       }
       .padding()
@@ -177,6 +204,53 @@ struct BaziElementBalanceSection: View {
             .font(bodyFont)
             .foregroundStyle(.green)
         }
+      }
+    }
+    .padding()
+    .background(.regularMaterial, in: .rect(cornerRadius: 12))
+  }
+}
+
+// MARK: - BaziDaYunSection
+
+struct BaziDaYunSection: View {
+  let startAge: Int
+  let cycles: [DaYun]
+  @Environment(\.bodyFont) var bodyFont
+  @Environment(\.footnote) var footnote
+  @Environment(\.title3Font) var title3Font
+
+  var body: some View {
+    VStack(alignment: .leading, spacing: 12) {
+      HStack {
+        Text("大運")
+          .font(title3Font)
+        Spacer()
+        Text("起運：\(startAge)歲")
+          .font(footnote)
+          .foregroundStyle(.secondary)
+      }
+
+      ScrollView(.horizontal, showsIndicators: false) {
+        HStack(spacing: 8) {
+          ForEach(cycles) { cycle in
+            VStack(spacing: 4) {
+              Text(cycle.tiangan.chineseCharacter)
+                .font(bodyFont)
+                .foregroundStyle(cycle.tiangan.wuxing.traditionalColor)
+              Text(cycle.dizhi.chineseCharacter)
+                .font(bodyFont)
+                .foregroundStyle(cycle.dizhi.wuxing.traditionalColor)
+              Text("\(cycle.startAge)")
+                .font(footnote)
+                .foregroundStyle(.secondary)
+            }
+            .frame(width: 44)
+            .padding(.vertical, 8)
+            .background(.regularMaterial, in: .rect(cornerRadius: 8))
+          }
+        }
+        .padding(.horizontal, 2)
       }
     }
     .padding()

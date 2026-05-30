@@ -16,16 +16,13 @@ struct JieqiCell: View {
   @Environment(\.title3Font) var title3Font
 
   let jieqi: Jieqi
+  var isCurrent: Bool = false
+  var daysUntil: Int? = nil
 
   var body: some View {
     #if os(watchOS)
-
     VStack(alignment: .leading) {
-      HStack {
-        Text(jieqi.chineseName)
-        Text("(\(jieqi.qi ? "氣" : "節"))")
-      }
-      .font(title3Font)
+      jieqiHeader
       Text(jieqi.qishierHou)
         .font(bodyFont)
       Text(jieqi.healthTip)
@@ -44,11 +41,7 @@ struct JieqiCell: View {
     #else
     HStack {
       VStack(alignment: .leading) {
-        HStack {
-          Text(jieqi.chineseName)
-          Text("(\(jieqi.qi ? "氣" : "節"))")
-        }
-        .font(title3Font)
+        jieqiHeader
         Text(jieqi.qishierHou)
           .font(bodyFont)
         Text(jieqi.healthTip)
@@ -70,10 +63,34 @@ struct JieqiCell: View {
     }
     .accessibilityElement(children: .combine)
     .accessibilityLabel("\(jieqi.chineseName)，\(jieqi.qi ? "氣" : "節")，\(jieqi.qishierHou)")
+    .listRowBackground(isCurrent ? Color.accentColor.opacity(0.12) : Color.clear)
     #endif
+  }
+
+  private var jieqiHeader: some View {
+    HStack {
+      HStack {
+        Text(jieqi.chineseName)
+        Text("(\(jieqi.qi ? "氣" : "節"))")
+      }
+      .font(title3Font)
+
+      if isCurrent {
+        Text("當前")
+          .font(.caption.bold())
+          .foregroundStyle(.white)
+          .padding(.horizontal, 6)
+          .padding(.vertical, 2)
+          .background(Color.accentColor, in: .capsule)
+      } else if let days = daysUntil {
+        Text("\(days)日後")
+          .font(.caption)
+          .foregroundStyle(.secondary)
+      }
+    }
   }
 }
 
 #Preview {
-  JieqiCell(jieqi: .whiteDew)
+  JieqiCell(jieqi: .whiteDew, isCurrent: true)
 }
