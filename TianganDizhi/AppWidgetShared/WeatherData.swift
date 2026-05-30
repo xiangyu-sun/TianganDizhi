@@ -8,7 +8,7 @@ import WidgetKit
 
 // MARK: - ChineseMoonPhase + Codable
 
-extension ChineseMoonPhase: Codable { }
+extension ChineseMoonPhase: @retroactive Codable { }
 
 // MARK: - WeatherData
 

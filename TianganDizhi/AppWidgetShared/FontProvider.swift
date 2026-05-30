@@ -4,7 +4,7 @@
 //
 
 import Combine
-import SwiftUI
+@preconcurrency import SwiftUI
 
 // MARK: - FontProvider
 
@@ -21,7 +21,7 @@ final class FontProvider: ObservableObject {
 
   // MARK: - Private Properties
 
-  private var defaultsObserver: NSObjectProtocol?
+  nonisolated(unsafe) private var defaultsObserver: NSObjectProtocol?
 
   // MARK: - Initialization
 
@@ -33,10 +33,12 @@ final class FontProvider: ObservableObject {
       object: Constants.sharedUserDefault,
       queue: .main
     ) { [weak self] _ in
-      guard let self else { return }
-      let newValue = Constants.sharedUserDefault?.bool(forKey: Constants.useSystemFont) ?? false
-      if self.useSystemFont != newValue {
-        self.useSystemFont = newValue
+      Task { @MainActor [weak self] in
+        guard let self else { return }
+        let newValue = Constants.sharedUserDefault?.bool(forKey: Constants.useSystemFont) ?? false
+        if self.useSystemFont != newValue {
+          self.useSystemFont = newValue
+        }
       }
     }
   }

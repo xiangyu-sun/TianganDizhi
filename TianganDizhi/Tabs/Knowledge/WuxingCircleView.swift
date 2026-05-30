@@ -2,7 +2,7 @@ import SwiftUI
 import ChineseAstrologyCalendar
 import CoreGraphics
 
-extension Wuxing: Identifiable {
+extension Wuxing: @retroactive Identifiable {
   public var id: Int {
     rawValue
   }

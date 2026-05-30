@@ -8,11 +8,10 @@
 
 import ChineseAstrologyCalendar
 import CoreLocation
-import WidgetKit
+@preconcurrency import WidgetKit
 
 // MARK: - JieqiTimelineProvider
 
-@MainActor
 struct JieqiTimelineProvider: IntentTimelineProvider {
 
   // MARK: Internal
@@ -20,7 +19,7 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
   func placeholder(in _: Context) -> SimpleEntry {
     let configuration = ConfigurationIntent()
     configuration.date = Date().currentCalendarDateCompoenents
-    if let location = LocationManager.shared.lastLocation {
+    if let location = cachedLastLocation() {
       configuration.location = "\(String(describing: location))"
     }
 
@@ -43,7 +42,7 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
     var entries: [SimpleEntry] = []
 
     configuration.date = Calendar.current.dateComponents(in: .current, from: Date())
-    if let location = LocationManager.shared.lastLocation {
+    if let location = cachedLastLocation() {
       configuration.location = "\(String(describing: location))"
     }
 
@@ -65,10 +64,17 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
 
   // MARK: Private
 
+  private func cachedLastLocation() -> CLLocation? {
+    if let data = Constants.sharedUserDefault?.object(forKey: Constants.lastlocationKey) as? Data {
+      return try? NSKeyedUnarchiver.unarchivedObject(ofClass: CLLocation.self, from: data)
+    }
+    return nil
+  }
+
   private func defaultRecommendedIntents() -> [ConfigurationIntent] {
     let configuration = ConfigurationIntent()
     configuration.date = Date().currentCalendarDateCompoenents
-    if let location = LocationManager.shared.lastLocation {
+    if let location = cachedLastLocation() {
       configuration.location = "\(String(describing: location))"
     }
     return [configuration]

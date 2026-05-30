@@ -1,7 +1,6 @@
 import ChineseAstrologyCalendar
 import CoreLocation
-import WidgetKit
-@MainActor
+@preconcurrency import WidgetKit
 struct ShichenTimelineProvider: IntentTimelineProvider {
 
   // MARK: Internal
@@ -9,7 +8,7 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
   func placeholder(in _: Context) -> SimpleEntry {
     let configuration = ConfigurationIntent()
     configuration.date = Date().currentCalendarDateCompoenents
-    if let location = LocationManager.shared.lastLocation {
+    if let location = cachedLastLocation() {
       configuration.location = "\(String(describing: location))"
     }
 
@@ -32,7 +31,7 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
     var entries: [SimpleEntry] = []
 
     configuration.date = Calendar.current.dateComponents(in: .current, from: Date())
-    if let location = LocationManager.shared.lastLocation {
+    if let location = cachedLastLocation() {
       configuration.location = "\(String(describing: location))"
     }
 
@@ -54,10 +53,17 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
 
   // MARK: Private
 
+  private func cachedLastLocation() -> CLLocation? {
+    if let data = Constants.sharedUserDefault?.object(forKey: Constants.lastlocationKey) as? Data {
+      return try? NSKeyedUnarchiver.unarchivedObject(ofClass: CLLocation.self, from: data)
+    }
+    return nil
+  }
+
   private func defaultRecommendedIntents() -> [ConfigurationIntent] {
     let configuration = ConfigurationIntent()
     configuration.date = Date().currentCalendarDateCompoenents
-    if let location = LocationManager.shared.lastLocation {
+    if let location = cachedLastLocation() {
       configuration.location = "\(String(describing: location))"
     }
     return [configuration]

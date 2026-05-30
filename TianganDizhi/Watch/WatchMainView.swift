@@ -24,9 +24,11 @@ struct WatchMainView: View {
       HStack {
         Text(date.displayStringOfChineseYearMonthDateWithZodiac)
         if let value = wetherData {
+          Image(systemName: value.moonPhase.moonPhase.symbolName)
           Text(value.moonPhase.name(traditionnal: true))
-        } else {
-          Text(date.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming) ?? "")
+        } else if let moonPhase = date.chineseDay()?.moonPhase {
+          Image(systemName: moonPhase.moonPhase.symbolName)
+          Text(moonPhase.name(traditionnal: useTranditionalNaming))
         }
       }
       if let shichen = date.shichen {

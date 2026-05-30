@@ -25,7 +25,7 @@ extension Wuxing {
   }
 }
 
-extension Tiangan: Identifiable {
+extension Tiangan: @retroactive Identifiable {
   public var id: Int {
     rawValue
   }
