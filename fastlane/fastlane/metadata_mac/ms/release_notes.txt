@@ -1,0 +1,4 @@
+- Widget nasib baharu: aktiviti baik dan buruk hari ini sekilas pandang (saiz segi empat dan sederhana)
+- Zon waktu UTC+8 Bazi kini merangkumi Taiwan dan Singapura
+- Butang kongsi dipindahkan ke Tetapan untuk antara muka yang lebih kemas
+- Pembetulan pepijat dan peningkatan kestabilan

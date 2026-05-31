@@ -1,0 +1,55 @@
+Khám phá trí tuệ thiên văn, lịch pháp và triết học truyền thống Trung Hoa——tất hợp Thiên Can Địa Chi, Thời Thần, Tiết Khí, Bát Quái, Tý Ngọ Lưu Chú vào một ứng dụng tinh tế. Hỗ trợ iPhone, iPad, Mac và Apple Watch.
+
+Mười Hai Thời Thần
+- Đồng hồ tròn hiển thị thời gian thực 12 thời thần truyền thống (Tý, Sửu, Dần, Mão, Thìn, Tỵ, Ngọ, Mùi, Thân, Dậu, Tuất, Hợi)
+- Theo dõi tiến trình khắc trong mỗi thời thần
+- Tên gọi khác và bối cảnh văn hóa của từng thời thần
+- Hỗ trợ Live Activity và Dynamic Island để xem thời thần ngay trên màn hình khóa
+
+Thiên Can Địa Chi & Lịch Pháp
+- Chuyển đổi âm dương lịch, ghi chép đầy đủ năm tháng ngày giờ theo Thiên Can Địa Chi
+- Hiển thị đầy đủ 60 Hoa Giáp
+- 24 Tiết Khí và đếm ngược đến tiết khí tiếp theo
+- 12 con giáp và ngũ hành tương ứng
+- Thập nhị kiến trừ thần, xem ngày lành giờ tốt hàng ngày
+- Theo dõi Nhị Thập Bát Tú
+
+Kinh Dịch & Bát Quái
+- Tiên Thiên Bát Quái của Phục Hy và Hậu Thiên Bát Quái của Văn Vương
+- Đầy đủ 64 quẻ với hình tượng và giải thích
+- 12 Tịch Quái theo âm và dương lịch
+- Tương quan giữa nguyệt tướng và quẻ Kinh Dịch
+
+Y Học Cổ Truyền
+- Tý Ngọ Lưu Chú: hiển thị thời gian thực kinh lạc và tạng phủ tương ứng với thời thần hiện tại
+- Hệ thống Ngũ Hành: tương ứng tạng phủ, cảm xúc, ngũ vị, phương vị, màu sắc
+- Gợi ý dưỡng sinh thực tiễn dựa trên nguyên lý châm cứu theo giờ
+
+Nhạc Lý Truyền Thống
+- Ngũ âm Cung Thương Giốc Chủy Vũ, kèm đối chiếu ký hiệu nhạc Đường và tên nốt phương Tây
+- Tương quan Thập Nhị Luật Lữ và Thập Nhị Địa Chi
+
+Thời Tiết & Thiên Văn
+- Giờ mọc và lặn của mặt trời, mặt trăng qua Apple WeatherKit
+- Hiển thị pha mặt trăng với tên gọi theo âm lịch truyền thống
+- Nhiệt độ và thời tiết hàng ngày
+
+Widget
+- Widget màn hình chính kích thước nhỏ, vừa, lớn và siêu lớn
+- Widget màn hình khóa hiển thị thời thần, ngày âm lịch, đếm ngược tiết khí
+- Widget đếm ngược Tết Nguyên Đán
+- Complications và widget Apple Watch
+- Hiển thị thanh menu macOS với sao chép nhanh
+
+Apple Watch
+- Ứng dụng đồng hồ chuyên dụng với đồng hồ thời thần tròn
+- Nhiều loại complication cho mặt đồng hồ
+- Xem kinh lạc và tạng phủ ngay trên cổ tay
+
+Tùy Chỉnh
+- Chuyển đổi tên gọi phồn thể và giản thể
+- Phông thư pháp (WeibeiTC-Bold) hoặc phông hệ thống
+- Giao diện đỏ Tết
+- Tùy chọn múi giờ GMT+8 cho người dùng hải ngoại
+
+Dù bạn nghiên cứu văn hóa truyền thống Trung Hoa, học kinh lạc y học cổ truyền, hay đơn giản là tò mò về thiên văn lịch pháp cổ đại——Thiên Can Địa Chi là người bạn đồng hành không thể thiếu của bạn.

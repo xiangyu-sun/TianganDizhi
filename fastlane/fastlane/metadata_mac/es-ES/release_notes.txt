@@ -1,0 +1,4 @@
+- Nuevo widget de suerte: actividades auspiciosas e inauspiciosas del día de un vistazo (tamaños rectangular y mediano)
+- La zona horaria UTC+8 del Bazi ahora incluye Taiwán y Singapur
+- Botón de compartir movido a Ajustes para una interfaz más limpia
+- Corrección de errores y mejoras de estabilidad

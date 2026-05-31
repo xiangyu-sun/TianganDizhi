@@ -1,0 +1,4 @@
+- Nouveau widget chance : activités fastes et néfastes du jour en un coup d'œil (formats rectangulaire et moyen)
+- Le fuseau horaire UTC+8 du Bazi inclut désormais Taïwan et Singapour
+- Bouton de partage déplacé dans les Réglages pour une interface plus épurée
+- Corrections de bugs et améliorations de stabilité
