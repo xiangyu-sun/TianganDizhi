@@ -31,39 +31,30 @@ struct LuckRectangularWidgetView: View {
   }
 
   var body: some View {
-    VStack(alignment: .leading) {
-      // Row 1: 沖 + Dizhi + zodiac | auspice badge
-      HStack {
-        if let chong = chongDizhi {
-          Text("沖")
-            .foregroundStyle(.secondary)
-          
-          Text(chong.chineseCharacter)
-            .widgetAccentable()
-          
-          Text(Zodiac(chong).rawValue)
-        }
-        
-        Spacer()
-        
-        if let god {
-          Text(god.xiongjiL)
-            .foregroundStyle(auspiceColor)
-        }
-      }
-      .font(.body.bold())
-
-      // Row 2: god name · 宜 keywords
+    HStack {
       if let god {
         HStack() {
           Text(god.chinese)
-            .widgetAccentable()
+
         }
-        
+      }
+      
+      if let chong = chongDizhi {
+        Text("沖")
+        Text(chong.chineseCharacter)
+ 
+        Text(Zodiac(chong).rawValue)
+      }
+      
+      Spacer()
+      
+      if let god {
+        Text(god.xiongjiL)
+          .foregroundStyle(auspiceColor)
       }
     }
-    .font(.caption)
-    .frame(maxWidth: .infinity, alignment: .leading)
+    .widgetAccentable()
+    .font(.body)
   }
 }
 
