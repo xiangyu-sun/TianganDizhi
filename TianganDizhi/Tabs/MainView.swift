@@ -300,7 +300,9 @@ struct CalendarSheetView: View {
     NavigationStack {
       MonthlyCalendarView(viewModel: viewModel)
         .navigationTitle("月曆")
+      #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+      #endif
     }
     .presentationDetents([.medium, .large])
     .presentationDragIndicator(.visible)
