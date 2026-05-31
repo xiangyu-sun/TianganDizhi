@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/ChineseTranditionalCalendarUI.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "dfd7bebe61d94838e1e06dd302ca59b836cba628"
+        "branch" : "master",
+        "revision" : "108a53bf99c888bb79c7523c2c33378daa255e2a"
       }
     },
     {

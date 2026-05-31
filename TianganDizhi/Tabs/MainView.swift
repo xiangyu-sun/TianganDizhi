@@ -7,6 +7,7 @@
 //
 
 import ChineseAstrologyCalendar
+import ChineseTranditionalCalendarUI
 import SwiftUI
 import WidgetKit
 
@@ -49,6 +50,7 @@ struct MainView: View {
   }
 
   @State private var showingPopover = false
+  @State private var showingCalendar = false
 
   var body: some View {
     TimelineView(.everyMinute) { context in
@@ -59,13 +61,19 @@ struct MainView: View {
         #else
         VStack(spacing: 0) {
           let god = date.twelveGod()
-          HStack {
-            Text(date.displayStringOfChineseYearMonthDateWithZodiac)
-            Text(god.map { "·" + $0.chinese } ?? "")
+          Button {
+            showingCalendar = true
+          } label: {
+            HStack {
+              Text(date.displayStringOfChineseYearMonthDateWithZodiac)
+              Text(god.map { "·" + $0.chinese } ?? "")
+            }
+            .lineLimit(1)
+            .minimumScaleFactor(0.8)
+            .font(titleFont)
           }
-          .lineLimit(1)
-          .minimumScaleFactor(0.8)
-          .font(titleFont)
+          .buttonStyle(.plain)
+          .accessibilityLabel("月曆，點擊查看")
 
           if let nextChineseNewYear = (useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()).nextChineseNewYear(),
              (useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()).isWithinMonths(3, beforeChineseNewYearFrom: nextChineseNewYear) {
@@ -203,6 +211,13 @@ struct MainView: View {
       .frame(minHeight: 640)
       #endif
     }
+    .sheet(isPresented: $showingCalendar) {
+      #if os(iOS) || os(macOS)
+      if #available(iOS 17, macOS 14, *) {
+        CalendarSheetView()
+      }
+      #endif
+    }
     .onAppear {
       rebuildCachedValues()
       refreshLocationAndWeather()
@@ -273,6 +288,25 @@ struct MainView: View {
     return lines.joined(separator: "\n")
   }
 }
+
+// MARK: - CalendarSheetView
+
+#if os(iOS) || os(macOS)
+@available(iOS 17, macOS 14, *)
+struct CalendarSheetView: View {
+  @State private var viewModel = MonthlyCalendarViewModel()
+
+  var body: some View {
+    NavigationStack {
+      MonthlyCalendarView(viewModel: viewModel)
+        .navigationTitle("月曆")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+    .presentationDetents([.medium, .large])
+    .presentationDragIndicator(.visible)
+  }
+}
+#endif
 
 #Preview {
   MainView()
