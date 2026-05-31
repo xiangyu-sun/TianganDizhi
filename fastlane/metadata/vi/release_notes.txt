@@ -1,1 +1,4 @@
-- Sửa lỗi tính toán ngày Tiết khí
+- Widget may mắn mới: xem ngay hoạt động tốt và xấu trong ngày (kích thước hình chữ nhật và trung bình)
+- Múi giờ UTC+8 của Bát Tự nay bao gồm Đài Loan và Singapore
+- Nút chia sẻ được chuyển vào Cài đặt để giao diện gọn gàng hơn
+- Sửa lỗi và cải thiện độ ổn định

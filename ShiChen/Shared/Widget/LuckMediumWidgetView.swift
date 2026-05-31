@@ -30,72 +30,60 @@ struct LuckMediumWidgetView: View {
   }
 
   var body: some View {
-    HStack(spacing: 0) {
+    HStack(alignment: .top, spacing: 0) {
       // Left: god name + 宜
-      VStack(alignment: .leading, spacing: 6) {
+      VStack(alignment: .leading) {
         if let god {
-          HStack(alignment: .firstTextBaseline, spacing: 6) {
+          HStack(alignment: .top) {
             Text(god.chinese)
-              .font(.title2.bold())
               .widgetAccentable()
+            
             Text(god.xiongjiL)
-              .font(.caption)
               .foregroundStyle(auspiceColor)
-              .padding(.horizontal, 5)
-              .padding(.vertical, 2)
               .background(auspiceColor.opacity(0.15), in: .capsule)
           }
+          .font(.title2.bold())
 
-          VStack(alignment: .leading, spacing: 2) {
+          VStack(alignment: .leading) {
             Text("宜")
-              .font(.caption2)
-              .foregroundStyle(.secondary)
             Text(god.do)
-              .font(.caption)
-              .lineLimit(3)
           }
+          .font(.caption)
         }
-        Spacer()
       }
-      .frame(maxWidth: .infinity, alignment: .leading)
+      .frame(maxHeight: .infinity, alignment: .leading)
 
       Divider()
-        .padding(.vertical, 4)
 
       // Right: 沖 + 忌
-      VStack(alignment: .leading, spacing: 6) {
+      VStack(alignment: .leading) {
         if let chong = chongDizhi {
-          VStack(alignment: .leading, spacing: 2) {
-            Text("今日沖")
-              .font(.caption2)
-              .foregroundStyle(.secondary)
-            HStack(spacing: 2) {
+          VStack(alignment: .leading) {
+            HStack(alignment: .top) {
+              Text("今日沖")
+              
               Text(chong.chineseCharacter)
-                .font(.title2.bold())
                 .widgetAccentable()
+              
               Text(Zodiac(chong).rawValue)
-                .font(.body)
+            
             }
+            .font(.title2.bold())
           }
         }
 
         if let god {
-          VStack(alignment: .leading, spacing: 2) {
+          VStack(alignment: .leading) {
             Text("忌")
-              .font(.caption2)
-              .foregroundStyle(.secondary)
             Text(god.dontDo)
-              .font(.caption)
-              .foregroundStyle(.secondary)
-              .lineLimit(3)
           }
+          .font(.caption)
         }
-        Spacer()
       }
       .frame(maxWidth: .infinity, alignment: .leading)
-      .padding(.leading, 8)
     }
-    .padding()
+    .ignoresSafeArea(.all)
+    .materialBackgroundWidget(with: Image("background"), toogle: true)
     .widgetAccentable()
   }
 }

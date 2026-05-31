@@ -1,1 +1,4 @@
-- Fixed Jieqi date calculation accuracy
+- New Lucky Widget: daily auspicious and inauspicious activities at a glance (rectangular and medium sizes)
+- Bazi UTC+8 timezone now includes Taiwan and Singapore
+- Share button moved to Settings for a cleaner interface
+- Bug fixes and stability improvements
