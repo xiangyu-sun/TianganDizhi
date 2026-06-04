@@ -25,15 +25,9 @@ struct TianganDizhiApp: App {
     }
 
     #if os(macOS)
-    MenuBarExtra {
+    // TEMP DIAGNOSTIC: MenuBarExtra disabled to test WindowGroup visibility
+    MenuBarExtra("天干地支") {
       MenuBarContentView()
-    } label: {
-      TimelineView(.everyMinute) { context in
-        let date = context.date
-        let dizh = date.shichen?.dizhi ?? .zi
-        let god = date.twelveGod().map { "·" + $0.chinese } ?? ""
-        Text(date.displayStringOfChineseYearMonthDateWithZodiac + dizh.displayHourText + god)
-      }
     }
     #endif
   }

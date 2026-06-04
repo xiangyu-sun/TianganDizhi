@@ -63,7 +63,10 @@
       "Bash(git *)",
       "Bash(sed -i '' 's/@State private var fontProvider = FontProvider\\(\\)/@StateObject private var fontProvider = FontProvider\\(\\)/g' /Users/xiangyu.sun/TianganDizhi/ShiChen/Shared/ShiChenYearMonthDateEntryView.swift /Users/xiangyu.sun/TianganDizhi/ShiChen/Shared/Content/JieqiHealthMediumView.swift /Users/xiangyu.sun/TianganDizhi/ShiChen/Shared/Content/ExtraLargeWidgetView.swift /Users/xiangyu.sun/TianganDizhi/ShiChen/Shared/Content/ShiChenEntryView.swift /Users/xiangyu.sun/TianganDizhi/ShiChen/Shared/Content/MediumWidgetView.swift /Users/xiangyu.sun/TianganDizhi/ShiChen/Shared/LockScreen/CompactShichenView.swift)",
       "Bash(sed -i '' 's/let weatherData = WeatherData.shared/@ObservedObject var weatherData = WeatherData.shared/g' /Users/xiangyu.sun/TianganDizhi/ShiChen/Shared/Content/ExtraLargeWidgetView.swift /Users/xiangyu.sun/TianganDizhi/ShiChen/Shared/Content/MediumWidgetView.swift)",
-      "Bash(plutil *)"
+      "Bash(plutil *)",
+      "Bash(open /Users/xiangyu.sun/Library/Developer/Xcode/DerivedData/TianganDizhi-gvsmurnzubdyzzgzwotwqlwdsfst/Build/Products/Debug/TianganDizhi.app)",
+      "Bash(osascript -e 'tell application \"System Events\" to tell process \"TianganDizhi\" to get {name, value of attribute \"AXMinimized\"} of every window')",
+      "Bash(osascript -e 'tell application \"System Events\" to tell process \"TianganDizhi\" to count windows')"
     ],
     "deny": []
   }
