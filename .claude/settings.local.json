@@ -66,7 +66,12 @@
       "Bash(plutil *)",
       "Bash(open /Users/xiangyu.sun/Library/Developer/Xcode/DerivedData/TianganDizhi-gvsmurnzubdyzzgzwotwqlwdsfst/Build/Products/Debug/TianganDizhi.app)",
       "Bash(osascript -e 'tell application \"System Events\" to tell process \"TianganDizhi\" to get {name, value of attribute \"AXMinimized\"} of every window')",
-      "Bash(osascript -e 'tell application \"System Events\" to tell process \"TianganDizhi\" to count windows')"
+      "Bash(osascript -e 'tell application \"System Events\" to tell process \"TianganDizhi\" to count windows')",
+      "Bash(/usr/bin/python3 *)",
+      "Bash(defaults read *)",
+      "Bash(swift /tmp/wins2.swift)",
+      "Bash(pkill -x TianganDizhi)",
+      "Bash(swift /tmp/wins.swift)"
     ],
     "deny": []
   }

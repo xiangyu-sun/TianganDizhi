@@ -1,4 +1,5 @@
 import ChineseAstrologyCalendar
+import Combine
 import SwiftUI
 
 @main
@@ -14,6 +15,13 @@ struct TianganDizhiApp: App {
 
   @StateObject private var fontProvider = FontProvider()
 
+  #if os(macOS)
+  // A TimelineView used as a MenuBarExtra `label:` collapses the WindowGroup
+  // window to 0×0 (it never shows). Drive the menu bar title from a plain
+  // @Published string instead so the label stays live AND the window appears.
+  @StateObject private var menuBarTitle = MenuBarTitleProvider()
+  #endif
+
   var body: some Scene {
     WindowGroup {
       ContentView()
@@ -25,8 +33,7 @@ struct TianganDizhiApp: App {
     }
 
     #if os(macOS)
-    // TEMP DIAGNOSTIC: MenuBarExtra disabled to test WindowGroup visibility
-    MenuBarExtra("天干地支") {
+    MenuBarExtra(menuBarTitle.title) {
       MenuBarContentView()
     }
     #endif
@@ -39,3 +46,57 @@ struct TianganDizhiApp: App {
     print("Deep link received: \(url)")
   }
 }
+
+#if os(macOS)
+/// Supplies the macOS menu bar title, refreshed on each minute boundary.
+/// Mirrors the main screen title (Chinese year/month/date + shichen + 十二神).
+final class MenuBarTitleProvider: ObservableObject {
+
+  // MARK: Lifecycle
+
+  init() {
+    refresh()
+    scheduleNextTick()
+  }
+
+  deinit {
+    timer?.invalidate()
+  }
+
+  // MARK: Internal
+
+  @Published var title = ""
+
+  // MARK: Private
+
+  private var timer: Timer?
+
+  private func refresh() {
+    let date = Date()
+    let dizhi = date.shichen?.dizhi ?? .zi
+    let god = date.twelveGod().map { "·" + $0.chinese } ?? ""
+    title = date.displayStringOfChineseYearMonthDateWithZodiac + dizhi.displayHourText + god
+  }
+
+  /// Fire at the start of the next minute, then every 60s thereafter.
+  private func scheduleNextTick() {
+    let now = Date()
+    let secondsIntoMinute = Calendar.current.component(.second, from: now)
+    let delay = TimeInterval(60 - secondsIntoMinute)
+    let timer = Timer(timeInterval: delay, repeats: false) { [weak self] _ in
+      self?.refresh()
+      self?.startMinuteTimer()
+    }
+    RunLoop.main.add(timer, forMode: .common)
+    self.timer = timer
+  }
+
+  private func startMinuteTimer() {
+    let timer = Timer(timeInterval: 60, repeats: true) { [weak self] _ in
+      self?.refresh()
+    }
+    RunLoop.main.add(timer, forMode: .common)
+    self.timer = timer
+  }
+}
+#endif
