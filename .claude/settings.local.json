@@ -71,7 +71,19 @@
       "Bash(defaults read *)",
       "Bash(swift /tmp/wins2.swift)",
       "Bash(pkill -x TianganDizhi)",
-      "Bash(swift /tmp/wins.swift)"
+      "Bash(swift /tmp/wins.swift)",
+      "Skill(update-config)",
+      "Bash(gh repo *)",
+      "Bash(mkdir -p /Users/xiangyu.sun/beadify-support/assets)",
+      "Bash(mkdir -p /Users/xiangyu.sun/lunar-calendar-support/assets)",
+      "Bash(sed -n '1,22p' TianganDizhi/Tabs/Gua/GuaListView.swift)",
+      "Bash(sed -n '1,12p' TianganDizhi/TianganDizhiApp.swift)",
+      "Bash(sed -n '40,50p' TianganDizhi/TianganDizhiApp.swift)",
+      "Bash(sed -n '1,12p' ShiChen/Shared/Content/MediumWidgetView.swift)",
+      "Bash(sed -n '65,78p' ShiChen/Shared/Content/MediumWidgetView.swift)",
+      "Bash(sed -n '1,12p' ShiChen/Shared/Content/ExtraLargeWidgetView.swift)",
+      "Bash(sed -n '83,95p' ShiChen/Shared/Content/ExtraLargeWidgetView.swift)",
+      "Bash(tee /tmp/build.log)"
     ],
     "deny": []
   }
