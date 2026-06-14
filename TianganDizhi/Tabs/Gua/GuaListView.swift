@@ -17,7 +17,6 @@ struct GuaListView: View {
   @State private var navigationPath = NavigationPath()
 
   var body: some View {
-    let _ = print("Loaded  GuaListView")
     NavigationStack(path: $navigationPath) {
       List {
         Section(header: Text("八卦")) {

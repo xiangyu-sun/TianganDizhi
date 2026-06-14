@@ -93,7 +93,7 @@ final class LocationManager: NSObject, @MainActor CLLocationManagerDelegate {
 
         manager.stopUpdatingLocation()
       } catch {
-        print(error)
+        logger.error("Failed to archive location: \(error.localizedDescription)")
       }
 
       locationContinuation?.resume(returning: location)

@@ -6,8 +6,11 @@
 //  Copyright © 2023 孙翔宇. All rights reserved.
 //
 
+import os
 import SwiftUI
 import WidgetKit
+
+private let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.Widget", category: "MediumWidget")
 
 // MARK: - MediumWidgetView
 
@@ -69,7 +72,7 @@ struct MediumWidgetView: View {
             try await self.weatherData.dailyForecast(for: location)
           }
         } catch {
-          print(error)
+          logger.error("Widget weather fetch failed: \(error.localizedDescription)")
         }
       }
     }

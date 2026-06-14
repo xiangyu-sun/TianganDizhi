@@ -9,11 +9,13 @@
 import UIKit
 #endif
 import Foundation
+import os
 
 // MARK: - FontManager
 
 enum FontManager {
     static let customFontName = "Weibei TC Bold"
+    private static let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.FontManager", category: "Font")
     
     /// Loads and verifies custom fonts are available
     static func loadCustomFonts() {
@@ -34,7 +36,7 @@ enum FontManager {
         if let customFont = UIFont(name: customFontName, size: size) {
             return customFont
         }
-        print("⚠️ Warning: Custom font '\(customFontName)' not found, using system font")
+        logger.warning("Custom font '\(customFontName)' not found, using system font")
         return UIFont.systemFont(ofSize: size, weight: .bold)
     }
     #endif

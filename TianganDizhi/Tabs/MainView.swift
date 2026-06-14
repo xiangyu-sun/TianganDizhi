@@ -8,8 +8,11 @@
 
 import ChineseAstrologyCalendar
 import ChineseTranditionalCalendarUI
+import os
 import SwiftUI
 import WidgetKit
+
+private let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.MainView", category: "View")
 
 // MARK: - MainView
 
@@ -38,6 +41,7 @@ struct MainView: View {
   // These are expensive (date scanning), so must NOT live in `body`.
   @State private var cachedEvent: EventModel = .init(date: Date(), name: .day1, dateComponents: .init())
   @State private var cachedTitle: String = ""
+  @State private var showNewYearCountdown = false
 
   private func rebuildCachedValues() {
     let converter = useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()
@@ -47,9 +51,11 @@ struct MainView: View {
     cachedTitle = useGTM8
       ? ev.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
       : ev.date.displayStringOfChineseYearMonthDateWithZodiac
+    // New-year proximity gate also scans dates — cache it instead of running every minute in body.
+    showNewYearCountdown = converter.nextChineseNewYear()
+      .map { converter.isWithinMonths(3, beforeChineseNewYearFrom: $0) } ?? false
   }
 
-  @State private var showingPopover = false
   @State private var showingCalendar = false
 
   var body: some View {
@@ -75,8 +81,7 @@ struct MainView: View {
           .buttonStyle(.plain)
           .accessibilityLabel("月曆，點擊查看")
 
-          if let nextChineseNewYear = (useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()).nextChineseNewYear(),
-             (useGTM8 ? DayConverter(calendar: .chineseCalendarGTM8) : DayConverter()).isWithinMonths(3, beforeChineseNewYearFrom: nextChineseNewYear) {
+          if showNewYearCountdown {
             HStack(spacing: 0) {
               Text(cachedEvent.date, style: .relative)
               Text("後\(cachedTitle)")
@@ -184,25 +189,6 @@ struct MainView: View {
         #endif
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity)
-      #if os(iOS) || os(macOS)
-      .popover(isPresented: $showingPopover, arrowEdge: .bottom) {
-        VStack(alignment: .leading) {
-          let god = date.twelveGod()
-          Text("宜：\(god.map { $0.do } ?? "")")
-            .font(titleFont)
-            .padding(.bottom)
-          Text("忌：\(god.map { $0.dontDo } ?? "")")
-            .font(titleFont)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-          Image("background")
-            .resizable(resizingMode: .tile)
-            .scaledToFill()
-            .ignoresSafeArea(.all)
-        )
-      }
-      #endif
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       #if os(iOS) || os(macOS)
       .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
@@ -251,7 +237,7 @@ struct MainView: View {
           }
         }
       } catch {
-        print(error)
+        logger.error("Location/weather refresh failed: \(error.localizedDescription)")
       }
     }
   }
@@ -267,21 +253,28 @@ struct MainView: View {
     .font(bodyFont)
   }
 
-  private func shareText(date: Date) -> String {
+}
+
+// MARK: - Shichen share text
+
+extension Date {
+  /// Human-readable summary of this date's Shichen, festival/Jieqi, lunar mansion and 宜/忌.
+  /// Shared by SettingsView's ShareLink (and any future share entry points).
+  var shichenShareText: String {
     var lines: [String] = []
-    lines.append("日期：\(date.displayStringOfChineseYearMonthDateWithZodiac)")
-    if let shichen = date.shichen {
+    lines.append("日期：\(displayStringOfChineseYearMonthDateWithZodiac)")
+    if let shichen = shichen {
       lines.append("時辰：\(shichen.dizhi.aliasName)（\(shichen.dizhi.displayHourText)）")
     }
-    if let festival = date.chineseFestival {
+    if let festival = chineseFestival {
       lines.append("今日：\(festival.chineseName)")
     } else {
-      let jieqi = date.jieQiDisplayText
+      let jieqi = jieQiDisplayText
       if !jieqi.isEmpty { lines.append("節氣：\(jieqi)") }
     }
-    let mansion = LunarMansion.lunarMansion(date: date)
+    let mansion = LunarMansion.lunarMansion(date: self)
     lines.append("星象：\(mansion.fourSymbol.rawValue)·\(mansion.rawValue)")
-    if let god = date.twelveGod() {
+    if let god = twelveGod() {
       lines.append("宜：\(god.do)")
       lines.append("忌：\(god.dontDo)")
     }

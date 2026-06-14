@@ -7,8 +7,11 @@
 //
 
 import ChineseAstrologyCalendar
+import os
 import SwiftUI
 import WidgetKit
+
+private let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.Widget", category: "ExtraLargeWidget")
 
 // MARK: - ExtraLargeWidgetView
 
@@ -87,7 +90,7 @@ struct ExtraLargeWidgetView: View {
             try await self.weatherData.dailyForecast(for: location)
           }
         } catch {
-          print(error)
+          logger.error("Widget weather fetch failed: \(error.localizedDescription)")
         }
       }
     }

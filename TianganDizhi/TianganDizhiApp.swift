@@ -1,6 +1,9 @@
 import ChineseAstrologyCalendar
 import Combine
+import os
 import SwiftUI
+
+private let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.App", category: "App")
 
 @main
 struct TianganDizhiApp: App {
@@ -43,7 +46,7 @@ struct TianganDizhiApp: App {
 
   private func handleDeepLink(_ url: URL) {
     guard url.scheme == "tiangandizhi" else { return }
-    print("Deep link received: \(url)")
+    logger.info("Deep link received: \(url)")
   }
 }
 
