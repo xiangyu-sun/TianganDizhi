@@ -32,26 +32,8 @@ struct KnowledgeView: View {
           }
         }
         Section(header: Text("十二地支")) {
-          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .name)) {
-            Text(DizhiListView.DisplayMode.name.title)
-          }
-          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .zodiac)) {
-            Text(DizhiListView.DisplayMode.zodiac.title)
-          }
-          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .time)) {
-            Text(DizhiListView.DisplayMode.time.title)
-          }
-          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .month)) {
-            Text(DizhiListView.DisplayMode.month.title)
-          }
-          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .organs)) {
-            Text(DizhiListView.DisplayMode.organs.title)
-          }
-          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .lvlv)) {
-            Text(DizhiListView.DisplayMode.lvlv.title)
-          }
-          NavigationLink(value: KnowledgeRoute.dizhiList(mode: .relationships)) {
-            Text(DizhiListView.DisplayMode.relationships.title)
+          NavigationLink(value: KnowledgeRoute.dizhiDetail) {
+            Text("十二地支")
           }
           NavigationLink(value: KnowledgeRoute.shici) {
             Text("十二時辰頌")
@@ -89,8 +71,8 @@ struct KnowledgeView: View {
           WuyinView()
         case .tianganList:
           TianganListView()
-        case .dizhiList(let mode):
-          DizhiListView(disppayMode: mode)
+        case .dizhiDetail:
+          DizhiDetailView()
         case .dizhiRelationship(let dizhi):
           DizhiRelationshipView(dizhi: dizhi)
         case .shici:

@@ -10,7 +10,7 @@ import Bagua
 import ChineseAstrologyCalendar
 import SwiftUI
 
-// MARK: - KnowledgeView
+// MARK: - GuaListView
 
 struct GuaListView: View {
   @Environment(\.bodyFont) var bodyFont
@@ -23,17 +23,21 @@ struct GuaListView: View {
           NavigationLink(value: GuaRoute.bagua(guas: xiantianBagua, title: "伏羲先天八卦")) {
             Text("伏羲先天八卦")
           }
+          .accessibilityLabel("伏羲先天八卦：伏羲創作的先天八卦排列方式")
           NavigationLink(value: GuaRoute.bagua(guas: houtianBagua, title: "文王後天八卦")) {
             Text("文王後天八卦")
           }
+          .accessibilityLabel("文王後天八卦：文王創作的後天八卦排列方式")
         }
-        Section {
+        Section(header: Text("辟卦")) {
           NavigationLink(value: GuaRoute.shierPigua) {
             Text("陰曆十二辟卦")
           }
+          .accessibilityLabel("陰曆十二辟卦：農曆月份對應的辟卦")
           NavigationLink(value: GuaRoute.yangliShierPigua) {
             Text("陽曆十二辟卦")
           }
+          .accessibilityLabel("陽曆十二辟卦：西曆月份對應的辟卦")
         }
       }
       .font(bodyFont)

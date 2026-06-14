@@ -17,7 +17,7 @@ enum KnowledgeRoute: Hashable {
   case wuxing
   case wuyin
   case tianganList
-  case dizhiList(mode: DizhiListView.DisplayMode)
+  case dizhiDetail
   case dizhiRelationship(Dizhi)
   case shici
   case twelveGods

@@ -23,16 +23,15 @@ struct MainView: View {
   @Environment(\.footnote) var footnote
   @Environment(\.calloutFont) var calloutFont
   @Environment(\.shouldScaleFont) var shouldScaleFont
+  @Environment(\.openURL) var openURL
   @ObservedObject var weatherData = WeatherData.shared
   @Environment(\.scenePhase) var scenePhase
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
-
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveForegroundEnabled = false
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
-
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
   @Environment(\.horizontalSizeClass) var horizontalSizeClass
@@ -51,7 +50,6 @@ struct MainView: View {
     cachedTitle = useGTM8
       ? ev.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
       : ev.date.displayStringOfChineseYearMonthDateWithZodiac
-    // New-year proximity gate also scans dates — cache it instead of running every minute in body.
     showNewYearCountdown = converter.nextChineseNewYear()
       .map { converter.isWithinMonths(3, beforeChineseNewYearFrom: $0) } ?? false
   }
@@ -105,11 +103,26 @@ struct MainView: View {
             if let moonphase = date.chineseDay()?.moonPhase {
               fixedMoonInformationView(moonphase)
             }
-            Button("位置資料不可用，點擊重試") {
-              refreshLocationAndWeather()
+            VStack(spacing: 6) {
+              Text("開啟定位以顯示天氣與日出日落")
+                .font(footnote)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+              Button("點擊重試") {
+                refreshLocationAndWeather()
+              }
+              .font(footnote)
+              .foregroundStyle(.secondary)
+              #if os(iOS)
+              Button("前往設置") {
+                if let url = URL(string: "app-settings:") {
+                  openURL(url)
+                }
+              }
+              .font(footnote)
+              .foregroundStyle(.secondary)
+              #endif
             }
-            .font(footnote)
-            .foregroundStyle(.secondary)
           }
         }
 
@@ -177,8 +190,11 @@ struct MainView: View {
             }
 
             if let weatherURL = URL(string: "https://weatherkit.apple.com/legal-attribution.html") {
-              Link("天氣以及日月信息來自( Weather). 點擊查看數據源信息",
-                   destination: weatherURL)
+              Link(destination: weatherURL) {
+                Text("天氣以及日月信息來自(")
+                  + Text(Image(systemName: "apple.logo"))
+                  + Text(" Weather). 點擊查看數據源信息")
+              }
               .font(footnote)
               .foregroundStyle(.secondary)
             }
@@ -259,7 +275,6 @@ struct MainView: View {
 
 extension Date {
   /// Human-readable summary of this date's Shichen, festival/Jieqi, lunar mansion and 宜/忌.
-  /// Shared by SettingsView's ShareLink (and any future share entry points).
   var shichenShareText: String {
     var lines: [String] = []
     lines.append("日期：\(displayStringOfChineseYearMonthDateWithZodiac)")

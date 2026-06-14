@@ -22,6 +22,9 @@ struct ContentView: View {
   @EnvironmentObject var fontProvider: FontProvider
   @EnvironmentObject var settingsManager: SettingsManager
 
+  @AppStorage(Constants.hasCompletedOnboarding, store: Constants.sharedUserDefault)
+  var hasCompletedOnboarding = false
+
   var body: some View {
     TabView {
       MainView()
@@ -67,6 +70,18 @@ struct ContentView: View {
     }
     .onChange(of: fontProvider.useSystemFont) { newValue in
       applyUIKitFontAppearance(useSystemFont: newValue)
+    }
+    #endif
+    #if os(iOS)
+    .fullScreenCover(
+      isPresented: Binding(
+        get: { !hasCompletedOnboarding },
+        set: { _ in }))
+    {
+      OnboardingView()
+        .environmentObject(fontProvider)
+        .environmentObject(settingsManager)
+        .interactiveDismissDisabled(true)
     }
     #endif
   }
