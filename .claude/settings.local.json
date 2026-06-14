@@ -71,7 +71,9 @@
       "Bash(defaults read *)",
       "Bash(swift /tmp/wins2.swift)",
       "Bash(pkill -x TianganDizhi)",
-      "Bash(swift /tmp/wins.swift)"
+      "Bash(swift /tmp/wins.swift)",
+      "Bash(tee /tmp/build_mac.log)",
+      "Bash(tee /tmp/build3.log)"
     ],
     "deny": []
   }
