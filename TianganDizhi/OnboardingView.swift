@@ -70,9 +70,11 @@ struct OnboardingView: View {
       .padding()
       .tag(3)
     }
+    #if os(iOS)
     .tabViewStyle(.page)
     #if !os(watchOS)
     .indexViewStyle(.page(backgroundDisplayMode: .always))
+    #endif
     #endif
   }
 }
