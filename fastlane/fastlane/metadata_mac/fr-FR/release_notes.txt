@@ -1,4 +1,4 @@
-- Nouveau widget chance : activités fastes et néfastes du jour en un coup d'œil (formats rectangulaire et moyen)
-- Le fuseau horaire UTC+8 du Bazi inclut désormais Taïwan et Singapour
-- Bouton de partage déplacé dans les Réglages pour une interface plus épurée
-- Corrections de bugs et améliorations de stabilité
+- Nouveau calculateur des Quatre Piliers du Destin (八字) : piliers de l'année, du mois, du jour et de l'heure avec équilibre des cinq éléments
+- Nouvelles relations des Branches Terrestres : 六冲, 六合, 三合 et 六害 pour chaque branche
+- Nouveaux écrans de référence : prochains festivals, les Soixante Nayin (六十納音) et une boussole des Cinq Directions (五方)
+- Corrections de bugs et améliorations des performances

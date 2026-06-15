@@ -1,4 +1,4 @@
-- Widget nasib baharu: aktiviti baik dan buruk hari ini sekilas pandang (saiz segi empat dan sederhana)
-- Zon waktu UTC+8 Bazi kini merangkumi Taiwan dan Singapura
-- Butang kongsi dipindahkan ke Tetapan untuk antara muka yang lebih kemas
-- Pembetulan pepijat dan peningkatan kestabilan
+- Kalkulator Empat Tonggak Takdir (八字) baharu: tonggak tahun, bulan, hari dan jam dengan keseimbangan lima unsur
+- Hubungan Cabang Bumi baharu: 六冲, 六合, 三合 dan 六害 bagi setiap cabang
+- Skrin rujukan baharu: Perayaan Akan Datang, Enam Puluh Nayin (六十納音) dan kompas Lima Arah (五方)
+- Pembaikan pepijat dan peningkatan prestasi

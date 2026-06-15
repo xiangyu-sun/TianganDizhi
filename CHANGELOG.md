@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [Next Release] — New Features
+## [2.56.0] — 2026-06-15
 
 ### New Screens
 - **DizhiRelationshipView** — Shows 六冲, 六合, 三合, 六害 relationships for each Earth Branch (地支). Accessible from the Earth Branch knowledge section.

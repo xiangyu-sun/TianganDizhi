@@ -1,4 +1,4 @@
-- Nuevo widget de suerte: actividades auspiciosas e inauspiciosas del día de un vistazo (tamaños rectangular y mediano)
-- La zona horaria UTC+8 del Bazi ahora incluye Taiwán y Singapura
-- Botón de compartir movido a Ajustes para una interfaz más limpia
-- Corrección de errores y mejoras de estabilidad
+- Nueva calculadora de los Cuatro Pilares del Destino (八字): pilares de año, mes, día y hora con equilibrio de los cinco elementos
+- Nuevas relaciones de las Ramas Terrestres: 六冲, 六合, 三合 y 六害 para cada rama
+- Nuevas pantallas de referencia: próximos festivales, los Sesenta Nayin (六十納音) y una brújula de las Cinco Direcciones (五方)
+- Corrección de errores y mejoras de rendimiento
