@@ -44,7 +44,7 @@ struct JieqiWidget: Widget {
               .font(.callout)
               .environment(\.locale, Locale(identifier: "zh-hant"))
 
-            if let jieqiDate = jieqi.nextDate(after: entry.date) {
+            if let jieqiDate = jieqi.nextOccurrence(after: entry.date)?.startDate {
               Text(jieqiDate, style: .date)
                 .font(.callout)
                 .foregroundStyle(.secondary)
