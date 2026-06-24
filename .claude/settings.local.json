@@ -73,7 +73,8 @@
       "Bash(pkill -x TianganDizhi)",
       "Bash(swift /tmp/wins.swift)",
       "Bash(tee /tmp/build_mac.log)",
-      "Bash(tee /tmp/build3.log)"
+      "Bash(tee /tmp/build3.log)",
+      "Bash(echo \"===== JieqiHealthWidget =====\"; cat ./ShiChen/JieqiHealthWidget.swift; echo \"===== nextJieqi definition =====\"; grep -rn \"var nextJieqi\\\\|func nextJieqi\\\\|nextJieqi\" --include=\"*.swift\" ~/ 2>/dev/null | grep -i \"ChineseAstrology\\\\|Package\\\\|checkout\" | head; find / -path '*ChineseAstrologyCalendar*' -name \"*.swift\" 2>/dev/null | head -50)"
     ],
     "deny": []
   }
