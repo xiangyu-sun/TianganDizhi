@@ -21,7 +21,7 @@ struct JieqiListView: View {
         JieqiCell(
           jieqi: jieqi,
           isCurrent: jieqi == currentJieqi,
-          daysUntil: nextJieqiOccurrence?.jieqi == jieqi ? nextJieqiOccurrence?.days : nil
+          daysUntil: nextJieqiOccurrence?.jieqi == jieqi ? nextJieqiOccurrence.map { $0.days(from: Date()) } : nil
         )
         .id(jieqi)
       }

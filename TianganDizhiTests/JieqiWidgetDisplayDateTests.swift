@@ -41,7 +41,7 @@ struct JieqiWidgetDisplayDateTests {
     // 2025-05-06 UTC noon: 15 days before Xiaoman (小滿, ~May 21 2025)
     let today = try utcNoon(year: 2025, month: 5, day: 6)
     let result = try #require(today.nextJieqi)
-    #expect(result.days > 14, "Should be more than 14 days away")
+    #expect(result.days(from: today) > 14, "Should be more than 14 days away")
   }
 
   @Test("nextJieqi returns days within 1–14 when upcoming jieqi is in the window")
@@ -49,7 +49,7 @@ struct JieqiWidgetDisplayDateTests {
     // 2025-05-11 UTC noon: ~10 days before Xiaoman (小滿, ~May 21 2025)
     let today = try utcNoon(year: 2025, month: 5, day: 11)
     let result = try #require(today.nextJieqi)
-    #expect(result.days >= 1 && result.days <= 14)
+    #expect(result.days(from: today) >= 1 && result.days(from: today) <= 14)
     #expect(result.jieqi.chineseName == "小滿")
   }
 
@@ -58,7 +58,7 @@ struct JieqiWidgetDisplayDateTests {
     // 2025-04-21 UTC noon: 14 days before Lixia (~May 5 2025)
     let today = try utcNoon(year: 2025, month: 4, day: 21)
     let result = try #require(today.nextJieqi)
-    #expect(result.days == 14)
+    #expect(result.days(from: today) == 14)
   }
 
   @Test("nextJieqi returns days == 1 when one day before Guyu")
@@ -66,7 +66,7 @@ struct JieqiWidgetDisplayDateTests {
     // 2025-04-19 UTC noon: 1 day before Guyu (穀雨, Apr 20 UTC)
     let today = try utcNoon(year: 2025, month: 4, day: 19)
     let result = try #require(today.nextJieqi)
-    #expect(result.days == 1)
+    #expect(result.days(from: today) == 1)
     #expect(result.jieqi.chineseName == "穀雨")
   }
 
@@ -81,7 +81,7 @@ struct JieqiWidgetDisplayDateTests {
     let result = try #require(dayAfter.nextJieqi)
     // Package contract: nextJieqi is ALWAYS a future term (≥ 1 day away) and never
     // returns the current day's own term — so on the 清明 day it points to 穀雨.
-    #expect(result.days >= 1)
+    #expect(result.days(from: dayAfter) >= 1)
     #expect(result.jieqi.chineseName == "穀雨")
     // day.jieqi resolves to the term that has begun.
     #expect(today.jieqi?.chineseName == "春分" || dayAfter.jieqi?.chineseName == "清明",
@@ -93,7 +93,7 @@ struct JieqiWidgetDisplayDateTests {
     // Apr 5 UTC noon — day after transition; nextJieqi.days == 0, jieqi == Qingming
     let dayAfter = try utcNoon(year: 2026, month: 4, day: 5)
     let jieqi: Jieqi? = {
-      if let upcoming = dayAfter.nextJieqi, upcoming.days <= 14 {
+      if let upcoming = dayAfter.nextJieqi, upcoming.days(from: dayAfter) <= 14 {
         return upcoming.jieqi
       }
       return dayAfter.jieqi

@@ -33,7 +33,7 @@ struct DaYunCalculator {
     // Days between birth and the relevant solar term.
     let days: Int
     if isForward {
-      days = birthDate.nextJieqi?.days ?? 0
+      days = birthDate.nextJieqi.map { $0.days(from: birthDate) } ?? 0
     } else {
       days = daysSincePreviousJieqi(from: birthDate)
     }

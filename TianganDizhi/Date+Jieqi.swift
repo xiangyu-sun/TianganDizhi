@@ -33,20 +33,35 @@ extension Date {
   }
 
   /// `nextJieqi` evaluated at a calendar-stable point in the day, so the
-  /// returned day count does not depend on the time of day it is computed.
-  var nextJieqiDayAligned: (jieqi: Jieqi, days: Int)? {
+  /// returned occurrence does not depend on the time of day it is computed.
+  var nextJieqiDayAligned: JieqiOccurrence? {
     endOfLocalDay.nextJieqi
   }
 
   var jieQiDisplayText: String {
     let upcoming = nextJieqiDayAligned
-    if let upcoming, upcoming.days > 0 {
-      let daysString = Self.formatter.string(from: NSNumber(value: upcoming.days)) ?? ""
-      return "\(daysString)日後\(upcoming.jieqi.chineseName)\(upcoming.jieqi.qi ? "氣" : "節")"
+    if let upcoming {
+      let days = Calendar.current.dateComponents([.day], from: startOfDay, to: upcoming.startDate).day ?? 0
+      if days > 0 {
+        let daysString = Self.formatter.string(from: NSNumber(value: days)) ?? ""
+        return "\(daysString)日後\(upcoming.jieqi.chineseName)\(upcoming.jieqi.qi ? "氣" : "節")"
+      }
     }
     if let current = upcoming?.jieqi ?? jieqi ?? Jieqi.current {
       return current.chineseName + (current.qi ? "氣" : "節")
     }
     return ""
+  }
+
+  private var startOfDay: Date {
+    Calendar.current.startOfDay(for: self)
+  }
+}
+
+extension JieqiOccurrence {
+  /// Calendar days from `date` to this occurrence's start date.
+  func days(from date: Date, calendar: Calendar = .current) -> Int {
+    let start = calendar.startOfDay(for: date)
+    return calendar.dateComponents([.day], from: start, to: startDate).day ?? 0
   }
 }

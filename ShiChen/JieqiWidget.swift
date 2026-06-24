@@ -28,7 +28,7 @@ struct JieqiWidget: Widget {
       let jieqi = upcomingResult?.jieqi ?? entry.date.jieqi
       
       // sameCalendarDay: the solar term is today (days == 0)
-      let sameCalendarDay = upcomingResult?.days == 0
+      let sameCalendarDay = upcomingResult.map { $0.days(from: entry.date) } == 0
 
       if let jieqi {
         VStack(alignment: .center) {
