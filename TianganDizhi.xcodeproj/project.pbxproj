@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0519F1E9D25D4A6FB6486744 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
+		1CA9D8F490D343BCBE3D4BB5 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
 		460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
 		462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
@@ -42,6 +44,7 @@
 		46EF7F8427108D73007030CC /* ShierPiguaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* ShierPiguaView.swift */; };
 		46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 46F9C28425D137020017440D /* ChineseTranditionalMusicCore */; };
 		46F9C28C25D137D50017440D /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9C28B25D137D50017440D /* Cells.swift */; };
+		5FE65C9E720F4D12B3210B96 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
 		69499F1EF165493183EFDA11 /* ShichenProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE325BDEE8C42E8B7BE984A /* ShichenProgressTests.swift */; };
 		990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
 		990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
@@ -61,10 +64,6 @@
 		9918EA822FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
 		9918EA842FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
 		9918EA862FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
-		1CA9D8F490D343BCBE3D4BB5 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
-		DD2FE812BB3047DFB7DE7304 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
-		5FE65C9E720F4D12B3210B96 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
-		0519F1E9D25D4A6FB6486744 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
 		991A85442F3896270079C89A /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A85432F3896270079C89A /* MenuBarContentView.swift */; };
 		991A85452F3896270079C89A /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A85432F3896270079C89A /* MenuBarContentView.swift */; };
 		991A857B2B508FA700C1D1BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A857A2B508FA700C1D1BC /* SettingsManager.swift */; };
@@ -359,6 +358,7 @@
 		99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3F742927EBD90048DCEB /* WuxingView.swift */; };
 		A86338E8CCA9C14C9A2F40C1 /* ChinesePinyinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B42510547F456786FE480 /* ChinesePinyinTests.swift */; };
 		C4DB0A9BF1BA67BEDC774198 /* MinuteTimeLineSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DDA231B606C239EFED7F58 /* MinuteTimeLineSchedulerTests.swift */; };
+		DD2FE812BB3047DFB7DE7304 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -496,6 +496,7 @@
 		46EF7F7F27107968007030CC /* JieqiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiCell.swift; sourceTree = "<group>"; };
 		46EF7F8327108D73007030CC /* ShierPiguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShierPiguaView.swift; sourceTree = "<group>"; };
 		46F9C28B25D137D50017440D /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MarbleShader.metal; sourceTree = "<group>"; };
 		990FEAD7294C9EA800CB1CEF /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		990FEADC294CA2FE00CB1CEF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		990FEAE1294CC02D00CB1CEF /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
@@ -508,7 +509,6 @@
 		9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerBackground.swift; sourceTree = "<group>"; };
 		9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperBackground.swift; sourceTree = "<group>"; };
-		7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MarbleShader.metal; sourceTree = "<group>"; };
 		991A85432F3896270079C89A /* MenuBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContentView.swift; sourceTree = "<group>"; };
 		991A857A2B508FA700C1D1BC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		991BC39D2FDF50AF00A861EC /* DizhiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizhiDetailView.swift; sourceTree = "<group>"; };
@@ -1943,7 +1943,7 @@
 				INFOPLIST_FILE = ShiChen/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_NSLocationUsageDescription = "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1978,7 +1978,7 @@
 				INFOPLIST_FILE = ShiChen/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_NSLocationUsageDescription = "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
