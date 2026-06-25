@@ -58,10 +58,14 @@ struct JieqiHealthMediumView: View {
 #endif
       }
     } else {
-      Text(date.jieQiDisplayText)
-        .font(title3Font)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .materialBackgroundWidget()
+      VStack() {
+        Text(date.jieQiDisplayText)
+          .font(title3Font)
+          .frame(maxWidth: .infinity, maxHeight: .infinity)
+      }
+      #if !os(watchOS)
+      .materialBackgroundWidget()
+      #endif
     }
   }
 }
