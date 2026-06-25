@@ -66,9 +66,8 @@ struct CountDownView: View {
       Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now)) \(title)")
       .font(bodyFont)
       .foregroundStyle(color)
-      #if !os(watchOS)
-      .materialBackgroundWidget()
-      #endif
+      .materialBackgroundWidget(with: Image("background"), toogle: true)
+
     default:
       VStack(alignment: .center) {
         FullDateTitleView(date: entry.date)
@@ -78,9 +77,7 @@ struct CountDownView: View {
           .font(title3Font)
       }
       .foregroundStyle(color)
-#if !os(watchOS)
-      .materialBackgroundWidget()
-#endif
+      .materialBackgroundWidget(with: Image("background"), toogle: true)
     }
   }
 }

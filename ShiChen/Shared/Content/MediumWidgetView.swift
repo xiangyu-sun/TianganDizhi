@@ -60,9 +60,7 @@ struct MediumWidgetView: View {
     }
     .modifier(WidgetAccentable())
     .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-#if !os(watchOS)
-    .materialBackgroundWidget()
-#endif
+    .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     #if os(iOS) || os(macOS)
     .onAppear {
       Task {

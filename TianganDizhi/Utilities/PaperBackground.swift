@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 17.0, macOS 14.0, *)
 struct MarbleBackground: View {
     @Environment(\.colorScheme) var colorScheme
     @AppStorage(Constants.backgroundStyle, store: Constants.sharedUserDefault)

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0519F1E9D25D4A6FB6486744 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
-		1CA9D8F490D343BCBE3D4BB5 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
 		460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
 		462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
@@ -44,7 +42,6 @@
 		46EF7F8427108D73007030CC /* ShierPiguaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* ShierPiguaView.swift */; };
 		46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 46F9C28425D137020017440D /* ChineseTranditionalMusicCore */; };
 		46F9C28C25D137D50017440D /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9C28B25D137D50017440D /* Cells.swift */; };
-		5FE65C9E720F4D12B3210B96 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
 		69499F1EF165493183EFDA11 /* ShichenProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE325BDEE8C42E8B7BE984A /* ShichenProgressTests.swift */; };
 		990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
 		990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
@@ -64,6 +61,7 @@
 		9918EA822FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
 		9918EA842FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
 		9918EA862FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
+		9918EA8A2FEDE00500FC5486 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1102954C92000BECF31 /* MaterialBackground.swift */; };
 		991A85442F3896270079C89A /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A85432F3896270079C89A /* MenuBarContentView.swift */; };
 		991A85452F3896270079C89A /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A85432F3896270079C89A /* MenuBarContentView.swift */; };
 		991A857B2B508FA700C1D1BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A857A2B508FA700C1D1BC /* SettingsManager.swift */; };
@@ -1538,7 +1536,6 @@
 				993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */,
 				99ECAED02A475BAE004997FD /* Date+WidgetIntent.swift in Sources */,
 				9918EA842FEDBD6C00FC5486 /* PaperBackground.swift in Sources */,
-				1CA9D8F490D343BCBE3D4BB5 /* MarbleShader.metal in Sources */,
 				46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				997CD1122954C96B00BECF31 /* MaterialBackground.swift in Sources */,
 				99A036482FB09A5D008764DA /* ChineseFestivalWidget.swift in Sources */,
@@ -1784,6 +1781,7 @@
 				997C68972868A76800B40D3F /* CompactShichenView.swift in Sources */,
 				9913E7EE2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift in Sources */,
 				997C68942868A76800B40D3F /* FullDateTitleView.swift in Sources */,
+				9918EA8A2FEDE00500FC5486 /* MaterialBackground.swift in Sources */,
 				99BC3C0D296836AB004AB614 /* CountDownView.swift in Sources */,
 				99A0B7932DB5824A000F2AD7 /* Jieqi+Image.swift in Sources */,
 				998F9E8D2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */,
@@ -1794,7 +1792,6 @@
 				99ECAED12A475BAF004997FD /* Date+WidgetIntent.swift in Sources */,
 				99F9DDCF29E0CE2B00E69B8E /* MeasurmentFormatterManager.swift in Sources */,
 				998F9E9C2F3640F300650E5E /* Date+ShichenProgress.swift in Sources */,
-				5FE65C9E720F4D12B3210B96 /* MarbleShader.metal in Sources */,
 				997C68AC2868A92400B40D3F /* CircularContainerView.swift in Sources */,
 				997C68982868A77700B40D3F /* Environment.swift in Sources */,
 				997C68852865FAD200B40D3F /* ShichenWatch.swift in Sources */,
@@ -1823,7 +1820,6 @@
 				99FD3F5F2922968B0048DCEB /* FullDateTitleView.swift in Sources */,
 				99FD3F5C2922968B0048DCEB /* ShichenTimelineProvider.swift in Sources */,
 				9918EA822FEDBD6C00FC5486 /* PaperBackground.swift in Sources */,
-				0519F1E9D25D4A6FB6486744 /* MarbleShader.metal in Sources */,
 				99FD3F632922968B0048DCEB /* ShiChenEntryView.swift in Sources */,
 				99FD3F662922968B0048DCEB /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				99F0EF3329FEC13F008476B6 /* LocationManager.swift in Sources */,
@@ -1943,7 +1939,7 @@
 				INFOPLIST_FILE = ShiChen/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_NSLocationUsageDescription = "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1978,7 +1974,7 @@
 				INFOPLIST_FILE = ShiChen/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_NSLocationUsageDescription = "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

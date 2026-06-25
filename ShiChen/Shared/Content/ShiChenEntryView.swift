@@ -98,9 +98,8 @@ struct ShiChenEntryView: View {
       }
       .modifier(WidgetAccentable())
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-#if !os(watchOS)
-      .materialBackgroundWidget()
-      #endif
+      .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+
     case .systemExtraLarge:
       if horizontalSizeClass != .compact {
         #if os(iOS)
@@ -134,9 +133,7 @@ struct ShiChenEntryView: View {
           }
         }
         .modifier(WidgetAccentable())
-#if !os(watchOS)
-        .materialBackgroundWidget()
-#endif
+        .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
       }
 
     default:
@@ -145,9 +142,7 @@ struct ShiChenEntryView: View {
           .modifier(WidgetAccentable())
           .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
           .frame(maxWidth: .infinity, maxHeight: .infinity)
-#if !os(watchOS)
-          .materialBackgroundWidget()
-#endif
+          .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
       } else {
         EmptyView()
       }

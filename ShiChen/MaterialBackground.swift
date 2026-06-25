@@ -8,34 +8,44 @@
 
 import SwiftUI
 
-struct MarbleWidgetBackground: ViewModifier {
-  @Environment(\.colorScheme) var colorScheme
-  @AppStorage(Constants.backgroundStyle, store: Constants.sharedUserDefault)
-  var backgroundStyle = 0
+// MARK: - MaterialBackground
 
-  // Day-of-year seed: texture shifts each day, stays consistent within a day
-  private var seed: Float {
-    let day = Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 1
-    return Float(day) * 7.53
-  }
+struct MaterialBackground: ViewModifier {
+  @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
+  var springFestiveBackgroundEnabled = false
+
+  var image: Image
+  var toogle: Bool
 
   func body(content: Content) -> some View {
-    let isDark: Float = colorScheme == .dark ? 1.0 : 0.0
-    content.containerBackground(for: .widget) {
-      Color.white  // opaque base ensures shader input alpha = 1, preventing premultiplied-alpha blackout
-        .visualEffect { view, proxy in
-          view.colorEffect(
-            backgroundStyle == 1
-              ? ShaderLibrary.stoneMarble(.float2(proxy.size.width, proxy.size.height), .float(isDark), .float(seed))
-              : ShaderLibrary.marble(.float2(proxy.size.width, proxy.size.height), .float(isDark), .float(seed))
-          )
-        }
+    if !springFestiveBackgroundEnabled {
+      content
+        .background(image.resizable(resizingMode: .tile).ignoresSafeArea(.all))
+
+    } else {
+      content
+        .background(
+          image
+            .resizable(resizingMode: .tile)
+            .renderingMode(.template)
+            .ignoresSafeArea(.all)
+            .foregroundStyle(Color("sprintfestivaltint")))
     }
   }
 }
 
 extension View {
-  func materialBackgroundWidget() -> some View {
-    modifier(MarbleWidgetBackground())
+  func materialBackgroundWidget(with image: Image, toogle: Bool) -> some View {
+    if #available(iOS 17.0, watchOS 10.0, macOS 14.0, *) {
+      return containerBackground(for: .widget, content: {
+        Image("background").resizable(resizingMode: .tile)
+      })
+    } else {
+      return modifier(MaterialBackground(image: image, toogle: toogle))
+    }
+  }
+
+  func materialBackground(with image: Image, toogle: Bool) -> some View {
+    modifier(MaterialBackground(image: image, toogle: toogle))
   }
 }
