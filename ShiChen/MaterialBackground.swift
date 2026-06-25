@@ -22,7 +22,7 @@ struct MarbleWidgetBackground: ViewModifier {
   func body(content: Content) -> some View {
     let isDark: Float = colorScheme == .dark ? 1.0 : 0.0
     content.containerBackground(for: .widget) {
-      Rectangle()
+      Color.white  // opaque base ensures shader input alpha = 1, preventing premultiplied-alpha blackout
         .visualEffect { view, proxy in
           view.colorEffect(
             backgroundStyle == 1
