@@ -1,6 +1,3 @@
-- Nouveau calculateur des Quatre Piliers (八字) : piliers année, mois, jour et heure avec équilibre des éléments
-- Nouvelles relations des Branches Terrestres : 六冲, 六合, 三合, 六害 pour chaque branche
-- Nouveaux écrans de référence : Festivals à venir, Harmoniques des cinq éléments (六十納音), et boussole des cinq directions (五方)
 - Améliorations des arrière-plans et animations
 - Correction des calculs des termes solaires (Jieqi)
 - Nouvel écran d'accueil et vues détaillées des Dizhi

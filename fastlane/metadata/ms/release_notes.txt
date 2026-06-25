@@ -1,6 +1,3 @@
-- Kalkulator Empat Tiang (八字) baharu: tiang tahun, bulan, hari dan jam dengan imbangan elemen
-- Hubungan Cabang Bumi baharu: 六冲, 六合, 三合, 六害 untuk setiap cabang
-- Skrin rujukan baharu: Festival Akan Datang, Nada Lima Elemen (六十納音), dan kompas Lima Arah (五方)
 - Latar belakang dan animasi yang lebih baik
 - Pembetulan pepijat pengiraan terma solar Jieqi
 - Pengalaman orientasi baharu dan paparan terperinci Dizhi

@@ -1,6 +1,3 @@
-- Máy tính Tứ Trụ (八字) mới: trụ năm, tháng, ngày, giờ với phân tích cân bằng ngũ hành
-- Quan hệ Địa Chi mới: 六冲, 六合, 三合, 六害 cho từng chi
-- Màn hình tham khảo mới: Lễ hội sắp tới, Âm thanh Ngũ Hành (六十納音), và la bàn Ngũ Phương (五方)
 - Cải thiện nền và hoạt ảnh
 - Sửa lỗi tính toán tiết khí (Jieqi)
 - Màn hình giới thiệu mới và giao diện chi tiết Địa Chi

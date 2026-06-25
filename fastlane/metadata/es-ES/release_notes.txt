@@ -1,6 +1,3 @@
-- Nueva calculadora de los Cuatro Pilares (八字): pilares de año, mes, día y hora con equilibrio de elementos
-- Nuevas relaciones de Ramas Terrestres: 六冲, 六合, 三合, 六害 para cada rama
-- Nuevas pantallas de referencia: Próximos festivales, Sobretonos de los cinco elementos (六十納音) y brújula de las cinco direcciones (五方)
 - Fondos y animaciones mejorados
 - Corrección de errores en el cálculo de los términos solares (Jieqi)
 - Nueva experiencia de incorporación y vistas detalladas de Dizhi
