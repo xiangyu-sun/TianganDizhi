@@ -20,16 +20,16 @@ struct MarbleWidgetBackground: ViewModifier {
   }
 
   func body(content: Content) -> some View {
+    let isDark: Float = colorScheme == .dark ? 1.0 : 0.0
     content.containerBackground(for: .widget) {
-      GeometryReader { geo in
-        let isDark: Float = colorScheme == .dark ? 1.0 : 0.0
-        Rectangle()
-          .colorEffect(
+      Rectangle()
+        .visualEffect { view, proxy in
+          view.colorEffect(
             backgroundStyle == 1
-              ? ShaderLibrary.stoneMarble(.float2(geo.size.width, geo.size.height), .float(isDark), .float(seed))
-              : ShaderLibrary.marble(.float2(geo.size.width, geo.size.height), .float(isDark), .float(seed))
+              ? ShaderLibrary.stoneMarble(.float2(proxy.size.width, proxy.size.height), .float(isDark), .float(seed))
+              : ShaderLibrary.marble(.float2(proxy.size.width, proxy.size.height), .float(isDark), .float(seed))
           )
-      }
+        }
     }
   }
 }
