@@ -42,6 +42,7 @@
 		46EF7F8427108D73007030CC /* ShierPiguaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* ShierPiguaView.swift */; };
 		46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 46F9C28425D137020017440D /* ChineseTranditionalMusicCore */; };
 		46F9C28C25D137D50017440D /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9C28B25D137D50017440D /* Cells.swift */; };
+		69499F1EF165493183EFDA11 /* ShichenProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE325BDEE8C42E8B7BE984A /* ShichenProgressTests.swift */; };
 		990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
 		990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
 		990FEADF294CAFD700CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
@@ -57,6 +58,13 @@
 		9913E7F82AC0B47300E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
 		9913E7F92AC0B47500E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
 		9913E7FB2AC0B63700E459B8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */; };
+		9918EA822FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
+		9918EA842FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
+		9918EA862FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
+		1CA9D8F490D343BCBE3D4BB5 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
+		DD2FE812BB3047DFB7DE7304 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
+		5FE65C9E720F4D12B3210B96 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
+		0519F1E9D25D4A6FB6486744 /* MarbleShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */; };
 		991A85442F3896270079C89A /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A85432F3896270079C89A /* MenuBarContentView.swift */; };
 		991A85452F3896270079C89A /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A85432F3896270079C89A /* MenuBarContentView.swift */; };
 		991A857B2B508FA700C1D1BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A857A2B508FA700C1D1BC /* SettingsManager.swift */; };
@@ -216,7 +224,6 @@
 		997C68B22868ABEE00B40D3F /* SimpleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C689E2868A81500B40D3F /* SimpleEntry.swift */; };
 		997C68B32868ABEE00B40D3F /* ShichenTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997C68A02868A83700B40D3F /* ShichenTimelineProvider.swift */; };
 		997CD1122954C96B00BECF31 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1102954C92000BECF31 /* MaterialBackground.swift */; };
-		997CD1132954C96C00BECF31 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1102954C92000BECF31 /* MaterialBackground.swift */; };
 		997CD1142954C96D00BECF31 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1102954C92000BECF31 /* MaterialBackground.swift */; };
 		997CD1162954CF9700BECF31 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1152954CF9700BECF31 /* SettingsView.swift */; };
 		997CD1172954D0EC00BECF31 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1152954CF9700BECF31 /* SettingsView.swift */; };
@@ -350,7 +357,6 @@
 		99FD3F722922994D0048DCEB /* WeibeiTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 46B79C0C2541E4B9003C0B7F /* WeibeiTC-Bold.otf */; };
 		99FD3F752927EBD90048DCEB /* WuxingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3F742927EBD90048DCEB /* WuxingView.swift */; };
 		99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3F742927EBD90048DCEB /* WuxingView.swift */; };
-		69499F1EF165493183EFDA11 /* ShichenProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE325BDEE8C42E8B7BE984A /* ShichenProgressTests.swift */; };
 		A86338E8CCA9C14C9A2F40C1 /* ChinesePinyinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B42510547F456786FE480 /* ChinesePinyinTests.swift */; };
 		C4DB0A9BF1BA67BEDC774198 /* MinuteTimeLineSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DDA231B606C239EFED7F58 /* MinuteTimeLineSchedulerTests.swift */; };
 /* End PBXBuildFile section */
@@ -501,6 +507,8 @@
 		9913E7F32ABDF89900E459B8 /* WatchStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStackView.swift; sourceTree = "<group>"; };
 		9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerBackground.swift; sourceTree = "<group>"; };
 		9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperBackground.swift; sourceTree = "<group>"; };
+		7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MarbleShader.metal; sourceTree = "<group>"; };
 		991A85432F3896270079C89A /* MenuBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContentView.swift; sourceTree = "<group>"; };
 		991A857A2B508FA700C1D1BC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		991BC39D2FDF50AF00A861EC /* DizhiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizhiDetailView.swift; sourceTree = "<group>"; };
@@ -893,6 +901,8 @@
 				46B7FCE625061F81008E8D48 /* ChinesePinyin.swift */,
 				9911517529DF3E5500A7CE54 /* DateColorModifier.swift */,
 				998F9E8F2F363B5D00650E5E /* FontManager.swift */,
+				9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */,
+				7DEA38A7A9BC4EE2AF238B15 /* MarbleShader.metal */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1527,6 +1537,8 @@
 				994215EE2965C80E003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				993843BF285636DB00FA7631 /* ShiChenEntryView.swift in Sources */,
 				99ECAED02A475BAE004997FD /* Date+WidgetIntent.swift in Sources */,
+				9918EA842FEDBD6C00FC5486 /* PaperBackground.swift in Sources */,
+				1CA9D8F490D343BCBE3D4BB5 /* MarbleShader.metal in Sources */,
 				46393EE52542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				997CD1122954C96B00BECF31 /* MaterialBackground.swift in Sources */,
 				99A036482FB09A5D008764DA /* ChineseFestivalWidget.swift in Sources */,
@@ -1597,6 +1609,8 @@
 				9911517629DF3E5500A7CE54 /* DateColorModifier.swift in Sources */,
 				99ECAECF2A475BAA004997FD /* Date+WidgetIntent.swift in Sources */,
 				46EF7F8427108D73007030CC /* ShierPiguaView.swift in Sources */,
+				9918EA862FEDBD6C00FC5486 /* PaperBackground.swift in Sources */,
+				DD2FE812BB3047DFB7DE7304 /* MarbleShader.metal in Sources */,
 				46393EE42542F57900E40518 /* ShiChen.intentdefinition in Sources */,
 				99632043290C2D1E000C4A2B /* TianganDizhiApp.swift in Sources */,
 				998F9E902F363B5D00650E5E /* FontManager.swift in Sources */,
@@ -1645,7 +1659,7 @@
 			files = (
 				46AB55E2242B5EFF00F6604A /* TianganDizhiTests.swift in Sources */,
 				99F6B6F92DD0E93C0080D4CB /* DayDifferenceTest.swift in Sources */,
-					9987646B2F660830000D71DC /* JieqiWidgetDisplayDateTests.swift in Sources */,
+				9987646B2F660830000D71DC /* JieqiWidgetDisplayDateTests.swift in Sources */,
 				C4DB0A9BF1BA67BEDC774198 /* MinuteTimeLineSchedulerTests.swift in Sources */,
 				A86338E8CCA9C14C9A2F40C1 /* ChinesePinyinTests.swift in Sources */,
 				69499F1EF165493183EFDA11 /* ShichenProgressTests.swift in Sources */,
@@ -1779,8 +1793,8 @@
 				99BC3C082968359E004AB614 /* CountDownWidget.swift in Sources */,
 				99ECAED12A475BAF004997FD /* Date+WidgetIntent.swift in Sources */,
 				99F9DDCF29E0CE2B00E69B8E /* MeasurmentFormatterManager.swift in Sources */,
-				997CD1132954C96C00BECF31 /* MaterialBackground.swift in Sources */,
 				998F9E9C2F3640F300650E5E /* Date+ShichenProgress.swift in Sources */,
+				5FE65C9E720F4D12B3210B96 /* MarbleShader.metal in Sources */,
 				997C68AC2868A92400B40D3F /* CircularContainerView.swift in Sources */,
 				997C68982868A77700B40D3F /* Environment.swift in Sources */,
 				997C68852865FAD200B40D3F /* ShichenWatch.swift in Sources */,
@@ -1808,6 +1822,8 @@
 				99FD3F69292297030048DCEB /* ShichenMacWidget.swift in Sources */,
 				99FD3F5F2922968B0048DCEB /* FullDateTitleView.swift in Sources */,
 				99FD3F5C2922968B0048DCEB /* ShichenTimelineProvider.swift in Sources */,
+				9918EA822FEDBD6C00FC5486 /* PaperBackground.swift in Sources */,
+				0519F1E9D25D4A6FB6486744 /* MarbleShader.metal in Sources */,
 				99FD3F632922968B0048DCEB /* ShiChenEntryView.swift in Sources */,
 				99FD3F662922968B0048DCEB /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				99F0EF3329FEC13F008476B6 /* LocationManager.swift in Sources */,
@@ -2224,12 +2240,12 @@
 				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = TianganDizhiTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -2250,12 +2266,12 @@
 				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = TianganDizhiTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

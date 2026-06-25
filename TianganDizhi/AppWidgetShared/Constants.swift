@@ -22,6 +22,7 @@ enum Constants {
   static let lastlocationKey = "lastlocationKey"
   static let useSystemFont = "useSystemFont"
   static let hasCompletedOnboarding = "hasCompletedOnboarding"
+  static let backgroundStyle = "backgroundStyle"  // 0 = xuan paper, 1 = stone marble
   #if os(macOS)
   nonisolated(unsafe) static let sharedUserDefault = UserDefaults(suiteName: "group.R45U3GK22z.uriphium.tiangandizhi")
   #else

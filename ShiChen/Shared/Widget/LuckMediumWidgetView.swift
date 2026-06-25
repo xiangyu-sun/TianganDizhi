@@ -83,7 +83,9 @@ struct LuckMediumWidgetView: View {
       .frame(maxWidth: .infinity, alignment: .leading)
     }
     .ignoresSafeArea(.all)
+#if !os(watchOS)
     .materialBackgroundWidget(with: Image("background"), toogle: true)
+    #endif
     .widgetAccentable()
   }
 }
