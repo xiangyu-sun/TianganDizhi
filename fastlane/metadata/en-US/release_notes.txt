@@ -1,4 +1,8 @@
 - New Four Pillars of Destiny (八字) calculator — year, month, day, and hour pillars with element balance
 - New Earth Branch relationships: 六冲, 六合, 三合, and 六害 for each branch
-- New reference screens: Upcoming Festivals, Five-Element Overtones (六十納音), and a Five Directions (五方) compass
-- Bug fixes and performance improvements
+- New reference screens: Upcoming Festivals, Five-Element Overtones (六十納音), and Five Directions (五方) compass
+- Improved backgrounds and animations
+- Fixed Jieqi (solar term) calculation bugs
+- New onboarding experience and Dizhi detail views
+- UX improvements: cleaner settings, location UI, and interface refinements
+- Bug fixes and stability improvements

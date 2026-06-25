@@ -71,16 +71,8 @@ struct JieqiWidget: Widget {
 
 extension View {
   func materialBackgroundWidget(with image: Image) -> some View {
-    if #available(iOS 17.0, watchOS 10.0, macOS 14.0, *) {
-      return containerBackground(for: .widget, content: {
-        image.resizable()
-      })
-    } else {
-      return modifier(MaterialBackground(image: image, toogle: false))
+    containerBackground(for: .widget) {
+      image.resizable()
     }
-  }
-
-  func materialBackground(with image: Image) -> some View {
-    modifier(MaterialBackground(image: image, toogle: false))
   }
 }

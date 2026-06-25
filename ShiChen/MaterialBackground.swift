@@ -8,39 +8,16 @@
 
 import SwiftUI
 
-// MARK: - MaterialBackground
-
-struct MaterialBackground: ViewModifier {
-  @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
-  var springFestiveBackgroundEnabled = false
-
-  var image: Image
-  var toogle: Bool
-
-  func body(content: Content) -> some View {
-    if !springFestiveBackgroundEnabled {
-      content
-        .background(image.resizable(resizingMode: .tile).ignoresSafeArea(.all))
-
-    } else {
-      content
-        .background(
-          image
-            .resizable(resizingMode: .tile)
-            .renderingMode(.template)
-            .ignoresSafeArea(.all)
-            .foregroundStyle(Color("sprintfestivaltint")))
-    }
-  }
-}
-
-// MARK: - iOS 17+ widget backgrounds
-
-@available(iOS 17.0, macOS 14.0, *)
-private struct MarbleWidgetBackground: ViewModifier {
+struct MarbleWidgetBackground: ViewModifier {
   @Environment(\.colorScheme) var colorScheme
   @AppStorage(Constants.backgroundStyle, store: Constants.sharedUserDefault)
   var backgroundStyle = 0
+
+  // Day-of-year seed: texture shifts each day, stays consistent within a day
+  private var seed: Float {
+    let day = Calendar.current.ordinality(of: .day, in: .year, for: Date()) ?? 1
+    return Float(day) * 7.53
+  }
 
   func body(content: Content) -> some View {
     content.containerBackground(for: .widget) {
@@ -49,45 +26,16 @@ private struct MarbleWidgetBackground: ViewModifier {
         Rectangle()
           .colorEffect(
             backgroundStyle == 1
-              ? ShaderLibrary.stoneMarble(.float2(geo.size.width, geo.size.height), .float(isDark))
-              : ShaderLibrary.marble(.float2(geo.size.width, geo.size.height), .float(isDark))
+              ? ShaderLibrary.stoneMarble(.float2(geo.size.width, geo.size.height), .float(isDark), .float(seed))
+              : ShaderLibrary.marble(.float2(geo.size.width, geo.size.height), .float(isDark), .float(seed))
           )
       }
     }
   }
 }
 
-@available(iOS 17.0, watchOS 10.0, macOS 14.0, *)
-private struct FestiveWidgetBackground: ViewModifier {
-  var image: Image
-
-  func body(content: Content) -> some View {
-    content.containerBackground(for: .widget) {
-      image
-        .resizable(resizingMode: .tile)
-        .renderingMode(.template)
-        .foregroundStyle(Color("sprintfestivaltint"))
-    }
-  }
-}
-
-// MARK: - View extensions
-
 extension View {
-  @ViewBuilder
-  func materialBackgroundWidget(with image: Image, toogle: Bool) -> some View {
-    if #available(iOS 17.0, watchOS 10.0, macOS 14.0, *) {
-      if toogle {
-        modifier(FestiveWidgetBackground(image: image))
-      } else {
-        modifier(MarbleWidgetBackground())
-      }
-    } else {
-      modifier(MaterialBackground(image: image, toogle: toogle))
-    }
-  }
-
-  func materialBackground(with image: Image, toogle: Bool) -> some View {
-    modifier(MaterialBackground(image: image, toogle: toogle))
+  func materialBackgroundWidget() -> some View {
+    modifier(MarbleWidgetBackground())
   }
 }

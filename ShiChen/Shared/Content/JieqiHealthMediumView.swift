@@ -61,10 +61,7 @@ struct JieqiHealthMediumView: View {
       Text(date.jieQiDisplayText)
         .font(title3Font)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .containerBackground(for: .widget) {
-          Image("background")
-            .resizable(resizingMode: .tile)
-        }
+        .materialBackgroundWidget()
     }
   }
 }

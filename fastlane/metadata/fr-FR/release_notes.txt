@@ -1,4 +1,8 @@
-- Nouveau calculateur des Quatre Piliers du Destin (八字) : piliers de l'année, du mois, du jour et de l'heure avec équilibre des cinq éléments
-- Nouvelles relations des Branches Terrestres : 六冲, 六合, 三合 et 六害 pour chaque branche
-- Nouveaux écrans de référence : prochains festivals, les Soixante Nayin (六十納音) et une boussole des Cinq Directions (五方)
-- Corrections de bugs et améliorations des performances
+- Nouveau calculateur des Quatre Piliers (八字) : piliers année, mois, jour et heure avec équilibre des éléments
+- Nouvelles relations des Branches Terrestres : 六冲, 六合, 三合, 六害 pour chaque branche
+- Nouveaux écrans de référence : Festivals à venir, Harmoniques des cinq éléments (六十納音), et boussole des cinq directions (五方)
+- Améliorations des arrière-plans et animations
+- Correction des calculs des termes solaires (Jieqi)
+- Nouvel écran d'accueil et vues détaillées des Dizhi
+- Améliorations UX : paramètres épurés, interface de localisation améliorée
+- Corrections de bugs et améliorations de stabilité

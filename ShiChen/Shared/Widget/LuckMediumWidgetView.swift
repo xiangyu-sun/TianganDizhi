@@ -84,7 +84,7 @@ struct LuckMediumWidgetView: View {
     }
     .ignoresSafeArea(.all)
 #if !os(watchOS)
-    .materialBackgroundWidget(with: Image("background"), toogle: true)
+    .materialBackgroundWidget()
     #endif
     .widgetAccentable()
   }

@@ -79,7 +79,7 @@ struct ExtraLargeWidgetView: View {
     }
     .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+    .materialBackgroundWidget()
     .onAppear {
       Task {
         do {

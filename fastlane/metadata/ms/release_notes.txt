@@ -1,4 +1,8 @@
-- Kalkulator Empat Tonggak Takdir (八字) baharu: tonggak tahun, bulan, hari dan jam dengan keseimbangan lima unsur
-- Hubungan Cabang Bumi baharu: 六冲, 六合, 三合 dan 六害 bagi setiap cabang
-- Skrin rujukan baharu: Perayaan Akan Datang, Enam Puluh Nayin (六十納音) dan kompas Lima Arah (五方)
-- Pembaikan pepijat dan peningkatan prestasi
+- Kalkulator Empat Tiang (八字) baharu: tiang tahun, bulan, hari dan jam dengan imbangan elemen
+- Hubungan Cabang Bumi baharu: 六冲, 六合, 三合, 六害 untuk setiap cabang
+- Skrin rujukan baharu: Festival Akan Datang, Nada Lima Elemen (六十納音), dan kompas Lima Arah (五方)
+- Latar belakang dan animasi yang lebih baik
+- Pembetulan pepijat pengiraan terma solar Jieqi
+- Pengalaman orientasi baharu dan paparan terperinci Dizhi
+- Penambahbaikan UX: tetapan lebih kemas, UI lokasi dipertingkat
+- Pembetulan pepijat dan peningkatan kestabilan

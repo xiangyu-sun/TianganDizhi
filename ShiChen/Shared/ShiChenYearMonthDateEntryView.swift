@@ -72,7 +72,7 @@ struct ShiChenYearMonthDateEntryView: View {
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
 #if !os(watchOS)
-      .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      .materialBackgroundWidget()
 #endif
 
     case .systemMedium:
@@ -92,7 +92,7 @@ struct ShiChenYearMonthDateEntryView: View {
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
 #if !os(watchOS)
-      .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      .materialBackgroundWidget()
 #endif
     }
   }
@@ -144,7 +144,7 @@ private struct WidgetMediumView: View {
     .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
 #if !os(watchOS)
-    .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+    .materialBackgroundWidget()
 #endif
   }
 }

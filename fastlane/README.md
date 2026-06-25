@@ -13,6 +13,17 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 # Available Actions
 
+### all_metadata
+
+```sh
+[bundle exec] fastlane all_metadata
+```
+
+
+
+----
+
+
 ## Mac
 
 ### mac metadata
