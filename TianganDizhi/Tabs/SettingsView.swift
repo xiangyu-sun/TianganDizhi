@@ -27,6 +27,8 @@ struct SettingsView: View {
   var piGuaRotationEnabled = false
   @AppStorage(Constants.useSystemFont, store: Constants.sharedUserDefault)
   var useSystemFont = false
+  @AppStorage(Constants.backgroundStyle, store: Constants.sharedUserDefault)
+  var backgroundStyle = 0
 
   @Environment(\.footnote) var footnote
   @EnvironmentObject var fontProvider: FontProvider
@@ -62,6 +64,20 @@ struct SettingsView: View {
         .accessibilityHint("開啟後夜間深色模式下組件文字顯示為黑色")
       }
       Section(header: Text("顯示設置")) {
+        if #available(iOS 17.0, macOS 14.0, *) {
+          Picker(selection: $backgroundStyle) {
+            Text("宣紙").tag(0)
+            Text("大理石").tag(1)
+          } label: {
+            VStack(alignment: .leading, spacing: 2) {
+              Text("背景風格")
+              Text("宣紙質感或大理石紋理")
+                .font(footnote)
+                .foregroundStyle(.secondary)
+            }
+          }
+          .onChange(of: backgroundStyle) { _ in reloadWidgets() }
+        }
         Toggle(isOn: $useSystemFont) {
           VStack(alignment: .leading, spacing: 2) {
             Text("使用系統字體")

@@ -207,7 +207,17 @@ struct MainView: View {
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       #if os(iOS) || os(macOS)
-      .materialBackground(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+      .background {
+        if #available(iOS 17.0, macOS 14.0, *), !springFestiveBackgroundEnabled {
+          MarbleBackground()
+        } else {
+          Image("background")
+            .resizable(resizingMode: .tile)
+            .renderingMode(springFestiveBackgroundEnabled ? .template : .original)
+            .foregroundStyle(Color("sprintfestivaltint"))
+            .ignoresSafeArea()
+        }
+      }
       #endif
       #if os(macOS)
       .frame(minHeight: 640)

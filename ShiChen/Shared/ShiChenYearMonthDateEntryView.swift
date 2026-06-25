@@ -71,7 +71,9 @@ struct ShiChenYearMonthDateEntryView: View {
       .modifier(WidgetAccentable())
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
+#if !os(watchOS)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+#endif
 
     case .systemMedium:
       WidgetMediumView(entry: entry)
@@ -89,7 +91,9 @@ struct ShiChenYearMonthDateEntryView: View {
       .modifier(WidgetAccentable())
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
+#if !os(watchOS)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+#endif
     }
   }
 }
@@ -139,7 +143,9 @@ private struct WidgetMediumView: View {
     }
     .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
+#if !os(watchOS)
     .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
+#endif
   }
 }
 

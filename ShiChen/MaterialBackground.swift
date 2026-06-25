@@ -34,14 +34,56 @@ struct MaterialBackground: ViewModifier {
   }
 }
 
+// MARK: - iOS 17+ widget backgrounds
+
+@available(iOS 17.0, macOS 14.0, *)
+private struct MarbleWidgetBackground: ViewModifier {
+  @Environment(\.colorScheme) var colorScheme
+  @AppStorage(Constants.backgroundStyle, store: Constants.sharedUserDefault)
+  var backgroundStyle = 0
+
+  func body(content: Content) -> some View {
+    content.containerBackground(for: .widget) {
+      GeometryReader { geo in
+        let isDark: Float = colorScheme == .dark ? 1.0 : 0.0
+        Rectangle()
+          .colorEffect(
+            backgroundStyle == 1
+              ? ShaderLibrary.stoneMarble(.float2(geo.size.width, geo.size.height), .float(isDark))
+              : ShaderLibrary.marble(.float2(geo.size.width, geo.size.height), .float(isDark))
+          )
+      }
+    }
+  }
+}
+
+@available(iOS 17.0, watchOS 10.0, macOS 14.0, *)
+private struct FestiveWidgetBackground: ViewModifier {
+  var image: Image
+
+  func body(content: Content) -> some View {
+    content.containerBackground(for: .widget) {
+      image
+        .resizable(resizingMode: .tile)
+        .renderingMode(.template)
+        .foregroundStyle(Color("sprintfestivaltint"))
+    }
+  }
+}
+
+// MARK: - View extensions
+
 extension View {
+  @ViewBuilder
   func materialBackgroundWidget(with image: Image, toogle: Bool) -> some View {
     if #available(iOS 17.0, watchOS 10.0, macOS 14.0, *) {
-      return containerBackground(for: .widget, content: {
-        Image("background").resizable(resizingMode: .tile)
-      })
+      if toogle {
+        modifier(FestiveWidgetBackground(image: image))
+      } else {
+        modifier(MarbleWidgetBackground())
+      }
     } else {
-      return modifier(MaterialBackground(image: image, toogle: toogle))
+      modifier(MaterialBackground(image: image, toogle: toogle))
     }
   }
 
