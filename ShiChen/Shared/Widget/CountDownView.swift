@@ -67,7 +67,7 @@ struct CountDownView: View {
       .font(bodyFont)
       .foregroundStyle(color)
       #if !os(watchOS)
-      .materialBackgroundWidget(with: Image("background"), toogle: true)
+      .materialBackgroundWidget()
       #endif
     default:
       VStack(alignment: .center) {
@@ -79,7 +79,7 @@ struct CountDownView: View {
       }
       .foregroundStyle(color)
 #if !os(watchOS)
-      .materialBackgroundWidget(with: Image("background"), toogle: true)
+      .materialBackgroundWidget()
 #endif
     }
   }

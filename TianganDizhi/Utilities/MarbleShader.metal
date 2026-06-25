@@ -47,8 +47,8 @@ static float fiberLayer(float2 uv, float angle, float scale) {
     return vnoise(stretched);
 }
 
-[[ stitchable ]] half4 marble(float2 position, half4 color, float2 size, float isDark) {
-    float2 uv = position / size;
+[[ stitchable ]] half4 marble(float2 position, half4 color, float2 size, float isDark, float seed) {
+    float2 uv = position / size + float2(seed * 0.317, seed * 0.193);
 
     float f1 = fiberLayer(uv, 0.05f, 7.0);
     float f2 = fiberLayer(uv, 1.62f, 6.5);
@@ -79,8 +79,8 @@ static float fiberLayer(float2 uv, float angle, float scale) {
 // Primary veins: bold diagonal sweep. Secondary: thinner crossing veins.
 // Inspired by the white Carrara-style stone of the image sundial (日晷).
 
-[[ stitchable ]] half4 stoneMarble(float2 position, half4 color, float2 size, float isDark) {
-    float2 uv = position / size;
+[[ stitchable ]] half4 stoneMarble(float2 position, half4 color, float2 size, float isDark, float seed) {
+    float2 uv = position / size + float2(seed * 0.317, seed * 0.193);
 
     // Two-layer domain warp for organic vein flow
     float2 q = float2(

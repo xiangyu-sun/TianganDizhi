@@ -1,4 +1,5 @@
-- Nouveau widget chance : activités fastes et néfastes du jour en un coup d'œil (formats rectangulaire et moyen)
-- Le fuseau horaire UTC+8 du Bazi inclut désormais Taïwan et Singapour
-- Bouton de partage déplacé dans les Réglages pour une interface plus épurée
+- Améliorations des arrière-plans et animations
+- Correction des calculs des termes solaires (Jieqi)
+- Nouvel écran d'accueil et vues détaillées des Dizhi
+- Améliorations UX : paramètres épurés, interface de localisation améliorée
 - Corrections de bugs et améliorations de stabilité

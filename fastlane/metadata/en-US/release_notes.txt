@@ -1,4 +1,5 @@
-- New Lucky Widget: daily auspicious and inauspicious activities at a glance (rectangular and medium sizes)
-- Bazi UTC+8 timezone now includes Taiwan and Singapore
-- Share button moved to Settings for a cleaner interface
+- Improved backgrounds and animations
+- Fixed Jieqi (solar term) calculation bugs
+- New onboarding experience and Dizhi detail views
+- UX improvements: cleaner settings, location UI, and interface refinements
 - Bug fixes and stability improvements

@@ -1,4 +1,5 @@
-- Widget nasib baharu: aktiviti baik dan buruk hari ini sekilas pandang (saiz segi empat dan sederhana)
-- Zon waktu UTC+8 Bazi kini merangkumi Taiwan dan Singapura
-- Butang kongsi dipindahkan ke Tetapan untuk antara muka yang lebih kemas
+- Latar belakang dan animasi yang lebih baik
+- Pembetulan pepijat pengiraan terma solar Jieqi
+- Pengalaman orientasi baharu dan paparan terperinci Dizhi
+- Penambahbaikan UX: tetapan lebih kemas, UI lokasi dipertingkat
 - Pembetulan pepijat dan peningkatan kestabilan

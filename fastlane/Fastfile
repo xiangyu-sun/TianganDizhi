@@ -15,6 +15,27 @@
 
 default_platform(:ios)
 
+lane :all_metadata do
+  deliver(
+    app_identifier: "com.uriphium.TianganDizhi",
+    platform: "ios",
+    skip_binary_upload: true,
+    skip_screenshots: true,
+    skip_app_version_update: true,
+    force: true,
+    metadata_path: "fastlane/metadata"
+  )
+  deliver(
+    app_identifier: "com.uriphium.TianganDizhi",
+    platform: "osx",
+    skip_binary_upload: true,
+    skip_screenshots: true,
+    skip_app_version_update: true,
+    force: true,
+    metadata_path: "fastlane/fastlane/metadata_mac"
+  )
+end
+
 platform :mac do
   desc "Push metadata to the Mac App Store"
   lane :metadata do

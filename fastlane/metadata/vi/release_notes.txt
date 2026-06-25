@@ -1,4 +1,5 @@
-- Widget may mắn mới: xem ngay hoạt động tốt và xấu trong ngày (kích thước hình chữ nhật và trung bình)
-- Múi giờ UTC+8 của Bát Tự nay bao gồm Đài Loan và Singapore
-- Nút chia sẻ được chuyển vào Cài đặt để giao diện gọn gàng hơn
+- Cải thiện nền và hoạt ảnh
+- Sửa lỗi tính toán tiết khí (Jieqi)
+- Màn hình giới thiệu mới và giao diện chi tiết Địa Chi
+- Cải tiến UX: cài đặt gọn hơn, giao diện vị trí được cải thiện
 - Sửa lỗi và cải thiện độ ổn định
