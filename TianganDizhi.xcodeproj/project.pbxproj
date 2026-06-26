@@ -1939,7 +1939,7 @@
 				INFOPLIST_FILE = ShiChen/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_NSLocationUsageDescription = "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1974,7 +1974,7 @@
 				INFOPLIST_FILE = ShiChen/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "天干地支";
 				INFOPLIST_KEY_NSLocationUsageDescription = "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets.";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
