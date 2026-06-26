@@ -10,7 +10,6 @@ import WidgetKit
 
 // MARK: - LuckConfigurationIntent
 
-@available(iOSApplicationExtension 17.0, *)
 struct LuckConfigurationIntent: WidgetConfigurationIntent {
   static let title: LocalizedStringResource = "今日宜忌配置"
   static let description: IntentDescription? = IntentDescription("顯示今日建除神及宜忌事項")
@@ -18,7 +17,6 @@ struct LuckConfigurationIntent: WidgetConfigurationIntent {
 
 // MARK: - LuckEntry
 
-@available(iOSApplicationExtension 17.0, *)
 struct LuckEntry: TimelineEntry {
   let date: Date
   let configuration: LuckConfigurationIntent
@@ -26,7 +24,6 @@ struct LuckEntry: TimelineEntry {
 
 // MARK: - LuckTimelineProvider
 
-@available(iOSApplicationExtension 17.0, *)
 struct LuckTimelineProvider: AppIntentTimelineProvider {
 
   func placeholder(in _: Context) -> LuckEntry {
@@ -51,7 +48,6 @@ struct LuckTimelineProvider: AppIntentTimelineProvider {
 
 // MARK: - LuckEntryView
 
-@available(iOSApplicationExtension 17.0, *)
 struct LuckEntryView: View {
   let date: Date
   @Environment(\.widgetFamily) var family
@@ -72,7 +68,6 @@ struct LuckEntryView: View {
 
 // MARK: - LuckWidget
 
-@available(iOSApplicationExtension 17.0, *)
 struct LuckWidget: Widget {
   let kind = "LuckWidget"
 
@@ -96,7 +91,6 @@ struct LuckWidget: Widget {
 
 // MARK: - Preview
 
-@available(iOSApplicationExtension 17.0, *)
 #Preview(as: .accessoryRectangular, widget: {
   LuckWidget()
 }, timeline: {

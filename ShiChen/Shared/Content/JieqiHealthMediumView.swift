@@ -12,7 +12,6 @@ import WidgetKit
 
 // MARK: - JieqiHealthMediumView
 
-@available(iOSApplicationExtension 17.0, *)
 struct JieqiHealthMediumView: View {
   let date: Date
 
@@ -45,7 +44,7 @@ struct JieqiHealthMediumView: View {
       }
       .frame(maxWidth: .infinity, alignment: .leading)
       .padding(.horizontal, 8)
-      .modifier(WidgetAccentable())
+      .widgetAccentable()
       .containerBackground(for: .widget) {
 #if os(macOS)
         Image(nsImage: jieqi.image)
@@ -70,7 +69,6 @@ struct JieqiHealthMediumView: View {
 }
 
 #if os(iOS)
-@available(iOSApplicationExtension 17.0, *)
 #Preview(as: .systemMedium, widget: {
   JieqiHealthWidget()
 }, timeline: {

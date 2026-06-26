@@ -13,7 +13,6 @@ import WidgetKit
 
 // MARK: - JieqiHealthConfigurationIntent
 
-@available(iOSApplicationExtension 17.0, *)
 struct JieqiHealthConfigurationIntent: WidgetConfigurationIntent {
   static let title: LocalizedStringResource = "節氣養生配置"
   static let description: IntentDescription? = IntentDescription("二十四節氣養生提示")
@@ -21,7 +20,6 @@ struct JieqiHealthConfigurationIntent: WidgetConfigurationIntent {
 
 // MARK: - JieqiHealthEntry
 
-@available(iOSApplicationExtension 17.0, *)
 struct JieqiHealthEntry: TimelineEntry {
   let date: Date
   let configuration: JieqiHealthConfigurationIntent
@@ -29,7 +27,6 @@ struct JieqiHealthEntry: TimelineEntry {
 
 // MARK: - JieqiHealthTimelineProvider
 
-@available(iOSApplicationExtension 17.0, *)
 struct JieqiHealthTimelineProvider: AppIntentTimelineProvider {
 
   func placeholder(in _: Context) -> JieqiHealthEntry {
@@ -53,7 +50,6 @@ struct JieqiHealthTimelineProvider: AppIntentTimelineProvider {
 
 // MARK: - JieqiHealthWidget
 
-@available(iOSApplicationExtension 17.0, *)
 struct JieqiHealthWidget: Widget {
   let kind = "JieqiHealth"
 
@@ -73,7 +69,6 @@ struct JieqiHealthWidget: Widget {
 
 // MARK: - Previews
 
-@available(iOSApplicationExtension 17.0, *)
 #Preview(as: .systemMedium, widget: {
   JieqiHealthWidget()
 }, timeline: {

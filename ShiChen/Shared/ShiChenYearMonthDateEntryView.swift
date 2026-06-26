@@ -35,21 +35,17 @@ struct ShiChenYearMonthDateEntryView: View {
 
     switch family {
     case .accessoryInline:
-      if #available(iOSApplicationExtension 16.1, *) {
-        InlineWidgetView(date: entry.date)
-      }
+      InlineWidgetView(date: entry.date)
 
     case .accessoryCircular:
-      if #available(iOSApplicationExtension 16.1, *) {
-        CircularWidgetView(date: entry.date)
-          .containerBackgroundForWidget {
-            Color.clear
-          }
-      }
+      CircularWidgetView(date: entry.date)
+        .containerBackground(for: .widget) {
+          Color.clear
+        }
 
     case .accessoryRectangular:
       RetangularWidgetView(date: entry.date)
-        .containerBackgroundForWidget(content: { Color.clear })
+        .containerBackground(for: .widget) { Color.clear }
 
     case .systemSmall:
       VStack {
@@ -68,7 +64,7 @@ struct ShiChenYearMonthDateEntryView: View {
 //        .font(bodyFont)
         
       }
-      .modifier(WidgetAccentable())
+      .widgetAccentable()
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
@@ -86,7 +82,7 @@ struct ShiChenYearMonthDateEntryView: View {
           .font(titleFont)
         Spacer()
       }
-      .modifier(WidgetAccentable())
+      .widgetAccentable()
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
@@ -124,7 +120,7 @@ private struct WidgetMediumView: View {
       }
       .font(title2Font)
       .padding([.leading, .trailing], 15)
-      .modifier(WidgetAccentable())
+      .widgetAccentable()
       
       HStack() {
         Text(shichen?.dizhi.displayHourText ?? "")
@@ -133,7 +129,7 @@ private struct WidgetMediumView: View {
 //        )
       }
       .font(titleFont)
-      .modifier(WidgetAccentable())
+      .widgetAccentable()
       
       Spacer()
     }

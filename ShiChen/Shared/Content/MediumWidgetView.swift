@@ -58,7 +58,7 @@ struct MediumWidgetView: View {
       }
       Spacer()
     }
-    .modifier(WidgetAccentable())
+    .widgetAccentable()
     .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
     #if os(iOS) || os(macOS)

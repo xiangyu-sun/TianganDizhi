@@ -54,9 +54,6 @@
 		9913E7EE2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7ED2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift */; };
 		9913E7F22ABDF67000E459B8 /* ShichenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F12ABDF67000E459B8 /* ShichenStack.swift */; };
 		9913E7F42ABDF89900E459B8 /* WatchStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F32ABDF89900E459B8 /* WatchStackView.swift */; };
-		9913E7F72AC0B47300E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
-		9913E7F82AC0B47300E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
-		9913E7F92AC0B47500E459B8 /* ContainerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */; };
 		9913E7FB2AC0B63700E459B8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */; };
 		9918EA822FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
 		9918EA842FEDBD6C00FC5486 /* PaperBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */; };
@@ -504,7 +501,6 @@
 		9913E7ED2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntentsTimelineProvider.swift; sourceTree = "<group>"; };
 		9913E7F12ABDF67000E459B8 /* ShichenStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShichenStack.swift; sourceTree = "<group>"; };
 		9913E7F32ABDF89900E459B8 /* WatchStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStackView.swift; sourceTree = "<group>"; };
-		9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerBackground.swift; sourceTree = "<group>"; };
 		9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9918EA802FEDBD6C00FC5486 /* PaperBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperBackground.swift; sourceTree = "<group>"; };
 		991A85432F3896270079C89A /* MenuBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContentView.swift; sourceTree = "<group>"; };
@@ -752,7 +748,6 @@
 				99A0B7A62DB59093000F2AD7 /* JieqiWidget.xcassets */,
 				998898E02A74514200A4E48C /* ShiChen.xcstrings */,
 				997CD1102954C92000BECF31 /* MaterialBackground.swift */,
-				9913E7F62AC0B3B600E459B8 /* ContainerBackground.swift */,
 				997C68932868A75300B40D3F /* Shared */,
 				46393EE72542F57900E40518 /* ShiChen.intentdefinition */,
 				462A5F6D24FFE5F20032A125 /* Assets.xcassets */,
@@ -1526,7 +1521,6 @@
 				998F9E9D2F3640F300650E5E /* Date+ShichenProgress.swift in Sources */,
 				993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				996321472911B3F0000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
-				9913E7F92AC0B47500E459B8 /* ContainerBackground.swift in Sources */,
 				991A857C2B5090E400C1D1BC /* SettingsManager.swift in Sources */,
 				46B79C462541F962003C0B7F /* Environment.swift in Sources */,
 				992A7E622DB56AA400B372CA /* Date+Jieqi.swift in Sources */,
@@ -1777,7 +1771,6 @@
 				9913E7F22ABDF67000E459B8 /* ShichenStack.swift in Sources */,
 				997C68AD2868A93100B40D3F /* ShichenView.swift in Sources */,
 				998F9E812F36367200650E5E /* ShichenLockScreenView.swift in Sources */,
-				9913E7F72AC0B47300E459B8 /* ContainerBackground.swift in Sources */,
 				997C68972868A76800B40D3F /* CompactShichenView.swift in Sources */,
 				9913E7EE2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift in Sources */,
 				997C68942868A76800B40D3F /* FullDateTitleView.swift in Sources */,
@@ -1853,7 +1846,6 @@
 				998F9E9B2F3640F300650E5E /* Date+ShichenProgress.swift in Sources */,
 				99FD3F6C292297DE0048DCEB /* ShichenHStackView.swift in Sources */,
 				99FD3F602922968B0048DCEB /* CircularWidgetView.swift in Sources */,
-				9913E7F82AC0B47300E459B8 /* ContainerBackground.swift in Sources */,
 				99BC3C092968359E004AB614 /* CountDownWidget.swift in Sources */,
 				99FD3F6F2922988B0048DCEB /* MinuteTimeLineScheduler.swift in Sources */,
 				99BC3C0E296836AD004AB614 /* CountDownView.swift in Sources */,

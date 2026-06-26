@@ -18,10 +18,8 @@ struct AllWidgets: WidgetBundle {
     HourlyWidget()
     CountDownWidget()
     SpecialDayWidget()
-    if #available(iOSApplicationExtension 17.0, *) {
-      LuckWidget()
-      JieqiHealthWidget()
-    }
+    LuckWidget()
+    JieqiHealthWidget()
     // if #available(iOS 16.1, *) {
     //   ShichenLiveActivity()
     // }

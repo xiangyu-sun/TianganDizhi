@@ -82,21 +82,18 @@ private extension Date {
 
 // MARK: - Previews
 
-@available(iOSApplicationExtension 17.0, *)
 #Preview("今日節日", as: .systemSmall, widget: {
   SpecialDayWidget()
 }, timeline: {
   SimpleEntry(date: .springFestival2026, configuration: ConfigurationIntent())
 })
 
-@available(iOSApplicationExtension 17.0, *)
 #Preview("即將到來", as: .systemSmall, widget: {
   SpecialDayWidget()
 }, timeline: {
   SimpleEntry(date: .beforeSpringFestival2026, configuration: ConfigurationIntent())
 })
 
-@available(iOSApplicationExtension 17.0, *)
 #Preview("遙遠節日", as: .systemSmall, widget: {
   SpecialDayWidget()
 }, timeline: {

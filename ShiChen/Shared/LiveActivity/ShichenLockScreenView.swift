@@ -53,7 +53,7 @@ struct ShichenLockScreenView: View {
       }
     }
 
-    .modifier(WidgetAccentable())
+    .widgetAccentable()
     .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
 #if canImport(ActivityKit) && os(iOS)
     .activityBackgroundTint(springFestiveBackgroundEnabled ? Color("background").opacity(0.3) : Color.clear)

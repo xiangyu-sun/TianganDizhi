@@ -33,7 +33,7 @@ struct CompactShichenView: View {
 
       ShichenInformationView(shichen: shichen)
     }
-    .containerBackgroundForWidget {
+    .containerBackground(for: .widget) {
       Color.clear
     }
   }

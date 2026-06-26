@@ -50,7 +50,7 @@ struct WatchStackView: View {
     }
     .widgetAccentable()
     .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-    .containerBackgroundForWidget {
+    .containerBackground(for: .widget) {
       Color.black
     }
   }
