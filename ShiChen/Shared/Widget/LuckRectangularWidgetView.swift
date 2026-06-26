@@ -53,6 +53,9 @@ struct LuckRectangularWidgetView: View {
           .foregroundStyle(auspiceColor)
       }
     }
+    .containerBackground(for: .widget, content: {
+      Color.clear
+    })
     .widgetAccentable()
     .font(.body)
   }
