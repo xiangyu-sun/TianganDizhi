@@ -68,6 +68,5 @@ struct ShichenLockScreenView: View {
     date: now,
     nextShichenCountdown: now.nextShichenCountdown
   )
-  .previewContext(WidgetPreviewContext(family: .systemMedium))
 }
 #endif

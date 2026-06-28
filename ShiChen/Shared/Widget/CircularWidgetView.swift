@@ -44,11 +44,5 @@ struct CircularWidgetView: View {
 }
 
 #Preview {
-  #if os(macOS)
   CircularWidgetView(date: .now)
-    .previewContext(WidgetPreviewContext(family: .systemLarge))
-  #else
-  CircularWidgetView(date: .now)
-    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-  #endif
 }

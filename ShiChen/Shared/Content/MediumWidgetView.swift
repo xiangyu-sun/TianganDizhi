@@ -83,6 +83,5 @@ struct MediumWidgetView: View {
 #if !os(watchOS)
 #Preview {
   MediumWidgetView(date: Date())
-    .previewContext(WidgetPreviewContext(family: .systemMedium))
 }
 #endif

@@ -40,5 +40,4 @@ struct CornerView: View {
 
 #Preview {
   CornerView(date: .now)
-    .previewContext(WidgetPreviewContext(family: .accessoryCorner))
 }

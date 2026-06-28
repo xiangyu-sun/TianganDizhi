@@ -28,9 +28,4 @@ struct FullDateTitleView: View {
 
 #Preview {
   FullDateTitleView(date: Date())
-  #if os(watchOS)
-    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
-  #else
-    .previewContext(WidgetPreviewContext(family: .systemMedium))
-  #endif
 }

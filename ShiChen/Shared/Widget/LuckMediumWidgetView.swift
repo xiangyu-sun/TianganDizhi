@@ -91,6 +91,5 @@ struct LuckMediumWidgetView: View {
 #if os(iOS)
 #Preview {
   LuckMediumWidgetView(date: .now)
-    .previewContext(WidgetPreviewContext(family: .systemMedium))
 }
 #endif

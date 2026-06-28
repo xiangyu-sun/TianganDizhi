@@ -50,35 +50,28 @@ struct ShiChenWidget: Widget {
 
 #Preview("YearMonth Inline") {
   ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryInline))
 }
 
 #Preview("YearMonth Circular") {
   ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
 }
 
 #Preview("YearMonth Retangular") {
   ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
 }
 
 #Preview("ShiChenEntryView Inline") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryInline))
 }
 
 #Preview("ShiChenEntryView Circular") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
 }
 
 #Preview("ShiChenEntryView Retangular") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
 }
 
 #Preview("ShiChenEntryView accessoryCorner") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryCorner))
 }

@@ -55,11 +55,5 @@ struct RetangularWidgetView: View {
 }
 
 #Preview {
-  #if os(macOS)
   RetangularWidgetView(date: .now)
-    .previewContext(WidgetPreviewContext(family: .systemSmall))
-  #else
-  RetangularWidgetView(date: .now)
-    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-  #endif
 }

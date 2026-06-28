@@ -141,35 +141,22 @@ private struct WidgetMediumView: View {
 
 #Preview("systemSmall") {
   ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-  #if os(watchOS)
-    .previewContext(WidgetPreviewContext(family: .accessoryInline))
-  #else
-    .previewContext(WidgetPreviewContext(family: .systemSmall))
-  #endif
 }
 
 #Preview("systemMedium") {
   ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-  #if os(watchOS)
-    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
-  #else
-    .previewContext(WidgetPreviewContext(family: .systemMedium))
-  #endif
 }
 
 #if os(iOS)
 #Preview("ShiChenYearMonthDateEntryView accessoryInline") {
   ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryInline))
 }
 
 #Preview("ShiChenYearMonthDateEntryView accessoryCircular") {
   ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
 }
 
 #Preview("ShiChenYearMonthDateEntryView accessoryRectangular") {
   ShiChenYearMonthDateEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
 }
 #endif

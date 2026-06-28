@@ -101,9 +101,4 @@ struct ShichenInformationView: View {
 
 #Preview {
   ShichenHStackView(shichen: .zi)
-  #if os(watchOS)
-    .previewContext(WidgetPreviewContext(family: .accessoryInline))
-  #else
-    .previewContext(WidgetPreviewContext(family: .systemMedium))
-  #endif
 }

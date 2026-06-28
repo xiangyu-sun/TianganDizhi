@@ -30,11 +30,5 @@ struct InlineWidgetView: View {
 }
 
 #Preview {
-  #if os(macOS)
   InlineWidgetView(date: .now)
-    .previewContext(WidgetPreviewContext(family: .systemSmall))
-  #else
-  InlineWidgetView(date: .now)
-    .previewContext(WidgetPreviewContext(family: .accessoryInline))
-  #endif
 }

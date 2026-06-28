@@ -64,6 +64,5 @@ struct LuckRectangularWidgetView: View {
 #if os(iOS)
 #Preview {
   LuckRectangularWidgetView(date: .now)
-    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
 }
 #endif

@@ -153,48 +153,39 @@ struct ShiChenEntryView: View {
 #if os(iOS)
 #Preview("Inline") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryInline))
 }
 
 #Preview("Circular") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryCircular))
 }
 
 #Preview("Retangular") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
 }
 
-#Preview {
+#Preview("systemSmall") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .systemSmall))
 }
 
-#Preview {
+#Preview("systemMedium") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .systemMedium))
 }
 
-#Preview {
+#Preview("systemLarge") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .systemLarge))
 }
 
 #Preview("systemLarge Dark") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .systemLarge))
     .environment(\.colorScheme, .dark)
 }
 
 #Preview("systemExtraLarge") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
 }
 
-#Preview("systemMedium") {
+#Preview("systemMedium XXL") {
   ShiChenEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .systemMedium))
     .environment(\.sizeCategory, .extraExtraLarge)
 }
 #endif

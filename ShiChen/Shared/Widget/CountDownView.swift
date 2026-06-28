@@ -85,21 +85,17 @@ struct CountDownView: View {
 #if os(iOS)
 #Preview("Inline") {
   CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryInline))
 }
 
 #Preview("Retangular") {
   CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
 }
 
-#Preview {
+#Preview("systemSmall") {
   CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .systemSmall))
 }
 
-#Preview {
+#Preview("systemMedium") {
   CountDownView(entry: CountDownEntry(date: Date(), configuration: ConfigurationIntent()))
-    .previewContext(WidgetPreviewContext(family: .systemMedium))
 }
 #endif

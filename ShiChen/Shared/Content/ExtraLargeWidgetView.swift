@@ -111,7 +111,5 @@ struct ExtraLargeWidgetView: View {
 #if os(iOS)
 #Preview {
   ExtraLargeWidgetView(date: Date())
-    .previewDevice(.init(stringLiteral: "iPad Pro 13-inch (M4)"))
-    .previewContext(WidgetPreviewContext(family: .systemExtraLarge))
 }
 #endif
