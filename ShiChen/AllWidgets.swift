@@ -20,9 +20,7 @@ struct AllWidgets: WidgetBundle {
     SpecialDayWidget()
     LuckWidget()
     JieqiHealthWidget()
-    // if #available(iOS 16.1, *) {
-    //   ShichenLiveActivity()
-    // }
+    CalendarWidget()
   }
 
 }

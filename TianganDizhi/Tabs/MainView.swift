@@ -207,7 +207,7 @@ struct MainView: View {
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
       #if os(iOS) || os(macOS)
-      .background { MarbleBackground() }
+      .background { TexturedBackground() }
       #endif
       #if os(macOS)
       .frame(minHeight: 640)

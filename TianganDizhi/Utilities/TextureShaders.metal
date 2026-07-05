@@ -47,7 +47,7 @@ static float fiberLayer(float2 uv, float angle, float scale) {
     return vnoise(stretched);
 }
 
-[[ stitchable ]] half4 marble(float2 position, half4 color, float2 size, float isDark, float seed) {
+[[ stitchable ]] half4 xuanPaper(float2 position, half4 color, float2 size, float isDark, float seed, texture2d<half, access::sample> grainTex) {
     float2 uv = position / size + float2(seed * 0.317, seed * 0.193);
 
     float f1 = fiberLayer(uv, 0.05f, 7.0);
@@ -55,9 +55,7 @@ static float fiberLayer(float2 uv, float angle, float scale) {
     float f3 = fiberLayer(uv, 0.84f, 8.0);
     float fibers = f1 * 0.45 + f2 * 0.32 + f3 * 0.23;
 
-    float microA = fbm(uv * 24.0 + float2(5.3, 2.1), 3);
-    float microB = vnoise(uv * 55.0 + float2(9.7, 4.4));
-    float micro  = microA * 0.6 + microB * 0.4;
+    float micro = fbm(uv * 24.0 + float2(5.3, 2.1), 3);
 
     float cloud = fbm(uv * 2.2 + float2(1.9, 7.3), 5);
 
@@ -71,7 +69,18 @@ static float fiberLayer(float2 uv, float angle, float scale) {
     half3 hi = mix(lightHi, darkHi, half(isDark));
     half3 lo = mix(lightLo, darkLo, half(isDark));
     half contrast = mix(half(0.28), half(0.22), half(isDark));
-    return half4(mix(hi, lo, half(t) * contrast), 1.0);
+    half3 rgb = mix(hi, lo, half(t) * contrast);
+
+    // Grain tile is physical-scale (points), independent of view size, so texture
+    // repeats at a fixed granularity instead of stretching on differently sized widgets.
+    // Applied as a post-blend overlay (not folded into the t-mix above) so it stays
+    // visible instead of getting diluted alongside the cloud/fiber weights.
+    constexpr sampler grainSampler(address::repeat, filter::linear, coord::normalized);
+    float2 grainUV = (position + seed * float2(131.0, 271.0)) / 48.0;
+    half grain = grainTex.sample(grainSampler, grainUV).r - 0.5h;
+    rgb += grain * mix(half(0.10), half(0.07), half(isDark));
+
+    return half4(clamp(rgb, 0.0h, 1.0h), 1.0);
 }
 
 // ── Stone marble (大理石) ──────────────────────────────────────────────────────
