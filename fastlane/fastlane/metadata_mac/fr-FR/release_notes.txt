@@ -1,3 +1,4 @@
+- Nouveau widget calendrier mensuel pour le bureau, disponible en grande et très grande tailles
 - Nouveau calculateur des Quatre Piliers du Destin (八字) : piliers de l'année, du mois, du jour et de l'heure avec équilibre des cinq éléments
 - Nouvelles relations des Branches Terrestres : 六冲, 六合, 三合 et 六害 pour chaque branche
 - Nouveaux écrans de référence : prochains festivals, les Soixante Nayin (六十納音) et une boussole des Cinq Directions (五方)

@@ -1,3 +1,4 @@
+- Tiện ích lịch tháng mới cho màn hình desktop, có kích thước Lớn và Rất Lớn
 - Máy tính Tứ Trụ (八字) mới: trụ năm, tháng, ngày và giờ cùng cân bằng ngũ hành
 - Quan hệ Địa Chi mới: 六冲, 六合, 三合 và 六害 cho từng chi
 - Màn hình tham khảo mới: Lễ hội sắp tới, Lục Thập Nạp Âm (六十納音) và la bàn Ngũ Phương (五方)

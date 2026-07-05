@@ -1,3 +1,4 @@
+- Nuevo widget de calendario mensual para el escritorio, en tamaños grande y extra grande
 - Nueva calculadora de los Cuatro Pilares del Destino (八字): pilares de año, mes, día y hora con equilibrio de los cinco elementos
 - Nuevas relaciones de las Ramas Terrestres: 六冲, 六合, 三合 y 六害 para cada rama
 - Nuevas pantallas de referencia: próximos festivales, los Sesenta Nayin (六十納音) y una brújula de las Cinco Direcciones (五方)
