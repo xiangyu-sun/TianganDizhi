@@ -78,8 +78,16 @@ struct CalendarWidget: Widget {
 
 /// Header-less month calendar composed from the package's public parts, so the
 /// interactive `MonthHeaderView` (whose buttons are inert in a widget) is omitted.
+///
+/// `.systemExtraLarge` only appears on iPad/Mac (WidgetKit doesn't offer it on
+/// iPhone), and its canvas is much wider relative to its height than `.systemLarge`.
+/// Rather than stretching the same 7-column grid, extraLarge adds a today-detail
+/// sidebar (Four Pillars + Moon Phase) to use that extra horizontal space.
 struct CalendarWidgetView: View {
   let entry: CalendarEntry
+
+  @Environment(\.widgetFamily) private var family
+  @Environment(\.calendarTheme) private var theme
 
   private var configuration: CalendarConfiguration {
     CalendarConfiguration(
@@ -91,17 +99,45 @@ struct CalendarWidgetView: View {
     CalendarMonth(containing: entry.date)
   }
 
-  var body: some View {
-    let month = month
-    let columns = Array(repeating: GridItem(.flexible(), spacing: 2), count: 7)
+  private var today: CalendarDate {
+    CalendarDate(date: entry.date)
+  }
 
-    VStack(spacing: 6) {
+  var body: some View {
+    switch family {
+    case .systemExtraLarge:
+      HStack(alignment: .top, spacing: 16) {
+        calendarGrid
+          .frame(maxWidth: .infinity)
+
+        VStack(alignment: .leading, spacing: 12) {
+          FourPillarsView(calendarDate: today)
+          MoonPhaseView(calendarDate: today)
+          Spacer(minLength: 0)
+        }
+        .frame(width: 220)
+      }
+      .padding(8)
+    default:
+      calendarGrid
+        .padding(8)
+    }
+  }
+
+  private var calendarGrid: some View {
+    // Column spacing and the horizontal inset mirror WeekdayHeaderView's own
+    // layout exactly (same theme.columnSpacing, same bare `.padding(.horizontal)`)
+    // so the weekday labels line up with the day-number columns beneath them.
+    let month = month
+    let columns = Array(repeating: GridItem(.flexible(), spacing: theme.columnSpacing), count: 7)
+
+    return VStack(spacing: theme.rowSpacing) {
       Text(month.title)
         .font(.headline)
 
       WeekdayHeaderView(calendar: month.calendar)
 
-      LazyVGrid(columns: columns, spacing: 2) {
+      LazyVGrid(columns: columns, spacing: theme.rowSpacing) {
         ForEach(Array(month.gridDates.enumerated()), id: \.offset) { _, calDate in
           if let calDate {
             DayCellView(calendarDate: calDate, configuration: configuration)
@@ -110,8 +146,8 @@ struct CalendarWidgetView: View {
           }
         }
       }
+      .padding(.horizontal)
     }
-    .padding(8)
   }
 }
 
