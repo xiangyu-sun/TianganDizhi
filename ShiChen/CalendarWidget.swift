@@ -127,6 +127,7 @@ struct CalendarWidgetView: View {
         .frame(width: 220)
       }
       .padding(.top, 16)
+      .padding(.trailing, 16)
     default:
       calendarGrid
     }
