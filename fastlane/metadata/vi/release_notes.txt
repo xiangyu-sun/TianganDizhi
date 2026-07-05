@@ -1,3 +1,4 @@
+- Tiện ích lịch tháng mới, có kích thước Lớn và Rất Lớn
 - Cải thiện nền và hoạt ảnh
 - Sửa lỗi tính toán tiết khí (Jieqi)
 - Màn hình giới thiệu mới và giao diện chi tiết Địa Chi

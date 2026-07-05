@@ -1,3 +1,4 @@
+- Nuevo widget de calendario mensual, en tamaños grande y extra grande
 - Fondos y animaciones mejorados
 - Corrección de errores en el cálculo de los términos solares (Jieqi)
 - Nueva experiencia de incorporación y vistas detalladas de Dizhi

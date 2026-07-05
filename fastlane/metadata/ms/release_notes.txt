@@ -1,3 +1,4 @@
+- Widget kalendar bulanan baharu, dalam saiz Besar dan Sangat Besar
 - Latar belakang dan animasi yang lebih baik
 - Pembetulan pepijat pengiraan terma solar Jieqi
 - Pengalaman orientasi baharu dan paparan terperinci Dizhi
