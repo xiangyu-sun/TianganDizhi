@@ -66,6 +66,7 @@ struct CalendarWidget: Widget {
       provider: CalendarTimelineProvider())
     { entry in
       CalendarWidgetView(entry: entry)
+        .ignoresSafeArea(.all)
         .containerBackground(.background, for: .widget)
     }
     .configurationDisplayName(WidgetConstants.calendarWidgetTitle)
@@ -131,29 +132,50 @@ struct CalendarWidgetView: View {
   }
 
   private var calendarGrid: some View {
-    // Column spacing and the horizontal inset mirror WeekdayHeaderView's own
-    // layout exactly (same theme.columnSpacing, same bare `.padding(.horizontal)`)
-    // so the weekday labels line up with the day-number columns beneath them.
     let month = month
-    let columns = Array(repeating: GridItem(.flexible(), spacing: theme.columnSpacing), count: 7)
 
+    // `.adaptiveCalendarColumns` (from the package) measures available width
+    // and adapts columnSpacing/fonts to it, so a cramped `.systemLarge` on
+    // iPhone and a roomy `.systemExtraLarge` on iPad don't render identically.
+    // The adapted theme is shared via the environment, so WeekdayHeaderView and
+    // CalendarDayGridView (below) both read the same value and stay aligned.
     return VStack(spacing: theme.rowSpacing) {
       Text(month.title)
         .font(.headline)
 
       WeekdayHeaderView(calendar: month.calendar)
 
-      LazyVGrid(columns: columns, spacing: theme.rowSpacing) {
-        ForEach(Array(month.gridDates.enumerated()), id: \.offset) { _, calDate in
-          if let calDate {
-            DayCellView(calendarDate: calDate, configuration: configuration)
-          } else {
-            Color.clear
-          }
+      CalendarDayGridView(month: month, configuration: configuration)
+    }
+    .adaptiveCalendarColumns(baseTheme: theme)
+  }
+}
+
+// MARK: - CalendarDayGridView
+
+/// The 7-column day grid, split into its own view (rather than inline in
+/// `calendarGrid`) so it reads `calendarTheme` fresh from its own environment —
+/// matching `WeekdayHeaderView`/`DayCellView`. That's what lets
+/// `.adaptiveCalendarColumns` (applied on the parent `VStack`) reach it.
+private struct CalendarDayGridView: View {
+  let month: CalendarMonth
+  let configuration: CalendarConfiguration
+
+  @Environment(\.calendarTheme) private var theme
+
+  var body: some View {
+    let columns = Array(repeating: GridItem(.flexible(), spacing: theme.columnSpacing), count: 7)
+
+    LazyVGrid(columns: columns, spacing: theme.rowSpacing) {
+      ForEach(Array(month.gridDates.enumerated()), id: \.offset) { _, calDate in
+        if let calDate {
+          DayCellView(calendarDate: calDate, configuration: configuration)
+        } else {
+          Color.clear
         }
       }
-      .padding(.horizontal)
     }
+    .padding(.horizontal)
   }
 }
 
