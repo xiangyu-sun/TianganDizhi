@@ -66,9 +66,9 @@ struct CalendarWidget: Widget {
       provider: CalendarTimelineProvider())
     { entry in
       CalendarWidgetView(entry: entry)
-        .ignoresSafeArea(.all)
         .containerBackground(.background, for: .widget)
     }
+    .contentMarginsDisabled()
     .configurationDisplayName(WidgetConstants.calendarWidgetTitle)
     .description(WidgetConstants.calendarWidgetDescription)
     .supportedFamilies([.systemLarge, .systemExtraLarge])
@@ -126,6 +126,7 @@ struct CalendarWidgetView: View {
         }
         .frame(width: 220)
       }
+      .padding(.top, 16)
     default:
       calendarGrid
     }
