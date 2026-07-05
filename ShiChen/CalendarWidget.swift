@@ -113,14 +113,20 @@ struct CalendarWidgetView: View {
         VStack(alignment: .leading, spacing: 12) {
           FourPillarsView(calendarDate: today)
           MoonPhaseView(calendarDate: today)
+          
+          let mansion = LunarMansion.lunarMansion(date: entry.date)
+          HStack {
+            Text("星象: \(mansion.fourSymbol.rawValue)")
+            Text("星宿: \(mansion.rawValue)")
+          }
+          .accessibilityElement(children: .combine)
+          .accessibilityLabel("星象：\(mansion.fourSymbol.rawValue)，星宿：\(mansion.rawValue)")
           Spacer(minLength: 0)
         }
         .frame(width: 220)
       }
-      .padding(8)
     default:
       calendarGrid
-        .padding(8)
     }
   }
 
