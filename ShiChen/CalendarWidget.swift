@@ -147,7 +147,7 @@ struct CalendarWidgetView: View {
 
       WeekdayHeaderView(calendar: month.calendar)
 
-      CalendarDayGridView(month: month, configuration: configuration)
+      CalendarDayGridView(month: month, configuration: configuration, today: entry.date)
     }
     .adaptiveCalendarColumns(baseTheme: theme)
   }
@@ -162,6 +162,10 @@ struct CalendarWidgetView: View {
 private struct CalendarDayGridView: View {
   let month: CalendarMonth
   let configuration: CalendarConfiguration
+  /// The entry's date, not the system clock — WidgetKit pre-renders future
+  /// entries at delivery time, so `DayCellView` must be told which day is
+  /// "today" from the timeline entry, or it highlights the render-day's cell.
+  let today: Date
 
   @Environment(\.calendarTheme) private var theme
 
@@ -171,7 +175,7 @@ private struct CalendarDayGridView: View {
     LazyVGrid(columns: columns, spacing: theme.rowSpacing) {
       ForEach(Array(month.gridDates.enumerated()), id: \.offset) { _, calDate in
         if let calDate {
-          DayCellView(calendarDate: calDate, configuration: configuration)
+          DayCellView(calendarDate: calDate, configuration: configuration, today: today)
         } else {
           Color.clear
         }
