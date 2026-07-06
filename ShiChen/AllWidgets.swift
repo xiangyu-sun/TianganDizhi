@@ -14,13 +14,13 @@ struct AllWidgets: WidgetBundle {
   var body: some Widget {
     ShiChen()
     JieqiWidget()
-    Nongli()
     HourlyWidget()
-    CountDownWidget()
-    SpecialDayWidget()
-    LuckWidget()
     JieqiHealthWidget()
     CalendarWidget()
+    SpecialDayWidget()
+    CountDownWidget()
+    Nongli()
+    LuckWidget()
   }
 
 }
