@@ -161,8 +161,6 @@
 		9968B2CF2F800214005E242A /* FangweiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CE2F800214005E242A /* FangweiView.swift */; };
 		9968B2D02F800214005E242A /* FangweiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2CE2F800214005E242A /* FangweiView.swift */; };
 		9968B2D22F8062E2005E242A /* JieqiHealthWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */; };
-		CA1E0000000000000000FEF2 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1E0000000000000000FEF1 /* CalendarWidget.swift */; };
-		CA1E0000000000000000FEF3 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1E0000000000000000FEF1 /* CalendarWidget.swift */; };
 		9968B2D42F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */; };
 		9968B2D52F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */; };
 		9968B2D62F8062F5005E242A /* JieqiHealthMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */; };
@@ -259,6 +257,9 @@
 		998F9E9D2F3640F300650E5E /* Date+ShichenProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E9A2F3640F300650E5E /* Date+ShichenProgress.swift */; };
 		998F9E9E2F3640F300650E5E /* Date+ShichenProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E9A2F3640F300650E5E /* Date+ShichenProgress.swift */; };
 		998F9E9F2F3640F300650E5E /* Date+ShichenProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F9E9A2F3640F300650E5E /* Date+ShichenProgress.swift */; };
+		999104042FFBE27D00E27548 /* JieqiHealthWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */; };
+		999104052FFBE28B00E27548 /* LuckWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3202F910000005E242A /* LuckWidget.swift */; };
+		999104062FFBE29500E27548 /* ChineseFestivalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A036472FB09A5D008764DA /* ChineseFestivalWidget.swift */; };
 		999150012FFA71B000E27548 /* ChineseTranditionalCalendarUI in Frameworks */ = {isa = PBXBuildFile; productRef = 999150002FFA71B000E27548 /* ChineseTranditionalCalendarUI */; };
 		999150032FFA71B600E27548 /* ChineseTranditionalCalendarUI in Frameworks */ = {isa = PBXBuildFile; productRef = 999150022FFA71B600E27548 /* ChineseTranditionalCalendarUI */; };
 		999610502FCB9AB70094A0BB /* ChineseTranditionalCalendarUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9996104F2FCB9AB70094A0BB /* ChineseTranditionalCalendarUI */; };
@@ -357,6 +358,8 @@
 		99FD3F762927EBD90048DCEB /* WuxingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FD3F742927EBD90048DCEB /* WuxingView.swift */; };
 		A86338E8CCA9C14C9A2F40C1 /* ChinesePinyinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8B42510547F456786FE480 /* ChinesePinyinTests.swift */; };
 		C4DB0A9BF1BA67BEDC774198 /* MinuteTimeLineSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DDA231B606C239EFED7F58 /* MinuteTimeLineSchedulerTests.swift */; };
+		CA1E0000000000000000FEF2 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1E0000000000000000FEF1 /* CalendarWidget.swift */; };
+		CA1E0000000000000000FEF3 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1E0000000000000000FEF1 /* CalendarWidget.swift */; };
 		DD2FE812BB3047DFB7DE7304 /* TextureShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* TextureShaders.metal */; };
 /* End PBXBuildFile section */
 
@@ -547,7 +550,6 @@
 		9968B2CB2F800202005E242A /* BaziView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaziView.swift; sourceTree = "<group>"; };
 		9968B2CE2F800214005E242A /* FangweiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FangweiView.swift; sourceTree = "<group>"; };
 		9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiHealthWidget.swift; sourceTree = "<group>"; };
-		CA1E0000000000000000FEF1 /* CalendarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidget.swift; sourceTree = "<group>"; };
 		9968B2D32F8062F5005E242A /* JieqiHealthMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiHealthMediumView.swift; sourceTree = "<group>"; };
 		9968B30F2F900000005E242A /* DaYunCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaYunCalculator.swift; sourceTree = "<group>"; };
 		9968B3202F910000005E242A /* LuckWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckWidget.swift; sourceTree = "<group>"; };
@@ -616,6 +618,7 @@
 		99FD3F50292296180048DCEB /* ShichenMacWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShichenMacWidget.entitlements; sourceTree = "<group>"; };
 		99FD3F68292297030048DCEB /* ShichenMacWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShichenMacWidget.swift; sourceTree = "<group>"; };
 		99FD3F742927EBD90048DCEB /* WuxingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuxingView.swift; sourceTree = "<group>"; };
+		CA1E0000000000000000FEF1 /* CalendarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidget.swift; sourceTree = "<group>"; };
 		E5DDA231B606C239EFED7F58 /* MinuteTimeLineSchedulerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MinuteTimeLineSchedulerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1835,11 +1838,13 @@
 				992A7E642DB56AA400B372CA /* Date+Jieqi.swift in Sources */,
 				994215E92965C368003C5CA1 /* WidgetConstants.swift in Sources */,
 				99FD3F702922989F0048DCEB /* ShichenTimeLineSceduler.swift in Sources */,
+				999104052FFBE28B00E27548 /* LuckWidget.swift in Sources */,
 				998F9E8A2F36373100650E5E /* ShichenActivityAttributes.swift in Sources */,
 				994215F12965C812003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				99FD3F6A292297BE0048DCEB /* Environment.swift in Sources */,
 				997CD11E2954FE1700BECF31 /* Constants.swift in Sources */,
 				99FD3F6D292298650048DCEB /* CircularContainerView.swift in Sources */,
+				999104062FFBE29500E27548 /* ChineseFestivalWidget.swift in Sources */,
 				99ECAED22A475BAF004997FD /* Date+WidgetIntent.swift in Sources */,
 				99F9DDD029E0CE2C00E69B8E /* MeasurmentFormatterManager.swift in Sources */,
 				99A0B7A22DB5895F000F2AD7 /* JieqiTimelineProvider.swift in Sources */,
@@ -1848,6 +1853,7 @@
 				9968B3272F910000005E242A /* LuckRectangularWidgetView.swift in Sources */,
 				9968B32B2F920000005E242A /* LuckMediumWidgetView.swift in Sources */,
 				991A857F2B5090E700C1D1BC /* SettingsManager.swift in Sources */,
+				999104042FFBE27D00E27548 /* JieqiHealthWidget.swift in Sources */,
 				99BC3C14296A2950004AB614 /* DateFormatters.swift in Sources */,
 				99F9DDCE29E0CDD000E69B8E /* WeatherData.swift in Sources */,
 				99A2B70A297EBA6C00086CC7 /* CountDownTimelineProvider.swift in Sources */,

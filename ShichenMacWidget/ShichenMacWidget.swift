@@ -18,7 +18,11 @@ struct AllWidgets: WidgetBundle {
   var body: some Widget {
     ShichenMacWidget()
     CalendarWidget()
-    // CountDownWidget()
+    CountDownWidget()
+    SpecialDayWidget()
+    LuckWidget()
+    JieqiHealthWidget()
+    CalendarWidget()
   }
 }
 
