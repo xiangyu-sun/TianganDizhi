@@ -34,6 +34,36 @@ xcodebuild -scheme "ShichenWatch Watch App" build
 fastlane ios screenshots
 ```
 
+## Git Workflow
+
+### Release branch
+`release` is the branch that drives the actual App Store build/deploy — changes on
+`master` do not ship until they are also on `release`.
+
+After changes land on `master`, sync them to `release`:
+```bash
+git merge-base --is-ancestor release master   # expect a clean fast-forward
+git checkout release
+git merge master                               # fast-forwards in the normal case
+git push origin release
+git checkout master                            # return to where you started
+```
+If `release` is *not* an ancestor of `master` (the `--is-ancestor` check fails), it
+is not a clean fast-forward — surface that rather than forcing the merge.
+
+### ChineseTranditionalCalendarUI package
+The shared calendar UI lives in the `ChineseTranditionalCalendarUI` Swift package,
+consumed here as a **remote** SwiftPM dependency (pinned by branch in
+`Package.resolved`). When a fix is needed in that package:
+- Edit it directly in its local clone at `/Users/xiangyu.sun/ChineseTranditionalCalendarUI`
+  (the source of truth for shared calendar views) — do not duplicate the code app-side.
+- Build/test the package there (`swift build`, `swift test`).
+- The app cannot see the change until the package is committed + pushed to its
+  `origin/master` and this repo's `Package.resolved` revision is bumped to the new
+  SHA. `xcodebuild -resolvePackageDependencies` does **not** auto-advance a
+  branch-tracked pin past its current commit — hand-edit the `revision` in
+  `Package.resolved`, then re-resolve to validate.
+
 ## Architecture Overview
 
 ### Multi-Target Structure
