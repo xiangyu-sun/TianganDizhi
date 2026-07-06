@@ -260,6 +260,7 @@
 		999104042FFBE27D00E27548 /* JieqiHealthWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B2D12F8062E2005E242A /* JieqiHealthWidget.swift */; };
 		999104052FFBE28B00E27548 /* LuckWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968B3202F910000005E242A /* LuckWidget.swift */; };
 		999104062FFBE29500E27548 /* ChineseFestivalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A036472FB09A5D008764DA /* ChineseFestivalWidget.swift */; };
+		999104072FFBF1FB00E27548 /* JieqiWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0B79E2DB58937000F2AD7 /* JieqiWidget.swift */; };
 		999150012FFA71B000E27548 /* ChineseTranditionalCalendarUI in Frameworks */ = {isa = PBXBuildFile; productRef = 999150002FFA71B000E27548 /* ChineseTranditionalCalendarUI */; };
 		999150032FFA71B600E27548 /* ChineseTranditionalCalendarUI in Frameworks */ = {isa = PBXBuildFile; productRef = 999150022FFA71B600E27548 /* ChineseTranditionalCalendarUI */; };
 		999610502FCB9AB70094A0BB /* ChineseTranditionalCalendarUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9996104F2FCB9AB70094A0BB /* ChineseTranditionalCalendarUI */; };
@@ -1821,6 +1822,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999104072FFBF1FB00E27548 /* JieqiWidget.swift in Sources */,
 				99FD3F642922968B0048DCEB /* InlineWidgetView.swift in Sources */,
 				99FD3F67292296B80048DCEB /* ShiChen.intentdefinition in Sources */,
 				99FD3F69292297030048DCEB /* ShichenMacWidget.swift in Sources */,

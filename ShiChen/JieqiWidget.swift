@@ -58,7 +58,11 @@ struct JieqiWidget: Widget {
         }
         .widgetAccentable()
         .frame(maxWidth: .infinity)
+        #if os(macOS)
+        .materialBackgroundWidget(with: Image(nsImage: jieqi.image))
+        #else
         .materialBackgroundWidget(with: Image(uiImage: jieqi.image))
+        #endif
       } else {
         EmptyView()
       }

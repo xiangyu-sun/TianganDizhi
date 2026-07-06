@@ -83,6 +83,8 @@ struct LuckWidget: Widget {
     .description("顯示今日建除神、宜忌事項及日支沖")
     #if os(watchOS)
     .supportedFamilies([.accessoryRectangular])
+    #elseif os(macOS)
+    .supportedFamilies([.systemMedium])
     #else
     .supportedFamilies([.accessoryRectangular, .systemMedium])
     #endif
@@ -90,9 +92,10 @@ struct LuckWidget: Widget {
 }
 
 // MARK: - Preview
-
+#if os(iOS)
 #Preview(as: .accessoryRectangular, widget: {
   LuckWidget()
 }, timeline: {
   LuckEntry(date: Date(), configuration: .init())
 })
+#endif
