@@ -144,6 +144,7 @@ struct CalendarWidgetView: View {
     return VStack(spacing: theme.rowSpacing) {
       Text(month.title)
         .font(.headline)
+        .padding(.bottom, 8)
 
       WeekdayHeaderView(calendar: month.calendar)
 
