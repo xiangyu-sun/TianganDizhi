@@ -1,0 +1,5 @@
+- Widget kalender baru untuk desktop: lihat seluruh bulan dengan istilah matahari dan hari lunar, dalam ukuran Large dan Extra Large
+- Kalkulator Empat Pilar Nasib (八字) baru — pilar tahun, bulan, hari, dan jam dengan keseimbangan elemen
+- Hubungan Cabang Bumi baru: 六冲, 六合, 三合, dan 六害 untuk setiap cabang
+- Layar referensi baru: Festival Mendatang, Nada Lima Elemen (六十納音), dan kompas Lima Arah (五方)
+- Perbaikan bug dan peningkatan performa

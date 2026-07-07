@@ -1,0 +1,55 @@
+Temukan kearifan astrologi tradisional Tiongkok, penentuan waktu, dan filsafat — semuanya dalam satu aplikasi indah untuk iPhone, iPad, Mac, dan Apple Watch.
+
+PENENTUAN WAKTU TIONGKOK (SHICHEN)
+- Jam melingkar waktu nyata yang menampilkan 12 periode dua jam tradisional (時辰)
+- Subdivisi Ke yang melacak progres seperempat jam dalam setiap Shichen
+- Nama alias dan konteks budaya untuk setiap periode waktu
+- Dukungan Live Activity & Dynamic Island untuk info Shichen sekilas di Layar Kunci
+
+KALENDER & ASTROLOGI TIONGKOK
+- Konversi kalender lunar-solar lengkap dengan Batang Langit dan Cabang Bumi (天干地支)
+- Tampilan lengkap Siklus Sexagenary 60 tahun (六十甲子)
+- 24 Istilah Matahari (節氣) dengan hitung mundur istilah berikutnya
+- 12 Hewan Zodiak dengan asosiasi Lima Elemen
+- Dua Belas Dewa (十二建除神) dengan aktivitas baik dan buruk harian
+- Pelacakan 28 Rumah Bulan (二十八宿)
+
+I CHING & BAGUA
+- Susunan Delapan Trigram Fuxi (Pra-Langit) dan Raja Wen (Pasca-Langit)
+- Semua 64 Heksagram dengan simbol dan tafsirannya
+- 12 Heksagram Bulanan untuk kalender lunar dan solar
+- Korelasi fase bulan dengan heksagram I Ching
+
+PENGOBATAN TRADISIONAL TIONGKOK
+- Jam Organ Meridian (子午流注): lihat organ mana yang paling aktif di setiap Shichen
+- Sistem Lima Elemen dengan asosiasi organ, emosi, rasa, warna, dan arah
+- Wawasan kesehatan praktis berdasarkan prinsip waktu akupunktur kuno
+
+TEORI MUSIK TRADISIONAL
+- Lima Nada Musik (五音) dengan padanan Dinasti Tang dan Barat
+- Dua Belas Skala Nada (十二律呂) yang berkorelasi dengan Cabang Bumi
+
+CUACA & ASTRONOMI
+- Waktu matahari terbit, terbenam, bulan terbit, dan terbenam melalui Apple WeatherKit
+- Tampilan fase bulan dengan nama fase bulan tradisional Tiongkok
+- Suhu harian dan kondisi cuaca
+
+WIDGET DI MANA-MANA
+- Widget Layar Utama dalam ukuran kecil, sedang, besar, dan ekstra besar
+- Widget Layar Kunci yang menampilkan Shichen, tanggal lunar, dan hitung mundur istilah matahari
+- Widget hitung mundur Tahun Baru Imlek
+- Komplikasi dan widget Apple Watch
+- Tampilan menu bar macOS dengan salin cepat
+
+APPLE WATCH
+- Aplikasi jam tangan khusus dengan jam Shichen melingkar
+- Berbagai jenis komplikasi untuk watch face Anda
+- Referensi organ dan meridian ringkas di pergelangan tangan Anda
+
+KUSTOMISASI
+- Gaya penamaan Tiongkok tradisional atau sederhana
+- Font kaligrafi khusus (WeibeiTC-Bold) atau font sistem
+- Tema merah Festival Musim Semi untuk perayaan Tahun Baru Imlek
+- Opsi zona waktu GMT+8 untuk pengguna di luar negeri
+
+Baik Anda mempelajari astrologi Tiongkok, mempraktikkan pengobatan tradisional, atau sekadar ingin terhubung dengan kearifan budaya ribuan tahun, TianganDizhi adalah pendamping penting Anda.

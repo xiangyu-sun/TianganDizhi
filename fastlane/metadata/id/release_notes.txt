@@ -1,0 +1,6 @@
+- Widget kalender baru: lihat seluruh bulan dengan istilah matahari dan hari lunar, dalam ukuran Large dan Extra Large
+- Latar belakang dan animasi yang ditingkatkan
+- Widget Jieqi (istilah matahari) diperbaiki: kini menampilkan istilah hari ini pada hari dimulainya, dan hitung mundur ke istilah berikutnya pada hari lain
+- Pengalaman orientasi baru dan tampilan detail Dizhi
+- Peningkatan UX: pengaturan lebih rapi, UI lokasi, dan penyempurnaan antarmuka
+- Perbaikan bug dan peningkatan stabilitas
