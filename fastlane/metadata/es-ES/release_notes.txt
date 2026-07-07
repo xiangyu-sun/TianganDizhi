@@ -1,6 +1,6 @@
 - Nuevo widget de calendario mensual, en tamaños grande y extra grande
 - Fondos y animaciones mejorados
-- Corrección de errores en el cálculo de los términos solares (Jieqi)
+- Widgets de términos solares (Jieqi): muestran el término del día en su fecha de inicio y una cuenta atrás hasta el siguiente en los demás días
 - Nueva experiencia de incorporación y vistas detalladas de Dizhi
 - Mejoras de UX: ajustes más limpios, interfaz de ubicación mejorada
 - Correcciones de errores y mejoras de estabilidad

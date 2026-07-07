@@ -1,6 +1,6 @@
 - Nouveau widget calendrier mensuel, disponible en grande et très grande tailles
 - Améliorations des arrière-plans et animations
-- Correction des calculs des termes solaires (Jieqi)
+- Widgets des termes solaires (Jieqi) : affichent le terme du jour le jour de son début, sinon un compte à rebours jusqu'au prochain
 - Nouvel écran d'accueil et vues détaillées des Dizhi
 - Améliorations UX : paramètres épurés, interface de localisation améliorée
 - Corrections de bugs et améliorations de stabilité

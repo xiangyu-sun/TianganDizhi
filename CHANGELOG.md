@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Fixes
+- **Jieqi solar-term display** — the small Jieqi widget, the medium 節氣養生 widget, the main screen, and the menu bar now agree on which solar term to show. On a term's start day they name the term that has begun (e.g. 小暑); on every other day they count down to the next term (e.g. 十五日後大暑). Previously a term-start day could show the previous or next term because the widgets read the instant-sensitive `jieqi`/`nextJieqi` package APIs from their midnight-seeded timelines; all reads are now day-aligned via `endOfLocalDay`, and `displayedJieqi` keeps each widget's term name, health tip, and background image in step with its title.
+
 ## [2.56.0] — 2026-06-15
 
 ### New Screens

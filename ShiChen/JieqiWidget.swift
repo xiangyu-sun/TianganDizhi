@@ -24,15 +24,18 @@ struct JieqiWidget: Widget {
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: JieqiTimelineProvider()) { entry in
       
-      let upcomingResult = entry.date.nextJieqi
-      let jieqi = upcomingResult?.jieqi ?? entry.date.jieqi
-      
-      // sameCalendarDay: the solar term is today (days == 0)
-      let sameCalendarDay = upcomingResult.map { $0.days(from: entry.date) } == 0
+      // Day-aligned, matching the main screen title (`jieQiDisplayText`): on a
+      // term's start day highlight the term that has begun; otherwise highlight
+      // the upcoming term and show its start date (the "days to next" the user
+      // sees). Raw `entry.date.jieqi`/`nextJieqi` are instant-sensitive and, from
+      // this widget's intraday seeds, drift a day on a transition morning.
+      let isJieqiDay = entry.date.isJieqiDayAligned
+      let occurrence = entry.date.displayedJieqi
+      let jieqi = occurrence?.jieqi ?? entry.date.jieqiDayAligned ?? entry.date.jieqi
 
       if let jieqi {
         VStack(alignment: .center) {
-          if sameCalendarDay {
+          if isJieqiDay {
             Text(entry.date, style: .date)
               .font(.callout)
               .environment(\.locale, Locale.current)
@@ -44,8 +47,8 @@ struct JieqiWidget: Widget {
               .font(.callout)
               .environment(\.locale, Locale(identifier: "zh-hant"))
 
-            if let jieqiDate = jieqi.nextOccurrence(after: entry.date)?.startDate {
-              Text(jieqiDate, style: .date)
+            if let startDate = occurrence?.startDate {
+              Text(startDate, style: .date)
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .environment(\.locale, Locale(identifier: "zh-hant"))

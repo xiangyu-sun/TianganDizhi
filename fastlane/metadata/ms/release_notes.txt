@@ -1,6 +1,6 @@
 - Widget kalendar bulanan baharu, dalam saiz Besar dan Sangat Besar
 - Latar belakang dan animasi yang lebih baik
-- Pembetulan pepijat pengiraan terma solar Jieqi
+- Widget terma solar Jieqi: memaparkan terma hari itu pada hari mula, dan mengira detik ke terma seterusnya pada hari lain
 - Pengalaman orientasi baharu dan paparan terperinci Dizhi
 - Penambahbaikan UX: tetapan lebih kemas, UI lokasi dipertingkat
 - Pembetulan pepijat dan peningkatan kestabilan

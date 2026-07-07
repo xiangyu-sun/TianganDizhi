@@ -1,6 +1,6 @@
 - New Calendar widget: view the full month with solar terms and lunar days, in Large and Extra Large sizes
 - Improved backgrounds and animations
-- Fixed Jieqi (solar term) calculation bugs
+- Fixed Jieqi (solar term) widgets: they now show today's term on the day it begins, and count down to the next term on other days
 - New onboarding experience and Dizhi detail views
 - UX improvements: cleaner settings, location UI, and interface refinements
 - Bug fixes and stability improvements

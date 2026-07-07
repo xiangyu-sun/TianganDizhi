@@ -22,8 +22,12 @@ struct JieqiHealthMediumView: View {
   private var calloutFont: Font { fontProvider.calloutFont }
 
   var body: some View {
-    let upcomingResult = date.nextJieqi
-    let jieqi = upcomingResult?.jieqi ?? date.jieqi
+    // Highlight the same term the title (`jieQiDisplayText`) names: the current
+    // term on its own start day (小暑 on the 小暑 day), otherwise the upcoming
+    // term the countdown points to. This keeps the health tip / seasonal foods /
+    // background in step with the title instead of drifting onto a lagged
+    // instant-sensitive read.
+    let jieqi = date.displayedJieqi?.jieqi ?? date.jieqiDayAligned ?? date.jieqi
 
     if let jieqi {
       VStack(alignment: .leading, spacing: 4) {
