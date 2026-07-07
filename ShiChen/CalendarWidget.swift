@@ -142,7 +142,7 @@ struct CalendarWidgetView: View {
     // The adapted theme is shared via the environment, so WeekdayHeaderView and
     // CalendarDayGridView (below) both read the same value and stay aligned.
     return VStack(spacing: theme.rowSpacing) {
-      Text(month.title)
+      Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
         .font(.headline)
         .padding(.bottom, 8)
 
