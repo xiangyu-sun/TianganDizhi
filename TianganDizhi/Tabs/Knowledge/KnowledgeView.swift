@@ -64,30 +64,33 @@ struct KnowledgeView: View {
       .font(bodyFont)
       .navigationTitle(Text("天干地支五行"))
       .navigationDestination(for: KnowledgeRoute.self) { route in
-        switch route {
-        case .wuxing:
-          WuxingRelationshipView()
-        case .wuyin:
-          WuyinView()
-        case .tianganList:
-          TianganListView()
-        case .dizhiDetail:
-          DizhiDetailView()
-        case .dizhiRelationship(let dizhi):
-          DizhiRelationshipView(dizhi: dizhi)
-        case .shici:
-          ShiciView()
-        case .twelveGods:
-          TwelveGodsListView()
-        case .jieqiList:
-          JieqiListView()
-        case .nayin:
-          NayinListView()
-        case .upcomingFestivals:
-          UpcomingFestivalsView()
-        case .bazi:
-          BaziView()
+        Group {
+          switch route {
+          case .wuxing:
+            WuxingRelationshipView()
+          case .wuyin:
+            WuyinView()
+          case .tianganList:
+            TianganListView()
+          case .dizhiDetail:
+            DizhiDetailView()
+          case .dizhiRelationship(let dizhi):
+            DizhiRelationshipView(dizhi: dizhi)
+          case .shici:
+            ShiciView()
+          case .twelveGods:
+            TwelveGodsListView()
+          case .jieqiList:
+            JieqiListView()
+          case .nayin:
+            NayinListView()
+          case .upcomingFestivals:
+            UpcomingFestivalsView()
+          case .bazi:
+            BaziView()
+          }
         }
+        .trackScreen(route)
       }
     }
   }

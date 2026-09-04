@@ -43,14 +43,17 @@ struct GuaListView: View {
       .font(bodyFont)
       .navigationTitle(Text("卦"))
       .navigationDestination(for: GuaRoute.self) { route in
-        switch route {
-        case .bagua(let guas, let title):
-          BaguaView(viewData: .init(guas: guas, title: title))
-        case .shierPigua:
-          ShierPiguaView()
-        case .yangliShierPigua:
-          YangliShierPiguaView()
+        Group {
+          switch route {
+          case .bagua(let guas, let title):
+            BaguaView(viewData: .init(guas: guas, title: title))
+          case .shierPigua:
+            ShierPiguaView()
+          case .yangliShierPigua:
+            YangliShierPiguaView()
+          }
         }
+        .trackScreen(route)
       }
     }
   }

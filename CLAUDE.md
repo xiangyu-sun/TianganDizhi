@@ -147,6 +147,26 @@ stay Firebase-free.
 - **Register `widget_kind`, `widget_family`, `widget_surface`, `setting_name` as custom
   dimensions in the GA4 console**, or they will not appear in any report.
 
+#### In-app events
+| Event | Source | Answers |
+|---|---|---|
+| `screen_view` | the three `navigationDestination` sites | which content screens are read |
+| `content_detail_opened` | routes carrying an entry | which 地支/卦 get looked up — new widget ideas |
+| `setting_changed` | every `SettingsView` toggle | which defaults users override |
+| `onboarding_step_viewed` | onboarding `TabView` selection | where onboarding loses people |
+| `share_invoked` | `ShareLink` tap | whether sharing is worth investing in |
+
+- Content screens are instrumented **once** per tab, at `navigationDestination`, via the
+  `AnalyticsScreen` conformances on `KnowledgeRoute`/`GuaRoute`/`ChartRoute` — not in the
+  ~20 individual view files. Add a route case and the compiler forces a `screenName`.
+- `screenName` raw values are stable dimensions; renaming one breaks report continuity.
+- `settingChanged(_:_:reloadsWidgets:)` in `SettingsView` reports and reloads together.
+  Pass `reloadsWidgets: false` for in-app-only settings so they don't show the
+  "小組件已更新" toast for a change no widget reflects.
+- `share_invoked` counts *intent* — `ShareLink` has no completion callback, so a tap is
+  the most that can be observed.
+- Toggling analytics off is deliberately not reported.
+
 #### Widget Timeline Architecture
 - `ShichenTimeLineSceduler` - Manages widget update timelines
 - `MinuteTimeLineScheduler` - Handles minute-based updates
