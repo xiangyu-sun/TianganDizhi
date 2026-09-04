@@ -46,7 +46,7 @@ final class ScreenTests: XCTestCase {
     #if os(macOS)
     app.tabs["卦"].click()
     #else
-    app.tabBars.firstMatch.buttons["卦"].tap()
+    selectTab("卦")
     #endif
     
     // Wait for UI to stabilize after font provider initialization
@@ -60,8 +60,12 @@ final class ScreenTests: XCTestCase {
     app.tabs["天干地支"].click()
     app.tables.cells.containing(.button, identifier: "十二地支").element.click()
     #else
-    app.tabBars.firstMatch.buttons["天干地支"].tap()
-    app.buttons["十二地支"].tap()
+    selectTab("天干地支")
+    let dizhiRow = app.buttons["十二地支"]
+    XCTAssertTrue(
+      dizhiRow.waitForExistence(timeout: 5),
+      "十二地支 row is missing from the 天干地支 tab")
+    dizhiRow.tap()
     #endif
 
     // Wait for UI to stabilize after navigation and font provider initialization
@@ -69,6 +73,30 @@ final class ScreenTests: XCTestCase {
     
     takingScreenShot()
   }
+
+  #if !os(macOS)
+  /// Taps a tab bar item and verifies it actually became selected.
+  ///
+  /// A bare `tap()` on a tab that is covered (by the onboarding sheet, or by a
+  /// system permission alert) silently no-ops, which used to leave these tests
+  /// screenshotting the wrong screen instead of failing. The first tap can also
+  /// be consumed while an interruption monitor dismisses a permission alert, so
+  /// retry once before giving up.
+  private func selectTab(_ label: String) {
+    let tab = app.tabBars.firstMatch.buttons[label]
+    XCTAssertTrue(tab.waitForExistence(timeout: 10), "\(label) tab not found")
+
+    for _ in 0 ..< 2 {
+      tab.tap()
+      let selected = expectation(
+        for: NSPredicate(format: "isSelected == true"), evaluatedWith: tab)
+      if XCTWaiter().wait(for: [selected], timeout: 5) == .completed {
+        return
+      }
+    }
+    XCTFail("\(label) tab did not become selected — something is covering the app")
+  }
+  #endif
 
   func takingScreenShot() {
     let screenshot = app.windows.firstMatch.screenshot()

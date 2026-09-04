@@ -64,7 +64,7 @@ struct ContentView: View {
     #if os(iOS)
     .onAppear {
       applyUIKitFontAppearance(useSystemFont: fontProvider.useSystemFont)
-      if !ProcessInfo.processInfo.arguments.contains("UITestMode") {
+      if !Self.isUITesting {
         try? AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()
       }
     }
@@ -75,7 +75,7 @@ struct ContentView: View {
     #if os(iOS)
     .fullScreenCover(
       isPresented: Binding(
-        get: { !hasCompletedOnboarding },
+        get: { !hasCompletedOnboarding && !Self.isUITesting },
         set: { _ in }))
     {
       OnboardingView()
@@ -84,6 +84,12 @@ struct ContentView: View {
         .interactiveDismissDisabled(true)
     }
     #endif
+  }
+
+  /// UI tests launch with this argument; it suppresses first-launch interruptions
+  /// (onboarding cover, review prompt) that would otherwise sit on top of the app.
+  private static var isUITesting: Bool {
+    ProcessInfo.processInfo.arguments.contains("UITestMode")
   }
 
   #if os(iOS)

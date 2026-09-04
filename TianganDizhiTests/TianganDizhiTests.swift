@@ -12,10 +12,12 @@ import Foundation
 
 struct ShichenTimeLineSchedulerTests {
 
-  @Test("Timeline contains exactly 12 entries")
+  @Test("Timeline contains the current date plus 12 hourly entries")
   func timelineCount() {
     let timeline = ShichenTimeLineSceduler.buildTimeLine()
-    #expect(timeline.count == 12)
+    // buildTimeLine() emits an entry for "now" followed by one entry per hour
+    // covering all 12 shichen boundaries, so 1 + 12 = 13.
+    #expect(timeline.count == 13)
   }
 
   @Test("Timeline entries have normalized time components at hour boundaries")
