@@ -23,6 +23,9 @@ enum Constants {
   static let useSystemFont = "useSystemFont"
   static let hasCompletedOnboarding = "hasCompletedOnboarding"
   static let backgroundStyle = "backgroundStyle"  // 0 = xuan paper, 1 = stone marble
+  static let analyticsEnabled = "analyticsEnabled"
+  static let analyticsWidgetSnapshot = "analyticsWidgetSnapshot"
+  static let analyticsWidgetSnapshotDate = "analyticsWidgetSnapshotDate"
   #if os(macOS)
   nonisolated(unsafe) static let sharedUserDefault = UserDefaults(suiteName: "group.R45U3GK22z.uriphium.tiangandizhi")
   #else

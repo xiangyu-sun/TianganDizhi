@@ -67,6 +67,7 @@ struct CalendarWidget: Widget {
     { entry in
       CalendarWidgetView(entry: entry)
         .containerBackground(.background, for: .widget)
+        .widgetDeepLink(kind: kind)
     }
     .contentMarginsDisabled()
     .configurationDisplayName(WidgetConstants.calendarWidgetTitle)

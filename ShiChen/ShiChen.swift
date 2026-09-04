@@ -23,6 +23,7 @@ struct ShiChen: Widget {
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
       ShiChenEntryView(entry: entry)
+        .widgetDeepLink(kind: kind)
     }
     .configurationDisplayName(WidgetConstants.normalWidgetDisplayName)
     .description(WidgetConstants.normalWidgetDescription)

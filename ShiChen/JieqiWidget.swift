@@ -33,42 +33,46 @@ struct JieqiWidget: Widget {
       let occurrence = entry.date.displayedJieqi
       let jieqi = occurrence?.jieqi ?? entry.date.jieqiDayAligned ?? entry.date.jieqi
 
-      if let jieqi {
-        VStack(alignment: .center) {
-          if isJieqiDay {
-            Text(entry.date, style: .date)
-              .font(.callout)
-              .environment(\.locale, Locale.current)
-
-            Text(jieqi.chineseName)
-              .font(largeTitleFont)
-          } else {
-            Text(entry.date, style: .date)
-              .font(.callout)
-              .environment(\.locale, Locale(identifier: "zh-hant"))
-
-            if let startDate = occurrence?.startDate {
-              Text(startDate, style: .date)
+      // Grouped so the deep link applies to both branches.
+      Group {
+        if let jieqi {
+          VStack(alignment: .center) {
+            if isJieqiDay {
+              Text(entry.date, style: .date)
                 .font(.callout)
-                .foregroundStyle(.secondary)
-                .environment(\.locale, Locale(identifier: "zh-hant"))
-            }
+                .environment(\.locale, Locale.current)
 
-            Text(jieqi.chineseName)
-              .foregroundStyle(.secondary)
-              .font(largeTitleFont)
+              Text(jieqi.chineseName)
+                .font(largeTitleFont)
+            } else {
+              Text(entry.date, style: .date)
+                .font(.callout)
+                .environment(\.locale, Locale(identifier: "zh-hant"))
+
+              if let startDate = occurrence?.startDate {
+                Text(startDate, style: .date)
+                  .font(.callout)
+                  .foregroundStyle(.secondary)
+                  .environment(\.locale, Locale(identifier: "zh-hant"))
+              }
+
+              Text(jieqi.chineseName)
+                .foregroundStyle(.secondary)
+                .font(largeTitleFont)
+            }
           }
+          .widgetAccentable()
+          .frame(maxWidth: .infinity)
+          #if os(macOS)
+          .materialBackgroundWidget(with: Image(nsImage: jieqi.image))
+          #else
+          .materialBackgroundWidget(with: Image(uiImage: jieqi.image))
+          #endif
+        } else {
+          EmptyView()
         }
-        .widgetAccentable()
-        .frame(maxWidth: .infinity)
-        #if os(macOS)
-        .materialBackgroundWidget(with: Image(nsImage: jieqi.image))
-        #else
-        .materialBackgroundWidget(with: Image(uiImage: jieqi.image))
-        #endif
-      } else {
-        EmptyView()
       }
+      .widgetDeepLink(kind: kind)
     }
     .configurationDisplayName(WidgetConstants.jieqiWidgetTitle)
     .description(WidgetConstants.jieqiWidgetDescription)

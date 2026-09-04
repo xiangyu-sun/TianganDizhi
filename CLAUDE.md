@@ -103,6 +103,50 @@ The app relies heavily on custom Swift packages for Chinese astrology calculatio
 - Use `ObservableObject`/`@Published`/`@EnvironmentObject` for shared state
 - Custom `EnvironmentValues` keys use the `@Entry` macro (works on iOS 16+)
 
+#### Analytics
+- Google Analytics via Firebase (`FirebaseAnalytics`, SPM, pinned `from: 12.18.0`)
+- **iOS only** — the `TianganDizhi` target also builds for macOS, but the Firebase app is
+  registered for iOS. The SPM product carries `platformFilters = (ios)` so the Mac binary
+  never links Firebase, and every body in `AnalyticsService` is `#if os(iOS)`.
+- All call sites go through `AnalyticsService` (`Utilities/AnalyticsService.swift`) —
+  never `import FirebaseAnalytics` in view code. The file is a member of both the app and
+  the watch target, where it compiles to a no-op (shared views reference it).
+- Collection is **opt-out**, defaulting on, via `Constants.analyticsEnabled` in the shared
+  app-group UserDefaults and a toggle in the 隱私 section of `SettingsView`.
+- In 12.x plain `FirebaseAnalytics` excludes IDFA; `FirebaseAnalyticsIdentitySupport` is
+  the opt-in additive library. Do not add it without revisiting ATT and the privacy manifest.
+- Event names live in `AnalyticsService.Event` — snake_case, under 40 chars, no
+  `firebase_`/`google_`/`ga_` prefix. Raw values are reported dimensions: don't rename them.
+
+#### Widget measurement
+WidgetKit exposes no impression callback, so "installed and kept" is the strongest
+available proxy. All widget signal is gathered **in the app process** — the extensions
+stay Firebase-free.
+
+| Event | Source | Answers |
+|---|---|---|
+| `widget_active` | daily inventory sweep | which widgets are installed, home vs lock |
+| `widget_added` / `widget_removed` | snapshot diff | per-widget churn — the kill-or-fix signal |
+| `widget_config` | `ConfigurationIntent` | whether `date`/`location` config is used |
+| `widget_tapped` | `widgetURL` deep link | which widgets actually drive app opens |
+
+- `WidgetInventoryReporter` runs on foreground, throttled to once per calendar day, and
+  diffs against a snapshot in the shared app-group UserDefaults. On the **first** run it
+  seeds the snapshot silently — otherwise every pre-existing widget reports as newly added.
+- `widget_config` is emitted only for the SiriKit-intent widgets. The AppIntent ones
+  (Calendar, Luck, JieqiHealth) return no readable configuration, and reporting them as
+  "no custom values" would be indistinguishable from a genuine empty config.
+- `WidgetCenter.currentConfigurations()` is iOS 18+; the reporter wraps the
+  completion-handler form to stay on the iOS 17 minimum.
+- Widget taps use `tiangandizhi://widget?kind=…&family=…`, built and parsed only through
+  `WidgetDeepLink` so the two halves can't drift. `AppRouter.destination(forWidgetKind:)`
+  maps kind → tab. The modifier is a no-op on watchOS, which has no analytics and where
+  complications already launch the app.
+- User properties (`widget_count`, `has_home_widget`, `has_lock_widget`, `top_widget_kind`)
+  exist to segment every other metric by widget adoption.
+- **Register `widget_kind`, `widget_family`, `widget_surface`, `setting_name` as custom
+  dimensions in the GA4 console**, or they will not appear in any report.
+
 #### Widget Timeline Architecture
 - `ShichenTimeLineSceduler` - Manages widget update timelines
 - `MinuteTimeLineScheduler` - Handles minute-based updates

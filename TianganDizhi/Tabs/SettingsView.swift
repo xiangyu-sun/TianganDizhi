@@ -29,6 +29,8 @@ struct SettingsView: View {
   var useSystemFont = false
   @AppStorage(Constants.backgroundStyle, store: Constants.sharedUserDefault)
   var backgroundStyle = 0
+  @AppStorage(Constants.analyticsEnabled, store: Constants.sharedUserDefault)
+  var analyticsEnabled = true
 
   @Environment(\.footnote) var footnote
   @EnvironmentObject var fontProvider: FontProvider
@@ -124,6 +126,17 @@ struct SettingsView: View {
         }
         .accessibilityHint("海外用戶開啟後節日以中國標準時間計算")
       }
+      Section(header: Text("隱私")) {
+        Toggle(isOn: $analyticsEnabled) {
+          VStack(alignment: .leading, spacing: 2) {
+            Text("允許匿名使用統計")
+            Text("協助改進App，不收集個人身份資訊")
+              .font(footnote)
+              .foregroundStyle(.secondary)
+          }
+        }
+        .accessibilityHint("關閉後App不再收集任何匿名使用統計")
+      }
     }
     .font(fontProvider.bodyFont)
     .navigationTitle(Text("設置"))
@@ -149,6 +162,9 @@ struct SettingsView: View {
     .onChange(of: springFestiveForegroundEnabled) { _ in reloadWidgets() }
     .onChange(of: useGTM8) { _ in reloadWidgets() }
     .onChange(of: displayMoonPhaseOnWidgets) { _ in reloadWidgets() }
+    .onChange(of: analyticsEnabled) { value in
+      AnalyticsService.setCollectionEnabled(value)
+    }
   }
 
   private func reloadWidgets() {

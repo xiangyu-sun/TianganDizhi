@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13C209580104526EB190BD68 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3D117FCCF9D8EB0A89A5D /* AppRouter.swift */; };
+		2712B05411CB82D647E8114D /* WidgetDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */; };
+		452487C5BC3392ABC89B4462 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, ); productRef = 8B0B2A79D4D1B94A88210C23 /* FirebaseAnalytics */; };
 		460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
 		462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
@@ -42,7 +45,11 @@
 		46EF7F8427108D73007030CC /* ShierPiguaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EF7F8327108D73007030CC /* ShierPiguaView.swift */; };
 		46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */ = {isa = PBXBuildFile; productRef = 46F9C28425D137020017440D /* ChineseTranditionalMusicCore */; };
 		46F9C28C25D137D50017440D /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9C28B25D137D50017440D /* Cells.swift */; };
+		61BD8751A652EB14B29F4351 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C572685FF0BD5D485A6E65D3 /* GoogleService-Info.plist */; };
+		6595C9613F09410EE8235951 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3D117FCCF9D8EB0A89A5D /* AppRouter.swift */; };
 		69499F1EF165493183EFDA11 /* ShichenProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE325BDEE8C42E8B7BE984A /* ShichenProgressTests.swift */; };
+		750F84078B25C048A6847E0D /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47917729C445A7031BD770 /* AnalyticsService.swift */; };
+		7D3874EF4938D10BBA25FD73 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47917729C445A7031BD770 /* AnalyticsService.swift */; };
 		990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
 		990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
 		990FEADF294CAFD700CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
@@ -362,6 +369,10 @@
 		CA1E0000000000000000FEF2 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1E0000000000000000FEF1 /* CalendarWidget.swift */; };
 		CA1E0000000000000000FEF3 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1E0000000000000000FEF1 /* CalendarWidget.swift */; };
 		DD2FE812BB3047DFB7DE7304 /* TextureShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA38A7A9BC4EE2AF238B15 /* TextureShaders.metal */; };
+		E8C9332578260EEB3D716E92 /* WidgetDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */; };
+		ED306A29E5DBDD40B93A7E14 /* WidgetDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */; };
+		ED6719511B517F481D6B3E33 /* WidgetDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */; };
+		F95AAE2CEB9B993A0E184C1F /* WidgetInventoryReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E1878EEE481CAE2776E0E /* WidgetInventoryReporter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -463,6 +474,7 @@
 /* Begin PBXFileReference section */
 		0BE325BDEE8C42E8B7BE984A /* ShichenProgressTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShichenProgressTests.swift; sourceTree = "<group>"; };
 		0C8B42510547F456786FE480 /* ChinesePinyinTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChinesePinyinTests.swift; sourceTree = "<group>"; };
+		3A8E1878EEE481CAE2776E0E /* WidgetInventoryReporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WidgetInventoryReporter.swift; sourceTree = "<group>"; };
 		460BA9AB26F24DAD0025CA39 /* ShiciView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiciView.swift; sourceTree = "<group>"; };
 		462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiChenExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		462A5F6524FFE5F20032A125 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -499,6 +511,7 @@
 		46EF7F7F27107968007030CC /* JieqiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiCell.swift; sourceTree = "<group>"; };
 		46EF7F8327108D73007030CC /* ShierPiguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShierPiguaView.swift; sourceTree = "<group>"; };
 		46F9C28B25D137D50017440D /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WidgetDeepLink.swift; sourceTree = "<group>"; };
 		7DEA38A7A9BC4EE2AF238B15 /* TextureShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TextureShaders.metal; sourceTree = "<group>"; };
 		990FEAD7294C9EA800CB1CEF /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		990FEADC294CA2FE00CB1CEF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -619,6 +632,9 @@
 		99FD3F50292296180048DCEB /* ShichenMacWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShichenMacWidget.entitlements; sourceTree = "<group>"; };
 		99FD3F68292297030048DCEB /* ShichenMacWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShichenMacWidget.swift; sourceTree = "<group>"; };
 		99FD3F742927EBD90048DCEB /* WuxingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WuxingView.swift; sourceTree = "<group>"; };
+		BA47917729C445A7031BD770 /* AnalyticsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		BEA3D117FCCF9D8EB0A89A5D /* AppRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		C572685FF0BD5D485A6E65D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA1E0000000000000000FEF1 /* CalendarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidget.swift; sourceTree = "<group>"; };
 		E5DDA231B606C239EFED7F58 /* MinuteTimeLineSchedulerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MinuteTimeLineSchedulerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -648,6 +664,7 @@
 				99D2C78D2943912700327AF7 /* AppStoreReviewPrompt in Frameworks */,
 				46F9C28525D137020017440D /* ChineseTranditionalMusicCore in Frameworks */,
 				9968B3412F940000005E242A /* ChineseTranditionalCalendarUI in Frameworks */,
+				452487C5BC3392ABC89B4462 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +846,7 @@
 				998898DE2A74514200A4E48C /* InfoPlist.xcstrings */,
 				46AB55D2242B5EFF00F6604A /* Preview Content */,
 				991A85432F3896270079C89A /* MenuBarContentView.swift */,
+				C572685FF0BD5D485A6E65D3 /* GoogleService-Info.plist */,
 			);
 			path = TianganDizhi;
 			sourceTree = "<group>";
@@ -908,6 +926,8 @@
 				998F9E8F2F363B5D00650E5E /* FontManager.swift */,
 				9918EA802FEDBD6C00FC5486 /* TexturedBackground.swift */,
 				7DEA38A7A9BC4EE2AF238B15 /* TextureShaders.metal */,
+				BA47917729C445A7031BD770 /* AnalyticsService.swift */,
+				3A8E1878EEE481CAE2776E0E /* WidgetInventoryReporter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1028,6 +1048,7 @@
 			isa = PBXGroup;
 			children = (
 				996E548C2E996231004CD36F /* NavigationModels.swift */,
+				BEA3D117FCCF9D8EB0A89A5D /* AppRouter.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -1137,6 +1158,7 @@
 				998F9E892F36373100650E5E /* ShichenActivityAttributes.swift */,
 				998F9E942F363CF400650E5E /* FontProvider.swift */,
 				998F9E9A2F3640F300650E5E /* Date+ShichenProgress.swift */,
+				4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */,
 			);
 			path = AppWidgetShared;
 			sourceTree = "<group>";
@@ -1193,6 +1215,7 @@
 				994215C92958A0EF003C5CA1 /* ChineseAstrologyCalendar */,
 				99A7D0B72F5B22D30087AF73 /* Bagua */,
 				9968B3402F940000005E242A /* ChineseTranditionalCalendarUI */,
+				8B0B2A79D4D1B94A88210C23 /* FirebaseAnalytics */,
 			);
 			productName = TianganDizhi;
 			productReference = 46AB55C7242B5EFD00F6604A /* TianganDizhi.app */;
@@ -1404,6 +1427,7 @@
 				998C1DAE2A16CFB300A413B4 /* XCRemoteSwiftPackageReference "swift" */,
 				99A7D0B42F5B21190087AF73 /* XCRemoteSwiftPackageReference "Bagua" */,
 				9968B3302F930000005E242A /* XCRemoteSwiftPackageReference "ChineseTranditionalCalendarUI" */,
+				0C3D6D1DA90D877C4CB7F1C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 46AB55C8242B5EFD00F6604A /* Products */;
 			projectDirPath = "";
@@ -1449,6 +1473,7 @@
 				9963214A2911B8E4000C4A2B /* Shared.xcassets in Resources */,
 				99B59A442E0AFC8B0068FDED /* Jianchu.xcassets in Resources */,
 				996E54802E994496004CD36F /* TianGanDizhiIcon.icon in Resources */,
+				61BD8751A652EB14B29F4351 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1583,6 +1608,7 @@
 				99A2B708297EBA6B00086CC7 /* CountDownTimelineProvider.swift in Sources */,
 				998F9E932F363B5D00650E5E /* FontManager.swift in Sources */,
 				997CD11B2954FE1300BECF31 /* Constants.swift in Sources */,
+				ED6719511B517F481D6B3E33 /* WidgetDeepLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1656,6 +1682,10 @@
 				997CD1182954D44100BECF31 /* MaterialBackground.swift in Sources */,
 				994E36A42E26ECC600584B83 /* WuxingCircleView.swift in Sources */,
 				46AB55FD242B5F7100F6604A /* DizhiListView.swift in Sources */,
+				7D3874EF4938D10BBA25FD73 /* AnalyticsService.swift in Sources */,
+				E8C9332578260EEB3D716E92 /* WidgetDeepLink.swift in Sources */,
+				13C209580104526EB190BD68 /* AppRouter.swift in Sources */,
+				F95AAE2CEB9B993A0E184C1F /* WidgetInventoryReporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1742,6 +1772,8 @@
 				9968B2CA2F8001EA005E242A /* UpcomingFestivalsView.swift in Sources */,
 				9963207E290DE1DE000C4A2B /* ShierPiguaView.swift in Sources */,
 				995997082B3DF1AB002288D1 /* MultiSelectionView.swift in Sources */,
+				750F84078B25C048A6847E0D /* AnalyticsService.swift in Sources */,
+				6595C9613F09410EE8235951 /* AppRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1815,6 +1847,7 @@
 				997C68962868A76800B40D3F /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				994215F02965C811003C5CA1 /* ChineseMoonPhase+Toggle.swift in Sources */,
 				994AD1902868F96800BB5BED /* InlineWidgetView.swift in Sources */,
+				ED306A29E5DBDD40B93A7E14 /* WidgetDeepLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1871,6 +1904,7 @@
 				99BC3C0E296836AD004AB614 /* CountDownView.swift in Sources */,
 				998F9E822F36367200650E5E /* ShichenLockScreenView.swift in Sources */,
 				99FD3F5E2922968B0048DCEB /* SimpleEntry.swift in Sources */,
+				2712B05411CB82D647E8114D /* WidgetDeepLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1957,7 +1991,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.58.0;
+				MARKETING_VERSION = 2.59.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1992,7 +2026,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.58.0;
+				MARKETING_VERSION = 2.59.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -2175,7 +2209,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.58.0;
+				MARKETING_VERSION = 2.59.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -2225,7 +2259,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.58.0;
+				MARKETING_VERSION = 2.59.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -2362,7 +2396,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.58.0;
+				MARKETING_VERSION = 2.59.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2398,7 +2432,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.58.0;
+				MARKETING_VERSION = 2.59.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2509,7 +2543,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 2.58.0;
+				MARKETING_VERSION = 2.59.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2542,7 +2576,7 @@
 					"@executable_path/../../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 2.58.0;
+				MARKETING_VERSION = 2.59.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2577,7 +2611,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.58.0;
+				MARKETING_VERSION = 2.59.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenMacWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -2610,7 +2644,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.58.0;
+				MARKETING_VERSION = 2.59.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenMacWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -2718,6 +2752,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0C3D6D1DA90D877C4CB7F1C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.18.0;
+			};
+		};
 		46339FEE25029C64007D4137 /* XCRemoteSwiftPackageReference "JingluoShuxueCore" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/JingluoShuxueCore.git";
@@ -2786,6 +2828,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */;
 			productName = ChineseTranditionalMusicCore;
+		};
+		8B0B2A79D4D1B94A88210C23 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C3D6D1DA90D877C4CB7F1C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 		994215C92958A0EF003C5CA1 /* ChineseAstrologyCalendar */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -23,6 +23,7 @@ struct HourlyWidget: Widget {
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: MinuteTimelineProvider()) { entry in
       ShiChenEntryView(entry: entry)
+        .widgetDeepLink(kind: kind)
     }
     .configurationDisplayName("十二时辰")
     .description("十二地支为名的十二时辰組件，更新频率为十五分鐘。")

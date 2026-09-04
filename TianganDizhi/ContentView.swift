@@ -21,37 +21,46 @@ struct ContentView: View {
 
   @EnvironmentObject var fontProvider: FontProvider
   @EnvironmentObject var settingsManager: SettingsManager
+  @EnvironmentObject var router: AppRouter
 
   @AppStorage(Constants.hasCompletedOnboarding, store: Constants.sharedUserDefault)
   var hasCompletedOnboarding = false
 
   var body: some View {
-    TabView {
+    TabView(selection: $router.selectedTab) {
       MainView()
         .tabItem {
           Image(systemName: "clock.fill")
           Text("時辰")
         }
+        .tag(AppTab.shichen)
       KnowledgeView()
         .tabItem {
           Image(systemName: "moon.stars.fill")
           Text("天干地支")
         }
+        .tag(AppTab.knowledge)
       GuaListView()
         .tabItem {
           Image(systemName: "sun.max.fill")
           Text("卦")
         }
+        .tag(AppTab.gua)
       ChartListView()
         .tabItem {
           Image(systemName: "chart.bar.xaxis")
           Text("綜合圖示")
         }
+        .tag(AppTab.chart)
       SettingsView()
         .tabItem {
           Image(systemName: "gear.circle.fill")
           Text("設置")
         }
+        .tag(AppTab.settings)
+    }
+    .onChange(of: router.selectedTab) { tab in
+      AnalyticsService.log(.tabSelected(tab.rawValue))
     }
     .environment(\.titleFont, fontProvider.titleFont)
     .environment(\.title2Font, fontProvider.title2Font)
@@ -86,6 +95,8 @@ struct ContentView: View {
     #endif
   }
 
+  // MARK: Private
+
   /// UI tests launch with this argument; it suppresses first-launch interruptions
   /// (onboarding cover, review prompt) that would otherwise sit on top of the app.
   private static var isUITesting: Bool {
@@ -117,4 +128,5 @@ struct ContentView: View {
   ContentView()
     .environmentObject(FontProvider())
     .environmentObject(SettingsManager.shared)
+    .environmentObject(AppRouter())
 }
