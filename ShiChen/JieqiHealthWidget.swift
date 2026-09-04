@@ -60,6 +60,7 @@ struct JieqiHealthWidget: Widget {
       provider: JieqiHealthTimelineProvider())
     { entry in
       JieqiHealthMediumView(date: entry.date)
+        .widgetDeepLink(kind: kind)
     }
     .configurationDisplayName(WidgetConstants.jieqiHealthWidgetTitle)
     .description(WidgetConstants.jieqiHealthWidgetDescription)

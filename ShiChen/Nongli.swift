@@ -22,6 +22,7 @@ struct Nongli: Widget {
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: ShichenTimelineProvider()) { entry in
       ShiChenYearMonthDateEntryView(entry: entry)
+        .widgetDeepLink(kind: kind)
     }
     .configurationDisplayName(WidgetConstants.simpleWidgetTitle)
     .description(WidgetConstants.simpleWidgetDescription)

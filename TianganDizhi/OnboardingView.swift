@@ -62,6 +62,7 @@ struct OnboardingView: View {
           }
         }
         Button("開始使用") {
+          AnalyticsService.log(.onboardingCompleted)
           hasCompletedOnboarding = true
         }
         .buttonStyle(.borderedProminent)

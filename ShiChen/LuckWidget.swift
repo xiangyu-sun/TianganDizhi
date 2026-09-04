@@ -78,6 +78,7 @@ struct LuckWidget: Widget {
       provider: LuckTimelineProvider()
     ) { entry in
       LuckEntryView(date: entry.date)
+        .widgetDeepLink(kind: kind)
     }
     .configurationDisplayName("今日宜忌")
     .description("顯示今日建除神、宜忌事項及日支沖")

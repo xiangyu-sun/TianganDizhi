@@ -55,6 +55,7 @@ struct SpecialDayWidget: Widget {
       .widgetAccentable()
       .frame(maxWidth: .infinity)
       .materialBackgroundWidget(with: Image("background"))
+      .widgetDeepLink(kind: kind)
     }
     .configurationDisplayName(WidgetConstants.specialDayWidgetTitle)
     .description(WidgetConstants.specialDayWidgetDescription)

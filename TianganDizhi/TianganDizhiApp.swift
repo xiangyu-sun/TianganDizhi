@@ -9,11 +9,15 @@ struct TianganDizhiApp: App {
 
   init() {
     FontManager.loadCustomFonts()
+    AnalyticsService.configure()
   }
 
   // MARK: Internal
 
   @StateObject private var fontProvider = FontProvider()
+  @StateObject private var router = AppRouter()
+
+  @Environment(\.scenePhase) private var scenePhase
 
   #if os(macOS)
   // A TimelineView used as a MenuBarExtra `label:` collapses the WindowGroup
@@ -27,8 +31,19 @@ struct TianganDizhiApp: App {
       ContentView()
         .environmentObject(fontProvider)
         .environmentObject(SettingsManager.shared)
+        .environmentObject(router)
         .onOpenURL { url in
           handleDeepLink(url)
+        }
+        // Both entry points, because `.task` misses a warm relaunch and
+        // `scenePhase` can already be `.active` on first appearance. The reporter
+        // throttles itself to once a day, so running it twice costs nothing.
+        .task {
+          await WidgetInventoryReporter.reportIfNeeded()
+        }
+        .onChange(of: scenePhase) { phase in
+          guard phase == .active else { return }
+          Task { await WidgetInventoryReporter.reportIfNeeded() }
         }
     }
 
@@ -42,8 +57,20 @@ struct TianganDizhiApp: App {
   // MARK: - Deep Link Handling
 
   private func handleDeepLink(_ url: URL) {
-    guard url.scheme == "tiangandizhi" else { return }
-    print("Deep link received: \(url)")
+    guard url.scheme == WidgetDeepLink.scheme else { return }
+
+    // A tap on a widget: attribute it, then land on the screen that widget is about.
+    if let widget = WidgetDeepLink.parse(url) {
+      let destination = AppRouter.destination(forWidgetKind: widget.kind)
+      AnalyticsService.log(.widgetTapped(
+        kind: widget.kind,
+        family: widget.family,
+        destination: destination.rawValue))
+      router.selectedTab = destination
+      return
+    }
+
+    AnalyticsService.log(.deepLinkOpened(host: url.host ?? "unknown"))
   }
 }
 
