@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		13C209580104526EB190BD68 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3D117FCCF9D8EB0A89A5D /* AppRouter.swift */; };
 		2712B05411CB82D647E8114D /* WidgetDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */; };
+		362E1D3EC2FD080D4DF056B8 /* AnalyticsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF92F75486AA1E4C0FDECE /* AnalyticsScreen.swift */; };
 		452487C5BC3392ABC89B4462 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, ); productRef = 8B0B2A79D4D1B94A88210C23 /* FirebaseAnalytics */; };
 		460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
 		462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
@@ -372,6 +373,7 @@
 		E8C9332578260EEB3D716E92 /* WidgetDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */; };
 		ED306A29E5DBDD40B93A7E14 /* WidgetDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */; };
 		ED6719511B517F481D6B3E33 /* WidgetDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */; };
+		EEDC4B781915D38A0C24E1C7 /* AnalyticsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF92F75486AA1E4C0FDECE /* AnalyticsScreen.swift */; };
 		F95AAE2CEB9B993A0E184C1F /* WidgetInventoryReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E1878EEE481CAE2776E0E /* WidgetInventoryReporter.swift */; };
 /* End PBXBuildFile section */
 
@@ -511,6 +513,7 @@
 		46EF7F7F27107968007030CC /* JieqiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JieqiCell.swift; sourceTree = "<group>"; };
 		46EF7F8327108D73007030CC /* ShierPiguaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShierPiguaView.swift; sourceTree = "<group>"; };
 		46F9C28B25D137D50017440D /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		4BBF92F75486AA1E4C0FDECE /* AnalyticsScreen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AnalyticsScreen.swift; sourceTree = "<group>"; };
 		4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WidgetDeepLink.swift; sourceTree = "<group>"; };
 		7DEA38A7A9BC4EE2AF238B15 /* TextureShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = TextureShaders.metal; sourceTree = "<group>"; };
 		990FEAD7294C9EA800CB1CEF /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
@@ -928,6 +931,7 @@
 				7DEA38A7A9BC4EE2AF238B15 /* TextureShaders.metal */,
 				BA47917729C445A7031BD770 /* AnalyticsService.swift */,
 				3A8E1878EEE481CAE2776E0E /* WidgetInventoryReporter.swift */,
+				4BBF92F75486AA1E4C0FDECE /* AnalyticsScreen.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1686,6 +1690,7 @@
 				E8C9332578260EEB3D716E92 /* WidgetDeepLink.swift in Sources */,
 				13C209580104526EB190BD68 /* AppRouter.swift in Sources */,
 				F95AAE2CEB9B993A0E184C1F /* WidgetInventoryReporter.swift in Sources */,
+				362E1D3EC2FD080D4DF056B8 /* AnalyticsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1774,6 +1779,7 @@
 				995997082B3DF1AB002288D1 /* MultiSelectionView.swift in Sources */,
 				750F84078B25C048A6847E0D /* AnalyticsService.swift in Sources */,
 				6595C9613F09410EE8235951 /* AppRouter.swift in Sources */,
+				EEDC4B781915D38A0C24E1C7 /* AnalyticsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

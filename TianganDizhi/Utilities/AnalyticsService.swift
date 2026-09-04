@@ -91,6 +91,13 @@ extension AnalyticsService {
     /// Whether the `date`/`location` intent parameters are actually used.
     case widgetConfig(kind: String, customDate: Bool, customLocation: Bool)
     case widgetTapped(kind: String, family: String, destination: String)
+    /// Which content screens are actually read — the "what to expand or cut" signal.
+    case screenView(name: String)
+    /// Which specific entries get looked up. Repeatedly-opened content is a
+    /// candidate for a new widget.
+    case contentDetailOpened(category: String, item: String)
+    case onboardingStepViewed(step: Int)
+    case shareInvoked(source: String)
 
     // MARK: Internal
 
@@ -105,6 +112,12 @@ extension AnalyticsService {
       case .widgetRemoved: "widget_removed"
       case .widgetConfig: "widget_config"
       case .widgetTapped: "widget_tapped"
+      // Firebase's standard screen-view event name, so these flow into the
+      // built-in Google Analytics screen reports.
+      case .screenView: "screen_view"
+      case .contentDetailOpened: "content_detail_opened"
+      case .onboardingStepViewed: "onboarding_step_viewed"
+      case .shareInvoked: "share_invoked"
       }
     }
 
@@ -126,6 +139,15 @@ extension AnalyticsService {
         ["widget_kind": kind, "custom_date": customDate, "custom_location": customLocation]
       case .widgetTapped(let kind, let family, let destination):
         ["widget_kind": kind, "widget_family": family, "dest": destination]
+      case .screenView(let name):
+        // Matches AnalyticsParameterScreenName.
+        ["screen_name": name]
+      case .contentDetailOpened(let category, let item):
+        ["category": category, "item": item]
+      case .onboardingStepViewed(let step):
+        ["step": step]
+      case .shareInvoked(let source):
+        ["source": source]
       }
     }
   }

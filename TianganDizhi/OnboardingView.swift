@@ -17,12 +17,16 @@ struct OnboardingView: View {
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
 
+  /// Drives the step funnel. Where users stop is where onboarding loses them —
+  /// and users who never finish rarely go on to install a widget.
+  @State private var step = 0
+
   private var isOverseasUser: Bool {
     TimeZone.current.secondsFromGMT() != 8 * 3600
   }
 
   var body: some View {
-    TabView {
+    TabView(selection: $step) {
       OnboardingPage(
         symbol: "clock.fill",
         title: "歡迎使用時辰",
@@ -59,6 +63,11 @@ struct OnboardingView: View {
               Text("使用東八區時間（UTC+8）")
             }
             .padding(.horizontal, 40)
+            .onChange(of: useGTM8) { value in
+              AnalyticsService.log(.settingChanged(
+                name: "\(Constants.useGTM8)_onboarding",
+                value: String(value)))
+            }
           }
         }
         Button("開始使用") {
@@ -70,6 +79,12 @@ struct OnboardingView: View {
       }
       .padding()
       .tag(3)
+    }
+    .onAppear {
+      AnalyticsService.log(.onboardingStepViewed(step: step))
+    }
+    .onChange(of: step) { newStep in
+      AnalyticsService.log(.onboardingStepViewed(step: newStep))
     }
     #if os(iOS)
     .tabViewStyle(.page)

@@ -44,6 +44,11 @@ struct SettingsView: View {
         ShareLink(item: Date.now.shichenShareText) {
           Label("分享今日時辰資訊", systemImage: "square.and.arrow.up")
         }
+        // ShareLink has no completion callback, so this counts intent to share
+        // rather than a completed share.
+        .simultaneousGesture(TapGesture().onEnded {
+          AnalyticsService.log(.shareInvoked(source: "settings"))
+        })
       }
       Section(header: Text("春節氣氛組件設置")) {
         Toggle(isOn: $springFestiveBackgroundEnabled) {
@@ -77,7 +82,9 @@ struct SettingsView: View {
               .foregroundStyle(.secondary)
           }
         }
-        .onChange(of: backgroundStyle) { _ in reloadWidgets() }
+        .onChange(of: backgroundStyle) { value in
+          settingChanged(Constants.backgroundStyle, value)
+        }
         Toggle(isOn: $useSystemFont) {
           VStack(alignment: .leading, spacing: 2) {
             Text("使用系統字體")
@@ -155,15 +162,46 @@ struct SettingsView: View {
     .onChange(of: useSystemFont) { value in
       fontProvider.useSystemFont = value
       settingsManager.useSystemFont = value
-      reloadWidgets()
+      settingChanged(Constants.useSystemFont, value)
     }
-    .onChange(of: springFestiveBackgroundEnabled) { _ in reloadWidgets() }
-    .onChange(of: useTranditionalNaming) { _ in reloadWidgets() }
-    .onChange(of: springFestiveForegroundEnabled) { _ in reloadWidgets() }
-    .onChange(of: useGTM8) { _ in reloadWidgets() }
-    .onChange(of: displayMoonPhaseOnWidgets) { _ in reloadWidgets() }
+    .onChange(of: springFestiveBackgroundEnabled) { value in
+      settingChanged(Constants.springFestiveBackgroundEnabled, value)
+    }
+    .onChange(of: useTranditionalNaming) { value in
+      settingChanged(Constants.useTranditionalNaming, value)
+    }
+    .onChange(of: springFestiveForegroundEnabled) { value in
+      settingChanged(Constants.springFestiveForegroundEnabled, value)
+    }
+    .onChange(of: useGTM8) { value in
+      settingChanged(Constants.useGTM8, value)
+    }
+    .onChange(of: displayMoonPhaseOnWidgets) { value in
+      settingChanged(Constants.displayMoonPhaseOnWidgets, value)
+    }
+    .onChange(of: piGuaRotationEnabled) { value in
+      settingChanged(Constants.piGuaRotationEnabled, value, reloadsWidgets: false)
+    }
     .onChange(of: analyticsEnabled) { value in
+      // Deliberately not reported: the opt-out itself is not tracked, and the
+      // event would be dropped on opt-out anyway.
       AnalyticsService.setCollectionEnabled(value)
+    }
+  }
+
+  /// Reports a setting change. Which defaults users override says more about
+  /// what to change than any survey would.
+  ///
+  /// `reloadsWidgets` is false for in-app-only settings, so they don't show the
+  /// "小組件已更新" toast for a change no widget reflects.
+  private func settingChanged(
+    _ name: String,
+    _ value: some CustomStringConvertible,
+    reloadsWidgets: Bool = true)
+  {
+    AnalyticsService.log(.settingChanged(name: name, value: value.description))
+    if reloadsWidgets {
+      reloadWidgets()
     }
   }
 

@@ -38,14 +38,17 @@ struct ChartListView: View {
       .font(bodyFont)
       .navigationTitle(Text("參考圖示"))
       .navigationDestination(for: ChartRoute.self) { route in
-        switch route {
-        case .twelveView:
-          TwelveView()
-        case .jiaziView:
-          JiaziView()
-        case .fangwei:
-          FangweiView()
+        Group {
+          switch route {
+          case .twelveView:
+            TwelveView()
+          case .jiaziView:
+            JiaziView()
+          case .fangwei:
+            FangweiView()
+          }
         }
+        .trackScreen(route)
       }
     }
   }
