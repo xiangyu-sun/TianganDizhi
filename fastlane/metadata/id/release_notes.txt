@@ -1,6 +1,6 @@
-- Widget kalender baru: lihat seluruh bulan dengan istilah matahari dan hari lunar, dalam ukuran Large dan Extra Large
-- Latar belakang dan animasi yang ditingkatkan
-- Widget Jieqi (istilah matahari) diperbaiki: kini menampilkan istilah hari ini pada hari dimulainya, dan hitung mundur ke istilah berikutnya pada hari lain
-- Pengalaman orientasi baru dan tampilan detail Dizhi
-- Peningkatan UX: pengaturan lebih rapi, UI lokasi, dan penyempurnaan antarmuka
+- Memperbaiki perhitungan pilar jam dan pilar tahun yang salah pada Bazi (八字), serta perhitungan usia siklus Da Yun (大運)
+- Memperbaiki konversi zona waktu saat menghitung bagan kelahiran Beijing/Taipei/Singapura dari luar Tiongkok
+- Memperbaiki cuaca, waktu terbit/terbenam bulan, dan matahari yang terkadang macet dan tidak diperbarui
+- Memperbaiki widget yang tidak diperbarui setelah pembaruan cuaca
+- Memperbaiki baris terbit/terbenam bulan yang hilang pada hari ketika hanya salah satunya terjadi
 - Perbaikan bug dan peningkatan stabilitas

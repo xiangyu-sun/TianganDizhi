@@ -1,6 +1,6 @@
-- Nouveau widget calendrier mensuel, disponible en grande et très grande tailles
-- Améliorations des arrière-plans et animations
-- Widgets des termes solaires (Jieqi) : affichent le terme du jour le jour de son début, sinon un compte à rebours jusqu'au prochain
-- Nouvel écran d'accueil et vues détaillées des Dizhi
-- Améliorations UX : paramètres épurés, interface de localisation améliorée
+- Correction du calcul erroné des piliers de l'heure et de l'année dans le Bazi (八字), ainsi que du calcul de l'âge des cycles Da Yun (大運)
+- Correction de la conversion du fuseau horaire lors du calcul d'un thème de naissance à Pékin/Taipei/Singapour depuis l'étranger
+- Correction de la météo, du lever/coucher de la lune et du lever/coucher du soleil qui restaient parfois bloqués sans se mettre à jour
+- Correction des widgets qui ne se mettaient pas à jour après une actualisation météo
+- Correction de la ligne lever/coucher de la lune qui disparaissait les jours où un seul des deux se produit
 - Corrections de bugs et améliorations de stabilité

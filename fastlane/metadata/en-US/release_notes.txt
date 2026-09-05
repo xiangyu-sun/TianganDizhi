@@ -1,6 +1,6 @@
-- New Calendar widget: view the full month with solar terms and lunar days, in Large and Extra Large sizes
-- Improved backgrounds and animations
-- Fixed Jieqi (solar term) widgets: they now show today's term on the day it begins, and count down to the next term on other days
-- New onboarding experience and Dizhi detail views
-- UX improvements: cleaner settings, location UI, and interface refinements
+- Fixed incorrect Bazi (八字) hour-pillar and year-pillar calculations, and Da Yun (大運) age calculations
+- Fixed birth time zone conversion when calculating a Beijing/Taipei/Singapore birth chart from outside China
+- Fixed weather, moonrise/moonset, and sunrise/sunset sometimes getting stuck and not refreshing
+- Fixed widgets not updating after a weather refresh
+- Fixed the moonrise/moonset row disappearing on days when only one of them occurs
 - Bug fixes and stability improvements

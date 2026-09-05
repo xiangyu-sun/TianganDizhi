@@ -1,5 +1,6 @@
-- Nuevo widget de calendario mensual para el escritorio, en tamaños grande y extra grande
-- Nueva calculadora de los Cuatro Pilares del Destino (八字): pilares de año, mes, día y hora con equilibrio de los cinco elementos
-- Nuevas relaciones de las Ramas Terrestres: 六冲, 六合, 三合 y 六害 para cada rama
-- Nuevas pantallas de referencia: próximos festivales, los Sesenta Nayin (六十納音) y una brújula de las Cinco Direcciones (五方)
+- Se corrigieron cálculos incorrectos de los pilares de la hora y del año en el Bazi (八字), y del cálculo de la edad de los ciclos de Da Yun (大運)
+- Se corrigió la conversión de zona horaria al calcular una carta natal de nacimiento en Pekín/Taipéi/Singapur desde fuera de China
+- Se corrigió que el clima, la salida/puesta de la luna y la salida/puesta del sol se quedaran a veces sin actualizar
+- Se corrigió que los widgets no se actualizaran tras una actualización del clima
+- Se corrigió que la fila de salida/puesta de la luna desapareciera en los días en que solo ocurre una de las dos
 - Corrección de errores y mejoras de rendimiento

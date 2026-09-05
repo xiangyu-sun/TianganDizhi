@@ -1,5 +1,6 @@
-- Widget kalender baru untuk desktop: lihat seluruh bulan dengan istilah matahari dan hari lunar, dalam ukuran Large dan Extra Large
-- Kalkulator Empat Pilar Nasib (八字) baru — pilar tahun, bulan, hari, dan jam dengan keseimbangan elemen
-- Hubungan Cabang Bumi baru: 六冲, 六合, 三合, dan 六害 untuk setiap cabang
-- Layar referensi baru: Festival Mendatang, Nada Lima Elemen (六十納音), dan kompas Lima Arah (五方)
+- Memperbaiki perhitungan pilar jam dan pilar tahun yang salah pada Bazi (八字), serta perhitungan usia siklus Da Yun (大運)
+- Memperbaiki konversi zona waktu saat menghitung bagan kelahiran Beijing/Taipei/Singapura dari luar Tiongkok
+- Memperbaiki cuaca, waktu terbit/terbenam bulan, dan matahari yang terkadang macet dan tidak diperbarui
+- Memperbaiki widget yang tidak diperbarui setelah pembaruan cuaca
+- Memperbaiki baris terbit/terbenam bulan yang hilang pada hari ketika hanya salah satunya terjadi
 - Perbaikan bug dan peningkatan performa

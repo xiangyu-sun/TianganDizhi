@@ -1,6 +1,6 @@
-- Widget kalendar bulanan baharu, dalam saiz Besar dan Sangat Besar
-- Latar belakang dan animasi yang lebih baik
-- Widget terma solar Jieqi: memaparkan terma hari itu pada hari mula, dan mengira detik ke terma seterusnya pada hari lain
-- Pengalaman orientasi baharu dan paparan terperinci Dizhi
-- Penambahbaikan UX: tetapan lebih kemas, UI lokasi dipertingkat
+- Membetulkan pengiraan tonggak jam dan tonggak tahun yang salah dalam Bazi (八字), serta pengiraan usia kitaran Da Yun (大運)
+- Membetulkan penukaran zon waktu semasa mengira carta kelahiran Beijing/Taipei/Singapura dari luar China
+- Membetulkan cuaca, waktu terbit/terbenam bulan, dan matahari yang kadangkala tersekat dan tidak dikemas kini
+- Membetulkan widget yang tidak dikemas kini selepas pengemaskinian cuaca
+- Membetulkan baris terbit/terbenam bulan yang hilang pada hari yang hanya salah satu daripadanya berlaku
 - Pembetulan pepijat dan peningkatan kestabilan

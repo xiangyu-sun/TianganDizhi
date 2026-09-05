@@ -1,6 +1,6 @@
-- Tiện ích lịch tháng mới, có kích thước Lớn và Rất Lớn
-- Cải thiện nền và hoạt ảnh
-- Tiện ích tiết khí (Jieqi): hiển thị tiết của ngày vào đúng ngày bắt đầu, và đếm ngược đến tiết tiếp theo vào những ngày khác
-- Màn hình giới thiệu mới và giao diện chi tiết Địa Chi
-- Cải tiến UX: cài đặt gọn hơn, giao diện vị trí được cải thiện
+- Sửa lỗi tính sai trụ giờ và trụ năm trong Bát Tự (八字), cùng lỗi tính tuổi của các đại vận (大運)
+- Sửa lỗi chuyển đổi múi giờ khi tính lá số sinh theo giờ Bắc Kinh/Đài Bắc/Singapore từ bên ngoài Trung Quốc
+- Sửa lỗi thời tiết, giờ mọc/lặn của mặt trăng và mặt trời đôi khi bị treo và không cập nhật
+- Sửa lỗi tiện ích không cập nhật sau khi làm mới thời tiết
+- Sửa lỗi dòng giờ mọc/lặn mặt trăng bị ẩn vào những ngày chỉ có một trong hai sự kiện xảy ra
 - Sửa lỗi và cải thiện độ ổn định

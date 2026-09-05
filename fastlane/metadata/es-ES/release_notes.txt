@@ -1,6 +1,6 @@
-- Nuevo widget de calendario mensual, en tamaños grande y extra grande
-- Fondos y animaciones mejorados
-- Widgets de términos solares (Jieqi): muestran el término del día en su fecha de inicio y una cuenta atrás hasta el siguiente en los demás días
-- Nueva experiencia de incorporación y vistas detalladas de Dizhi
-- Mejoras de UX: ajustes más limpios, interfaz de ubicación mejorada
-- Correcciones de errores y mejoras de estabilidad
+- Se corrigieron cálculos incorrectos de los pilares de la hora y del año en el Bazi (八字), y del cálculo de la edad de los ciclos de Da Yun (大運)
+- Se corrigió la conversión de zona horaria al calcular una carta natal de nacimiento en Pekín/Taipéi/Singapur desde fuera de China
+- Se corrigió que el clima, la salida/puesta de la luna y la salida/puesta del sol se quedaran a veces sin actualizar
+- Se corrigió que los widgets no se actualizaran tras una actualización del clima
+- Se corrigió que la fila de salida/puesta de la luna desapareciera en los días en que solo ocurre una de las dos
+- Corrección de errores y mejoras de estabilidad

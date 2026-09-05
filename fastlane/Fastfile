@@ -62,7 +62,7 @@ platform :mac do
       platform: "osx",
       skip_metadata: false,
       skip_screenshots: true,
-      metadata_path: "fastlane/metadata"
+      metadata_path: "fastlane/fastlane/metadata_mac"
     )
   end
 end
