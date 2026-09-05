@@ -77,7 +77,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "997C687F2865FAD200B40D3F"
             BuildableName = "ShichenWatchExtension.appex"
-            BlueprintName = "ShichenWatchExtension"
             ReferencedContainer = "container:TianganDizhi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -120,7 +119,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "997C687F2865FAD200B40D3F"
             BuildableName = "ShichenWatchExtension.appex"
-            BlueprintName = "ShichenWatchExtension"
             ReferencedContainer = "container:TianganDizhi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
