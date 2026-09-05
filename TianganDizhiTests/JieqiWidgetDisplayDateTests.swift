@@ -116,11 +116,19 @@ struct JieqiWidgetDisplayDateTests {
   // day-aligned so they never lag on the previous term the way an
   // instant-sensitive `date.jieqi` read from a midnight-seeded widget would.
 
-  @Test("jieqiDayAligned resolves to the term that begins on its start day (小暑, Jul 7 2026)")
+  @Test("jieqiDayAligned resolves to the term that begins on its start day (小暑)")
   func jieqiDayAlignedOnStartDay() throws {
-    // Jul 7 2026 is the Xiaoshu (小暑) start day; Jul 6 is still Xiazhi (夏至).
-    let xiaoshuDay = try localNoon(year: 2026, month: 7, day: 7)
-    let dayBefore = try localNoon(year: 2026, month: 7, day: 6)
+    // 小暑's astronomical transition instant can land within a second of local
+    // midnight depending on the device timezone (2026: 06:59:59 UTC, which is
+    // 2026-07-06 23:59:59 in US/Pacific) — deriving the start day from the
+    // data, as the seed-based tests elsewhere in this file do, keeps this
+    // robust across timezones instead of hardcoding "Jul 7".
+    let seed = try localNoon(year: 2026, month: 6, day: 25) // safely mid-夏至, before 小暑
+    let xiaoshu = try #require(seed.nextJieqiDayAligned)
+    #expect(xiaoshu.jieqi.chineseName == "小暑")
+    let xiaoshuDay = xiaoshu.startDate
+    let dayBefore = try #require(Calendar.current.date(byAdding: .day, value: -1, to: xiaoshuDay))
+
     #expect(xiaoshuDay.jieqiDayAligned?.chineseName == "小暑",
             "On the 小暑 start day the current term is 小暑, not the previous 夏至")
     #expect(dayBefore.jieqiDayAligned?.chineseName == "夏至",
@@ -129,11 +137,12 @@ struct JieqiWidgetDisplayDateTests {
 
   @Test("currentJieqiDayAligned start date lands on the term's own calendar day")
   func currentJieqiDayAlignedStartDate() throws {
-    let xiaoshuDay = try localNoon(year: 2026, month: 7, day: 7)
+    let seed = try localNoon(year: 2026, month: 6, day: 25)
+    let xiaoshuDay = try #require(seed.nextJieqiDayAligned).startDate
     let occurrence = try #require(xiaoshuDay.currentJieqiDayAligned)
     #expect(occurrence.jieqi.chineseName == "小暑")
     #expect(Calendar.current.isDate(occurrence.startDate, inSameDayAs: xiaoshuDay),
-            "The current 小暑 occurrence begins on Jul 7, so the small widget's 'starts today' check is true")
+            "The current 小暑 occurrence begins on its own start day, so the small widget's 'starts today' check is true")
   }
 
   // MARK: - jieQiDisplayText — term name on a Jieqi day, countdown otherwise
@@ -166,19 +175,22 @@ struct JieqiWidgetDisplayDateTests {
 
   @Test("jieQiDisplayText names 小暑 on the 小暑 start day (regression: was showing 大暑/夏至)")
   func displayTextOnXiaoshuDay() throws {
-    let xiaoshuDay = try localNoon(year: 2026, month: 7, day: 7)
-    #expect(xiaoshuDay.isJieqiDayAligned, "Jul 7 2026 is the 小暑 start day")
+    let seed = try localNoon(year: 2026, month: 6, day: 25)
+    let xiaoshuDay = try #require(seed.nextJieqiDayAligned).startDate
+    #expect(xiaoshuDay.isJieqiDayAligned, "Should be the 小暑 start day")
     let text = xiaoshuDay.jieQiDisplayText
     #expect(!text.contains("日後"), "The start day names the term, it does not count down")
-    #expect(text.contains("小暑"), "Current term on Jul 7 is 小暑")
+    #expect(text.contains("小暑"), "Current term is 小暑")
     #expect(!text.contains("大暑"), "Must not name the next term 大暑")
     #expect(!text.contains("夏至"), "Must not lag on the previous term 夏至")
   }
 
-  @Test("The day before a term counts down '一日後' to it (Jul 6 2026 → 小暑)")
+  @Test("The day before a term counts down '一日後' to it (小暑)")
   func displayTextOneDayBeforeTerm() throws {
-    let dayBefore = try localNoon(year: 2026, month: 7, day: 6)
-    #expect(!dayBefore.isJieqiDayAligned, "Jul 6 is not itself a Jieqi start day")
+    let seed = try localNoon(year: 2026, month: 6, day: 25)
+    let xiaoshuDay = try #require(seed.nextJieqiDayAligned).startDate
+    let dayBefore = try #require(Calendar.current.date(byAdding: .day, value: -1, to: xiaoshuDay))
+    #expect(!dayBefore.isJieqiDayAligned, "The day before is not itself a Jieqi start day")
     let text = dayBefore.jieQiDisplayText
     #expect(text.contains("日後"), "Counts down to the imminent 小暑")
     #expect(text.contains("小暑"), "The next term is 小暑")
@@ -189,12 +201,13 @@ struct JieqiWidgetDisplayDateTests {
   @Test("displayedJieqi highlights the current term on a Jieqi day, the next term otherwise")
   func displayedJieqiSwitchesOnJieqiDay() throws {
     // Start day → current term.
-    let xiaoshuDay = try localNoon(year: 2026, month: 7, day: 7)
+    let seed = try localNoon(year: 2026, month: 6, day: 25)
+    let xiaoshuDay = try #require(seed.nextJieqiDayAligned).startDate
     #expect(xiaoshuDay.displayedJieqi?.jieqi.chineseName == "小暑",
             "On the 小暑 start day the widgets highlight 小暑 itself")
 
     // Mid-term day → upcoming term (matches the countdown text).
-    let midTerm = try localNoon(year: 2026, month: 7, day: 10)
+    let midTerm = try #require(Calendar.current.date(byAdding: .day, value: 3, to: xiaoshuDay))
     #expect(!midTerm.isJieqiDayAligned)
     #expect(midTerm.displayedJieqi?.jieqi.chineseName == "大暑",
             "Mid-term, the widgets highlight the upcoming 大暑 the countdown points to")

@@ -74,8 +74,15 @@ struct DaYunCalculator {
   // calendar days (not a fixed 86400s) so it doesn't drift across a DST
   // transition, and filters to jie starts specifically rather than any of
   // the 24 節氣 the package's plain `nextJieqi` would stop at.
+  //
+  // Pinned to GMT+8, matching `Bazi(date:)`'s own convention: `birthDate` is
+  // always meant to be read as a GMT+8 wall clock, so the day boundaries used
+  // to count 節 distance must be GMT+8's, not the calculating device's
+  // ambient timezone — otherwise the same birth instant yields a different
+  // (and possibly wrong) day count depending on where the app happens to run.
   private static func daysToNextJie(from date: Date) -> Int {
-    let calendar = Calendar(identifier: .gregorian)
+    var calendar = Calendar(identifier: .gregorian)
+    calendar.timeZone = TimeZone(secondsFromGMT: 8 * 3600)!
     var probe = date
     for offset in 1...400 {
       guard let next = calendar.date(byAdding: .day, value: 1, to: probe) else { break }
@@ -93,7 +100,8 @@ struct DaYunCalculator {
   // and stopped at any jieqi change (jie or qi), which is a different, and
   // roughly half as large, quantity than the forward branch measured.
   private static func daysSincePreviousJie(from date: Date) -> Int {
-    let calendar = Calendar(identifier: .gregorian)
+    var calendar = Calendar(identifier: .gregorian)
+    calendar.timeZone = TimeZone(secondsFromGMT: 8 * 3600)!
     var probe = date
     for offset in 1...400 {
       guard let previous = calendar.date(byAdding: .day, value: -1, to: probe) else { break }
