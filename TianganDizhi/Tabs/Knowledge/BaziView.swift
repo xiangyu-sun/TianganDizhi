@@ -13,10 +13,29 @@ struct BaziView: View {
   @State private var useChinaTimezone = false
 
   private var adjustedBirthDate: Date {
+    BaziView.adjustedForChinaTimezone(birthDate, useChinaTimezone: useChinaTimezone)
+  }
+
+  /// `Bazi(date:)` always reads its input as a GMT+8 wall clock. The date
+  /// picker binds `birthDate` in the device's local time zone, so when the
+  /// user says the birth actually happened on Beijing/Taipei/Singapore time,
+  /// we need to shift the *instant* so that re-reading it at GMT+8 reproduces
+  /// the same wall-clock numbers the user typed — not shift the wall clock
+  /// itself. That shift is `localOffset - chinaOffset`, not the reverse: with
+  /// wall = UTC + offset, `birthDate` already encodes `wallClock - localOffset`,
+  /// so undoing the local interpretation and reapplying GMT+8 is
+  /// `birthDate + localOffset - chinaOffset`.
+  static func adjustedForChinaTimezone(_ birthDate: Date, useChinaTimezone: Bool, localTimeZone: TimeZone = .current) -> Date {
     guard useChinaTimezone else { return birthDate }
     let chinaOffset = 8 * 3600
-    let localOffset = TimeZone.current.secondsFromGMT(for: birthDate)
-    return birthDate.addingTimeInterval(TimeInterval(chinaOffset - localOffset))
+    let localOffset = localTimeZone.secondsFromGMT(for: birthDate)
+    return birthDate.addingTimeInterval(TimeInterval(localOffset - chinaOffset))
+  }
+
+  static var chinaTimeFormatStyle: Date.FormatStyle {
+    var style = Date.FormatStyle(date: .abbreviated, time: .shortened)
+    style.timeZone = TimeZone(secondsFromGMT: 8 * 3600)!
+    return style
   }
 
   private var bazi: Bazi? { Bazi(date: adjustedBirthDate) }
@@ -48,8 +67,8 @@ struct BaziView: View {
           VStack(alignment: .leading, spacing: 4) {
             Toggle("出生地使用 UTC+8 時區（北京、台北、新加坡）", isOn: $useChinaTimezone)
               .font(bodyFont)
-            if useChinaTimezone && TimeZone.current.secondsFromGMT() != 8 * 3600 {
-              Text("換算後：\(adjustedBirthDate.formatted(date: .abbreviated, time: .shortened))")
+            if useChinaTimezone && TimeZone.current.secondsFromGMT(for: birthDate) != 8 * 3600 {
+              Text("換算後（UTC+8）：\(adjustedBirthDate.formatted(BaziView.chinaTimeFormatStyle))")
                 .font(footnote)
                 .foregroundStyle(.secondary)
             }

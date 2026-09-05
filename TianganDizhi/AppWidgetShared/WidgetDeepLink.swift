@@ -33,12 +33,18 @@ enum WidgetDeepLink {
     case .accessoryCircular: "accessoryCircular"
     case .accessoryRectangular: "accessoryRectangular"
     case .accessoryInline: "accessoryInline"
+    case .accessoryCorner: "accessoryCorner"
     @unknown default: "unknown"
     }
   }
 
   /// Home Screen vs Lock Screen. StandBy renders a `systemSmall` widget and is
   /// not distinguishable from the Home Screen here, so it counts as `home`.
+  /// `"unknown"` (an unrecognized/future family) intentionally does NOT
+  /// match the `"accessory"` prefix check and falls to `home` — same
+  /// fallback as before, just now reachable only for genuinely-unknown
+  /// families rather than for `.accessoryCorner`, which is a real watchOS
+  /// family this file is compiled into.
   static func surface(for familyName: String) -> String {
     familyName.hasPrefix("accessory") ? "lock" : "home"
   }

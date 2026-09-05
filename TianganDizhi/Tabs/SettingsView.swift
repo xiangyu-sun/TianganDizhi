@@ -37,6 +37,7 @@ struct SettingsView: View {
   @EnvironmentObject var settingsManager: SettingsManager
 
   @State private var showReloadToast = false
+  @State private var toastDismissTask: Task<Void, Never>?
 
   var body: some View {
     Form {
@@ -208,8 +209,13 @@ struct SettingsView: View {
   private func reloadWidgets() {
     WidgetCenter.shared.reloadAllTimelines()
     showReloadToast = true
-    Task {
+    // Without cancelling the previous timer, two settings changed within
+    // 1.5s of each other let the first one's dismissal fire after the
+    // second toast has already appeared, hiding it early.
+    toastDismissTask?.cancel()
+    toastDismissTask = Task {
       try? await Task.sleep(nanoseconds: 1_500_000_000)
+      guard !Task.isCancelled else { return }
       showReloadToast = false
     }
   }

@@ -30,12 +30,14 @@ struct DaYunCalculator {
     // 順 (forward): yang year + male, or yin year + female.
     let isForward = isMale ? !yearStem.yin : yearStem.yin
 
-    // Days between birth and the relevant solar term.
+    // Days between birth and the relevant solar term. 起運 age is measured
+    // against the 12 節 (month-boundary terms), not all 24 節氣 — using every
+    // term here would roughly halve the interval and understate startAge.
     let days: Int
     if isForward {
-      days = birthDate.nextJieqi.map { $0.days(from: birthDate) } ?? 0
+      days = daysToNextJie(from: birthDate)
     } else {
-      days = daysSincePreviousJieqi(from: birthDate)
+      days = daysSincePreviousJie(from: birthDate)
     }
 
     let startAge = Int(ceil(Double(days) / 3.0))
@@ -68,17 +70,38 @@ struct DaYunCalculator {
     return (startAge, cycles)
   }
 
-  // Days elapsed since the last solar term transition before `date`.
-  private static func daysSincePreviousJieqi(from date: Date) -> Int {
-    let currentJieqi = date.jieqi
-    var days = 0
-    for offset in 1...20 {
-      let checkDate = date.addingTimeInterval(TimeInterval(-offset) * 86400)
-      if checkDate.jieqi != currentJieqi {
-        break
+  // Days forward from `date` to the start of the next 節 (jie) — walks in
+  // calendar days (not a fixed 86400s) so it doesn't drift across a DST
+  // transition, and filters to jie starts specifically rather than any of
+  // the 24 節氣 the package's plain `nextJieqi` would stop at.
+  private static func daysToNextJie(from date: Date) -> Int {
+    let calendar = Calendar(identifier: .gregorian)
+    var probe = date
+    for offset in 1...400 {
+      guard let next = calendar.date(byAdding: .day, value: 1, to: probe) else { break }
+      if next.isJieqiDay, let jieqi = next.jieqi, !jieqi.qi {
+        return offset
       }
-      days = offset
+      probe = next
     }
-    return days
+    return 0
+  }
+
+  // Days elapsed since the most recent 節 (jie) began, up to and including
+  // `date`. Symmetric with `daysToNextJie`: same calendar-day stepping, same
+  // jie-only filter — the original walked backward in exact-instant jumps
+  // and stopped at any jieqi change (jie or qi), which is a different, and
+  // roughly half as large, quantity than the forward branch measured.
+  private static func daysSincePreviousJie(from date: Date) -> Int {
+    let calendar = Calendar(identifier: .gregorian)
+    var probe = date
+    for offset in 1...400 {
+      guard let previous = calendar.date(byAdding: .day, value: -1, to: probe) else { break }
+      if previous.isJieqiDay, let jieqi = previous.jieqi, !jieqi.qi {
+        return offset
+      }
+      probe = previous
+    }
+    return 0
   }
 }

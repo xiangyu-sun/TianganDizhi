@@ -98,9 +98,14 @@ The app relies heavily on custom Swift packages for Chinese astrology calculatio
 - Constants defined in `Constants.swift` for consistent setting keys
 
 #### Deployment Targets and API Constraints
-- iOS 16.0 minimum — cannot use `@Observable`, `Tab` API, or 0/2-param `onChange` (all require iOS 17+)
-- macOS 13.0 minimum
-- Use `ObservableObject`/`@Published`/`@EnvironmentObject` for shared state
+- iOS 17.0 / macOS 14.0 minimum for the `TianganDizhi` app target (per
+  `IPHONEOS_DEPLOYMENT_TARGET`/`MACOSX_DEPLOYMENT_TARGET` in the target's build
+  settings — the project-level default of iOS 14/macOS 13 is stale and does not
+  apply to this target). `@Observable`, the `Tab` API, and 0/2-param `onChange`
+  are all available at this floor, but the codebase has not been migrated to
+  them — it still uses `ObservableObject`/`@Published`/`@EnvironmentObject` and
+  the older `onChange(of:perform:)` form throughout. Follow the existing
+  pattern rather than introducing the newer APIs piecemeal.
 - Custom `EnvironmentValues` keys use the `@Entry` macro (works on iOS 16+)
 
 #### Analytics

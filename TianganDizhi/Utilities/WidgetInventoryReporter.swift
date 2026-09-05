@@ -29,15 +29,24 @@ enum WidgetInventoryReporter {
 
   static func reportIfNeeded() async {
     #if os(iOS)
+    // `.task` on first appearance and `scenePhase == .active` on every
+    // foregrounding both call this around the same moment on launch. Both
+    // pass `shouldReportToday` before either has a chance to write the
+    // throttle stamp (that write only happens at the very end, after an
+    // `await`), so without this in-memory guard every widget gets counted
+    // twice on the first activation of each day.
+    guard !isReporting else { return }
     guard shouldReportToday else { return }
+    isReporting = true
+    defer { isReporting = false }
 
     // Widget info is unavailable (rare, transient) on failure. Leave the stored
     // snapshot untouched so tomorrow's run still diffs against real data.
     guard let widgets = await currentWidgets() else { return }
 
     let installed = widgets.map { Installed(info: $0) }
-    let currentIDs = Set(installed.map(\.id))
-    let previousIDs = storedSnapshot
+    let currentCounts = Dictionary(grouping: installed, by: \.id).mapValues(\.count)
+    let previousCounts = storedSnapshot
 
     for widget in installed {
       log(.widgetActive(kind: widget.kind, family: widget.family, surface: widget.surface))
@@ -51,24 +60,43 @@ enum WidgetInventoryReporter {
 
     // On the very first run there is nothing to diff against — seeding the
     // snapshot silently avoids reporting every pre-existing widget as newly added.
-    if let previousIDs {
-      for widget in installed where !previousIDs.contains(widget.id) {
-        log(.widgetAdded(kind: widget.kind, family: widget.family, surface: widget.surface))
+    //
+    // Diffing by *count per id* rather than set membership matters when a
+    // user has two widgets of the same kind and family: deleting one used to
+    // be invisible (the id was still present, so `subtracting` saw nothing
+    // removed), and adding a second was equally invisible (the id was
+    // already present, so membership alone couldn't tell "added").
+    if let previousCounts {
+      for (id, currentCount) in currentCounts {
+        let previousCount = previousCounts[id] ?? 0
+        if currentCount > previousCount {
+          let widget = installed.first { $0.id == id } ?? Installed(id: id)
+          for _ in 0..<(currentCount - previousCount) {
+            log(.widgetAdded(kind: widget.kind, family: widget.family, surface: widget.surface))
+          }
+        }
       }
-      for id in previousIDs.subtracting(currentIDs) {
-        let removed = Installed(id: id)
-        log(.widgetRemoved(kind: removed.kind, family: removed.family, surface: removed.surface))
+      for (id, previousCount) in previousCounts {
+        let currentCount = currentCounts[id] ?? 0
+        if currentCount < previousCount {
+          let widget = installed.first { $0.id == id } ?? Installed(id: id)
+          for _ in 0..<(previousCount - currentCount) {
+            log(.widgetRemoved(kind: widget.kind, family: widget.family, surface: widget.surface))
+          }
+        }
       }
     }
 
     updateUserProperties(for: installed)
 
-    Constants.sharedUserDefault?.set(Array(currentIDs), forKey: Constants.analyticsWidgetSnapshot)
+    Constants.sharedUserDefault?.set(currentCounts, forKey: Constants.analyticsWidgetSnapshot)
     Constants.sharedUserDefault?.set(Date(), forKey: Constants.analyticsWidgetSnapshotDate)
     #endif
   }
 
   // MARK: Private
+
+  private static var isReporting = false
 
   /// A widget identified by kind and family. `id` round-trips through
   /// UserDefaults so removals can be reported after the widget is already gone.
@@ -124,18 +152,27 @@ enum WidgetInventoryReporter {
   }
   #endif
 
-  private static var storedSnapshot: Set<String>? {
-    guard let stored = Constants.sharedUserDefault?.array(forKey: Constants.analyticsWidgetSnapshot) as? [String] else {
-      return nil
-    }
-    return Set(stored)
+  private static var storedSnapshot: [String: Int]? {
+    Constants.sharedUserDefault?.dictionary(forKey: Constants.analyticsWidgetSnapshot) as? [String: Int]
   }
 
   private static var shouldReportToday: Bool {
     guard let last = Constants.sharedUserDefault?.object(forKey: Constants.analyticsWidgetSnapshotDate) as? Date else {
       return true
     }
-    return !Calendar.current.isDateInToday(last)
+    return isNewDay(since: last)
+  }
+
+  /// Whether `now` falls on a different calendar day than `last`, using a
+  /// fixed UTC calendar rather than `Calendar.current`. Anchoring to the
+  /// device's *current* timezone meant traveling across zones could skip a
+  /// day (stamp written just before midnight UTC-8, checked the next
+  /// morning from UTC+9 — already "today" there) or double-report within
+  /// 24h (the reverse: traveling west can fall back into "yesterday").
+  static func isNewDay(since last: Date, now: Date = Date()) -> Bool {
+    var utc = Calendar(identifier: .gregorian)
+    utc.timeZone = TimeZone(identifier: "UTC")!
+    return !utc.isDate(last, inSameDayAs: now)
   }
 
   private static func log(_ event: AnalyticsService.Event) {

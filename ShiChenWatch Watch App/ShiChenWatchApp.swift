@@ -10,12 +10,15 @@ import SwiftUI
 
 @main
 struct ShichenWatch_Watch_AppApp: App {
+  @StateObject private var fontProvider = FontProvider()
+  @StateObject private var router = AppRouter()
+
   var body: some Scene {
     WindowGroup {
       ContentView()
         .environmentObject(SettingsManager.shared)
-        .environmentObject(FontProvider())
-        .environmentObject(AppRouter())
+        .environmentObject(fontProvider)
+        .environmentObject(router)
     }
   }
 }

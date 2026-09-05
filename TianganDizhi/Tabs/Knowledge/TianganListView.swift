@@ -29,7 +29,7 @@ struct TianganCell: View {
   var body: some View {
     HStack {
       Text(tiangan.chineseCharacter)
-      Text("(\(tiangan.chineseCharacter.transformToPinyin()))")
+      Text("(\(tiangan.pinyin))")
     }
     .padding()
     .font(bodyFont)

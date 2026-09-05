@@ -20,7 +20,7 @@ struct DizhiCell: View {
   var body: some View {
     HStack {
       Text(dizhi.chineseCharacter)
-      Text("(\(dizhi.chineseCharacter.transformToPinyin()))")
+      Text("(\(dizhi.pinyin))")
     }
     .padding()
   }

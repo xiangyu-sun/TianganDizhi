@@ -26,9 +26,10 @@ enum Constants {
   static let analyticsEnabled = "analyticsEnabled"
   static let analyticsWidgetSnapshot = "analyticsWidgetSnapshot"
   static let analyticsWidgetSnapshotDate = "analyticsWidgetSnapshotDate"
-  #if os(macOS)
-  nonisolated(unsafe) static let sharedUserDefault = UserDefaults(suiteName: "group.R45U3GK22z.uriphium.tiangandizhi")
-  #else
+  // Same identifier on every platform — the team-ID association is handled
+  // by provisioning, not by the suite string. This previously carried a
+  // team ID on macOS that didn't even match this project's actual
+  // DEVELOPMENT_TEAM, and wasn't declared in ShichenMacWidget's
+  // entitlements at all, so the Mac widget could never share this suite.
   nonisolated(unsafe) static let sharedUserDefault = UserDefaults(suiteName: "group.uriphium.tiangandizhi")
-  #endif
 }

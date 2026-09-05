@@ -34,10 +34,13 @@ final class AppRouter: ObservableObject {
     switch kind {
     case "ShiChen", "ShiChenByMinute", "Nongli", "CalendarWidget", "ShiChenStack":
       .shichen
-    case "Jieqi", "JieqiHealth", "SpecialDay", "LuckWidget":
+    // The kind string has a shipped typo ("tinagandizhi") that can't be
+    // renamed without orphaning already-placed widgets, but the countdown
+    // it displays is a 節氣 countdown — that content lives in 天干地支
+    // (.knowledge), not 時辰.
+    case "Jieqi", "JieqiHealth", "SpecialDay", "LuckWidget", "com.uriphium.tinagandizhi.countdown.widget":
       .knowledge
     default:
-      // Includes the countdown widget's reverse-DNS kind.
       .shichen
     }
   }

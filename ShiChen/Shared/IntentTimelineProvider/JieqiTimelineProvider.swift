@@ -98,10 +98,15 @@ enum DailyTimeLineSceduler {
     // Anchor future entries at midnight boundaries so the widget refreshes
     // at the start of each calendar day, keeping the countdown in sync with
     // the main screen's real-time display.
+    // A `?? currentDate` fallback here would re-insert the first entry's
+    // exact date in the middle of the list, violating WidgetKit's
+    // strictly-increasing timeline requirement. Skipping a failed entry
+    // instead just shortens the timeline by one step.
     let startOfToday = calendar.startOfDay(for: currentDate)
     for dayOffset in 1 ..< 15 {
-      let startOfDay = calendar.date(byAdding: .day, value: dayOffset, to: startOfToday) ?? currentDate
-      timeline.append(startOfDay)
+      if let startOfDay = calendar.date(byAdding: .day, value: dayOffset, to: startOfToday) {
+        timeline.append(startOfDay)
+      }
     }
     return timeline
   }
@@ -110,8 +115,9 @@ enum DailyTimeLineSceduler {
     let currentDate = Date()
     var timeline = [Date]()
     for hourOffset in 0 ..< 15 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate) ?? Date()
-      timeline.append(entryDate)
+      if let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate) {
+        timeline.append(entryDate)
+      }
     }
     return timeline
   }

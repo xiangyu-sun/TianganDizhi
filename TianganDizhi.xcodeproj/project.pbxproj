@@ -10,7 +10,7 @@
 		13C209580104526EB190BD68 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3D117FCCF9D8EB0A89A5D /* AppRouter.swift */; };
 		2712B05411CB82D647E8114D /* WidgetDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */; };
 		362E1D3EC2FD080D4DF056B8 /* AnalyticsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF92F75486AA1E4C0FDECE /* AnalyticsScreen.swift */; };
-		452487C5BC3392ABC89B4462 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; platformFilters = (ios, ); productRef = 8B0B2A79D4D1B94A88210C23 /* FirebaseAnalytics */; };
+		452487C5BC3392ABC89B4462 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 8B0B2A79D4D1B94A88210C23 /* FirebaseAnalytics */; };
 		460BA9AC26F24DAD0025CA39 /* ShiciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460BA9AB26F24DAD0025CA39 /* ShiciView.swift */; };
 		462A5F6624FFE5F20032A125 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6524FFE5F20032A125 /* WidgetKit.framework */; };
 		462A5F6824FFE5F20032A125 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A5F6724FFE5F20032A125 /* SwiftUI.framework */; };
@@ -78,6 +78,14 @@
 		991BC39F2FDF50AF00A861EC /* DizhiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BC39D2FDF50AF00A861EC /* DizhiDetailView.swift */; };
 		991BC3A12FDF50DA00A861EC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BC3A02FDF50DA00A861EC /* OnboardingView.swift */; };
 		991BC3A22FDF50DA00A861EC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BC3A02FDF50DA00A861EC /* OnboardingView.swift */; };
+		9924DB4E304B65E900AAB710 /* BaziViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924DB4C304B65E900AAB710 /* BaziViewTests.swift */; };
+		9924DB4F304B65E900AAB710 /* DaYunCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924DB4D304B65E900AAB710 /* DaYunCalculatorTests.swift */; };
+		9924DB56304B6C5A00AAB710 /* DateWidgetIntentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924DB51304B6C5A00AAB710 /* DateWidgetIntentTests.swift */; };
+		9924DB57304B6C5A00AAB710 /* WidgetInventoryReporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924DB55304B6C5A00AAB710 /* WidgetInventoryReporterTests.swift */; };
+		9924DB58304B6C5A00AAB710 /* LocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924DB52304B6C5A00AAB710 /* LocationManagerTests.swift */; };
+		9924DB59304B6C5A00AAB710 /* MoonInformationViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924DB53304B6C5A00AAB710 /* MoonInformationViewTests.swift */; };
+		9924DB5A304B6C5A00AAB710 /* WeatherDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924DB54304B6C5A00AAB710 /* WeatherDataTests.swift */; };
+		9924DB5B304B6C5A00AAB710 /* AnalyticsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9924DB50304B6C5A00AAB710 /* AnalyticsServiceTests.swift */; };
 		992A7E602DB56A8100B372CA /* Date+Jieqi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992A7E5F2DB56A8100B372CA /* Date+Jieqi.swift */; };
 		992A7E612DB56A8100B372CA /* Date+Jieqi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992A7E5F2DB56A8100B372CA /* Date+Jieqi.swift */; };
 		992A7E622DB56AA400B372CA /* Date+Jieqi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992A7E5F2DB56A8100B372CA /* Date+Jieqi.swift */; };
@@ -531,6 +539,14 @@
 		991A857A2B508FA700C1D1BC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		991BC39D2FDF50AF00A861EC /* DizhiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizhiDetailView.swift; sourceTree = "<group>"; };
 		991BC3A02FDF50DA00A861EC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9924DB4C304B65E900AAB710 /* BaziViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaziViewTests.swift; sourceTree = "<group>"; };
+		9924DB4D304B65E900AAB710 /* DaYunCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaYunCalculatorTests.swift; sourceTree = "<group>"; };
+		9924DB50304B6C5A00AAB710 /* AnalyticsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsServiceTests.swift; sourceTree = "<group>"; };
+		9924DB51304B6C5A00AAB710 /* DateWidgetIntentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWidgetIntentTests.swift; sourceTree = "<group>"; };
+		9924DB52304B6C5A00AAB710 /* LocationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerTests.swift; sourceTree = "<group>"; };
+		9924DB53304B6C5A00AAB710 /* MoonInformationViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonInformationViewTests.swift; sourceTree = "<group>"; };
+		9924DB54304B6C5A00AAB710 /* WeatherDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataTests.swift; sourceTree = "<group>"; };
+		9924DB55304B6C5A00AAB710 /* WidgetInventoryReporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetInventoryReporterTests.swift; sourceTree = "<group>"; };
 		992A7E5F2DB56A8100B372CA /* Date+Jieqi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Jieqi.swift"; sourceTree = "<group>"; };
 		993843BD285636B800FA7631 /* ShiChenEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenEntryView.swift; sourceTree = "<group>"; };
 		993843C128563CD200FA7631 /* ShiChenYearMonthDateEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiChenYearMonthDateEntryView.swift; sourceTree = "<group>"; };
@@ -870,8 +886,16 @@
 				46AB55E3242B5EFF00F6604A /* Info.plist */,
 				E5DDA231B606C239EFED7F58 /* MinuteTimeLineSchedulerTests.swift */,
 				0C8B42510547F456786FE480 /* ChinesePinyinTests.swift */,
+				9924DB4C304B65E900AAB710 /* BaziViewTests.swift */,
+				9924DB4D304B65E900AAB710 /* DaYunCalculatorTests.swift */,
 				9987646A2F660830000D71DC /* JieqiWidgetDisplayDateTests.swift */,
 				0BE325BDEE8C42E8B7BE984A /* ShichenProgressTests.swift */,
+				9924DB50304B6C5A00AAB710 /* AnalyticsServiceTests.swift */,
+				9924DB51304B6C5A00AAB710 /* DateWidgetIntentTests.swift */,
+				9924DB52304B6C5A00AAB710 /* LocationManagerTests.swift */,
+				9924DB53304B6C5A00AAB710 /* MoonInformationViewTests.swift */,
+				9924DB54304B6C5A00AAB710 /* WeatherDataTests.swift */,
+				9924DB55304B6C5A00AAB710 /* WidgetInventoryReporterTests.swift */,
 			);
 			path = TianganDizhiTests;
 			sourceTree = "<group>";
@@ -1702,7 +1726,15 @@
 				99F6B6F92DD0E93C0080D4CB /* DayDifferenceTest.swift in Sources */,
 				9987646B2F660830000D71DC /* JieqiWidgetDisplayDateTests.swift in Sources */,
 				C4DB0A9BF1BA67BEDC774198 /* MinuteTimeLineSchedulerTests.swift in Sources */,
+				9924DB4E304B65E900AAB710 /* BaziViewTests.swift in Sources */,
+				9924DB4F304B65E900AAB710 /* DaYunCalculatorTests.swift in Sources */,
 				A86338E8CCA9C14C9A2F40C1 /* ChinesePinyinTests.swift in Sources */,
+				9924DB56304B6C5A00AAB710 /* DateWidgetIntentTests.swift in Sources */,
+				9924DB57304B6C5A00AAB710 /* WidgetInventoryReporterTests.swift in Sources */,
+				9924DB58304B6C5A00AAB710 /* LocationManagerTests.swift in Sources */,
+				9924DB59304B6C5A00AAB710 /* MoonInformationViewTests.swift in Sources */,
+				9924DB5A304B6C5A00AAB710 /* WeatherDataTests.swift in Sources */,
+				9924DB5B304B6C5A00AAB710 /* AnalyticsServiceTests.swift in Sources */,
 				69499F1EF165493183EFDA11 /* ShichenProgressTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

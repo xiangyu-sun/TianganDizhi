@@ -140,8 +140,14 @@ extension AnalyticsService {
       case .widgetTapped(let kind, let family, let destination):
         ["widget_kind": kind, "widget_family": family, "dest": destination]
       case .screenView(let name):
-        // Matches AnalyticsParameterScreenName.
-        ["screen_name": name]
+        // "firebase_screen" is the raw value of FirebaseAnalytics'
+        // AnalyticsParameterScreenName. Not referencing the SDK constant
+        // directly here since this enum compiles unconditionally on macOS
+        // too, where FirebaseAnalytics isn't imported. "screen_name" (the
+        // previous key) is not a Firebase-recognized parameter, so it never
+        // populated the built-in Screens report — every manual screen_view
+        // showed up there as "(not set)".
+        ["firebase_screen": name]
       case .contentDetailOpened(let category, let item):
         ["category": category, "item": item]
       case .onboardingStepViewed(let step):

@@ -23,9 +23,14 @@ enum ShichenTimeLineSceduler {
     }
     let nextShichenStart = currentShichen.nextStartDate
 
+    // A `?? Date()` fallback here would insert "now" — earlier than the
+    // already-appended entries — breaking WidgetKit's requirement that
+    // timeline entries be strictly increasing. Skipping a failed entry
+    // instead just shortens the timeline by one step.
     for hourOffset in 0 ..< 12 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: nextShichenStart) ?? Date()
-      timeline.append(entryDate)
+      if let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: nextShichenStart) {
+        timeline.append(entryDate)
+      }
     }
     return timeline
   }
@@ -34,8 +39,9 @@ enum ShichenTimeLineSceduler {
     let currentDate = Date()
     var timeline = [Date]()
     for hourOffset in 0 ..< 12 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate) ?? Date()
-      timeline.append(entryDate)
+      if let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate) {
+        timeline.append(entryDate)
+      }
     }
     return timeline
   }
