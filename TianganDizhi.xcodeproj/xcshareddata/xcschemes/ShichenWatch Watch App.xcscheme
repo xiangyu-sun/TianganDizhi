@@ -80,7 +80,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "997C68432864CADE00B40D3F"
             BuildableName = "ShichenWatch Watch App.app"
-            BlueprintName = "ShichenWatch Watch App"
             ReferencedContainer = "container:TianganDizhi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -97,7 +96,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "997C68432864CADE00B40D3F"
             BuildableName = "ShichenWatch Watch App.app"
-            BlueprintName = "ShichenWatch Watch App"
             ReferencedContainer = "container:TianganDizhi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
