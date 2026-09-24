@@ -30,6 +30,11 @@ enum WidgetDeepLink {
     case .systemMedium: "systemMedium"
     case .systemLarge: "systemLarge"
     case .systemExtraLarge: "systemExtraLarge"
+    #if !os(watchOS)
+    // iOS/macOS 27. Without it the family fell to `@unknown default` and was
+    // reported as "unknown", then bucketed as a home-screen widget.
+    case .systemExtraLargePortrait: "systemExtraLargePortrait"
+    #endif
     case .accessoryCircular: "accessoryCircular"
     case .accessoryRectangular: "accessoryRectangular"
     case .accessoryInline: "accessoryInline"
