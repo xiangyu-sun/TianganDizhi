@@ -1,3 +1,6 @@
 - Chạm vào tiện ích để mở ngay nội dung tương ứng: tiện ích tiết khí mở 24 tiết khí, tiện ích lễ tết mở lịch lễ tết, và lịch vạn sự hôm nay mở Thập Nhị Trực
 - Phần giới thiệu ngắn gọn hơn, kèm hướng dẫn thêm tiện ích
+- Tiện ích Thời Thần nay hiển thị thời tiết và nhiệt độ trong ngày
+- Tiện ích cập nhật đúng lúc chuyển giờ; tiện ích lễ tết không còn trống; tiện ích tiết khí và lễ tết tuân theo cài đặt phông chữ hệ thống
+- Sửa lỗi đồng hồ Thời Thần bị tràn ra ngoài mép màn hình trên iPad và khôi phục bố cục lớn cho iPad
 - Sửa lỗi và cải thiện độ ổn định

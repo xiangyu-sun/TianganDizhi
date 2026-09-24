@@ -1,3 +1,6 @@
 - Tap a widget to jump straight to its details: solar term widgets open the 24 Solar Terms, the festival widget opens the festival calendar, and the daily almanac opens the Twelve Gods
 - Shorter onboarding, now with a guide to adding widgets
+- The Shichen widget now shows today's weather and temperature
+- Widgets now update right on the hour change; the festival widget is no longer blank; the solar term and festival widgets follow the system font setting
+- Fixed the Shichen clock running off the screen edges on iPad, and restored the larger iPad layouts
 - Bug fixes and stability improvements

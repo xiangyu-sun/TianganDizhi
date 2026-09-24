@@ -1,3 +1,6 @@
 - Touchez un widget pour accéder directement à son contenu : les widgets des termes solaires ouvrent les 24 termes solaires, celui des fêtes ouvre le calendrier des fêtes et l'almanach du jour ouvre les Douze Dieux
 - Présentation raccourcie, avec désormais un guide pour ajouter des widgets
+- Le widget Shichen affiche désormais la météo et la température du jour
+- Les widgets se mettent à jour pile au changement d'heure ; le widget des fêtes n'est plus vide ; les widgets des termes solaires et des fêtes suivent le réglage de police système
+- Correction de l'horloge Shichen qui dépassait les bords de l'écran sur iPad, et retour des mises en page agrandies pour iPad
 - Corrections de bugs et améliorations de la stabilité

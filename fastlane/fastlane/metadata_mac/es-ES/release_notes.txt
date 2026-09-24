@@ -1,3 +1,6 @@
 - Toca un widget para ir directamente a sus detalles: los widgets de términos solares abren los 24 términos solares, el de festividades abre el calendario de fiestas y el almanaque diario abre los Doce Dioses
 - Introducción más breve, ahora con una guía para añadir widgets
+- Barra de menús: los atajos ⌘O, ⌘C, ⌘, y ⌘Q ya funcionan, Ajustes abre la página de ajustes y se muestra el tiempo del día
+- El widget de Shichen ahora muestra el tiempo y la temperatura del día
+- Los widgets se actualizan justo al cambiar la hora; el widget de festividades ya no aparece vacío; los widgets de términos solares y festividades respetan el ajuste de fuente del sistema
 - Corrección de errores y mejoras de estabilidad

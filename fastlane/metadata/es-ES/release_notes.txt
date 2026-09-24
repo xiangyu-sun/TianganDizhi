@@ -1,3 +1,6 @@
 - Toca un widget para ir directamente a sus detalles: los widgets de términos solares abren los 24 términos solares, el de festividades abre el calendario de fiestas y el almanaque diario abre los Doce Dioses
 - Introducción más breve, ahora con una guía para añadir widgets
+- El widget de Shichen ahora muestra el tiempo y la temperatura del día
+- Los widgets se actualizan justo al cambiar la hora; el widget de festividades ya no aparece vacío; los widgets de términos solares y festividades respetan el ajuste de fuente del sistema
+- Se corrigió que el reloj de Shichen se saliera de los bordes de la pantalla en el iPad y se restauraron los diseños más grandes para iPad
 - Corrección de errores y mejoras de estabilidad

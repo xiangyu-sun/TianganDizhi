@@ -1,3 +1,6 @@
 - Ketuk widget untuk langsung membuka detailnya: widget terminologi surya membuka 24 Terminologi Surya, widget perayaan membuka kalender perayaan, dan almanak harian membuka Dua Belas Dewa
 - Pengenalan aplikasi lebih singkat, kini dengan panduan menambahkan widget
+- Bar menu: pintasan ⌘O, ⌘C, ⌘, dan ⌘Q kini berfungsi, Pengaturan membuka halaman pengaturan, dan cuaca hari ini ditampilkan
+- Widget Shichen kini menampilkan cuaca dan suhu hari ini
+- Widget kini diperbarui tepat saat pergantian jam; widget perayaan tidak lagi kosong; widget terminologi surya dan perayaan mengikuti pengaturan font sistem
 - Perbaikan bug dan peningkatan stabilitas

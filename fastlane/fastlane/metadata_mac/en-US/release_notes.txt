@@ -1,3 +1,6 @@
 - Tap a widget to jump straight to its details: solar term widgets open the 24 Solar Terms, the festival widget opens the festival calendar, and the daily almanac opens the Twelve Gods
 - Shorter onboarding, now with a guide to adding widgets
+- Menu bar: the ⌘O, ⌘C, ⌘, and ⌘Q shortcuts now work, Settings opens the settings page, and today's weather is shown
+- The Shichen widget now shows today's weather and temperature
+- Widgets now update right on the hour change; the festival widget is no longer blank; the solar term and festival widgets follow the system font setting
 - Bug fixes and stability improvements
