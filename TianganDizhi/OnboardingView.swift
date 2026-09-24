@@ -69,7 +69,7 @@ struct OnboardingView: View {
               Text("使用東八區時間（UTC+8）")
             }
             .padding(.horizontal, 40)
-            .onChange(of: useGTM8) { value in
+            .onChange(of: useGTM8) { _, value in
               AnalyticsService.log(.settingChanged(
                 name: "\(Constants.useGTM8)_onboarding",
                 value: String(value)))
@@ -89,7 +89,7 @@ struct OnboardingView: View {
     .onAppear {
       AnalyticsService.log(.onboardingStepViewed(step: step))
     }
-    .onChange(of: step) { newStep in
+    .onChange(of: step) { _, newStep in
       AnalyticsService.log(.onboardingStepViewed(step: newStep))
     }
     #if os(iOS)

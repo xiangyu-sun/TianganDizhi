@@ -97,7 +97,7 @@ struct KnowledgeView: View {
     // Both hooks: `onAppear` covers the tab being built by the widget tap
     // itself, `onChange` covers a tap while the tab is already alive.
     .onAppear(perform: openPendingRoute)
-    .onChange(of: router.pendingKnowledgeRoute) { _ in
+    .onChange(of: router.pendingKnowledgeRoute) { _, _ in
       openPendingRoute()
     }
   }

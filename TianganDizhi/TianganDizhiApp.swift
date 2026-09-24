@@ -42,7 +42,7 @@ struct TianganDizhiApp: App {
         .task {
           await WidgetInventoryReporter.reportIfNeeded()
         }
-        .onChange(of: scenePhase) { phase in
+        .onChange(of: scenePhase) { _, phase in
           guard phase == .active else { return }
           Task { await WidgetInventoryReporter.reportIfNeeded() }
         }

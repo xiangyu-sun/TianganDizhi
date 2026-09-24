@@ -63,7 +63,7 @@ struct ContentView: View {
         }
         .tag(AppTab.settings)
     }
-    .onChange(of: router.selectedTab) { tab in
+    .onChange(of: router.selectedTab) { _, tab in
       AnalyticsService.log(.tabSelected(tab.rawValue))
     }
     .environment(\.titleFont, fontProvider.titleFont)
@@ -88,7 +88,7 @@ struct ContentView: View {
         try? AppStoreReviewPrompt(configuration: .init(appID: "1530596254", promoteOnTime: 2)).checkReviewRequest()
       }
     }
-    .onChange(of: fontProvider.useSystemFont) { newValue in
+    .onChange(of: fontProvider.useSystemFont) { _, newValue in
       applyUIKitFontAppearance(useSystemFont: newValue)
     }
     #endif

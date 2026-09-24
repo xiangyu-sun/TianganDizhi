@@ -87,7 +87,7 @@ struct SettingsView: View {
               .foregroundStyle(.secondary)
           }
         }
-        .onChange(of: backgroundStyle) { value in
+        .onChange(of: backgroundStyle) { _, value in
           settingChanged(Constants.backgroundStyle, value)
         }
         Toggle(isOn: $useSystemFont) {
@@ -164,29 +164,29 @@ struct SettingsView: View {
       }
     }
     .animation(.easeInOut(duration: 0.3), value: showReloadToast)
-    .onChange(of: useSystemFont) { value in
+    .onChange(of: useSystemFont) { _, value in
       fontProvider.useSystemFont = value
       settingChanged(Constants.useSystemFont, value)
     }
-    .onChange(of: springFestiveBackgroundEnabled) { value in
+    .onChange(of: springFestiveBackgroundEnabled) { _, value in
       settingChanged(Constants.springFestiveBackgroundEnabled, value)
     }
-    .onChange(of: useTranditionalNaming) { value in
+    .onChange(of: useTranditionalNaming) { _, value in
       settingChanged(Constants.useTranditionalNaming, value)
     }
-    .onChange(of: springFestiveForegroundEnabled) { value in
+    .onChange(of: springFestiveForegroundEnabled) { _, value in
       settingChanged(Constants.springFestiveForegroundEnabled, value)
     }
-    .onChange(of: useGTM8) { value in
+    .onChange(of: useGTM8) { _, value in
       settingChanged(Constants.useGTM8, value)
     }
-    .onChange(of: displayMoonPhaseOnWidgets) { value in
+    .onChange(of: displayMoonPhaseOnWidgets) { _, value in
       settingChanged(Constants.displayMoonPhaseOnWidgets, value)
     }
-    .onChange(of: piGuaRotationEnabled) { value in
+    .onChange(of: piGuaRotationEnabled) { _, value in
       settingChanged(Constants.piGuaRotationEnabled, value, reloadsWidgets: false)
     }
-    .onChange(of: analyticsEnabled) { value in
+    .onChange(of: analyticsEnabled) { _, value in
       // Deliberately not reported: the opt-out itself is not tracked, and the
       // event would be dropped on opt-out anyway.
       AnalyticsService.setCollectionEnabled(value)

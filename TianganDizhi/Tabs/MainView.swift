@@ -222,10 +222,10 @@ struct MainView: View {
       rebuildCachedValues()
       refreshLocationAndWeather()
     }
-    .onChange(of: useGTM8) { _ in
+    .onChange(of: useGTM8) { _, _ in
       rebuildCachedValues()
     }
-    .onChange(of: scenePhase) { newValue in
+    .onChange(of: scenePhase) { _, newValue in
       if newValue == .active {
         refreshLocationAndWeather()
       }

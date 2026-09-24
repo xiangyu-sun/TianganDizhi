@@ -40,7 +40,7 @@ struct UpcomingFestivalsView: View {
         upcomingEvents = buildUpcomingEvents()
       }
     }
-    .onChange(of: useGTM8) { _ in
+    .onChange(of: useGTM8) { _, _ in
       upcomingEvents = buildUpcomingEvents()
     }
   }
