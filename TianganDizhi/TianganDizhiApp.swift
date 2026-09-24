@@ -30,7 +30,6 @@ struct TianganDizhiApp: App {
     WindowGroup {
       ContentView()
         .environmentObject(fontProvider)
-        .environmentObject(SettingsManager.shared)
         .environmentObject(router)
         .onOpenURL { url in
           handleDeepLink(url)

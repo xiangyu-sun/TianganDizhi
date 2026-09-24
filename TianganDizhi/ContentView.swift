@@ -20,7 +20,6 @@ import UIKit
 struct ContentView: View {
 
   @EnvironmentObject var fontProvider: FontProvider
-  @EnvironmentObject var settingsManager: SettingsManager
   @EnvironmentObject var router: AppRouter
 
   @AppStorage(Constants.hasCompletedOnboarding, store: Constants.sharedUserDefault)
@@ -101,7 +100,6 @@ struct ContentView: View {
     {
       OnboardingView()
         .environmentObject(fontProvider)
-        .environmentObject(settingsManager)
         .interactiveDismissDisabled(true)
     }
     #endif
@@ -139,6 +137,5 @@ struct ContentView: View {
 #Preview {
   ContentView()
     .environmentObject(FontProvider())
-    .environmentObject(SettingsManager.shared)
     .environmentObject(AppRouter())
 }

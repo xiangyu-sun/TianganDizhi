@@ -34,7 +34,6 @@ struct SettingsView: View {
 
   @Environment(\.footnote) var footnote
   @EnvironmentObject var fontProvider: FontProvider
-  @EnvironmentObject var settingsManager: SettingsManager
 
   @State private var showReloadToast = false
   @State private var toastDismissTask: Task<Void, Never>?
@@ -162,7 +161,6 @@ struct SettingsView: View {
     .animation(.easeInOut(duration: 0.3), value: showReloadToast)
     .onChange(of: useSystemFont) { value in
       fontProvider.useSystemFont = value
-      settingsManager.useSystemFont = value
       settingChanged(Constants.useSystemFont, value)
     }
     .onChange(of: springFestiveBackgroundEnabled) { value in
@@ -224,5 +222,4 @@ struct SettingsView: View {
 #Preview {
   SettingsView()
     .environmentObject(FontProvider())
-    .environmentObject(SettingsManager.shared)
 }

@@ -92,7 +92,8 @@ The app relies heavily on custom Swift packages for Chinese astrology calculatio
 - `DayConverter` - Handles timezone conversions (GTM8 support)
 
 #### Settings Management  
-- `SettingsManager` - Centralized app settings (`ObservableObject`, injected via `environmentObject`)
+- Settings are `@AppStorage` on the shared app-group `UserDefaults`, read where needed;
+  there is no central settings object (`SettingsManager` was write-only and was removed)
 - `FontProvider` - Reactive font management (`ObservableObject`, owns font selection logic, watches shared UserDefaults)
 - Shared UserDefaults between app and extensions via app groups
 - Constants defined in `Constants.swift` for consistent setting keys

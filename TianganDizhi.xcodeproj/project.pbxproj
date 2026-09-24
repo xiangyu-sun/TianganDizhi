@@ -70,11 +70,6 @@
 		9918EA8A2FEDE00500FC5486 /* MaterialBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997CD1102954C92000BECF31 /* MaterialBackground.swift */; };
 		991A85442F3896270079C89A /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A85432F3896270079C89A /* MenuBarContentView.swift */; };
 		991A85452F3896270079C89A /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A85432F3896270079C89A /* MenuBarContentView.swift */; };
-		991A857B2B508FA700C1D1BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A857A2B508FA700C1D1BC /* SettingsManager.swift */; };
-		991A857C2B5090E400C1D1BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A857A2B508FA700C1D1BC /* SettingsManager.swift */; };
-		991A857D2B5090E500C1D1BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A857A2B508FA700C1D1BC /* SettingsManager.swift */; };
-		991A857E2B5090E700C1D1BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A857A2B508FA700C1D1BC /* SettingsManager.swift */; };
-		991A857F2B5090E700C1D1BC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991A857A2B508FA700C1D1BC /* SettingsManager.swift */; };
 		991BC39E2FDF50AF00A861EC /* DizhiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BC39D2FDF50AF00A861EC /* DizhiDetailView.swift */; };
 		991BC39F2FDF50AF00A861EC /* DizhiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BC39D2FDF50AF00A861EC /* DizhiDetailView.swift */; };
 		991BC3A12FDF50DA00A861EC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991BC3A02FDF50DA00A861EC /* OnboardingView.swift */; };
@@ -531,7 +526,6 @@
 		9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9918EA802FEDBD6C00FC5486 /* TexturedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexturedBackground.swift; sourceTree = "<group>"; };
 		991A85432F3896270079C89A /* MenuBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContentView.swift; sourceTree = "<group>"; };
-		991A857A2B508FA700C1D1BC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		991BC39D2FDF50AF00A861EC /* DizhiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizhiDetailView.swift; sourceTree = "<group>"; };
 		991BC3A02FDF50DA00A861EC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9924DB4C304B65E900AAB710 /* BaziViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaziViewTests.swift; sourceTree = "<group>"; };
@@ -976,7 +970,6 @@
 				995997032B3DF1AB002288D1 /* MultiSelector.swift */,
 				997CD1152954CF9700BECF31 /* SettingsView.swift */,
 				991BC39D2FDF50AF00A861EC /* DizhiDetailView.swift */,
-				991A857A2B508FA700C1D1BC /* SettingsManager.swift */,
 				996C531D2B1FCFEF00AC832F /* Gua */,
 				994215D92958A93E003C5CA1 /* Chart */,
 				460BA9A826F24C400025CA39 /* Knowledge */,
@@ -1581,7 +1574,6 @@
 				998F9E9D2F3640F300650E5E /* Date+ShichenProgress.swift in Sources */,
 				993843C328563D0300FA7631 /* ShiChenYearMonthDateEntryView.swift in Sources */,
 				996321472911B3F0000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
-				991A857C2B5090E400C1D1BC /* SettingsManager.swift in Sources */,
 				46B79C462541F962003C0B7F /* Environment.swift in Sources */,
 				992A7E622DB56AA400B372CA /* Date+Jieqi.swift in Sources */,
 				99F19D9129E09CC1005C5949 /* DateColorModifier.swift in Sources */,
@@ -1636,7 +1628,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				991A857B2B508FA700C1D1BC /* SettingsManager.swift in Sources */,
 				46EF7F8027107968007030CC /* JieqiCell.swift in Sources */,
 				99F0EF3529FFEF81008476B6 /* WuyinView.swift in Sources */,
 				996E548F2E996231004CD36F /* NavigationModels.swift in Sources */,
@@ -1752,7 +1743,6 @@
 				996A19C92A543E6700D1C943 /* LocationManager.swift in Sources */,
 				9963206C290DE153000C4A2B /* ContentView.swift in Sources */,
 				996D2C1929A3DD82008DC1A9 /* WatchMainView.swift in Sources */,
-				991A857D2B5090E500C1D1BC /* SettingsManager.swift in Sources */,
 				994215D52958A53D003C5CA1 /* JiaziView.swift in Sources */,
 				992A7E612DB56A8100B372CA /* Date+Jieqi.swift in Sources */,
 				994E369E2E26B44F00584B83 /* TianganStem.swift in Sources */,
@@ -1838,7 +1828,6 @@
 				99553A0A2AC9CC7A00EAA6B1 /* WatchWidgetBundle.swift in Sources */,
 				997C68A42868A86C00B40D3F /* ShichenTimeLineSceduler.swift in Sources */,
 				997C68952868A76800B40D3F /* ShiChenEntryView.swift in Sources */,
-				991A857E2B5090E700C1D1BC /* SettingsManager.swift in Sources */,
 				9913E7F42ABDF89900E459B8 /* WatchStackView.swift in Sources */,
 				992A7E632DB56AA400B372CA /* Date+Jieqi.swift in Sources */,
 				996321482911B3F1000C4A2B /* MinuteTimeLineScheduler.swift in Sources */,
@@ -1913,7 +1902,6 @@
 				99FD3F622922968B0048DCEB /* RetangularWidgetView.swift in Sources */,
 				9968B3272F910000005E242A /* LuckRectangularWidgetView.swift in Sources */,
 				9968B32B2F920000005E242A /* LuckMediumWidgetView.swift in Sources */,
-				991A857F2B5090E700C1D1BC /* SettingsManager.swift in Sources */,
 				999104042FFBE27D00E27548 /* JieqiHealthWidget.swift in Sources */,
 				99BC3C14296A2950004AB614 /* DateFormatters.swift in Sources */,
 				99F9DDCE29E0CDD000E69B8E /* WeatherData.swift in Sources */,
