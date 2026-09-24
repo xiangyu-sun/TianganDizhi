@@ -4,12 +4,36 @@ import Foundation
 import os
 import WeatherKit
 
+// MARK: - LocationService
+
+/// The slice of `CLLocationManager` that `LocationManager` drives. Injectable so
+/// tests control exactly which callbacks arrive — a real manager on the
+/// simulator fires `didFailWithError` on its own, which resolved waiters before
+/// a test's simulated location could land.
+protocol LocationService: AnyObject {
+  var delegate: (any CLLocationManagerDelegate)? { get set }
+  var authorizationStatus: CLAuthorizationStatus { get }
+  var activityType: CLActivityType { get set }
+  var desiredAccuracy: CLLocationAccuracy { get set }
+  #if !os(watchOS)
+  var isAuthorizedForWidgetUpdates: Bool { get }
+  #endif
+  func startUpdatingLocation()
+  func stopUpdatingLocation()
+  func requestWhenInUseAuthorization()
+}
+
+extension CLLocationManager: LocationService { }
+
+// MARK: - LocationManager
+
 @MainActor
 final class LocationManager: NSObject, @MainActor CLLocationManagerDelegate {
 
   // MARK: Lifecycle
 
-  override init() {
+  init(service: any LocationService = CLLocationManager()) {
+    self.service = service
     super.init()
     service.delegate = self
     service.activityType = .other
@@ -42,9 +66,9 @@ final class LocationManager: NSObject, @MainActor CLLocationManagerDelegate {
     return nil
   }
 
-  func startLocationUpdate(authorizationStatusOverride: CLAuthorizationStatus? = nil) async throws -> CLLocation {
+  func startLocationUpdate() async throws -> CLLocation {
     try await withCheckedThrowingContinuation { [unowned self] continuation in
-      switch authorizationStatusOverride ?? service.authorizationStatus {
+      switch service.authorizationStatus {
       case .authorizedAlways, .authorizedWhenInUse:
         locationContinuations.append(continuation)
         service.startUpdatingLocation()
@@ -71,8 +95,8 @@ final class LocationManager: NSObject, @MainActor CLLocationManagerDelegate {
     }
   }
 
-  func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-    switch manager.authorizationStatus {
+  func locationManagerDidChangeAuthorization(_: CLLocationManager) {
+    switch service.authorizationStatus {
     case .authorizedAlways, .authorizedWhenInUse:
       // Only start updating on behalf of an actual caller — this delegate
       // method also fires once at `init`, before anyone has asked for a
@@ -97,8 +121,8 @@ final class LocationManager: NSObject, @MainActor CLLocationManagerDelegate {
     resumeAllWaiters(throwing: OperationError.didNotGetResult)
   }
 
-  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    manager.stopUpdatingLocation()
+  func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    service.stopUpdatingLocation()
 
     guard let location = locations.last else {
       resumeAllWaiters(throwing: OperationError.didNotGetResult)
@@ -127,7 +151,7 @@ final class LocationManager: NSObject, @MainActor CLLocationManagerDelegate {
   /// `scenePhase == .active` in quick succession — leaking that Task forever.
   private var locationContinuations: [CheckedContinuation<CLLocation, Error>] = []
 
-  private let service = CLLocationManager()
+  private let service: any LocationService
 
   private func resumeAllWaiters(returning location: CLLocation) {
     let waiters = locationContinuations
