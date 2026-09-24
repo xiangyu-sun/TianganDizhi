@@ -26,6 +26,9 @@ enum WidgetInventoryReporter {
 
   // MARK: Internal
 
+  /// Main-actor isolated so the `isReporting` re-entry guard is data-race free;
+  /// every caller is already on the main actor.
+  @MainActor
   static func reportIfNeeded() async {
     #if os(iOS)
     // `.task` on first appearance and `scenePhase == .active` on every
@@ -89,7 +92,7 @@ enum WidgetInventoryReporter {
 
   // MARK: Private
 
-  private static var isReporting = false
+  @MainActor private static var isReporting = false
 
   /// A widget identified by kind and family. `id` round-trips through
   /// UserDefaults so removals can be reported after the widget is already gone.

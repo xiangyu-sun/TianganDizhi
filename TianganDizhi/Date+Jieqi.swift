@@ -10,7 +10,11 @@ import Foundation
 
 extension Date {
   /// Spells out the day count for the countdown text, e.g. 15 → "十五".
-  @MainActor static let jieqiCountdownFormatter: NumberFormatter = {
+  ///
+  /// `nonisolated(unsafe)` rather than `@MainActor`: `jieQiDisplayText` is read
+  /// from widget views and the menu bar off the main actor. `NumberFormatter` is
+  /// thread-safe for formatting, and this instance is never mutated after init.
+  nonisolated(unsafe) static let jieqiCountdownFormatter: NumberFormatter = {
     let formatter = NumberFormatter()
     formatter.numberStyle = .spellOut
     formatter.locale = Locale(identifier: "zh-Hant")
