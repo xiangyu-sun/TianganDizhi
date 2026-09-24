@@ -165,6 +165,9 @@ stay Firebase-free.
   `AnalyticsScreen` conformances on `KnowledgeRoute`/`GuaRoute`/`ChartRoute` — not in the
   ~20 individual view files. Add a route case and the compiler forces a `screenName`.
 - `screenName` raw values are stable dimensions; renaming one breaks report continuity.
+- Firebase's automatic screen tracking is off (`FirebaseAutomaticScreenReportingEnabled = NO`
+  in `TianganDizhi/Info.plist`). Under SwiftUI it only logs mangled `UIHostingController`
+  class names, which drown out the named `screen_view` events. Don't re-enable it.
 - `settingChanged(_:_:reloadsWidgets:)` in `SettingsView` reports and reloads together.
   Pass `reloadsWidgets: false` for in-app-only settings so they don't show the
   "小組件已更新" toast for a change no widget reflects.
