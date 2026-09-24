@@ -1,6 +1,3 @@
-- Correction du calcul erroné des piliers de l'heure et de l'année dans le Bazi (八字), ainsi que du calcul de l'âge des cycles Da Yun (大運)
-- Correction de la conversion du fuseau horaire lors du calcul d'un thème de naissance à Pékin/Taipei/Singapour depuis l'étranger
-- Correction de la météo, du lever/coucher de la lune et du lever/coucher du soleil qui restaient parfois bloqués sans se mettre à jour
-- Correction des widgets qui ne se mettaient pas à jour après une actualisation météo
-- Correction de la ligne lever/coucher de la lune qui disparaissait les jours où un seul des deux se produit
-- Corrections de bugs et améliorations de stabilité
+- Touchez un widget pour accéder directement à son contenu : les widgets des termes solaires ouvrent les 24 termes solaires, celui des fêtes ouvre le calendrier des fêtes et l'almanach du jour ouvre les Douze Dieux
+- Présentation raccourcie, avec désormais un guide pour ajouter des widgets
+- Corrections de bugs et améliorations de la stabilité

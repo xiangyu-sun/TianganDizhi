@@ -1,6 +1,3 @@
-- Memperbaiki perhitungan pilar jam dan pilar tahun yang salah pada Bazi (八字), serta perhitungan usia siklus Da Yun (大運)
-- Memperbaiki konversi zona waktu saat menghitung bagan kelahiran Beijing/Taipei/Singapura dari luar Tiongkok
-- Memperbaiki cuaca, waktu terbit/terbenam bulan, dan matahari yang terkadang macet dan tidak diperbarui
-- Memperbaiki widget yang tidak diperbarui setelah pembaruan cuaca
-- Memperbaiki baris terbit/terbenam bulan yang hilang pada hari ketika hanya salah satunya terjadi
+- Ketuk widget untuk langsung membuka detailnya: widget terminologi surya membuka 24 Terminologi Surya, widget perayaan membuka kalender perayaan, dan almanak harian membuka Dua Belas Dewa
+- Pengenalan aplikasi lebih singkat, kini dengan panduan menambahkan widget
 - Perbaikan bug dan peningkatan stabilitas
