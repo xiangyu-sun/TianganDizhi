@@ -3,12 +3,11 @@ import Foundation
 import Testing
 @testable import TianganDizhi
 
-/// Regression tests for two WeatherData bugs, exercised entirely through the
+/// Regression tests for WeatherData's cache, exercised entirely through the
 /// cache-hit path so no real WeatherKit network call is ever made: the
 /// throttle used `||` where it meant `&&` (so a stationary user's forecast
-/// froze forever), and the cache-hit branch decoded a value without
-/// publishing it to `forcastedWeather`, leaving widgets with no weather on a
-/// cold launch despite valid cached data sitting in the app group.
+/// froze forever), and the cache stamp lived only in memory, so no new
+/// process — app launch or widget — could ever read the stored forecast.
 @MainActor
 @Suite struct WeatherDataTests {
 
@@ -31,22 +30,50 @@ import Testing
       condition: "clear")
   }
 
-  @Test func cacheHitPublishesForcastedWeather() async throws {
+  private static func store(
+    _ information: WeatherData.Information,
+    at location: CLLocation,
+    fetchedAt: Date,
+    in suite: UserDefaults) throws
+  {
+    let cached = WeatherData.CachedForecast(
+      information: information,
+      latitude: location.coordinate.latitude,
+      longitude: location.coordinate.longitude,
+      fetchedAt: fetchedAt)
+    suite.set(try JSONEncoder().encode(cached), forKey: WeatherData.dataCacheKey)
+  }
+
+  /// The cache used to keep its location/date stamp in memory only, so a new
+  /// process — every app launch, and every widget render — could never pass
+  /// the freshness check and the stored forecast was never read.
+  @Test func freshProcessReusesCacheWrittenByAnEarlierOne() async throws {
     let suite = Self.makeSuite()
-    let weatherData = WeatherData(userDefault: suite)
     let location = CLLocation(latitude: 37.3318, longitude: -122.0312)
     let sample = Self.makeSampleInformation()
+    try Self.store(sample, at: location, fetchedAt: .now.addingTimeInterval(-5 * 60), in: suite)
 
-    let encoded = try JSONEncoder().encode(sample)
-    suite.set(encoded, forKey: weatherData.dataCacheKey)
-    weatherData.update(location: location)
-
-    #expect(weatherData.forcastedWeather == nil, "sanity check: nothing published yet")
+    // A brand-new instance stands in for a new process.
+    let weatherData = WeatherData(userDefault: suite)
+    #expect(weatherData.forcastedWeather?.condition == sample.condition, "today's cache is published on init")
 
     let result = try await weatherData.dailyForecast(for: location)
-
     #expect(result?.condition == sample.condition)
-    #expect(weatherData.forcastedWeather?.condition == sample.condition, "cache hit must publish forcastedWeather, not just return it")
+    #expect(weatherData.forcastedWeather?.condition == sample.condition)
+  }
+
+  /// The widget extension reads the cache instead of fetching; a forecast from
+  /// an earlier day describes the wrong day and must not be shown.
+  @Test func widgetCacheReadIsLimitedToTheDayItWasFetched() throws {
+    let suite = Self.makeSuite()
+    let location = CLLocation(latitude: 37.3318, longitude: -122.0312)
+    let fetchedAt = Date()
+    try Self.store(Self.makeSampleInformation(), at: location, fetchedAt: fetchedAt, in: suite)
+
+    #expect(WeatherData.cachedForecast(from: suite, on: fetchedAt)?.condition == "clear")
+    let tomorrow = try #require(Calendar.current.date(byAdding: .day, value: 1, to: fetchedAt))
+    #expect(WeatherData.cachedForecast(from: suite, on: tomorrow) == nil)
+    #expect(WeatherData.cachedForecast(from: Self.makeSuite()) == nil, "empty cache")
   }
 
   @Test func throttleRequiresBothCloseAndRecent() {

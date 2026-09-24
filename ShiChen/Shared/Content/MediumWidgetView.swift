@@ -6,11 +6,9 @@
 //  Copyright © 2023 孙翔宇. All rights reserved.
 //
 
-import os
 import SwiftUI
 import WidgetKit
 
-private let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.Widget", category: "MediumWidget")
 
 // MARK: - MediumWidgetView
 
@@ -30,7 +28,8 @@ struct MediumWidgetView: View {
   private var footnote: Font { fontProvider.footnoteFont }
 
   #if os(iOS) || os(macOS)
-  @ObservedObject var weatherData = WeatherData.shared
+  /// From the timeline entry — see `SimpleEntry.weather`.
+  var weather: WeatherData.Information? = nil
   #endif
 
   var body: some View {
@@ -41,7 +40,7 @@ struct MediumWidgetView: View {
   
       #if os(iOS) || os(macOS)
       Spacer(minLength: 4)
-      if let value = weatherData.forcastedWeather {
+      if let value = weather {
         Text(
           MeasurmentFormatterManager
             .buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\(value.condition)")
@@ -61,22 +60,7 @@ struct MediumWidgetView: View {
     .widgetAccentable()
     .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-    #if os(iOS) || os(macOS)
-    .onAppear {
-      Task {
-        do {
-          if let location = LocationManager.shared.lastLocation {
-            try await self.weatherData.dailyForecast(for: location)
-          } else {
-            let location = try await LocationManager.shared.startLocationUpdate()
-            try await self.weatherData.dailyForecast(for: location)
-          }
-        } catch {
-          logger.error("Widget weather fetch failed: \(error.localizedDescription)")
-        }
-      }
-    }
-    #endif
+    .environment(\.shouldScaleFont, .widgetShouldScaleFont)
   }
 }
 

@@ -240,18 +240,13 @@ struct MainView: View {
         let location = try await LocationManager.shared.startLocationUpdate()
         try await self.weatherData.dailyForecast(for: location)
 
-        WidgetCenter.shared.getCurrentConfigurations { result in
-          guard case .success(let widgets) = result else { return }
-
-          let validWidgets = widgets.filter { widget in
-            let intent = widget.configuration as? ConfigurationIntent
-            return intent?.date?.isSameWithCurrentShichen ?? false
-          }
-
-          for validWidget in validWidgets {
-            WidgetCenter.shared.reloadTimelines(ofKind: validWidget.kind)
-          }
-        }
+        // Only the 時辰 widget (medium / extra-large) shows weather, and it
+        // reads the forecast the app just cached — reload it so it picks that
+        // up. This used to filter on the intent's `date`, which nothing sets,
+        // so it matched no widgets and weather never reached a widget.
+        #if !os(watchOS)
+        WidgetCenter.shared.reloadTimelines(ofKind: "ShiChen")
+        #endif
       } catch {
         logger.error("Location/weather refresh failed: \(error.localizedDescription)")
       }

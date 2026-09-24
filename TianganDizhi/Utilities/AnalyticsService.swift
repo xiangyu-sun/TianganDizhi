@@ -88,8 +88,6 @@ extension AnalyticsService {
     case widgetAdded(kind: String, family: String, surface: String)
     /// The kill-or-fix signal: which widgets users try, then delete.
     case widgetRemoved(kind: String, family: String, surface: String)
-    /// Whether the `date`/`location` intent parameters are actually used.
-    case widgetConfig(kind: String, customDate: Bool, customLocation: Bool)
     case widgetTapped(kind: String, family: String, destination: String)
     /// Which content screens are actually read — the "what to expand or cut" signal.
     case screenView(name: String)
@@ -110,7 +108,6 @@ extension AnalyticsService {
       case .widgetActive: "widget_active"
       case .widgetAdded: "widget_added"
       case .widgetRemoved: "widget_removed"
-      case .widgetConfig: "widget_config"
       case .widgetTapped: "widget_tapped"
       // Firebase's standard screen-view event name, so these flow into the
       // built-in Google Analytics screen reports.
@@ -135,8 +132,6 @@ extension AnalyticsService {
            .widgetAdded(let kind, let family, let surface),
            .widgetRemoved(let kind, let family, let surface):
         ["widget_kind": kind, "widget_family": family, "widget_surface": surface]
-      case .widgetConfig(let kind, let customDate, let customLocation):
-        ["widget_kind": kind, "custom_date": customDate, "custom_location": customLocation]
       case .widgetTapped(let kind, let family, let destination):
         ["widget_kind": kind, "widget_family": family, "dest": destination]
       case .screenView(let name):

@@ -8,7 +8,6 @@
 
 import Foundation
 #if os(iOS)
-import Intents
 import WidgetKit
 #endif
 
@@ -50,12 +49,6 @@ enum WidgetInventoryReporter {
 
     for widget in installed {
       log(.widgetActive(kind: widget.kind, family: widget.family, surface: widget.surface))
-      if widget.isConfigurable {
-        log(.widgetConfig(
-          kind: widget.kind,
-          customDate: widget.hasCustomDate,
-          customLocation: widget.hasCustomLocation))
-      }
     }
 
     // On the very first run there is nothing to diff against — seeding the
@@ -108,14 +101,6 @@ enum WidgetInventoryReporter {
     init(info: WidgetInfo) {
       kind = info.kind
       family = WidgetDeepLink.name(for: info.family)
-      // Only the SiriKit-intent widgets expose their configuration here. The
-      // AppIntent-based ones (Calendar, Luck, JieqiHealth) report `nil`, so they
-      // are marked unconfigurable rather than reported as "no custom values" —
-      // that would be indistinguishable from a genuine empty configuration.
-      let intent = info.configuration as? ConfigurationIntent
-      isConfigurable = intent != nil
-      hasCustomDate = intent?.date != nil
-      hasCustomLocation = intent?.location != nil
     }
     #endif
 
@@ -123,18 +108,12 @@ enum WidgetInventoryReporter {
       let parts = id.split(separator: "|", maxSplits: 1).map(String.init)
       kind = parts.first ?? "unknown"
       family = parts.count > 1 ? parts[1] : "unknown"
-      isConfigurable = false
-      hasCustomDate = false
-      hasCustomLocation = false
     }
 
     // MARK: Internal
 
     let kind: String
     let family: String
-    var isConfigurable = false
-    var hasCustomDate = false
-    var hasCustomLocation = false
 
     var id: String { "\(kind)|\(family)" }
     var surface: String { WidgetDeepLink.surface(for: family) }

@@ -132,15 +132,14 @@ stay Firebase-free.
 |---|---|---|
 | `widget_active` | daily inventory sweep | which widgets are installed, home vs lock |
 | `widget_added` / `widget_removed` | snapshot diff | per-widget churn — the kill-or-fix signal |
-| `widget_config` | `ConfigurationIntent` | whether `date`/`location` config is used |
 | `widget_tapped` | `widgetURL` deep link | which widgets actually drive app opens |
 
 - `WidgetInventoryReporter` runs on foreground, throttled to once per calendar day, and
   diffs against a snapshot in the shared app-group UserDefaults. On the **first** run it
   seeds the snapshot silently — otherwise every pre-existing widget reports as newly added.
-- `widget_config` is emitted only for the SiriKit-intent widgets. The AppIntent ones
-  (Calendar, Luck, JieqiHealth) return no readable configuration, and reporting them as
-  "no custom values" would be indistinguishable from a genuine empty config.
+- There is no `widget_config` event. The SiriKit `ConfigurationIntent`'s `date`/`location`
+  parameters are not user-configurable and nothing reads them, so reporting them measured
+  nothing. Timeline providers leave them unset — don't write location into an intent.
 - `WidgetCenter.currentConfigurations()` is iOS 18+; the reporter wraps the
   completion-handler form to stay on the iOS 17 minimum.
 - Widget taps use `tiangandizhi://widget?kind=…&family=…`, built and parsed only through

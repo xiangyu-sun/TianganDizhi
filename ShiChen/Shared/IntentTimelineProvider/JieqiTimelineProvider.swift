@@ -7,7 +7,6 @@
 //
 
 import ChineseAstrologyCalendar
-import CoreLocation
 @preconcurrency import WidgetKit
 
 // MARK: - JieqiTimelineProvider
@@ -17,13 +16,7 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
   // MARK: Internal
 
   func placeholder(in _: Context) -> SimpleEntry {
-    let configuration = ConfigurationIntent()
-    configuration.date = Date().currentCalendarDateCompoenents
-    if let location = cachedLastLocation() {
-      configuration.location = "\(String(describing: location))"
-    }
-
-    return SimpleEntry(date: Date(), configuration: configuration)
+    SimpleEntry(date: Date(), configuration: ConfigurationIntent())
   }
 
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
@@ -39,16 +32,11 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
   }
 
   func getTimeline(for configuration: ConfigurationIntent, in _: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
+    // `configuration.date`/`.location` are not user-configurable and nothing
+    // reads them, so they are left alone (see ShichenTimelineProvider).
     var entries: [SimpleEntry] = []
-
-    configuration.date = Calendar.current.dateComponents(in: .current, from: Date())
-    if let location = cachedLastLocation() {
-      configuration.location = "\(String(describing: location))"
-    }
-
     for date in ShichenTimeLineSceduler.buildTimeLine() {
-      let entry = SimpleEntry(date: date, configuration: configuration)
-      entries.append(entry)
+      entries.append(SimpleEntry(date: date, configuration: configuration))
     }
 
     let timeline = Timeline(entries: entries, policy: .atEnd)
@@ -64,20 +52,9 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
 
   // MARK: Private
 
-  private func cachedLastLocation() -> CLLocation? {
-    if let data = Constants.sharedUserDefault?.object(forKey: Constants.lastlocationKey) as? Data {
-      return try? NSKeyedUnarchiver.unarchivedObject(ofClass: CLLocation.self, from: data)
-    }
-    return nil
-  }
 
   private func defaultRecommendedIntents() -> [ConfigurationIntent] {
-    let configuration = ConfigurationIntent()
-    configuration.date = Date().currentCalendarDateCompoenents
-    if let location = cachedLastLocation() {
-      configuration.location = "\(String(describing: location))"
-    }
-    return [configuration]
+    [ConfigurationIntent()]
   }
 }
 

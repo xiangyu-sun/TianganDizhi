@@ -33,9 +33,26 @@ final class WeatherData: ObservableObject {
     let condition: String
   }
 
+  /// The forecast plus where and when it was fetched. Persisting the stamp
+  /// alongside the payload is what makes the cache usable across processes:
+  /// the widget extension and every fresh app launch start with no in-memory
+  /// state, so without it the freshness check could never pass and the cache
+  /// was write-only.
+  struct CachedForecast: Codable {
+    let information: Information
+    let latitude: CLLocationDegrees
+    let longitude: CLLocationDegrees
+    let fetchedAt: Date
+
+    var location: CLLocation { CLLocation(latitude: latitude, longitude: longitude) }
+  }
+
   static let shared = WeatherData()
 
-  let dataCacheKey = "come.uriphium.weatherdata"
+  /// Replaces the old misspelled `come.uriphium.weatherdata`, which held a bare
+  /// `Information` with no fetch stamp. It was only ever a cache, so it is simply
+  /// abandoned rather than migrated.
+  static let dataCacheKey = "com.uriphium.weatherdata.cached"
 
   let userDefault: UserDefaults?
 
@@ -45,6 +62,21 @@ final class WeatherData: ObservableObject {
 
   init(userDefault: UserDefaults? = Constants.sharedUserDefault) {
     self.userDefault = userDefault
+    let cached = Self.readCache(from: userDefault)
+    lastUpdatedLocation = cached?.location
+    lastUpdatedDate = cached?.fetchedAt
+    forcastedWeather = Self.todaysForecast(in: cached)
+  }
+
+  /// Today's cached forecast, for processes that must not fetch — the widget
+  /// extension can't get location permission, so its timeline provider reads
+  /// what the app last stored instead. Returns `nil` once the stored forecast
+  /// is from an earlier day, since a daily forecast describes only that day.
+  nonisolated static func cachedForecast(
+    from userDefault: UserDefaults? = Constants.sharedUserDefault,
+    on day: Date = .now) -> Information?
+  {
+    todaysForecast(in: readCache(from: userDefault), on: day)
   }
 
   /// A cached forecast is reusable only when the request is both close to
@@ -57,18 +89,14 @@ final class WeatherData: ObservableObject {
     return distance < 1000 && lastDate.distance(to: now) < 60 * 60
   }
 
-  @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
   @discardableResult
   func dailyForecast(for location: CLLocation) async throws -> Information? {
     if WeatherData.shouldUseCachedForecast(lastLocation: lastUpdatedLocation, lastDate: lastUpdatedDate, requestedLocation: location) {
       logger.log(level: .debug, "fetching forcast aborted due to not matching requirement")
-      guard let data = userDefault?.data(forKey: dataCacheKey) else {
-        return nil
+      if let cached = Self.todaysForecast(in: Self.readCache(from: userDefault)) {
+        forcastedWeather = cached
+        return cached
       }
-      let decoder = JSONDecoder()
-      let cached = try decoder.decode(Information.self, from: data)
-      forcastedWeather = cached
-      return cached
     }
 
     let dayWeather: Forecast<DayWeather> = try await WeatherService.shared.weather(
@@ -92,14 +120,17 @@ final class WeatherData: ObservableObject {
 
       forcastedWeather = data
 
-      Task {
-        let encoder = JSONEncoder()
-
-        if let encoded = try? encoder.encode(data) {
-          userDefault?.setValue(encoded, forKey: dataCacheKey)
-          self.update(location: location)
-        }
+      let now = Date.now
+      let cached = CachedForecast(
+        information: data,
+        latitude: location.coordinate.latitude,
+        longitude: location.coordinate.longitude,
+        fetchedAt: now)
+      if let encoded = try? JSONEncoder().encode(cached) {
+        userDefault?.set(encoded, forKey: Self.dataCacheKey)
       }
+      lastUpdatedLocation = location
+      lastUpdatedDate = now
 
       return data
     } else {
@@ -107,13 +138,17 @@ final class WeatherData: ObservableObject {
     }
   }
 
-  @MainActor
-  func update(location: CLLocation) {
-    lastUpdatedLocation = location
-    lastUpdatedDate = Date.now
+  // MARK: Private
+
+  private nonisolated static func readCache(from userDefault: UserDefaults?) -> CachedForecast? {
+    guard let data = userDefault?.data(forKey: dataCacheKey) else { return nil }
+    return try? JSONDecoder().decode(CachedForecast.self, from: data)
   }
 
-  // MARK: Private
+  private nonisolated static func todaysForecast(in cached: CachedForecast?, on day: Date = .now) -> Information? {
+    guard let cached, Calendar.current.isDate(cached.fetchedAt, inSameDayAs: day) else { return nil }
+    return cached.information
+  }
 
   private var lastUpdatedLocation: CLLocation?
   private var lastUpdatedDate: Date?

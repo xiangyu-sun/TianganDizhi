@@ -1,6 +1,5 @@
 import AppIntents
 import ChineseAstrologyCalendar
-import CoreLocation
 import WidgetKit
 
 struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
@@ -9,13 +8,7 @@ struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
 
   @MainActor
   func placeholder(in _: Context) -> SimpleAppIntentEntry {
-    let configuration = ConfigurationAppIntent()
-    configuration.date = Date().currentCalendarDateCompoenents
-    if let location = LocationManager.shared.lastLocation {
-      configuration.location = "\(String(describing: location))"
-    }
-
-    return SimpleAppIntentEntry(date: Date(), configuration: configuration)
+    SimpleAppIntentEntry(date: Date(), configuration: ConfigurationAppIntent())
   }
 
   @MainActor
@@ -31,20 +24,12 @@ struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
   }
 
   func timeline(for configuration: ConfigurationAppIntent, in _: Context) async -> Timeline<SimpleAppIntentEntry> {
-    var entries: [Entry] = []
-
-    let location = await LocationManager.shared.lastLocation
-
-    for date in ShichenTimeLineSceduler.buildTimeLine() {
-      let config = ConfigurationAppIntent()
-      config.date = Calendar.current.dateComponents(in: .current, from: date)
-      if let location {
-        config.location = "\(String(describing: location))"
-      }
-      let entry = SimpleAppIntentEntry(date: date, configuration: config)
-      entries.append(entry)
+    // Nothing reads `configuration.date`/`.location`, so entries carry the
+    // widget's own configuration instead of scratch values (writing the
+    // location put precise coordinates into the persisted intent).
+    let entries = ShichenTimeLineSceduler.buildTimeLine().map {
+      SimpleAppIntentEntry(date: $0, configuration: configuration)
     }
-
     return Timeline(entries: entries, policy: .atEnd)
   }
 
@@ -52,11 +37,6 @@ struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
 
   @MainActor
   private func defaultRecommendedIntents() -> [ConfigurationAppIntent] {
-    let configuration = ConfigurationAppIntent()
-    configuration.date = Date().currentCalendarDateCompoenents
-    if let location = LocationManager.shared.lastLocation {
-      configuration.location = "\(String(describing: location))"
-    }
-    return [configuration]
+    [ConfigurationAppIntent()]
   }
 }

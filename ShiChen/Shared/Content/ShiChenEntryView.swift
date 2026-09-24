@@ -69,7 +69,11 @@ struct ShiChenEntryView: View {
     #endif
 
     case .systemMedium:
+      #if os(iOS) || os(macOS)
+      MediumWidgetView(date: entry.date, weather: entry.weather)
+      #else
       MediumWidgetView(date: entry.date)
+      #endif
 
     case .systemLarge:
 
@@ -103,7 +107,7 @@ struct ShiChenEntryView: View {
     case .systemExtraLarge:
       if horizontalSizeClass != .compact {
         #if os(iOS)
-        ExtraLargeWidgetView(date: entry.date)
+        ExtraLargeWidgetView(date: entry.date, weather: entry.weather)
           .widgetAccentable()
         #endif
       } else {

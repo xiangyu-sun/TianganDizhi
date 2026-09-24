@@ -7,11 +7,9 @@
 //
 
 import ChineseAstrologyCalendar
-import os
 import SwiftUI
 import WidgetKit
 
-private let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.Widget", category: "ExtraLargeWidget")
 
 // MARK: - ExtraLargeWidgetView
 
@@ -30,7 +28,8 @@ struct ExtraLargeWidgetView: View {
   private var titleFont: Font { fontProvider.titleFont }
   private var bodyFont: Font { fontProvider.bodyFont }
 
-  @ObservedObject var weatherData = WeatherData.shared
+  /// From the timeline entry — see `SimpleEntry.weather`.
+  var weather: WeatherData.Information? = nil
 
   var body: some View {
     HStack {
@@ -43,7 +42,7 @@ struct ExtraLargeWidgetView: View {
         date.nextJieJiWithinOneDay.map{ Text($0) }
           .font(bodyFont)
 
-        if let value = weatherData.forcastedWeather {
+        if let value = weather {
           MoonInformationView(info: value)
           Text(
             MeasurmentFormatterManager.buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow))
@@ -80,20 +79,7 @@ struct ExtraLargeWidgetView: View {
     .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
     .frame(maxWidth: .infinity, maxHeight: .infinity)
     .materialBackgroundWidget(with: Image("background"), toogle: springFestiveBackgroundEnabled)
-    .onAppear {
-      Task {
-        do {
-          if let location = LocationManager.shared.lastLocation {
-            try await self.weatherData.dailyForecast(for: location)
-          } else {
-            let location = try await LocationManager.shared.startLocationUpdate()
-            try await self.weatherData.dailyForecast(for: location)
-          }
-        } catch {
-          logger.error("Widget weather fetch failed: \(error.localizedDescription)")
-        }
-      }
-    }
+    .environment(\.shouldScaleFont, .widgetShouldScaleFont)
   }
 
   func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {

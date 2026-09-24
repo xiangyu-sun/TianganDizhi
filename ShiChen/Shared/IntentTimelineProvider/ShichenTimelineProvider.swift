@@ -1,18 +1,11 @@
 import ChineseAstrologyCalendar
-import CoreLocation
 @preconcurrency import WidgetKit
 struct ShichenTimelineProvider: IntentTimelineProvider {
 
   // MARK: Internal
 
   func placeholder(in _: Context) -> SimpleEntry {
-    let configuration = ConfigurationIntent()
-    configuration.date = Date().currentCalendarDateCompoenents
-    if let location = cachedLastLocation() {
-      configuration.location = "\(String(describing: location))"
-    }
-
-    return SimpleEntry(date: Date(), configuration: configuration)
+    SimpleEntry(date: Date(), configuration: ConfigurationIntent())
   }
 
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
@@ -23,21 +16,17 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
   }
 
   func getSnapshot(for configuration: ConfigurationIntent, in _: Context, completion: @escaping (SimpleEntry) -> Void) {
-    let entry = SimpleEntry(date: Date(), configuration: configuration)
-    completion(entry)
+    completion(entry(at: Date(), configuration: configuration))
   }
 
   func getTimeline(for configuration: ConfigurationIntent, in _: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
+    // `configuration.date`/`.location` are not user-configurable; nothing
+    // reads them, so they are left alone rather than filled with scratch
+    // values (writing the location put precise coordinates into the persisted
+    // intent).
     var entries: [SimpleEntry] = []
-
-    configuration.date = Calendar.current.dateComponents(in: .current, from: Date())
-    if let location = cachedLastLocation() {
-      configuration.location = "\(String(describing: location))"
-    }
-
     for date in ShichenTimeLineSceduler.buildTimeLine() {
-      let entry = SimpleEntry(date: date, configuration: configuration)
-      entries.append(entry)
+      entries.append(entry(at: date, configuration: configuration))
     }
 
     let timeline = Timeline(entries: entries, policy: .atEnd)
@@ -53,19 +42,17 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
 
   // MARK: Private
 
-  private func cachedLastLocation() -> CLLocation? {
-    if let data = Constants.sharedUserDefault?.object(forKey: Constants.lastlocationKey) as? Data {
-      return try? NSKeyedUnarchiver.unarchivedObject(ofClass: CLLocation.self, from: data)
-    }
-    return nil
+  /// An entry carrying the app's cached forecast when it is for `date`'s day.
+  private func entry(at date: Date, configuration: ConfigurationIntent) -> SimpleEntry {
+    var entry = SimpleEntry(date: date, configuration: configuration)
+    #if os(iOS) || os(macOS)
+    entry.weather = WeatherData.cachedForecast(on: date)
+    #endif
+    return entry
   }
 
+
   private func defaultRecommendedIntents() -> [ConfigurationIntent] {
-    let configuration = ConfigurationIntent()
-    configuration.date = Date().currentCalendarDateCompoenents
-    if let location = cachedLastLocation() {
-      configuration.location = "\(String(describing: location))"
-    }
-    return [configuration]
+    [ConfigurationIntent()]
   }
 }
