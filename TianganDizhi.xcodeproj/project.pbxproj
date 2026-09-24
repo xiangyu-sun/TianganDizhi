@@ -51,6 +51,7 @@
 		69499F1EF165493183EFDA11 /* ShichenProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE325BDEE8C42E8B7BE984A /* ShichenProgressTests.swift */; };
 		750F84078B25C048A6847E0D /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47917729C445A7031BD770 /* AnalyticsService.swift */; };
 		7D3874EF4938D10BBA25FD73 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47917729C445A7031BD770 /* AnalyticsService.swift */; };
+		9848AEE28455ABDFC03B58E0 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF506E234D650F1A3086C9CA /* AppRouterTests.swift */; };
 		990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
 		990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
 		990FEADF294CAFD700CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
@@ -656,6 +657,7 @@
 		C572685FF0BD5D485A6E65D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA1E0000000000000000FEF1 /* CalendarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidget.swift; sourceTree = "<group>"; };
 		E5DDA231B606C239EFED7F58 /* MinuteTimeLineSchedulerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MinuteTimeLineSchedulerTests.swift; sourceTree = "<group>"; };
+		FF506E234D650F1A3086C9CA /* AppRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -896,6 +898,7 @@
 				9924DB53304B6C5A00AAB710 /* MoonInformationViewTests.swift */,
 				9924DB54304B6C5A00AAB710 /* WeatherDataTests.swift */,
 				9924DB55304B6C5A00AAB710 /* WidgetInventoryReporterTests.swift */,
+				FF506E234D650F1A3086C9CA /* AppRouterTests.swift */,
 			);
 			path = TianganDizhiTests;
 			sourceTree = "<group>";
@@ -1736,6 +1739,7 @@
 				9924DB5A304B6C5A00AAB710 /* WeatherDataTests.swift in Sources */,
 				9924DB5B304B6C5A00AAB710 /* AnalyticsServiceTests.swift in Sources */,
 				69499F1EF165493183EFDA11 /* ShichenProgressTests.swift in Sources */,
+				9848AEE28455ABDFC03B58E0 /* AppRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

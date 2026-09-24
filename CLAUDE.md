@@ -145,7 +145,9 @@ stay Firebase-free.
   completion-handler form to stay on the iOS 17 minimum.
 - Widget taps use `tiangandizhi://widget?kind=…&family=…`, built and parsed only through
   `WidgetDeepLink` so the two halves can't drift. `AppRouter.destination(forWidgetKind:)`
-  maps kind → tab. The modifier is a no-op on watchOS, which has no analytics and where
+  maps kind → tab, and `knowledgeRoute(forWidgetKind:)` picks the 天干地支 screen to push
+  (via `pendingKnowledgeRoute`, consumed by `KnowledgeView`) so the tap lands on the
+  content the widget shows. The modifier is a no-op on watchOS, which has no analytics and where
   complications already launch the app.
 - User properties (`widget_count`, `has_home_widget`, `has_lock_widget`, `top_widget_kind`)
   exist to segment every other metric by widget adoption.
