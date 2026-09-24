@@ -22,7 +22,6 @@ struct AllWidgets: WidgetBundle {
     SpecialDayWidget()
     LuckWidget()
     JieqiHealthWidget()
-    CalendarWidget()
   }
 }
 

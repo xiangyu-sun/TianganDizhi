@@ -15,7 +15,9 @@ import WidgetKit
 
 struct SpecialDayWidget: Widget {
   let kind = "SpecialDay"
-  @Environment(\.largeTitleFont) var largeTitleFont
+  /// Not `@Environment`: a `Widget` isn't a `View`, so that only ever read the
+  /// default and ignored the 使用系統字體 setting.
+  private var largeTitleFont: Font { FontProvider.storedLargeTitleFont }
 
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: JieqiTimelineProvider()) { entry in

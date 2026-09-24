@@ -60,6 +60,17 @@ final class FontProvider: ObservableObject {
   }
 
   var largeTitleFont: Font {
+    Self.largeTitleFont(useSystemFont: useSystemFont)
+  }
+
+  /// For code outside a `View` — a `Widget`'s configuration closure can't use
+  /// `@Environment` (it only ever reads the default) or observe a provider, so it
+  /// reads the stored setting directly on each render.
+  nonisolated static var storedLargeTitleFont: Font {
+    largeTitleFont(useSystemFont: Constants.sharedUserDefault?.bool(forKey: Constants.useSystemFont) ?? false)
+  }
+
+  private nonisolated static func largeTitleFont(useSystemFont: Bool) -> Font {
     useSystemFont ? .largeTitle.bold() : .weiBeiLargeTitle
   }
 

@@ -15,7 +15,9 @@ import WidgetKit
 
 struct JieqiWidget: Widget {
   let kind = "Jieqi"
-  @Environment(\.largeTitleFont) var largeTitleFont
+  /// Not `@Environment`: a `Widget` isn't a `View`, so that only ever read the
+  /// default and ignored the 使用系統字體 setting.
+  private var largeTitleFont: Font { FontProvider.storedLargeTitleFont }
   
   var iosSupportedFamilies: [WidgetFamily] {
     [.systemSmall]
