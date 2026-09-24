@@ -52,6 +52,17 @@ struct SpecialDayWidget: Widget {
             .font(largeTitleFont)
             .minimumScaleFactor(0.6)
             .lineLimit(1)
+        } else {
+          // No upcoming special day found — show today's 節氣 rather than an
+          // empty widget with only the background.
+          Text(entry.date, style: .date)
+            .font(.callout)
+            .environment(\.locale, Locale(identifier: "zh-hant"))
+
+          Text(entry.date.jieQiDisplayText)
+            .font(largeTitleFont)
+            .minimumScaleFactor(0.5)
+            .lineLimit(1)
         }
       }
       .widgetAccentable()

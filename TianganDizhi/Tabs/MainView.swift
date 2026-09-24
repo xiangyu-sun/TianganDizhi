@@ -215,9 +215,7 @@ struct MainView: View {
     }
     .sheet(isPresented: $showingCalendar) {
       #if os(iOS) || os(macOS)
-      if #available(iOS 17, macOS 14, *) {
-        CalendarSheetView()
-      }
+      CalendarSheetView()
       #endif
     }
     .onAppear {

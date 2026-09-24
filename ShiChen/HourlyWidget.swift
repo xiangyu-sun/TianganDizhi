@@ -27,6 +27,6 @@ struct HourlyWidget: Widget {
     }
     .configurationDisplayName("十二时辰")
     .description("十二地支为名的十二时辰組件，更新频率为十五分鐘。")
-    .supportedFamilies([.accessoryCircular])
+    .supportedFamilies(supportedFamilies)
   }
 }

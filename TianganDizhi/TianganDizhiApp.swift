@@ -8,7 +8,6 @@ struct TianganDizhiApp: App {
   // MARK: Lifecycle
 
   init() {
-    FontManager.loadCustomFonts()
     AnalyticsService.configure()
   }
 
