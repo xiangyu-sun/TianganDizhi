@@ -1,6 +1,3 @@
-- Membetulkan pengiraan tonggak jam dan tonggak tahun yang salah dalam Bazi (八字), serta pengiraan usia kitaran Da Yun (大運)
-- Membetulkan penukaran zon waktu semasa mengira carta kelahiran Beijing/Taipei/Singapura dari luar China
-- Membetulkan cuaca, waktu terbit/terbenam bulan, dan matahari yang kadangkala tersekat dan tidak dikemas kini
-- Membetulkan widget yang tidak dikemas kini selepas pengemaskinian cuaca
-- Membetulkan baris terbit/terbenam bulan yang hilang pada hari yang hanya salah satu daripadanya berlaku
+- Ketik widget untuk terus ke butirannya: widget terma suria membuka 24 Terma Suria, widget perayaan membuka kalendar perayaan, dan almanak harian membuka Dua Belas Dewa
+- Pengenalan aplikasi lebih ringkas, kini dengan panduan menambah widget
 - Pembetulan pepijat dan peningkatan kestabilan

@@ -1,6 +1,3 @@
-- Fixed incorrect Bazi (八字) hour-pillar and year-pillar calculations, and Da Yun (大運) age calculations
-- Fixed birth time zone conversion when calculating a Beijing/Taipei/Singapore birth chart from outside China
-- Fixed weather, moonrise/moonset, and sunrise/sunset sometimes getting stuck and not refreshing
-- Fixed widgets not updating after a weather refresh
-- Fixed the moonrise/moonset row disappearing on days when only one of them occurs
+- Tap a widget to jump straight to its details: solar term widgets open the 24 Solar Terms, the festival widget opens the festival calendar, and the daily almanac opens the Twelve Gods
+- Shorter onboarding, now with a guide to adding widgets
 - Bug fixes and stability improvements

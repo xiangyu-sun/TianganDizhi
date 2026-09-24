@@ -13,6 +13,7 @@ import SwiftUI
 
 struct KnowledgeView: View {
   @Environment(\.bodyFont) var bodyFont
+  @EnvironmentObject var router: AppRouter
   @State private var navigationPath = NavigationPath()
 
   var body: some View {
@@ -93,9 +94,23 @@ struct KnowledgeView: View {
         .trackScreen(route)
       }
     }
+    // Both hooks: `onAppear` covers the tab being built by the widget tap
+    // itself, `onChange` covers a tap while the tab is already alive.
+    .onAppear(perform: openPendingRoute)
+    .onChange(of: router.pendingKnowledgeRoute) { _ in
+      openPendingRoute()
+    }
+  }
+
+  /// Replaces the stack with the screen a widget tap asked for.
+  private func openPendingRoute() {
+    guard let route = router.pendingKnowledgeRoute else { return }
+    router.pendingKnowledgeRoute = nil
+    navigationPath = NavigationPath([route])
   }
 }
 
 #Preview {
   KnowledgeView()
+    .environmentObject(AppRouter())
 }

@@ -13,7 +13,24 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+require 'json'
+ASC_API_KEY_PATH = File.expand_path("~/.appstoreconnect/private_keys/asc_api_key.json")
+
 default_platform(:ios)
+
+before_all do
+  if File.exist?(ASC_API_KEY_PATH)
+    key_config = JSON.parse(File.read(ASC_API_KEY_PATH))
+    app_store_connect_api_key(
+      key_id: key_config["key_id"],
+      issuer_id: key_config["issuer_id"],
+      key_content: key_config["key"],
+      is_key_content_base64: key_config["is_key_content_base64"],
+      duration: key_config["duration"],
+      in_house: key_config["in_house"]
+    )
+  end
+end
 
 lane :all_metadata do
   deliver(
@@ -22,6 +39,7 @@ lane :all_metadata do
     skip_binary_upload: true,
     skip_screenshots: true,
     skip_app_version_update: true,
+    run_precheck_before_submit: false,
     force: true,
     metadata_path: "fastlane/metadata"
   )
@@ -31,6 +49,7 @@ lane :all_metadata do
     skip_binary_upload: true,
     skip_screenshots: true,
     skip_app_version_update: true,
+    run_precheck_before_submit: false,
     force: true,
     metadata_path: "fastlane/fastlane/metadata_mac"
   )

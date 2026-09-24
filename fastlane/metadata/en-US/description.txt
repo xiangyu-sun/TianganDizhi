@@ -1,4 +1,12 @@
-Discover the wisdom of traditional Chinese astrology, timekeeping, and philosophy — all in one beautifully crafted app across iPhone, iPad, Mac, and Apple Watch.
+The traditional Chinese calendar, hours and almanac — at a glance on your Home Screen, Lock Screen and wrist, across iPhone, iPad, Mac, and Apple Watch.
+
+WIDGETS EVERYWHERE
+- Tap a widget to jump straight to its solar term, festival or almanac details
+- Home Screen widgets in small, medium, large, and extra-large sizes
+- Lock Screen widgets showing Shichen, lunar date, and solar term countdowns
+- Lunar New Year countdown widget
+- Apple Watch complications and widgets
+- macOS menu bar display with quick copy
 
 CHINESE TIMEKEEPING (SHICHEN)
 - Real-time circular clock displaying the 12 traditional two-hour periods (時辰)
@@ -12,6 +20,9 @@ CHINESE CALENDAR & ASTROLOGY
 - 24 Solar Terms (節氣) with upcoming term countdown
 - 12 Zodiac Animals with Five Element associations
 - Twelve Gods (十二建除神) with daily auspicious and inauspicious activities
+- Bazi / Four Pillars (四柱八字) calculator with Da Yun (大運) luck periods
+- Festival calendar with countdowns to traditional holidays
+- 60 Nayin (六十納音) reference
 - 28 Lunar Mansions (二十八宿) tracking
 
 I CHING & BAGUA
@@ -34,13 +45,6 @@ WEATHER & ASTRONOMY
 - Moon phase display with traditional Chinese lunar phase names
 - Daily temperature and weather conditions
 
-WIDGETS EVERYWHERE
-- Home Screen widgets in small, medium, large, and extra-large sizes
-- Lock Screen widgets showing Shichen, lunar date, and solar term countdowns
-- Lunar New Year countdown widget
-- Apple Watch complications and widgets
-- macOS menu bar display with quick copy
-
 APPLE WATCH
 - Dedicated watch app with circular Shichen clock
 - Multiple complication types for your watch face
@@ -48,7 +52,7 @@ APPLE WATCH
 
 CUSTOMIZATION
 - Traditional or simplified Chinese naming styles
-- Custom calligraphy font (WeibeiTC-Bold) or system font
+- Weibei calligraphy font or system font
 - Spring Festival red theme for Lunar New Year celebrations
 - GMT+8 timezone option for overseas users
 

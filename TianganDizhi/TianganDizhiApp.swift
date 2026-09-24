@@ -66,6 +66,7 @@ struct TianganDizhiApp: App {
         kind: widget.kind,
         family: widget.family,
         destination: destination.rawValue))
+      router.pendingKnowledgeRoute = AppRouter.knowledgeRoute(forWidgetKind: widget.kind)
       router.selectedTab = destination
       return
     }

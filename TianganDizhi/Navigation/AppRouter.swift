@@ -28,6 +28,27 @@ final class AppRouter: ObservableObject {
 
   @Published var selectedTab = AppTab.shichen
 
+  /// A screen inside 天干地支 that a widget tap should open. `KnowledgeView`
+  /// consumes it (and resets it to `nil`) so the tap lands on the content the
+  /// widget shows rather than on the tab's root list.
+  @Published var pendingKnowledgeRoute: KnowledgeRoute?
+
+  /// The 天干地支 screen matching a widget, or `nil` when the tab root is the
+  /// right landing spot.
+  static func knowledgeRoute(forWidgetKind kind: String) -> KnowledgeRoute? {
+    switch kind {
+    case "Jieqi", "JieqiHealth", "com.uriphium.tinagandizhi.countdown.widget":
+      .jieqiList
+    case "SpecialDay":
+      .upcomingFestivals
+    // 今日宜忌 is driven by the day's 建除神.
+    case "LuckWidget":
+      .twelveGods
+    default:
+      nil
+    }
+  }
+
   /// Where a tap on each widget lands. Widgets about the current time and date go
   /// to 時辰; the seasonal and almanac ones go to 天干地支, where that content lives.
   static func destination(forWidgetKind kind: String) -> AppTab {

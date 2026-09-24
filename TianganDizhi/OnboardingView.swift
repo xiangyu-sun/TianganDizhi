@@ -21,29 +21,35 @@ struct OnboardingView: View {
   /// and users who never finish rarely go on to install a widget.
   @State private var step = 0
 
+  private static var widgetInstructions: String {
+    #if os(macOS)
+    "時辰、節氣、農曆無需打開App，一眼可見。在桌面按右鍵，選擇「編輯小工具」，搜尋「天干地支」即可加入。"
+    #else
+    "時辰、節氣、農曆無需打開App，一眼可見。長按主畫面空白處，點「編輯」→「加入小工具」，搜尋「天干地支」即可加入；鎖定畫面同樣適用。"
+    #endif
+  }
+
   private var isOverseasUser: Bool {
     TimeZone.current.secondsFromGMT() != 8 * 3600
   }
 
   var body: some View {
     TabView(selection: $step) {
+      // Kept to one page: the old three reading pages were where half of the
+      // people who started onboarding gave up.
       OnboardingPage(
         symbol: "clock.fill",
         title: "歡迎使用時辰",
-        description: "時辰是中國傳統的十二時辰計時系統，每個時辰對應兩小時。本App顯示當前時辰、星象及天氣資訊。")
+        description: "以十二時辰、二十四節氣與天干地支，顯示當下的傳統曆法、星象及天氣。")
       .tag(0)
 
+      // Widget users are the engaged ones — most sessions start from a widget
+      // tap — so point new users at them before they leave onboarding.
       OnboardingPage(
-        symbol: "leaf.fill",
-        title: "二十四節氣",
-        description: "節氣是中國傳統曆法中的二十四個特定時間點，標記季節變化。App會顯示當前及最近的節氣資訊。")
+        symbol: "square.grid.2x2.fill",
+        title: "加入小組件",
+        description: Self.widgetInstructions)
       .tag(1)
-
-      OnboardingPage(
-        symbol: "moon.stars.fill",
-        title: "天干地支、卦與圖示",
-        description: "「天干地支」分頁提供學習資料。「卦」分頁展示八卦與辟卦。「參考圖示」提供快速查閱表。")
-      .tag(2)
 
       VStack(spacing: 28) {
         Image(systemName: "globe.asia.australia.fill")
@@ -78,7 +84,7 @@ struct OnboardingView: View {
         .font(.body)
       }
       .padding()
-      .tag(3)
+      .tag(2)
     }
     .onAppear {
       AnalyticsService.log(.onboardingStepViewed(step: step))
