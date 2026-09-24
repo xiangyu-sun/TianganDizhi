@@ -26,8 +26,11 @@ struct TianganDizhiApp: App {
   @StateObject private var menuBarTitle = MenuBarTitleProvider()
   #endif
 
+  /// Lets the menu bar reopen the main window after the user closed it.
+  static let mainWindowID = "main"
+
   var body: some Scene {
-    WindowGroup {
+    WindowGroup(id: Self.mainWindowID) {
       ContentView()
         .environmentObject(fontProvider)
         .environmentObject(router)
@@ -49,6 +52,7 @@ struct TianganDizhiApp: App {
     #if os(macOS)
     MenuBarExtra(menuBarTitle.title) {
       MenuBarContentView()
+        .environmentObject(router)
     }
     #endif
   }

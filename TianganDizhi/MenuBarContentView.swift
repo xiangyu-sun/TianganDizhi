@@ -12,6 +12,8 @@ import WidgetKit
 #if os(macOS)
 struct MenuBarContentView: View {
   @ObservedObject var weatherData = WeatherData.shared
+  @EnvironmentObject var router: AppRouter
+  @Environment(\.openWindow) private var openWindow
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
   @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
@@ -37,6 +39,13 @@ struct MenuBarContentView: View {
       }
       .padding()
       .frame(width: 280)
+    }
+    // A menu-bar-only user never opens MainView, which is the only other place
+    // that refreshes weather — so the weather row never appeared for them. The
+    // fetch is throttled by WeatherData's cache (1 km / 1 hour).
+    .task {
+      guard let location = try? await LocationManager.shared.startLocationUpdate() else { return }
+      _ = try? await weatherData.dailyForecast(for: location)
     }
   }
 
@@ -169,6 +178,7 @@ struct MenuBarContentView: View {
         }
       }
       .buttonStyle(.plain)
+      .keyboardShortcut("o")
 
       Button(action: copyCurrentInfo) {
         HStack {
@@ -181,6 +191,7 @@ struct MenuBarContentView: View {
         }
       }
       .buttonStyle(.plain)
+      .keyboardShortcut("c")
 
       Button(action: openSettings) {
         HStack {
@@ -193,6 +204,7 @@ struct MenuBarContentView: View {
         }
       }
       .buttonStyle(.plain)
+      .keyboardShortcut(",")
 
       Divider()
 
@@ -207,15 +219,21 @@ struct MenuBarContentView: View {
         }
       }
       .buttonStyle(.plain)
+      .keyboardShortcut("q")
     }
   }
 
   // MARK: - Actions
 
+  /// Brings the main window forward, reopening it if the user closed it. Matched
+  /// by `canBecomeMain` rather than title: the title is the localized display
+  /// name (天干地支), and the menu bar's own panel can't become main.
   private func openMainWindow() {
     NSApplication.shared.activate()
-    if let window = NSApplication.shared.windows.first(where: { $0.title.contains("TianganDizhi") || $0.isMainWindow }) {
+    if let window = NSApplication.shared.windows.first(where: \.canBecomeMain) {
       window.makeKeyAndOrderFront(nil)
+    } else {
+      openWindow(id: TianganDizhiApp.mainWindowID)
     }
   }
 
@@ -238,9 +256,11 @@ struct MenuBarContentView: View {
     pasteboard.setString(fullInfo, forType: .string)
   }
 
+  /// Settings live in the main window's 設置 tab — the app has no Settings
+  /// scene, so the old private `showSettingsWindow:` selector did nothing.
   private func openSettings() {
-    NSApplication.shared.activate()
-    NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+    router.selectedTab = .settings
+    openMainWindow()
   }
 
   private func quitApp() {
@@ -250,6 +270,7 @@ struct MenuBarContentView: View {
 
 #Preview {
   MenuBarContentView()
+    .environmentObject(AppRouter())
     .frame(width: 280)
 }
 
