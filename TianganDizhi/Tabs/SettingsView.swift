@@ -41,8 +41,13 @@ struct SettingsView: View {
   var body: some View {
     Form {
       Section {
-        ShareLink(item: Date.now.shichenShareText) {
-          Label("分享今日時辰資訊", systemImage: "square.and.arrow.up")
+        // Inside a TimelineView so the text tracks the current 時辰/刻. Built from
+        // `Date.now` in `body`, it was captured whenever Settings last rendered —
+        // leave the app open across a 時辰 boundary and it shared the old one.
+        TimelineView(.everyMinute) { context in
+          ShareLink(item: context.date.shichenShareText) {
+            Label("分享今日時辰資訊", systemImage: "square.and.arrow.up")
+          }
         }
         // ShareLink has no completion callback, so this counts intent to share
         // rather than a completed share.
