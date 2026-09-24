@@ -19,11 +19,6 @@ final class ScreenTests: XCTestCase {
     // In UI tests it is usually best to stop immediately when a failure occurs.
     continueAfterFailure = false
 
-    let mainScreenScreenshot = XCUIScreen.main.screenshot()
-    let attachment = XCTAttachment(screenshot: mainScreenScreenshot)
-    attachment.lifetime = .keepAlways
-    add(attachment)
-
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     app = XCUIApplication()
     app.launchArguments += ["UITestMode"]
@@ -77,13 +72,18 @@ final class ScreenTests: XCTestCase {
   #if !os(macOS)
   /// Taps a tab bar item and verifies it actually became selected.
   ///
+  /// Queried as `app.buttons[label]`, not under `app.tabBars`: since iPadOS 18
+  /// the tab bar renders at the top as plain buttons with no tab-bar element,
+  /// so the scoped query found nothing and broke the iPad screenshot run. On
+  /// iPhone the tab bar's buttons still match, as descendants of the app.
+  ///
   /// A bare `tap()` on a tab that is covered (by the onboarding sheet, or by a
   /// system permission alert) silently no-ops, which used to leave these tests
   /// screenshotting the wrong screen instead of failing. The first tap can also
   /// be consumed while an interruption monitor dismisses a permission alert, so
   /// retry once before giving up.
   private func selectTab(_ label: String) {
-    let tab = app.tabBars.firstMatch.buttons[label]
+    let tab = app.buttons[label].firstMatch
     XCTAssertTrue(tab.waitForExistence(timeout: 10), "\(label) tab not found")
 
     for _ in 0 ..< 2 {
