@@ -151,7 +151,7 @@ struct MainView: View {
               .font(bodyFont)
             }
             .accessibilityElement(children: .combine)
-            .accessibilityLabel("\(shichen.dizhi.aliasName)時，第\(shichen.currentKeSpellOut)刻，\(shichen.dizhi.organReference)")
+            .accessibilityLabel("\(shichen.dizhi.aliasName)，第\(shichen.currentKeSpellOut)刻，\(shichen.dizhi.organReference)")
             .accessibilityAddTraits(.updatesFrequently)
           }
         }
