@@ -26,6 +26,11 @@ struct ContentView: View {
   @AppStorage(Constants.hasCompletedOnboarding, store: Constants.sharedUserDefault)
   var hasCompletedOnboarding = false
 
+  #if os(iOS)
+  @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+  @State private var rootWidth: CGFloat = 0
+  #endif
+
   var body: some View {
     TabView(selection: $router.selectedTab) {
       MainView()
@@ -70,6 +75,13 @@ struct ContentView: View {
     .environment(\.headlineFont, fontProvider.headlineFont)
     .environment(\.footnote, fontProvider.footnoteFont)
     .environment(\.calloutFont, fontProvider.calloutFont)
+    #if os(iOS)
+    // Larger layouts (the 時辰 clock's padding, the 辟卦 grids) only when there is
+    // room: a regular-width iPad wider than the iPad mini's 744pt. Split View and
+    // Slide Over drop back to compact.
+    .environment(\.shouldScaleFont, horizontalSizeClass == .regular && rootWidth > 744)
+    .onGeometryChange(for: CGFloat.self) { $0.size.width } action: { rootWidth = $0 }
+    #endif
     #if os(iOS)
     .onAppear {
       applyUIKitFontAppearance(useSystemFont: fontProvider.useSystemFont)

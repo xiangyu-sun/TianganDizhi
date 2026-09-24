@@ -38,6 +38,20 @@ extension EnvironmentValues {
   @Entry var calloutFont: Font = .weiBeiCallOut
   @Entry var headlineFont: Font = .weiBeiHeadline
   @Entry var footnote: Font = .weiBeiFootNote
-  // Derived from horizontalSizeClass in views that need it; kept for backward compat
+  /// Whether layouts should use their larger, iPad-sized variants. Nothing
+  /// reads a meaningful default — each root sets it: `ContentView` from its size
+  /// class and width, and the widget views from `Bool.widgetShouldScaleFont`.
   @Entry var shouldScaleFont: Bool = false
+}
+
+extension Bool {
+  /// Widgets have no useful size class, so they scale up on iPad — the same
+  /// devices the old `UIScreen.main.bounds.width > 744` default picked out.
+  static var widgetShouldScaleFont: Bool {
+    #if os(iOS)
+    UIDevice.current.userInterfaceIdiom == .pad
+    #else
+    false
+    #endif
+  }
 }
