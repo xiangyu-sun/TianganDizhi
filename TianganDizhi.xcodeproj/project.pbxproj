@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99A1F0012F7A000000000011 /* LXGWWenKaiTC-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99A1F0012F7A000000000001 /* LXGWWenKaiTC-Medium.ttf */; };
+		99A1F0012F7A000000000013 /* LXGWWenKaiTC-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99A1F0012F7A000000000001 /* LXGWWenKaiTC-Medium.ttf */; };
 		13C209580104526EB190BD68 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA3D117FCCF9D8EB0A89A5D /* AppRouter.swift */; };
 		2712B05411CB82D647E8114D /* WidgetDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F2260ABE2A79AFBB02B38 /* WidgetDeepLink.swift */; };
 		362E1D3EC2FD080D4DF056B8 /* AnalyticsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF92F75486AA1E4C0FDECE /* AnalyticsScreen.swift */; };
@@ -467,6 +469,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		99A1F0012F7A000000000001 /* LXGWWenKaiTC-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LXGWWenKaiTC-Medium.ttf"; sourceTree = "<group>"; };
+		99A1F0012F7A000000000002 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		0BE325BDEE8C42E8B7BE984A /* ShichenProgressTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShichenProgressTests.swift; sourceTree = "<group>"; };
 		0C8B42510547F456786FE480 /* ChinesePinyinTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChinesePinyinTests.swift; sourceTree = "<group>"; };
 		3A8E1878EEE481CAE2776E0E /* WidgetInventoryReporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WidgetInventoryReporter.swift; sourceTree = "<group>"; };
@@ -737,6 +741,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99A1F0012F7A000000000003 /* WidgetFonts */ = {
+			isa = PBXGroup;
+			children = (
+				99A1F0012F7A000000000001 /* LXGWWenKaiTC-Medium.ttf */,
+				99A1F0012F7A000000000002 /* OFL.txt */,
+			);
+			path = WidgetFonts;
+			sourceTree = "<group>";
+		};
 		460BA9A826F24C400025CA39 /* Knowledge */ = {
 			isa = PBXGroup;
 			children = (
@@ -791,6 +804,7 @@
 		46AB55BE242B5EFD00F6604A = {
 			isa = PBXGroup;
 			children = (
+				99A1F0012F7A000000000003 /* WidgetFonts */,
 				99A0B7AD2DB679DC000F2AD7 /* ShichenWatchExtension.entitlements */,
 				9959970B2B3DF69A002288D1 /* TianganDizhi.xctestplan */,
 				996E547F2E994413004CD36F /* TianGanDizhiIcon.icon */,
@@ -1450,6 +1464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A1F0012F7A000000000011 /* LXGWWenKaiTC-Medium.ttf in Resources */,
 				462A5F6E24FFE5F20032A125 /* Assets.xcassets in Resources */,
 				998898E22A74514300A4E48C /* ShiChen.xcstrings in Resources */,
 				99A0B7A72DB59093000F2AD7 /* JieqiWidget.xcassets in Resources */,
@@ -1532,6 +1547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A1F0012F7A000000000013 /* LXGWWenKaiTC-Medium.ttf in Resources */,
 				99FD3F4E292296180048DCEB /* Assets.xcassets in Resources */,
 				998898E52A74514300A4E48C /* ShiChen.xcstrings in Resources */,
 				99A0B7AA2DB590A7000F2AD7 /* JieqiWidget.xcassets in Resources */,

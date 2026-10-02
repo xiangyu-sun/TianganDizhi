@@ -20,7 +20,7 @@ struct CountDownTimelineProvider: IntentTimelineProvider {
 
   func getSnapshot(for configuration: Intent, in _: Context, completion: @escaping (CountDownEntry) -> Void) {
     let entry = CountDownEntry(date: Date(), configuration: configuration)
-    WeibeiFont.activate { _ in completion(entry) }
+    completion(entry)
   }
 
   func getTimeline(for configuration: Intent, in _: Context, completion: @escaping (Timeline<CountDownEntry>) -> Void) {
@@ -32,7 +32,7 @@ struct CountDownTimelineProvider: IntentTimelineProvider {
     }
 
     let timeline = Timeline(entries: entries, policy: .atEnd)
-    WeibeiFont.activate { _ in completion(timeline) }
+    completion(timeline)
   }
 
   // MARK: Private

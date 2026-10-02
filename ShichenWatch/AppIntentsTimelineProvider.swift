@@ -20,12 +20,10 @@ struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
   }
 
   func snapshot(for configuration: ConfigurationAppIntent, in _: Context) async -> SimpleAppIntentEntry {
-    await WeibeiFont.activate()
-    return SimpleAppIntentEntry(date: Date(), configuration: configuration)
+    SimpleAppIntentEntry(date: Date(), configuration: configuration)
   }
 
   func timeline(for configuration: ConfigurationAppIntent, in _: Context) async -> Timeline<SimpleAppIntentEntry> {
-    await WeibeiFont.activate()
     // Nothing reads `configuration.date`/`.location`, so entries carry the
     // widget's own configuration instead of scratch values (writing the
     // location put precise coordinates into the persisted intent).

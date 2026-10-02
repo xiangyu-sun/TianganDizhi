@@ -11,5 +11,9 @@
 	<true/>
 	<key>NSWidgetWantsLocation </key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LXGWWenKaiTC-Medium.ttf</string>
+	</array>
 </dict>
 </plist>

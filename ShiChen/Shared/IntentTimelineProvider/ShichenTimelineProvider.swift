@@ -16,8 +16,7 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
   }
 
   func getSnapshot(for configuration: ConfigurationIntent, in _: Context, completion: @escaping (SimpleEntry) -> Void) {
-    let snapshot = entry(at: Date(), configuration: configuration)
-    WeibeiFont.activate { _ in completion(snapshot) }
+    completion(entry(at: Date(), configuration: configuration))
   }
 
   func getTimeline(for configuration: ConfigurationIntent, in _: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
@@ -31,7 +30,7 @@ struct ShichenTimelineProvider: IntentTimelineProvider {
     }
 
     let timeline = Timeline(entries: entries, policy: .atEnd)
-    WeibeiFont.activate { _ in completion(timeline) }
+    completion(timeline)
   }
 
   @available(macOSApplicationExtension 15.0, *)

@@ -41,12 +41,10 @@ struct CalendarTimelineProvider: AppIntentTimelineProvider {
   }
 
   func snapshot(for configuration: CalendarConfigurationIntent, in _: Context) async -> CalendarEntry {
-    await WeibeiFont.activate()
-    return CalendarEntry(date: Date(), configuration: configuration)
+    CalendarEntry(date: Date(), configuration: configuration)
   }
 
   func timeline(for configuration: CalendarConfigurationIntent, in _: Context) async -> Timeline<CalendarEntry> {
-    await WeibeiFont.activate()
     // Entries anchored at midnight boundaries so the "today" highlight rolls
     // over at the start of each calendar day.
     let entries = DailyTimeLineSceduler.buildTimeLine().map {

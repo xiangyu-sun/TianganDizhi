@@ -12,27 +12,25 @@ struct WatchStackView: View {
   @AppStorage(Constants.springFestiveBackgroundEnabled, store: Constants.sharedUserDefault)
   var springFestiveBackgroundEnabled = false
 
-  @Environment(\.footnote) var footnote
-
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
 
   var body: some View {
     VStack {
       FullDateTitleView(date: date)
-        .font(footnote)
+        .font(.footnote)
       if let shichen = date.shichen {
         HStack {
           VStack {
             Text("\(shichen.dizhi.previous.displayHourText)")
-              .font(footnote)
+              .font(.footnote)
             ShichenWatchInformationView(shichen: shichen.dizhi.previous)
           }
           .foregroundStyle(Color.secondary)
 
           VStack {
             Text("\(shichen.dizhi.displayHourText)")
-              .font(footnote)
+              .font(.footnote)
               .scaleEffect(1.1)
 
             ShichenWatchInformationView(shichen: shichen.dizhi)
@@ -40,7 +38,7 @@ struct WatchStackView: View {
 
           VStack {
             Text("\(shichen.dizhi.next.displayHourText)")
-              .font(footnote)
+              .font(.footnote)
 
             ShichenWatchInformationView(shichen: shichen.dizhi.next)
           }
@@ -61,15 +59,13 @@ struct WatchStackView: View {
 struct ShichenWatchInformationView: View {
 
   let shichen: Dizhi
-  @Environment(\.footnote) var footnote
-
   var body: some View {
     HStack {
       Text(shichen.aliasName)
       Text(shichen.luizhu.organReference)
     }
     .widgetAccentable()
-    .font(footnote)
+    .font(.footnote)
   }
 
 }
