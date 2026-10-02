@@ -48,8 +48,8 @@ struct MainView: View {
       ?? EventModel(date: Date(), name: .day1, dateComponents: .init())
     cachedEvent = ev
     cachedTitle = useGTM8
-      ? ev.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
-      : ev.date.displayStringOfChineseYearMonthDateWithZodiac
+      ? ev.date.lunarDateWithZodiacGTM8
+      : ev.date.lunarDateWithZodiac
     showNewYearCountdown = converter.nextChineseNewYear()
       .map { converter.isWithinMonths(3, beforeChineseNewYearFrom: $0) } ?? false
   }
@@ -69,7 +69,7 @@ struct MainView: View {
             showingCalendar = true
           } label: {
             HStack {
-              Text(date.displayStringOfChineseYearMonthDateWithZodiac)
+              Text(date.lunarDateWithZodiac)
               Text(god.map { "·" + $0.chinese } ?? "")
             }
             .lineLimit(1)
@@ -87,7 +87,7 @@ struct MainView: View {
             .font(bodyFont)
           }
 
-          if let festival = date.chineseFestival {
+          if let festival = date.chineseFestival(timeZone: .solarTerm) {
             Text(festival.chineseName)
               .font(bodyFont)
               .foregroundStyle(.primary)
@@ -270,11 +270,11 @@ extension Date {
   /// Human-readable summary of this date's Shichen, festival/Jieqi, lunar mansion and 宜/忌.
   var shichenShareText: String {
     var lines: [String] = []
-    lines.append("日期：\(displayStringOfChineseYearMonthDateWithZodiac)")
+    lines.append("日期：\(lunarDateWithZodiac)")
     if let shichen = shichen {
       lines.append("時辰：\(shichen.dizhi.aliasName)（\(shichen.dizhi.displayHourText)）")
     }
-    if let festival = chineseFestival {
+    if let festival = chineseFestival(timeZone: .solarTerm) {
       lines.append("今日：\(festival.chineseName)")
     } else {
       let jieqi = jieQiDisplayText

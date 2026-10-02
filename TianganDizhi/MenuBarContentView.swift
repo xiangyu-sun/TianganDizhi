@@ -239,7 +239,7 @@ struct MenuBarContentView: View {
 
   private func copyCurrentInfo() {
     let date = Date()
-    let dateInfo = date.displayStringOfChineseYearMonthDateWithZodiac
+    let dateInfo = date.lunarDateWithZodiac
     let shichenInfo = date.shichen?.dizhi.displayHourText ?? ""
     let godInfo = date.twelveGod()?.chinese ?? ""
     let jieqiInfo = date.jieQiDisplayText

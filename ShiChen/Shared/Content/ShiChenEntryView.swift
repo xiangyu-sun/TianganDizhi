@@ -42,7 +42,7 @@ struct ShiChenEntryView: View {
     case .accessoryInline:
         if horizontalSizeClass != .compact {
           HStack(spacing: 0) {
-            Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+            Text(entry.date.lunarDateWithZodiac)
             if let shichen = entry.date.shichen {
               //let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
               Text(shichen.dizhi.displayHourText)

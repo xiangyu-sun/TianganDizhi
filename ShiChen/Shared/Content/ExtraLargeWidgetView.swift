@@ -35,7 +35,7 @@ struct ExtraLargeWidgetView: View {
     HStack {
       VStack(alignment: .center) {
         HStack() {
-          Text(date.displayStringOfChineseYearMonthDateWithZodiac + " \(date.twelveGod()?.chinese ?? "")")
+          Text(date.lunarDateWithZodiac + " \(date.twelveGod()?.chinese ?? "")")
         }
         .font(titleFont)
         

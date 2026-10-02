@@ -2,6 +2,21 @@
 
 ## [Unreleased]
 
+### Package Updates
+- Moved to `ChineseAstrologyCalendar` 4.1 (from a pre-3.0 `master` commit), `Bagua` 1.1.0 and
+  `JingluoShuxueCore` 1.2.0, all pinned by version. `ChineseTranditionalCalendarUI` and
+  `ChineseTranditionalMusicCore` now require the calendar by version too.
+
+### Behaviour Changes
+- **Solar terms land on the right day.** Terms that begin in the afternoon (China time) were
+  shown a day late by the old library; they now appear on the day they begin.
+- **The 東八區 setting covers solar terms.** With 節日與節氣使用東八區時間 on, solar terms and
+  today's festival use China's calendar day; off (default), the device's.
+- **Calendar month names** — the month grid shows 冬月/臘月 instead of 十一月/十二月, and 閏
+  (was the simplified 闰) for leap months.
+- **大運 start age** — follows the corrected solar-term dates, so it can be one year lower for
+  births shortly before an afternoon 節.
+
 ### Fixes
 - **Jieqi solar-term display** — the small Jieqi widget, the medium 節氣養生 widget, the main screen, and the menu bar now agree on which solar term to show. On a term's start day they name the term that has begun (e.g. 小暑); on every other day they count down to the next term (e.g. 十五日後大暑). Previously a term-start day could show the previous or next term because the widgets read the instant-sensitive `jieqi`/`nextJieqi` package APIs from their midnight-seeded timelines; all reads are now day-aligned via `endOfLocalDay`, and `displayedJieqi` keeps each widget's term name, health tip, and background image in step with its title.
 

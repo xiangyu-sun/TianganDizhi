@@ -51,11 +51,21 @@ git checkout master                            # return to where you started
 If `release` is *not* an ancestor of `master` (the `--is-ancestor` check fails), it
 is not a clean fast-forward — surface that rather than forcing the merge.
 
+### Package pins
+- **By version** (`upToNextMajorVersion`): `ChineseAstrologyCalendar` (from 4.1.0), `Bagua`
+  (from 1.1.0), `JingluoShuxueCore` (from 1.2.0). Bump the minimum when the app needs a newer
+  API; never switch them back to a branch, or SwiftPM can no longer resolve the graph
+  (Bagua/Jingluo require ChineseAstrologyCalendar by version).
+- **By branch**: `ChineseTranditionalCalendarUI` (`master`), `ChineseTranditionalMusicCore`
+  (`main`), `AppStoreReviewPrompt`. Their own `ChineseAstrologyCalendar` requirement must be
+  a version range too.
+- All these packages live next to this repo in `~/Documents/GitHub/`.
+
 ### ChineseTranditionalCalendarUI package
 The shared calendar UI lives in the `ChineseTranditionalCalendarUI` Swift package,
 consumed here as a **remote** SwiftPM dependency (pinned by branch in
 `Package.resolved`). When a fix is needed in that package:
-- Edit it directly in its local clone at `/Users/xiangyu.sun/ChineseTranditionalCalendarUI`
+- Edit it directly in its local clone at `/Users/xiangyu.sun/Documents/GitHub/ChineseTranditionalCalendarUI`
   (the source of truth for shared calendar views) — do not duplicate the code app-side.
 - Build/test the package there (`swift build`, `swift test`).
 - The app cannot see the change until the package is committed + pushed to its
@@ -90,6 +100,15 @@ The app relies heavily on custom Swift packages for Chinese astrology calculatio
 - Views use `TimelineView(.everyMinute)` for live date updates — there is no `DateProvider` class
 - Custom date extensions (`Date+Ganzhi.swift`, `Date+Jieqi.swift`) for Chinese calendar calculations
 - `DayConverter` - Handles timezone conversions (GTM8 support)
+- **Solar terms follow the `useGTM8` setting** (節日與節氣使用東八區時間): read them through the
+  `Date+Jieqi.swift` helpers (`jieqiDayAligned`, `isJieqiDayAligned`, `nextJieqiDayAligned`,
+  `displayedJieqi`, `jieQiDisplayText`), which pass `TimeZone.solarTerm` to the library's
+  `jieqi(in:)` family. Don't call the library's plain `jieqi`/`isJieqiDay`/`nextJieqi`
+  properties in UI code: they are fixed to China time. Today's festival uses
+  `chineseFestival(timeZone: .solarTerm)` for the same reason.
+- Exception: `DaYunCalculator` and Bazi are pinned to China time on purpose (Bazi convention)
+- Lunar date strings: `lunarDateWithZodiac` / `lunarDateWithZodiacGTM8` / `lunarDayText`
+  (built on the library's `LunarDate`); the library's `displayStringOf…` properties are deprecated
 
 #### Settings Management  
 - Settings are `@AppStorage` on the shared app-group `UserDefaults`, read where needed;

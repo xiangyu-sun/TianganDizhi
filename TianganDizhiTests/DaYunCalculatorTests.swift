@@ -50,12 +50,14 @@ import Testing
   }
 
   @Test func forwardFemaleDiscriminating() throws {
-    // 1995-03-15 8h GMT+8: nian stem 乙 (yin) + female → 順. Next 節 (清明) is
-    // 22 days out; the nearest of all 24 terms (春分, a 氣) is only 7 days out
-    // — startAge would be 3, not 8, under the old logic.
+    // 1995-03-15 8h GMT+8: nian stem 乙 (yin) + female → 順. Next 節 (清明)
+    // begins on the afternoon of 5 April, 21 days out; the nearest of all 24
+    // terms (春分, a 氣) is only 6 days out — startAge would be 2, not 7, under
+    // the old logic. (Before ChineseAstrologyCalendar 4.0, afternoon terms were
+    // placed a day late, which made this 22 days and startAge 8.)
     let date = try #require(Self.gmt8.date(from: DateComponents(year: 1995, month: 3, day: 15, hour: 8)))
     let result = try #require(DaYunCalculator.calculate(birthDate: date, isMale: false))
-    #expect(result.startAge == 8)
+    #expect(result.startAge == 7)
   }
 
   @Test func eightCyclesStepInTheDeclaredDirection() throws {

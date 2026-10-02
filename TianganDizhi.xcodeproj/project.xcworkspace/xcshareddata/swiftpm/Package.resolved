@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/Astral.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "e9d873f744021db6f69a06877562ee0ed1091360"
+        "revision" : "e9d873f744021db6f69a06877562ee0ed1091360",
+        "version" : "1.2.0"
       }
     },
     {
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/Bagua",
       "state" : {
-        "branch" : "main",
-        "revision" : "fb3f40d96465945f501f1f0592c6b0a41bccff7c"
+        "revision" : "a5ad32a02750bf1ef5d4f5f64878ccaa81f58fdf",
+        "version" : "1.1.0"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "f79e2e8fda7d88b0b565be87eb87b7b155b3f559"
+        "revision" : "a7dec19907cf855ced804b5be282a8bead06902c",
+        "version" : "4.1.0"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseTranditionalCalendarUI.git",
       "state" : {
         "branch" : "master",
-        "revision" : "3af62cc5474a046c9b413a077120bd4dd853bf7e"
+        "revision" : "dcb3721a0e3ce660af86cc4aeded10c11731d90a"
       }
     },
     {
@@ -70,7 +70,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseTranditionalMusicCore.git",
       "state" : {
         "branch" : "main",
-        "revision" : "e674e48b5aad580169f1c5972ea13d45a05d3972"
+        "revision" : "ca7f3c3"
       }
     },
     {
@@ -150,8 +150,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/JingluoShuxueCore.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "be5921f9c188a6589eb33c0d82de9594c33b61c4"
+        "revision" : "599289253a74e887548cf1fb8bca6accc46a60d8",
+        "version" : "1.2.0"
       }
     },
     {

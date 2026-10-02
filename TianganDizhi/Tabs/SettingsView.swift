@@ -130,13 +130,13 @@ struct SettingsView: View {
       Section(header: Text("地區與日曆")) {
         Toggle(isOn: $useGTM8) {
           VStack(alignment: .leading, spacing: 2) {
-            Text("節日使用東八區時間")
-            Text("海外用戶：節日以東八區時間（UTC+8）計算")
+            Text("節日與節氣使用東八區時間")
+            Text("海外用戶：節日與節氣以東八區時間（UTC+8）計算")
               .font(footnote)
               .foregroundStyle(.secondary)
           }
         }
-        .accessibilityHint("海外用戶開啟後節日以中國標準時間計算")
+        .accessibilityHint("海外用戶開啟後節日與節氣以中國標準時間計算")
       }
       Section(header: Text("隱私")) {
         Toggle(isOn: $analyticsEnabled) {

@@ -27,7 +27,7 @@ struct JieqiHealthMediumView: View {
     // term the countdown points to. This keeps the health tip / seasonal foods /
     // background in step with the title instead of drifting onto a lagged
     // instant-sensitive read.
-    let jieqi = date.displayedJieqi?.jieqi ?? date.jieqiDayAligned ?? date.jieqi
+    let jieqi = date.displayedJieqi?.jieqi ?? date.jieqiDayAligned
 
     if let jieqi {
       VStack(alignment: .leading, spacing: 4) {

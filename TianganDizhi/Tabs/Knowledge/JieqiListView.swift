@@ -12,8 +12,8 @@ import SwiftUI
 // MARK: - JieqiListView
 
 struct JieqiListView: View {
-  private let currentJieqi = Date().jieqi
-  private let nextJieqiOccurrence = Date().nextJieqi
+  private let currentJieqi = Date().jieqiDayAligned
+  private let nextJieqiOccurrence = Date().nextJieqiDayAligned
 
   var body: some View {
     ScrollViewReader { proxy in
@@ -21,7 +21,7 @@ struct JieqiListView: View {
         JieqiCell(
           jieqi: jieqi,
           isCurrent: jieqi == currentJieqi,
-          daysUntil: nextJieqiOccurrence?.jieqi == jieqi ? nextJieqiOccurrence.map { $0.days(from: Date()) } : nil
+          daysUntil: nextJieqiOccurrence?.jieqi == jieqi ? nextJieqiOccurrence.map { $0.days(from: Date(), calendar: .solarTerm) } : nil
         )
         .id(jieqi)
       }

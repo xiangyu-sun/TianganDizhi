@@ -17,7 +17,7 @@ struct CornerView: View {
 
   var body: some View {
     ZStack {
-      Text(date.chineseDate)
+      Text(date.lunarDayText)
         .font(.largeTitle)
     }
     .widgetLabel {
