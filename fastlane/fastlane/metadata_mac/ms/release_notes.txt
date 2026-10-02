@@ -2,4 +2,5 @@
 - Tetapan "Guna UTC+8 untuk perayaan dan terma suria" kini turut digunakan untuk terma suria dan perayaan hari ini, jadi pengguna di luar China boleh mengikut tarikh tempatan atau tarikh China
 - Kalendar kini menggunakan nama tradisional 冬月 dan 臘月 untuk bulan lunar ke-11 dan ke-12, serta 閏 untuk bulan lompat
 - Umur permulaan Da Yun dalam Bazi mengikut tarikh terma suria yang telah dibetulkan dan mungkin setahun lebih awal bagi sesetengah tarikh lahir
+- Disebabkan peraturan baharu Apple, apl tidak lagi boleh menyertakan fon Weibei (魏碑), jadi widget Skrin Utama dan desktop kini menggunakan fon sumber terbuka LXGW WenKai (霞鶩文楷). Apl masih menggunakan fon Weibei sistem, dan widget Skrin Kunci menggunakan fon sistem
 - Pembetulan pepijat dan peningkatan kestabilan

@@ -2,4 +2,5 @@
 - Le réglage « Utiliser UTC+8 pour les fêtes et les termes solaires » s'applique désormais aussi aux termes solaires et à la fête du jour : hors de Chine, vous pouvez suivre la date locale ou celle de la Chine
 - Le calendrier utilise les noms traditionnels 冬月 et 臘月 pour les 11e et 12e mois lunaires, et 閏 pour les mois intercalaires
 - L'âge de début du Da Yun (Bazi) suit les dates corrigées des termes solaires et peut être inférieur d'un an pour certaines dates de naissance
+- En raison des nouvelles règles d'Apple, les apps ne peuvent plus intégrer la police Weibei (魏碑) : les widgets de l'écran d'accueil et du bureau utilisent désormais la police open source LXGW WenKai (霞鶩文楷). L'app continue d'utiliser la police Weibei du système, et les widgets de l'écran verrouillé utilisent la police du système
 - Corrections de bugs et améliorations de la stabilité

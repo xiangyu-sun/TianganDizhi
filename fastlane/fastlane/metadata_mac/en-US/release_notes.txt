@@ -2,4 +2,5 @@
 - The "Use UTC+8 for festivals and solar terms" setting now also covers solar terms and today's festival, so users outside China can follow their local date or China's date
 - The calendar now uses the traditional names 冬月 and 臘月 for the 11th and 12th lunar months, and 閏 for leap months
 - The Bazi Da Yun starting age follows the corrected solar-term dates and may be one year earlier for some birth dates
+- Due to Apple's new rules, apps can no longer bundle the Weibei (魏碑) font, so Home Screen and desktop widgets now use the open-source LXGW WenKai (霞鶩文楷) font instead. The app itself still uses the system's Weibei font, and Lock Screen widgets use the system font
 - Bug fixes and stability improvements

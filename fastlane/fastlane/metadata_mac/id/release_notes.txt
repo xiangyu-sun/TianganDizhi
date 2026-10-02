@@ -2,4 +2,5 @@
 - Pengaturan "Gunakan UTC+8 untuk perayaan dan terminologi surya" kini juga berlaku untuk terminologi surya dan perayaan hari ini, sehingga pengguna di luar Tiongkok dapat mengikuti tanggal lokal atau tanggal Tiongkok
 - Kalender kini memakai nama tradisional 冬月 dan 臘月 untuk bulan lunar ke-11 dan ke-12, serta 閏 untuk bulan kabisat
 - Usia awal Da Yun pada Bazi mengikuti tanggal terminologi surya yang telah diperbaiki dan bisa satu tahun lebih awal untuk sebagian tanggal lahir
+- Karena aturan baru Apple, aplikasi tidak lagi boleh menyertakan font Weibei (魏碑), sehingga widget Layar Utama dan desktop kini memakai font sumber terbuka LXGW WenKai (霞鶩文楷). Aplikasi tetap memakai font Weibei dari sistem, dan widget Layar Terkunci memakai font sistem
 - Perbaikan bug dan peningkatan stabilitas

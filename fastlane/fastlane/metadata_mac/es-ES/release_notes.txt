@@ -2,4 +2,5 @@
 - El ajuste «Usar UTC+8 para festividades y términos solares» ahora también se aplica a los términos solares y a la festividad del día, para que fuera de China puedas seguir la fecha local o la de China
 - El calendario usa los nombres tradicionales 冬月 y 臘月 para los meses lunares 11 y 12, y 閏 para los meses intercalares
 - La edad de inicio del Da Yun del Bazi sigue las fechas corregidas de los términos solares y puede ser un año menor para algunas fechas de nacimiento
+- Debido a las nuevas normas de Apple, las apps ya no pueden incluir la fuente Weibei (魏碑), por lo que los widgets de la pantalla de inicio y del escritorio usan ahora la fuente de código abierto LXGW WenKai (霞鶩文楷). La app sigue usando la fuente Weibei del sistema y los widgets de la pantalla bloqueada usan la fuente del sistema
 - Corrección de errores y mejoras de estabilidad
