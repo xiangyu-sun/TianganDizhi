@@ -26,9 +26,10 @@ struct JieqiWidgetDisplayDateTests {
     return try #require(components.date)
   }
 
-  /// Noon on the given day in `Calendar.current`. `jieQiDisplayText` normalises
-  /// through `endOfLocalDay`, which reads `Calendar.current`, so anchoring test
-  /// dates in the same calendar keeps the day count stable across timezones.
+  /// Noon on the given day in `Calendar.current`. With 使用東八區 off (the
+  /// default), `jieQiDisplayText` reckons solar terms on the device's calendar
+  /// day, so anchoring test dates in the same calendar keeps the day count
+  /// stable across timezones.
   private func localNoon(year: Int, month: Int, day: Int) throws -> Date {
     let components = DateComponents(year: year, month: month, day: day, hour: 12)
     return try #require(Calendar.current.date(from: components))
@@ -216,12 +217,9 @@ struct JieqiWidgetDisplayDateTests {
   // MARK: - Regression: display must not depend on time of day
 
   /// The Jieqi widgets seed `jieQiDisplayText` at local midnight while the main
-  /// screen seeds it at the real current time. Because the package's `jieqi` is
-  /// instant-sensitive, a same-day morning transition reported the previous term
-  /// from a midnight seed — the widget lagged a day behind the main screen.
-  ///
-  /// `jieQiDisplayText` now normalises to end of local day, so the rendered text
-  /// must be identical regardless of the time of day it is computed.
+  /// screen seeds it at the real current time. Solar terms are reckoned per
+  /// calendar day (`jieqi(in:)`), so the rendered text must be identical
+  /// regardless of the time of day it is computed.
   @Test("jieQiDisplayText is identical at 00:00, 12:00 and 23:59 of the same day")
   func displayTextStableAcrossTimeOfDay() throws {
     let calendar = Calendar.current
@@ -238,4 +236,23 @@ struct JieqiWidgetDisplayDateTests {
               "Countdown text must not depend on the time of day (day offset \(offset)): 00:00=\(atMidnight) 12:00=\(atNoon) 23:59=\(atEndOfDay)")
     }
   }
+
+  // MARK: - Lunar date text
+
+  @Test("lunarDateWithZodiacGTM8 renders the lunar date in China Standard Time")
+  func lunarDateTextGTM8() throws {
+    // 2024-02-10 is 甲辰年正月初一 (Chinese New Year) in China.
+    var china = Calendar(identifier: .gregorian)
+    china.timeZone = .chinaStandardTime
+    let newYear = try #require(china.date(from: DateComponents(year: 2024, month: 2, day: 10, hour: 12)))
+    #expect(newYear.lunarDateWithZodiacGTM8 == "甲辰龍年正月初一")
+  }
+
+  @Test("lunarDayText is the lunar day alone")
+  func lunarDayText() throws {
+    let date = try localNoon(year: 2024, month: 9, day: 17)
+    let day = try #require(date.chineseDay())
+    #expect(date.lunarDayText == day.name)
+  }
 }
+

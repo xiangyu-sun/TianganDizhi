@@ -22,7 +22,7 @@ struct WatchMainView: View {
   var body: some View {
     Group {
       HStack {
-        Text(date.displayStringOfChineseYearMonthDateWithZodiac)
+        Text(date.lunarDateWithZodiac)
         if let value = wetherData {
           Image(systemName: value.moonPhase.moonPhase.symbolName)
           Text(value.moonPhase.name(traditionnal: true))

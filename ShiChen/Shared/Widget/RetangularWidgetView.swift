@@ -41,7 +41,7 @@ struct RetangularWidgetView: View {
 
     HStack {
      
-      Text(date.displayStringOfChineseYearMonthDateWithZodiac + (date.nextJieJiWithinOneDay.map { "·" + $0 } ?? "") + god)
+      Text(date.lunarDateWithZodiac + (date.nextJieJiWithinOneDay.map { "·" + $0 } ?? "") + god)
         .font(.body)
       
       VStack() {

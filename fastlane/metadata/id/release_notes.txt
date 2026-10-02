@@ -1,6 +1,5 @@
-- Ketuk widget untuk langsung membuka detailnya: widget terminologi surya membuka 24 Terminologi Surya, widget perayaan membuka kalender perayaan, dan almanak harian membuka Dua Belas Dewa
-- Pengenalan aplikasi lebih singkat, kini dengan panduan menambahkan widget
-- Widget Shichen kini menampilkan cuaca dan suhu hari ini
-- Widget kini diperbarui tepat saat pergantian jam; widget perayaan tidak lagi kosong; widget terminologi surya dan perayaan mengikuti pengaturan font sistem
-- Memperbaiki jam Shichen yang terpotong di tepi layar iPad, dan memulihkan tata letak besar untuk iPad
+- Terminologi surya lebih akurat: terminologi yang dimulai pada sore hari sebelumnya tampil terlambat sehari, kini tampil pada hari dimulainya
+- Pengaturan "Gunakan UTC+8 untuk perayaan dan terminologi surya" kini juga berlaku untuk terminologi surya dan perayaan hari ini, sehingga pengguna di luar Tiongkok dapat mengikuti tanggal lokal atau tanggal Tiongkok
+- Kalender kini memakai nama tradisional 冬月 dan 臘月 untuk bulan lunar ke-11 dan ke-12, serta 閏 untuk bulan kabisat
+- Usia awal Da Yun pada Bazi mengikuti tanggal terminologi surya yang telah diperbaiki dan bisa satu tahun lebih awal untuk sebagian tanggal lahir
 - Perbaikan bug dan peningkatan stabilitas

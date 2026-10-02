@@ -145,7 +145,7 @@ struct CalendarWidgetView: View {
     return VStack(spacing: theme.rowSpacing) {
       VStack(alignment: .center, spacing: 0){
         Text(month.title)
-        Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+        Text(entry.date.lunarDateWithZodiac)
       }
       .font(.headline)
       .padding(.bottom, 8)

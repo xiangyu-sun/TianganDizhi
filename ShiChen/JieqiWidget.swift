@@ -29,11 +29,11 @@ struct JieqiWidget: Widget {
       // Day-aligned, matching the main screen title (`jieQiDisplayText`): on a
       // term's start day highlight the term that has begun; otherwise highlight
       // the upcoming term and show its start date (the "days to next" the user
-      // sees). Raw `entry.date.jieqi`/`nextJieqi` are instant-sensitive and, from
-      // this widget's intraday seeds, drift a day on a transition morning.
+      // sees). The day-aligned helpers reckon days in the user's chosen time
+      // zone (使用東八區), the same as every other surface.
       let isJieqiDay = entry.date.isJieqiDayAligned
       let occurrence = entry.date.displayedJieqi
-      let jieqi = occurrence?.jieqi ?? entry.date.jieqiDayAligned ?? entry.date.jieqi
+      let jieqi = occurrence?.jieqi ?? entry.date.jieqiDayAligned
 
       // Grouped so the deep link applies to both branches.
       Group {

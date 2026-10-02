@@ -21,7 +21,7 @@ struct InlineWidgetView: View {
 //    let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
 //    
     ViewThatFits(in: .horizontal) {
-      Text("\(date.displayStringOfChineseYearMonthDateWithZodiac) \(shichen?.dizhi.displayHourText ?? "")")
+      Text("\(date.lunarDateWithZodiac) \(shichen?.dizhi.displayHourText ?? "")")
       Text(shichen?.dizhi.displayHourText ?? "")
     }
     .font(.body)

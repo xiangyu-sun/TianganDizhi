@@ -2006,7 +2006,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 2.60.0;
+				MARKETING_VERSION = 2.70.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -2043,7 +2043,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 2.60.0;
+				MARKETING_VERSION = 2.70.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShiChen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -2230,7 +2230,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.60.0;
+				MARKETING_VERSION = 2.70.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -2284,7 +2284,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.60.0;
+				MARKETING_VERSION = 2.70.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -2430,7 +2430,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 2.60.0;
+				MARKETING_VERSION = 2.70.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2468,7 +2468,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 2.60.0;
+				MARKETING_VERSION = 2.70.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2589,7 +2589,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 2.60.0;
+				MARKETING_VERSION = 2.70.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2624,7 +2624,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
-				MARKETING_VERSION = 2.60.0;
+				MARKETING_VERSION = 2.70.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.watchkitapp.WatchExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -2660,7 +2660,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.60.0;
+				MARKETING_VERSION = 2.70.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenMacWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -2695,7 +2695,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 2.60.0;
+				MARKETING_VERSION = 2.70.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uriphium.TianganDizhi.ShichenMacWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -2816,8 +2816,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/JingluoShuxueCore.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
 			};
 		};
 		46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */ = {
@@ -2832,8 +2832,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
 			};
 		};
 		9968B3302F930000005E242A /* XCRemoteSwiftPackageReference "ChineseTranditionalCalendarUI" */ = {
@@ -2856,8 +2856,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/xiangyu-sun/Bagua";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
 			};
 		};
 		99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */ = {

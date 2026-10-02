@@ -32,7 +32,7 @@ struct ShichenLockScreenView: View {
       if let shichen = date.shichen {
         // Current Shichen display
         HStack(alignment: .top) {
-          Text(date.displayStringOfChineseYearMonthDateWithZodiac)
+          Text(date.lunarDateWithZodiac)
             .font(title2Font)
           
           VStack() {

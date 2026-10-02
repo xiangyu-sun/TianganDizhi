@@ -35,8 +35,8 @@ struct CountDownView: View {
 
   var title: String {
     useGTM8
-      ? event.date.displayStringOfChineseYearMonthDateWithZodiacGTM8
-      : event.date.displayStringOfChineseYearMonthDateWithZodiac
+      ? event.date.lunarDateWithZodiacGTM8
+      : event.date.lunarDateWithZodiac
   }
 
   var body: some View {

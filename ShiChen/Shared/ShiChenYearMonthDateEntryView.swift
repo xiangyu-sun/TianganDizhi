@@ -50,7 +50,7 @@ struct ShiChenYearMonthDateEntryView: View {
     case .systemSmall:
       VStack {
         Spacer()
-        Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+        Text(entry.date.lunarDateWithZodiac)
           .font(footnote)
         Spacer()
         Text(
@@ -75,7 +75,7 @@ struct ShiChenYearMonthDateEntryView: View {
     default:
       VStack {
         Spacer()
-        Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+        Text(entry.date.lunarDateWithZodiac)
           .font(bodyFont)
           .padding([.leading, .trailing], 15)
         Text(shichen?.dizhi.displayHourText ?? "")
@@ -115,7 +115,7 @@ private struct WidgetMediumView: View {
     VStack {
       Spacer()
       HStack() {
-        Text(entry.date.displayStringOfChineseYearMonthDateWithZodiac)
+        Text(entry.date.lunarDateWithZodiac)
         Text(entry.date.twelveGod()?.chinese ?? "")
       }
       .font(title2Font)
