@@ -28,7 +28,7 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
 
   func getSnapshot(for configuration: ConfigurationIntent, in _: Context, completion: @escaping (SimpleEntry) -> Void) {
     let entry = SimpleEntry(date: Date(), configuration: configuration)
-    completion(entry)
+    WeibeiFont.activate { _ in completion(entry) }
   }
 
   func getTimeline(for configuration: ConfigurationIntent, in _: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
@@ -40,7 +40,7 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
     }
 
     let timeline = Timeline(entries: entries, policy: .atEnd)
-    completion(timeline)
+    WeibeiFont.activate { _ in completion(timeline) }
   }
 
   @available(macOSApplicationExtension 15.0, *)

@@ -22,9 +22,5 @@
 		<string>ConfigurationIntent</string>
 		<string>CountDownIntentConfigurationIntent</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>WeibeiTC-Bold.otf</string>
-	</array>
 </dict>
 </plist>

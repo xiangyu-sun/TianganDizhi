@@ -11,9 +11,5 @@
 	<true/>
 	<key>NSWidgetWantsLocation </key>
 	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>WeibeiTC-Bold.otf</string>
-	</array>
 </dict>
 </plist>

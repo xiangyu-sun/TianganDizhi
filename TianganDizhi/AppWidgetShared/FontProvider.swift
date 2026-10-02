@@ -19,6 +19,10 @@ final class FontProvider: ObservableObject {
     }
   }
 
+  /// Flips when the downloadable Weibei font finishes activating, so views
+  /// re-read the `Font.weiBei*` fonts, which fall back to system fonts until then.
+  @Published private(set) var isWeibeiAvailable = WeibeiFont.isAvailable
+
   // MARK: - Private Properties
 
   nonisolated(unsafe) private var defaultsObserver: NSObjectProtocol?
@@ -39,6 +43,13 @@ final class FontProvider: ObservableObject {
         if self.useSystemFont != newValue {
           self.useSystemFont = newValue
         }
+      }
+    }
+
+    if !isWeibeiAvailable {
+      Task { [weak self] in
+        let isAvailable = await WeibeiFont.activate(timeout: 120)
+        self?.isWeibeiAvailable = isAvailable
       }
     }
   }

@@ -245,7 +245,12 @@ The main app uses SwiftUI with a tab-based navigation:
 ## Development Notes
 
 ### Font Management
-The app uses a custom font "WeibeiTC-Bold" with fallback to system fonts controlled by user preference.
+The app uses "WeibeiTC-Bold" with fallback to system fonts controlled by user preference.
+Weibei is licensed to Apple, so it must **not** be bundled (ITMS-91198 / TN3214 — uploads
+are rejected from Oct 1, 2027). It is a downloadable system font: `WeibeiFont.activate()`
+(`AppWidgetShared/Environment.swift`) downloads/registers it per process, and every widget
+timeline provider awaits it before returning entries. `Font.weiBei*` fall back to the bold
+system text style until it's active.
 
 ### Weather Integration
 Weather data is fetched using Apple's WeatherKit (iOS 16+) and integrated with location services for accurate sunrise/sunset times.

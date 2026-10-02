@@ -25,7 +25,7 @@ enum FontManager {
         if let customFont = UIFont(name: customFontName, size: size) {
             return customFont
         }
-        logger.warning("Custom font '\(customFontName)' not found, using system font")
+        logger.info("Custom font '\(customFontName)' not activated yet, using system font")
         return UIFont.systemFont(ofSize: size, weight: .bold)
     }
     #endif

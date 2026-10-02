@@ -91,6 +91,9 @@ struct ContentView: View {
     .onChange(of: fontProvider.useSystemFont) { _, newValue in
       applyUIKitFontAppearance(useSystemFont: newValue)
     }
+    .onChange(of: fontProvider.isWeibeiAvailable) { _, _ in
+      applyUIKitFontAppearance(useSystemFont: fontProvider.useSystemFont)
+    }
     #endif
     #if os(iOS)
     .fullScreenCover(

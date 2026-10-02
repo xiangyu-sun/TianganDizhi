@@ -34,10 +34,12 @@ struct JieqiHealthTimelineProvider: AppIntentTimelineProvider {
   }
 
   func snapshot(for configuration: JieqiHealthConfigurationIntent, in _: Context) async -> JieqiHealthEntry {
-    JieqiHealthEntry(date: Date(), configuration: configuration)
+    await WeibeiFont.activate()
+    return JieqiHealthEntry(date: Date(), configuration: configuration)
   }
 
   func timeline(for configuration: JieqiHealthConfigurationIntent, in _: Context) async -> Timeline<JieqiHealthEntry> {
+    await WeibeiFont.activate()
     var entries: [JieqiHealthEntry] = []
 
     for date in DailyTimeLineSceduler.buildTimeLine() {

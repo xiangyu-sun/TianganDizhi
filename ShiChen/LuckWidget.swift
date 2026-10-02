@@ -35,10 +35,12 @@ struct LuckTimelineProvider: AppIntentTimelineProvider {
   }
 
   func snapshot(for configuration: LuckConfigurationIntent, in _: Context) async -> LuckEntry {
-    LuckEntry(date: Date(), configuration: configuration)
+    await WeibeiFont.activate()
+    return LuckEntry(date: Date(), configuration: configuration)
   }
 
   func timeline(for configuration: LuckConfigurationIntent, in _: Context) async -> Timeline<LuckEntry> {
+    await WeibeiFont.activate()
     let entries = ShichenTimeLineSceduler.buildTimeLine().map {
       LuckEntry(date: $0, configuration: configuration)
     }
