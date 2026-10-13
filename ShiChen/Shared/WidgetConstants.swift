@@ -27,7 +27,7 @@ enum WidgetConstants {
   static let jieqiHealthWidgetDescription: LocalizedStringKey = "顯示當前節氣養生提示及時令食物的中尺寸組件"
 
   static let specialDayWidgetTitle: LocalizedStringKey = "節氣與節日"
-  static let specialDayWidgetDescription: LocalizedStringKey = "顯示最近的節氣或傳統節日，以及距今天數"
+  static let specialDayWidgetDescription: LocalizedStringKey = "顯示最近的節氣、傳統節日或自訂節日，以及距今天數"
 
   static let calendarWidgetTitle: LocalizedStringKey = "月曆"
   static let calendarWidgetDescription: LocalizedStringKey = "顯示農曆月曆，含節氣與農曆日名的大尺寸組件"

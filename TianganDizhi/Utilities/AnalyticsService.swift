@@ -96,6 +96,10 @@ extension AnalyticsService {
     case contentDetailOpened(category: String, item: String)
     case onboardingStepViewed(step: Int)
     case shareInvoked(source: String)
+    /// Adoption of 自訂節日 — whether users want their own days next to the
+    /// built-in festivals, and on which calendar.
+    case customHolidaySaved(reckoning: String, isNew: Bool)
+    case customHolidayDeleted
 
     // MARK: Internal
 
@@ -115,6 +119,8 @@ extension AnalyticsService {
       case .contentDetailOpened: "content_detail_opened"
       case .onboardingStepViewed: "onboarding_step_viewed"
       case .shareInvoked: "share_invoked"
+      case .customHolidaySaved: "custom_holiday_saved"
+      case .customHolidayDeleted: "custom_holiday_deleted"
       }
     }
 
@@ -149,6 +155,10 @@ extension AnalyticsService {
         ["step": step]
       case .shareInvoked(let source):
         ["source": source]
+      case .customHolidaySaved(let reckoning, let isNew):
+        ["reckoning": reckoning, "is_new": isNew ? "true" : "false"]
+      case .customHolidayDeleted:
+        nil
       }
     }
   }

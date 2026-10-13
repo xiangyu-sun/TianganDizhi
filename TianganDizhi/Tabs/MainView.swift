@@ -97,6 +97,13 @@ struct MainView: View {
               .font(bodyFont)
           }
 
+          ForEach(SpecialDayCatalog.customHolidays(on: date), id: \.name) { holiday in
+            Text(holiday.name)
+              .font(bodyFont)
+              .foregroundStyle(.orange)
+              .accessibilityLabel("今日自訂節日：\(holiday.name)")
+          }
+
           if let value = weatherData.forcastedWeather {
             SunInformationView(info: value)
           } else {
@@ -279,6 +286,9 @@ extension Date {
     } else {
       let jieqi = jieQiDisplayText
       if !jieqi.isEmpty { lines.append("節氣：\(jieqi)") }
+    }
+    for holiday in SpecialDayCatalog.customHolidays(on: self) {
+      lines.append("自訂：\(holiday.name)")
     }
     let mansion = LunarMansion.lunarMansion(date: self)
     lines.append("星象：\(mansion.fourSymbol.rawValue)·\(mansion.rawValue)")

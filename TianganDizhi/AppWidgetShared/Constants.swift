@@ -26,6 +26,8 @@ enum Constants {
   static let analyticsEnabled = "analyticsEnabled"
   static let analyticsWidgetSnapshot = "analyticsWidgetSnapshot"
   static let analyticsWidgetSnapshotDate = "analyticsWidgetSnapshotDate"
+  /// JSON-encoded `[CustomHoliday]` — the user's 自訂節日.
+  static let customHolidays = "customHolidays"
   // Same identifier on every platform — the team-ID association is handled
   // by provisioning, not by the suite string. This previously carried a
   // team ID on macOS that didn't even match this project's actual

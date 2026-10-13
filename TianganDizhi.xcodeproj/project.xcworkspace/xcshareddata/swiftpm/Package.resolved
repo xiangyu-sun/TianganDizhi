@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
-        "revision" : "a7dec19907cf855ced804b5be282a8bead06902c",
-        "version" : "4.1.0"
+        "revision" : "4a7456493b13ba9476a78a705fac85dbc8aa3c93",
+        "version" : "4.2.0"
       }
     },
     {

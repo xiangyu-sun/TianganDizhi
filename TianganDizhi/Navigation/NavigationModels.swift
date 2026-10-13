@@ -24,6 +24,7 @@ enum KnowledgeRoute: Hashable {
   case jieqiList
   case nayin
   case upcomingFestivals
+  case customHolidays
   case bazi
 }
 
@@ -91,6 +92,7 @@ extension KnowledgeRoute: AnalyticsScreen {
     case .jieqiList: "jieqi_list"
     case .nayin: "nayin"
     case .upcomingFestivals: "upcoming_festivals"
+    case .customHolidays: "custom_holidays"
     case .bazi: "bazi"
     }
   }

@@ -87,6 +87,8 @@ struct KnowledgeView: View {
             NayinListView()
           case .upcomingFestivals:
             UpcomingFestivalsView()
+          case .customHolidays:
+            CustomHolidaysView()
           case .bazi:
             BaziView()
           }

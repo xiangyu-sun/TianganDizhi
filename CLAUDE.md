@@ -52,7 +52,7 @@ If `release` is *not* an ancestor of `master` (the `--is-ancestor` check fails),
 is not a clean fast-forward — surface that rather than forcing the merge.
 
 ### Package pins
-- **By version** (`upToNextMajorVersion`): `ChineseAstrologyCalendar` (from 4.1.0), `Bagua`
+- **By version** (`upToNextMajorVersion`): `ChineseAstrologyCalendar` (from 4.2.0), `Bagua`
   (from 1.1.0), `JingluoShuxueCore` (from 1.2.0). Bump the minimum when the app needs a newer
   API; never switch them back to a branch, or SwiftPM can no longer resolve the graph
   (Bagua/Jingluo require ChineseAstrologyCalendar by version).
@@ -107,6 +107,14 @@ The app relies heavily on custom Swift packages for Chinese astrology calculatio
   properties in UI code: they are fixed to China time. Today's festival uses
   `chineseFestival(timeZone: .solarTerm)` for the same reason.
 - Exception: `DaYunCalculator` and Bazi are pinned to China time on purpose (Bazi convention)
+- **Special days** (festivals, solar terms, 自訂節日) come from `SpecialDayCatalog.sources()`
+  (`AppWidgetShared/SpecialDayCatalog.swift`), shared by the 節日曆 screen, the 節氣與節日
+  widget and `MainView`. It builds every source in `TimeZone.solarTerm`. Use
+  `currentOrNextSpecialDay` for "today / next" displays — the library's `nextSpecialDay`
+  only looks *after* the date, so it never reports today's festival.
+- 自訂節日 are `[CustomHoliday]` JSON under `Constants.customHolidays` in the shared app-group
+  UserDefaults; edit them via `CustomHolidaysView`, which reloads the `SpecialDay` widget.
+  The watch has its own app group container, so they don't sync to it.
 - Lunar date strings: `lunarDateWithZodiac` / `lunarDateWithZodiacGTM8` / `lunarDayText`
   (built on the library's `LunarDate`); the library's `displayStringOf…` properties are deprecated
 
@@ -183,6 +191,7 @@ stay Firebase-free.
 | `setting_changed` | every `SettingsView` toggle | which defaults users override |
 | `onboarding_step_viewed` | onboarding `TabView` selection | where onboarding loses people |
 | `share_invoked` | `ShareLink` tap | whether sharing is worth investing in |
+| `custom_holiday_saved` / `custom_holiday_deleted` | 自訂節日 editor | whether users want their own days, lunar vs Gregorian |
 
 - Content screens are instrumented **once** per tab, at `navigationDestination`, via the
   `AnalyticsScreen` conformances on `KnowledgeRoute`/`GuaRoute`/`ChartRoute` — not in the

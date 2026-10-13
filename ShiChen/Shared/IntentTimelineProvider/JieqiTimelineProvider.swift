@@ -15,6 +15,11 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
 
   // MARK: Internal
 
+  /// Refresh at each midnight instead of each 時辰. Content that changes only
+  /// with the calendar day uses this: 時辰 boundaries fall at odd hours, so a
+  /// 時辰 timeline only flips to the new day at 01:00.
+  var refreshesDaily = false
+
   func placeholder(in _: Context) -> SimpleEntry {
     SimpleEntry(date: Date(), configuration: ConfigurationIntent())
   }
@@ -35,7 +40,8 @@ struct JieqiTimelineProvider: IntentTimelineProvider {
     // `configuration.date`/`.location` are not user-configurable and nothing
     // reads them, so they are left alone (see ShichenTimelineProvider).
     var entries: [SimpleEntry] = []
-    for date in ShichenTimeLineSceduler.buildTimeLine() {
+    let dates = refreshesDaily ? DailyTimeLineSceduler.buildTimeLine() : ShichenTimeLineSceduler.buildTimeLine()
+    for date in dates {
       entries.append(SimpleEntry(date: date, configuration: configuration))
     }
 

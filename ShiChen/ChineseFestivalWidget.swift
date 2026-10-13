@@ -20,51 +20,44 @@ struct SpecialDayWidget: Widget {
   private var largeTitleFont: Font { FontProvider.storedLargeTitleFont }
 
   var body: some WidgetConfiguration {
-    IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: JieqiTimelineProvider()) { entry in
-      let upcoming: (day: SpecialDay, daysUntil: Int)? = entry.date.nextSpecialDay(
-        sources: [JieqiSource(), FestivalSource()]
+    IntentConfiguration(
+      kind: kind,
+      intent: ConfigurationIntent.self,
+      provider: JieqiTimelineProvider(refreshesDaily: true)
+    ) { entry in
+      // Same sources as the 節日曆 screen: built-in festivals, solar terms and
+      // the user's 自訂節日, all on the 東八區 setting's calendar day.
+      let upcoming = entry.date.currentOrNextSpecialDay(
+        sources: SpecialDayCatalog.sources(),
+        calendar: .solarTerm
       )
 
       VStack(alignment: .center) {
-        if let upcoming, upcoming.daysUntil == 0 {
-          // Today is a special day
-          Text(entry.date, style: .date)
-            .font(.callout)
-            .environment(\.locale, Locale.current)
+        Text(entry.date, style: .date)
+          .font(.callout)
 
+        if let upcoming {
           Text(upcoming.day.name)
+            .foregroundStyle(upcoming.daysUntil == 0 ? .primary : .secondary)
             .font(largeTitleFont)
-            .minimumScaleFactor(0.6)
+            .minimumScaleFactor(0.5)
             .lineLimit(1)
-        } else if let upcoming {
-          // Upcoming special day — show today + its date + name
-          Text(entry.date, style: .date)
-            .font(.callout)
-            .environment(\.locale, Locale(identifier: "zh-hant"))
 
-          Text(upcoming.day.date, style: .date)
+          Text(upcoming.daysUntil.daysUntilText)
             .font(.callout)
-            .foregroundStyle(.secondary)
-            .environment(\.locale, Locale(identifier: "zh-hant"))
-
-          Text(upcoming.day.name)
-            .foregroundStyle(.secondary)
-            .font(largeTitleFont)
-            .minimumScaleFactor(0.6)
-            .lineLimit(1)
+            .foregroundStyle(upcoming.daysUntil == 0 ? Color.orange : Color.secondary)
         } else {
           // No upcoming special day found — show today's 節氣 rather than an
           // empty widget with only the background.
-          Text(entry.date, style: .date)
-            .font(.callout)
-            .environment(\.locale, Locale(identifier: "zh-hant"))
-
           Text(entry.date.jieQiDisplayText)
             .font(largeTitleFont)
             .minimumScaleFactor(0.5)
             .lineLimit(1)
         }
       }
+      // One locale for every date on the widget, matching the app's
+      // Traditional Chinese UI.
+      .environment(\.locale, Locale(identifier: "zh-Hant"))
       .widgetAccentable()
       .frame(maxWidth: .infinity)
       .materialBackgroundWidget(with: Image("background"))
