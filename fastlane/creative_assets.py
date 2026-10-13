@@ -5,7 +5,8 @@
     python3 fastlane/creative_assets.py en-US ja   # only these
 
 Output (upload by hand in App Store Connect → Asset Library; deliver can't push these):
-  fastlane/creative_assets/header_21x9_3840x1646.jpg          one header for all locales
+  fastlane/creative_assets/header_21x9_3840x1646.png          one header for all locales
+                                                              (PNG: the header well rejects .jpg)
   fastlane/creative_assets/<locale>/search_3x2_3840x2560.jpg  one search image per locale
   fastlane/creative_assets/contact_sheet.png                  everything at a glance
 
@@ -204,7 +205,7 @@ def main(locales: list[str]) -> int:
     # One swift call for every locale's text.
     flat = ck.render_texts([j for loc in locales for j in jobs[loc]])
 
-    outputs = [ck.save(make_header(), OUT / "header_21x9_3840x1646.jpg", ck.HEADER_SIZE)]
+    outputs = [ck.save(make_header(), OUT / "header_21x9_3840x1646.png", ck.HEADER_SIZE)]
     print(f"✓ {outputs[-1].relative_to(HERE)}")
     for loc in locales:
         text, flat = flat[:len(jobs[loc])], flat[len(jobs[loc]):]
