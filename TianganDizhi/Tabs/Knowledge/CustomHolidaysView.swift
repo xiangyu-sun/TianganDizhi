@@ -116,7 +116,9 @@ struct CustomHolidaysView: View {
 
   private func store(_ list: [CustomHoliday]) {
     customHolidayData = CustomHolidayStore.encode(list)
+    // Both widgets label days from SpecialDayCatalog.
     WidgetCenter.shared.reloadTimelines(ofKind: "SpecialDay")
+    WidgetCenter.shared.reloadTimelines(ofKind: "CalendarWidget")
   }
 }
 

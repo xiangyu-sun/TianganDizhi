@@ -305,7 +305,10 @@ extension Date {
 #if os(iOS) || os(macOS)
 @available(iOS 17, macOS 14, *)
 struct CalendarSheetView: View {
-  @State private var viewModel = MonthlyCalendarViewModel()
+  @State private var viewModel = MonthlyCalendarViewModel(
+    configuration: CalendarConfiguration(
+      specialDaySources: SpecialDayCatalog.sources(),
+      specialDayTimeZone: .solarTerm))
 
   var body: some View {
     NavigationStack {

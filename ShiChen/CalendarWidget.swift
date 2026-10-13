@@ -92,9 +92,13 @@ struct CalendarWidgetView: View {
   @Environment(\.calendarTheme) private var theme
 
   private var configuration: CalendarConfiguration {
+    // Same priority-ordered sources as the 節日曆 screen and the 節氣與節日
+    // widget: 自訂節日 > festival > solar term, all in `TimeZone.solarTerm`.
     CalendarConfiguration(
       showLunarDays: entry.configuration.showLunarDays,
-      showSolarTerms: entry.configuration.showSolarTerms)
+      showSolarTerms: entry.configuration.showSolarTerms,
+      specialDaySources: SpecialDayCatalog.sources(),
+      specialDayTimeZone: .solarTerm)
   }
 
   private var month: CalendarMonth {
