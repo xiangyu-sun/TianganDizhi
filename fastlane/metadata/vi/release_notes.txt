@@ -1,6 +1,5 @@
-- Ngày tiết khí chính xác hơn: các tiết khí bắt đầu vào buổi chiều trước đây hiển thị trễ một ngày, nay hiển thị đúng ngày bắt đầu
-- Cài đặt "Dùng giờ UTC+8 cho lễ tết và tiết khí" nay áp dụng cho cả tiết khí và lễ tết hôm nay, người dùng ở ngoài Trung Quốc có thể theo ngày địa phương hoặc ngày của Trung Quốc
-- Lịch dùng tên truyền thống 冬月 và 臘月 cho tháng âm lịch thứ 11 và 12, và 閏 cho tháng nhuận
-- Tuổi khởi vận Đại Vận trong Bát Tự tính theo ngày tiết khí đã sửa và có thể sớm hơn một năm với một số ngày sinh
-- Do quy định mới của Apple, ứng dụng không còn được đóng gói phông chữ Weibei (魏碑), vì vậy tiện ích trên Màn hình chính và màn hình nền nay dùng phông chữ mã nguồn mở LXGW WenKai (霞鶩文楷). Trong ứng dụng vẫn dùng phông Weibei của hệ thống, còn tiện ích trên Màn hình khóa dùng phông chữ hệ thống
+- Mới: ngày lễ tùy chỉnh. Thêm sinh nhật, ngày kỷ niệm và các ngày lặp lại hằng năm vào Lịch lễ hội, theo âm lịch hoặc dương lịch. Các ngày này cũng hiển thị trên màn hình chính và trong widget Tiết khí & Lễ hội
+- Widget Tiết khí & Lễ hội nay hiển thị lễ hội ngay trong ngày lễ, cùng số ngày còn lại đến lễ hội tiếp theo
+- Lịch lễ hội nay liệt kê cùng lúc lễ hội truyền thống, 24 tiết khí và ngày lễ tùy chỉnh của bạn, có bộ lọc cho từng loại
+- Lễ hội và tiết khí luôn được tính theo cài đặt "Dùng giờ UTC+8 cho lễ hội và tiết khí"
 - Sửa lỗi và cải thiện độ ổn định

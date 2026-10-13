@@ -1,6 +1,5 @@
-- More accurate solar terms: terms that begin in the afternoon used to appear a day late and now appear on the day they begin
-- The "Use UTC+8 for festivals and solar terms" setting now also covers solar terms and today's festival, so users outside China can follow their local date or China's date
-- The calendar now uses the traditional names 冬月 and 臘月 for the 11th and 12th lunar months, and 閏 for leap months
-- The Bazi Da Yun starting age follows the corrected solar-term dates and may be one year earlier for some birth dates
-- Due to Apple's new rules, apps can no longer bundle the Weibei (魏碑) font, so Home Screen and desktop widgets now use the open-source LXGW WenKai (霞鶩文楷) font instead. The app itself still uses the system's Weibei font, and Lock Screen widgets use the system font
+- New: Custom holidays. Add birthdays, anniversaries and other yearly days to the Festival Calendar, on either the lunar or the Gregorian calendar. They also appear on the main screen and in the Solar Terms & Festivals widget
+- The Solar Terms & Festivals widget now shows the festival on the day itself, plus how many days remain until the next one
+- The Festival Calendar now lists traditional festivals, the 24 solar terms and your custom holidays together, with a filter for each
+- Festivals and solar terms consistently follow the "Use UTC+8 for festivals and solar terms" setting
 - Bug fixes and stability improvements
