@@ -1,5 +1,7 @@
 - Baharu: perayaan tersuai. Tambah hari jadi, ulang tahun dan tarikh tahunan lain ke Kalendar Perayaan, mengikut kalendar lunar atau Gregorian. Ia juga dipaparkan pada skrin utama dan dalam widget Musim Suria & Perayaan
 - Widget Musim Suria & Perayaan kini memaparkan perayaan pada hari itu sendiri, serta bilangan hari sehingga perayaan seterusnya
+- Widget Musim Suria & Perayaan kini tersedia dalam saiz sederhana, dengan keterangan hari itu dan tiga hari seterusnya
 - Kalendar Perayaan kini menyenaraikan perayaan tradisional, 24 musim suria dan perayaan tersuai anda bersama, dengan penapis untuk setiap jenis
+- Widget Kalendar Lunar dan kalendar dalam app kini turut menandakan perayaan dan perayaan tersuai anda, bukan sahaja musim suria
 - Perayaan dan musim suria sentiasa mengikut tetapan "Gunakan UTC+8 untuk perayaan dan musim suria"
 - Pembetulan pepijat dan peningkatan kestabilan

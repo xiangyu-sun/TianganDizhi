@@ -1,5 +1,7 @@
 - Nouveau : fêtes personnalisées. Ajoutez anniversaires, commémorations et autres dates annuelles au calendrier des fêtes, selon le calendrier lunaire ou grégorien. Elles apparaissent aussi sur l'écran principal et dans le widget Termes solaires et fêtes
 - Le widget Termes solaires et fêtes affiche la fête le jour même, ainsi que le nombre de jours avant la suivante
+- Le widget Termes solaires et fêtes existe désormais en taille moyenne, avec la description du jour et les trois dates suivantes
 - Le calendrier des fêtes regroupe les fêtes traditionnelles, les 24 termes solaires et vos fêtes personnalisées, avec un filtre pour chaque type
+- Le widget Calendrier lunaire et le calendrier de l'app indiquent désormais aussi les fêtes et vos fêtes personnalisées, et plus seulement les termes solaires
 - Les fêtes et les termes solaires suivent toujours le réglage « Utiliser UTC+8 pour les fêtes et les termes solaires »
 - Corrections de bugs et amélioration de la stabilité

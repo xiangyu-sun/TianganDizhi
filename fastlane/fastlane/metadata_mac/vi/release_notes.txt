@@ -1,5 +1,7 @@
 - Mới: ngày lễ tùy chỉnh. Thêm sinh nhật, ngày kỷ niệm và các ngày lặp lại hằng năm vào Lịch lễ hội, theo âm lịch hoặc dương lịch. Các ngày này cũng hiển thị trên màn hình chính và trong widget Tiết khí & Lễ hội
 - Widget Tiết khí & Lễ hội nay hiển thị lễ hội ngay trong ngày lễ, cùng số ngày còn lại đến lễ hội tiếp theo
+- Widget Tiết khí & Lễ hội nay có kích thước vừa, hiển thị mô tả của ngày đó và ba ngày tiếp theo
 - Lịch lễ hội nay liệt kê cùng lúc lễ hội truyền thống, 24 tiết khí và ngày lễ tùy chỉnh của bạn, có bộ lọc cho từng loại
+- Widget Lịch âm và lịch trong ứng dụng nay đánh dấu cả lễ hội và ngày lễ tùy chỉnh của bạn, không chỉ tiết khí
 - Lễ hội và tiết khí luôn được tính theo cài đặt "Dùng giờ UTC+8 cho lễ hội và tiết khí"
 - Sửa lỗi và cải thiện độ ổn định

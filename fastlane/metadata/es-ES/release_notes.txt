@@ -1,5 +1,7 @@
 - Novedad: festivos personalizados. Añade cumpleaños, aniversarios y otras fechas anuales al Calendario de festividades, según el calendario lunar o el gregoriano. También aparecen en la pantalla principal y en el widget de Términos solares y festividades
 - El widget de Términos solares y festividades muestra la festividad el mismo día y cuántos días faltan para la siguiente
+- El widget de Términos solares y festividades ya está disponible en tamaño mediano, con la descripción del día y las tres fechas siguientes
 - El Calendario de festividades reúne las festividades tradicionales, los 24 términos solares y tus festivos personalizados, con un filtro para cada tipo
+- El widget de Calendario lunar y el calendario de la app ahora marcan también las festividades y tus festivos personalizados, no solo los términos solares
 - Las festividades y los términos solares siguen siempre el ajuste «Usar UTC+8 para festividades y términos solares»
 - Corrección de errores y mejoras de estabilidad

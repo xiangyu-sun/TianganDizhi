@@ -1,5 +1,7 @@
 - Baru: hari raya kustom. Tambahkan ulang tahun, hari jadi, dan tanggal tahunan lainnya ke Kalender Perayaan, berdasarkan kalender lunar atau Masehi. Hari-hari ini juga tampil di layar utama dan di widget Musim Surya & Perayaan
 - Widget Musim Surya & Perayaan kini menampilkan perayaan pada harinya, serta jumlah hari menuju perayaan berikutnya
+- Widget Musim Surya & Perayaan kini tersedia dalam ukuran sedang, dengan keterangan hari tersebut dan tiga hari berikutnya
 - Kalender Perayaan kini menampilkan perayaan tradisional, 24 musim surya, dan hari raya kustom Anda sekaligus, dengan filter untuk setiap jenis
+- Widget Kalender Lunar dan kalender di dalam app kini juga menandai perayaan dan hari raya kustom Anda, tidak hanya musim surya
 - Perayaan dan musim surya selalu mengikuti pengaturan "Gunakan UTC+8 untuk perayaan dan musim surya"
 - Perbaikan bug dan peningkatan stabilitas

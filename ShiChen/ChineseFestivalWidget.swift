@@ -25,47 +25,69 @@ struct SpecialDayWidget: Widget {
       intent: ConfigurationIntent.self,
       provider: JieqiTimelineProvider(refreshesDaily: true)
     ) { entry in
-      // Same sources as the 節日曆 screen: built-in festivals, solar terms and
-      // the user's 自訂節日, all on the 東八區 setting's calendar day.
-      let upcoming = entry.date.currentOrNextSpecialDay(
-        sources: SpecialDayCatalog.sources(),
-        calendar: .solarTerm
-      )
-
-      VStack(alignment: .center) {
-        Text(entry.date, style: .date)
-          .font(.callout)
-
-        if let upcoming {
-          Text(upcoming.day.name)
-            .foregroundStyle(upcoming.daysUntil == 0 ? .primary : .secondary)
-            .font(largeTitleFont)
-            .minimumScaleFactor(0.5)
-            .lineLimit(1)
-
-          Text(upcoming.daysUntil.daysUntilText)
-            .font(.callout)
-            .foregroundStyle(upcoming.daysUntil == 0 ? Color.orange : Color.secondary)
-        } else {
-          // No upcoming special day found — show today's 節氣 rather than an
-          // empty widget with only the background.
-          Text(entry.date.jieQiDisplayText)
-            .font(largeTitleFont)
-            .minimumScaleFactor(0.5)
-            .lineLimit(1)
-        }
-      }
-      // One locale for every date on the widget, matching the app's
-      // Traditional Chinese UI.
-      .environment(\.locale, Locale(identifier: "zh-Hant"))
-      .widgetAccentable()
-      .frame(maxWidth: .infinity)
-      .materialBackgroundWidget(with: Image("background"))
-      .widgetDeepLink(kind: kind)
+      SpecialDayWidgetView(date: entry.date, largeTitleFont: largeTitleFont)
+        .widgetDeepLink(kind: kind)
     }
     .configurationDisplayName(WidgetConstants.specialDayWidgetTitle)
     .description(WidgetConstants.specialDayWidgetDescription)
-    .supportedFamilies([.systemSmall])
+    .supportedFamilies([.systemSmall, .systemMedium])
+  }
+}
+
+// MARK: - SpecialDayWidgetView
+
+struct SpecialDayWidgetView: View {
+  let date: Date
+  let largeTitleFont: Font
+
+  @Environment(\.widgetFamily) private var family
+
+  var body: some View {
+    switch family {
+    case .systemMedium:
+      SpecialDayMediumView(date: date)
+    default:
+      small
+    }
+  }
+
+  private var small: some View {
+    // Same sources as the 節日曆 screen: built-in festivals, solar terms and
+    // the user's 自訂節日, all on the 東八區 setting's calendar day.
+    let upcoming = date.currentOrNextSpecialDay(
+      sources: SpecialDayCatalog.sources(),
+      calendar: .solarTerm
+    )
+
+    return VStack(alignment: .center) {
+      Text(date, style: .date)
+        .font(.callout)
+
+      if let upcoming {
+        Text(upcoming.day.name)
+          .foregroundStyle(upcoming.daysUntil == 0 ? .primary : .secondary)
+          .font(largeTitleFont)
+          .minimumScaleFactor(0.5)
+          .lineLimit(1)
+
+        Text(upcoming.daysUntil.daysUntilText)
+          .font(.callout)
+          .foregroundStyle(upcoming.daysUntil == 0 ? Color.orange : Color.secondary)
+      } else {
+        // No upcoming special day found — show today's 節氣 rather than an
+        // empty widget with only the background.
+        Text(date.jieQiDisplayText)
+          .font(largeTitleFont)
+          .minimumScaleFactor(0.5)
+          .lineLimit(1)
+      }
+    }
+    // One locale for every date on the widget, matching the app's
+    // Traditional Chinese UI.
+    .environment(\.locale, Locale(identifier: "zh-Hant"))
+    .widgetAccentable()
+    .frame(maxWidth: .infinity)
+    .materialBackgroundWidget(with: Image("background"))
   }
 }
 
@@ -96,6 +118,12 @@ private extension Date {
 })
 
 #Preview("即將到來", as: .systemSmall, widget: {
+  SpecialDayWidget()
+}, timeline: {
+  SimpleEntry(date: .beforeSpringFestival2026, configuration: ConfigurationIntent())
+})
+
+#Preview("中尺寸", as: .systemMedium, widget: {
   SpecialDayWidget()
 }, timeline: {
   SimpleEntry(date: .beforeSpringFestival2026, configuration: ConfigurationIntent())

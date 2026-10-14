@@ -1,5 +1,7 @@
 - New: Custom holidays. Add birthdays, anniversaries and other yearly days to the Festival Calendar, on either the lunar or the Gregorian calendar. They also appear on the main screen and in the Solar Terms & Festivals widget
 - The Solar Terms & Festivals widget now shows the festival on the day itself, plus how many days remain until the next one
+- The Solar Terms & Festivals widget now comes in a medium size, with the day's description and the next three days
 - The Festival Calendar now lists traditional festivals, the 24 solar terms and your custom holidays together, with a filter for each
+- The Lunar Calendar widget and the in-app calendar now label festivals and your custom holidays, not just solar terms
 - Festivals and solar terms consistently follow the "Use UTC+8 for festivals and solar terms" setting
 - Bug fixes and stability improvements

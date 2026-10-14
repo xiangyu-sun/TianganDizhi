@@ -64,7 +64,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "462A5F6324FFE5F20032A125"
             BuildableName = "ShiChenExtension.appex"
-            BlueprintName = "ShiChenExtension"
             ReferencedContainer = "container:TianganDizhi.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
