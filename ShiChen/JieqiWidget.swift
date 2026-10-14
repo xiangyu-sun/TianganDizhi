@@ -38,31 +38,35 @@ struct JieqiWidget: Widget {
       // Grouped so the deep link applies to both branches.
       Group {
         if let jieqi {
+          // Short dates plus a countdown rather than two full dates: two
+          // "2026年10月14日"-style lines overflowed the small width and didn't
+          // say which date was which. Laid out like the small 節氣與節日 widget.
           VStack(alignment: .center) {
+            Text(entry.date, format: Self.todayFormat)
+              .font(.callout)
+              .lineLimit(1)
+              .minimumScaleFactor(0.7)
+
+            Text(jieqi.chineseName)
+              .foregroundStyle(isJieqiDay ? .primary : .secondary)
+              .font(largeTitleFont)
+              .lineLimit(1)
+              .minimumScaleFactor(0.5)
+
             if isJieqiDay {
-              Text(entry.date, style: .date)
+              Text(0.daysUntilText)
                 .font(.callout)
-                .environment(\.locale, Locale.current)
-
-              Text(jieqi.chineseName)
-                .font(largeTitleFont)
-            } else {
-              Text(entry.date, style: .date)
-                .font(.callout)
-                .environment(\.locale, Locale(identifier: "zh-hant"))
-
-              if let startDate = occurrence?.startDate {
-                Text(startDate, style: .date)
-                  .font(.callout)
-                  .foregroundStyle(.secondary)
-                  .environment(\.locale, Locale(identifier: "zh-hant"))
-              }
-
-              Text(jieqi.chineseName)
+                .foregroundStyle(Color.orange)
+            } else if let occurrence {
+              let days = occurrence.days(from: entry.date, calendar: .solarTerm)
+              Text("\(days.daysUntilText) · \(occurrence.startDate.formatted(Self.startDayFormat))")
+                .font(.footnote)
                 .foregroundStyle(.secondary)
-                .font(largeTitleFont)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
             }
           }
+          .environment(\.locale, Locale(identifier: "zh-Hant"))
           .widgetAccentable()
           .frame(maxWidth: .infinity)
           #if os(macOS)
@@ -79,6 +83,15 @@ struct JieqiWidget: Widget {
     .configurationDisplayName(WidgetConstants.jieqiWidgetTitle)
     .description(WidgetConstants.jieqiWidgetDescription)
     .supportedFamilies(iosSupportedFamilies)
+  }
+
+  /// e.g. "10月14日 週三".
+  private static let todayFormat = Date.FormatStyle(locale: Locale(identifier: "zh-Hant"))
+    .month().day().weekday(.abbreviated)
+
+  /// e.g. "10月23日", in the solar-term time zone the start date is reckoned in.
+  private static var startDayFormat: Date.FormatStyle {
+    Date.FormatStyle(locale: Locale(identifier: "zh-Hant"), timeZone: .solarTerm).month().day()
   }
 }
 
