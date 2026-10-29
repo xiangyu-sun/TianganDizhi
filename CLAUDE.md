@@ -1,282 +1,86 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+TianganDizhi (天干地支) is a SwiftUI Chinese calendar/astrology app for iOS, macOS (incl. a menu
+bar extra) and watchOS: 時辰 clock, 節氣/festivals, moon phase, WeatherKit sun times, 天干地支
+knowledge, I Ching, charts, and many widgets. UI is Chinese (Simplified/Traditional) + English
+via `.xcstrings`; App Store metadata lives in `fastlane/metadata`.
 
-## Project Overview
-
-TianganDizhi (天干地支) is a comprehensive Chinese astrology and calendar iOS/macOS/watchOS application that displays traditional Chinese calendar information, moon phases, weather data, and provides various widgets. The app supports multiple platforms and includes extensive localization.
-
-## Build Commands
-
-### Testing
+## Build and test
 ```bash
-# Run tests on iPhone 8 Plus and iPad Pro using fastlane
-fastlane ios tests
-
-# Run tests directly with xcodebuild
-xcodebuild test -scheme TianganDizhi -destination 'platform=iOS Simulator,name=iPhone 8 Plus'
+xcodebuild -scheme TianganDizhi -destination 'platform=iOS Simulator,name=iPhone 17' build
+xcodebuild test -scheme TianganDizhi -destination 'platform=iOS Simulator,name=iPhone 17' \
+  -only-testing:TianganDizhiTests          # drop -only-testing to also run the UI tests
+xcodebuild -scheme TianganDizhi -destination 'generic/platform=macOS' build
+xcodebuild -scheme "ShichenWatch Watch App" -destination 'generic/platform=watchOS Simulator' build
 ```
+- Needs the Metal Toolchain (`Utilities/TextureShaders.metal`); if the build says it's missing,
+  ask the user to run `xcodebuild -downloadComponent MetalToolchain`.
+- `name=` matches only the newest iOS runtime; check `xcodebuild -showdestinations` if it fails.
+- The `TianganDizhi` scheme uses `TianganDizhi.xctestplan` (`TianganDizhiTests` + `TianganDizhiUITests`).
+- Other shared schemes: `ShiChenExtension`, `ShichenWatchExtension`, `ShichenWatch Watch App (Notification)`.
+- fastlane (`fastlane/Fastfile`): `ios release`, `mac release`, `ios screenshots`, `ios metadata`,
+  `mac metadata`, `all_metadata`. `fastlane ios tests` still targets iPhone 8 Plus / iPad Pro
+  (12.9-inch) (3rd gen) simulators that no longer exist; prefer the xcodebuild command above.
 
-### Building
-```bash
-# Build for release using fastlane
-fastlane ios release
+## Targets and folders
+| Target | Folder | What |
+|---|---|---|
+| `TianganDizhi` | `TianganDizhi/` | iOS + macOS app (iOS 17 / macOS 14 minimum) |
+| `ShiChenExtension` | `ShiChen/` | iOS widgets (iOS only) |
+| `ShichenMacWidgetExtension` | `ShichenMacWidget/` | macOS widgets |
+| `ShichenWatch Watch App` | `ShiChenWatch Watch App/` + `TianganDizhi/Watch/` | watchOS app (watchOS 10) |
+| `ShichenWatchExtension` | `ShichenWatch/` | watch complications/widgets |
+| `TianganDizhiTests` / `TianganDizhiUITests` | same names | tests (XCTest + Swift Testing) |
 
-# Build specific schemes
-xcodebuild -scheme TianganDizhi build
-xcodebuild -scheme ShiChenExtension build
-xcodebuild -scheme "ShichenWatch Watch App" build
-```
+Inside `TianganDizhi/`: `Tabs/` (`MainView` 時辰, `Knowledge/`, `Gua/`, `Chart/`, `SettingsView`),
+`Navigation/` (`AppRouter`, `AppTab`, route enums), `AppWidgetShared/` (code compiled into app
+and widgets: `Constants`, `FontProvider`, `SpecialDayCatalog`, `WidgetDeepLink`,
+`Timeline/` schedulers), `Utilities/` (`AnalyticsService`, `WidgetInventoryReporter`, ...),
+`Date+Jieqi.swift`. Widget timeline providers are in `ShiChen/Shared/IntentTimelineProvider/`.
 
-### Screenshots
-```bash
-# Capture app store screenshots
-fastlane ios screenshots
-```
+Core logic comes from the author's packages `ChineseAstrologyCalendar`, `Bagua`,
+`JingluoShuxueCore`, `ChineseTranditionalCalendarUI`, `ChineseTranditionalMusicCore`.
 
-## Git Workflow
-
-### Release branch
-`release` is the branch that drives the actual App Store build/deploy — changes on
-`master` do not ship until they are also on `release`.
-
-After changes land on `master`, sync them to `release`:
-```bash
-git merge-base --is-ancestor release master   # expect a clean fast-forward
-git checkout release
-git merge master                               # fast-forwards in the normal case
-git push origin release
-git checkout master                            # return to where you started
-```
-If `release` is *not* an ancestor of `master` (the `--is-ancestor` check fails), it
-is not a clean fast-forward — surface that rather than forcing the merge.
-
-### Package pins
-- **By version** (`upToNextMajorVersion`): `ChineseAstrologyCalendar` (from 4.2.0), `Bagua`
-  (from 1.1.0), `JingluoShuxueCore` (from 1.2.0). Bump the minimum when the app needs a newer
-  API; never switch them back to a branch, or SwiftPM can no longer resolve the graph
-  (Bagua/Jingluo require ChineseAstrologyCalendar by version).
-- **By branch**: `ChineseTranditionalCalendarUI` (`master`), `ChineseTranditionalMusicCore`
-  (`main`), `AppStoreReviewPrompt`. Their own `ChineseAstrologyCalendar` requirement must be
-  a version range too.
-- All these packages live next to this repo in `~/Documents/GitHub/`.
-
-### ChineseTranditionalCalendarUI package
-The shared calendar UI lives in the `ChineseTranditionalCalendarUI` Swift package,
-consumed here as a **remote** SwiftPM dependency (pinned by branch in
-`Package.resolved`). When a fix is needed in that package:
-- Edit it directly in its local clone at `/Users/xiangyu.sun/Documents/GitHub/ChineseTranditionalCalendarUI`
-  (the source of truth for shared calendar views) — do not duplicate the code app-side.
-- Build/test the package there (`swift build`, `swift test`).
-- The app cannot see the change until the package is committed + pushed to its
-  `origin/master` and this repo's `Package.resolved` revision is bumped to the new
-  SHA. `xcodebuild -resolvePackageDependencies` does **not** auto-advance a
-  branch-tracked pin past its current commit — hand-edit the `revision` in
-  `Package.resolved`, then re-resolve to validate.
-
-## Architecture Overview
-
-### Multi-Target Structure
-The project consists of multiple targets for different platforms and widget extensions:
-
-- **TianganDizhi** - Main iOS/macOS app
-- **ShiChenExtension** - iOS widget extension
-- **ShichenWatch Watch App** - watchOS app  
-- **ShichenWatch** - watchOS widget extension
-- **ShichenMacWidget** - macOS widget extension
-
-### Core Dependencies
-The app relies heavily on custom Swift packages for Chinese astrology calculations:
-- `ChineseAstrologyCalendar` - Core calendar and date calculations
-- `ChineseTranditionalMusicCore` - Traditional music theory
-- `JingluoShuxueCore` - Traditional Chinese medicine concepts
-- `Bagua` - I Ching hexagram calculations
-- `Astral` - Astronomical calculations
-- `ShangdianKit` - Commerce/subscription features
-
-### Key Architecture Patterns
-
-#### Date Management
-- Views use `TimelineView(.everyMinute)` for live date updates — there is no `DateProvider` class
-- Custom date extensions (`Date+Ganzhi.swift`, `Date+Jieqi.swift`) for Chinese calendar calculations
-- `DayConverter` - Handles timezone conversions (GTM8 support)
-- **Solar terms follow the `useGTM8` setting** (節日與節氣使用東八區時間): read them through the
+## Code rules and gotchas
+- **Solar terms and festivals follow the `useGTM8` setting** (節日與節氣使用東八區時間). Use the
   `Date+Jieqi.swift` helpers (`jieqiDayAligned`, `isJieqiDayAligned`, `nextJieqiDayAligned`,
   `displayedJieqi`, `jieQiDisplayText`), which pass `TimeZone.solarTerm` to the library's
-  `jieqi(in:)` family. Don't call the library's plain `jieqi`/`isJieqiDay`/`nextJieqi`
-  properties in UI code: they are fixed to China time. Today's festival uses
-  `chineseFestival(timeZone: .solarTerm)` for the same reason.
-- Exception: `DaYunCalculator` and Bazi are pinned to China time on purpose (Bazi convention)
-- **Special days** (festivals, solar terms, 自訂節日) come from `SpecialDayCatalog.sources()`
-  (`AppWidgetShared/SpecialDayCatalog.swift`), shared by the 節日曆 screen, the 節氣與節日
-  widget and `MainView`. It builds every source in `TimeZone.solarTerm`. Use
-  `currentOrNextSpecialDay` for "today / next" displays — the library's `nextSpecialDay`
-  only looks *after* the date, so it never reports today's festival.
-- 自訂節日 are `[CustomHoliday]` JSON under `Constants.customHolidays` in the shared app-group
-  UserDefaults; edit them via `CustomHolidaysView`, which reloads the `SpecialDay` widget.
-  The watch has its own app group container, so they don't sync to it.
-- Lunar date strings: `lunarDateWithZodiac` / `lunarDateWithZodiacGTM8` / `lunarDayText`
-  (built on the library's `LunarDate`); the library's `displayStringOf…` properties are deprecated
+  `jieqi(in:)` family. Never call the library's plain `jieqi`/`isJieqiDay`/`nextJieqi` in UI
+  code (fixed to China time). Today's festival: `chineseFestival(timeZone: .solarTerm)`.
+  Exception: `DaYunCalculator`/Bazi are pinned to China time on purpose.
+- **Special days** (festivals, 節氣, 自訂節日) come from `SpecialDayCatalog.sources()`, shared by
+  the 節日曆 screen, the festival widget and `MainView`. Use `currentOrNextSpecialDay` for
+  "today / next"; the library's `nextSpecialDay` only looks after the date.
+- 自訂節日 are `[CustomHoliday]` JSON under `Constants.customHolidays`, edited in
+  `CustomHolidaysView` (which reloads the `SpecialDay` widget). The watch has its own app
+  group, so they don't sync there.
+- Lunar strings: `lunarDateWithZodiac` / `lunarDateWithZodiacGTM8` / `lunarDayText`; the
+  library's `displayStringOf…` properties are deprecated.
+- Settings are `@AppStorage(..., store: Constants.sharedUserDefault)` (app group
+  `group.uriphium.tiangandizhi`), keys in `Constants.swift`, read where needed. No central
+  settings object. Live time uses `TimelineView(.everyMinute)`.
+- State uses `ObservableObject`/`@Published`/`@EnvironmentObject`; don't introduce
+  `@Observable` or the `Tab` API piecemeal. `onChange` uses the two-parameter form only.
+  Custom `EnvironmentValues` keys use `@Entry`.
+- In `SettingsView`, report + reload via `settingChanged(_:_:reloadsWidgets:)`; pass
+  `reloadsWidgets: false` for in-app-only settings.
+- **Analytics**: only through `AnalyticsService` (iOS only, no-op elsewhere); extensions stay
+  Firebase-free; never rename event or `screenName` raw values. Details: `docs/analytics.md`.
+- **Fonts**: never bundle Weibei (activated at runtime via `WeibeiFont.activate()`); home
+  screen widgets use bundled LXGW WenKai TC; `accessory*` widgets/complications use system
+  text styles only. Details: `docs/fonts.md`.
+- Use `#if os(macOS)` / `#if os(iOS)` for platform splits; shared files compile into several
+  targets, so check target membership when adding files.
 
-#### Settings Management  
-- Settings are `@AppStorage` on the shared app-group `UserDefaults`, read where needed;
-  there is no central settings object (`SettingsManager` was write-only and was removed)
-- `FontProvider` - Reactive font management (`ObservableObject`, owns font selection logic, watches shared UserDefaults)
-- Shared UserDefaults between app and extensions via app groups
-- Constants defined in `Constants.swift` for consistent setting keys
+## Git and release
+- Work on `master`. `release` drives the App Store build; nothing ships until it's there.
+  Sync after changes land on `master`:
+  `git merge-base --is-ancestor release master && git checkout release && git merge master && git push origin release && git checkout master`.
+  If the ancestor check fails it isn't a fast-forward: surface it, don't force.
 
-#### Deployment Targets and API Constraints
-- iOS 17.0 / macOS 14.0 minimum for the `TianganDizhi` app target (per
-  `IPHONEOS_DEPLOYMENT_TARGET`/`MACOSX_DEPLOYMENT_TARGET` in the target's build
-  settings — the project-level default of iOS 14/macOS 13 is stale and does not
-  apply to this target). `@Observable` and the `Tab` API are available at this
-  floor, but the codebase has not been migrated to them — it still uses
-  `ObservableObject`/`@Published`/`@EnvironmentObject`. Follow the existing
-  pattern rather than introducing those piecemeal.
-- `onChange` uses the two-parameter form (`{ _, newValue in }`) everywhere. The
-  deprecated one-parameter form was migrated in one pass because its warnings
-  made up most of the build's warning volume; don't reintroduce it.
-- Custom `EnvironmentValues` keys use the `@Entry` macro (works on iOS 16+)
-
-#### Analytics
-- Google Analytics via Firebase (`FirebaseAnalytics`, SPM, pinned `from: 12.18.0`)
-- **iOS only** — the `TianganDizhi` target also builds for macOS, but the Firebase app is
-  registered for iOS. The SPM product carries `platformFilters = (ios)` so the Mac binary
-  never links Firebase, and every body in `AnalyticsService` is `#if os(iOS)`.
-- All call sites go through `AnalyticsService` (`Utilities/AnalyticsService.swift`) —
-  never `import FirebaseAnalytics` in view code. The file is a member of both the app and
-  the watch target, where it compiles to a no-op (shared views reference it).
-- Collection is **opt-out**, defaulting on, via `Constants.analyticsEnabled` in the shared
-  app-group UserDefaults and a toggle in the 隱私 section of `SettingsView`.
-- In 12.x plain `FirebaseAnalytics` excludes IDFA; `FirebaseAnalyticsIdentitySupport` is
-  the opt-in additive library. Do not add it without revisiting ATT and the privacy manifest.
-- Event names live in `AnalyticsService.Event` — snake_case, under 40 chars, no
-  `firebase_`/`google_`/`ga_` prefix. Raw values are reported dimensions: don't rename them.
-
-#### Widget measurement
-WidgetKit exposes no impression callback, so "installed and kept" is the strongest
-available proxy. All widget signal is gathered **in the app process** — the extensions
-stay Firebase-free.
-
-| Event | Source | Answers |
-|---|---|---|
-| `widget_active` | daily inventory sweep | which widgets are installed, home vs lock |
-| `widget_added` / `widget_removed` | snapshot diff | per-widget churn — the kill-or-fix signal |
-| `widget_tapped` | `widgetURL` deep link | which widgets actually drive app opens |
-
-- `WidgetInventoryReporter` runs on foreground, throttled to once per calendar day, and
-  diffs against a snapshot in the shared app-group UserDefaults. On the **first** run it
-  seeds the snapshot silently — otherwise every pre-existing widget reports as newly added.
-- There is no `widget_config` event. The SiriKit `ConfigurationIntent`'s `date`/`location`
-  parameters are not user-configurable and nothing reads them, so reporting them measured
-  nothing. Timeline providers leave them unset — don't write location into an intent.
-- `WidgetCenter.currentConfigurations()` is iOS 18+; the reporter wraps the
-  completion-handler form to stay on the iOS 17 minimum.
-- Widget taps use `tiangandizhi://widget?kind=…&family=…`, built and parsed only through
-  `WidgetDeepLink` so the two halves can't drift. `AppRouter.destination(forWidgetKind:)`
-  maps kind → tab, and `knowledgeRoute(forWidgetKind:)` picks the 天干地支 screen to push
-  (via `pendingKnowledgeRoute`, consumed by `KnowledgeView`) so the tap lands on the
-  content the widget shows. The modifier is a no-op on watchOS, which has no analytics and where
-  complications already launch the app.
-- User properties (`widget_count`, `has_home_widget`, `has_lock_widget`, `top_widget_kind`)
-  exist to segment every other metric by widget adoption.
-- **Register `widget_kind`, `widget_family`, `widget_surface`, `setting_name` as custom
-  dimensions in the GA4 console**, or they will not appear in any report.
-
-#### In-app events
-| Event | Source | Answers |
-|---|---|---|
-| `screen_view` | the three `navigationDestination` sites | which content screens are read |
-| `content_detail_opened` | routes carrying an entry | which 地支/卦 get looked up — new widget ideas |
-| `setting_changed` | every `SettingsView` toggle | which defaults users override |
-| `onboarding_step_viewed` | onboarding `TabView` selection | where onboarding loses people |
-| `share_invoked` | `ShareLink` tap | whether sharing is worth investing in |
-| `custom_holiday_saved` / `custom_holiday_deleted` | 自訂節日 editor | whether users want their own days, lunar vs Gregorian |
-
-- Content screens are instrumented **once** per tab, at `navigationDestination`, via the
-  `AnalyticsScreen` conformances on `KnowledgeRoute`/`GuaRoute`/`ChartRoute` — not in the
-  ~20 individual view files. Add a route case and the compiler forces a `screenName`.
-- `screenName` raw values are stable dimensions; renaming one breaks report continuity.
-- Firebase's automatic screen tracking is off (`FirebaseAutomaticScreenReportingEnabled = NO`
-  in `TianganDizhi/Info.plist`). Under SwiftUI it only logs mangled `UIHostingController`
-  class names, which drown out the named `screen_view` events. Don't re-enable it.
-- `settingChanged(_:_:reloadsWidgets:)` in `SettingsView` reports and reloads together.
-  Pass `reloadsWidgets: false` for in-app-only settings so they don't show the
-  "小組件已更新" toast for a change no widget reflects.
-- `share_invoked` counts *intent* — `ShareLink` has no completion callback, so a tap is
-  the most that can be observed.
-- Toggling analytics off is deliberately not reported.
-
-#### Widget Timeline Architecture
-- `ShichenTimeLineSceduler` - Manages widget update timelines
-- `MinuteTimeLineScheduler` - Handles minute-based updates
-- Separate timeline providers for different widget types
-
-#### UI Structure
-The main app uses SwiftUI with a tab-based navigation:
-- **MainView** - Primary时辰 (Shichen) display with circular clock
-- **KnowledgeView** - Educational content about Chinese astrology
-- **GuaListView** - I Ching hexagram information  
-- **ChartListView** - Comprehensive charts and visualizations
-- **SettingsView** - App configuration
-
-### Platform-Specific Considerations
-
-#### iOS/iPadOS
-- Supports multiple size classes (compact/regular)
-- Includes iOS widgets with various sizes
-- Weather integration using WeatherKit
-
-#### macOS
-- Menu bar extra functionality showing current information
-- Platform-specific UI adjustments using `#if os(macOS)`
-
-#### watchOS  
-- Dedicated watch app with simplified UI
-- Watch-specific widget support
-- Optimized for small screens
-
-### Shared Code Organization
-- `AppWidgetShared/` - Code shared between main app and widgets
-- `Utilities/` - Common utility functions and extensions
-- Asset catalogs organized by platform and feature
-
-### Localization
-- Supports Chinese (Simplified/Traditional) and English
-- Uses `.xcstrings` files for modern localization
-- Fastlane integration for App Store metadata in multiple languages
-
-### Testing Structure
-- Unit tests in `TianganDizhiTests/`
-- UI tests in `TianganDizhiUITests/` 
-- Timeline testing for widget functionality
-
-## Development Notes
-
-### Font Management
-The app uses "WeibeiTC-Bold" with fallback to system fonts controlled by user preference.
-Weibei is licensed to Apple, so it must **not** be bundled (ITMS-91198 / TN3214 — uploads
-are rejected from Oct 1, 2027). It is a downloadable system font: `WeibeiFont.activate()`
-(`AppWidgetShared/Environment.swift`) downloads/registers it in the app. `Font.weiBei*` fall
-back to the bold system text style until it's active. **Home screen widgets use bundled LXGW WenKai TC**
-(`WidgetFonts/`, SIL OFL 1.1, via `UIAppFonts` in the iOS and Mac widget extensions only).
-**Lock screen widgets and watch complications (`accessory*` families) never use a custom
-font** — their views set system text styles (`.body`, `.headline`…) directly; don't read the
-`Font.weiBei*`/environment font values there. Why bundle at all: WidgetKit draws
-archived widget views in a system process that only sees fonts bundled in the extension, so a
-runtime-activated Weibei rendered blank (build 803). Any bundled font must pass `FontValidator`
-at `strict` (required for WidgetKit apps, TN3214).
-
-### Weather Integration
-Weather data is fetched using Apple's WeatherKit (iOS 16+) and integrated with location services for accurate sunrise/sunset times.
-
-### Widget Development
-When working on widgets, note that they share significant code with the main app through the `AppWidgetShared` folder. Timeline updates are coordinated between the app and widgets.
-
-### Traditional Chinese Features
-The app includes extensive traditional Chinese astrology features including:
-- Tiangan (天干) and Dizhi (地支) stems and branches
-- Jieqi (節氣) solar terms
-- Moon phase calculations with Chinese names
-- Twelve hour periods (Shichen 時辰)
-- I Ching hexagrams and traditional symbolism
+## Deeper docs (read when relevant)
+- `docs/dependencies.md`: package pins and how to ship a fix in `ChineseTranditionalCalendarUI`.
+- `docs/analytics.md`: Firebase setup, widget measurement, event catalogue.
+- `docs/fonts.md`: Weibei licensing, widget font rules and why.
+- `CHANGELOG.md`: user-visible changes; `PLAN_TEST_COVERAGE.md`: test-coverage plan.
+- `fastlane/README.md`: lanes and metadata/screenshot tooling.
