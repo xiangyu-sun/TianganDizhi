@@ -87,11 +87,30 @@ platform :mac do
   end
 end
 
+# UDID of the first available simulator whose name starts with `family` on the newest
+# installed iOS runtime, so the lane doesn't break when simulators are renamed or deleted.
+def newest_simulator_udid(family)
+  runtimes = JSON.parse(sh("xcrun simctl list devices available --json", log: false))["devices"]
+  runtimes.select { |runtime, _| runtime.include?("SimRuntime.iOS-") }
+          .sort_by { |runtime, _| runtime[/iOS-([\d-]+)/, 1].scan(/\d+/).map(&:to_i) }
+          .reverse
+          .each do |_, devices|
+    device = devices.find { |d| d["name"].start_with?(family) }
+    return device["udid"] if device
+  end
+  UI.user_error!("No available #{family} simulator; create one in Xcode > Devices and Simulators")
+end
+
 platform :ios do
-  desc "Test on iphone 8 plus and iPad Air"
+  desc "Test on the newest available iPhone and iPad simulators"
   lane :tests do
-    run_tests(scheme: "TianganDizhi", devices: ["iPhone 8 Plus", "iPad Pro (12.9-inch) (3rd generation)"])
-    end
+    # run_tests takes a single destination string, so the iPad rides along in xcargs.
+    run_tests(
+      scheme: "TianganDizhi",
+      destination: "platform=iOS Simulator,id=#{newest_simulator_udid('iPhone')}",
+      xcargs: "-destination 'platform=iOS Simulator,id=#{newest_simulator_udid('iPad')}'"
+    )
+  end
 
     lane :screenshots do
     capture_screenshots

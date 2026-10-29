@@ -4,3 +4,4 @@ fastlane/creative_assets/.DS_Store
 fastlane/.DS_Store
 fastlane/report.xml
 fastlane/report.xml
+fastlane/test_output

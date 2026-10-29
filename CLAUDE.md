@@ -19,8 +19,8 @@ xcodebuild -scheme "ShichenWatch Watch App" -destination 'generic/platform=watch
 - The `TianganDizhi` scheme uses `TianganDizhi.xctestplan` (`TianganDizhiTests` + `TianganDizhiUITests`).
 - Other shared schemes: `ShiChenExtension`, `ShichenWatchExtension`, `ShichenWatch Watch App (Notification)`.
 - fastlane (`fastlane/Fastfile`): `ios release`, `mac release`, `ios screenshots`, `ios metadata`,
-  `mac metadata`, `all_metadata`. `fastlane ios tests` still targets iPhone 8 Plus / iPad Pro
-  (12.9-inch) (3rd gen) simulators that no longer exist; prefer the xcodebuild command above.
+  `mac metadata`, `all_metadata`. `fastlane ios tests` runs the full suite on the newest available
+  iPhone and iPad simulators; run it outside the sandbox with a UTF-8 locale (`LANG=en_US.UTF-8`).
 
 ## Targets and folders
 | Target | Folder | What |

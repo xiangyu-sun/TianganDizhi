@@ -53,7 +53,7 @@ Push a new release build to the Mac App Store
 [bundle exec] fastlane ios tests
 ```
 
-Test on iphone 8 plus and iPad Air
+Test on the newest available iPhone and iPad simulators
 
 ### ios screenshots
 
