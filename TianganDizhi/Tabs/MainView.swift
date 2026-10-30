@@ -56,7 +56,31 @@ struct MainView: View {
 
   @State private var showingCalendar = false
 
+  #if os(iOS)
+  /// Below this height the clock's ring is too small for its twelve glyphs, which
+  /// pile up in the middle. The screen scrolls instead of squeezing the clock;
+  /// macOS enforces the same floor with `minHeight` on the content.
+  private static let minimumContentHeight: CGFloat = 600
+  #endif
+
   var body: some View {
+    #if os(iOS)
+    // A scene can be any height — a Stage Manager window, Split View — so the
+    // content takes the full height when there is room and scrolls when there isn't.
+    GeometryReader { proxy in
+      ScrollView {
+        content
+          .frame(width: proxy.size.width, height: max(proxy.size.height, Self.minimumContentHeight))
+      }
+      .scrollBounceBehavior(.basedOnSize)
+    }
+    .background { TexturedBackground() }
+    #else
+    content
+    #endif
+  }
+
+  private var content: some View {
     TimelineView(.everyMinute) { context in
       let date = context.date
       VStack {
@@ -213,10 +237,8 @@ struct MainView: View {
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity)
       .foregroundStyle(springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary)
-      #if os(iOS) || os(macOS)
-      .background { TexturedBackground() }
-      #endif
       #if os(macOS)
+      .background { TexturedBackground() }
       .frame(minHeight: 640)
       #endif
     }

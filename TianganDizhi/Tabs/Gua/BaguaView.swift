@@ -42,27 +42,31 @@ struct BaguaView: View {
 
   var body: some View {
     GeometryReader { geometry in
+      let fit = fitScale(for: geometry.size)
+      let size = CGSize(width: geometry.size.width / fit, height: geometry.size.height / fit)
       ZStack {
         ForEach(viewData.guas.indices, id: \.self) { index in
           let gua = viewData.guas[index]
 
           Text(gua.chineseCharacter)
-            .offset(anglePosition(for: index, in: geometry.size, z: 0))
+            .offset(anglePosition(for: index, in: size, z: 0))
             .font(font)
             .accessibilityHidden(true)
 
           Text(gua.symbol)
             .rotationEffect(getRotatingAngle(for: index, base: 8))
-            .offset(anglePosition(for: index, in: geometry.size, z: 1))
+            .offset(anglePosition(for: index, in: size, z: 1))
             .font(font.bold())
             .accessibilityHidden(true)
 
           Text(gua.xiang)
-            .offset(anglePosition(for: index, in: geometry.size, z: 2))
+            .offset(anglePosition(for: index, in: size, z: 2))
             .font(bodyFont)
             .accessibilityHidden(true)
         }
       }
+      .frame(width: size.width, height: size.height)
+      .scaleEffect(fit)
       .frame(width: geometry.size.width, height: geometry.size.height)
       .accessibilityElement(children: .ignore)
       .accessibilityLabel(viewData.title + "：" + viewData.guas.map { "\($0.chineseCharacter)\($0.xiang)" }.joined(separator: "、"))
@@ -95,6 +99,18 @@ struct BaguaView: View {
   }
 
   // MARK: Private
+
+  /// How much of its natural size the dial can have. The ring offsets are fixed, so an area
+  /// smaller than `minimumDiameter` would push the inner rings through the centre; the dial is
+  /// laid out at that size and scaled down to fit instead.
+  private func fitScale(for size: CGSize) -> CGFloat {
+    max(0.2, min(1, min(size.width, size.height) / minimumDiameter))
+  }
+
+  /// Twice the outermost ring's offset plus room for the innermost ring's glyphs.
+  private var minimumDiameter: CGFloat {
+    CGFloat(2 * (outterSpacing + 2 * innerSpacing + 20))
+  }
 
   private func anglePosition(for index: Int, in size: CGSize, z: Double) -> CGSize {
     let segmentAngle = 2 * .pi / Double(viewData.guas.count)

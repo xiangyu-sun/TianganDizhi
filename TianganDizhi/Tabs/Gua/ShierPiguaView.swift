@@ -39,22 +39,24 @@ struct ShierPiguaView: View {
 
   var body: some View {
     GeometryReader { geometry in
+      let fit = fitScale(for: geometry.size)
+      let size = CGSize(width: geometry.size.width / fit, height: geometry.size.height / fit)
       ZStack {
         ForEach(Jieqi.allCases, id: \.self) { jieqi in
           Text(jieqi.chineseName)
             .rotationEffect(getRotatingAngle(for: jieqi.rawValue, base: 24))
-            .offset(anglePosition(for: jieqi.rawValue, in: geometry.size))
+            .offset(anglePosition(for: jieqi.rawValue, in: size))
 
           let dizhi = Dizhi(rawValue: max((jieqi.rawValue + 1) / 2, 1)) ?? .chen
           let dizhiIndex = dizhi.rawValue - 1
 
           Text(Key.shierLvLvMonthOrder[dizhiIndex].lvlvDescription)
             .rotationEffect(getRotatingAngle(for: dizhiIndex - 3, base: 12))
-            .offset(angle12Position(for: dizhiIndex - 3, in: geometry.size, z: 1))
+            .offset(angle12Position(for: dizhiIndex - 3, in: size, z: 1))
 
           Text(shouldScaleFont ? dizhi.chineseCalendarMonthName : dizhi.chineseCharacter)
             .rotationEffect(getRotatingAngle(for: dizhiIndex - 3, base: 12))
-            .offset(angle12Position(for: dizhiIndex - 3, in: geometry.size, z: 2))
+            .offset(angle12Position(for: dizhiIndex - 3, in: size, z: 2))
 
           let gua = ShierPiguas[dizhiIndex]
 
@@ -65,7 +67,7 @@ struct ShierPiguaView: View {
             Text(gua.chineseCharacter)
           }
           .rotationEffect(getRotatingAngle(for: dizhiIndex - 1, base: 12))
-          .offset(angle12Position(for: dizhiIndex - 1, in: geometry.size, z: 3))
+          .offset(angle12Position(for: dizhiIndex - 1, in: size, z: 3))
         }
         .font(font)
 
@@ -73,10 +75,10 @@ struct ShierPiguaView: View {
           Path { path in
             let segmentAngle = 2 * .pi / Double(12)
 
-            let circleRadius = min(geometry.size.width, geometry.size.height) / 2
+            let circleRadius = min(size.width, size.height) / 2
             let center = CGPoint(
-              x: geometry.size.width * 0.5,
-              y: geometry.size.height * 0.5) // Adjust center coordinates to match the circle's center
+              x: size.width * 0.5,
+              y: size.height * 0.5) // Adjust center coordinates to match the circle's center
             let angle = 2 * .pi * Double(index) / Double(12) - segmentAngle * 0.5
             let radius: CGFloat = circleRadius
 
@@ -95,6 +97,8 @@ struct ShierPiguaView: View {
           .foregroundStyle(.secondary)
       }
 
+      .frame(width: size.width, height: size.height)
+      .scaleEffect(fit)
       .frame(width: geometry.size.width, height: geometry.size.height)
     }
     #if os(watchOS)
@@ -150,6 +154,18 @@ struct ShierPiguaView: View {
   }
 
   // MARK: Private
+
+  /// How much of its natural size the dial can have. The ring offsets are fixed, so an area
+  /// smaller than `minimumDiameter` would push the inner rings through the centre; the dial is
+  /// laid out at that size and scaled down to fit instead.
+  private func fitScale(for size: CGSize) -> CGFloat {
+    max(0.2, min(1, min(size.width, size.height) / minimumDiameter))
+  }
+
+  /// Twice the outermost ring's offset plus room for the innermost ring's glyphs.
+  private var minimumDiameter: CGFloat {
+    CGFloat(2 * (outterSpacing + 3 * innerSpacing + 20))
+  }
 
   private func anglePosition(for index: Int, in size: CGSize) -> CGSize {
     let segmentAngle = 2 * .pi / Double(Jieqi.allCases.count)

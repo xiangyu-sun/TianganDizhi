@@ -21,7 +21,9 @@ struct WuxingCircleView: View {
 
   var body: some View {
     GeometryReader { geo in
-      let center = CGPoint(x: geo.size.width / 2, y: geo.size.height / 2)
+      let fit = fitScale(forWidth: geo.size.width)
+      let size = CGSize(width: geo.size.width / fit, height: geo.size.height / fit)
+      let center = CGPoint(x: size.width / 2, y: size.height / 2)
       ZStack {
         // Draw sheng (相生) arrows first so nodes render on top
         ForEach(wuxings) { wuxing in
@@ -32,8 +34,8 @@ struct WuxingCircleView: View {
               || selectedWuxing == wuxing
               || selectedWuxing == partner
             let (trimFrom, trimTo) = trimmed(
-              from: position(for: fromIndex, in: geo.size),
-              to: position(for: toIndex, in: geo.size)
+              from: position(for: fromIndex, in: size),
+              to: position(for: toIndex, in: size)
             )
             Arrow(from: trimFrom, to: trimTo, color: .green, curved: false)
               .opacity(isHighlighted ? 1.0 : 0.15)
@@ -49,8 +51,8 @@ struct WuxingCircleView: View {
               || selectedWuxing == wuxing
               || selectedWuxing == partner
             let (trimFrom, trimTo) = trimmed(
-              from: position(for: fromIndex, in: geo.size),
-              to: position(for: toIndex, in: geo.size)
+              from: position(for: fromIndex, in: size),
+              to: position(for: toIndex, in: size)
             )
             Arrow(from: trimFrom, to: trimTo, color: .red, curved: false)
               .opacity(isHighlighted ? 1.0 : 0.15)
@@ -82,8 +84,18 @@ struct WuxingCircleView: View {
             }
         }
       }
+      .frame(width: size.width, height: size.height)
+      .scaleEffect(fit)
+      .frame(width: geo.size.width, height: geo.size.height)
     }
     .frame(height: 360)
+  }
+
+  /// The ring and its nodes are a fixed size, so a narrower area (a Split View column, a
+  /// small window) would clip the outer nodes. The diagram is laid out at its natural width
+  /// and scaled down to fit instead.
+  private func fitScale(forWidth width: CGFloat) -> CGFloat {
+    max(0.2, min(1, width / (2 * (radius + nodeRadius))))
   }
 
   /// Returns true if the given wuxing is related to the currently selected one
