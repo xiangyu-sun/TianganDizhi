@@ -131,6 +131,11 @@ Original plan:
 6. en-US screenshots with the English UI; check the en-US description against what actually ships.
 
 ### Phase 3 — next languages, chosen by data · per language ~M
+**Status (2026-11-01): waiting on data.** Read GA4's language and country dimensions in Firebase first. Once a language is picked, the work is:
+1. `ChineseAstrologyCalendar`: add `DisplayLanguage.ja` (or `.ko`) in a minor release and give every `localizedName(in:)` its native form, e.g. 啓蟄, 処暑 and 春分の日 for Japanese, or 입춘 and 갑자 for Korean. `LocalizationCoverageTests` enforces full coverage. Then tag it and raise the app's minimum version.
+2. App: `glyphLanguage` keeps hanzi for ja/ko (kanji and hanja), and `isChinese` stays false, so lists get the native-reading gloss. Add ja/ko to the catalog (about 270 keys) and to the `ChineseTranditionalCalendarUI` catalog (48 keys).
+3. Fonts: kana are covered by Weibei and WenKai. Hangul and Thai are not, so the cascade has to fall back to the system font for those scripts. Check this in widgets.
+4. Add screenshots for the new locale. Its metadata already exists.
 - Before picking: check GA4's automatically collected **language** and **country** dimensions in Firebase (no new events needed).
 - **Japanese**: the strongest candidate. Japan uses 干支, 節気 and 八卦 natively in kanji, so groups A/C can stay as kanji. It needs the library to add `DisplayLanguage.ja`, because Japanese names differ in places (啓蟄 vs 驚蟄, 処暑, festival names). Chrome is ~300 strings.
 - **Korean**: the library needs `.ko` (입춘, 갑자). The widget font **has no Hangul**, so Korean text in widgets needs the system font.
