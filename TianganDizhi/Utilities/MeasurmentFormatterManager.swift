@@ -13,6 +13,8 @@ enum MeasurmentFormatterManager {
   }()
 
   static func buildTemperatureDescription(high: Measurement<UnitTemperature>, low: Measurement<UnitTemperature>) -> String {
-    "最高\(formatter.string(from: high))最低\(formatter.string(from: low))"
+    let high = formatter.string(from: high)
+    let low = formatter.string(from: low)
+    return String(localized: "最高\(high)最低\(low)", comment: "Today's temperature range; %1$@ high, %2$@ low")
   }
 }

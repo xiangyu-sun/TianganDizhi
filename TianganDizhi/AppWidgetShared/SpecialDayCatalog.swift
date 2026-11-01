@@ -78,8 +78,8 @@ extension RecurringDay {
   /// The month as shown in pickers and lists: 正月…臘月 or 1月…12月.
   static func monthText(_ month: Int, reckoning: Reckoning) -> String {
     switch reckoning {
-    case .lunar: lunarMonthNames.indices.contains(month - 1) ? lunarMonthNames[month - 1] : "\(month)月"
-    case .gregorian: "\(month)月"
+    case .lunar: lunarMonthNames.indices.contains(month - 1) ? lunarMonthNames[month - 1] : String(localized: "\(month)月")
+    case .gregorian: String(localized: "\(month)月", comment: "Gregorian month, e.g. 5月")
     }
   }
 
@@ -87,22 +87,26 @@ extension RecurringDay {
   static func dayText(_ day: Int, reckoning: Reckoning) -> String {
     switch reckoning {
     case .lunar: Day(rawValue: day)?.name ?? "\(day)"
-    case .gregorian: "\(day)日"
+    case .gregorian: String(localized: "\(day)日", comment: "Gregorian day of month, e.g. 1日")
     }
   }
 
   /// e.g. "農曆八月初三" or "公曆5月1日".
   var dateText: String {
-    let prefix = reckoning == .lunar ? "農曆" : "公曆"
-    return prefix + Self.monthText(month, reckoning: reckoning) + Self.dayText(day, reckoning: reckoning)
+    let month = Self.monthText(month, reckoning: reckoning)
+    let day = Self.dayText(day, reckoning: reckoning)
+    return switch reckoning {
+    case .lunar: String(localized: "農曆\(month)\(day)", comment: "Lunar date; %1$@ month (八月), %2$@ day (初三)")
+    case .gregorian: String(localized: "公曆\(month)\(day)", comment: "Gregorian date; %1$@ month (5月), %2$@ day (1日)")
+    }
   }
 }
 
 extension Int {
   /// "今日", or the day count spelled out, e.g. 15 → "十五日後".
   var daysUntilText: String {
-    guard self > 0 else { return "今日" }
+    guard self > 0 else { return String(localized: "今日") }
     let spelled = Date.jieqiCountdownFormatter.string(from: NSNumber(value: self)) ?? "\(self)"
-    return "\(spelled)日後"
+    return String(localized: "\(spelled)日後", comment: "Days until an event; %@ is the count spelled out (十五)")
   }
 }

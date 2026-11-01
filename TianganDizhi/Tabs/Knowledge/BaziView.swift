@@ -96,6 +96,9 @@ struct BaziView: View {
 // MARK: - BaziPillarsSection
 
 struct BaziPillarsSection: View {
+  /// Labels for `Bazi.pillars`, in its order (year, month, day, hour).
+  private static let pillarLabels: [LocalizedStringKey] = ["年柱", "月柱", "日柱", "時柱"]
+
   let bazi: Bazi
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
@@ -109,8 +112,9 @@ struct BaziPillarsSection: View {
 
       let chars = bazi.allCharacters
       HStack(spacing: 0) {
-        ForEach(Array(zip(["年柱", "月柱", "日柱", "時柱"], bazi.pillars)), id: \.0) { label, ganzhi in
-          let ganIndex = ["年柱": 0, "月柱": 2, "日柱": 4, "時柱": 6][label] ?? 0
+        ForEach(Array(zip(Self.pillarLabels, bazi.pillars).enumerated()), id: \.offset) { index, pair in
+          let (label, ganzhi) = pair
+          let ganIndex = index * 2
           let ganChar = chars[ganIndex]
           let zhiChar = chars[ganIndex + 1]
           VStack(spacing: 6) {
@@ -188,7 +192,7 @@ struct BaziElementBalanceSection: View {
           }
           .frame(height: 20)
 
-          Text(isMissing ? "缺" : "\(count)")
+          (isMissing ? Text("缺") : Text(count, format: .number))
             .font(footnote)
             .foregroundStyle(isMissing ? .red : .secondary)
             .frame(width: 24, alignment: .trailing)

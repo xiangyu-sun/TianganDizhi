@@ -22,6 +22,12 @@ final class ScreenTests: XCTestCase {
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     app = XCUIApplication()
     app.launchArguments += ["UITestMode"]
+    // The queries match Chinese labels. A Chinese run (fastlane snapshot sets
+    // the language per pass) keeps its script; anything else runs in
+    // Traditional Chinese so the tests don't break once English ships.
+    if !(Locale.preferredLanguages.first ?? "").hasPrefix("zh") {
+      app.launchArguments += ["-AppleLanguages", "(zh-Hant)"]
+    }
     app.launch()
 
     monitor = addUIInterruptionMonitor(withDescription: "") { element in

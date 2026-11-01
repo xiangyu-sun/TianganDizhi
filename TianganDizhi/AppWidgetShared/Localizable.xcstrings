@@ -1,0 +1,2972 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "shouldTranslate" : false
+    },
+    " Weather). 點擊查看數據源信息" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Weather). 點擊查看數據源信息"
+          }
+        }
+      }
+    },
+    "(%@)" : {
+      "shouldTranslate" : false
+    },
+    "%@" : {
+      "shouldTranslate" : false
+    },
+    "%@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "%@ 的生克關係" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 的生克關係"
+          }
+        }
+      }
+    },
+    "%@，%@，%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@，%2$@，%3$@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "%@，%@，%@，%@，%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@，%2$@，%3$@，%4$@，%5$@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "%@，%@，宜：%@，忌：%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@，%2$@，宜：%3$@，忌：%4$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@，%2$@，宜：%3$@，忌：%4$@"
+          }
+        }
+      }
+    },
+    "%@，年柱" : {
+      "comment" : "Accessibility: a 干支 marked as the year pillar",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，年柱"
+          }
+        }
+      }
+    },
+    "%@，日柱" : {
+      "comment" : "Accessibility: a 干支 marked as the day pillar",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，日柱"
+          }
+        }
+      }
+    },
+    "%@，時柱" : {
+      "comment" : "Accessibility: a 干支 marked as the hour pillar",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，時柱"
+          }
+        }
+      }
+    },
+    "%@，月柱" : {
+      "comment" : "Accessibility: a 干支 marked as the month pillar",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，月柱"
+          }
+        }
+      }
+    },
+    "%@，每年重複。" : {
+      "comment" : "Custom holiday footer; %@ is the date, e.g. 農曆八月十五",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，每年重複。"
+          }
+        }
+      }
+    },
+    "%@，第%@刻，%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@，第%2$@刻，%3$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@，第%2$@刻，%3$@"
+          }
+        }
+      }
+    },
+    "%@、%@，%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@、%2$@，%3$@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "%@%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "%@克%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@克%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@克%2$@"
+          }
+        }
+      }
+    },
+    "%@冲%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@冲%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@冲%2$@"
+          }
+        }
+      }
+    },
+    "%@刻" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@刻"
+          }
+        }
+      }
+    },
+    "%@方，%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@方，%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@方，%2$@"
+          }
+        }
+      }
+    },
+    "%@方，五行%@，天干%@%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@方，五行%2$@，天干%3$@%4$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@方，五行%2$@，天干%3$@%4$@"
+          }
+        }
+      }
+    },
+    "%@日後" : {
+      "comment" : "Days until an event; %@ is the count spelled out (十五)",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@日後"
+          }
+        }
+      }
+    },
+    "%@日後%@" : {
+      "comment" : "Countdown to the next solar term; %1$@ is the day count spelled out (十五), %2$@ the term with its 節/氣 suffix",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@日後%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@日後%2$@"
+          }
+        }
+      }
+    },
+    "%@氣" : {
+      "comment" : "A 中氣 solar term, e.g. 大暑氣",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@氣"
+          }
+        }
+      }
+    },
+    "%@生%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@生%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@生%2$@"
+          }
+        }
+      }
+    },
+    "%@的關係" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@的關係"
+          }
+        }
+      }
+    },
+    "%@節" : {
+      "comment" : "A 節 solar term, e.g. 小暑節",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@節"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "shouldTranslate" : false
+    },
+    "%lld日" : {
+      "comment" : "Gregorian day of month, e.g. 1日",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld日"
+          }
+        }
+      }
+    },
+    "%lld日後" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld日後"
+          }
+        }
+      }
+    },
+    "%lld月" : {
+      "comment" : "Gregorian month, e.g. 5月",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld月"
+          }
+        }
+      }
+    },
+    "⌘," : {
+      "shouldTranslate" : false
+    },
+    "⌘C" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘C"
+          }
+        }
+      }
+    },
+    "⌘O" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘O"
+          }
+        }
+      }
+    },
+    "⌘Q" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘Q"
+          }
+        }
+      }
+    },
+    "Configuration" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuration"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設置"
+          }
+        }
+      }
+    },
+    "Date" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日期"
+          }
+        }
+      }
+    },
+    "Location" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地点"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "定位信息"
+          }
+        }
+      }
+    },
+    "TianganDizhi Widgets" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支小组件"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支小組件"
+          }
+        }
+      }
+    },
+    "一年內沒有節日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一年內沒有節日"
+          }
+        }
+      }
+    },
+    "三合" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三合"
+          }
+        }
+      }
+    },
+    "下次：%@。" : {
+      "comment" : "Custom holiday footer; %@ is the next date it falls on",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下次：%@。"
+          }
+        }
+      }
+    },
+    "二十四節氣" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二十四節氣"
+          }
+        }
+      }
+    },
+    "二十四節氣桌面組件%@" : {
+      "comment" : "Widget suggestion; %@ is the current 時辰 (子)",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二十四節氣桌面組件%@"
+          }
+        }
+      }
+    },
+    "二十四節氣養生提示" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二十四節氣養生提示"
+          }
+        }
+      }
+    },
+    "五味" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五味"
+          }
+        }
+      }
+    },
+    "五方" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五方"
+          }
+        }
+      }
+    },
+    "五行" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行"
+          }
+        }
+      }
+    },
+    "五行：%@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行：%@"
+          }
+        }
+      }
+    },
+    "五行以及衍生" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行以及衍生"
+          }
+        }
+      }
+    },
+    "五行分析" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行分析"
+          }
+        }
+      }
+    },
+    "五行屬性" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行屬性"
+          }
+        }
+      }
+    },
+    "五行相生相克" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行相生相克"
+          }
+        }
+      }
+    },
+    "五音" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五音"
+          }
+        }
+      }
+    },
+    "今日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日"
+          }
+        }
+      }
+    },
+    "今日：%@" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日：%@"
+          }
+        }
+      }
+    },
+    "今日宜忌" : {
+      "comment" : "Recommended intent for the Luck widget.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日宜忌"
+          }
+        }
+      }
+    },
+    "今日宜忌配置" : {
+      "comment" : "Title of the widget configuration intent.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日宜忌配置"
+          }
+        }
+      }
+    },
+    "今日沖" : {
+      "comment" : "A label displayed above the name of the zodiac sign for the current day.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日沖"
+          }
+        }
+      }
+    },
+    "今日節日：%@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日節日：%@"
+          }
+        }
+      }
+    },
+    "今日自訂節日：%@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日自訂節日：%@"
+          }
+        }
+      }
+    },
+    "以下為天干地支相關的快速查閱表格，適合作為參考工具。" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以下為天干地支相關的快速查閱表格，適合作為參考工具。"
+          }
+        }
+      }
+    },
+    "以十二時辰、二十四節氣與天干地支，顯示當下的傳統曆法、星象及天氣。" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以十二時辰、二十四節氣與天干地支，顯示當下的傳統曆法、星象及天氣。"
+          }
+        }
+      }
+    },
+    "以系統預設字體取代魏碑字體" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以系統預設字體取代魏碑字體"
+          }
+        }
+      }
+    },
+    "伏羲先天八卦" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "伏羲先天八卦"
+          }
+        }
+      }
+    },
+    "伏羲先天八卦：伏羲創作的先天八卦排列方式" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "伏羲先天八卦：伏羲創作的先天八卦排列方式"
+          }
+        }
+      }
+    },
+    "使用東八區時間（UTC+8）" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用東八區時間（UTC+8）"
+          }
+        }
+      }
+    },
+    "使用系統字體" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用系統字體"
+          }
+        }
+      }
+    },
+    "備註（選填）" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "備註（選填）"
+          }
+        }
+      }
+    },
+    "儲存" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存"
+          }
+        }
+      }
+    },
+    "允許匿名使用統計" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允許匿名使用統計"
+          }
+        }
+      }
+    },
+    "克" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "克"
+          }
+        }
+      }
+    },
+    "克我" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "克我"
+          }
+        }
+      }
+    },
+    "全部" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部"
+          }
+        }
+      }
+    },
+    "八卦" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "八卦"
+          }
+        }
+      }
+    },
+    "公曆" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公曆"
+          }
+        }
+      }
+    },
+    "公曆%@%@" : {
+      "comment" : "Gregorian date; %1$@ month (5月), %2$@ day (1日)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "公曆%1$@%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公曆%1$@%2$@"
+          }
+        }
+      }
+    },
+    "六冲" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六冲"
+          }
+        }
+      }
+    },
+    "六十甲子" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六十甲子"
+          }
+        }
+      }
+    },
+    "六十甲子（含納音）" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六十甲子（含納音）"
+          }
+        }
+      }
+    },
+    "六十納音" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六十納音"
+          }
+        }
+      }
+    },
+    "六合" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六合"
+          }
+        }
+      }
+    },
+    "六害" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六害"
+          }
+        }
+      }
+    },
+    "最高%@最低%@" : {
+      "comment" : "Today's temperature range; %1$@ high, %2$@ low",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "最高%1$@最低%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最高%1$@最低%2$@"
+          }
+        }
+      }
+    },
+    "冲" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冲"
+          }
+        }
+      }
+    },
+    "冲%@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冲%@"
+          }
+        }
+      }
+    },
+    "出生地使用 UTC+8 時區（北京、台北、新加坡）" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出生地使用 UTC+8 時區（北京、台北、新加坡）"
+          }
+        }
+      }
+    },
+    "出生日期時辰" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出生日期時辰"
+          }
+        }
+      }
+    },
+    "分享今日時辰資訊" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分享今日時辰資訊"
+          }
+        }
+      }
+    },
+    "別名" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "別名"
+          }
+        }
+      }
+    },
+    "刪除" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除"
+          }
+        }
+      }
+    },
+    "前往設置" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前往設置"
+          }
+        }
+      }
+    },
+    "加入小組件" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入小組件"
+          }
+        }
+      }
+    },
+    "十二地支" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二地支"
+          }
+        }
+      }
+    },
+    "十二地支为名的十二时辰組件，更新频率为十五分鐘。" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二地支为名的十二时辰組件，更新频率为十五分鐘。"
+          }
+        }
+      }
+    },
+    "十二地支表" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二地支表"
+          }
+        }
+      }
+    },
+    "十二建除神" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二建除神"
+          }
+        }
+      }
+    },
+    "十二时辰" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二时辰"
+          }
+        }
+      }
+    },
+    "十二時辰頌" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二時辰頌"
+          }
+        }
+      }
+    },
+    "十二生肖與五行" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二生肖與五行"
+          }
+        }
+      }
+    },
+    "十二神" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二神"
+          }
+        }
+      }
+    },
+    "十二辟卦" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二辟卦"
+          }
+        }
+      }
+    },
+    "十二辟卦文字方向配圓弧" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二辟卦文字方向配圓弧"
+          }
+        }
+      }
+    },
+    "十天干" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十天干"
+          }
+        }
+      }
+    },
+    "協助改進App，不收集個人身份資訊" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "協助改進App，不收集個人身份資訊"
+          }
+        }
+      }
+    },
+    "卦" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "卦"
+          }
+        }
+      }
+    },
+    "參考" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "參考"
+          }
+        }
+      }
+    },
+    "參考圖示" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "參考圖示"
+          }
+        }
+      }
+    },
+    "取消" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "合" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合"
+          }
+        }
+      }
+    },
+    "名稱，如：媽媽生日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名稱，如：媽媽生日"
+          }
+        }
+      }
+    },
+    "唐譜：%@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "唐譜：%@"
+          }
+        }
+      }
+    },
+    "唱名：%@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "唱名：%@"
+          }
+        }
+      }
+    },
+    "四季" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四季"
+          }
+        }
+      }
+    },
+    "四柱" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四柱"
+          }
+        }
+      }
+    },
+    "四柱八字推算" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四柱八字推算"
+          }
+        }
+      }
+    },
+    "地區與日曆" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地區與日曆"
+          }
+        }
+      }
+    },
+    "地支" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支"
+          }
+        }
+      }
+    },
+    "地支，十二律呂，西洋調名" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支，十二律呂，西洋調名"
+          }
+        }
+      }
+    },
+    "地支：" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支："
+          }
+        }
+      }
+    },
+    "地支沖合害" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支沖合害"
+          }
+        }
+      }
+    },
+    "地支與陰曆月份" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支與陰曆月份"
+          }
+        }
+      }
+    },
+    "夜間深色模式下組件文字顯示為黑色" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "夜間深色模式下組件文字顯示為黑色"
+          }
+        }
+      }
+    },
+    "大理石" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大理石"
+          }
+        }
+      }
+    },
+    "大運" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大運"
+          }
+        }
+      }
+    },
+    "天干" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干"
+          }
+        }
+      }
+    },
+    "天干：%@%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "天干：%1$@%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干：%1$@%2$@"
+          }
+        }
+      }
+    },
+    "天干地支" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支"
+          }
+        }
+      }
+    },
+    "天干地支五行" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支五行"
+          }
+        }
+      }
+    },
+    "天干地支小組件 - %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支小組件 - %@"
+          }
+        }
+      }
+    },
+    "天氣以及日月信息來自(" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天氣以及日月信息來自("
+          }
+        }
+      }
+    },
+    "女" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "女"
+          }
+        }
+      }
+    },
+    "子午流注" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "子午流注"
+          }
+        }
+      }
+    },
+    "宜" : {
+      "comment" : "A label for \"宜\" in the Chinese zodiac.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宜"
+          }
+        }
+      }
+    },
+    "宜：%@" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宜：%@"
+          }
+        }
+      }
+    },
+    "宣紙" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宣紙"
+          }
+        }
+      }
+    },
+    "宣紙質感或大理石紋理" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宣紙質感或大理石紋理"
+          }
+        }
+      }
+    },
+    "害" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "害"
+          }
+        }
+      }
+    },
+    "小組件上顯示當日月相符號" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小組件上顯示當日月相符號"
+          }
+        }
+      }
+    },
+    "小組件在春節期間使用紅色背景" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小組件在春節期間使用紅色背景"
+          }
+        }
+      }
+    },
+    "小組件已更新" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小組件已更新"
+          }
+        }
+      }
+    },
+    "小組件隨節氣變換" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小組件隨節氣變換"
+          }
+        }
+      }
+    },
+    "尚未添加自訂節日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未添加自訂節日"
+          }
+        }
+      }
+    },
+    "平旦寅，狂機內有道人身。\n窮苦已經無量劫，不信常擎如意珍。\n若捉物，入迷津，但有纖毫即是塵。\n不著舊時無相貌，外求知識也非真。\n\n日出卯，用處不須生善巧。\n縱使神光照有無，起意便遭魔事擾。\n若施功，終不了，日夜被人我拗。\n不用安排只麼從，何曾心地起煩惱。\n\n食時辰，無明本是釋迦身。\n坐臥不知原是道，只麼忙忙受苦辛。\n認聲色，覓疏親，只是他家染污人。\n若擬將心求佛道，問取虛空始出塵。\n\n禺中巳，未了之人教不至。\n假饒通達祖師言，莫向心頭安了義。\n只守玄，沒文字，認著依前還不是。\n暫時自肯不追尋，曠劫不遭魔境使。\n\n日南午，四大身中無價寶。\n陽焰空花不肯拋，作意修行轉辛苦。\n不曾迷，莫求悟，任爾朝陽幾回暮。\n有相身中無相身，無明路上無生路。\n\n日昳未，心地何曾安了義？\n他家文字沒親疏，勿起功夫求的意。\n任縱橫，絕忌諱，長在人間不居世。\n運用不離聲色中，歷劫何曾拋棄。\n\n晡時申，學道先須不厭貧。\n有相本來權積聚，無形何用要安真。\n作淨潔，卻勞神，莫認愚癡作近鄰。\n言下不求無處所，暫時喚作出家人。\n\n日入酉，虛幻聲音終不久。\n禪悅珍饈尚不餐，誰能更飲無明酒。\n沒可拋，無物守，蕩蕩逍遙不曾有。\n縱爾多聞達古今，也是癡狂外邊走。\n\n黃昏戍，狂子施工投暗室。\n假使心通無量時，歷劫何曾異今日。\n擬商量，卻啾唧，轉使心頭黑似漆。\n晝夜舒光照有無，癡人喚作波羅蜜。\n\n人定亥，勇猛精進成懈怠。\n不起纖毫修學心，無相光中常自在。\n超釋迦，超祖代，心有微塵還籠閡。\n廓然無事頓清閒，他家自有通人愛。\n\n夜半子，心住無生即生死。\n生死何曾屬有無，用時便用沒文字。\n祖師言，外邊事，識取起時還不是。\n作意搜求實沒蹤，生死魔來任相試。\n\n雞鳴醜，一顆圓光明已久。\n內外接尋覓總無，境上施為渾大有。\n不見頭，又無手，世界壞時渠不朽。\n未了之人聽一言，只這今天誰動口。" : {
+      "shouldTranslate" : false
+    },
+    "年柱" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年柱"
+          }
+        }
+      }
+    },
+    "後%@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後%@"
+          }
+        }
+      }
+    },
+    "忌" : {
+      "comment" : "A label for the \"don't do\" part of a luck prediction.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "忌"
+          }
+        }
+      }
+    },
+    "忌：%@" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "忌：%@"
+          }
+        }
+      }
+    },
+    "快速查閱表" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速查閱表"
+          }
+        }
+      }
+    },
+    "性別" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "性別"
+          }
+        }
+      }
+    },
+    "您似乎不在東八區（UTC+8），節日是否以東八區時間計算？" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您似乎不在東八區（UTC+8），節日是否以東八區時間計算？"
+          }
+        }
+      }
+    },
+    "我克" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我克"
+          }
+        }
+      }
+    },
+    "我生" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我生"
+          }
+        }
+      }
+    },
+    "打開主視窗" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打開主視窗"
+          }
+        }
+      }
+    },
+    "推算" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "推算"
+          }
+        }
+      }
+    },
+    "換算後（UTC+8）：%@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "換算後（UTC+8）：%@"
+          }
+        }
+      }
+    },
+    "文王後天八卦" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文王後天八卦"
+          }
+        }
+      }
+    },
+    "文王後天八卦：文王創作的後天八卦排列方式" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文王後天八卦：文王創作的後天八卦排列方式"
+          }
+        }
+      }
+    },
+    "方位" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "方位"
+          }
+        }
+      }
+    },
+    "日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日"
+          }
+        }
+      }
+    },
+    "日主：" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日主："
+          }
+        }
+      }
+    },
+    "日出" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日出"
+          }
+        }
+      }
+    },
+    "日出 %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日出 %@"
+          }
+        }
+      }
+    },
+    "日期：%@" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日期：%@"
+          }
+        }
+      }
+    },
+    "日柱" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日柱"
+          }
+        }
+      }
+    },
+    "日落" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日落"
+          }
+        }
+      }
+    },
+    "日落 %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日落 %@"
+          }
+        }
+      }
+    },
+    "旺" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旺"
+          }
+        }
+      }
+    },
+    "星宿: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星宿: %@"
+          }
+        }
+      }
+    },
+    "星象: %@" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星象: %@"
+          }
+        }
+      }
+    },
+    "星象：%@，星宿：%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "星象：%1$@，星宿：%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星象：%1$@，星宿：%2$@"
+          }
+        }
+      }
+    },
+    "星象：%@·%@" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "星象：%1$@·%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星象：%1$@·%2$@"
+          }
+        }
+      }
+    },
+    "春節氣氛組件設置" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "春節氣氛組件設置"
+          }
+        }
+      }
+    },
+    "時區設置" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時區設置"
+          }
+        }
+      }
+    },
+    "時柱" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時柱"
+          }
+        }
+      }
+    },
+    "時辰" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰"
+          }
+        }
+      }
+    },
+    "時辰、節氣、農曆無需打開App，一眼可見。在桌面按右鍵，選擇「編輯小工具」，搜尋「天干地支」即可加入。" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰、節氣、農曆無需打開App，一眼可見。在桌面按右鍵，選擇「編輯小工具」，搜尋「天干地支」即可加入。"
+          }
+        }
+      }
+    },
+    "時辰、節氣、農曆無需打開App，一眼可見。長按主畫面空白處，點「編輯」→「加入小工具」，搜尋「天干地支」即可加入；鎖定畫面同樣適用。" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰、節氣、農曆無需打開App，一眼可見。長按主畫面空白處，點「編輯」→「加入小工具」，搜尋「天干地支」即可加入；鎖定畫面同樣適用。"
+          }
+        }
+      }
+    },
+    "時辰：%@（%@）" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "時辰：%1$@（%2$@）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰：%1$@（%2$@）"
+          }
+        }
+      }
+    },
+    "時辰及節氣使用傳統古稱" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰及節氣使用傳統古稱"
+          }
+        }
+      }
+    },
+    "時辰的別名" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰的別名"
+          }
+        }
+      }
+    },
+    "時辰與小時" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰與小時"
+          }
+        }
+      }
+    },
+    "曆法" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "曆法"
+          }
+        }
+      }
+    },
+    "月" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月"
+          }
+        }
+      }
+    },
+    "月升" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月升"
+          }
+        }
+      }
+    },
+    "月曆" : {
+      "comment" : "Title of a calendar widget.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月曆"
+          }
+        }
+      }
+    },
+    "月曆，點擊查看" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月曆，點擊查看"
+          }
+        }
+      }
+    },
+    "月曆配置" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月曆配置"
+          }
+        }
+      }
+    },
+    "月柱" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月柱"
+          }
+        }
+      }
+    },
+    "月落" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月落"
+          }
+        }
+      }
+    },
+    "模式" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模式"
+          }
+        }
+      }
+    },
+    "歡迎使用時辰" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歡迎使用時辰"
+          }
+        }
+      }
+    },
+    "沖" : {
+      "comment" : "A label for the \"沖\" column in the Luck widget.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沖"
+          }
+        }
+      }
+    },
+    "海外用戶：節日與節氣以東八區時間（UTC+8）計算" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海外用戶：節日與節氣以東八區時間（UTC+8）計算"
+          }
+        }
+      }
+    },
+    "海外用戶開啟後節日與節氣以中國標準時間計算" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海外用戶開啟後節日與節氣以中國標準時間計算"
+          }
+        }
+      }
+    },
+    "添加生日、紀念日等每年重複的日子，它們會顯示在節日曆和「節氣與節日」小組件中。" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加生日、紀念日等每年重複的日子，它們會顯示在節日曆和「節氣與節日」小組件中。"
+          }
+        }
+      }
+    },
+    "添加自訂節日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加自訂節日"
+          }
+        }
+      }
+    },
+    "清除選擇" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除選擇"
+          }
+        }
+      }
+    },
+    "無三合" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無三合"
+          }
+        }
+      }
+    },
+    "無結果" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無結果"
+          }
+        }
+      }
+    },
+    "生" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生"
+          }
+        }
+      }
+    },
+    "生我" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生我"
+          }
+        }
+      }
+    },
+    "用神" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用神"
+          }
+        }
+      }
+    },
+    "男" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "男"
+          }
+        }
+      }
+    },
+    "當前" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "當前"
+          }
+        }
+      }
+    },
+    "當前時辰：%@，%@" : {
+      "comment" : "A label describing the current shichen, including the chinese character and the hour.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "當前時辰：%1$@，%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "當前時辰：%1$@，%2$@"
+          }
+        }
+      }
+    },
+    "當前時辰%@" : {
+      "comment" : "Widget suggestion; %@ is the current 時辰 (子)",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "當前時辰%@"
+          }
+        }
+      }
+    },
+    "相克" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相克"
+          }
+        }
+      }
+    },
+    "相生" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相生"
+          }
+        }
+      }
+    },
+    "節日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節日"
+          }
+        }
+      }
+    },
+    "節日倒數" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節日倒數"
+          }
+        }
+      }
+    },
+    "節日曆" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節日曆"
+          }
+        }
+      }
+    },
+    "節日與節氣使用東八區時間" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節日與節氣使用東八區時間"
+          }
+        }
+      }
+    },
+    "節氣" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節氣"
+          }
+        }
+      }
+    },
+    "節氣：%@" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節氣：%@"
+          }
+        }
+      }
+    },
+    "節氣與節日" : {
+      "comment" : "Title of a widget that displays the current Chinese New Year.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節氣與節日"
+          }
+        }
+      }
+    },
+    "節氣養生" : {
+      "comment" : "Title of a widget that displays health tips and seasonal foods related to the current lunar festival.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節氣養生"
+          }
+        }
+      }
+    },
+    "節氣養生配置" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節氣養生配置"
+          }
+        }
+      }
+    },
+    "管理自訂節日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理自訂節日"
+          }
+        }
+      }
+    },
+    "組件夜間模式使用黑字" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "組件夜間模式使用黑字"
+          }
+        }
+      }
+    },
+    "組件紅底" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "組件紅底"
+          }
+        }
+      }
+    },
+    "組件顯示月相" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "組件顯示月相"
+          }
+        }
+      }
+    },
+    "綜合圖示" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "綜合圖示"
+          }
+        }
+      }
+    },
+    "編輯自訂節日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編輯自訂節日"
+          }
+        }
+      }
+    },
+    "缺" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缺"
+          }
+        }
+      }
+    },
+    "缺失五行" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缺失五行"
+          }
+        }
+      }
+    },
+    "背景風格" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背景風格"
+          }
+        }
+      }
+    },
+    "臟腑和情緒" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "臟腑和情緒"
+          }
+        }
+      }
+    },
+    "自訂" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂"
+          }
+        }
+      }
+    },
+    "自訂：%@" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂：%@"
+          }
+        }
+      }
+    },
+    "自訂節日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂節日"
+          }
+        }
+      }
+    },
+    "色彩" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "色彩"
+          }
+        }
+      }
+    },
+    "若當月沒有這一天（如農曆小月的三十、非閏年的2月29日），則在當月最後一天。" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "若當月沒有這一天（如農曆小月的三十、非閏年的2月29日），則在當月最後一天。"
+          }
+        }
+      }
+    },
+    "複製時辰資訊" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "複製時辰資訊"
+          }
+        }
+      }
+    },
+    "設置" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設置"
+          }
+        }
+      }
+    },
+    "起運：%lld歲" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "起運：%lld歲"
+          }
+        }
+      }
+    },
+    "距離%@還有 %lld 分鐘" : {
+      "comment" : "Countdown to the next Shichen; %1$@ is its name (丑時)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "距離%1$@還有 %2$lld 分鐘"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距離%1$@還有 %2$lld 分鐘"
+          }
+        }
+      }
+    },
+    "距離%@還有 %lld 小時" : {
+      "comment" : "Countdown to the next Shichen; %1$@ is its name (丑時)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "距離%1$@還有 %2$lld 小時"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距離%1$@還有 %2$lld 小時"
+          }
+        }
+      }
+    },
+    "距離%@還有 %lld 小時 %lld 分鐘" : {
+      "comment" : "Countdown to the next Shichen; %1$@ is its name (丑時)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "距離%1$@還有 %2$lld 小時 %3$lld 分鐘"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距離%1$@還有 %2$lld 小時 %3$lld 分鐘"
+          }
+        }
+      }
+    },
+    "辟卦" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "辟卦"
+          }
+        }
+      }
+    },
+    "辟卦圓形圖中文字沿圓弧方向排列" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "辟卦圓形圖中文字沿圓弧方向排列"
+          }
+        }
+      }
+    },
+    "農曆" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆"
+          }
+        }
+      }
+    },
+    "農曆%@%@" : {
+      "comment" : "Lunar date; %1$@ month (八月), %2$@ day (初三)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "農曆%1$@%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆%1$@%2$@"
+          }
+        }
+      }
+    },
+    "農曆年月日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆年月日"
+          }
+        }
+      }
+    },
+    "農曆年月日以及十二时辰，臟器，月相" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆年月日以及十二时辰，臟器，月相"
+          }
+        }
+      }
+    },
+    "農曆新年倒數組件" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆新年倒數組件"
+          }
+        }
+      }
+    },
+    "農曆月曆組件" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆月曆組件"
+          }
+        }
+      }
+    },
+    "退出" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出"
+          }
+        }
+      }
+    },
+    "開始使用" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始使用"
+          }
+        }
+      }
+    },
+    "開啟定位以顯示天氣與日出日落" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟定位以顯示天氣與日出日落"
+          }
+        }
+      }
+    },
+    "開啟後全App使用系統字體而非魏碑字體" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後全App使用系統字體而非魏碑字體"
+          }
+        }
+      }
+    },
+    "開啟後夜間深色模式下組件文字顯示為黑色" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後夜間深色模式下組件文字顯示為黑色"
+          }
+        }
+      }
+    },
+    "開啟後小組件在春節期間顯示紅色背景" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後小組件在春節期間顯示紅色背景"
+          }
+        }
+      }
+    },
+    "開啟後小組件會顯示當日月相符號" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後小組件會顯示當日月相符號"
+          }
+        }
+      }
+    },
+    "開啟後時辰及節氣顯示傳統古稱" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後時辰及節氣顯示傳統古稱"
+          }
+        }
+      }
+    },
+    "開啟後辟卦圓形圖的文字會沿圓弧方向排列" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後辟卦圓形圖的文字會沿圓弧方向排列"
+          }
+        }
+      }
+    },
+    "關閉後App不再收集任何匿名使用統計" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關閉後App不再收集任何匿名使用統計"
+          }
+        }
+      }
+    },
+    "陰" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陰"
+          }
+        }
+      }
+    },
+    "陰曆十二辟卦" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陰曆十二辟卦"
+          }
+        }
+      }
+    },
+    "陰曆十二辟卦：農曆月份對應的辟卦" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陰曆十二辟卦：農曆月份對應的辟卦"
+          }
+        }
+      }
+    },
+    "陽" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陽"
+          }
+        }
+      }
+    },
+    "陽曆十二辟卦" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陽曆十二辟卦"
+          }
+        }
+      }
+    },
+    "陽曆十二辟卦：西曆月份對應的辟卦" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陽曆十二辟卦：西曆月份對應的辟卦"
+          }
+        }
+      }
+    },
+    "隱私" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隱私"
+          }
+        }
+      }
+    },
+    "類別" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "類別"
+          }
+        }
+      }
+    },
+    "顯示今日建除神、宜忌事項及日支沖" : {
+      "comment" : "Description of the LuckWidget.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示今日建除神、宜忌事項及日支沖"
+          }
+        }
+      }
+    },
+    "顯示今日建除神及宜忌事項" : {
+      "comment" : "Title of the widget configuration intent.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示今日建除神及宜忌事項"
+          }
+        }
+      }
+    },
+    "顯示以十二地支為命名基礎的農曆年，月，日，俗稱，以及相關臟器信息的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示以十二地支為命名基礎的農曆年，月，日，俗稱，以及相關臟器信息的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。"
+          }
+        }
+      }
+    },
+    "顯示傳統名稱" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示傳統名稱"
+          }
+        }
+      }
+    },
+    "顯示最近的節氣、傳統節日或自訂節日，以及距今天數" : {
+      "comment" : "Text displayed in a calendar widget that shows the next lunar festival, traditional festival, or custom festival, as well as the number of days from today.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示最近的節氣、傳統節日或自訂節日，以及距今天數"
+          }
+        }
+      }
+    },
+    "顯示十二地支為命名基礎的農曆年，月，日以及時辰的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示十二地支為命名基礎的農曆年，月，日以及時辰的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。"
+          }
+        }
+      }
+    },
+    "顯示當前節氣養生提示及時令食物的中尺寸組件" : {
+      "comment" : "Description of a widget that displays health tips and seasonal foods related to the current zodiac sign.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示當前節氣養生提示及時令食物的中尺寸組件"
+          }
+        }
+      }
+    },
+    "顯示節氣" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示節氣"
+          }
+        }
+      }
+    },
+    "顯示設置" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示設置"
+          }
+        }
+      }
+    },
+    "顯示農曆日" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示農曆日"
+          }
+        }
+      }
+    },
+    "顯示農曆月曆，含節氣、傳統節日、自訂節日與農曆日名的大尺寸組件" : {
+      "comment" : "Title and description of the calendar widget.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示農曆月曆，含節氣、傳統節日、自訂節日與農曆日名的大尺寸組件"
+          }
+        }
+      }
+    },
+    "點擊五行節點查看相生相克關係" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "點擊五行節點查看相生相克關係"
+          }
+        }
+      }
+    },
+    "點擊重試" : {
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "點擊重試"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.1"
+}

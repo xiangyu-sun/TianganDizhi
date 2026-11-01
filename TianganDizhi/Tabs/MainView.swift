@@ -299,24 +299,24 @@ extension Date {
   /// Human-readable summary of this date's Shichen, festival/Jieqi, lunar mansion and 宜/忌.
   var shichenShareText: String {
     var lines: [String] = []
-    lines.append("日期：\(lunarDateWithZodiac)")
+    lines.append(String(localized: "日期：\(lunarDateWithZodiac)", comment: "Share text line"))
     if let shichen = shichen {
-      lines.append("時辰：\(shichen.dizhi.aliasName)（\(shichen.dizhi.displayHourText)）")
+      lines.append(String(localized: "時辰：\(shichen.dizhi.aliasName)（\(shichen.dizhi.displayHourText)）", comment: "Share text line"))
     }
     if let festival = chineseFestival(timeZone: .solarTerm) {
-      lines.append("今日：\(festival.chineseName)")
+      lines.append(String(localized: "今日：\(festival.chineseName)", comment: "Share text line"))
     } else {
       let jieqi = jieQiDisplayText
-      if !jieqi.isEmpty { lines.append("節氣：\(jieqi)") }
+      if !jieqi.isEmpty { lines.append(String(localized: "節氣：\(jieqi)", comment: "Share text line")) }
     }
     for holiday in SpecialDayCatalog.customHolidays(on: self) {
-      lines.append("自訂：\(holiday.name)")
+      lines.append(String(localized: "自訂：\(holiday.name)", comment: "Share text line"))
     }
     let mansion = LunarMansion.lunarMansion(date: self)
-    lines.append("星象：\(mansion.fourSymbol.rawValue)·\(mansion.rawValue)")
+    lines.append(String(localized: "星象：\(mansion.fourSymbol.rawValue)·\(mansion.rawValue)", comment: "Share text line"))
     if let god = twelveGod() {
-      lines.append("宜：\(god.do)")
-      lines.append("忌：\(god.dontDo)")
+      lines.append(String(localized: "宜：\(god.do)", comment: "Share text line"))
+      lines.append(String(localized: "忌：\(god.dontDo)", comment: "Share text line"))
     }
     return lines.joined(separator: "\n")
   }

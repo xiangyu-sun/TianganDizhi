@@ -115,7 +115,7 @@ struct WuxingView: View {
 
   // MARK: Fileprivate
 
-  fileprivate func makeTopicView(title: String, detail: String) -> VStack<TupleView<(Text, HStack<Text>)>> {
+  fileprivate func makeTopicView(title: LocalizedStringKey, detail: String) -> VStack<TupleView<(Text, HStack<Text>)>> {
     VStack {
       Text(title)
         .font(footnote)

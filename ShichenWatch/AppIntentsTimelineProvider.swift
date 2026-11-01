@@ -14,8 +14,8 @@ struct AppIntentsTimelineProvider: @preconcurrency AppIntentTimelineProvider {
   @MainActor
   func recommendations() -> [AppIntentRecommendation<ConfigurationAppIntent>] {
     defaultRecommendedIntents().map { intent in
-      let description = String(describing: "天干地支小組件 - \(Date().shichen?.dizhi.chineseCharacter ?? "")")
-      return AppIntentRecommendation(intent: intent, description: description)
+      let shichen = Date().shichen?.dizhi.chineseCharacter ?? ""
+      return AppIntentRecommendation(intent: intent, description: "天干地支小組件 - \(shichen)")
     }
   }
 

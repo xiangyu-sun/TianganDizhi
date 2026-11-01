@@ -67,20 +67,21 @@ extension Date {
   /// - otherwise a countdown to the next term, e.g. "十五日後大暑氣".
   var jieQiDisplayText: String {
     if isJieqiDayAligned, let current = jieqiDayAligned ?? Jieqi.current {
-      return current.chineseName + (current.qi ? "氣" : "節")
+      return current.displayName
     }
 
     if let next = nextJieqiDayAligned {
       let days = next.days(from: self, calendar: .solarTerm)
       if days > 0 {
         let daysString = Self.jieqiCountdownFormatter.string(from: NSNumber(value: days)) ?? "\(days)"
-        return "\(daysString)日後\(next.jieqi.chineseName)\(next.jieqi.qi ? "氣" : "節")"
+        let name = next.jieqi.displayName
+        return String(localized: "\(daysString)日後\(name)", comment: "Countdown to the next solar term; %1$@ is the day count spelled out (十五), %2$@ the term with its 節/氣 suffix")
       }
     }
 
     // Fallback: name whatever term is in effect (e.g. no upcoming occurrence found).
     guard let current = jieqiDayAligned ?? Jieqi.current else { return "" }
-    return current.chineseName + (current.qi ? "氣" : "節")
+    return current.displayName
   }
 }
 
@@ -130,5 +131,14 @@ extension JieqiOccurrence {
   func days(from date: Date, calendar: Calendar = .current) -> Int {
     let start = calendar.startOfDay(for: date)
     return calendar.dateComponents([.day], from: start, to: startDate).day ?? 0
+  }
+}
+
+// MARK: - Solar term name
+
+extension Jieqi {
+  /// The term with its 節/氣 suffix, e.g. 小暑節, 大暑氣.
+  var displayName: String {
+    qi ? String(localized: "\(chineseName)氣", comment: "A 中氣 solar term, e.g. 大暑氣") : String(localized: "\(chineseName)節", comment: "A 節 solar term, e.g. 小暑節")
   }
 }

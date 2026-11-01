@@ -48,21 +48,21 @@ struct DizhiListView: View {
     var title: String {
       switch self {
       case .name:
-        "十二地支"
+        String(localized: "十二地支")
       case .month:
-        "地支與陰曆月份"
+        String(localized: "地支與陰曆月份")
       case .time:
-        "時辰與小時"
+        String(localized: "時辰與小時")
       case .organs:
-        "子午流注"
+        String(localized: "子午流注")
       case .alias:
-        "時辰的別名"
+        String(localized: "時辰的別名")
       case .zodiac:
-        "十二生肖與五行"
+        String(localized: "十二生肖與五行")
       case .lvlv:
-        "地支，十二律呂，西洋調名"
+        String(localized: "地支，十二律呂，西洋調名")
       case .relationships:
-        "地支沖合害"
+        String(localized: "地支沖合害")
       }
     }
   }

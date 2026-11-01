@@ -17,7 +17,7 @@ struct DizhiRelationshipView: View {
           Text("冲")
           Text(dizhi.chong.chineseCharacter)
           Spacer()
-          Text(dizhi.chong.chineseCharacter + "冲" + dizhi.chineseCharacter)
+          Text("\(dizhi.chong.chineseCharacter)冲\(dizhi.chineseCharacter)")
             .foregroundStyle(.secondary)
         }
         .font(bodyFont)
@@ -76,7 +76,7 @@ struct DizhiRelationshipView: View {
         }
       }
     }
-    .navigationTitle(dizhi.chineseCharacter + "的關係")
+    .navigationTitle(Text("\(dizhi.chineseCharacter)的關係"))
   }
 }
 

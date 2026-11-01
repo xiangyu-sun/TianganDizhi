@@ -55,6 +55,7 @@
 		8961102E6F500330E870D630 /* SpecialDayMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63023154A4DB6D8349C6B42 /* SpecialDayMediumView.swift */; };
 		8F04BEC79AE3E984ACCBC4F3 /* SpecialDayCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B13A72CBBF676B92DFE180 /* SpecialDayCatalog.swift */; };
 		9056E5ABE2945F754C91959D /* SpecialDayCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF0D2B2054D1A3C0DAF77D /* SpecialDayCatalogTests.swift */; };
+		99A1C0052F9100000000A005 /* LocalizationCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1C0062F9100000000A006 /* LocalizationCatalogTests.swift */; };
 		9848AEE28455ABDFC03B58E0 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF506E234D650F1A3086C9CA /* AppRouterTests.swift */; };
 		990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
 		990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
@@ -68,6 +69,10 @@
 		9913E7F22ABDF67000E459B8 /* ShichenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F12ABDF67000E459B8 /* ShichenStack.swift */; };
 		9913E7F42ABDF89900E459B8 /* WatchStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9913E7F32ABDF89900E459B8 /* WatchStackView.swift */; };
 		9913E7FB2AC0B63700E459B8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */; };
+		99A1C0012F9100000000A001 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */; };
+		99A1C0022F9100000000A002 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */; };
+		99A1C0032F9100000000A003 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */; };
+		99A1C0042F9100000000A004 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */; };
 		9918EA822FEDBD6C00FC5486 /* TexturedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* TexturedBackground.swift */; };
 		9918EA842FEDBD6C00FC5486 /* TexturedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* TexturedBackground.swift */; };
 		9918EA862FEDBD6C00FC5486 /* TexturedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918EA802FEDBD6C00FC5486 /* TexturedBackground.swift */; };
@@ -481,6 +486,7 @@
 		0BE325BDEE8C42E8B7BE984A /* ShichenProgressTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShichenProgressTests.swift; sourceTree = "<group>"; };
 		0C8B42510547F456786FE480 /* ChinesePinyinTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChinesePinyinTests.swift; sourceTree = "<group>"; };
 		27FF0D2B2054D1A3C0DAF77D /* SpecialDayCatalogTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpecialDayCatalogTests.swift; sourceTree = "<group>"; };
+		99A1C0062F9100000000A006 /* LocalizationCatalogTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalizationCatalogTests.swift; sourceTree = "<group>"; };
 		3A8E1878EEE481CAE2776E0E /* WidgetInventoryReporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WidgetInventoryReporter.swift; sourceTree = "<group>"; };
 		460BA9AB26F24DAD0025CA39 /* ShiciView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiciView.swift; sourceTree = "<group>"; };
 		462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiChenExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -897,6 +903,7 @@
 				9924DB55304B6C5A00AAB710 /* WidgetInventoryReporterTests.swift */,
 				FF506E234D650F1A3086C9CA /* AppRouterTests.swift */,
 				27FF0D2B2054D1A3C0DAF77D /* SpecialDayCatalogTests.swift */,
+				99A1C0062F9100000000A006 /* LocalizationCatalogTests.swift */,
 			);
 			path = TianganDizhiTests;
 			sourceTree = "<group>";
@@ -1116,7 +1123,6 @@
 			children = (
 				997C68842865FAD200B40D3F /* ShichenWatch.swift */,
 				99553A092AC9CC7A00EAA6B1 /* WatchWidgetBundle.swift */,
-				9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */,
 				9913E7F12ABDF67000E459B8 /* ShichenStack.swift */,
 				99553A0B2AC9E37500EAA6B1 /* Stack */,
 				9913E7ED2ABDF3A900E459B8 /* AppIntentsTimelineProvider.swift */,
@@ -1173,6 +1179,7 @@
 		99FD3F732927EAB70048DCEB /* AppWidgetShared */ = {
 			isa = PBXGroup;
 			children = (
+				9913E7FA2AC0B63700E459B8 /* Localizable.xcstrings */,
 				990FEADC294CA2FE00CB1CEF /* LocationManager.swift */,
 				46B79C3F2541F95F003C0B7F /* Environment.swift */,
 				99A0B7982DB582A4000F2AD7 /* Jieqi.xcassets */,
@@ -1484,6 +1491,7 @@
 				99A1F0012F7A000000000011 /* LXGWWenKaiTC-Medium.ttf in Resources */,
 				462A5F6E24FFE5F20032A125 /* Assets.xcassets in Resources */,
 				998898E22A74514300A4E48C /* ShiChen.xcstrings in Resources */,
+				99A1C0022F9100000000A002 /* Localizable.xcstrings in Resources */,
 				99A0B7A72DB59093000F2AD7 /* JieqiWidget.xcassets in Resources */,
 				9963214B2911B8F3000C4A2B /* Shared.xcassets in Resources */,
 			);
@@ -1494,6 +1502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				998898E12A74514300A4E48C /* ShiChen.xcstrings in Resources */,
+				99A1C0012F9100000000A001 /* Localizable.xcstrings in Resources */,
 				999B068A2A76BC1E00F752CD /* PrivacyInfo.xcprivacy in Resources */,
 				998898DF2A74514200A4E48C /* InfoPlist.xcstrings in Resources */,
 				99A0B79C2DB582A4000F2AD7 /* Jieqi.xcassets in Resources */,
@@ -1528,6 +1537,7 @@
 				997C68512864CADF00B40D3F /* Preview Assets.xcassets in Resources */,
 				99A0B79B2DB582A4000F2AD7 /* Jieqi.xcassets in Resources */,
 				998898E32A74514300A4E48C /* ShiChen.xcstrings in Resources */,
+				99A1C0032F9100000000A003 /* Localizable.xcstrings in Resources */,
 				997C684E2864CADF00B40D3F /* Assets.xcassets in Resources */,
 				997F2AC9294B304C00E038BA /* Shared.xcassets in Resources */,
 				996E54812E994497004CD36F /* TianGanDizhiIcon.icon in Resources */,
@@ -1567,6 +1577,7 @@
 				99A1F0012F7A000000000013 /* LXGWWenKaiTC-Medium.ttf in Resources */,
 				99FD3F4E292296180048DCEB /* Assets.xcassets in Resources */,
 				998898E52A74514300A4E48C /* ShiChen.xcstrings in Resources */,
+				99A1C0042F9100000000A004 /* Localizable.xcstrings in Resources */,
 				99A0B7AA2DB590A7000F2AD7 /* JieqiWidget.xcassets in Resources */,
 				994215DA29621D23003C5CA1 /* Shared.xcassets in Resources */,
 			);
@@ -1736,6 +1747,7 @@
 				69499F1EF165493183EFDA11 /* ShichenProgressTests.swift in Sources */,
 				9848AEE28455ABDFC03B58E0 /* AppRouterTests.swift in Sources */,
 				9056E5ABE2945F754C91959D /* SpecialDayCatalogTests.swift in Sources */,
+				99A1C0052F9100000000A005 /* LocalizationCatalogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

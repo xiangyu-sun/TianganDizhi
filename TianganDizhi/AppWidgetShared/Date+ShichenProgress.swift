@@ -33,11 +33,11 @@ extension Date {
     let hours = totalSeconds / 3600
     let mins = (totalSeconds % 3600) / 60
     if hours == 0 {
-      return "距離\(nextDizhi.displayHourText)還有 \(mins) 分鐘"
+      return String(localized: "距離\(nextDizhi.displayHourText)還有 \(mins) 分鐘", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
     } else if mins == 0 {
-      return "距離\(nextDizhi.displayHourText)還有 \(hours) 小時"
+      return String(localized: "距離\(nextDizhi.displayHourText)還有 \(hours) 小時", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
     } else {
-      return "距離\(nextDizhi.displayHourText)還有 \(hours) 小時 \(mins) 分鐘"
+      return String(localized: "距離\(nextDizhi.displayHourText)還有 \(hours) 小時 \(mins) 分鐘", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
     }
   }
 }

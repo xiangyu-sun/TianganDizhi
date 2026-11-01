@@ -177,7 +177,7 @@ struct CustomHolidayEditor: View {
         }
       }
     }
-    .navigationTitle(isNew ? "添加自訂節日" : "編輯自訂節日")
+    .navigationTitle(isNew ? Text("添加自訂節日") : Text("編輯自訂節日"))
     .onChange(of: draft.day.reckoning) { _, _ in
       draft.day.day = min(draft.day.day, maxDay)
     }
@@ -213,11 +213,12 @@ struct CustomHolidayEditor: View {
   }
 
   private var footerText: String {
-    var text = "\(draft.day.dateText)，每年重複。"
+    var text = String(localized: "\(draft.day.dateText)，每年重複。", comment: "Custom holiday footer; %@ is the date, e.g. 農曆八月十五")
     if let next = RecurringDaySource(days: [draft.day], timeZone: .solarTerm).nextOccurrence(of: draft.day, onOrAfter: .now) {
-      text += "下次：\(next.formatted(.dateTime.year().month().day().locale(Locale(identifier: "zh-Hant"))))。"
+      let nextText = next.formatted(.dateTime.year().month().day().locale(Locale(identifier: "zh-Hant")))
+      text += String(localized: "下次：\(nextText)。", comment: "Custom holiday footer; %@ is the next date it falls on")
     }
-    text += "若當月沒有這一天（如農曆小月的三十、非閏年的2月29日），則在當月最後一天。"
+    text += String(localized: "若當月沒有這一天（如農曆小月的三十、非閏年的2月29日），則在當月最後一天。")
     return text
   }
 }

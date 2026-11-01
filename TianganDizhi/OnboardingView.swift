@@ -21,7 +21,7 @@ struct OnboardingView: View {
   /// and users who never finish rarely go on to install a widget.
   @State private var step = 0
 
-  private static var widgetInstructions: String {
+  private static var widgetInstructions: LocalizedStringKey {
     #if os(macOS)
     "時辰、節氣、農曆無需打開App，一眼可見。在桌面按右鍵，選擇「編輯小工具」，搜尋「天干地支」即可加入。"
     #else
@@ -103,8 +103,8 @@ struct OnboardingView: View {
 
 private struct OnboardingPage: View {
   let symbol: String
-  let title: String
-  let description: String
+  let title: LocalizedStringKey
+  let description: LocalizedStringKey
 
   var body: some View {
     VStack(spacing: 24) {

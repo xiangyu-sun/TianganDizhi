@@ -6,6 +6,7 @@
 //  Copyright © 2020 孙翔宇. All rights reserved.
 //
 
+import ChineseAstrologyCalendar
 import CoreText
 import os
 import SwiftUI
@@ -116,6 +117,27 @@ extension EnvironmentValues {
   /// reads a meaningful default — each root sets it: `ContentView` from its size
   /// class and width, and the widget views from `Bool.widgetShouldScaleFont`.
   @Entry var shouldScaleFont: Bool = false
+  /// The language library names (節氣, festivals, 五行 …) are shown in; see
+  /// `DisplayLanguage.app`.
+  @Entry var displayLanguage: DisplayLanguage = .app
+}
+
+// MARK: - DisplayLanguage
+
+extension DisplayLanguage {
+  /// The language the UI is shown in. Follows the localization the bundle
+  /// picked rather than `Locale.current`, so a device language the app has no
+  /// strings for resolves to the same language as the strings on screen.
+  static var app: DisplayLanguage {
+    DisplayLanguage(identifier: Bundle.main.preferredLocalizations.first ?? "en")
+  }
+
+  /// The script for Chinese terms kept as glyphs in every locale (the 時辰
+  /// dial, 干支, 卦): Simplified for Simplified Chinese, Traditional for
+  /// everything else, since the library's canonical names are Traditional.
+  var glyphLanguage: DisplayLanguage {
+    self == .zhHans ? .zhHans : .zhHant
+  }
 }
 
 extension Bool {

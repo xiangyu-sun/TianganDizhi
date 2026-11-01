@@ -175,8 +175,8 @@ private struct RelationshipDetailPanel: View {
   // MARK: Relationship card
 
   private func relationshipCard(
-    label: String,
-    description: String,
+    label: LocalizedStringKey,
+    description: LocalizedStringKey,
     arrowColor: Color
   ) -> some View {
     VStack(spacing: 6) {
@@ -310,7 +310,7 @@ private struct WuxingAttributeList: View {
     .accessibilityElement(children: .combine)
   }
 
-  fileprivate func makeTopicView(title: String, detail: String) -> some View {
+  fileprivate func makeTopicView(title: LocalizedStringKey, detail: String) -> some View {
     VStack {
       Text(title)
         .font(footnote)

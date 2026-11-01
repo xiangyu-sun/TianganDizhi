@@ -2,8 +2,8 @@
 
 TianganDizhi (天干地支) is a SwiftUI Chinese calendar/astrology app for iOS, macOS (incl. a menu
 bar extra) and watchOS: 時辰 clock, 節氣/festivals, moon phase, WeatherKit sun times, 天干地支
-knowledge, I Ching, charts, and many widgets. UI is Chinese (Simplified/Traditional) + English
-via `.xcstrings`; App Store metadata lives in `fastlane/metadata`.
+knowledge, I Ching, charts, and many widgets. The UI is Traditional Chinese today; localizing
+it is in progress (`docs/localization-roadmap.md`). App Store metadata lives in `fastlane/metadata`.
 
 ## Build and test
 ```bash
@@ -69,6 +69,15 @@ Core logic comes from the author's packages `ChineseAstrologyCalendar`, `Bagua`,
 - **Fonts**: never bundle Weibei (activated at runtime via `WeibeiFont.activate()`); home
   screen widgets use bundled LXGW WenKai TC; `accessory*` widgets/complications use system
   text styles only. Details: `docs/fonts.md`.
+- **Strings**: one catalog, `AppWidgetShared/Localizable.xcstrings`, in all 5 product targets.
+  Keys are the Traditional Chinese literals (development language stays `en`), and every key
+  needs an explicit zh-Hant value (`LocalizationCatalogTests`); a missing one would fall back to
+  English. UI text goes through `Text("…")`/`LocalizedStringKey` or `String(localized:)`, never
+  a plain `String` or `+` concatenation; pass numbers as `Int` so they can take plural variants.
+  Refresh the catalog with `xcodebuild -exportLocalizations -project TianganDizhi.xcodeproj
+  -localizationPath <tmp> -exportLanguage zh-Hant`, then give new keys a zh-Hant value. Library
+  names (節氣, festivals, 五行 …) come from `localizedName(in:)` with `\.displayLanguage`
+  (`.glyphLanguage` for terms kept as Chinese glyphs). Never translate 十二時辰頌 or the dial glyphs.
 - Use `#if os(macOS)` / `#if os(iOS)` for platform splits; shared files compile into several
   targets, so check target membership when adding files.
 
@@ -82,5 +91,6 @@ Core logic comes from the author's packages `ChineseAstrologyCalendar`, `Bagua`,
 - `docs/dependencies.md`: package pins and how to ship a fix in `ChineseTranditionalCalendarUI`.
 - `docs/analytics.md`: Firebase setup, widget measurement, event catalogue.
 - `docs/fonts.md`: Weibei licensing, widget font rules and why.
+- `docs/localization-roadmap.md`: what gets translated, phases, dependency gaps.
 - `CHANGELOG.md`: user-visible changes; `PLAN_TEST_COVERAGE.md`: test-coverage plan.
 - `fastlane/README.md`: lanes and metadata/screenshot tooling.

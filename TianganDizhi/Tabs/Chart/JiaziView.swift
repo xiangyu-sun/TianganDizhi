@@ -80,10 +80,10 @@ struct JiaziView: View {
             .accessibilityElement(children: .combine)
             .accessibilityLabel({
               var label = item.description
-              if nian == item { label += "，年柱" }
-              if yue == item { label += "，月柱" }
-              if ri == item { label += "，日柱" }
-              if shi == item { label += "，時柱" }
+              if nian == item { label = String(localized: "\(label)，年柱", comment: "Accessibility: a 干支 marked as the year pillar") }
+              if yue == item { label = String(localized: "\(label)，月柱", comment: "Accessibility: a 干支 marked as the month pillar") }
+              if ri == item { label = String(localized: "\(label)，日柱", comment: "Accessibility: a 干支 marked as the day pillar") }
+              if shi == item { label = String(localized: "\(label)，時柱", comment: "Accessibility: a 干支 marked as the hour pillar") }
               return label
             }())
           }

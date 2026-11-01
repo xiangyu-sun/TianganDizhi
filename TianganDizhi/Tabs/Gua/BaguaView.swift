@@ -20,7 +20,11 @@ struct BaguaView: View {
 
   struct ViewData {
     let guas: [Trigram]
+    /// The Chinese title, also the catalog key. It stays canonical because
+    /// `GuaRoute.contentDetail` reports it to analytics.
     let title: String
+
+    var localizedTitle: String { String(localized: String.LocalizationValue(title)) }
   }
 
   @Environment(\.bodyFont) var bodyFont
@@ -69,12 +73,12 @@ struct BaguaView: View {
       .scaleEffect(fit)
       .frame(width: geometry.size.width, height: geometry.size.height)
       .accessibilityElement(children: .ignore)
-      .accessibilityLabel(viewData.title + "：" + viewData.guas.map { "\($0.chineseCharacter)\($0.xiang)" }.joined(separator: "、"))
+      .accessibilityLabel(viewData.localizedTitle + "：" + viewData.guas.map { "\($0.chineseCharacter)\($0.xiang)" }.joined(separator: "、"))
     }
     #if os(watchOS)
     .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
     #endif
-    .navigationTitle(viewData.title)
+    .navigationTitle(viewData.localizedTitle)
   }
 
   var outterSpacing: Double {

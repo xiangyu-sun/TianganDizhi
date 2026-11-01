@@ -12,7 +12,7 @@ struct MinuteTimelineProvider: IntentTimelineProvider {
   func recommendations() -> [IntentRecommendation<ConfigurationIntent>] {
     defaultRecommendedIntents().map { intent in
       let description = Date().shichen?.dizhi.chineseCharacter ?? ""
-      return IntentRecommendation(intent: intent, description: "當前時辰" + description)
+      return IntentRecommendation(intent: intent, description: String(localized: "當前時辰\(description)", comment: "Widget suggestion; %@ is the current 時辰 (子)"))
     }
   }
 

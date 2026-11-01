@@ -18,6 +18,15 @@ struct UpcomingFestivalsView: View {
 
     var id: Self { self }
 
+    var title: LocalizedStringKey {
+      switch self {
+      case .all: "全部"
+      case .festival: "節日"
+      case .jieqi: "節氣"
+      case .custom: "自訂"
+      }
+    }
+
     func includes(_ kind: SpecialDayKind) -> Bool {
       switch self {
       case .all: true
@@ -40,7 +49,7 @@ struct UpcomingFestivalsView: View {
     List {
       Section {
         Picker("類別", selection: $filter) {
-          ForEach(Filter.allCases) { Text($0.rawValue).tag($0) }
+          ForEach(Filter.allCases) { Text($0.title).tag($0) }
         }
         #if !os(watchOS)
         .pickerStyle(.segmented)
@@ -49,7 +58,7 @@ struct UpcomingFestivalsView: View {
 
       Section {
         if visibleEvents.isEmpty {
-          Text(filter == .custom ? "尚未添加自訂節日" : "一年內沒有節日")
+          (filter == .custom ? Text("尚未添加自訂節日") : Text("一年內沒有節日"))
             .font(bodyFont)
             .foregroundStyle(.secondary)
         }
