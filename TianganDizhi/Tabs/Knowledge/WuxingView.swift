@@ -23,6 +23,7 @@ struct WuxingView: View {
   @Environment(\.title3Font) var title3Font
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.footnote) var footnote
+  @Environment(\.displayLanguage) var displayLanguage
 
   @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
@@ -75,11 +76,11 @@ struct WuxingView: View {
               .font(footnote)
             HStack {
               let wuzang = 五臟.allCases.first { $0.wuxing == item } ?? .心
-              Text("\(wuzang.rawValue)")
+              Text("\(wuzang.localizedName(in: displayLanguage.glyphLanguage))")
 
               let wufu = 五腑.allCases.first { $0.wuxing == item } ?? .小腸
-              Text("\(wufu.rawValue)")
-              Text("\(wuzang.情緒)")
+              Text("\(wufu.localizedName(in: displayLanguage.glyphLanguage))")
+              Text("\(wuzang.情緒.converted(to: displayLanguage))")
             }
             .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
 
@@ -88,23 +89,23 @@ struct WuxingView: View {
             Text("五味")
               .font(footnote)
             HStack {
-              Text("\(item.fiveFlavor)")
+              Text("\(item.localizedFlavor(in: displayLanguage.glyphLanguage))")
                 .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
             }
           }
           .scaledToFit()
 
           Divider()
-          makeTopicView(title: "五音", detail: "\(Key.wuyin.first { $0.wuxing == item }?.wuyinChineseName ?? "")")
+          makeTopicView(title: "五音", detail: "\(Key.wuyin.first { $0.wuxing == item }?.wuyinChineseName.converted(to: displayLanguage) ?? "")")
 
           Divider()
 
-          makeTopicView(title: "方位", detail: "\(item.fangwei.chineseCharacter)")
-          makeTopicView(title: "色彩", detail: "\(item.colorDescription)")
+          makeTopicView(title: "方位", detail: "\(item.fangwei.localizedName(in: displayLanguage.glyphLanguage))")
+          makeTopicView(title: "色彩", detail: "\(item.localizedColorDescription(in: displayLanguage.glyphLanguage))")
 
           Divider()
 
-          if let season = Season.allCases.first(where: { $0.wuxing == item })?.chineseDescription {
+          if let season = Season.allCases.first(where: { $0.wuxing == item })?.localizedName(in: displayLanguage.glyphLanguage) {
             makeTopicView(title: "四季", detail: season)
           }
         }

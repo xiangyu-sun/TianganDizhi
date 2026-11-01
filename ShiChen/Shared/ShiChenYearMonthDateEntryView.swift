@@ -13,6 +13,7 @@ import WidgetKit
 // MARK: - ShiChenYearMonthDateEntryView
 
 struct ShiChenYearMonthDateEntryView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   var entry: SimpleEntry
   @Environment(\.widgetFamily) var family
   
@@ -50,11 +51,11 @@ struct ShiChenYearMonthDateEntryView: View {
     case .systemSmall:
       VStack {
         Spacer()
-        Text(entry.date.lunarDateWithZodiac)
+        Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
           .font(footnote)
         Spacer()
         Text(
-          "\(shichen?.dizhi.displayHourText ?? "")"
+          "\(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "")"
         )
           .font(titleFont)
         Spacer()
@@ -75,10 +76,10 @@ struct ShiChenYearMonthDateEntryView: View {
     default:
       VStack {
         Spacer()
-        Text(entry.date.lunarDateWithZodiac)
+        Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
           .font(bodyFont)
           .padding([.leading, .trailing], 15)
-        Text(shichen?.dizhi.displayHourText ?? "")
+        Text(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "")
           .font(titleFont)
         Spacer()
       }
@@ -93,6 +94,7 @@ struct ShiChenYearMonthDateEntryView: View {
 // MARK: - WidgetMediumView
 
 private struct WidgetMediumView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
   @Environment(\.titleFont) var titleFont
@@ -115,15 +117,15 @@ private struct WidgetMediumView: View {
     VStack {
       Spacer()
       HStack() {
-        Text(entry.date.lunarDateWithZodiac)
-        Text(entry.date.twelveGod()?.chinese ?? "")
+        Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
+        Text(entry.date.twelveGod()?.localizedName(in: displayLanguage.glyphLanguage) ?? "")
       }
       .font(title2Font)
       .padding([.leading, .trailing], 15)
       .widgetAccentable()
       
       HStack() {
-        Text(shichen?.dizhi.displayHourText ?? "")
+        Text(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "")
 //        Text(
 //          "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
 //        )

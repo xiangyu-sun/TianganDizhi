@@ -13,6 +13,7 @@ import WidgetKit
 // MARK: - InlineWidgetView
 
 struct InlineWidgetView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
 
   let date: Date
 
@@ -21,8 +22,8 @@ struct InlineWidgetView: View {
 //    let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
 //    
     ViewThatFits(in: .horizontal) {
-      Text("\(date.lunarDateWithZodiac) \(shichen?.dizhi.displayHourText ?? "")")
-      Text(shichen?.dizhi.displayHourText ?? "")
+      Text("\(date.lunarDateWithZodiac(language: displayLanguage)) \(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "")")
+      Text(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "")
     }
     .font(.body)
     .widgetAccentable()

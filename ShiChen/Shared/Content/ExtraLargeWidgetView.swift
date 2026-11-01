@@ -14,6 +14,7 @@ import WidgetKit
 // MARK: - ExtraLargeWidgetView
 
 struct ExtraLargeWidgetView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let date: Date
 
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
@@ -35,7 +36,7 @@ struct ExtraLargeWidgetView: View {
     HStack {
       VStack(alignment: .center) {
         HStack() {
-          Text(date.lunarDateWithZodiac + " \(date.twelveGod()?.chinese ?? "")")
+          Text(date.lunarDateWithZodiac(language: displayLanguage) + " \(date.twelveGod()?.localizedName(in: displayLanguage.glyphLanguage) ?? "")")
         }
         .font(titleFont)
         
@@ -85,9 +86,9 @@ struct ExtraLargeWidgetView: View {
   func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
     HStack {
       Image(systemName: moonphase.moonPhase.symbolName)
-      Text(moonphase.name(traditionnal: useTranditionalNaming))
+      Text(moonphase.name(traditionnal: useTranditionalNaming, language: displayLanguage))
       if let gua = moonphase.gua {
-        Text(gua.description)
+        Text(gua.description(in: displayLanguage))
       }
     }
     .font(bodyFont)

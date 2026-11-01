@@ -66,6 +66,7 @@ struct CalendarWidget: Widget {
       provider: CalendarTimelineProvider())
     { entry in
       CalendarWidgetView(entry: entry)
+        .environment(\.calendarLanguage, DisplayLanguage.app.glyphLanguage)
         .containerBackground(.background, for: .widget)
         .widgetDeepLink(kind: kind)
     }
@@ -86,6 +87,7 @@ struct CalendarWidget: Widget {
 /// Rather than stretching the same 7-column grid, extraLarge adds a today-detail
 /// sidebar (Four Pillars + Moon Phase) to use that extra horizontal space.
 struct CalendarWidgetView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let entry: CalendarEntry
 
   @Environment(\.widgetFamily) private var family
@@ -122,11 +124,11 @@ struct CalendarWidgetView: View {
           
           let mansion = LunarMansion.lunarMansion(date: entry.date)
           HStack {
-            Text("星象: \(mansion.fourSymbol.rawValue)")
-            Text("星宿: \(mansion.rawValue)")
+            Text("星象: \(mansion.fourSymbol.localizedName(in: displayLanguage.glyphLanguage))")
+            Text("星宿: \(mansion.glyph(in: displayLanguage))")
           }
           .accessibilityElement(children: .combine)
-          .accessibilityLabel("星象：\(mansion.fourSymbol.rawValue)，星宿：\(mansion.rawValue)")
+          .accessibilityLabel("星象：\(mansion.fourSymbol.localizedName(in: displayLanguage.glyphLanguage))，星宿：\(mansion.glyph(in: displayLanguage))")
           Spacer(minLength: 0)
         }
         .frame(width: 220)
@@ -149,7 +151,7 @@ struct CalendarWidgetView: View {
     return VStack(spacing: theme.rowSpacing) {
       VStack(alignment: .center, spacing: 0){
         Text(month.title)
-        Text(entry.date.lunarDateWithZodiac)
+        Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
       }
       .font(.headline)
       .padding(.bottom, 8)

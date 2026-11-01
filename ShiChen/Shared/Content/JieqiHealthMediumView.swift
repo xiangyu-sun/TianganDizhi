@@ -13,6 +13,7 @@ import WidgetKit
 // MARK: - JieqiHealthMediumView
 
 struct JieqiHealthMediumView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let date: Date
 
   @StateObject private var fontProvider = FontProvider()
@@ -31,18 +32,18 @@ struct JieqiHealthMediumView: View {
 
     if let jieqi {
       VStack(alignment: .leading, spacing: 4) {
-        Text(date.jieQiDisplayText)
+        Text(date.jieQiDisplayText(language: displayLanguage))
           .frame(alignment: .leading)
           .lineLimit(1)
           .font(title3Font)
         
         // Health tip
-        Text(jieqi.healthTip)
+        Text(jieqi.healthTip.converted(to: displayLanguage))
           .font(footnoteFont)
           .lineLimit(2)
         
         // Seasonal foods
-        Text(jieqi.seasonalFoods)
+        Text(jieqi.seasonalFoods.converted(to: displayLanguage))
           .font(footnoteFont)
           .lineLimit(2)
       }
@@ -61,7 +62,7 @@ struct JieqiHealthMediumView: View {
 #endif
       }
     } else {
-      Text(date.jieQiDisplayText)
+      Text(date.jieQiDisplayText(language: displayLanguage))
         .font(title3Font)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .containerBackground(for: .widget) {

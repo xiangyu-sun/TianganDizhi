@@ -18,6 +18,7 @@ struct MenuBarContentView: View {
   var useTranditionalNaming = false
   @AppStorage(Constants.displayMoonPhaseOnWidgets, store: Constants.sharedUserDefault)
   var displayMoonPhase = true
+  @Environment(\.displayLanguage) private var displayLanguage
 
   var body: some View {
     TimelineView(.everyMinute) { context in
@@ -93,7 +94,7 @@ struct MenuBarContentView: View {
             .font(.caption)
             .foregroundStyle(.secondary)
           Spacer()
-          Text(shichen.dizhi.displayHourText)
+          Text(shichen.dizhi.localizedHourName(in: displayLanguage.glyphLanguage))
             .font(.subheadline)
         }
 
@@ -102,7 +103,7 @@ struct MenuBarContentView: View {
             .font(.caption)
             .foregroundStyle(.secondary)
           Spacer()
-          Text(shichen.dizhi.aliasName)
+          Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
             .font(.subheadline)
         }
 
@@ -112,7 +113,7 @@ struct MenuBarContentView: View {
               .font(.caption)
               .foregroundStyle(.secondary)
             Spacer()
-            Text(god.chinese)
+            Text(god.localizedName(in: displayLanguage.glyphLanguage))
               .font(.subheadline)
           }
         }
@@ -137,10 +138,10 @@ struct MenuBarContentView: View {
           Image(systemName: moonphase.moonPhase.symbolName)
             .foregroundStyle(Color.accentColor)
           VStack(alignment: .leading, spacing: 2) {
-            Text(moonphase.name(traditionnal: useTranditionalNaming))
+            Text(moonphase.name(traditionnal: useTranditionalNaming, language: displayLanguage))
               .font(.subheadline)
             if let gua = moonphase.gua {
-              Text(gua.description)
+              Text(gua.description(in: displayLanguage))
                 .font(.caption)
                 .foregroundStyle(.secondary)
             }
@@ -240,8 +241,8 @@ struct MenuBarContentView: View {
   private func copyCurrentInfo() {
     let date = Date()
     let dateInfo = date.lunarDateWithZodiac
-    let shichenInfo = date.shichen?.dizhi.displayHourText ?? ""
-    let godInfo = date.twelveGod()?.chinese ?? ""
+    let shichenInfo = date.shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? ""
+    let godInfo = date.twelveGod()?.localizedName(in: displayLanguage.glyphLanguage) ?? ""
     let jieqiInfo = date.jieQiDisplayText
 
     let fullInfo = """

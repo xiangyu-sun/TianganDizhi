@@ -66,22 +66,28 @@ extension Date {
   /// - on a term's start day, the term that has begun, e.g. "小暑節";
   /// - otherwise a countdown to the next term, e.g. "十五日後大暑氣".
   var jieQiDisplayText: String {
+    jieQiDisplayText(language: .app)
+  }
+
+  /// ``jieQiDisplayText`` with the Chinese terms in the script of `language`.
+  func jieQiDisplayText(language: DisplayLanguage) -> String {
+    let glyphs = language.glyphLanguage
     if isJieqiDayAligned, let current = jieqiDayAligned ?? Jieqi.current {
-      return current.displayName
+      return current.displayName(language: glyphs)
     }
 
     if let next = nextJieqiDayAligned {
       let days = next.days(from: self, calendar: .solarTerm)
       if days > 0 {
         let daysString = Self.jieqiCountdownFormatter.string(from: NSNumber(value: days)) ?? "\(days)"
-        let name = next.jieqi.displayName
+        let name = next.jieqi.displayName(language: glyphs)
         return String(localized: "\(daysString)日後\(name)", comment: "Countdown to the next solar term; %1$@ is the day count spelled out (十五), %2$@ the term with its 節/氣 suffix")
       }
     }
 
     // Fallback: name whatever term is in effect (e.g. no upcoming occurrence found).
     guard let current = jieqiDayAligned ?? Jieqi.current else { return "" }
-    return current.displayName
+    return current.displayName(language: glyphs)
   }
 }
 
@@ -91,17 +97,32 @@ extension Date {
   /// The lunar date with the year's zodiac animal, in the device's time zone,
   /// e.g. 甲辰龍年正月初一.
   var lunarDateWithZodiac: String {
-    lunarDate()?.formatted(.yearZodiacMonthDay, in: .zhHant) ?? ""
+    lunarDateWithZodiac(language: .app)
+  }
+
+  /// ``lunarDateWithZodiac`` in the script of `language`.
+  func lunarDateWithZodiac(language: DisplayLanguage) -> String {
+    lunarDate()?.formatted(.yearZodiacMonthDay, in: language.glyphLanguage) ?? ""
   }
 
   /// The lunar date with the year's zodiac animal, in China Standard Time.
   var lunarDateWithZodiacGTM8: String {
-    lunarDate(.chineseCalendarGTM8)?.formatted(.yearZodiacMonthDay, in: .zhHant) ?? ""
+    lunarDateWithZodiacGTM8(language: .app)
+  }
+
+  /// ``lunarDateWithZodiacGTM8`` in the script of `language`.
+  func lunarDateWithZodiacGTM8(language: DisplayLanguage) -> String {
+    lunarDate(.chineseCalendarGTM8)?.formatted(.yearZodiacMonthDay, in: language.glyphLanguage) ?? ""
   }
 
   /// The lunar day alone in the device's time zone, e.g. 初一.
   var lunarDayText: String {
-    lunarDate()?.formatted(.day, in: .zhHant) ?? ""
+    lunarDayText(language: .app)
+  }
+
+  /// ``lunarDayText`` in the script of `language`.
+  func lunarDayText(language: DisplayLanguage) -> String {
+    lunarDate()?.formatted(.day, in: language.glyphLanguage) ?? ""
   }
 }
 
@@ -139,6 +160,12 @@ extension JieqiOccurrence {
 extension Jieqi {
   /// The term with its 節/氣 suffix, e.g. 小暑節, 大暑氣.
   var displayName: String {
-    qi ? String(localized: "\(chineseName)氣", comment: "A 中氣 solar term, e.g. 大暑氣") : String(localized: "\(chineseName)節", comment: "A 節 solar term, e.g. 小暑節")
+    displayName(language: .app)
+  }
+
+  /// ``displayName`` with the term's name in the script of `language`.
+  func displayName(language: DisplayLanguage) -> String {
+    let name = localizedName(in: language.glyphLanguage)
+    return qi ? String(localized: "\(name)氣", comment: "A 中氣 solar term, e.g. 大暑氣") : String(localized: "\(name)節", comment: "A 節 solar term, e.g. 小暑節")
   }
 }

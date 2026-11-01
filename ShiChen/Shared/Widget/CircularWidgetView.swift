@@ -13,6 +13,7 @@ import WidgetKit
 // MARK: - CircularWidgetView
 
 struct CircularWidgetView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
 
   let date: Date
 
@@ -25,11 +26,11 @@ struct CircularWidgetView: View {
       ProgressView(
         value: start / base,
         label: {
-          Text(shichen.dizhi.displayHourText)
+          Text(shichen.dizhi.localizedHourName(in: displayLanguage.glyphLanguage))
             .widgetAccentable()
         },
         currentValueLabel: {
-          Text(shichen.dizhi.displayHourText)
+          Text(shichen.dizhi.localizedHourName(in: displayLanguage.glyphLanguage))
             .widgetAccentable()
           #if os(iOS)
             .font(.body)

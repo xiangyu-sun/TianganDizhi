@@ -23,6 +23,7 @@ struct MainView: View {
   @Environment(\.footnote) var footnote
   @Environment(\.calloutFont) var calloutFont
   @Environment(\.shouldScaleFont) var shouldScaleFont
+  @Environment(\.displayLanguage) var displayLanguage
   @Environment(\.openURL) var openURL
   @ObservedObject var weatherData = WeatherData.shared
   @Environment(\.scenePhase) var scenePhase
@@ -48,8 +49,8 @@ struct MainView: View {
       ?? EventModel(date: Date(), name: .day1, dateComponents: .init())
     cachedEvent = ev
     cachedTitle = useGTM8
-      ? ev.date.lunarDateWithZodiacGTM8
-      : ev.date.lunarDateWithZodiac
+      ? ev.date.lunarDateWithZodiacGTM8(language: displayLanguage)
+      : ev.date.lunarDateWithZodiac(language: displayLanguage)
     showNewYearCountdown = converter.nextChineseNewYear()
       .map { converter.isWithinMonths(3, beforeChineseNewYearFrom: $0) } ?? false
   }
@@ -93,8 +94,8 @@ struct MainView: View {
             showingCalendar = true
           } label: {
             HStack {
-              Text(date.lunarDateWithZodiac)
-              Text(god.map { "·" + $0.chinese } ?? "")
+              Text(date.lunarDateWithZodiac(language: displayLanguage))
+              Text(god.map { "·" + $0.localizedName(in: displayLanguage.glyphLanguage) } ?? "")
             }
             .lineLimit(1)
             .minimumScaleFactor(0.8)
@@ -112,12 +113,12 @@ struct MainView: View {
           }
 
           if let festival = date.chineseFestival(timeZone: .solarTerm) {
-            Text(festival.chineseName)
+            Text(festival.localizedName(in: displayLanguage.glyphLanguage))
               .font(bodyFont)
               .foregroundStyle(.primary)
-              .accessibilityLabel("今日節日：\(festival.chineseName)")
+              .accessibilityLabel("今日節日：\(festival.localizedName(in: displayLanguage.glyphLanguage))")
           } else {
-            Text(date.jieQiDisplayText)
+            Text(date.jieQiDisplayText(language: displayLanguage))
               .font(bodyFont)
           }
 
@@ -175,14 +176,14 @@ struct MainView: View {
               Text("\(shichen.currentKeSpellOut)刻")
                 .font(largeTitleFont)
               HStack() {
-                Text(shichen.dizhi.aliasName)
-                Text(shichen.dizhi.luizhu.organReference)
+                Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
+                Text(shichen.dizhi.luizhu.organReference.converted(to: displayLanguage))
                   .foregroundStyle(shichen.dizhi.luizhu.是表经 ? Color.primary : Color.secondary)
               }
               .font(bodyFont)
             }
             .accessibilityElement(children: .combine)
-            .accessibilityLabel("\(shichen.dizhi.aliasName)，第\(shichen.currentKeSpellOut)刻，\(shichen.dizhi.organReference)")
+            .accessibilityLabel("\(shichen.dizhi.aliasName.converted(to: displayLanguage))，第\(shichen.currentKeSpellOut)刻，\(shichen.dizhi.luizhu.organReference.converted(to: displayLanguage))")
             .accessibilityAddTraits(.updatesFrequently)
           }
         }
@@ -191,13 +192,13 @@ struct MainView: View {
 
         let mansion = LunarMansion.lunarMansion(date: date)
         HStack {
-          Text("星象: \(mansion.fourSymbol.rawValue)")
-          Text("星宿: \(mansion.rawValue)")
+          Text("星象: \(mansion.fourSymbol.localizedName(in: displayLanguage.glyphLanguage))")
+          Text("星宿: \(mansion.glyph(in: displayLanguage))")
         }
         .foregroundStyle(Color.secondary)
         .font(calloutFont)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("星象：\(mansion.fourSymbol.rawValue)，星宿：\(mansion.rawValue)")
+        .accessibilityLabel("星象：\(mansion.fourSymbol.localizedName(in: displayLanguage.glyphLanguage))，星宿：\(mansion.glyph(in: displayLanguage))")
 
         if let value = weatherData.forcastedWeather {
           VStack {
@@ -283,9 +284,9 @@ struct MainView: View {
   func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
     HStack {
       Image(systemName: moonphase.moonPhase.symbolName)
-      Text(moonphase.name(traditionnal: useTranditionalNaming))
+      Text(moonphase.name(traditionnal: useTranditionalNaming, language: displayLanguage))
       if let gua = moonphase.gua {
-        Text(gua.description)
+        Text(gua.description(in: displayLanguage))
       }
     }
     .font(bodyFont)
@@ -299,24 +300,25 @@ extension Date {
   /// Human-readable summary of this date's Shichen, festival/Jieqi, lunar mansion and 宜/忌.
   var shichenShareText: String {
     var lines: [String] = []
-    lines.append(String(localized: "日期：\(lunarDateWithZodiac)", comment: "Share text line"))
+    let language = DisplayLanguage.app.glyphLanguage
+    lines.append(String(localized: "日期：\(lunarDateWithZodiac(language: language))", comment: "Share text line"))
     if let shichen = shichen {
-      lines.append(String(localized: "時辰：\(shichen.dizhi.aliasName)（\(shichen.dizhi.displayHourText)）", comment: "Share text line"))
+      lines.append(String(localized: "時辰：\(shichen.dizhi.aliasName.converted(to: language))（\(shichen.dizhi.localizedHourName(in: language))）", comment: "Share text line"))
     }
     if let festival = chineseFestival(timeZone: .solarTerm) {
-      lines.append(String(localized: "今日：\(festival.chineseName)", comment: "Share text line"))
+      lines.append(String(localized: "今日：\(festival.localizedName(in: language))", comment: "Share text line"))
     } else {
-      let jieqi = jieQiDisplayText
+      let jieqi = jieQiDisplayText(language: language)
       if !jieqi.isEmpty { lines.append(String(localized: "節氣：\(jieqi)", comment: "Share text line")) }
     }
     for holiday in SpecialDayCatalog.customHolidays(on: self) {
       lines.append(String(localized: "自訂：\(holiday.name)", comment: "Share text line"))
     }
     let mansion = LunarMansion.lunarMansion(date: self)
-    lines.append(String(localized: "星象：\(mansion.fourSymbol.rawValue)·\(mansion.rawValue)", comment: "Share text line"))
+    lines.append(String(localized: "星象：\(mansion.fourSymbol.localizedName(in: language))·\(mansion.glyph(in: language))", comment: "Share text line"))
     if let god = twelveGod() {
-      lines.append(String(localized: "宜：\(god.do)", comment: "Share text line"))
-      lines.append(String(localized: "忌：\(god.dontDo)", comment: "Share text line"))
+      lines.append(String(localized: "宜：\(god.do.converted(to: language))", comment: "Share text line"))
+      lines.append(String(localized: "忌：\(god.dontDo.converted(to: language))", comment: "Share text line"))
     }
     return lines.joined(separator: "\n")
   }
@@ -342,7 +344,10 @@ struct CalendarSheetView: View {
     }
     .presentationDetents([.medium, .large])
     .presentationDragIndicator(.visible)
+    .environment(\.calendarLanguage, displayLanguage.glyphLanguage)
   }
+
+  @Environment(\.displayLanguage) private var displayLanguage
 }
 #endif
 

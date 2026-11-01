@@ -8,6 +8,7 @@ struct DizhiRelationshipView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.title3Font) var title3Font
   @Environment(\.footnote) var footnote
+  @Environment(\.displayLanguage) var displayLanguage
 
   var body: some View {
     List {
@@ -31,7 +32,7 @@ struct DizhiRelationshipView: View {
               Text("合")
               Text(liuhe.resultingElement.chineseCharacter)
               Spacer()
-              Text(liuhe.chineseName)
+              Text(liuhe.localizedName(in: displayLanguage.glyphLanguage))
                 .foregroundStyle(.secondary)
             }
             .font(bodyFont)
@@ -48,7 +49,7 @@ struct DizhiRelationshipView: View {
             Text("合")
             Text(sanhe.resultingElement.chineseCharacter)
             Spacer()
-            Text(sanhe.chineseName)
+            Text(sanhe.localizedName(in: displayLanguage.glyphLanguage))
               .foregroundStyle(.secondary)
           }
           .font(bodyFont)
@@ -68,7 +69,7 @@ struct DizhiRelationshipView: View {
               Text("害")
               Text(liuhai.branches.1.chineseCharacter)
               Spacer()
-              Text(liuhai.chineseName)
+              Text(liuhai.localizedName(in: displayLanguage.glyphLanguage))
                 .foregroundStyle(.secondary)
             }
             .font(bodyFont)

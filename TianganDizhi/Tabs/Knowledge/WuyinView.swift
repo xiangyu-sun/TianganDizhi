@@ -15,12 +15,13 @@ import SwiftUI
 struct WuyinView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.title3Font) var title3Font
+  @Environment(\.displayLanguage) var displayLanguage
 
   var body: some View {
     List(Key.wuyin, id: \.self) { yin in
       VStack(alignment: .leading) {
         HStack {
-          Text(yin.wuyinChineseName)
+          Text(yin.wuyinChineseName.converted(to: displayLanguage))
             .font(title3Font)
           Text("(\(yin.wuyinChineseName.transformToPinyin()))")
         }

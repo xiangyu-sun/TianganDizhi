@@ -13,6 +13,7 @@ import ChineseAstrologyCalendar
 // MARK: - ShichenLockScreenView
 
 struct ShichenLockScreenView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let date: Date
   let nextShichenCountdown: String
   
@@ -32,11 +33,11 @@ struct ShichenLockScreenView: View {
       if let shichen = date.shichen {
         // Current Shichen display
         HStack(alignment: .top) {
-          Text(date.lunarDateWithZodiac)
+          Text(date.lunarDateWithZodiac(language: displayLanguage))
             .font(title2Font)
           
           VStack() {
-            Text(shichen.dizhi.displayHourText)
+            Text(shichen.dizhi.localizedHourName(in: displayLanguage.glyphLanguage))
               .font(title2Font)
             
             Text("\(shichen.currentKeSpellOut)刻")

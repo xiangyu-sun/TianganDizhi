@@ -14,6 +14,7 @@ import JingluoShuxue
 // MARK: - ShichenHStackView
 
 struct ShichenHStackView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let shichen: Dizhi
   @Environment(\.titleFont) var titleFont
   @Environment(\.shouldScaleFont) var shouldScaleFont
@@ -23,7 +24,7 @@ struct ShichenHStackView: View {
   var body: some View {
     HStack {
       VStack {
-        Text("\(shichen.previous.displayHourText)")
+        Text("\(shichen.previous.localizedHourName(in: displayLanguage.glyphLanguage))")
         #if os(watchOS)
           .font(title2Font)
         #else
@@ -36,7 +37,7 @@ struct ShichenHStackView: View {
       Spacer()
 
       VStack {
-        Text("\(shichen.displayHourText)")
+        Text("\(shichen.localizedHourName(in: displayLanguage.glyphLanguage))")
         #if os(watchOS)
           .font(title2Font)
         #else
@@ -49,7 +50,7 @@ struct ShichenHStackView: View {
 
       Spacer()
       VStack {
-        Text("\(shichen.next.displayHourText)")
+        Text("\(shichen.next.localizedHourName(in: displayLanguage.glyphLanguage))")
         #if os(watchOS)
           .font(title2Font)
         #else
@@ -65,6 +66,7 @@ struct ShichenHStackView: View {
 // MARK: - ShichenInformationView
 
 struct ShichenInformationView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   @Environment(\.shouldScaleFont) var shouldScaleFont
   @Environment(\.title3Font) var title3Font
   @Environment(\.widgetFamily) var family
@@ -87,8 +89,8 @@ struct ShichenInformationView: View {
   var body: some View {
     if #available(iOSApplicationExtension 15.0, *) {
       HStack {
-        Text(shichen.aliasName)
-        Text(shichen.luizhu.organReference)
+        Text(shichen.aliasName.converted(to: displayLanguage))
+        Text(shichen.luizhu.organReference.converted(to: displayLanguage))
       }
       #if os(iOS)
       .font(scaleFont ? title3Font : calloutFont)

@@ -12,7 +12,9 @@ import os
 import SwiftUI
 
 extension String {
-  static let weibeiBold = "Weibei TC Bold"
+  /// The calligraphy font's family name: Weibei SC for Simplified Chinese,
+  /// Weibei TC for every other language.
+  static var weibeiBold: String { WeibeiFont.fontName }
 }
 
 // MARK: - WeibeiFont
@@ -30,7 +32,12 @@ extension String {
 /// Lock screen widgets and watch complications (the `accessory*` families) never
 /// use a custom font — their views set system text styles directly.
 enum WeibeiFont {
-  static let postScriptName = "WeibeiTC-Bold"
+  /// Weibei SC (Simplified glyph forms) for Simplified Chinese, Weibei TC otherwise.
+  /// Chosen from the language the UI is shown in, which is fixed for the life
+  /// of the process.
+  static let postScriptName = DisplayLanguage.app == .zhHans ? "WeibeiSC-Bold" : "WeibeiTC-Bold"
+  /// The family name `Font.custom` takes for `postScriptName`.
+  static let fontName = DisplayLanguage.app == .zhHans ? "Weibei SC Bold" : "Weibei TC Bold"
   /// The bundled calligraphy font home screen widgets use in Weibei's place.
   static let widgetFontName = "LXGWWenKaiTC-Medium"
 
@@ -137,6 +144,31 @@ extension DisplayLanguage {
   /// everything else, since the library's canonical names are Traditional.
   var glyphLanguage: DisplayLanguage {
     self == .zhHans ? .zhHans : .zhHant
+  }
+}
+
+// MARK: - Script conversion
+
+extension String {
+  /// This (Traditional Chinese) library string in the script `language` uses:
+  /// Simplified for `.zhHans`, unchanged for everything else.
+  ///
+  /// Only for library strings that have no `localizedName(in:)` of their own
+  /// (aliasName, colorDescription, 情緒, almanac prose …). The ICU transform is
+  /// wrong for some single characters (乾 becomes 干), so trigram, hexagram and
+  /// other names that have an API must use it instead.
+  func converted(to language: DisplayLanguage) -> String {
+    guard language == .zhHans else { return self }
+    return applyingTransform(StringTransform("Hant-Hans"), reverse: false) ?? self
+  }
+}
+
+extension LunarMansion {
+  /// The mansion's single character without the 宿 suffix (角, 虛 or 虚), the
+  /// form the app shows next to "星宿:". `localizedName(in:)` includes the suffix.
+  func glyph(in language: DisplayLanguage) -> String {
+    let name = localizedName(in: language.glyphLanguage)
+    return name.hasSuffix("宿") ? String(name.dropLast()) : name
   }
 }
 

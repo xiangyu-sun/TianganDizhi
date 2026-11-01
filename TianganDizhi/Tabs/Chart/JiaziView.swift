@@ -16,6 +16,7 @@ struct JiaziView: View {
   let data = getJiazhi()
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
+  @Environment(\.displayLanguage) var displayLanguage
   let columns = [
     GridItem(.flexible(), spacing: 0),
     GridItem(.flexible(), spacing: 0),
@@ -46,7 +47,7 @@ struct JiaziView: View {
               VStack(spacing: 2) {
                 Text("\(item.description)")
                   .font(bodyFont)
-                Text(item.nayin.traditionalChineseName)
+                Text(item.nayin.localizedName(in: displayLanguage.glyphLanguage))
                   .font(footnote)
                   .foregroundStyle(.secondary)
               }

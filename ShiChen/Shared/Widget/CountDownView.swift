@@ -6,6 +6,7 @@ import WidgetKit
 // MARK: - CountDownView
 
 struct CountDownView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   var entry: CountDownEntry
   @Environment(\.widgetFamily) var family
   @Environment(\.largeTitleFont) var largeTitleFont
@@ -35,8 +36,8 @@ struct CountDownView: View {
 
   var title: String {
     useGTM8
-      ? event.date.lunarDateWithZodiacGTM8
-      : event.date.lunarDateWithZodiac
+      ? event.date.lunarDateWithZodiacGTM8(language: displayLanguage)
+      : event.date.lunarDateWithZodiac(language: displayLanguage)
   }
 
   var body: some View {

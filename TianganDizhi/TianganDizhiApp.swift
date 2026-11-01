@@ -104,8 +104,9 @@ final class MenuBarTitleProvider: ObservableObject {
   private func refresh() {
     let date = Date()
     let dizhi = date.shichen?.dizhi ?? .zi
-    let god = date.twelveGod().map { "·" + $0.chinese } ?? ""
-    title = date.lunarDateWithZodiac + dizhi.displayHourText + god
+    let language = DisplayLanguage.app.glyphLanguage
+    let god = date.twelveGod().map { "·" + $0.localizedName(in: language) } ?? ""
+    title = date.lunarDateWithZodiac + dizhi.localizedHourName(in: language) + god
   }
 
   /// Fire at the start of the next minute, then every 60s thereafter.

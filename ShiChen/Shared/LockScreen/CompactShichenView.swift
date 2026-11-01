@@ -14,6 +14,7 @@ import WidgetKit
 // MARK: - CompactShichenView
 
 struct CompactShichenView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
 
   // MARK: Internal
   
@@ -28,7 +29,7 @@ struct CompactShichenView: View {
   var body: some View {
     VStack {
       titleView
-      Text(shichen.displayHourText)
+      Text(shichen.localizedHourName(in: displayLanguage.glyphLanguage))
         .font(largeTitleFont)
 
       ShichenInformationView(shichen: shichen)
@@ -47,7 +48,7 @@ struct CompactShichenView: View {
   private var titleView: some View {
     HStack {
       Text(components.nian?.formatedYear ?? "")
-      Text(components.zodiac?.rawValue ?? "")
+      Text(components.zodiac?.localizedName(in: displayLanguage.glyphLanguage) ?? "")
     }
     .font(title3Font)
   }

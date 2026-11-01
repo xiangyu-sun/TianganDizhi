@@ -17,6 +17,7 @@ import SwiftUI
 struct DizhiGridView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.titleFont) var titleFont
+  @Environment(\.displayLanguage) var displayLanguage
 
   let dizhi: Dizhi
 
@@ -27,21 +28,21 @@ struct DizhiGridView: View {
           .font(titleFont)
       }
 
-      Text(dizhi.luizhu.rawValue)
+      Text(dizhi.luizhu.displayName(in: displayLanguage))
         .font(bodyFont)
 
       HStack {
-        Text(dizhi.jie.chineseName)
-        Text(dizhi.qi.chineseName)
+        Text(dizhi.jie.localizedName(in: displayLanguage.glyphLanguage))
+        Text(dizhi.qi.localizedName(in: displayLanguage.glyphLanguage))
       }
       .font(bodyFont)
 
       HStack {
         let zodiac = Zodiac(dizhi)
-        Text("\(zodiac.rawValue)")
+        Text(zodiac.localizedName(in: displayLanguage.glyphLanguage))
           .font(bodyFont)
 
-        Text(Key.shierLvLv[dizhi.rawValue - 1].lvlvDescription)
+        Text(Key.shierLvLv[dizhi.rawValue - 1].lvlvDescription.converted(to: displayLanguage))
           .font(bodyFont)
       }
     }

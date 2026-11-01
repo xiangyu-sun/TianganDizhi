@@ -12,6 +12,7 @@ import SwiftUI
 // MARK: - WatchMainView
 
 struct WatchMainView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let date: Date
   let wetherData: WeatherData.Information?
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
@@ -22,13 +23,13 @@ struct WatchMainView: View {
   var body: some View {
     Group {
       HStack {
-        Text(date.lunarDateWithZodiac)
+        Text(date.lunarDateWithZodiac(language: displayLanguage))
         if let value = wetherData {
           Image(systemName: value.moonPhase.moonPhase.symbolName)
-          Text(value.moonPhase.name(traditionnal: true))
+          Text(value.moonPhase.name(traditionnal: true, language: displayLanguage))
         } else if let moonPhase = date.chineseDay()?.moonPhase {
           Image(systemName: moonPhase.moonPhase.symbolName)
-          Text(moonPhase.name(traditionnal: useTranditionalNaming))
+          Text(moonPhase.name(traditionnal: useTranditionalNaming, language: displayLanguage))
         }
       }
       if let shichen = date.shichen {
@@ -36,9 +37,9 @@ struct WatchMainView: View {
           CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
 
           VStack {
-            Text(shichen.dizhi.aliasName)
+            Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
               .font(titleFont)
-            Text(shichen.dizhi.luizhu.organReference)
+            Text(shichen.dizhi.luizhu.organReference.converted(to: displayLanguage))
               .font(footnote)
           }
         }

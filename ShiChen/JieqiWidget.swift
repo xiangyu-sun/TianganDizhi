@@ -47,7 +47,7 @@ struct JieqiWidget: Widget {
               .lineLimit(1)
               .minimumScaleFactor(0.7)
 
-            Text(jieqi.chineseName)
+            Text(jieqi.localizedName(in: DisplayLanguage.app.glyphLanguage))
               .foregroundStyle(isJieqiDay ? .primary : .secondary)
               .font(largeTitleFont)
               .lineLimit(1)

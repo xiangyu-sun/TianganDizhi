@@ -10,6 +10,7 @@ import WidgetKit
 // MARK: - LuckMediumWidgetView
 
 struct LuckMediumWidgetView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let date: Date
 
   private var god: TwelveGods? { date.twelveGod() }
@@ -35,7 +36,7 @@ struct LuckMediumWidgetView: View {
       VStack(alignment: .leading) {
         if let god {
           HStack(alignment: .top) {
-            Text(god.chinese)
+            Text(god.localizedName(in: displayLanguage.glyphLanguage))
               .widgetAccentable()
             
             Text(god.xiongjiL)
@@ -46,7 +47,7 @@ struct LuckMediumWidgetView: View {
 
           VStack(alignment: .leading) {
             Text("宜")
-            Text(god.do)
+            Text(god.do.converted(to: displayLanguage))
           }
           .font(.caption)
         }
@@ -65,7 +66,7 @@ struct LuckMediumWidgetView: View {
               Text(chong.chineseCharacter)
                 .widgetAccentable()
               
-              Text(Zodiac(chong).rawValue)
+              Text(Zodiac(chong).localizedName(in: displayLanguage.glyphLanguage))
             
             }
             .font(.title2.bold())
@@ -75,7 +76,7 @@ struct LuckMediumWidgetView: View {
         if let god {
           VStack(alignment: .leading) {
             Text("忌")
-            Text(god.dontDo)
+            Text(god.dontDo.converted(to: displayLanguage))
           }
           .font(.caption)
         }

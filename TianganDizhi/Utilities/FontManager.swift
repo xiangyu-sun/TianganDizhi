@@ -14,7 +14,7 @@ import os
 // MARK: - FontManager
 
 enum FontManager {
-    static let customFontName = "Weibei TC Bold"
+    static var customFontName: String { WeibeiFont.fontName }
     private static let logger = Logger(subsystem: "com.uriphium.Tiangandizhi.FontManager", category: "Font")
     
     #if os(iOS)

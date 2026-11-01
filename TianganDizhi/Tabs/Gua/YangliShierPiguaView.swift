@@ -23,6 +23,7 @@ struct YangliShierPiguaView: View {
   @Environment(\.footnote) var footnote
 
   @Environment(\.shouldScaleFont) var shouldScaleFont
+  @Environment(\.displayLanguage) var displayLanguage
 
   @AppStorage(Constants.piGuaRotationEnabled, store: Constants.sharedUserDefault)
   var piGuaRotationEnabled = false
@@ -43,7 +44,7 @@ struct YangliShierPiguaView: View {
       let size = CGSize(width: geometry.size.width / fit, height: geometry.size.height / fit)
       ZStack {
         ForEach(Jieqi.allCases, id: \.self) { jieqi in
-          Text(jieqi.chineseName)
+          Text(jieqi.localizedName(in: displayLanguage.glyphLanguage))
             .rotationEffect(getRotatingAngle(for: jieqi.rawValue, base: 24))
             .offset(anglePosition(for: jieqi.rawValue, in: size))
 
@@ -63,7 +64,7 @@ struct YangliShierPiguaView: View {
               if shouldScaleFont {
                 Text(gua.symbol)
               }
-              Text(gua.chineseCharacter)
+              Text(gua.localizedName(in: displayLanguage.glyphLanguage))
             }
             .rotationEffect(getRotatingAngle(for: dizhiIndex - 1, base: 12))
             .offset(angle12Position(for: dizhiIndex - 1, in: size, z: 2))

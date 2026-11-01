@@ -68,6 +68,7 @@ struct DizhiListView: View {
   }
 
   @Environment(\.bodyFont) var bodyFont
+  @Environment(\.displayLanguage) var displayLanguage
   @State private var searchText = ""
 
   let disppayMode: DisplayMode
@@ -76,7 +77,8 @@ struct DizhiListView: View {
     guard !searchText.isEmpty else { return disppayMode.dizhi }
     return disppayMode.dizhi.filter { dz in
       dz.chineseCharacter.localizedStandardContains(searchText) ||
-      dz.aliasName.localizedStandardContains(searchText)
+      dz.aliasName.localizedStandardContains(searchText) ||
+      dz.aliasName.converted(to: displayLanguage).localizedStandardContains(searchText)
     }
   }
 

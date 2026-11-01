@@ -104,6 +104,7 @@ struct BaziPillarsSection: View {
   @Environment(\.footnote) var footnote
   @Environment(\.title3Font) var title3Font
   @Environment(\.title2Font) var title2Font
+  @Environment(\.displayLanguage) var displayLanguage
 
   var body: some View {
     VStack(alignment: .leading, spacing: 12) {
@@ -126,7 +127,7 @@ struct BaziPillarsSection: View {
               .foregroundStyle(bazi.dayMaster.chineseCharacter == ganChar ? bazi.dayMasterElement.traditionalColor : .primary)
             Text(zhiChar)
               .font(title2Font)
-            Text(ganzhi.nayin.traditionalChineseName)
+            Text(ganzhi.nayin.localizedName(in: displayLanguage.glyphLanguage))
               .font(footnote)
               .foregroundStyle(.secondary)
               .lineLimit(1)

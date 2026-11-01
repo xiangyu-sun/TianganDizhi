@@ -31,6 +31,7 @@ struct BaguaView: View {
   @Environment(\.titleFont) var titleFont
   @Environment(\.largeTitleFont) var largeTitleFont
   @Environment(\.footnote) var footnote
+  @Environment(\.displayLanguage) var displayLanguage
 
   let viewData: ViewData
 
@@ -52,7 +53,7 @@ struct BaguaView: View {
         ForEach(viewData.guas.indices, id: \.self) { index in
           let gua = viewData.guas[index]
 
-          Text(gua.chineseCharacter)
+          Text(gua.localizedName(in: displayLanguage.glyphLanguage))
             .offset(anglePosition(for: index, in: size, z: 0))
             .font(font)
             .accessibilityHidden(true)
@@ -63,7 +64,7 @@ struct BaguaView: View {
             .font(font.bold())
             .accessibilityHidden(true)
 
-          Text(gua.xiang)
+          Text(gua.localizedXiang(in: displayLanguage.glyphLanguage))
             .offset(anglePosition(for: index, in: size, z: 2))
             .font(bodyFont)
             .accessibilityHidden(true)
@@ -73,7 +74,7 @@ struct BaguaView: View {
       .scaleEffect(fit)
       .frame(width: geometry.size.width, height: geometry.size.height)
       .accessibilityElement(children: .ignore)
-      .accessibilityLabel(viewData.localizedTitle + "：" + viewData.guas.map { "\($0.chineseCharacter)\($0.xiang)" }.joined(separator: "、"))
+      .accessibilityLabel(viewData.localizedTitle + "：" + viewData.guas.map { "\($0.localizedName(in: displayLanguage.glyphLanguage))\($0.localizedXiang(in: displayLanguage.glyphLanguage))" }.joined(separator: "、"))
     }
     #if os(watchOS)
     .edgesIgnoringSafeArea([.bottom, .leading, .trailing])

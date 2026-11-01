@@ -23,6 +23,7 @@ struct ShierPiguaView: View {
   @Environment(\.footnote) var footnote
 
   @Environment(\.shouldScaleFont) var shouldScaleFont
+  @Environment(\.displayLanguage) var displayLanguage
 
   @AppStorage(Constants.piGuaRotationEnabled, store: Constants.sharedUserDefault)
   var piGuaRotationEnabled = false
@@ -43,14 +44,14 @@ struct ShierPiguaView: View {
       let size = CGSize(width: geometry.size.width / fit, height: geometry.size.height / fit)
       ZStack {
         ForEach(Jieqi.allCases, id: \.self) { jieqi in
-          Text(jieqi.chineseName)
+          Text(jieqi.localizedName(in: displayLanguage.glyphLanguage))
             .rotationEffect(getRotatingAngle(for: jieqi.rawValue, base: 24))
             .offset(anglePosition(for: jieqi.rawValue, in: size))
 
           let dizhi = Dizhi(rawValue: max((jieqi.rawValue + 1) / 2, 1)) ?? .chen
           let dizhiIndex = dizhi.rawValue - 1
 
-          Text(Key.shierLvLvMonthOrder[dizhiIndex].lvlvDescription)
+          Text(Key.shierLvLvMonthOrder[dizhiIndex].lvlvDescription.converted(to: displayLanguage))
             .rotationEffect(getRotatingAngle(for: dizhiIndex - 3, base: 12))
             .offset(angle12Position(for: dizhiIndex - 3, in: size, z: 1))
 
@@ -64,7 +65,7 @@ struct ShierPiguaView: View {
             if shouldScaleFont {
               Text(gua.symbol)
             }
-            Text(gua.chineseCharacter)
+            Text(gua.localizedName(in: displayLanguage.glyphLanguage))
           }
           .rotationEffect(getRotatingAngle(for: dizhiIndex - 1, base: 12))
           .offset(angle12Position(for: dizhiIndex - 1, in: size, z: 3))

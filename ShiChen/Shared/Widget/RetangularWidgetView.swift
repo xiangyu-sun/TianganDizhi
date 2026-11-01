@@ -22,7 +22,7 @@ extension Date {
       let days = Int(ceil(interval / 86_400)) // floor of full days
 
       if days < 1 {
-        return jieqi.chineseName
+        return jieqi.localizedName(in: DisplayLanguage.app.glyphLanguage)
       }
     }
     return nil
@@ -30,10 +30,11 @@ extension Date {
 }
 
 struct RetangularWidgetView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let date: Date
   
   var god: String {
-    date.twelveGod().map { "·" + $0.chinese } ?? ""
+    date.twelveGod().map { "·" + $0.localizedName(in: displayLanguage.glyphLanguage) } ?? ""
   }
 
   var body: some View {
@@ -41,11 +42,11 @@ struct RetangularWidgetView: View {
 
     HStack {
      
-      Text(date.lunarDateWithZodiac + (date.nextJieJiWithinOneDay.map { "·" + $0 } ?? "") + god)
+      Text(date.lunarDateWithZodiac(language: displayLanguage) + (date.nextJieJiWithinOneDay.map { "·" + $0 } ?? "") + god)
         .font(.body)
       
       VStack() {
-        Text(shichen?.dizhi.displayHourText ?? "" )
+        Text(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "" )
         //Text("\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻")
       }
         .font(.headline)

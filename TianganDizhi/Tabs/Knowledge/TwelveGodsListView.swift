@@ -69,24 +69,25 @@ struct TwelveGodCell: View {
   let god: TwelveGods
   let isToday: Bool
   @Environment(\.bodyFont) var bodyFont
+  @Environment(\.displayLanguage) var displayLanguage
 
   var body: some View {
     VStack(alignment: .leading) {
       Spacer()
       Group {
 #if os(watchOS)
-        Text(god.chinese)
+        Text(god.localizedName(in: displayLanguage.glyphLanguage))
 #endif
-        Text(god.meaning)
-        Text("宜：\(god.do)")
-        Text("忌：\(god.dontDo)")
+        Text(god.meaning.converted(to: displayLanguage))
+        Text("宜：\(god.do.converted(to: displayLanguage))")
+        Text("忌：\(god.dontDo.converted(to: displayLanguage))")
       }
       .background(.ultraThinMaterial)
     }
     .padding()
     .font(bodyFont)
     .accessibilityElement(children: .combine)
-    .accessibilityLabel("\(god.chinese)，\(god.meaning)，宜：\(god.do)，忌：\(god.dontDo)")
+    .accessibilityLabel("\(god.localizedName(in: displayLanguage.glyphLanguage))，\(god.meaning.converted(to: displayLanguage))，宜：\(god.do.converted(to: displayLanguage))，忌：\(god.dontDo.converted(to: displayLanguage))")
     .overlay(alignment: .topTrailing) {
       if isToday {
         Text("今日")

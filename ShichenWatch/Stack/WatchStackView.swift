@@ -5,6 +5,7 @@ import JingluoShuxue
 // MARK: - WatchStackView
 
 struct WatchStackView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let date: Date
 
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
@@ -22,14 +23,14 @@ struct WatchStackView: View {
       if let shichen = date.shichen {
         HStack {
           VStack {
-            Text("\(shichen.dizhi.previous.displayHourText)")
+            Text("\(shichen.dizhi.previous.localizedHourName(in: displayLanguage.glyphLanguage))")
               .font(.footnote)
             ShichenWatchInformationView(shichen: shichen.dizhi.previous)
           }
           .foregroundStyle(Color.secondary)
 
           VStack {
-            Text("\(shichen.dizhi.displayHourText)")
+            Text("\(shichen.dizhi.localizedHourName(in: displayLanguage.glyphLanguage))")
               .font(.footnote)
               .scaleEffect(1.1)
 
@@ -37,7 +38,7 @@ struct WatchStackView: View {
           }
 
           VStack {
-            Text("\(shichen.dizhi.next.displayHourText)")
+            Text("\(shichen.dizhi.next.localizedHourName(in: displayLanguage.glyphLanguage))")
               .font(.footnote)
 
             ShichenWatchInformationView(shichen: shichen.dizhi.next)
@@ -57,12 +58,13 @@ struct WatchStackView: View {
 // MARK: - ShichenWatchInformationView
 
 struct ShichenWatchInformationView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
 
   let shichen: Dizhi
   var body: some View {
     HStack {
-      Text(shichen.aliasName)
-      Text(shichen.luizhu.organReference)
+      Text(shichen.aliasName.converted(to: displayLanguage))
+      Text(shichen.luizhu.organReference.converted(to: displayLanguage))
     }
     .widgetAccentable()
     .font(.footnote)

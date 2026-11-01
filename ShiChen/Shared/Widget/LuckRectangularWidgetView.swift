@@ -10,6 +10,7 @@ import WidgetKit
 // MARK: - LuckRectangularWidgetView
 
 struct LuckRectangularWidgetView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let date: Date
 
   private var god: TwelveGods? { date.twelveGod() }
@@ -34,7 +35,7 @@ struct LuckRectangularWidgetView: View {
     HStack {
       if let god {
         HStack() {
-          Text(god.chinese)
+          Text(god.localizedName(in: displayLanguage.glyphLanguage))
 
         }
       }
@@ -43,7 +44,7 @@ struct LuckRectangularWidgetView: View {
         Text("沖")
         Text(chong.chineseCharacter)
  
-        Text(Zodiac(chong).rawValue)
+        Text(Zodiac(chong).localizedName(in: displayLanguage.glyphLanguage))
       }
       
       Spacer()

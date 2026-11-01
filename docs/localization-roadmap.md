@@ -88,7 +88,21 @@ Original plan:
 7. Add a small unit test that fails when a shipping language has `new`/`needs_review` entries in the catalog.
 8. Add a rule to CLAUDE.md: new UI strings go through the catalog, and term names come from `localizedName(in: displayLanguage)`.
 
-### Phase 1 — Simplified Chinese · ~M (cheapest, fixes an advertised locale)
+### Phase 1 — Simplified Chinese · ✅ done 2026-11-01
+What landed:
+- Every catalog key has a zh-Hans value. The first pass was ICU `Hant-Hans`, then a review for mainland vocabulary (自定义, 信息, 保存, 窗口, 搜索, 界面, 默认, “”) and Apple's widget wording.
+- Displayed library terms go through `localizedName(in: displayLanguage.glyphLanguage)`.
+- Library prose that has no localized API goes through `String.converted(to:)`, which applies ICU only for zh-Hans. Trigram and hexagram names always come from Bagua, because ICU turns 乾 into 干.
+- Weibei SC is used for zh-Hans. Widgets keep LXGW WenKai TC.
+- `ChineseTranditionalCalendarUI` `21c6b75` adds `\.calendarLanguage` and its own zh-Hant, zh-Hans and en catalog. The app passes `glyphLanguage` to it.
+- `SimplifiedGlyphTests`.
+- Checked by eye in zh-Hans: the main screen, the Bagua view, the 卦 list and the calendar sheet. Widgets weren't checked on a device.
+
+Visible changes for zh-Hant users, all corrections:
+- The calendar package's 时辰, 时柱, 节气 and 经络 now render as 時辰, 時柱, 節氣 and 經絡.
+- Its Month/Week/Year tabs, previously English, are now in Chinese.
+
+Original plan:
 1. Convert every key with OpenCC (`t2s` + phrase table) to fill zh-Hans, then review by hand. Watch for 後→后, 曆→历, 臟→脏, 沖→冲, 衝 vs 沖, 鐘 vs 鍾, 乾 (the trigram stays 乾).
 2. Swap direct `chineseCharacter`/`chineseName`/`traditionalChineseName` display calls to `localizedName(in: termLanguage)`.
 3. Fonts: use Weibei **SC** for zh-Hans (also a downloadable Apple font; extend `WeibeiFont.activate()`). Widgets: the bundled LXGW WenKai TC covers all Simplified characters I tested but draws them with TC glyph forms. **Decision:** accept that, or also bundle LXGW WenKai (SC), which costs bundle size.

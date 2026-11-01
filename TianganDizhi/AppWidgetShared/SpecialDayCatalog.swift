@@ -49,14 +49,23 @@ enum SpecialDayCatalog {
   /// day is shown first, then the festival, then the solar term.
   static func sources(
     customHolidays: [CustomHoliday] = CustomHolidayStore.load(),
-    timeZone: TimeZone = .solarTerm
+    timeZone: TimeZone = .solarTerm,
+    language: DisplayLanguage = .app
   ) -> [SpecialDaySource] {
     var lunar = Calendar(identifier: .chinese)
     lunar.timeZone = timeZone
+    // Traditional Chinese (and every locale that keeps Chinese glyphs) uses
+    // the library's defaults; Simplified Chinese swaps in Simplified strings.
+    let festivals: any ChineseFestivalContentProvider = language.glyphLanguage == .zhHans
+      ? LocalizedFestivalContentProvider(language: .zhHans)
+      : DefaultFestivalContentProvider()
+    let jieqi: any JieqiContentProvider = language.glyphLanguage == .zhHans
+      ? SimplifiedJieqiContentProvider()
+      : DefaultJieqiContentProvider()
     return [
       RecurringDaySource(days: customHolidays.map(\.day), timeZone: timeZone),
-      FestivalSource(converter: DayConverter(calendar: lunar), timeZone: timeZone),
-      JieqiSource(timeZone: timeZone),
+      FestivalSource(converter: DayConverter(calendar: lunar), timeZone: timeZone, contentProvider: festivals),
+      JieqiSource(timeZone: timeZone, contentProvider: jieqi),
     ]
   }
 
@@ -70,31 +79,47 @@ enum SpecialDayCatalog {
   }
 }
 
+// MARK: - SimplifiedJieqiContentProvider
+
+/// 節氣 names, category and health tips in Simplified Chinese. The library
+/// translates the names; the tips are Traditional-only prose, so they go
+/// through the script transform.
+private struct SimplifiedJieqiContentProvider: JieqiContentProvider {
+  private let base = LocalizedJieqiContentProvider(language: .zhHans)
+
+  var category: String { base.category }
+  func name(for jieqi: Jieqi) -> String { base.name(for: jieqi) }
+  func detail(for jieqi: Jieqi) -> String { base.detail(for: jieqi).converted(to: .zhHans) }
+}
+
 // MARK: - Display text
 
 extension RecurringDay {
-  static let lunarMonthNames = ["正月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "冬月", "臘月"]
-
   /// The month as shown in pickers and lists: 正月…臘月 or 1月…12月.
-  static func monthText(_ month: Int, reckoning: Reckoning) -> String {
+  static func monthText(_ month: Int, reckoning: Reckoning, language: DisplayLanguage = .app) -> String {
     switch reckoning {
-    case .lunar: lunarMonthNames.indices.contains(month - 1) ? lunarMonthNames[month - 1] : String(localized: "\(month)月")
+    case .lunar: LunarMonth(number: month)?.localizedName(in: language.glyphLanguage) ?? String(localized: "\(month)月")
     case .gregorian: String(localized: "\(month)月", comment: "Gregorian month, e.g. 5月")
     }
   }
 
   /// The day as shown in pickers and lists: 初一…三十 or 1日…31日.
-  static func dayText(_ day: Int, reckoning: Reckoning) -> String {
+  static func dayText(_ day: Int, reckoning: Reckoning, language: DisplayLanguage = .app) -> String {
     switch reckoning {
-    case .lunar: Day(rawValue: day)?.name ?? "\(day)"
+    case .lunar: Day(rawValue: day)?.localizedName(in: language.glyphLanguage) ?? "\(day)"
     case .gregorian: String(localized: "\(day)日", comment: "Gregorian day of month, e.g. 1日")
     }
   }
 
   /// e.g. "農曆八月初三" or "公曆5月1日".
   var dateText: String {
-    let month = Self.monthText(month, reckoning: reckoning)
-    let day = Self.dayText(day, reckoning: reckoning)
+    dateText(language: .app)
+  }
+
+  /// ``dateText`` with the lunar month and day in the script of `language`.
+  func dateText(language: DisplayLanguage) -> String {
+    let month = Self.monthText(month, reckoning: reckoning, language: language)
+    let day = Self.dayText(day, reckoning: reckoning, language: language)
     return switch reckoning {
     case .lunar: String(localized: "農曆\(month)\(day)", comment: "Lunar date; %1$@ month (八月), %2$@ day (初三)")
     case .gregorian: String(localized: "公曆\(month)\(day)", comment: "Gregorian date; %1$@ month (5月), %2$@ day (1日)")

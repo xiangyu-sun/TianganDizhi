@@ -13,6 +13,7 @@ struct MoonInformationView: View {
 
   let info: WeatherData.Information
   @Environment(\.bodyFont) var bodyFont
+  @Environment(\.displayLanguage) var displayLanguage
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
 
@@ -40,9 +41,9 @@ struct MoonInformationView: View {
       HStack {
         Image(systemName: info.moonPhase.moonPhase.symbolName)
           .accessibilityHidden(true)
-        Text(info.moonPhase.name(traditionnal: useTranditionalNaming))
+        Text(info.moonPhase.name(traditionnal: useTranditionalNaming, language: displayLanguage))
         if let gua = info.moonPhase.gua {
-          Text(gua.description)
+          Text(gua.description(in: displayLanguage))
         }
       }
       .font(bodyFont)

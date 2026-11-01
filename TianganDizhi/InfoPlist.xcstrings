@@ -61,13 +61,13 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "天干地支需要获得您的当前位置许可，才能在小部件上显示您当地的月相信息。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "天干地支需要獲得您的當前位置許可，才能在小部件上顯示您當地的月相信息。"
           }
         }

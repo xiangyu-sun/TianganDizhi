@@ -14,6 +14,7 @@ import JingluoShuxue
 // MARK: - ShiChenEntryView
 
 struct ShiChenEntryView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   var entry: ShichenTimelineProvider.Entry
   @Environment(\.widgetFamily) var family
   @Environment(\.horizontalSizeClass) var horizontalSizeClass
@@ -42,10 +43,10 @@ struct ShiChenEntryView: View {
     case .accessoryInline:
         if horizontalSizeClass != .compact {
           HStack(spacing: 0) {
-            Text(entry.date.lunarDateWithZodiac)
+            Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
             if let shichen = entry.date.shichen {
               //let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
-              Text(shichen.dizhi.displayHourText)
+              Text(shichen.dizhi.localizedHourName(in: displayLanguage.glyphLanguage))
             }
           }
           .font(.body)
@@ -91,9 +92,9 @@ struct ShiChenEntryView: View {
 //              )
 //              .font(titleFont)      
             
-              Text(shichen.dizhi.aliasName)
+              Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
                 .font(titleFont)
-              Text(shichen.dizhi.luizhu.organReference)
+              Text(shichen.dizhi.luizhu.organReference.converted(to: displayLanguage))
                 .font(bodyFont)
             }
           }
@@ -116,7 +117,7 @@ struct ShiChenEntryView: View {
             FullDateTitleView(date: entry.date)
               .font(title3Font)
             
-            Text(entry.date.jieQiDisplayText)
+            Text(entry.date.jieQiDisplayText(language: displayLanguage))
               .font(bodyFont)
 
             if let shichen = entry.date.shichen {
@@ -128,9 +129,9 @@ struct ShiChenEntryView: View {
 
           if let shichen = entry.date.shichen {
             VStack {
-              Text(shichen.dizhi.aliasName)
+              Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
                 .font(largeTitleFont)
-              Text(shichen.dizhi.luizhu.organReference)
+              Text(shichen.dizhi.luizhu.organReference.converted(to: displayLanguage))
                 .font(bodyFont)
             }
             .padding(.top, 8)

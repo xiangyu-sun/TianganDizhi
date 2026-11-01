@@ -8,6 +8,7 @@ struct FangweiView: View {
   @Environment(\.footnote) var footnote
   @Environment(\.title3Font) var title3Font
   @Environment(\.title2Font) var title2Font
+  @Environment(\.displayLanguage) var displayLanguage
 
   // Cardinal directions arranged in compass order with center last
   private let cardinalDirections: [FangWei] = [.north, .east, .south, .west]
@@ -69,7 +70,7 @@ struct FangweiView: View {
         .strokeBorder(fangwei.wuxing.traditionalColor, lineWidth: 1.5)
         .frame(width: size, height: size)
       VStack(spacing: 2) {
-        Text(fangwei.chineseCharacter)
+        Text(fangwei.localizedName(in: displayLanguage.glyphLanguage))
           .font(title2Font)
         Text(fangwei.wuxing.chineseCharacter)
           .font(footnote)
@@ -77,7 +78,7 @@ struct FangweiView: View {
       }
     }
     .accessibilityElement(children: .combine)
-    .accessibilityLabel("\(fangwei.chineseCharacter)方，\(fangwei.wuxing.chineseCharacter)")
+    .accessibilityLabel("\(fangwei.localizedName(in: displayLanguage.glyphLanguage))方，\(fangwei.wuxing.chineseCharacter)")
   }
 
   // Maps FangWei to compass angle in radians (0 = right/East in math coords)
@@ -99,7 +100,7 @@ struct FangweiView: View {
         .fill(direction.wuxing.traditionalColor.opacity(0.3))
         .frame(width: 40, height: 40)
         .overlay(
-          Text(direction.chineseCharacter)
+          Text(direction.localizedName(in: displayLanguage.glyphLanguage))
             .font(title3Font)
         )
 
@@ -123,7 +124,7 @@ struct FangweiView: View {
     }
     .padding(.vertical, 4)
     .accessibilityElement(children: .combine)
-    .accessibilityLabel("\(direction.chineseCharacter)方，五行\(direction.wuxing.chineseCharacter)，天干\(direction.tiangan.0.chineseCharacter)\(direction.tiangan.1.chineseCharacter)")
+    .accessibilityLabel("\(direction.localizedName(in: displayLanguage.glyphLanguage))方，五行\(direction.wuxing.chineseCharacter)，天干\(direction.tiangan.0.chineseCharacter)\(direction.tiangan.1.chineseCharacter)")
   }
 }
 

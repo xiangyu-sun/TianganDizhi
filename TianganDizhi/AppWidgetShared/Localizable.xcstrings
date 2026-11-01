@@ -11,6 +11,12 @@
             "state" : "translated",
             "value" : " Weather). 點擊查看數據源信息"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Weather). 点击查看数据源信息"
+          }
         }
       }
     },
@@ -48,6 +54,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ 的生克關係"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 的生克关系"
           }
         }
       }
@@ -87,6 +99,12 @@
             "state" : "translated",
             "value" : "%1$@，%2$@，宜：%3$@，忌：%4$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@，%2$@，宜：%3$@，忌：%4$@"
+          }
         }
       }
     },
@@ -94,6 +112,12 @@
       "comment" : "Accessibility: a 干支 marked as the year pillar",
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，年柱"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@，年柱"
@@ -109,6 +133,12 @@
             "state" : "translated",
             "value" : "%@，日柱"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，日柱"
+          }
         }
       }
     },
@@ -120,6 +150,12 @@
             "state" : "translated",
             "value" : "%@，時柱"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，时柱"
+          }
         }
       }
     },
@@ -127,6 +163,12 @@
       "comment" : "Accessibility: a 干支 marked as the month pillar",
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，月柱"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@，月柱"
@@ -142,6 +184,12 @@
             "state" : "translated",
             "value" : "%@，每年重複。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，每年重复。"
+          }
         }
       }
     },
@@ -154,6 +202,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@，第%2$@刻，%3$@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@，第%2$@刻，%3$@"
@@ -196,6 +250,12 @@
             "state" : "translated",
             "value" : "%1$@克%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@克%2$@"
+          }
         }
       }
     },
@@ -212,12 +272,24 @@
             "state" : "translated",
             "value" : "%1$@冲%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@冲%2$@"
+          }
         }
       }
     },
     "%@刻" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@刻"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@刻"
@@ -238,6 +310,12 @@
             "state" : "translated",
             "value" : "%1$@方，%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@方，%2$@"
+          }
         }
       }
     },
@@ -254,6 +332,12 @@
             "state" : "translated",
             "value" : "%1$@方，五行%2$@，天干%3$@%4$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@方，五行%2$@，天干%3$@%4$@"
+          }
         }
       }
     },
@@ -264,6 +348,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@日後"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@日后"
           }
         }
       }
@@ -282,6 +372,12 @@
             "state" : "translated",
             "value" : "%1$@日後%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@日后%2$@"
+          }
         }
       }
     },
@@ -292,6 +388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@氣"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@气"
           }
         }
       }
@@ -309,6 +411,12 @@
             "state" : "translated",
             "value" : "%1$@生%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@生%2$@"
+          }
         }
       }
     },
@@ -318,6 +426,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@的關係"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@的关系"
           }
         }
       }
@@ -329,6 +443,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@節"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@节"
           }
         }
       }
@@ -344,6 +464,12 @@
             "state" : "translated",
             "value" : "%lld日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld日"
+          }
         }
       }
     },
@@ -354,6 +480,12 @@
             "state" : "translated",
             "value" : "%lld日後"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld日后"
+          }
         }
       }
     },
@@ -361,6 +493,12 @@
       "comment" : "Gregorian month, e.g. 5月",
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld月"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld月"
@@ -378,6 +516,12 @@
             "state" : "translated",
             "value" : "⌘C"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘C"
+          }
         }
       }
     },
@@ -388,12 +532,24 @@
             "state" : "translated",
             "value" : "⌘O"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘O"
+          }
         }
       }
     },
     "⌘Q" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⌘Q"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "⌘Q"
@@ -478,12 +634,24 @@
             "state" : "translated",
             "value" : "一年內沒有節日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一年内没有节日"
+          }
         }
       }
     },
     "三合" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "三合"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "三合"
@@ -499,6 +667,12 @@
             "state" : "translated",
             "value" : "下次：%@。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下次：%@。"
+          }
         }
       }
     },
@@ -508,6 +682,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "二十四節氣"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二十四节气"
           }
         }
       }
@@ -520,6 +700,12 @@
             "state" : "translated",
             "value" : "二十四節氣桌面組件%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二十四节气桌面组件%@"
+          }
         }
       }
     },
@@ -530,12 +716,24 @@
             "state" : "translated",
             "value" : "二十四節氣養生提示"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二十四节气养生提示"
+          }
         }
       }
     },
     "五味" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五味"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五味"
@@ -550,12 +748,24 @@
             "state" : "translated",
             "value" : "五方"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五方"
+          }
         }
       }
     },
     "五行" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五行"
@@ -570,12 +780,24 @@
             "state" : "translated",
             "value" : "五行：%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行：%@"
+          }
         }
       }
     },
     "五行以及衍生" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行以及衍生"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五行以及衍生"
@@ -590,6 +812,12 @@
             "state" : "translated",
             "value" : "五行分析"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行分析"
+          }
         }
       }
     },
@@ -600,12 +828,24 @@
             "state" : "translated",
             "value" : "五行屬性"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行属性"
+          }
         }
       }
     },
     "五行相生相克" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行相生相克"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五行相生相克"
@@ -620,12 +860,24 @@
             "state" : "translated",
             "value" : "五音"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五音"
+          }
         }
       }
     },
     "今日" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日"
@@ -637,6 +889,12 @@
       "comment" : "Share text line",
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日：%@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日：%@"
@@ -653,6 +911,12 @@
             "state" : "translated",
             "value" : "今日宜忌"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日宜忌"
+          }
         }
       }
     },
@@ -661,6 +925,12 @@
       "isCommentAutoGenerated" : true,
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日宜忌配置"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日宜忌配置"
@@ -677,6 +947,12 @@
             "state" : "translated",
             "value" : "今日沖"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日冲"
+          }
         }
       }
     },
@@ -686,6 +962,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日節日：%@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日节日：%@"
           }
         }
       }
@@ -697,6 +979,12 @@
             "state" : "translated",
             "value" : "今日自訂節日：%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日自定义节日：%@"
+          }
         }
       }
     },
@@ -706,6 +994,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "以下為天干地支相關的快速查閱表格，適合作為參考工具。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以下为天干地支相关的快速查阅表格，适合作为参考工具。"
           }
         }
       }
@@ -717,6 +1011,12 @@
             "state" : "translated",
             "value" : "以十二時辰、二十四節氣與天干地支，顯示當下的傳統曆法、星象及天氣。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以十二时辰、二十四节气与天干地支，显示当下的传统历法、星象及天气。"
+          }
         }
       }
     },
@@ -727,12 +1027,24 @@
             "state" : "translated",
             "value" : "以系統預設字體取代魏碑字體"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以系统默认字体取代魏碑字体"
+          }
         }
       }
     },
     "伏羲先天八卦" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "伏羲先天八卦"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "伏羲先天八卦"
@@ -747,6 +1059,12 @@
             "state" : "translated",
             "value" : "伏羲先天八卦：伏羲創作的先天八卦排列方式"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "伏羲先天八卦：伏羲创作的先天八卦排列方式"
+          }
         }
       }
     },
@@ -756,6 +1074,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "使用東八區時間（UTC+8）"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用东八区时间（UTC+8）"
           }
         }
       }
@@ -767,6 +1091,12 @@
             "state" : "translated",
             "value" : "使用系統字體"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用系统字体"
+          }
         }
       }
     },
@@ -776,6 +1106,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "備註（選填）"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "备注（可选）"
           }
         }
       }
@@ -787,6 +1123,12 @@
             "state" : "translated",
             "value" : "儲存"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
         }
       }
     },
@@ -797,12 +1139,24 @@
             "state" : "translated",
             "value" : "允許匿名使用統計"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允许匿名使用统计"
+          }
         }
       }
     },
     "克" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "克"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "克"
@@ -817,12 +1171,24 @@
             "state" : "translated",
             "value" : "克我"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "克我"
+          }
         }
       }
     },
     "全部" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "全部"
@@ -837,6 +1203,12 @@
             "state" : "translated",
             "value" : "八卦"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "八卦"
+          }
         }
       }
     },
@@ -846,6 +1218,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "公曆"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公历"
           }
         }
       }
@@ -864,12 +1242,24 @@
             "state" : "translated",
             "value" : "公曆%1$@%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公历%1$@%2$@"
+          }
         }
       }
     },
     "六冲" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六冲"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "六冲"
@@ -884,6 +1274,12 @@
             "state" : "translated",
             "value" : "六十甲子"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六十甲子"
+          }
         }
       }
     },
@@ -893,6 +1289,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "六十甲子（含納音）"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六十甲子（含纳音）"
           }
         }
       }
@@ -904,6 +1306,12 @@
             "state" : "translated",
             "value" : "六十納音"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六十纳音"
+          }
         }
       }
     },
@@ -914,12 +1322,24 @@
             "state" : "translated",
             "value" : "六合"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六合"
+          }
         }
       }
     },
     "六害" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六害"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "六害"
@@ -941,12 +1361,24 @@
             "state" : "translated",
             "value" : "最高%1$@最低%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最高%1$@最低%2$@"
+          }
         }
       }
     },
     "冲" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冲"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "冲"
@@ -961,6 +1393,12 @@
             "state" : "translated",
             "value" : "冲%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冲%@"
+          }
         }
       }
     },
@@ -970,6 +1408,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "出生地使用 UTC+8 時區（北京、台北、新加坡）"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出生地使用 UTC+8 时区（北京、台北、新加坡）"
           }
         }
       }
@@ -981,6 +1425,12 @@
             "state" : "translated",
             "value" : "出生日期時辰"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出生日期时辰"
+          }
         }
       }
     },
@@ -990,6 +1440,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "分享今日時辰資訊"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分享今日时辰信息"
           }
         }
       }
@@ -1001,6 +1457,12 @@
             "state" : "translated",
             "value" : "別名"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "别名"
+          }
         }
       }
     },
@@ -1010,6 +1472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "刪除"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
           }
         }
       }
@@ -1021,6 +1489,12 @@
             "state" : "translated",
             "value" : "前往設置"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前往设置"
+          }
         }
       }
     },
@@ -1031,12 +1505,24 @@
             "state" : "translated",
             "value" : "加入小組件"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加小组件"
+          }
         }
       }
     },
     "十二地支" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二地支"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二地支"
@@ -1051,12 +1537,24 @@
             "state" : "translated",
             "value" : "十二地支为名的十二时辰組件，更新频率为十五分鐘。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二地支为名的十二时辰组件，更新频率为十五分钟。"
+          }
         }
       }
     },
     "十二地支表" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二地支表"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二地支表"
@@ -1071,12 +1569,24 @@
             "state" : "translated",
             "value" : "十二建除神"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二建除神"
+          }
         }
       }
     },
     "十二时辰" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二时辰"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二时辰"
@@ -1091,6 +1601,12 @@
             "state" : "translated",
             "value" : "十二時辰頌"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二时辰颂"
+          }
         }
       }
     },
@@ -1101,12 +1617,24 @@
             "state" : "translated",
             "value" : "十二生肖與五行"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二生肖与五行"
+          }
         }
       }
     },
     "十二神" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二神"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二神"
@@ -1121,6 +1649,12 @@
             "state" : "translated",
             "value" : "十二辟卦"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二辟卦"
+          }
         }
       }
     },
@@ -1131,12 +1665,24 @@
             "state" : "translated",
             "value" : "十二辟卦文字方向配圓弧"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二辟卦文字方向配圆弧"
+          }
         }
       }
     },
     "十天干" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十天干"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十天干"
@@ -1151,12 +1697,24 @@
             "state" : "translated",
             "value" : "協助改進App，不收集個人身份資訊"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帮助改进App，不收集个人身份信息"
+          }
         }
       }
     },
     "卦" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "卦"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "卦"
@@ -1171,6 +1729,12 @@
             "state" : "translated",
             "value" : "參考"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "参考"
+          }
         }
       }
     },
@@ -1181,12 +1745,24 @@
             "state" : "translated",
             "value" : "參考圖示"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "参考图示"
+          }
         }
       }
     },
     "取消" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
@@ -1201,6 +1777,12 @@
             "state" : "translated",
             "value" : "合"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "合"
+          }
         }
       }
     },
@@ -1210,6 +1792,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "名稱，如：媽媽生日"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名称，如：妈妈生日"
           }
         }
       }
@@ -1221,12 +1809,24 @@
             "state" : "translated",
             "value" : "唐譜：%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "唐谱：%@"
+          }
         }
       }
     },
     "唱名：%@" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "唱名：%@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "唱名：%@"
@@ -1241,12 +1841,24 @@
             "state" : "translated",
             "value" : "四季"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四季"
+          }
         }
       }
     },
     "四柱" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四柱"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "四柱"
@@ -1261,6 +1873,12 @@
             "state" : "translated",
             "value" : "四柱八字推算"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "四柱八字推算"
+          }
         }
       }
     },
@@ -1271,12 +1889,24 @@
             "state" : "translated",
             "value" : "地區與日曆"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地区与日历"
+          }
         }
       }
     },
     "地支" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "地支"
@@ -1291,12 +1921,24 @@
             "state" : "translated",
             "value" : "地支，十二律呂，西洋調名"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支，十二律吕，西洋调名"
+          }
         }
       }
     },
     "地支：" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支："
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "地支："
@@ -1311,6 +1953,12 @@
             "state" : "translated",
             "value" : "地支沖合害"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支冲合害"
+          }
         }
       }
     },
@@ -1320,6 +1968,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地支與陰曆月份"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支与阴历月份"
           }
         }
       }
@@ -1331,12 +1985,24 @@
             "state" : "translated",
             "value" : "夜間深色模式下組件文字顯示為黑色"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "夜间深色模式下组件文字显示为黑色"
+          }
         }
       }
     },
     "大理石" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大理石"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "大理石"
@@ -1351,12 +2017,24 @@
             "state" : "translated",
             "value" : "大運"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大运"
+          }
         }
       }
     },
     "天干" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "天干"
@@ -1377,12 +2055,24 @@
             "state" : "translated",
             "value" : "天干：%1$@%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干：%1$@%2$@"
+          }
         }
       }
     },
     "天干地支" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "天干地支"
@@ -1397,6 +2087,12 @@
             "state" : "translated",
             "value" : "天干地支五行"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支五行"
+          }
         }
       }
     },
@@ -1406,6 +2102,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "天干地支小組件 - %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支小组件 - %@"
           }
         }
       }
@@ -1417,6 +2119,12 @@
             "state" : "translated",
             "value" : "天氣以及日月信息來自("
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天气以及日月信息来自("
+          }
         }
       }
     },
@@ -1427,12 +2135,24 @@
             "state" : "translated",
             "value" : "女"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "女"
+          }
         }
       }
     },
     "子午流注" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "子午流注"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "子午流注"
@@ -1449,6 +2169,12 @@
             "state" : "translated",
             "value" : "宜"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宜"
+          }
         }
       }
     },
@@ -1456,6 +2182,12 @@
       "comment" : "Share text line",
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宜：%@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "宜：%@"
@@ -1470,6 +2202,12 @@
             "state" : "translated",
             "value" : "宣紙"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宣纸"
+          }
         }
       }
     },
@@ -1480,12 +2218,24 @@
             "state" : "translated",
             "value" : "宣紙質感或大理石紋理"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宣纸质感或大理石纹理"
+          }
         }
       }
     },
     "害" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "害"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "害"
@@ -1500,6 +2250,12 @@
             "state" : "translated",
             "value" : "小組件上顯示當日月相符號"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小组件上显示当日月相符号"
+          }
         }
       }
     },
@@ -1509,6 +2265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "小組件在春節期間使用紅色背景"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小组件在春节期间使用红色背景"
           }
         }
       }
@@ -1520,6 +2282,12 @@
             "state" : "translated",
             "value" : "小組件已更新"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小组件已更新"
+          }
         }
       }
     },
@@ -1530,6 +2298,12 @@
             "state" : "translated",
             "value" : "小組件隨節氣變換"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小组件随节气变换"
+          }
         }
       }
     },
@@ -1539,6 +2313,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "尚未添加自訂節日"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未添加自定义节日"
           }
         }
       }
@@ -1553,6 +2333,12 @@
             "state" : "translated",
             "value" : "年柱"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "年柱"
+          }
         }
       }
     },
@@ -1563,6 +2349,12 @@
             "state" : "translated",
             "value" : "後%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "后%@"
+          }
         }
       }
     },
@@ -1571,6 +2363,12 @@
       "isCommentAutoGenerated" : true,
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "忌"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "忌"
@@ -1586,6 +2384,12 @@
             "state" : "translated",
             "value" : "忌：%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "忌：%@"
+          }
         }
       }
     },
@@ -1595,6 +2399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "快速查閱表"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速查阅表"
           }
         }
       }
@@ -1606,6 +2416,12 @@
             "state" : "translated",
             "value" : "性別"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "性别"
+          }
         }
       }
     },
@@ -1616,12 +2432,24 @@
             "state" : "translated",
             "value" : "您似乎不在東八區（UTC+8），節日是否以東八區時間計算？"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您似乎不在东八区（UTC+8），节日是否以东八区时间计算？"
+          }
         }
       }
     },
     "我克" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我克"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "我克"
@@ -1636,6 +2464,12 @@
             "state" : "translated",
             "value" : "我生"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我生"
+          }
         }
       }
     },
@@ -1646,12 +2480,24 @@
             "state" : "translated",
             "value" : "打開主視窗"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开主窗口"
+          }
         }
       }
     },
     "推算" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "推算"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "推算"
@@ -1666,6 +2512,12 @@
             "state" : "translated",
             "value" : "換算後（UTC+8）：%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "换算后（UTC+8）：%@"
+          }
         }
       }
     },
@@ -1675,6 +2527,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "文王後天八卦"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文王后天八卦"
           }
         }
       }
@@ -1686,12 +2544,24 @@
             "state" : "translated",
             "value" : "文王後天八卦：文王創作的後天八卦排列方式"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文王后天八卦：文王创作的后天八卦排列方式"
+          }
         }
       }
     },
     "方位" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "方位"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "方位"
@@ -1706,12 +2576,24 @@
             "state" : "translated",
             "value" : "日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日"
+          }
         }
       }
     },
     "日主：" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日主："
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日主："
@@ -1726,12 +2608,24 @@
             "state" : "translated",
             "value" : "日出"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日出"
+          }
         }
       }
     },
     "日出 %@" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日出 %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日出 %@"
@@ -1747,12 +2641,24 @@
             "state" : "translated",
             "value" : "日期：%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日期：%@"
+          }
         }
       }
     },
     "日柱" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日柱"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日柱"
@@ -1767,12 +2673,24 @@
             "state" : "translated",
             "value" : "日落"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日落"
+          }
         }
       }
     },
     "日落 %@" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日落 %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日落 %@"
@@ -1787,6 +2705,12 @@
             "state" : "translated",
             "value" : "旺"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "旺"
+          }
         }
       }
     },
@@ -1797,12 +2721,24 @@
             "state" : "translated",
             "value" : "星宿: %@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星宿: %@"
+          }
         }
       }
     },
     "星象: %@" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星象: %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "星象: %@"
@@ -1819,6 +2755,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星象：%1$@，星宿：%2$@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "星象：%1$@，星宿：%2$@"
@@ -1840,6 +2782,12 @@
             "state" : "translated",
             "value" : "星象：%1$@·%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星象：%1$@·%2$@"
+          }
         }
       }
     },
@@ -1849,6 +2797,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "春節氣氛組件設置"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "春节气氛组件设置"
           }
         }
       }
@@ -1860,6 +2814,12 @@
             "state" : "translated",
             "value" : "時區設置"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时区设置"
+          }
         }
       }
     },
@@ -1869,6 +2829,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "時柱"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时柱"
           }
         }
       }
@@ -1880,6 +2846,12 @@
             "state" : "translated",
             "value" : "時辰"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时辰"
+          }
         }
       }
     },
@@ -1890,6 +2862,12 @@
             "state" : "translated",
             "value" : "時辰、節氣、農曆無需打開App，一眼可見。在桌面按右鍵，選擇「編輯小工具」，搜尋「天干地支」即可加入。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时辰、节气、农历无需打开App，一眼可见。在桌面上点按右键，选择“编辑小组件”，搜索“天干地支”即可添加。"
+          }
         }
       }
     },
@@ -1899,6 +2877,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "時辰、節氣、農曆無需打開App，一眼可見。長按主畫面空白處，點「編輯」→「加入小工具」，搜尋「天干地支」即可加入；鎖定畫面同樣適用。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时辰、节气、农历无需打开App，一眼可见。长按主屏幕空白处，轻点“编辑”→“添加小组件”，搜索“天干地支”即可添加；锁定屏幕同样适用。"
           }
         }
       }
@@ -1917,6 +2901,12 @@
             "state" : "translated",
             "value" : "時辰：%1$@（%2$@）"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时辰：%1$@（%2$@）"
+          }
         }
       }
     },
@@ -1926,6 +2916,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "時辰及節氣使用傳統古稱"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时辰及节气使用传统古称"
           }
         }
       }
@@ -1937,6 +2933,12 @@
             "state" : "translated",
             "value" : "時辰的別名"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时辰的别名"
+          }
         }
       }
     },
@@ -1946,6 +2948,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "時辰與小時"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时辰与小时"
           }
         }
       }
@@ -1957,6 +2965,12 @@
             "state" : "translated",
             "value" : "曆法"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "历法"
+          }
         }
       }
     },
@@ -1967,12 +2981,24 @@
             "state" : "translated",
             "value" : "月"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月"
+          }
         }
       }
     },
     "月升" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月升"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "月升"
@@ -1989,6 +3015,12 @@
             "state" : "translated",
             "value" : "月曆"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月历"
+          }
         }
       }
     },
@@ -1998,6 +3030,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "月曆，點擊查看"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月历，点击查看"
           }
         }
       }
@@ -2009,12 +3047,24 @@
             "state" : "translated",
             "value" : "月曆配置"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月历配置"
+          }
         }
       }
     },
     "月柱" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月柱"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "月柱"
@@ -2029,12 +3079,24 @@
             "state" : "translated",
             "value" : "月落"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月落"
+          }
         }
       }
     },
     "模式" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "模式"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "模式"
@@ -2049,6 +3111,12 @@
             "state" : "translated",
             "value" : "歡迎使用時辰"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欢迎使用时辰"
+          }
         }
       }
     },
@@ -2061,6 +3129,12 @@
             "state" : "translated",
             "value" : "沖"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "冲"
+          }
         }
       }
     },
@@ -2070,6 +3144,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "海外用戶：節日與節氣以東八區時間（UTC+8）計算"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海外用户：节日与节气以东八区时间（UTC+8）计算"
           }
         }
       }
@@ -2081,6 +3161,12 @@
             "state" : "translated",
             "value" : "海外用戶開啟後節日與節氣以中國標準時間計算"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海外用户开启后节日与节气以中国标准时间计算"
+          }
         }
       }
     },
@@ -2090,6 +3176,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "添加生日、紀念日等每年重複的日子，它們會顯示在節日曆和「節氣與節日」小組件中。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加生日、纪念日等每年重复的日子，它们会显示在节日历和“节气与节日”小组件中。"
           }
         }
       }
@@ -2101,6 +3193,12 @@
             "state" : "translated",
             "value" : "添加自訂節日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加自定义节日"
+          }
         }
       }
     },
@@ -2110,6 +3208,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "清除選擇"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除选择"
           }
         }
       }
@@ -2121,6 +3225,12 @@
             "state" : "translated",
             "value" : "無三合"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无三合"
+          }
         }
       }
     },
@@ -2131,12 +3241,24 @@
             "state" : "translated",
             "value" : "無結果"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无结果"
+          }
         }
       }
     },
     "生" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "生"
@@ -2151,12 +3273,24 @@
             "state" : "translated",
             "value" : "生我"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "生我"
+          }
         }
       }
     },
     "用神" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用神"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "用神"
@@ -2171,6 +3305,12 @@
             "state" : "translated",
             "value" : "男"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "男"
+          }
         }
       }
     },
@@ -2180,6 +3320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "當前"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前"
           }
         }
       }
@@ -2199,6 +3345,12 @@
             "state" : "translated",
             "value" : "當前時辰：%1$@，%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前时辰：%1$@，%2$@"
+          }
         }
       }
     },
@@ -2210,12 +3362,24 @@
             "state" : "translated",
             "value" : "當前時辰%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前时辰%@"
+          }
         }
       }
     },
     "相克" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相克"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "相克"
@@ -2230,6 +3394,12 @@
             "state" : "translated",
             "value" : "相生"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相生"
+          }
         }
       }
     },
@@ -2239,6 +3409,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "節日"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "节日"
           }
         }
       }
@@ -2250,6 +3426,12 @@
             "state" : "translated",
             "value" : "節日倒數"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "节日倒数"
+          }
         }
       }
     },
@@ -2259,6 +3441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "節日曆"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "节日历"
           }
         }
       }
@@ -2270,6 +3458,12 @@
             "state" : "translated",
             "value" : "節日與節氣使用東八區時間"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "节日与节气使用东八区时间"
+          }
         }
       }
     },
@@ -2279,6 +3473,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "節氣"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "节气"
           }
         }
       }
@@ -2290,6 +3490,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "節氣：%@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "节气：%@"
           }
         }
       }
@@ -2303,6 +3509,12 @@
             "state" : "translated",
             "value" : "節氣與節日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "节气与节日"
+          }
         }
       }
     },
@@ -2315,6 +3527,12 @@
             "state" : "translated",
             "value" : "節氣養生"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "节气养生"
+          }
         }
       }
     },
@@ -2324,6 +3542,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "節氣養生配置"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "节气养生配置"
           }
         }
       }
@@ -2335,6 +3559,12 @@
             "state" : "translated",
             "value" : "管理自訂節日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理自定义节日"
+          }
         }
       }
     },
@@ -2344,6 +3574,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "組件夜間模式使用黑字"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "组件夜间模式使用黑字"
           }
         }
       }
@@ -2355,6 +3591,12 @@
             "state" : "translated",
             "value" : "組件紅底"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "组件红底"
+          }
         }
       }
     },
@@ -2364,6 +3606,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "組件顯示月相"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "组件显示月相"
           }
         }
       }
@@ -2375,6 +3623,12 @@
             "state" : "translated",
             "value" : "綜合圖示"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "综合图示"
+          }
         }
       }
     },
@@ -2385,12 +3639,24 @@
             "state" : "translated",
             "value" : "編輯自訂節日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "编辑自定义节日"
+          }
         }
       }
     },
     "缺" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缺"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "缺"
@@ -2405,6 +3671,12 @@
             "state" : "translated",
             "value" : "缺失五行"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缺失五行"
+          }
         }
       }
     },
@@ -2414,6 +3686,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "背景風格"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背景风格"
           }
         }
       }
@@ -2425,6 +3703,12 @@
             "state" : "translated",
             "value" : "臟腑和情緒"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "脏腑和情绪"
+          }
         }
       }
     },
@@ -2434,6 +3718,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自訂"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义"
           }
         }
       }
@@ -2446,6 +3736,12 @@
             "state" : "translated",
             "value" : "自訂：%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义：%@"
+          }
         }
       }
     },
@@ -2456,12 +3752,24 @@
             "state" : "translated",
             "value" : "自訂節日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义节日"
+          }
         }
       }
     },
     "色彩" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "色彩"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "色彩"
@@ -2476,6 +3784,12 @@
             "state" : "translated",
             "value" : "若當月沒有這一天（如農曆小月的三十、非閏年的2月29日），則在當月最後一天。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "若当月没有这一天（如农历小月的三十、非闰年的2月29日），则在当月最后一天。"
+          }
         }
       }
     },
@@ -2485,6 +3799,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "複製時辰資訊"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "复制时辰信息"
           }
         }
       }
@@ -2496,6 +3816,12 @@
             "state" : "translated",
             "value" : "設置"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
+          }
         }
       }
     },
@@ -2505,6 +3831,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "起運：%lld歲"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "起运：%lld岁"
           }
         }
       }
@@ -2523,6 +3855,12 @@
             "state" : "translated",
             "value" : "距離%1$@還有 %2$lld 分鐘"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距离%1$@还有 %2$lld 分钟"
+          }
         }
       }
     },
@@ -2539,6 +3877,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "距離%1$@還有 %2$lld 小時"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距离%1$@还有 %2$lld 小时"
           }
         }
       }
@@ -2557,12 +3901,24 @@
             "state" : "translated",
             "value" : "距離%1$@還有 %2$lld 小時 %3$lld 分鐘"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距离%1$@还有 %2$lld 小时 %3$lld 分钟"
+          }
         }
       }
     },
     "辟卦" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "辟卦"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "辟卦"
@@ -2577,6 +3933,12 @@
             "state" : "translated",
             "value" : "辟卦圓形圖中文字沿圓弧方向排列"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "辟卦圆形图中文字沿圆弧方向排列"
+          }
         }
       }
     },
@@ -2586,6 +3948,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "農曆"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "农历"
           }
         }
       }
@@ -2604,6 +3972,12 @@
             "state" : "translated",
             "value" : "農曆%1$@%2$@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "农历%1$@%2$@"
+          }
         }
       }
     },
@@ -2613,6 +3987,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "農曆年月日"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "农历年月日"
           }
         }
       }
@@ -2624,6 +4004,12 @@
             "state" : "translated",
             "value" : "農曆年月日以及十二时辰，臟器，月相"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "农历年月日以及十二时辰，脏器，月相"
+          }
         }
       }
     },
@@ -2633,6 +4019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "農曆新年倒數組件"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "农历新年倒数组件"
           }
         }
       }
@@ -2644,12 +4036,24 @@
             "state" : "translated",
             "value" : "農曆月曆組件"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "农历月历组件"
+          }
         }
       }
     },
     "退出" : {
       "localizations" : {
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "退出"
@@ -2664,6 +4068,12 @@
             "state" : "translated",
             "value" : "開始使用"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始使用"
+          }
         }
       }
     },
@@ -2673,6 +4083,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟定位以顯示天氣與日出日落"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启定位以显示天气与日出日落"
           }
         }
       }
@@ -2684,6 +4100,12 @@
             "state" : "translated",
             "value" : "開啟後全App使用系統字體而非魏碑字體"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启后全App使用系统字体而非魏碑字体"
+          }
         }
       }
     },
@@ -2693,6 +4115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟後夜間深色模式下組件文字顯示為黑色"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启后夜间深色模式下组件文字显示为黑色"
           }
         }
       }
@@ -2704,6 +4132,12 @@
             "state" : "translated",
             "value" : "開啟後小組件在春節期間顯示紅色背景"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启后小组件在春节期间显示红色背景"
+          }
         }
       }
     },
@@ -2713,6 +4147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟後小組件會顯示當日月相符號"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启后小组件会显示当日月相符号"
           }
         }
       }
@@ -2724,6 +4164,12 @@
             "state" : "translated",
             "value" : "開啟後時辰及節氣顯示傳統古稱"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启后时辰及节气显示传统古称"
+          }
         }
       }
     },
@@ -2733,6 +4179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟後辟卦圓形圖的文字會沿圓弧方向排列"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启后辟卦圆形图的文字会沿圆弧方向排列"
           }
         }
       }
@@ -2744,6 +4196,12 @@
             "state" : "translated",
             "value" : "關閉後App不再收集任何匿名使用統計"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭后App不再收集任何匿名使用统计"
+          }
         }
       }
     },
@@ -2753,6 +4211,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "陰"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阴"
           }
         }
       }
@@ -2764,6 +4228,12 @@
             "state" : "translated",
             "value" : "陰曆十二辟卦"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阴历十二辟卦"
+          }
         }
       }
     },
@@ -2773,6 +4243,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "陰曆十二辟卦：農曆月份對應的辟卦"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阴历十二辟卦：农历月份对应的辟卦"
           }
         }
       }
@@ -2784,6 +4260,12 @@
             "state" : "translated",
             "value" : "陽"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阳"
+          }
         }
       }
     },
@@ -2793,6 +4275,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "陽曆十二辟卦"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阳历十二辟卦"
           }
         }
       }
@@ -2804,6 +4292,12 @@
             "state" : "translated",
             "value" : "陽曆十二辟卦：西曆月份對應的辟卦"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阳历十二辟卦：西历月份对应的辟卦"
+          }
         }
       }
     },
@@ -2814,6 +4308,12 @@
             "state" : "translated",
             "value" : "隱私"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐私"
+          }
         }
       }
     },
@@ -2823,6 +4323,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "類別"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "类别"
           }
         }
       }
@@ -2836,6 +4342,12 @@
             "state" : "translated",
             "value" : "顯示今日建除神、宜忌事項及日支沖"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示今日建除神、宜忌事项及日支冲"
+          }
         }
       }
     },
@@ -2848,6 +4360,12 @@
             "state" : "translated",
             "value" : "顯示今日建除神及宜忌事項"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示今日建除神及宜忌事项"
+          }
         }
       }
     },
@@ -2858,6 +4376,12 @@
             "state" : "translated",
             "value" : "顯示以十二地支為命名基礎的農曆年，月，日，俗稱，以及相關臟器信息的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示以十二地支为命名基础的农历年，月，日，俗称，以及相关脏器信息的小组件。桌面组件需要您在锁屏界面长按屏幕来配置。"
+          }
         }
       }
     },
@@ -2867,6 +4391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "顯示傳統名稱"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示传统名称"
           }
         }
       }
@@ -2880,6 +4410,12 @@
             "state" : "translated",
             "value" : "顯示最近的節氣、傳統節日或自訂節日，以及距今天數"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示最近的节气、传统节日或自定义节日，以及距今天数"
+          }
         }
       }
     },
@@ -2889,6 +4425,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "顯示十二地支為命名基礎的農曆年，月，日以及時辰的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示十二地支为命名基础的农历年，月，日以及时辰的小组件。桌面组件需要您在锁屏界面长按屏幕来配置。"
           }
         }
       }
@@ -2902,6 +4444,12 @@
             "state" : "translated",
             "value" : "顯示當前節氣養生提示及時令食物的中尺寸組件"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示当前节气养生提示及时令食物的中尺寸组件"
+          }
         }
       }
     },
@@ -2911,6 +4459,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "顯示節氣"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示节气"
           }
         }
       }
@@ -2922,6 +4476,12 @@
             "state" : "translated",
             "value" : "顯示設置"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示设置"
+          }
         }
       }
     },
@@ -2931,6 +4491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "顯示農曆日"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示农历日"
           }
         }
       }
@@ -2944,6 +4510,12 @@
             "state" : "translated",
             "value" : "顯示農曆月曆，含節氣、傳統節日、自訂節日與農曆日名的大尺寸組件"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示农历月历，含节气、传统节日、自定义节日与农历日名的大尺寸组件"
+          }
         }
       }
     },
@@ -2954,6 +4526,12 @@
             "state" : "translated",
             "value" : "點擊五行節點查看相生相克關係"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点击五行节点查看相生相克关系"
+          }
         }
       }
     },
@@ -2963,6 +4541,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "點擊重試"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点击重试"
           }
         }
       }

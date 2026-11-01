@@ -6,6 +6,7 @@ import SwiftUI
 struct NayinListView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
+  @Environment(\.displayLanguage) var displayLanguage
 
   // Each Nayin is shared by two consecutive Ganzhi (e.g. 甲子/乙丑 → 海中金)
   let jiazi = getJiazhi()
@@ -30,11 +31,11 @@ struct NayinListView: View {
               .foregroundStyle(.secondary)
           }
           Spacer()
-          Text(nayin.traditionalChineseName)
+          Text(nayin.localizedName(in: displayLanguage.glyphLanguage))
             .font(bodyFont)
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(first.description)、\(second.description)，\(nayin.traditionalChineseName)")
+        .accessibilityLabel("\(first.description)、\(second.description)，\(nayin.localizedName(in: displayLanguage.glyphLanguage))")
       }
     }
     .navigationTitle("六十納音")

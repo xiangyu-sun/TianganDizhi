@@ -14,6 +14,7 @@ import SwiftUI
 struct JieqiCell: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.title3Font) var title3Font
+  @Environment(\.displayLanguage) var displayLanguage
 
   let jieqi: Jieqi
   var isCurrent: Bool = false
@@ -23,11 +24,11 @@ struct JieqiCell: View {
     #if os(watchOS)
     VStack(alignment: .leading) {
       jieqiHeader
-      Text(jieqi.qishierHou)
+      Text(jieqi.qishierHou.converted(to: displayLanguage))
         .font(bodyFont)
-      Text(jieqi.healthTip)
+      Text(jieqi.healthTip.converted(to: displayLanguage))
         .font(bodyFont)
-      Text(jieqi.seasonalFoods)
+      Text(jieqi.seasonalFoods.converted(to: displayLanguage))
         .font(bodyFont)
 
       Image(uiImage: jieqi.image)
@@ -36,17 +37,17 @@ struct JieqiCell: View {
         .accessibilityHidden(true)
     }
     .accessibilityElement(children: .combine)
-    .accessibilityLabel("\(jieqi.chineseName)，\(jieqi.qi ? "氣" : "節")，\(jieqi.qishierHou)")
+    .accessibilityLabel("\(jieqi.localizedName(in: displayLanguage.glyphLanguage))，\((jieqi.qi ? "氣" : "節").converted(to: displayLanguage))，\(jieqi.qishierHou.converted(to: displayLanguage))")
 
     #else
     HStack {
       VStack(alignment: .leading) {
         jieqiHeader
-        Text(jieqi.qishierHou)
+        Text(jieqi.qishierHou.converted(to: displayLanguage))
           .font(bodyFont)
-        Text(jieqi.healthTip)
+        Text(jieqi.healthTip.converted(to: displayLanguage))
           .font(bodyFont)
-        Text(jieqi.seasonalFoods)
+        Text(jieqi.seasonalFoods.converted(to: displayLanguage))
           .font(bodyFont)
       }
       #if os(macOS)
@@ -62,7 +63,7 @@ struct JieqiCell: View {
       #endif
     }
     .accessibilityElement(children: .combine)
-    .accessibilityLabel("\(jieqi.chineseName)，\(jieqi.qi ? "氣" : "節")，\(jieqi.qishierHou)")
+    .accessibilityLabel("\(jieqi.localizedName(in: displayLanguage.glyphLanguage))，\((jieqi.qi ? "氣" : "節").converted(to: displayLanguage))，\(jieqi.qishierHou.converted(to: displayLanguage))")
     .listRowBackground(isCurrent ? Color.accentColor.opacity(0.12) : Color.clear)
     #endif
   }
@@ -70,8 +71,8 @@ struct JieqiCell: View {
   private var jieqiHeader: some View {
     HStack {
       HStack {
-        Text(jieqi.chineseName)
-        Text("(\(jieqi.qi ? "氣" : "節"))")
+        Text(jieqi.localizedName(in: displayLanguage.glyphLanguage))
+        Text("(\((jieqi.qi ? "氣" : "節").converted(to: displayLanguage)))")
       }
       .font(title3Font)
 

@@ -7,6 +7,7 @@ struct LiushisiGuaView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.title3Font) var title3Font
   @Environment(\.footnote) var footnote
+  @Environment(\.displayLanguage) var displayLanguage
   @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
   var font: Font {
@@ -31,10 +32,10 @@ struct LiushisiGuaView: View {
       ForEach(hexagramSymbols) { hexagram in
         VStack {
           Text(hexagram.symbol)
-          Text(hexagram.chineseCharacter)
+          Text(hexagram.localizedName(in: displayLanguage.glyphLanguage))
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel(hexagram.chineseCharacter)
+        .accessibilityLabel(hexagram.localizedName(in: displayLanguage.glyphLanguage))
       }
     })
     .font(font)

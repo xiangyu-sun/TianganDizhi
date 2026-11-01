@@ -28,16 +28,17 @@ extension Date {
     guard let shichen else { return "" }
     let nextTime = shichen.nextStartDate
     let nextDizhi = shichen.dizhi.next
+    let nextName = nextDizhi.localizedHourName(in: DisplayLanguage.app.glyphLanguage)
     let totalSeconds = Int(nextTime.timeIntervalSince(self))
-    guard totalSeconds > 0 else { return nextDizhi.displayHourText }
+    guard totalSeconds > 0 else { return nextName }
     let hours = totalSeconds / 3600
     let mins = (totalSeconds % 3600) / 60
     if hours == 0 {
-      return String(localized: "距離\(nextDizhi.displayHourText)還有 \(mins) 分鐘", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
+      return String(localized: "距離\(nextName)還有 \(mins) 分鐘", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
     } else if mins == 0 {
-      return String(localized: "距離\(nextDizhi.displayHourText)還有 \(hours) 小時", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
+      return String(localized: "距離\(nextName)還有 \(hours) 小時", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
     } else {
-      return String(localized: "距離\(nextDizhi.displayHourText)還有 \(hours) 小時 \(mins) 分鐘", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
+      return String(localized: "距離\(nextName)還有 \(hours) 小時 \(mins) 分鐘", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
     }
   }
 }
