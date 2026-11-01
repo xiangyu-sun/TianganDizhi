@@ -53,3 +53,6 @@ Tùy Chỉnh
 - Tùy chọn múi giờ GMT+8 cho người dùng hải ngoại
 
 Dù bạn nghiên cứu văn hóa truyền thống Trung Hoa, học kinh lạc y học cổ truyền, hay đơn giản là tò mò về thiên văn lịch pháp cổ đại——Thiên Can Địa Chi là người bạn đồng hành không thể thiếu của bạn.
+
+NGÔN NGỮ
+Ứng dụng có giao diện tiếng Anh, tiếng Trung giản thể và tiếng Trung phồn thể.

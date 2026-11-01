@@ -1,7 +1,6 @@
-- Baru: hari raya kustom. Tambahkan ulang tahun, hari jadi, dan tanggal tahunan lainnya ke Kalender Perayaan, berdasarkan kalender lunar atau Masehi. Hari-hari ini juga tampil di layar utama dan di widget Musim Surya & Perayaan
-- Widget Musim Surya & Perayaan kini menampilkan perayaan pada harinya, serta jumlah hari menuju perayaan berikutnya
-- Widget Musim Surya & Perayaan kini tersedia dalam ukuran sedang, dengan keterangan hari tersebut dan tiga hari berikutnya
-- Kalender Perayaan kini menampilkan perayaan tradisional, 24 musim surya, dan hari raya kustom Anda sekaligus, dengan filter untuk setiap jenis
-- Widget Kalender Lunar dan kalender di dalam app kini juga menandai perayaan dan hari raya kustom Anda, tidak hanya musim surya
-- Perayaan dan musim surya selalu mengikuti pengaturan "Gunakan UTC+8 untuk perayaan dan musim surya"
+- Baru: TianganDizhi kini mendukung bahasa Inggris dan Mandarin Sederhana. Aplikasi, widget, dan Apple Watch mengikuti bahasa perangkat Anda, dan Mandarin Tradisional tetap seperti sebelumnya
+- Dalam bahasa Inggris, setiap istilah tetap menggunakan aksara Mandarin dengan pinyin dan nama Inggris (子 · Zǐ · Rat), sementara dial jam, roda trigram, dan Ode to the Twelve Hours tetap dalam bahasa Mandarin
+- Dalam Mandarin Sederhana, istilah, festival, dan kalender ditampilkan dengan aksara sederhana menggunakan font kaligrafi Weibei SC
+- Untuk memilih bahasa aplikasi, buka Pengaturan › App › 天干地支 › Bahasa
+- Jam dan dial tetap dapat digunakan di jendela kecil di iPad
 - Perbaikan bug dan peningkatan stabilitas

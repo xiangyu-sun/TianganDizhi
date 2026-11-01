@@ -53,3 +53,6 @@ KUSTOMISASI
 - Opsi zona waktu GMT+8 untuk pengguna di luar negeri
 
 Baik Anda mempelajari astrologi Tiongkok, mempraktikkan pengobatan tradisional, atau sekadar ingin terhubung dengan kearifan budaya ribuan tahun, TianganDizhi adalah pendamping penting Anda.
+
+BAHASA
+Aplikasi tersedia dalam bahasa Inggris, Mandarin Sederhana, dan Mandarin Tradisional.
