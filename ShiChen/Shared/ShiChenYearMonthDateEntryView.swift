@@ -53,11 +53,13 @@ struct ShiChenYearMonthDateEntryView: View {
         Spacer()
         Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
           .font(footnote)
+          .englishFit(displayLanguage, lines: 3, minimumScale: 0.7)
         Spacer()
         Text(
-          "\(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "")"
+          "\(shichen?.dizhi.localizedHourName(in: displayLanguage) ?? "")"
         )
           .font(titleFont)
+          .englishFit(displayLanguage, lines: 1, minimumScale: 0.5)
         Spacer()
 //        Text(
 //          "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
@@ -78,9 +80,11 @@ struct ShiChenYearMonthDateEntryView: View {
         Spacer()
         Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
           .font(bodyFont)
+          .englishFit(displayLanguage, lines: 3, minimumScale: 0.6)
           .padding([.leading, .trailing], 15)
-        Text(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "")
+        Text(shichen?.dizhi.localizedHourName(in: displayLanguage) ?? "")
           .font(titleFont)
+          .englishFit(displayLanguage, lines: 1, minimumScale: 0.5)
         Spacer()
       }
       .widgetAccentable()
@@ -118,14 +122,15 @@ private struct WidgetMediumView: View {
       Spacer()
       HStack() {
         Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
-        Text(entry.date.twelveGod()?.localizedName(in: displayLanguage.glyphLanguage) ?? "")
+        Text(entry.date.twelveGod()?.localizedName(in: displayLanguage) ?? "")
       }
+      .englishFit(displayLanguage, lines: 2, minimumScale: 0.5)
       .font(title2Font)
       .padding([.leading, .trailing], 15)
       .widgetAccentable()
       
       HStack() {
-        Text(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "")
+        Text(shichen?.dizhi.localizedHourName(in: displayLanguage) ?? "")
 //        Text(
 //          "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
 //        )

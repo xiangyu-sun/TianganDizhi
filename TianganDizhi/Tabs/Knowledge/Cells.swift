@@ -26,12 +26,16 @@ extension 十二经脉 {
 // MARK: - DizhiCell
 
 struct DizhiCell: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let dizhi: Dizhi
 
   var body: some View {
     HStack {
-      Text(dizhi.chineseCharacter)
-      Text("(\(dizhi.pinyin))")
+      GlossedText(glyph: dizhi.chineseCharacter, gloss: dizhi.gloss(in: displayLanguage))
+      // The gloss already carries the pinyin outside Chinese.
+      if displayLanguage.isChinese {
+        Text("(\(dizhi.pinyin))")
+      }
     }
     .padding()
   }
@@ -47,10 +51,10 @@ struct DizhiZodiaCell: View {
     HStack {
       let zodiac = Zodiac(dizhi)
       Text(zodiac.emoji)
-      Text(dizhi.chineseCharacter)
-      Text(zodiac.localizedName(in: displayLanguage.glyphLanguage))
+      GlossedText(glyph: dizhi.chineseCharacter, gloss: dizhi.localizedName(in: displayLanguage))
+      GlossedText(glyph: zodiac.localizedName(in: displayLanguage.glyphLanguage), gloss: zodiac.localizedName(in: displayLanguage))
       Spacer()
-      Text(dizhi.wuxing.chineseCharacter)
+      GlossedText(glyph: dizhi.wuxing.chineseCharacter, gloss: dizhi.wuxing.gloss(in: displayLanguage), alignment: .trailing)
     }
     .padding()
   }
@@ -59,10 +63,11 @@ struct DizhiZodiaCell: View {
 // MARK: - ShichenMonthCell
 
 struct ShichenMonthCell: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let shichen: Dizhi
   var body: some View {
     HStack {
-      Text(shichen.chineseCharacter)
+      GlossedText(glyph: shichen.chineseCharacter, gloss: shichen.gloss(in: displayLanguage))
       Spacer()
       Text(shichen.formattedMonth)
     }
@@ -73,10 +78,11 @@ struct ShichenMonthCell: View {
 // MARK: - ShichenHourCell
 
 struct ShichenHourCell: View {
+  @Environment(\.displayLanguage) private var displayLanguage
   let shichen: Dizhi
   var body: some View {
     HStack {
-      Text(shichen.chineseCharacter)
+      GlossedText(glyph: shichen.chineseCharacter, gloss: shichen.gloss(in: displayLanguage))
       Spacer()
       Text(shichen.formattedHourRange ?? "")
     }
@@ -92,9 +98,15 @@ struct OrganShichenCell: View {
 
   var body: some View {
     HStack {
-      Text(shichen.chineseCharacter)
+      GlossedText(glyph: shichen.chineseCharacter, gloss: shichen.gloss(in: displayLanguage))
       Text(shichen.formattedHourRange ?? "")
-      Text(shichen.luizhu.displayName(in: displayLanguage))
+        .lineLimit(1)
+        .minimumScaleFactor(0.7)
+      if !displayLanguage.isChinese { Spacer(minLength: 0) }
+      GlossedText(
+        glyph: shichen.luizhu.displayName(in: displayLanguage),
+        gloss: displayLanguage.isChinese ? "" : shichen.luizhu.localizedName(in: displayLanguage),
+        alignment: .trailing)
     }
     .padding()
   }
@@ -107,7 +119,7 @@ struct AliasShichenCell: View {
   let shichen: Dizhi
   var body: some View {
     HStack {
-      Text(shichen.chineseCharacter)
+      GlossedText(glyph: shichen.chineseCharacter, gloss: shichen.gloss(in: displayLanguage))
       Spacer()
       Text(shichen.aliasName.converted(to: displayLanguage))
     }
@@ -123,11 +135,11 @@ struct LvlvCell: View {
 
   var body: some View {
     HStack {
-      Text(dizhi.chineseCharacter)
+      GlossedText(glyph: dizhi.chineseCharacter, gloss: dizhi.gloss(in: displayLanguage))
 
       Spacer()
       let value = Key.shierLvLv[dizhi.rawValue - 1]
-      Text(value.lvlvDescription.converted(to: displayLanguage))
+      Text(value.localizedLvlvName(in: displayLanguage.glyphLanguage))
       Text(value.description)
       Text("(\(value.lvlvDescription.transformToPinyin()))")
     }

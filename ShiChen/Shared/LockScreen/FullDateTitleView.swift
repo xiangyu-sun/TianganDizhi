@@ -14,7 +14,7 @@ struct FullDateTitleView: View {
 
   var date: Date
   var god: String {
-    date.twelveGod().map { $0.localizedName(in: displayLanguage.glyphLanguage) } ?? ""
+    date.twelveGod().map { $0.localizedName(in: displayLanguage) } ?? ""
   }
   var body: some View {
     HStack {
@@ -24,6 +24,7 @@ struct FullDateTitleView: View {
         Text(date.chineseDay()?.moonPhase.name(traditionnal: useTranditionalNaming, language: displayLanguage) ?? "")
       }
     }
+    .englishFit(displayLanguage, lines: 2, minimumScale: 0.5)
   }
 }
 

@@ -18,8 +18,12 @@ struct DizhiRelationshipView: View {
           Text("冲")
           Text(dizhi.chong.chineseCharacter)
           Spacer()
-          Text("\(dizhi.chong.chineseCharacter)冲\(dizhi.chineseCharacter)")
+          Text(displayLanguage.isChinese
+            ? "\(dizhi.chong.chineseCharacter)冲\(dizhi.chineseCharacter)"
+            : "\(dizhi.chong.chineseCharacter)冲\(dizhi.chineseCharacter) · \(dizhi.chong.localizedName(in: displayLanguage)) – \(dizhi.localizedName(in: displayLanguage))")
             .foregroundStyle(.secondary)
+            .lineLimit(1)
+            .minimumScaleFactor(0.6)
         }
         .font(bodyFont)
       }
@@ -32,7 +36,7 @@ struct DizhiRelationshipView: View {
               Text("合")
               Text(liuhe.resultingElement.chineseCharacter)
               Spacer()
-              Text(liuhe.localizedName(in: displayLanguage.glyphLanguage))
+              Text(liuhe.localizedName(in: displayLanguage))
                 .foregroundStyle(.secondary)
             }
             .font(bodyFont)
@@ -49,7 +53,7 @@ struct DizhiRelationshipView: View {
             Text("合")
             Text(sanhe.resultingElement.chineseCharacter)
             Spacer()
-            Text(sanhe.localizedName(in: displayLanguage.glyphLanguage))
+            Text(sanhe.localizedName(in: displayLanguage))
               .foregroundStyle(.secondary)
           }
           .font(bodyFont)
@@ -69,7 +73,7 @@ struct DizhiRelationshipView: View {
               Text("害")
               Text(liuhai.branches.1.chineseCharacter)
               Spacer()
-              Text(liuhai.localizedName(in: displayLanguage.glyphLanguage))
+              Text(liuhai.localizedName(in: displayLanguage))
                 .foregroundStyle(.secondary)
             }
             .font(bodyFont)

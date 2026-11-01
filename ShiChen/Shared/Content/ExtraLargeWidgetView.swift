@@ -36,8 +36,9 @@ struct ExtraLargeWidgetView: View {
     HStack {
       VStack(alignment: .center) {
         HStack() {
-          Text(date.lunarDateWithZodiac(language: displayLanguage) + " \(date.twelveGod()?.localizedName(in: displayLanguage.glyphLanguage) ?? "")")
+          Text(date.lunarDateWithZodiac(language: displayLanguage) + " \(date.twelveGod()?.localizedName(in: displayLanguage) ?? "")")
         }
+        .englishFit(displayLanguage, lines: 2, minimumScale: 0.5)
         .font(titleFont)
         
         date.nextJieJiWithinOneDay.map{ Text($0) }

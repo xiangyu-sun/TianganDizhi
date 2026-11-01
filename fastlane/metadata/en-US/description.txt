@@ -57,3 +57,6 @@ CUSTOMIZATION
 - GMT+8 timezone option for overseas users
 
 Whether you study Chinese astrology, practice traditional medicine, or simply want to connect with thousands of years of cultural wisdom, TianganDizhi is your essential companion.
+
+LANGUAGES
+The app is available in English, Simplified Chinese and Traditional Chinese.

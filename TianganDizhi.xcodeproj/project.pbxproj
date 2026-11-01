@@ -57,6 +57,7 @@
 		9056E5ABE2945F754C91959D /* SpecialDayCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF0D2B2054D1A3C0DAF77D /* SpecialDayCatalogTests.swift */; };
 		99A1C0052F9100000000A005 /* LocalizationCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1C0062F9100000000A006 /* LocalizationCatalogTests.swift */; };
 		99A1C0072F9100000000A007 /* SimplifiedGlyphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1C0082F9100000000A008 /* SimplifiedGlyphTests.swift */; };
+		99A1C0092F9100000000A009 /* EnglishLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A1C00A2F9100000000A00A /* EnglishLocalizationTests.swift */; };
 		9848AEE28455ABDFC03B58E0 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF506E234D650F1A3086C9CA /* AppRouterTests.swift */; };
 		990FEAD9294C9EB200CB1CEF /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEAD7294C9EA800CB1CEF /* WeatherData.swift */; };
 		990FEADD294CA2FE00CB1CEF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FEADC294CA2FE00CB1CEF /* LocationManager.swift */; };
@@ -489,6 +490,7 @@
 		27FF0D2B2054D1A3C0DAF77D /* SpecialDayCatalogTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpecialDayCatalogTests.swift; sourceTree = "<group>"; };
 		99A1C0062F9100000000A006 /* LocalizationCatalogTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocalizationCatalogTests.swift; sourceTree = "<group>"; };
 		99A1C0082F9100000000A008 /* SimplifiedGlyphTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimplifiedGlyphTests.swift; sourceTree = "<group>"; };
+		99A1C00A2F9100000000A00A /* EnglishLocalizationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnglishLocalizationTests.swift; sourceTree = "<group>"; };
 		3A8E1878EEE481CAE2776E0E /* WidgetInventoryReporter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WidgetInventoryReporter.swift; sourceTree = "<group>"; };
 		460BA9AB26F24DAD0025CA39 /* ShiciView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiciView.swift; sourceTree = "<group>"; };
 		462A5F6424FFE5F20032A125 /* ShiChenExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShiChenExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -907,6 +909,7 @@
 				27FF0D2B2054D1A3C0DAF77D /* SpecialDayCatalogTests.swift */,
 				99A1C0062F9100000000A006 /* LocalizationCatalogTests.swift */,
 				99A1C0082F9100000000A008 /* SimplifiedGlyphTests.swift */,
+				99A1C00A2F9100000000A00A /* EnglishLocalizationTests.swift */,
 			);
 			path = TianganDizhiTests;
 			sourceTree = "<group>";
@@ -1752,6 +1755,7 @@
 				9056E5ABE2945F754C91959D /* SpecialDayCatalogTests.swift in Sources */,
 				99A1C0052F9100000000A005 /* LocalizationCatalogTests.swift in Sources */,
 				99A1C0072F9100000000A007 /* SimplifiedGlyphTests.swift in Sources */,
+				99A1C0092F9100000000A009 /* EnglishLocalizationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -109,7 +109,20 @@ Original plan:
 4. **Dependency:** `ChineseTranditionalCalendarUI` takes a `displayLanguage` and gets its own catalog (zh-Hant/zh-Hans first). Ship it the usual way: push to master, then hand-bump the `Package.resolved` revision.
 5. Re-shoot the zh-Hans screenshots, which currently show Traditional UI.
 
-### Phase 2 — English · ~L
+### Phase 2 — English · ✅ done 2026-11-01
+What landed:
+- English values for every catalog key, with plural variants for day counts.
+- `DisplayLanguage.isChinese` decides between the Chinese and English branches. Chinese output is unchanged and pinned by tests.
+- Group A (dial, wheels, 甲子 cells, 十二時辰頌) stays as Chinese glyphs.
+- Sentence lines use the library's English names: the title, the 節氣 countdown, moon phase, mansion, share text, the menu bar, widgets, the watch and the Live Activity.
+- Reference lists use `GlossedText`, the glyph plus "pinyin · English".
+- Group D prose stays Chinese with a "Shown in Chinese" caption. Widgets have no caption.
+- Countdowns pass an `Int` in English ("Start of Winter in 6 days", "tomorrow") and keep spelled-out numbers in Chinese.
+- Fonts: outside Chinese, a CoreText cascade (bold system font, then Weibei or WenKai for CJK) so Latin text uses the system font and hanzi stay calligraphic.
+- Packages: `ChineseTranditionalCalendarUI` gets `displayLanguage` itself. `ChineseTranditionalMusicCore` `cc11f94` adds 律呂/五音/七聲 names in zh-Hans and pinyin.
+- Checked by eye in English: the main screen, Knowledge, Dizhi, Jieqi, Twelve Gods, Gua, the hexagram wheels, Charts, Settings, the calendar sheet and the festival calendar. Not checked on a device: widgets, the watch, the macOS menu bar and the Live Activity.
+
+Original plan:
 1. Translate groups B and C from a glossary file (`docs/glossary.md`: term → English → pinyin, a single source of truth, matched to the library's English names).
 2. Fonts: Weibei/WenKai for the hanzi glyph lines, the system font for Latin chrome in non-Chinese locales (decide in `FontProvider` by locale, not only by the `useSystemFont` toggle).
 3. Layout pass: small and accessory widget families, menu bar, Dynamic Type, iPad/Mac small windows (reuse the resizability probe). English runs roughly 1.5–2× longer than Chinese.
@@ -124,7 +137,7 @@ Original plan:
 - **ru / es**: the library already has festival and 節氣 text, so these are the cheapest after en.
 - **fr, vi, th, id, ms**: no library support. Thai also lacks a widget font glyph set.
 
-### Do this now, whatever else you decide
+### Do this now, whatever else you decide · ✅ done 2026-11-01 (fixed the InfoPlist typo; every description now states the interface languages)
 Until a locale has a localized UI, its App Store metadata should say which languages the app is in (for example, "Interface in Chinese; English coming soon"). That avoids "nothing is in my language" reviews. Fix the "yoru" typo in `InfoPlist.xcstrings` at the same time.
 
 ## Decisions I need from you

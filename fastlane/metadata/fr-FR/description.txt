@@ -53,3 +53,6 @@ PERSONNALISATION
 - Option de fuseau horaire GMT+8 pour les utilisateurs à l'étranger
 
 Que vous étudiiez l'astrologie chinoise, pratiquez la médecine traditionnelle ou souhaitiez simplement vous connecter à des millénaires de sagesse culturelle——TianganDizhi est votre compagnon indispensable.
+
+LANGUES
+L'app est disponible en anglais, en chinois simplifié et en chinois traditionnel.

@@ -62,9 +62,15 @@ struct ShichenWatchInformationView: View {
 
   let shichen: Dizhi
   var body: some View {
-    HStack {
+    // Three of these sit side by side; English organ names need their own line.
+    (displayLanguage.isChinese
+      ? AnyLayout(HStackLayout())
+      : AnyLayout(VStackLayout(spacing: 0)))
+    {
       Text(shichen.aliasName.converted(to: displayLanguage))
-      Text(shichen.luizhu.organReference.converted(to: displayLanguage))
+      Text(shichen.luizhu.organText(in: displayLanguage))
+        .lineLimit(1)
+        .minimumScaleFactor(0.6)
     }
     .widgetAccentable()
     .font(.footnote)

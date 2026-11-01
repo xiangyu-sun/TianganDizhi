@@ -43,10 +43,10 @@ struct ShiChenEntryView: View {
     case .accessoryInline:
         if horizontalSizeClass != .compact {
           HStack(spacing: 0) {
-            Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
+            Text(entry.date.compactLunarDate(language: displayLanguage) + (displayLanguage.isChinese ? "" : " "))
             if let shichen = entry.date.shichen {
               //let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
-              Text(shichen.dizhi.localizedHourName(in: displayLanguage.glyphLanguage))
+              Text(shichen.dizhi.localizedHourName(in: displayLanguage))
             }
           }
           .font(.body)
@@ -94,7 +94,7 @@ struct ShiChenEntryView: View {
             
               Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
                 .font(titleFont)
-              Text(shichen.dizhi.luizhu.organReference.converted(to: displayLanguage))
+              Text(shichen.dizhi.luizhu.organText(in: displayLanguage))
                 .font(bodyFont)
             }
           }
@@ -119,6 +119,7 @@ struct ShiChenEntryView: View {
             
             Text(entry.date.jieQiDisplayText(language: displayLanguage))
               .font(bodyFont)
+              .englishFit(displayLanguage, lines: 1, minimumScale: 0.6)
 
             if let shichen = entry.date.shichen {
               CircularContainerView(currentShichen: shichen.dizhi, padding: -30)
@@ -131,7 +132,7 @@ struct ShiChenEntryView: View {
             VStack {
               Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
                 .font(largeTitleFont)
-              Text(shichen.dizhi.luizhu.organReference.converted(to: displayLanguage))
+              Text(shichen.dizhi.luizhu.organText(in: displayLanguage))
                 .font(bodyFont)
             }
             .padding(.top, 8)

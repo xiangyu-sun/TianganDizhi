@@ -22,8 +22,8 @@ struct InlineWidgetView: View {
 //    let keString = "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen?.currentKe ?? 0)) ?? "")刻"
 //    
     ViewThatFits(in: .horizontal) {
-      Text("\(date.lunarDateWithZodiac(language: displayLanguage)) \(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "")")
-      Text(shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? "")
+      Text("\(date.compactLunarDate(language: displayLanguage)) \(shichen?.dizhi.localizedHourName(in: displayLanguage) ?? "")")
+      Text(shichen?.dizhi.localizedHourName(in: displayLanguage) ?? "")
     }
     .font(.body)
     .widgetAccentable()

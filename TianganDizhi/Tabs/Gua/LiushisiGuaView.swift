@@ -32,10 +32,13 @@ struct LiushisiGuaView: View {
       ForEach(hexagramSymbols) { hexagram in
         VStack {
           Text(hexagram.symbol)
-          Text(hexagram.localizedName(in: displayLanguage.glyphLanguage))
+          GlossedText(glyph: hexagram.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : hexagram.localizedName(in: displayLanguage), alignment: .center)
+            .multilineTextAlignment(.center)
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel(hexagram.localizedName(in: displayLanguage.glyphLanguage))
+        .accessibilityLabel(displayLanguage.isChinese
+          ? hexagram.localizedName(in: displayLanguage)
+          : GlossedText.accessibilityText(glyph: hexagram.localizedName(in: displayLanguage.glyphLanguage), gloss: hexagram.localizedName(in: displayLanguage)))
       }
     })
     .font(font)

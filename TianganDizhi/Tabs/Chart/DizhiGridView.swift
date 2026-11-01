@@ -24,25 +24,30 @@ struct DizhiGridView: View {
   var body: some View {
     VStack {
       HStack {
-        Text(dizhi.chineseCharacter)
+        GlossedText(glyph: dizhi.chineseCharacter, gloss: dizhi.localizedName(in: displayLanguage), alignment: .center)
           .font(titleFont)
       }
 
-      Text(dizhi.luizhu.displayName(in: displayLanguage))
+      GlossedText(
+        glyph: dizhi.luizhu.displayName(in: displayLanguage),
+        gloss: displayLanguage.isChinese ? "" : dizhi.luizhu.localizedName(in: displayLanguage),
+        alignment: .center)
+        .multilineTextAlignment(.center)
         .font(bodyFont)
 
       HStack {
-        Text(dizhi.jie.localizedName(in: displayLanguage.glyphLanguage))
-        Text(dizhi.qi.localizedName(in: displayLanguage.glyphLanguage))
+        GlossedText(glyph: dizhi.jie.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : dizhi.jie.localizedName(in: displayLanguage), alignment: .center)
+        GlossedText(glyph: dizhi.qi.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : dizhi.qi.localizedName(in: displayLanguage), alignment: .center)
       }
+      .multilineTextAlignment(.center)
       .font(bodyFont)
 
       HStack {
         let zodiac = Zodiac(dizhi)
-        Text(zodiac.localizedName(in: displayLanguage.glyphLanguage))
+        GlossedText(glyph: zodiac.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : zodiac.localizedName(in: displayLanguage), alignment: .center)
           .font(bodyFont)
 
-        Text(Key.shierLvLv[dizhi.rawValue - 1].lvlvDescription.converted(to: displayLanguage))
+        Text(Key.shierLvLv[dizhi.rawValue - 1].localizedLvlvName(in: displayLanguage.glyphLanguage))
           .font(bodyFont)
       }
     }

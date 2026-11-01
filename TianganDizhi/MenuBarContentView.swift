@@ -75,7 +75,7 @@ struct MenuBarContentView: View {
           VStack(spacing: 2) {
             Text(shichen.dizhi.chineseCharacter)
               .font(.title2.bold())
-            Text("\(shichen.currentKeSpellOut)刻")
+            Text(shichen.keText(language: displayLanguage))
               .font(.caption)
               .foregroundStyle(.secondary)
           }
@@ -94,7 +94,7 @@ struct MenuBarContentView: View {
             .font(.caption)
             .foregroundStyle(.secondary)
           Spacer()
-          Text(shichen.dizhi.localizedHourName(in: displayLanguage.glyphLanguage))
+          Text(shichen.dizhi.localizedHourName(in: displayLanguage))
             .font(.subheadline)
         }
 
@@ -113,7 +113,7 @@ struct MenuBarContentView: View {
               .font(.caption)
               .foregroundStyle(.secondary)
             Spacer()
-            Text(god.localizedName(in: displayLanguage.glyphLanguage))
+            Text(god.localizedName(in: displayLanguage))
               .font(.subheadline)
           }
         }
@@ -128,7 +128,7 @@ struct MenuBarContentView: View {
       HStack {
         Image(systemName: "calendar")
           .foregroundStyle(Color.accentColor)
-        Text(date.jieQiDisplayText)
+        Text(date.jieQiDisplayText(language: displayLanguage))
           .font(.subheadline)
           .lineLimit(2)
       }
@@ -240,17 +240,28 @@ struct MenuBarContentView: View {
 
   private func copyCurrentInfo() {
     let date = Date()
-    let dateInfo = date.lunarDateWithZodiac
-    let shichenInfo = date.shichen?.dizhi.localizedHourName(in: displayLanguage.glyphLanguage) ?? ""
-    let godInfo = date.twelveGod()?.localizedName(in: displayLanguage.glyphLanguage) ?? ""
-    let jieqiInfo = date.jieQiDisplayText
+    let dateInfo = date.lunarDateWithZodiac(language: displayLanguage)
+    let shichenInfo = date.shichen?.dizhi.localizedHourName(in: displayLanguage) ?? ""
+    let godInfo = date.twelveGod()?.localizedName(in: displayLanguage) ?? ""
+    let jieqiInfo = date.jieQiDisplayText(language: displayLanguage)
 
-    let fullInfo = """
-    日期：\(dateInfo)
-    時辰：\(shichenInfo)
-    十二神：\(godInfo)
-    節氣：\(jieqiInfo)
-    """
+    let fullInfo: String
+    if displayLanguage.isChinese {
+      fullInfo = """
+      日期：\(dateInfo)
+      時辰：\(shichenInfo)
+      十二神：\(godInfo)
+      節氣：\(jieqiInfo)
+      """
+    } else {
+      // The labels reuse the catalog's existing words (時辰, 十二神) and sentences.
+      fullInfo = [
+        String(localized: "日期：\(dateInfo)"),
+        "\(String(localized: "時辰")): \(shichenInfo)",
+        "\(String(localized: "十二神")): \(godInfo)",
+        String(localized: "節氣：\(jieqiInfo)"),
+      ].joined(separator: "\n")
+    }
 
     let pasteboard = NSPasteboard.general
     pasteboard.clearContents()

@@ -41,6 +41,7 @@ struct SpecialDayWidgetView: View {
   let largeTitleFont: Font
 
   @Environment(\.widgetFamily) private var family
+  @Environment(\.displayLanguage) private var displayLanguage
 
   var body: some View {
     switch family {
@@ -55,7 +56,7 @@ struct SpecialDayWidgetView: View {
     // Same sources as the 節日曆 screen: built-in festivals, solar terms and
     // the user's 自訂節日, all on the 東八區 setting's calendar day.
     let upcoming = date.currentOrNextSpecialDay(
-      sources: SpecialDayCatalog.sources(),
+      sources: SpecialDayCatalog.sources(language: displayLanguage),
       calendar: .solarTerm
     )
 
@@ -68,23 +69,25 @@ struct SpecialDayWidgetView: View {
           .foregroundStyle(upcoming.daysUntil == 0 ? .primary : .secondary)
           .font(largeTitleFont)
           .minimumScaleFactor(0.5)
-          .lineLimit(1)
+          .lineLimit(displayLanguage.isChinese ? 1 : 2)
+          .multilineTextAlignment(.center)
 
-        Text(upcoming.daysUntil.daysUntilText)
+        Text(upcoming.daysUntil.daysUntilText(language: displayLanguage))
           .font(.callout)
           .foregroundStyle(upcoming.daysUntil == 0 ? Color.orange : Color.secondary)
       } else {
         // No upcoming special day found — show today's 節氣 rather than an
         // empty widget with only the background.
-        Text(date.jieQiDisplayText)
+        Text(date.jieQiDisplayText(language: displayLanguage))
           .font(largeTitleFont)
           .minimumScaleFactor(0.5)
-          .lineLimit(1)
+          .lineLimit(displayLanguage.isChinese ? 1 : 2)
+          .multilineTextAlignment(.center)
       }
     }
     // One locale for every date on the widget, matching the app's
     // Traditional Chinese UI.
-    .environment(\.locale, Locale(identifier: "zh-Hant"))
+    .environment(\.locale, displayLanguage.isChinese ? Locale(identifier: "zh-Hant") : .autoupdatingCurrent)
     .widgetAccentable()
     .frame(maxWidth: .infinity)
     .materialBackgroundWidget(with: Image("background"))

@@ -69,25 +69,29 @@ extension Date {
     jieQiDisplayText(language: .app)
   }
 
-  /// ``jieQiDisplayText`` with the Chinese terms in the script of `language`.
+  /// ``jieQiDisplayText`` in `language`: Chinese terms in its script, or
+  /// English names (with an `Int` day count) outside Chinese.
   func jieQiDisplayText(language: DisplayLanguage) -> String {
-    let glyphs = language.glyphLanguage
     if isJieqiDayAligned, let current = jieqiDayAligned ?? Jieqi.current {
-      return current.displayName(language: glyphs)
+      return current.displayName(language: language)
     }
 
     if let next = nextJieqiDayAligned {
       let days = next.days(from: self, calendar: .solarTerm)
       if days > 0 {
-        let daysString = Self.jieqiCountdownFormatter.string(from: NSNumber(value: days)) ?? "\(days)"
-        let name = next.jieqi.displayName(language: glyphs)
-        return String(localized: "\(daysString)日後\(name)", comment: "Countdown to the next solar term; %1$@ is the day count spelled out (十五), %2$@ the term with its 節/氣 suffix")
+        let name = next.jieqi.displayName(language: language)
+        let bundle = language.localizationBundle
+        if language.isChinese {
+          let daysString = Self.jieqiCountdownFormatter.string(from: NSNumber(value: days)) ?? "\(days)"
+          return String(localized: "\(daysString)日後\(name)", bundle: bundle, comment: "Countdown to the next solar term; %1$@ is the day count spelled out (十五), %2$@ the term with its 節/氣 suffix")
+        }
+        return String(localized: "\(days)日後\(name)", bundle: bundle, comment: "Countdown to the next solar term outside Chinese; %1$lld is the day count, %2$@ the term name. Needs plural variants.")
       }
     }
 
     // Fallback: name whatever term is in effect (e.g. no upcoming occurrence found).
     guard let current = jieqiDayAligned ?? Jieqi.current else { return "" }
-    return current.displayName(language: glyphs)
+    return current.displayName(language: language)
   }
 }
 
@@ -100,9 +104,10 @@ extension Date {
     lunarDateWithZodiac(language: .app)
   }
 
-  /// ``lunarDateWithZodiac`` in the script of `language`.
+  /// ``lunarDateWithZodiac`` in `language`: Chinese in its script, otherwise English
+  /// ("1st Month 1st, Year of the Dragon (Jiǎchén)").
   func lunarDateWithZodiac(language: DisplayLanguage) -> String {
-    lunarDate()?.formatted(.yearZodiacMonthDay, in: language.glyphLanguage) ?? ""
+    lunarDate()?.formatted(.yearZodiacMonthDay, in: language) ?? ""
   }
 
   /// The lunar date with the year's zodiac animal, in China Standard Time.
@@ -112,7 +117,7 @@ extension Date {
 
   /// ``lunarDateWithZodiacGTM8`` in the script of `language`.
   func lunarDateWithZodiacGTM8(language: DisplayLanguage) -> String {
-    lunarDate(.chineseCalendarGTM8)?.formatted(.yearZodiacMonthDay, in: language.glyphLanguage) ?? ""
+    lunarDate(.chineseCalendarGTM8)?.formatted(.yearZodiacMonthDay, in: language) ?? ""
   }
 
   /// The lunar day alone in the device's time zone, e.g. 初一.
@@ -122,7 +127,7 @@ extension Date {
 
   /// ``lunarDayText`` in the script of `language`.
   func lunarDayText(language: DisplayLanguage) -> String {
-    lunarDate()?.formatted(.day, in: language.glyphLanguage) ?? ""
+    lunarDate()?.formatted(.day, in: language) ?? ""
   }
 }
 
@@ -163,9 +168,12 @@ extension Jieqi {
     displayName(language: .app)
   }
 
-  /// ``displayName`` with the term's name in the script of `language`.
+  /// ``displayName`` with the term's name in `language`. Outside Chinese the
+  /// name is just the term's name ("Minor Heat"): the 節/氣 suffix is Chinese.
   func displayName(language: DisplayLanguage) -> String {
-    let name = localizedName(in: language.glyphLanguage)
-    return qi ? String(localized: "\(name)氣", comment: "A 中氣 solar term, e.g. 大暑氣") : String(localized: "\(name)節", comment: "A 節 solar term, e.g. 小暑節")
+    let name = localizedName(in: language)
+    guard language.isChinese else { return name }
+    let bundle = language.localizationBundle
+    return qi ? String(localized: "\(name)氣", bundle: bundle, comment: "A 中氣 solar term, e.g. 大暑氣") : String(localized: "\(name)節", bundle: bundle, comment: "A 節 solar term, e.g. 小暑節")
   }
 }

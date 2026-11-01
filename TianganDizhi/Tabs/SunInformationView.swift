@@ -13,13 +13,14 @@ import SwiftUI
 struct SunInformationView: View {
   let info: WeatherData.Information
   @Environment(\.bodyFont) var bodyFont
+  @Environment(\.displayLanguage) var displayLanguage
   @AppStorage(Constants.useTranditionalNaming, store: Constants.sharedUserDefault)
   var useTranditionalNaming = false
 
   var body: some View {
     HStack {
       if let sunrise = info.sunrise {
-        HStack(spacing: 0) {
+        HStack(spacing: displayLanguage.isChinese ? 0 : 4) {
           Text(sunrise, style: .time)
           Text("日出")
         }
@@ -29,7 +30,7 @@ struct SunInformationView: View {
         .accessibilityLabel("日出 \(sunrise.formatted(date: .omitted, time: .shortened))")
       }
       if let sunset = info.sunset {
-        HStack(spacing: 0) {
+        HStack(spacing: displayLanguage.isChinese ? 0 : 4) {
           Text(sunset, style: .time)
           Text("日落")
         }

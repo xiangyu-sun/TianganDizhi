@@ -45,15 +45,16 @@ import Testing
     let date = try localNoon(2024, 2, 10)
     #expect(date.lunarDateWithZodiac(language: .zhHant) == "甲辰龍年正月初一")
     #expect(date.lunarDateWithZodiac(language: .zhHans) == "甲辰龙年正月初一")
-    #expect(date.lunarDateWithZodiac(language: .en) == "甲辰龍年正月初一")
-    #expect(date.lunarDateWithZodiac(language: .zhHant) == date.lunarDateWithZodiac)
+    // Outside Chinese the date is English (see EnglishLocalizationTests).
+    #expect(date.lunarDateWithZodiac(language: .en) == "1st Month 1st, Year of the Dragon (Jiǎchén)")
+    #expect(date.lunarDateWithZodiac(language: .app) == date.lunarDateWithZodiac)
     #expect(date.lunarDateWithZodiacGTM8(language: .zhHans).contains("龙"))
   }
 
   @Test func lunarMonthAndDayNames() {
     #expect(RecurringDay.monthText(12, reckoning: .lunar, language: .zhHant) == "臘月")
     #expect(RecurringDay.monthText(12, reckoning: .lunar, language: .zhHans) == "腊月")
-    #expect(RecurringDay.monthText(12, reckoning: .lunar, language: .en) == "臘月")
+    #expect(RecurringDay.monthText(12, reckoning: .lunar, language: .en) == "12th Month")
     #expect(RecurringDay.dayText(1, reckoning: .lunar, language: .zhHans) == "初一")
     #expect(RecurringDay.dayText(23, reckoning: .lunar, language: .zhHant) == "廿三")
   }
@@ -69,8 +70,8 @@ import Testing
     let name = Jieqi.awakeningOfInsects
     #expect(name.displayName(language: .zhHant).hasPrefix("驚蟄"))
     #expect(name.displayName(language: .zhHans).hasPrefix("惊蛰"))
-    #expect(name.displayName(language: .en).hasPrefix("驚蟄"))
-    #expect(name.displayName(language: .zhHant) == name.displayName)
+    #expect(name.displayName(language: .en) == "Awakening of Insects")
+    #expect(name.displayName(language: .app) == name.displayName)
   }
 
   @Test func jieqiDisplayTextOnAndBeforeATermDay() throws {
@@ -82,8 +83,8 @@ import Testing
     #expect(startDay.jieQiDisplayText(language: .zhHant).contains("驚蟄"))
     #expect(startDay.jieQiDisplayText(language: .zhHans).contains("惊蛰"))
     #expect(!startDay.jieQiDisplayText(language: .zhHans).contains("驚蟄"))
-    #expect(startDay.jieQiDisplayText(language: .en) == startDay.jieQiDisplayText(language: .zhHant))
-    #expect(startDay.jieQiDisplayText(language: .zhHant) == startDay.jieQiDisplayText)
+    #expect(startDay.jieQiDisplayText(language: .en) == "Awakening of Insects")
+    #expect(startDay.jieQiDisplayText(language: .app) == startDay.jieQiDisplayText)
 
     let dayBefore = try #require(Calendar.current.date(byAdding: .day, value: -1, to: startDay))
     #expect(dayBefore.jieQiDisplayText(language: .zhHans).contains("惊蛰"))
@@ -139,9 +140,10 @@ import Testing
     for phase in ChineseMoonPhase.allCases {
       for traditional in [true, false] {
         let original = traditional ? phase.acientChineseName(.day8) : phase.modernChineseName(.day8)
-        #expect(phase.name(traditionnal: traditional) == original)
+        #expect(phase.name(traditionnal: traditional) == phase.name(traditionnal: traditional, language: .app))
         #expect(phase.name(traditionnal: traditional, language: .zhHant) == original)
-        #expect(phase.name(traditionnal: traditional, language: .en) == original)
+        // The classical name stays Chinese; the modern one is English outside Chinese.
+        #expect(phase.name(traditionnal: traditional, language: .en) == (traditional ? original : phase.localizedName(in: .en)))
         #expect(phase.name(traditionnal: traditional, language: .zhHans) == original.converted(to: .zhHans))
       }
     }
@@ -157,7 +159,7 @@ import Testing
     #expect(Trigram.dui.description(in: .zhHans) == "☱ (兑) – 泽")
     for trigram in [Trigram.qian, .xun, .kan, .gen, .kun, .zhen, .li, .dui] {
       #expect(trigram.description(in: .zhHant) == trigram.description)
-      #expect(trigram.description(in: .en) == trigram.description)
+      #expect(trigram.description(in: .en) == "\(trigram.symbol) (\(trigram.localizedName(in: .en))) – \(trigram.localizedXiang(in: .en))")
     }
   }
 
@@ -202,7 +204,7 @@ import Testing
     #expect(!simplified.detail.contains("養"))
 
     let english = try #require(jieqiName(.en))
-    #expect(english.name == "驚蟄")
+    #expect(english.name == "Awakening of Insects")
     #expect(english.detail == traditional.detail)
   }
 

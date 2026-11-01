@@ -25,20 +25,26 @@ extension Date {
 
   /// Countdown string to next Shichen.
   var nextShichenCountdown: String {
+    nextShichenCountdown(language: .app)
+  }
+
+  /// ``nextShichenCountdown`` in `language`.
+  func nextShichenCountdown(language: DisplayLanguage) -> String {
     guard let shichen else { return "" }
     let nextTime = shichen.nextStartDate
     let nextDizhi = shichen.dizhi.next
-    let nextName = nextDizhi.localizedHourName(in: DisplayLanguage.app.glyphLanguage)
+    let nextName = nextDizhi.localizedHourName(in: language)
+    let bundle = language.localizationBundle
     let totalSeconds = Int(nextTime.timeIntervalSince(self))
     guard totalSeconds > 0 else { return nextName }
     let hours = totalSeconds / 3600
     let mins = (totalSeconds % 3600) / 60
     if hours == 0 {
-      return String(localized: "距離\(nextName)還有 \(mins) 分鐘", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
+      return String(localized: "距離\(nextName)還有 \(mins) 分鐘", bundle: bundle, comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
     } else if mins == 0 {
-      return String(localized: "距離\(nextName)還有 \(hours) 小時", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
+      return String(localized: "距離\(nextName)還有 \(hours) 小時", bundle: bundle, comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
     } else {
-      return String(localized: "距離\(nextName)還有 \(hours) 小時 \(mins) 分鐘", comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
+      return String(localized: "距離\(nextName)還有 \(hours) 小時 \(mins) 分鐘", bundle: bundle, comment: "Countdown to the next Shichen; %1$@ is its name (丑時)")
     }
   }
 }

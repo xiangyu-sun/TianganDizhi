@@ -14,16 +14,24 @@ import SwiftUI
 struct JieqiListView: View {
   private let currentJieqi = Date().jieqiDayAligned
   private let nextJieqiOccurrence = Date().nextJieqiDayAligned
+  @Environment(\.displayLanguage) private var displayLanguage
 
   var body: some View {
     ScrollViewReader { proxy in
-      List(Jieqi.allCases, id: \.self) { jieqi in
-        JieqiCell(
-          jieqi: jieqi,
-          isCurrent: jieqi == currentJieqi,
-          daysUntil: nextJieqiOccurrence?.jieqi == jieqi ? nextJieqiOccurrence.map { $0.days(from: Date(), calendar: .solarTerm) } : nil
-        )
-        .id(jieqi)
+      List {
+        // The seasonal-health notes below exist only in Chinese.
+        if !displayLanguage.isChinese {
+          ChineseOnlyCaption()
+            .listRowInsets(EdgeInsets())
+        }
+        ForEach(Jieqi.allCases, id: \.self) { jieqi in
+          JieqiCell(
+            jieqi: jieqi,
+            isCurrent: jieqi == currentJieqi,
+            daysUntil: nextJieqiOccurrence?.jieqi == jieqi ? nextJieqiOccurrence.map { $0.days(from: Date(), calendar: .solarTerm) } : nil
+          )
+          .id(jieqi)
+        }
       }
       .onAppear {
         if let current = currentJieqi {

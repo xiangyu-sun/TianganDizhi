@@ -53,3 +53,6 @@ PERSONALIZACIÓN
 - Opción de zona horaria GMT+8 para usuarios en el extranjero
 
 Ya sea que estudies astrología china, practiques medicina tradicional o simplemente quieras conectar con miles de años de sabiduría cultural, TianganDizhi es tu compañero esencial.
+
+IDIOMAS
+La app está disponible en inglés, chino simplificado y chino tradicional.

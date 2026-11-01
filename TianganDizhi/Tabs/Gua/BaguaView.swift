@@ -74,7 +74,7 @@ struct BaguaView: View {
       .scaleEffect(fit)
       .frame(width: geometry.size.width, height: geometry.size.height)
       .accessibilityElement(children: .ignore)
-      .accessibilityLabel(viewData.localizedTitle + "：" + viewData.guas.map { "\($0.localizedName(in: displayLanguage.glyphLanguage))\($0.localizedXiang(in: displayLanguage.glyphLanguage))" }.joined(separator: "、"))
+      .accessibilityLabel(viewData.localizedTitle + "：" + viewData.guas.map { displayLanguage.isChinese ? "\($0.localizedName(in: displayLanguage))\($0.localizedXiang(in: displayLanguage))" : "\($0.localizedName(in: displayLanguage)) \($0.localizedXiang(in: displayLanguage))" }.joined(separator: displayLanguage.isChinese ? "、" : ", "))
     }
     #if os(watchOS)
     .edgesIgnoringSafeArea([.bottom, .leading, .trailing])

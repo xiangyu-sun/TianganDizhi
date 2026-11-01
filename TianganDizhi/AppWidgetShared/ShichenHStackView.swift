@@ -88,9 +88,14 @@ struct ShichenInformationView: View {
 
   var body: some View {
     if #available(iOSApplicationExtension 15.0, *) {
-      HStack {
+      (displayLanguage.isChinese
+        ? AnyLayout(HStackLayout())
+        : AnyLayout(VStackLayout(spacing: 0)))
+      {
         Text(shichen.aliasName.converted(to: displayLanguage))
-        Text(shichen.luizhu.organReference.converted(to: displayLanguage))
+        Text(shichen.luizhu.organText(in: displayLanguage))
+          .lineLimit(1)
+          .minimumScaleFactor(0.6)
       }
       #if os(iOS)
       .font(scaleFont ? title3Font : calloutFont)

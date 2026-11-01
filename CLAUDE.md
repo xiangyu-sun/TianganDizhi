@@ -2,8 +2,8 @@
 
 TianganDizhi (天干地支) is a SwiftUI Chinese calendar/astrology app for iOS, macOS (incl. a menu
 bar extra) and watchOS: 時辰 clock, 節氣/festivals, moon phase, WeatherKit sun times, 天干地支
-knowledge, I Ching, charts, and many widgets. The UI is Traditional and Simplified Chinese; English
-is in progress (`docs/localization-roadmap.md`). App Store metadata lives in `fastlane/metadata`.
+knowledge, I Ching, charts, and many widgets. The UI is Traditional Chinese, Simplified Chinese
+and English (`docs/localization-roadmap.md`). App Store metadata lives in `fastlane/metadata`.
 
 ## Build and test
 ```bash
@@ -78,6 +78,9 @@ Core logic comes from the author's packages `ChineseAstrologyCalendar`, `Bagua`,
   -localizationPath <tmp> -exportLanguage zh-Hant`, then give new keys a zh-Hant value. Library
   names (節氣, festivals, 五行 …) come from `localizedName(in:)` with `\.displayLanguage`
   (`.glyphLanguage` for terms kept as Chinese glyphs). Never translate 十二時辰頌 or the dial glyphs.
+  Branch on `displayLanguage.isChinese`: Chinese keeps today's text exactly (tests pin it);
+  English uses library names in sentences, `GlossedText` in lists, and Chinese prose with
+  `ChineseOnlyCaption`. Functions under test take an explicit `language:` parameter.
 - Use `#if os(macOS)` / `#if os(iOS)` for platform splits; shared files compile into several
   targets, so check target membership when adding files.
 

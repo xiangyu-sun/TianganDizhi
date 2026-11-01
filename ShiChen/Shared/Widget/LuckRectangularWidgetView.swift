@@ -35,7 +35,7 @@ struct LuckRectangularWidgetView: View {
     HStack {
       if let god {
         HStack() {
-          Text(god.localizedName(in: displayLanguage.glyphLanguage))
+          Text(god.localizedName(in: displayLanguage))
 
         }
       }
@@ -44,7 +44,7 @@ struct LuckRectangularWidgetView: View {
         Text("沖")
         Text(chong.chineseCharacter)
  
-        Text(Zodiac(chong).localizedName(in: displayLanguage.glyphLanguage))
+        Text(Zodiac(chong).localizedName(in: displayLanguage))
       }
       
       Spacer()

@@ -29,7 +29,7 @@ struct FangweiView: View {
           }
         }
         .listStyle(.plain)
-        .frame(height: CGFloat(FangWei.allCases.count) * 80)
+        .frame(height: CGFloat(FangWei.allCases.count) * (displayLanguage.isChinese ? 80 : 104))
       }
       .padding(.vertical)
     }
@@ -78,7 +78,7 @@ struct FangweiView: View {
       }
     }
     .accessibilityElement(children: .combine)
-    .accessibilityLabel("\(fangwei.localizedName(in: displayLanguage.glyphLanguage))方，\(fangwei.wuxing.chineseCharacter)")
+    .accessibilityLabel("\(fangwei.localizedName(in: displayLanguage))方，\(fangwei.wuxing.sentenceText(in: displayLanguage))")
   }
 
   // Maps FangWei to compass angle in radians (0 = right/East in math coords)
@@ -105,6 +105,11 @@ struct FangweiView: View {
         )
 
       VStack(alignment: .leading, spacing: 4) {
+        if !displayLanguage.isChinese {
+          Text(DisplayLanguage.gloss(direction.localizedName(in: displayLanguage), direction.wuxing.localizedName(in: displayLanguage)))
+            .font(footnote)
+            .foregroundStyle(.secondary)
+        }
         HStack(spacing: 8) {
           Text("五行：\(direction.wuxing.chineseCharacter)")
           Text("天干：\(direction.tiangan.0.chineseCharacter)\(direction.tiangan.1.chineseCharacter)")
@@ -124,7 +129,7 @@ struct FangweiView: View {
     }
     .padding(.vertical, 4)
     .accessibilityElement(children: .combine)
-    .accessibilityLabel("\(direction.localizedName(in: displayLanguage.glyphLanguage))方，五行\(direction.wuxing.chineseCharacter)，天干\(direction.tiangan.0.chineseCharacter)\(direction.tiangan.1.chineseCharacter)")
+    .accessibilityLabel("\(direction.localizedName(in: displayLanguage))方，五行\(direction.wuxing.sentenceText(in: displayLanguage))，天干\(direction.tiangan.0.chineseCharacter)\(direction.tiangan.1.chineseCharacter)")
   }
 }
 

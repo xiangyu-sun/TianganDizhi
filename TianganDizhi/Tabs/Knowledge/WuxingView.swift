@@ -45,8 +45,15 @@ struct WuxingView: View {
   func content(item: Wuxing) -> some View {
     HStack {
       VStack(alignment: .leading, spacing: 0) {
-        Text("\(item.chineseCharacter)")
-          .font(horizontalSizeClass != .compact ? largeTitleFont : title2Font)
+        HStack(alignment: .firstTextBaseline) {
+          Text("\(item.chineseCharacter)")
+            .font(horizontalSizeClass != .compact ? largeTitleFont : title2Font)
+          if !displayLanguage.isChinese {
+            Text(item.localizedName(in: displayLanguage))
+              .font(title3Font)
+              .foregroundStyle(.secondary)
+          }
+        }
 
         HStack {
           VStack(alignment: .leading, spacing: 0) {
@@ -76,10 +83,11 @@ struct WuxingView: View {
               .font(footnote)
             HStack {
               let wuzang = 五臟.allCases.first { $0.wuxing == item } ?? .心
-              Text("\(wuzang.localizedName(in: displayLanguage.glyphLanguage))")
+              GlossedText(glyph: wuzang.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : wuzang.localizedName(in: displayLanguage))
 
               let wufu = 五腑.allCases.first { $0.wuxing == item } ?? .小腸
-              Text("\(wufu.localizedName(in: displayLanguage.glyphLanguage))")
+              GlossedText(glyph: wufu.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : wufu.localizedName(in: displayLanguage))
+              // 情緒 is library prose, which exists only in Chinese.
               Text("\(wuzang.情緒.converted(to: displayLanguage))")
             }
             .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
@@ -89,24 +97,24 @@ struct WuxingView: View {
             Text("五味")
               .font(footnote)
             HStack {
-              Text("\(item.localizedFlavor(in: displayLanguage.glyphLanguage))")
+              GlossedText(glyph: item.localizedFlavor(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : item.localizedFlavor(in: displayLanguage))
                 .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
             }
           }
           .scaledToFit()
 
           Divider()
-          makeTopicView(title: "五音", detail: "\(Key.wuyin.first { $0.wuxing == item }?.wuyinChineseName.converted(to: displayLanguage) ?? "")")
+          makeTopicView(title: "五音", detail: "\(Key.wuyin.first { $0.wuxing == item }?.localizedWuyinName(in: displayLanguage) ?? "")")
 
           Divider()
 
-          makeTopicView(title: "方位", detail: "\(item.fangwei.localizedName(in: displayLanguage.glyphLanguage))")
-          makeTopicView(title: "色彩", detail: "\(item.localizedColorDescription(in: displayLanguage.glyphLanguage))")
+          makeTopicView(title: "方位", detail: "\(item.fangwei.localizedName(in: displayLanguage.glyphLanguage))", gloss: displayLanguage.isChinese ? "" : item.fangwei.localizedName(in: displayLanguage))
+          makeTopicView(title: "色彩", detail: "\(item.localizedColorDescription(in: displayLanguage.glyphLanguage))", gloss: displayLanguage.isChinese ? "" : item.localizedColorDescription(in: displayLanguage))
 
           Divider()
 
-          if let season = Season.allCases.first(where: { $0.wuxing == item })?.localizedName(in: displayLanguage.glyphLanguage) {
-            makeTopicView(title: "四季", detail: season)
+          if let season = Season.allCases.first(where: { $0.wuxing == item }) {
+            makeTopicView(title: "四季", detail: season.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : season.localizedName(in: displayLanguage))
           }
         }
       }
@@ -116,12 +124,12 @@ struct WuxingView: View {
 
   // MARK: Fileprivate
 
-  fileprivate func makeTopicView(title: LocalizedStringKey, detail: String) -> VStack<TupleView<(Text, HStack<Text>)>> {
+  fileprivate func makeTopicView(title: LocalizedStringKey, detail: String, gloss: String = "") -> some View {
     VStack {
       Text(title)
         .font(footnote)
       HStack {
-        Text(detail)
+        GlossedText(glyph: detail, gloss: gloss, alignment: .center)
           .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
       }
     }

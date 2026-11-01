@@ -47,21 +47,34 @@ enum SpecialDayCatalog {
 
   /// Sources in priority order: when several fall on one day, the user's own
   /// day is shown first, then the festival, then the solar term.
+  ///
+  /// `language` picks the names: Traditional or Simplified Chinese, or English
+  /// for every other language. It defaults to Traditional Chinese, so UI code
+  /// passes `.app` (or its `displayLanguage`) explicitly.
   static func sources(
     customHolidays: [CustomHoliday] = CustomHolidayStore.load(),
     timeZone: TimeZone = .solarTerm,
-    language: DisplayLanguage = .app
+    language: DisplayLanguage = .zhHant
   ) -> [SpecialDaySource] {
     var lunar = Calendar(identifier: .chinese)
     lunar.timeZone = timeZone
-    // Traditional Chinese (and every locale that keeps Chinese glyphs) uses
-    // the library's defaults; Simplified Chinese swaps in Simplified strings.
-    let festivals: any ChineseFestivalContentProvider = language.glyphLanguage == .zhHans
-      ? LocalizedFestivalContentProvider(language: .zhHans)
-      : DefaultFestivalContentProvider()
-    let jieqi: any JieqiContentProvider = language.glyphLanguage == .zhHans
-      ? SimplifiedJieqiContentProvider()
-      : DefaultJieqiContentProvider()
+    // Traditional Chinese uses the library's defaults; Simplified Chinese swaps
+    // in Simplified strings and every other language the English names. The
+    // jieqi `detail` (health tips) and, in Chinese, the festival meanings stay
+    // library prose: Chinese for jieqi, English for festivals.
+    let festivals: any ChineseFestivalContentProvider
+    let jieqi: any JieqiContentProvider
+    switch language {
+    case .zhHans:
+      festivals = LocalizedFestivalContentProvider(language: .zhHans)
+      jieqi = SimplifiedJieqiContentProvider()
+    case .zhHant:
+      festivals = DefaultFestivalContentProvider()
+      jieqi = DefaultJieqiContentProvider()
+    default:
+      festivals = LocalizedFestivalContentProvider(language: .en)
+      jieqi = LocalizedJieqiContentProvider(language: .en)
+    }
     return [
       RecurringDaySource(days: customHolidays.map(\.day), timeZone: timeZone),
       FestivalSource(converter: DayConverter(calendar: lunar), timeZone: timeZone, contentProvider: festivals),
@@ -95,19 +108,30 @@ private struct SimplifiedJieqiContentProvider: JieqiContentProvider {
 // MARK: - Display text
 
 extension RecurringDay {
-  /// The month as shown in pickers and lists: 正月…臘月 or 1月…12月.
+  /// The month as shown in pickers and lists: 正月…臘月 / "1st Month" for lunar,
+  /// 1月…12月 / "January" for Gregorian.
   static func monthText(_ month: Int, reckoning: Reckoning, language: DisplayLanguage = .app) -> String {
     switch reckoning {
-    case .lunar: LunarMonth(number: month)?.localizedName(in: language.glyphLanguage) ?? String(localized: "\(month)月")
-    case .gregorian: String(localized: "\(month)月", comment: "Gregorian month, e.g. 5月")
+    case .lunar:
+      return LunarMonth(number: month)?.localizedName(in: language) ?? String(localized: "\(month)月", bundle: language.localizationBundle)
+    case .gregorian:
+      if !language.isChinese {
+        let symbols = Calendar(identifier: .gregorian).monthSymbols
+        if symbols.indices.contains(month - 1) { return symbols[month - 1] }
+        return String(localized: "\(month)月", bundle: language.localizationBundle)
+      }
+      return String(localized: "\(month)月", bundle: language.localizationBundle, comment: "Gregorian month, e.g. 5月")
     }
   }
 
-  /// The day as shown in pickers and lists: 初一…三十 or 1日…31日.
+  /// The day as shown in pickers and lists: 初一…三十 / "1st" or 1日…31日 / "1".
   static func dayText(_ day: Int, reckoning: Reckoning, language: DisplayLanguage = .app) -> String {
     switch reckoning {
-    case .lunar: Day(rawValue: day)?.localizedName(in: language.glyphLanguage) ?? "\(day)"
-    case .gregorian: String(localized: "\(day)日", comment: "Gregorian day of month, e.g. 1日")
+    case .lunar: Day(rawValue: day)?.localizedName(in: language) ?? "\(day)"
+    case .gregorian:
+      language.isChinese
+        ? String(localized: "\(day)日", bundle: language.localizationBundle, comment: "Gregorian day of month, e.g. 1日")
+        : "\(day)"
     }
   }
 
@@ -116,13 +140,14 @@ extension RecurringDay {
     dateText(language: .app)
   }
 
-  /// ``dateText`` with the lunar month and day in the script of `language`.
+  /// ``dateText`` in `language`: "Lunar 8th Month 3rd" or "May 1" outside Chinese.
   func dateText(language: DisplayLanguage) -> String {
     let month = Self.monthText(month, reckoning: reckoning, language: language)
     let day = Self.dayText(day, reckoning: reckoning, language: language)
+    let bundle = language.localizationBundle
     return switch reckoning {
-    case .lunar: String(localized: "農曆\(month)\(day)", comment: "Lunar date; %1$@ month (八月), %2$@ day (初三)")
-    case .gregorian: String(localized: "公曆\(month)\(day)", comment: "Gregorian date; %1$@ month (5月), %2$@ day (1日)")
+    case .lunar: String(localized: "農曆\(month)\(day)", bundle: bundle, comment: "Lunar date; %1$@ month (八月), %2$@ day (初三)")
+    case .gregorian: String(localized: "公曆\(month)\(day)", bundle: bundle, comment: "Gregorian date; %1$@ month (5月), %2$@ day (1日)")
     }
   }
 }
@@ -130,8 +155,18 @@ extension RecurringDay {
 extension Int {
   /// "今日", or the day count spelled out, e.g. 15 → "十五日後".
   var daysUntilText: String {
-    guard self > 0 else { return String(localized: "今日") }
+    daysUntilText(language: .app)
+  }
+
+  /// ``daysUntilText`` in `language`. Chinese spells the count out; other
+  /// languages pass the `Int` to a plural-aware format ("In 15 days").
+  func daysUntilText(language: DisplayLanguage) -> String {
+    let bundle = language.localizationBundle
+    guard self > 0 else { return String(localized: "今日", bundle: bundle) }
+    guard language.isChinese else {
+      return String(localized: "\(self)日後", bundle: bundle, comment: "Days until an event outside Chinese; %lld is the count. Needs plural variants.")
+    }
     let spelled = Date.jieqiCountdownFormatter.string(from: NSNumber(value: self)) ?? "\(self)"
-    return String(localized: "\(spelled)日後", comment: "Days until an event; %@ is the count spelled out (十五)")
+    return String(localized: "\(spelled)日後", bundle: bundle, comment: "Days until an event; %@ is the count spelled out (十五)")
   }
 }

@@ -127,10 +127,14 @@ struct BaziPillarsSection: View {
               .foregroundStyle(bazi.dayMaster.chineseCharacter == ganChar ? bazi.dayMasterElement.traditionalColor : .primary)
             Text(zhiChar)
               .font(title2Font)
-            Text(ganzhi.nayin.localizedName(in: displayLanguage.glyphLanguage))
+            GlossedText(
+              glyph: ganzhi.nayin.localizedName(in: displayLanguage.glyphLanguage),
+              gloss: displayLanguage.isChinese ? "" : ganzhi.nayin.localizedName(in: displayLanguage),
+              alignment: .center)
+              .multilineTextAlignment(.center)
               .font(footnote)
               .foregroundStyle(.secondary)
-              .lineLimit(1)
+              .lineLimit(displayLanguage.isChinese ? 1 : 3)
               .minimumScaleFactor(0.6)
           }
           .frame(maxWidth: .infinity)
@@ -154,6 +158,11 @@ struct BaziPillarsSection: View {
         Text(bazi.dayMasterElement.chineseCharacter)
           .font(bodyFont)
           .foregroundStyle(bazi.dayMasterElement.traditionalColor)
+        if !displayLanguage.isChinese {
+          Text(DisplayLanguage.gloss(bazi.dayMaster.localizedName(in: displayLanguage), bazi.dayMasterElement.localizedName(in: displayLanguage)))
+            .font(footnote)
+            .foregroundStyle(.secondary)
+        }
       }
     }
     .padding()
@@ -168,6 +177,7 @@ struct BaziElementBalanceSection: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
   @Environment(\.title3Font) var title3Font
+  @Environment(\.displayLanguage) var displayLanguage
 
   var body: some View {
     VStack(alignment: .leading, spacing: 12) {
@@ -181,10 +191,10 @@ struct BaziElementBalanceSection: View {
         let isDominant = bazi.dominantElement == element
 
         HStack(spacing: 8) {
-          Text(element.chineseCharacter)
+          GlossedText(glyph: element.chineseCharacter, gloss: element.gloss(in: displayLanguage), alignment: .center)
             .font(bodyFont)
             .foregroundStyle(element.traditionalColor)
-            .frame(width: 24)
+            .frame(width: displayLanguage.isChinese ? 24 : 48)
 
           GeometryReader { geo in
             RoundedRectangle(cornerRadius: 4)
@@ -219,7 +229,7 @@ struct BaziElementBalanceSection: View {
               .foregroundStyle(.secondary)
             HStack(spacing: 4) {
               ForEach(bazi.missingElements, id: \.self) { el in
-                Text(el.chineseCharacter)
+                GlossedText(glyph: el.chineseCharacter, gloss: el.gloss(in: displayLanguage), alignment: .center)
                   .font(bodyFont)
                   .foregroundStyle(.red)
               }
@@ -231,7 +241,7 @@ struct BaziElementBalanceSection: View {
           Text("用神")
             .font(footnote)
             .foregroundStyle(.secondary)
-          Text(bazi.beneficialElement.chineseCharacter)
+          GlossedText(glyph: bazi.beneficialElement.chineseCharacter, gloss: bazi.beneficialElement.gloss(in: displayLanguage), alignment: .trailing)
             .font(bodyFont)
             .foregroundStyle(.green)
         }

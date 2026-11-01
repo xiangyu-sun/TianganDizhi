@@ -35,12 +35,13 @@ struct ShichenLockScreenView: View {
         HStack(alignment: .top) {
           Text(date.lunarDateWithZodiac(language: displayLanguage))
             .font(title2Font)
+            .englishFit(displayLanguage, lines: 3, minimumScale: 0.6)
           
           VStack() {
-            Text(shichen.dizhi.localizedHourName(in: displayLanguage.glyphLanguage))
+            Text(shichen.dizhi.localizedHourName(in: displayLanguage))
               .font(title2Font)
             
-            Text("\(shichen.currentKeSpellOut)刻")
+            Text(shichen.keText(language: displayLanguage))
               .font(title2Font)
           }
         }
@@ -50,6 +51,7 @@ struct ShichenLockScreenView: View {
           Text(nextShichenCountdown)
             .font(calloutFont)
             .foregroundStyle(.secondary)
+            .englishFit(displayLanguage, lines: 2, minimumScale: 0.7)
         }
       }
     }

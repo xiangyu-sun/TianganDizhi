@@ -26,10 +26,14 @@ struct TianganListView: View {
 struct TianganCell: View {
   let tiangan: Tiangan
   @Environment(\.bodyFont) var bodyFont
+  @Environment(\.displayLanguage) var displayLanguage
   var body: some View {
     HStack {
-      Text(tiangan.chineseCharacter)
-      Text("(\(tiangan.pinyin))")
+      GlossedText(glyph: tiangan.chineseCharacter, gloss: tiangan.gloss(in: displayLanguage))
+      // The gloss already carries the pinyin outside Chinese.
+      if displayLanguage.isChinese {
+        Text("(\(tiangan.pinyin))")
+      }
     }
     .padding()
     .font(bodyFont)

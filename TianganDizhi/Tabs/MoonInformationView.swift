@@ -62,7 +62,7 @@ struct MoonInformationView: View {
   // MARK: Private
 
   private func moonriseView(_ moonrise: Date) -> some View {
-    HStack(spacing: 0) {
+    HStack(spacing: displayLanguage.isChinese ? 0 : 4) {
       Text(moonrise, style: .time)
       Text("月升")
     }
@@ -71,7 +71,7 @@ struct MoonInformationView: View {
   }
 
   private func moonsetView(_ moonset: Date) -> some View {
-    HStack(spacing: 0) {
+    HStack(spacing: displayLanguage.isChinese ? 0 : 4) {
       Text(moonset, style: .time)
       Text("月落")
     }

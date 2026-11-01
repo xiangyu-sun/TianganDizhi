@@ -80,7 +80,7 @@ struct JiaziView: View {
             .foregroundStyle((nian == item) ? .primary : .secondary)
             .accessibilityElement(children: .combine)
             .accessibilityLabel({
-              var label = item.description
+              var label = displayLanguage.isChinese ? item.description : GlossedText.accessibilityText(glyph: item.description, gloss: item.gloss(in: displayLanguage))
               if nian == item { label = String(localized: "\(label)，年柱", comment: "Accessibility: a 干支 marked as the year pillar") }
               if yue == item { label = String(localized: "\(label)，月柱", comment: "Accessibility: a 干支 marked as the month pillar") }
               if ri == item { label = String(localized: "\(label)，日柱", comment: "Accessibility: a 干支 marked as the day pillar") }

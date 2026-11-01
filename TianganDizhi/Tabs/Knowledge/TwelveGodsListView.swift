@@ -76,8 +76,18 @@ struct TwelveGodCell: View {
       Spacer()
       Group {
 #if os(watchOS)
-        Text(god.localizedName(in: displayLanguage.glyphLanguage))
+        GlossedText(glyph: god.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : god.localizedName(in: displayLanguage))
+#else
+        if !displayLanguage.isChinese {
+          // The page's artwork has no English; name the god here.
+          Text("\(god.localizedName(in: displayLanguage.glyphLanguage)) · \(god.localizedName(in: displayLanguage))")
+        }
 #endif
+        if !displayLanguage.isChinese {
+          // Meaning, 宜 and 忌 are library prose, which exists only in Chinese.
+          Text("以下內容僅提供中文")
+            .font(.footnote)
+        }
         Text(god.meaning.converted(to: displayLanguage))
         Text("宜：\(god.do.converted(to: displayLanguage))")
         Text("忌：\(god.dontDo.converted(to: displayLanguage))")
@@ -87,7 +97,7 @@ struct TwelveGodCell: View {
     .padding()
     .font(bodyFont)
     .accessibilityElement(children: .combine)
-    .accessibilityLabel("\(god.localizedName(in: displayLanguage.glyphLanguage))，\(god.meaning.converted(to: displayLanguage))，宜：\(god.do.converted(to: displayLanguage))，忌：\(god.dontDo.converted(to: displayLanguage))")
+    .accessibilityLabel("\(displayLanguage.isChinese ? god.localizedName(in: displayLanguage) : GlossedText.accessibilityText(glyph: god.localizedName(in: displayLanguage.glyphLanguage), gloss: god.localizedName(in: displayLanguage)))，\(god.meaning.converted(to: displayLanguage))，宜：\(god.do.converted(to: displayLanguage))，忌：\(god.dontDo.converted(to: displayLanguage))")
     .overlay(alignment: .topTrailing) {
       if isToday {
         Text("今日")

@@ -8,6 +8,7 @@
 #if os(iOS)
 import UIKit
 #endif
+import ChineseAstrologyCalendar
 import Foundation
 import os
 
@@ -22,6 +23,14 @@ enum FontManager {
     /// - Parameter size: The desired font size
     /// - Returns: Custom font if available, otherwise system bold font
     static func safeUIFont(size: CGFloat) -> UIFont {
+        // Outside Chinese the calligraphy font only draws the Han glyphs; Latin
+        // text uses the system font (see `CalligraphyFont`).
+        if !DisplayLanguage.app.isChinese, WeibeiFont.isAvailable {
+            let base = UIFont.systemFont(ofSize: size, weight: .bold)
+            let cascade = UIFontDescriptor(name: WeibeiFont.postScriptName, size: size)
+            let descriptor = base.fontDescriptor.addingAttributes([.cascadeList: [cascade]])
+            return UIFont(descriptor: descriptor, size: size)
+        }
         if let customFont = UIFont(name: customFontName, size: size) {
             return customFont
         }

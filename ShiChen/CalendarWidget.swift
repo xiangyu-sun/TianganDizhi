@@ -66,7 +66,7 @@ struct CalendarWidget: Widget {
       provider: CalendarTimelineProvider())
     { entry in
       CalendarWidgetView(entry: entry)
-        .environment(\.calendarLanguage, DisplayLanguage.app.glyphLanguage)
+        .environment(\.calendarLanguage, DisplayLanguage.app)
         .containerBackground(.background, for: .widget)
         .widgetDeepLink(kind: kind)
     }
@@ -99,7 +99,7 @@ struct CalendarWidgetView: View {
     CalendarConfiguration(
       showLunarDays: entry.configuration.showLunarDays,
       showSolarTerms: entry.configuration.showSolarTerms,
-      specialDaySources: SpecialDayCatalog.sources(),
+      specialDaySources: SpecialDayCatalog.sources(language: displayLanguage),
       specialDayTimeZone: .solarTerm)
   }
 
@@ -124,11 +124,12 @@ struct CalendarWidgetView: View {
           
           let mansion = LunarMansion.lunarMansion(date: entry.date)
           HStack {
-            Text("星象: \(mansion.fourSymbol.localizedName(in: displayLanguage.glyphLanguage))")
-            Text("星宿: \(mansion.glyph(in: displayLanguage))")
+            Text("星象: \(mansion.fourSymbol.localizedName(in: displayLanguage))")
+            Text("星宿: \(mansion.shortName(in: displayLanguage))")
           }
+          .englishFit(displayLanguage, lines: 2, minimumScale: 0.7)
           .accessibilityElement(children: .combine)
-          .accessibilityLabel("星象：\(mansion.fourSymbol.localizedName(in: displayLanguage.glyphLanguage))，星宿：\(mansion.glyph(in: displayLanguage))")
+          .accessibilityLabel("星象：\(mansion.fourSymbol.localizedName(in: displayLanguage))，星宿：\(mansion.shortName(in: displayLanguage))")
           Spacer(minLength: 0)
         }
         .frame(width: 220)
@@ -152,6 +153,7 @@ struct CalendarWidgetView: View {
       VStack(alignment: .center, spacing: 0){
         Text(month.title)
         Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
+          .englishFit(displayLanguage, lines: 2, minimumScale: 0.7)
       }
       .font(.headline)
       .padding(.bottom, 8)

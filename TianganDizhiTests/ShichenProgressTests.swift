@@ -70,26 +70,26 @@ import Testing
 
   @Test func nextShichenCountdownIsNonEmpty() {
     let date = makeDateAt(hour: 9, minute: 30)
-    #expect(!date.nextShichenCountdown.isEmpty)
+    #expect(!date.nextShichenCountdown(language: .zhHant).isEmpty)
   }
 
   @Test func nextShichenCountdownContainsNextDizhiCharacter() {
     // Si hour (09:00–11:00) → next is Wu (午)
     let date = makeDateAt(hour: 9, minute: 30)
-    #expect(date.nextShichenCountdown.contains("午"))
+    #expect(date.nextShichenCountdown(language: .zhHant).contains("午"))
   }
 
   @Test func nextShichenCountdownMinutesOnlyFormat() {
     // 58 minutes until next shichen → "XX 分鐘" format
     let date = makeDateAt(hour: 10, minute: 2)
-    let text = date.nextShichenCountdown
+    let text = date.nextShichenCountdown(language: .zhHant)
     #expect(text.contains("分鐘"))
   }
 
   @Test func nextShichenCountdownHoursFormat() {
     // Just entered Si hour → ~2 hours remaining → hours format
     let date = makeDateAt(hour: 9, minute: 1)
-    let text = date.nextShichenCountdown
+    let text = date.nextShichenCountdown(language: .zhHant)
     #expect(text.contains("小時"))
   }
 }

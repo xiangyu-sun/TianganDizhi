@@ -40,6 +40,7 @@ struct UpcomingFestivalsView: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.footnote) var footnote
   @Environment(\.title3Font) var title3Font
+  @Environment(\.displayLanguage) var displayLanguage
   @AppStorage(Constants.useGTM8, store: Constants.sharedUserDefault)
   var useGTM8 = false
   @AppStorage(Constants.customHolidays, store: Constants.sharedUserDefault)
@@ -54,6 +55,11 @@ struct UpcomingFestivalsView: View {
         #if !os(watchOS)
         .pickerStyle(.segmented)
         #endif
+        // Solar-term notes are library prose, which exists only in Chinese.
+        if !displayLanguage.isChinese && (filter == .all || filter == .jieqi) {
+          ChineseOnlyCaption()
+            .listRowInsets(EdgeInsets())
+        }
       }
 
       Section {
@@ -106,11 +112,14 @@ struct UpcomingFestivalsView: View {
           .font(footnote)
           .foregroundStyle(.secondary)
         Spacer()
-        Text(item.day.date, style: .date)
+        // The list spans at most a year, so a short date fits beside long English names.
+        (displayLanguage.isChinese
+          ? Text(item.day.date, style: .date)
+          : Text(item.day.date, format: .dateTime.month(.abbreviated).day()))
           .font(bodyFont)
           .foregroundStyle(.secondary)
       }
-      Text(item.daysUntil.daysUntilText)
+      Text(item.daysUntil.daysUntilText(language: displayLanguage))
         .font(footnote)
         .foregroundStyle(.orange)
       if !item.day.detail.isEmpty {
@@ -122,14 +131,17 @@ struct UpcomingFestivalsView: View {
     .padding(.vertical, 4)
     .accessibilityElement(children: .combine)
     .accessibilityLabel(
-      "\(item.day.name)，\(item.day.category)，\(item.day.date.formatted(date: .long, time: .omitted))，\(item.daysUntil.daysUntilText)，\(item.day.detail)"
+      displayLanguage.isChinese
+        ? "\(item.day.name)，\(item.day.category)，\(item.day.date.formatted(date: .long, time: .omitted))，\(item.daysUntil.daysUntilText(language: displayLanguage))，\(item.day.detail)"
+        : [item.day.name, item.day.category, item.day.date.formatted(date: .long, time: .omitted), item.daysUntil.daysUntilText(language: displayLanguage), item.day.detail]
+          .filter { !$0.isEmpty }.joined(separator: ", ")
     )
   }
 
   private func rebuild() {
     // `useGTM8` is read through `TimeZone.solarTerm`; the custom days come
     // straight from the observed storage so an edit shows up at once.
-    let sources = SpecialDayCatalog.sources(customHolidays: CustomHolidayStore.decode(customHolidayData))
+    let sources = SpecialDayCatalog.sources(customHolidays: CustomHolidayStore.decode(customHolidayData), language: displayLanguage)
     events = Date.now
       .upcomingSpecialDays(sources: sources, within: 365, calendar: .solarTerm)
       .map { Event(id: "\($0.daysUntil)|\($0.day.kind.rawValue)|\($0.day.name)", day: $0.day, daysUntil: $0.daysUntil) }

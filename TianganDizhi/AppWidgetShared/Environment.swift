@@ -8,6 +8,7 @@
 
 import ChineseAstrologyCalendar
 import CoreText
+import JingluoShuxue
 import os
 import SwiftUI
 
@@ -88,7 +89,14 @@ extension Font {
   /// calligraphy font is available, the bold system style — the same font the "use system font" setting picks.
   /// (`.custom` with a missing font falls back to a *regular*-weight system font
   /// at a fixed size.)
+  ///
+  /// Outside Chinese the calligraphy font only draws the Han glyphs: Weibei and
+  /// WenKai have poor Latin, so Latin text uses the system font and the
+  /// calligraphy font is its CoreText cascade (see ``CalligraphyFont``).
   private static func weiBei(size: CGFloat, relativeTo style: Font.TextStyle) -> Font {
+    if !DisplayLanguage.app.isChinese {
+      return CalligraphyFont.latinFriendly(size: size, relativeTo: style)
+    }
     if WeibeiFont.isWidgetFontBundled {
       return .custom(WeibeiFont.widgetFontName, size: size, relativeTo: style)
     }
@@ -145,6 +153,178 @@ extension DisplayLanguage {
   var glyphLanguage: DisplayLanguage {
     self == .zhHans ? .zhHans : .zhHant
   }
+
+  /// Whether this is Traditional or Simplified Chinese. Chinese keeps the app's
+  /// Chinese-only wording (spelled-out numbers, 年/節/氣 suffixes, prose);
+  /// every other language gets English names and format strings.
+  var isChinese: Bool {
+    self == .zhHant || self == .zhHans
+  }
+
+  /// The strings bundle for this language: the `<language>.lproj` of the main
+  /// bundle when there is one, else the main bundle itself. Lets a function
+  /// that takes an explicit `language:` read the catalog in that language
+  /// instead of the device's — `String(localized: "…", bundle: language.localizationBundle)`.
+  var localizationBundle: Bundle {
+    guard let path = Bundle.main.path(forResource: identifier, ofType: "lproj"),
+          let bundle = Bundle(path: path)
+    else { return .main }
+    return bundle
+  }
+}
+
+// MARK: - CalligraphyFont
+
+/// Fonts for non-Chinese languages: Latin in the system font, Han in the
+/// calligraphy font (Weibei in the app, bundled LXGW WenKai TC in widgets),
+/// through a CoreText cascade list on a system base font.
+enum CalligraphyFont {
+  /// The calligraphy font that is usable in this process, if any.
+  static var cascadeFontName: String? {
+    if WeibeiFont.isWidgetFontBundled { return WeibeiFont.widgetFontName }
+    if WeibeiFont.isAvailable { return WeibeiFont.postScriptName }
+    return nil
+  }
+
+  /// A bold system font at `size` whose cascade list starts with the
+  /// calligraphy font. `nil` while no calligraphy font is available.
+  static func cascadingFont(size: CGFloat) -> CTFont? {
+    guard let cascadeFontName else { return nil }
+    let base = CTFontCreateUIFontForLanguage(.emphasizedSystem, size, nil)
+      ?? CTFontCreateWithName("Helvetica-Bold" as CFString, size, nil)
+    let cascade = CTFontDescriptorCreateWithNameAndSize(cascadeFontName as CFString, size)
+    let attributes: [CFString: Any] = [kCTFontCascadeListAttribute: [cascade]]
+    let descriptor = CTFontDescriptorCreateCopyWithAttributes(CTFontCopyFontDescriptor(base), attributes as CFDictionary)
+    return CTFontCreateWithFontDescriptor(descriptor, size, nil)
+  }
+
+  /// The SwiftUI font for a `Font.weiBei*` slot outside Chinese. The size is
+  /// scaled for Dynamic Type when the font is made (iOS); until a calligraphy
+  /// font is available it is the bold system style, as in Chinese.
+  static func latinFriendly(size: CGFloat, relativeTo style: Font.TextStyle) -> Font {
+    guard let font = cascadingFont(size: scaledSize(size, relativeTo: style)) else {
+      return .system(style).bold()
+    }
+    return Font(font)
+  }
+
+  private static func scaledSize(_ size: CGFloat, relativeTo style: Font.TextStyle) -> CGFloat {
+    #if os(iOS)
+    let uiStyle: UIFont.TextStyle = switch style {
+    case .largeTitle: .largeTitle
+    case .title: .title1
+    case .title2: .title2
+    case .title3: .title3
+    case .headline: .headline
+    case .subheadline: .subheadline
+    case .callout: .callout
+    case .footnote: .footnote
+    case .caption: .caption1
+    case .caption2: .caption2
+    default: .body
+    }
+    return UIFontMetrics(forTextStyle: uiStyle).scaledValue(for: size)
+    #else
+    return size
+    #endif
+  }
+}
+
+// MARK: - GlossedText
+
+/// A Chinese term with an English gloss under it (group C: lists and reference
+/// rows). In Chinese it is just the glyph text, so Chinese layouts stay as
+/// they are; in other languages the gloss follows in a smaller secondary line.
+///
+/// The combined accessibility label reads glyph and gloss together:
+/// "子, Zi, Rat".
+struct GlossedText: View {
+  @Environment(\.displayLanguage) private var displayLanguage
+
+  let glyph: String
+  /// The gloss shown outside Chinese, e.g. "Zi · Rat". Empty for none.
+  let gloss: String
+  var alignment: HorizontalAlignment = .leading
+
+  var body: some View {
+    if displayLanguage.isChinese || gloss.isEmpty {
+      Text(glyph)
+    } else {
+      VStack(alignment: alignment, spacing: 0) {
+        Text(glyph)
+        Text(gloss)
+          .font(.caption)
+          .foregroundStyle(.secondary)
+          .lineLimit(2)
+          .minimumScaleFactor(0.8)
+      }
+      .accessibilityElement(children: .ignore)
+      .accessibilityLabel(Self.accessibilityText(glyph: glyph, gloss: gloss))
+    }
+  }
+
+  /// "子, Zi, Rat" — the glyph, then the gloss with its separators read as commas.
+  static func accessibilityText(glyph: String, gloss: String) -> String {
+    guard !gloss.isEmpty else { return glyph }
+    return glyph + ", " + gloss.replacingOccurrences(of: " · ", with: ", ")
+  }
+}
+
+/// The one-line note above library prose that only exists in Chinese (group D:
+/// health tips, 宜/忌, meanings, aliases) when the app is not in Chinese.
+struct ChineseOnlyCaption: View {
+  var body: some View {
+    Text("以下內容僅提供中文")
+      .font(.footnote)
+      .foregroundStyle(.secondary)
+      .frame(maxWidth: .infinity, alignment: .leading)
+      .padding(.horizontal)
+      .padding(.vertical, 4)
+  }
+}
+
+extension DisplayLanguage {
+  /// Joins the non-empty parts of a gloss with " · ".
+  static func gloss(_ parts: String...) -> String {
+    parts.filter { !$0.isEmpty }.joined(separator: " · ")
+  }
+}
+
+// MARK: - Term glosses
+
+/// The English line under a glyph (group C): the term's name, plus a second
+/// fact where one reads well ("Zǐ · Rat"). Each returns "" in Chinese, where
+/// the glyph stands alone.
+extension Tiangan {
+  func gloss(in language: DisplayLanguage) -> String {
+    language.isChinese ? "" : DisplayLanguage.gloss(localizedName(in: language), wuxing.localizedName(in: language))
+  }
+}
+
+extension Dizhi {
+  func gloss(in language: DisplayLanguage) -> String {
+    language.isChinese ? "" : DisplayLanguage.gloss(localizedName(in: language), Zodiac(self).localizedName(in: language))
+  }
+}
+
+extension Wuxing {
+  /// The element as sentence text: the glyph in Chinese, the English name
+  /// ("Wood") otherwise.
+  func sentenceText(in language: DisplayLanguage) -> String {
+    language.isChinese ? chineseCharacter : localizedName(in: language)
+  }
+
+  /// "Wood" under 木.
+  func gloss(in language: DisplayLanguage) -> String {
+    language.isChinese ? "" : localizedName(in: language)
+  }
+}
+
+extension Ganzhi {
+  /// "Jiǎzǐ · Gold in the Sea" under 甲子.
+  func gloss(in language: DisplayLanguage) -> String {
+    language.isChinese ? "" : DisplayLanguage.gloss(localizedName(in: language), nayin.localizedName(in: language))
+  }
 }
 
 // MARK: - Script conversion
@@ -169,6 +349,61 @@ extension LunarMansion {
   func glyph(in language: DisplayLanguage) -> String {
     let name = localizedName(in: language.glyphLanguage)
     return name.hasSuffix("宿") ? String(name.dropLast()) : name
+  }
+}
+
+extension Shichen {
+  /// The current 刻 as a label: "初刻"-style spelled-out ordinal in Chinese,
+  /// "Quarter 3" outside Chinese, where the ordinal is an `Int` so the catalog
+  /// can phrase it.
+  func keText(language: DisplayLanguage) -> String {
+    let bundle = language.localizationBundle
+    if language.isChinese {
+      return String(localized: "\(currentKeSpellOut)刻", bundle: bundle)
+    }
+    return String(localized: "\(currentKe + 1)刻", bundle: bundle, comment: "The current ke (quarter of a double hour) outside Chinese; %lld is its number, 1 to 8")
+  }
+}
+
+extension LunarMansion {
+  /// The mansion as the "星宿:" line shows it: the single character in Chinese
+  /// (角, 虛 or 虚), the English name ("Horn") otherwise.
+  func shortName(in language: DisplayLanguage) -> String {
+    language.isChinese ? glyph(in: language) : localizedName(in: language)
+  }
+}
+
+extension 十二经脉 {
+  /// The organ's short name for the hour strip and clock centre: 膽 in
+  /// Chinese, "Gallbladder" in English (the meridian's name without "Meridian").
+  func organText(in language: DisplayLanguage) -> String {
+    if language.isChinese { return organReference.converted(to: language) }
+    return localizedName(in: language).replacingOccurrences(of: " Meridian", with: "")
+  }
+}
+
+extension Date {
+  /// The lunar date for tight spots (lock screen, menu bar, widgets): the full
+  /// year, zodiac, month and day in Chinese; in English the month and day with
+  /// the zodiac year ("5th Month 9th, Year of the Tiger" would not fit), so it
+  /// drops the stem-branch year name.
+  func compactLunarDate(language: DisplayLanguage) -> String {
+    if language.isChinese { return lunarDateWithZodiac(language: language) }
+    guard let lunar = lunarDate() else { return "" }
+    return "\(lunar.formatted(.monthDay, in: language)) · \(lunar.zodiac.localizedName(in: language))"
+  }
+}
+
+extension View {
+  /// Lets text that is longer in English wrap and shrink where the Chinese fits
+  /// on one line. Chinese layouts are untouched.
+  @ViewBuilder
+  func englishFit(_ language: DisplayLanguage, lines: Int = 2, minimumScale: CGFloat = 0.6) -> some View {
+    if language.isChinese {
+      self
+    } else {
+      lineLimit(lines).minimumScaleFactor(minimumScale).multilineTextAlignment(.center)
+    }
   }
 }
 

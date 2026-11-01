@@ -25,7 +25,8 @@ import Testing
   func translationsKeepTheKeysPlaceholders(_ path: String) throws {
     for (key, entry) in try entries(in: path) {
       for (language, localization) in entry.localizations ?? [:] {
-        guard let value = localization.stringUnit?.value else { continue }
+        // Plural substitutions (`%#@days@`) carry their placeholder in the substitution.
+        guard let value = localization.stringUnit?.value, !value.contains("%#@") else { continue }
         #expect(
           Self.placeholders(in: value) == Self.placeholders(in: key),
           "\(language) value \"\(value)\" doesn't use the placeholders of \"\(key)\"")

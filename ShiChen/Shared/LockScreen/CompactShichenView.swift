@@ -29,7 +29,7 @@ struct CompactShichenView: View {
   var body: some View {
     VStack {
       titleView
-      Text(shichen.localizedHourName(in: displayLanguage.glyphLanguage))
+      Text(shichen.localizedHourName(in: displayLanguage))
         .font(largeTitleFont)
 
       ShichenInformationView(shichen: shichen)
@@ -48,7 +48,7 @@ struct CompactShichenView: View {
   private var titleView: some View {
     HStack {
       Text(components.nian?.formatedYear ?? "")
-      Text(components.zodiac?.localizedName(in: displayLanguage.glyphLanguage) ?? "")
+      Text(components.zodiac?.localizedName(in: displayLanguage) ?? "")
     }
     .font(title3Font)
   }

@@ -153,7 +153,7 @@ struct JieqiWidgetDisplayDateTests {
     // 2025-05-11: inside the Lixia (立夏, ~May 5) period, before Xiaoman (小滿, ~May 21).
     let today = try localNoon(year: 2025, month: 5, day: 11)
     #expect(!today.isJieqiDayAligned, "May 11 is mid-term, not a Jieqi start day")
-    let text = today.jieQiDisplayText
+    let text = today.jieQiDisplayText(language: .zhHant)
     #expect(text.contains("日後"), "Non-Jieqi day shows a '…日後' countdown")
     #expect(text.contains("小滿"), "Counts down to the upcoming 小滿")
     #expect(!text.contains("立夏"), "The current term name is not shown on a non-Jieqi day")
@@ -169,7 +169,7 @@ struct JieqiWidgetDisplayDateTests {
     let startDay = upcoming.startDate
 
     #expect(startDay.isJieqiDayAligned, "The next occurrence's start date is, by definition, a Jieqi day")
-    let text = startDay.jieQiDisplayText
+    let text = startDay.jieQiDisplayText(language: .zhHant)
     #expect(!text.contains("日後"), "No countdown on the term's own start day")
     #expect(text.contains(upcoming.jieqi.chineseName), "Names the term that has begun on its start day")
   }
@@ -179,7 +179,7 @@ struct JieqiWidgetDisplayDateTests {
     let seed = try localNoon(year: 2026, month: 6, day: 25)
     let xiaoshuDay = try #require(seed.nextJieqiDayAligned).startDate
     #expect(xiaoshuDay.isJieqiDayAligned, "Should be the 小暑 start day")
-    let text = xiaoshuDay.jieQiDisplayText
+    let text = xiaoshuDay.jieQiDisplayText(language: .zhHant)
     #expect(!text.contains("日後"), "The start day names the term, it does not count down")
     #expect(text.contains("小暑"), "Current term is 小暑")
     #expect(!text.contains("大暑"), "Must not name the next term 大暑")
@@ -192,7 +192,7 @@ struct JieqiWidgetDisplayDateTests {
     let xiaoshuDay = try #require(seed.nextJieqiDayAligned).startDate
     let dayBefore = try #require(Calendar.current.date(byAdding: .day, value: -1, to: xiaoshuDay))
     #expect(!dayBefore.isJieqiDayAligned, "The day before is not itself a Jieqi start day")
-    let text = dayBefore.jieQiDisplayText
+    let text = dayBefore.jieQiDisplayText(language: .zhHant)
     #expect(text.contains("日後"), "Counts down to the imminent 小暑")
     #expect(text.contains("小暑"), "The next term is 小暑")
   }
@@ -228,9 +228,9 @@ struct JieqiWidgetDisplayDateTests {
     // Sweep ~2 months so the window straddles at least one solar-term transition.
     for offset in 0..<60 {
       let day = try #require(calendar.date(byAdding: .day, value: offset, to: firstDay))
-      let atMidnight = day.jieQiDisplayText
-      let atNoon = day.addingTimeInterval(12 * 3600).jieQiDisplayText
-      let atEndOfDay = day.addingTimeInterval(24 * 3600 - 1).jieQiDisplayText
+      let atMidnight = day.jieQiDisplayText(language: .zhHant)
+      let atNoon = day.addingTimeInterval(12 * 3600).jieQiDisplayText(language: .zhHant)
+      let atEndOfDay = day.addingTimeInterval(24 * 3600 - 1).jieQiDisplayText(language: .zhHant)
 
       #expect(atMidnight == atNoon && atNoon == atEndOfDay,
               "Countdown text must not depend on the time of day (day offset \(offset)): 00:00=\(atMidnight) 12:00=\(atNoon) 23:59=\(atEndOfDay)")
@@ -245,14 +245,14 @@ struct JieqiWidgetDisplayDateTests {
     var china = Calendar(identifier: .gregorian)
     china.timeZone = .chinaStandardTime
     let newYear = try #require(china.date(from: DateComponents(year: 2024, month: 2, day: 10, hour: 12)))
-    #expect(newYear.lunarDateWithZodiacGTM8 == "甲辰龍年正月初一")
+    #expect(newYear.lunarDateWithZodiacGTM8(language: .zhHant) == "甲辰龍年正月初一")
   }
 
   @Test("lunarDayText is the lunar day alone")
   func lunarDayText() throws {
     let date = try localNoon(year: 2024, month: 9, day: 17)
     let day = try #require(date.chineseDay())
-    #expect(date.lunarDayText == day.name)
+    #expect(date.lunarDayText(language: .zhHant) == day.name)
   }
 }
 

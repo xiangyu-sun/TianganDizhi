@@ -35,6 +35,7 @@ struct JieqiHealthMediumView: View {
         Text(date.jieQiDisplayText(language: displayLanguage))
           .frame(alignment: .leading)
           .lineLimit(1)
+          .minimumScaleFactor(displayLanguage.isChinese ? 1 : 0.6)
           .font(title3Font)
         
         // Health tip

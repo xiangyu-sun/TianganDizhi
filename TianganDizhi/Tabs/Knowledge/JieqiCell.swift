@@ -37,7 +37,7 @@ struct JieqiCell: View {
         .accessibilityHidden(true)
     }
     .accessibilityElement(children: .combine)
-    .accessibilityLabel("\(jieqi.localizedName(in: displayLanguage.glyphLanguage))，\((jieqi.qi ? "氣" : "節").converted(to: displayLanguage))，\(jieqi.qishierHou.converted(to: displayLanguage))")
+    .accessibilityLabel(accessibilityText)
 
     #else
     HStack {
@@ -63,16 +63,27 @@ struct JieqiCell: View {
       #endif
     }
     .accessibilityElement(children: .combine)
-    .accessibilityLabel("\(jieqi.localizedName(in: displayLanguage.glyphLanguage))，\((jieqi.qi ? "氣" : "節").converted(to: displayLanguage))，\(jieqi.qishierHou.converted(to: displayLanguage))")
+    .accessibilityLabel(accessibilityText)
     .listRowBackground(isCurrent ? Color.accentColor.opacity(0.12) : Color.clear)
     #endif
+  }
+
+  /// Name, 節/氣 and 七十二候; outside Chinese the name is followed by its English
+  /// gloss and the (Chinese-only) 節/氣 marker is dropped.
+  private var accessibilityText: String {
+    if displayLanguage.isChinese {
+      return "\(jieqi.localizedName(in: displayLanguage))，\((jieqi.qi ? "氣" : "節").converted(to: displayLanguage))，\(jieqi.qishierHou.converted(to: displayLanguage))"
+    }
+    return GlossedText.accessibilityText(glyph: jieqi.localizedName(in: displayLanguage.glyphLanguage), gloss: jieqi.localizedName(in: displayLanguage)) + ", " + jieqi.qishierHou
   }
 
   private var jieqiHeader: some View {
     HStack {
       HStack {
-        Text(jieqi.localizedName(in: displayLanguage.glyphLanguage))
-        Text("(\((jieqi.qi ? "氣" : "節").converted(to: displayLanguage)))")
+        GlossedText(glyph: jieqi.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : jieqi.localizedName(in: displayLanguage))
+        if displayLanguage.isChinese {
+          Text("(\((jieqi.qi ? "氣" : "節").converted(to: displayLanguage)))")
+        }
       }
       .font(title3Font)
 

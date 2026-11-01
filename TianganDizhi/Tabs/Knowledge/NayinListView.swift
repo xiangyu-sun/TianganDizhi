@@ -26,16 +26,23 @@ struct NayinListView: View {
               Text(second.description)
             }
             .font(bodyFont)
-            Text(nayin.wuxing.chineseCharacter)
+            Text(displayLanguage.isChinese ? nayin.wuxing.chineseCharacter : nayin.wuxing.chineseCharacter + " · " + nayin.wuxing.localizedName(in: displayLanguage))
               .font(footnote)
               .foregroundStyle(.secondary)
           }
           Spacer()
-          Text(nayin.localizedName(in: displayLanguage.glyphLanguage))
+          GlossedText(
+            glyph: nayin.localizedName(in: displayLanguage.glyphLanguage),
+            gloss: displayLanguage.isChinese ? "" : nayin.localizedName(in: displayLanguage),
+            alignment: .trailing)
+            .multilineTextAlignment(.trailing)
             .font(bodyFont)
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(first.description)、\(second.description)，\(nayin.localizedName(in: displayLanguage.glyphLanguage))")
+        .accessibilityLabel(
+          displayLanguage.isChinese
+            ? "\(first.description)、\(second.description)，\(nayin.localizedName(in: displayLanguage))"
+            : "\(first.description), \(second.description), \(GlossedText.accessibilityText(glyph: nayin.localizedName(in: displayLanguage.glyphLanguage), gloss: nayin.localizedName(in: displayLanguage)))")
       }
     }
     .navigationTitle("六十納音")

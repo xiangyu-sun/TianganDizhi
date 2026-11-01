@@ -80,9 +80,9 @@ import Testing
   }
 
   @Test func displayText() {
-    #expect(RecurringDay(name: "", reckoning: .lunar, month: 12, day: 23).dateText == "農曆臘月廿三")
-    #expect(RecurringDay(name: "", reckoning: .gregorian, month: 5, day: 1).dateText == "公曆5月1日")
-    #expect(0.daysUntilText == "今日")
-    #expect(15.daysUntilText == "十五日後")
+    #expect(RecurringDay(name: "", reckoning: .lunar, month: 12, day: 23).dateText(language: .zhHant) == "農曆臘月廿三")
+    #expect(RecurringDay(name: "", reckoning: .gregorian, month: 5, day: 1).dateText(language: .zhHant) == "公曆5月1日")
+    #expect(0.daysUntilText(language: .zhHant) == "今日")
+    #expect(15.daysUntilText(language: .zhHant) == "十五日後")
   }
 }

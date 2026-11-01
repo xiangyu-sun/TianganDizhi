@@ -51,7 +51,7 @@ struct ShierPiguaView: View {
           let dizhi = Dizhi(rawValue: max((jieqi.rawValue + 1) / 2, 1)) ?? .chen
           let dizhiIndex = dizhi.rawValue - 1
 
-          Text(Key.shierLvLvMonthOrder[dizhiIndex].lvlvDescription.converted(to: displayLanguage))
+          Text(Key.shierLvLvMonthOrder[dizhiIndex].localizedLvlvName(in: displayLanguage.glyphLanguage))
             .rotationEffect(getRotatingAngle(for: dizhiIndex - 3, base: 12))
             .offset(angle12Position(for: dizhiIndex - 3, in: size, z: 1))
 

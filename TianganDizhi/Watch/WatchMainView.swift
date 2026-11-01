@@ -23,7 +23,8 @@ struct WatchMainView: View {
   var body: some View {
     Group {
       HStack {
-        Text(date.lunarDateWithZodiac(language: displayLanguage))
+        Text(date.compactLunarDate(language: displayLanguage))
+          .englishFit(displayLanguage, lines: 2, minimumScale: 0.6)
         if let value = wetherData {
           Image(systemName: value.moonPhase.moonPhase.symbolName)
           Text(value.moonPhase.name(traditionnal: true, language: displayLanguage))
@@ -39,7 +40,7 @@ struct WatchMainView: View {
           VStack {
             Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
               .font(titleFont)
-            Text(shichen.dizhi.luizhu.organReference.converted(to: displayLanguage))
+            Text(shichen.dizhi.luizhu.organText(in: displayLanguage))
               .font(footnote)
           }
         }

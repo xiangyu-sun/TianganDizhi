@@ -78,7 +78,8 @@ struct DizhiListView: View {
     return disppayMode.dizhi.filter { dz in
       dz.chineseCharacter.localizedStandardContains(searchText) ||
       dz.aliasName.localizedStandardContains(searchText) ||
-      dz.aliasName.converted(to: displayLanguage).localizedStandardContains(searchText)
+      dz.aliasName.converted(to: displayLanguage).localizedStandardContains(searchText) ||
+      (!displayLanguage.isChinese && dz.gloss(in: displayLanguage).localizedStandardContains(searchText))
     }
   }
 
@@ -102,7 +103,7 @@ struct DizhiListView: View {
       case .relationships:
         NavigationLink(value: KnowledgeRoute.dizhiRelationship(dz)) {
           HStack {
-            Text(dz.chineseCharacter)
+            GlossedText(glyph: dz.chineseCharacter, gloss: dz.gloss(in: displayLanguage))
             Spacer()
             Text("冲\(dz.chong.chineseCharacter)")
               .foregroundStyle(.secondary)
@@ -120,6 +121,12 @@ struct DizhiListView: View {
           Text("無結果")
             .foregroundStyle(.secondary)
         }
+      }
+    }
+    .safeAreaInset(edge: .top) {
+      // The alias column is library prose, which only exists in Chinese.
+      if !displayLanguage.isChinese && disppayMode == .alias {
+        ChineseOnlyCaption()
       }
     }
     .searchable(text: $searchText)

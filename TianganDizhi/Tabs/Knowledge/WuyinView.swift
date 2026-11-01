@@ -21,7 +21,7 @@ struct WuyinView: View {
     List(Key.wuyin, id: \.self) { yin in
       VStack(alignment: .leading) {
         HStack {
-          Text(yin.wuyinChineseName.converted(to: displayLanguage))
+          Text(yin.localizedWuyinName(in: displayLanguage.glyphLanguage))
             .font(title3Font)
           Text("(\(yin.wuyinChineseName.transformToPinyin()))")
         }

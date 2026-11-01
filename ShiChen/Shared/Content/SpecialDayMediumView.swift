@@ -23,9 +23,11 @@ struct SpecialDayMediumView: View {
 
   let date: Date
 
+  @Environment(\.displayLanguage) private var displayLanguage
+
   var body: some View {
     let events = date.upcomingSpecialDays(
-      sources: SpecialDayCatalog.sources(),
+      sources: SpecialDayCatalog.sources(language: displayLanguage),
       within: Self.lookahead,
       calendar: .solarTerm
     )
@@ -40,7 +42,7 @@ struct SpecialDayMediumView: View {
             .font(title3Font)
             .minimumScaleFactor(0.6)
 
-          Text(featured.daysUntil.daysUntilText)
+          Text(featured.daysUntil.daysUntilText(language: displayLanguage))
             .font(.callout)
             .foregroundStyle(featured.daysUntil == 0 ? Color.orange : Color.secondary)
 
@@ -71,7 +73,7 @@ struct SpecialDayMediumView: View {
                   .font(calloutFont)
                   .lineLimit(1)
                   .minimumScaleFactor(0.6)
-                Text(event.daysUntil.daysUntilText)
+                Text(event.daysUntil.daysUntilText(language: displayLanguage))
                   .font(.footnote)
                   .foregroundStyle(.secondary)
                   .lineLimit(1)
@@ -83,13 +85,13 @@ struct SpecialDayMediumView: View {
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
       .padding(.horizontal, 8)
-      .environment(\.locale, Locale(identifier: "zh-Hant"))
+      .environment(\.locale, displayLanguage.isChinese ? Locale(identifier: "zh-Hant") : .autoupdatingCurrent)
       .widgetAccentable()
       .containerBackground(for: .widget) {
         background(for: featured.day)
       }
     } else {
-      Text(date.jieQiDisplayText)
+      Text(date.jieQiDisplayText(language: displayLanguage))
         .font(title3Font)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .containerBackground(for: .widget) {

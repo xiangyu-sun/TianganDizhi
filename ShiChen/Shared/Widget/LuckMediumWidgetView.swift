@@ -36,7 +36,8 @@ struct LuckMediumWidgetView: View {
       VStack(alignment: .leading) {
         if let god {
           HStack(alignment: .top) {
-            Text(god.localizedName(in: displayLanguage.glyphLanguage))
+            Text(god.localizedName(in: displayLanguage))
+              .englishFit(displayLanguage, lines: 1, minimumScale: 0.6)
               .widgetAccentable()
             
             Text(god.xiongjiL)
@@ -66,7 +67,8 @@ struct LuckMediumWidgetView: View {
               Text(chong.chineseCharacter)
                 .widgetAccentable()
               
-              Text(Zodiac(chong).localizedName(in: displayLanguage.glyphLanguage))
+              Text(Zodiac(chong).localizedName(in: displayLanguage))
+                .englishFit(displayLanguage, lines: 1, minimumScale: 0.6)
             
             }
             .font(.title2.bold())

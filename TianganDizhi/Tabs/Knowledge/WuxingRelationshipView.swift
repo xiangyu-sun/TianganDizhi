@@ -74,6 +74,7 @@ private struct RelationshipDetailPanel: View {
   @Environment(\.bodyFont) var bodyFont
   @Environment(\.title3Font) var title3Font
   @Environment(\.footnote) var footnote
+  @Environment(\.displayLanguage) var displayLanguage
 
   var body: some View {
     if let wuxing = selectedWuxing {
@@ -87,29 +88,29 @@ private struct RelationshipDetailPanel: View {
   @ViewBuilder
   private func selectedView(wuxing: Wuxing) -> some View {
     VStack(alignment: .leading, spacing: 12) {
-      Text("\(wuxing.chineseCharacter) 的生克關係")
+      Text("\(wuxing.sentenceText(in: displayLanguage)) 的生克關係")
         .font(title3Font)
         .foregroundStyle(wuxing.traditionalColor)
 
       LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
         relationshipCard(
           label: "我生",
-          description: "\(wuxing.chineseCharacter)生\(wuxing.sheng.chineseCharacter)",
+          description: "\(wuxing.sentenceText(in: displayLanguage))生\(wuxing.sheng.sentenceText(in: displayLanguage))",
           arrowColor: .green
         )
         relationshipCard(
           label: "生我",
-          description: "\(beShengBy(wuxing).chineseCharacter)生\(wuxing.chineseCharacter)",
+          description: "\(beShengBy(wuxing).sentenceText(in: displayLanguage))生\(wuxing.sentenceText(in: displayLanguage))",
           arrowColor: .green
         )
         relationshipCard(
           label: "我克",
-          description: "\(wuxing.chineseCharacter)克\(wuxing.ke.chineseCharacter)",
+          description: "\(wuxing.sentenceText(in: displayLanguage))克\(wuxing.ke.sentenceText(in: displayLanguage))",
           arrowColor: .red
         )
         relationshipCard(
           label: "克我",
-          description: "\(beKeBy(wuxing).chineseCharacter)克\(wuxing.chineseCharacter)",
+          description: "\(beKeBy(wuxing).sentenceText(in: displayLanguage))克\(wuxing.sentenceText(in: displayLanguage))",
           arrowColor: .red
         )
       }
@@ -137,40 +138,44 @@ private struct RelationshipDetailPanel: View {
 
   private func overviewHeader() -> some View {
     HStack {
-      Text("五行").font(footnote).foregroundStyle(.secondary).frame(width: 36, alignment: .leading)
+      Text("五行").font(footnote).foregroundStyle(.secondary).frame(width: labelWidth, alignment: .leading)
       Spacer()
-      Text("相生").font(footnote).foregroundStyle(.green).frame(minWidth: 60)
-      Text("相克").font(footnote).foregroundStyle(.red).frame(minWidth: 60)
+      Text("相生").font(footnote).foregroundStyle(.green).frame(minWidth: columnWidth)
+      Text("相克").font(footnote).foregroundStyle(.red).frame(minWidth: columnWidth)
     }
     .padding(.vertical, 4)
   }
 
   private func overviewRow(wuxing: Wuxing) -> some View {
     HStack {
-      Text(wuxing.chineseCharacter)
+      GlossedText(glyph: wuxing.chineseCharacter, gloss: wuxing.gloss(in: displayLanguage))
         .font(bodyFont)
         .foregroundStyle(wuxing.traditionalColor)
-        .frame(width: 36, alignment: .leading)
+        .frame(width: labelWidth, alignment: .leading)
       Spacer()
       // 我生
       HStack(spacing: 2) {
         Text("生").font(footnote).foregroundStyle(.green)
-        Text(wuxing.sheng.chineseCharacter)
+        GlossedText(glyph: wuxing.sheng.chineseCharacter, gloss: wuxing.sheng.gloss(in: displayLanguage))
           .font(bodyFont)
           .foregroundStyle(wuxing.sheng.traditionalColor)
       }
-      .frame(minWidth: 60)
+      .frame(minWidth: columnWidth)
       // 我克
       HStack(spacing: 2) {
         Text("克").font(footnote).foregroundStyle(.red)
-        Text(wuxing.ke.chineseCharacter)
+        GlossedText(glyph: wuxing.ke.chineseCharacter, gloss: wuxing.ke.gloss(in: displayLanguage))
           .font(bodyFont)
           .foregroundStyle(wuxing.ke.traditionalColor)
       }
-      .frame(minWidth: 60)
+      .frame(minWidth: columnWidth)
     }
     .padding(.vertical, 6)
   }
+
+  // English glosses need more room than the single glyphs.
+  private var labelWidth: CGFloat { displayLanguage.isChinese ? 36 : 56 }
+  private var columnWidth: CGFloat { displayLanguage.isChinese ? 60 : 96 }
 
   // MARK: Relationship card
 
@@ -242,8 +247,15 @@ private struct WuxingAttributeList: View {
   func wuxingRow(item: Wuxing) -> some View {
     HStack {
       VStack(alignment: .leading, spacing: 0) {
-        Text("\(item.chineseCharacter)")
-          .font(horizontalSizeClass != .compact ? largeTitleFont : title2Font)
+        HStack(alignment: .firstTextBaseline) {
+          Text("\(item.chineseCharacter)")
+            .font(horizontalSizeClass != .compact ? largeTitleFont : title2Font)
+          if !displayLanguage.isChinese {
+            Text(item.localizedName(in: displayLanguage))
+              .font(title3Font)
+              .foregroundStyle(.secondary)
+          }
+        }
 
         HStack {
           VStack(alignment: .leading, spacing: 0) {
@@ -273,10 +285,11 @@ private struct WuxingAttributeList: View {
               .font(footnote)
             HStack {
               let wuzang = 五臟.allCases.first { $0.wuxing == item } ?? .心
-              Text("\(wuzang.localizedName(in: displayLanguage.glyphLanguage))")
+              GlossedText(glyph: wuzang.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : wuzang.localizedName(in: displayLanguage))
 
               let wufu = 五腑.allCases.first { $0.wuxing == item } ?? .小腸
-              Text("\(wufu.localizedName(in: displayLanguage.glyphLanguage))")
+              GlossedText(glyph: wufu.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : wufu.localizedName(in: displayLanguage))
+              // 情緒 is library prose, which exists only in Chinese.
               Text("\(wuzang.情緒.converted(to: displayLanguage))")
             }
             .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
@@ -286,24 +299,24 @@ private struct WuxingAttributeList: View {
             Text("五味")
               .font(footnote)
             HStack {
-              Text("\(item.localizedFlavor(in: displayLanguage.glyphLanguage))")
+              GlossedText(glyph: item.localizedFlavor(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : item.localizedFlavor(in: displayLanguage))
                 .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
             }
           }
           .scaledToFit()
 
           Divider()
-          makeTopicView(title: "五音", detail: "\(Key.wuyin.first { $0.wuxing == item }?.wuyinChineseName.converted(to: displayLanguage) ?? "")")
+          makeTopicView(title: "五音", detail: "\(Key.wuyin.first { $0.wuxing == item }?.localizedWuyinName(in: displayLanguage) ?? "")")
 
           Divider()
 
-          makeTopicView(title: "方位", detail: "\(item.fangwei.localizedName(in: displayLanguage.glyphLanguage))")
-          makeTopicView(title: "色彩", detail: "\(item.localizedColorDescription(in: displayLanguage.glyphLanguage))")
+          makeTopicView(title: "方位", detail: "\(item.fangwei.localizedName(in: displayLanguage.glyphLanguage))", gloss: displayLanguage.isChinese ? "" : item.fangwei.localizedName(in: displayLanguage))
+          makeTopicView(title: "色彩", detail: "\(item.localizedColorDescription(in: displayLanguage.glyphLanguage))", gloss: displayLanguage.isChinese ? "" : item.localizedColorDescription(in: displayLanguage))
 
           Divider()
 
-          if let season = Season.allCases.first(where: { $0.wuxing == item })?.localizedName(in: displayLanguage.glyphLanguage) {
-            makeTopicView(title: "四季", detail: season)
+          if let season = Season.allCases.first(where: { $0.wuxing == item }) {
+            makeTopicView(title: "四季", detail: season.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : season.localizedName(in: displayLanguage))
           }
         }
       }
@@ -311,12 +324,12 @@ private struct WuxingAttributeList: View {
     .accessibilityElement(children: .combine)
   }
 
-  fileprivate func makeTopicView(title: LocalizedStringKey, detail: String) -> some View {
+  fileprivate func makeTopicView(title: LocalizedStringKey, detail: String, gloss: String = "") -> some View {
     VStack {
       Text(title)
         .font(footnote)
       HStack {
-        Text(detail)
+        GlossedText(glyph: detail, gloss: gloss, alignment: .center)
           .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
       }
     }

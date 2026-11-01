@@ -53,3 +53,6 @@ Penyesuaian
 - Pilihan zon waktu GMT+8 untuk pengguna luar negara
 
 Sama ada anda mengkaji astrologi Cina, mengamalkan perubatan tradisional, atau ingin menghubungkan diri dengan ribuan tahun kebijaksanaan budaya——TianganDizhi adalah teman setia anda.
+
+BAHASA
+Aplikasi ini tersedia dalam bahasa Inggeris, Cina Ringkas dan Cina Tradisional.

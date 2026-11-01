@@ -42,13 +42,18 @@ struct CountDownView: View {
 
   var body: some View {
     let now = Date()
+    let relative = RelativeDateTimeFormatter.countdown(for: displayLanguage).localizedString(for: event.date, relativeTo: now)
+    // Chinese runs the countdown into the date; English needs a separator.
+    let separator = displayLanguage.isChinese ? "" : " · "
 
     let color = springFestiveForegroundEnabled ? Color("springfestivaltext") : Color.primary
 
     switch family {
     case .accessoryInline:
-      Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
+      Text("\(relative)\(separator)\(title)")
         .font(.body)
+        .lineLimit(1)
+        .minimumScaleFactor(0.6)
         .containerBackground(for: .widget) {
           Color.clear
         }
@@ -58,14 +63,16 @@ struct CountDownView: View {
         Text(title)
         Text(event.date, style: .relative)
       }
+      .englishFit(displayLanguage, lines: 2, minimumScale: 0.7)
       .font(.headline)
       .containerBackground(for: .widget) {
         Color.clear
       }
 
     case .systemSmall:
-      Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now)) \(title)")
+      Text("\(relative) \(title)")
       .font(bodyFont)
+      .englishFit(displayLanguage, lines: 5, minimumScale: 0.5)
       .foregroundStyle(color)
       .materialBackgroundWidget(with: Image("background"), toogle: true)
 
@@ -74,8 +81,9 @@ struct CountDownView: View {
         FullDateTitleView(date: entry.date)
           .font(bodyFont)
         
-        Text("\(RelativeDateTimeFormatter.dateFormatter.localizedString(for: event.date, relativeTo: now))\(title)")
+        Text("\(relative)\(separator)\(title)")
           .font(title3Font)
+          .englishFit(displayLanguage, lines: 3, minimumScale: 0.5)
       }
       .foregroundStyle(color)
       .materialBackgroundWidget(with: Image("background"), toogle: true)

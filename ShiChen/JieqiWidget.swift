@@ -31,6 +31,7 @@ struct JieqiWidget: Widget {
       // the upcoming term and show its start date (the "days to next" the user
       // sees). The day-aligned helpers reckon days in the user's chosen time
       // zone (使用東八區), the same as every other surface.
+      let language = DisplayLanguage.app
       let isJieqiDay = entry.date.isJieqiDayAligned
       let occurrence = entry.date.displayedJieqi
       let jieqi = occurrence?.jieqi ?? entry.date.jieqiDayAligned
@@ -42,31 +43,40 @@ struct JieqiWidget: Widget {
           // "2026年10月14日"-style lines overflowed the small width and didn't
           // say which date was which. Laid out like the small 節氣與節日 widget.
           VStack(alignment: .center) {
-            Text(entry.date, format: Self.todayFormat)
+            Text(entry.date, format: Self.todayFormat(language))
               .font(.callout)
               .lineLimit(1)
               .minimumScaleFactor(0.7)
 
-            Text(jieqi.localizedName(in: DisplayLanguage.app.glyphLanguage))
+            Text(jieqi.localizedName(in: language.glyphLanguage))
               .foregroundStyle(isJieqiDay ? .primary : .secondary)
               .font(largeTitleFont)
               .lineLimit(1)
               .minimumScaleFactor(0.5)
 
+            // The glyphs stay the headline; outside Chinese the English name follows.
+            if !language.isChinese {
+              Text(jieqi.localizedName(in: language))
+                .font(.callout)
+                .foregroundStyle(isJieqiDay ? .primary : .secondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+            }
+
             if isJieqiDay {
-              Text(0.daysUntilText)
+              Text(0.daysUntilText(language: language))
                 .font(.callout)
                 .foregroundStyle(Color.orange)
             } else if let occurrence {
               let days = occurrence.days(from: entry.date, calendar: .solarTerm)
-              Text("\(days.daysUntilText) · \(occurrence.startDate.formatted(Self.startDayFormat))")
+              Text("\(days.daysUntilText(language: language)) · \(occurrence.startDate.formatted(Self.startDayFormat(language)))")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
             }
           }
-          .environment(\.locale, Locale(identifier: "zh-Hant"))
+          .environment(\.locale, Self.locale(language))
           .widgetAccentable()
           .frame(maxWidth: .infinity)
           #if os(macOS)
@@ -85,13 +95,19 @@ struct JieqiWidget: Widget {
     .supportedFamilies(iosSupportedFamilies)
   }
 
+  /// Traditional Chinese for Chinese, the device's locale otherwise.
+  private static func locale(_ language: DisplayLanguage) -> Locale {
+    language.isChinese ? Locale(identifier: "zh-Hant") : .autoupdatingCurrent
+  }
+
   /// e.g. "10月14日 週三".
-  private static let todayFormat = Date.FormatStyle(locale: Locale(identifier: "zh-Hant"))
-    .month().day().weekday(.abbreviated)
+  private static func todayFormat(_ language: DisplayLanguage) -> Date.FormatStyle {
+    Date.FormatStyle(locale: locale(language)).month().day().weekday(.abbreviated)
+  }
 
   /// e.g. "10月23日", in the solar-term time zone the start date is reckoned in.
-  private static var startDayFormat: Date.FormatStyle {
-    Date.FormatStyle(locale: Locale(identifier: "zh-Hant"), timeZone: .solarTerm).month().day()
+  private static func startDayFormat(_ language: DisplayLanguage) -> Date.FormatStyle {
+    Date.FormatStyle(locale: locale(language), timeZone: .solarTerm).month().day()
   }
 }
 

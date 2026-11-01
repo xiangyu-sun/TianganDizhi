@@ -6,10 +6,10 @@
     },
     " Weather). 點擊查看數據源信息" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " Weather). 點擊查看數據源信息"
+            "value" : " Weather). Tap to see the data sources."
           }
         },
         "zh-Hans" : {
@@ -17,24 +17,16 @@
             "state" : "translated",
             "value" : " Weather). 点击查看数据源信息"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Weather). 點擊查看數據源信息"
+          }
         }
       }
     },
-    "(%@)" : {
-      "shouldTranslate" : false
-    },
     "%@" : {
-      "shouldTranslate" : false
-    },
-    "%@ · %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ · %2$@"
-          }
-        }
-      },
       "shouldTranslate" : false
     },
     "%@ %@" : {
@@ -48,12 +40,23 @@
       },
       "shouldTranslate" : false
     },
+    "%@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
     "%@ 的生克關係" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ 的生克關係"
+            "value" : "How %@ generates and overcomes"
           }
         },
         "zh-Hans" : {
@@ -61,159 +64,20 @@
             "state" : "translated",
             "value" : "%@ 的生克关系"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 的生克關係"
+          }
         }
       }
     },
-    "%@，%@，%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@，%2$@，%3$@"
-          }
-        }
-      },
+    "%@%@%@" : {
       "shouldTranslate" : false
     },
-    "%@，%@，%@，%@，%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@，%2$@，%3$@，%4$@，%5$@"
-          }
-        }
-      },
+    "%@, %@, %@" : {
       "shouldTranslate" : false
-    },
-    "%@，%@，宜：%@，忌：%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@，%2$@，宜：%3$@，忌：%4$@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@，%2$@，宜：%3$@，忌：%4$@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@，%2$@，宜：%3$@，忌：%4$@"
-          }
-        }
-      }
-    },
-    "%@，年柱" : {
-      "comment" : "Accessibility: a 干支 marked as the year pillar",
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@，年柱"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@，年柱"
-          }
-        }
-      }
-    },
-    "%@，日柱" : {
-      "comment" : "Accessibility: a 干支 marked as the day pillar",
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@，日柱"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@，日柱"
-          }
-        }
-      }
-    },
-    "%@，時柱" : {
-      "comment" : "Accessibility: a 干支 marked as the hour pillar",
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@，時柱"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@，时柱"
-          }
-        }
-      }
-    },
-    "%@，月柱" : {
-      "comment" : "Accessibility: a 干支 marked as the month pillar",
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@，月柱"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@，月柱"
-          }
-        }
-      }
-    },
-    "%@，每年重複。" : {
-      "comment" : "Custom holiday footer; %@ is the date, e.g. 農曆八月十五",
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@，每年重複。"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@，每年重复。"
-          }
-        }
-      }
-    },
-    "%@，第%@刻，%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@，第%2$@刻，%3$@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@，第%2$@刻，%3$@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@，第%2$@刻，%3$@"
-          }
-        }
-      }
     },
     "%@、%@，%@" : {
       "localizations" : {
@@ -226,32 +90,21 @@
       },
       "shouldTranslate" : false
     },
-    "%@%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@%2$@"
-          }
-        }
-      },
-      "shouldTranslate" : false
-    },
     "%@克%@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@克%2$@"
+            "state" : "translated",
+            "value" : "%1$@ overcomes %2$@"
           }
         },
-        "zh-Hant" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@克%2$@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@克%2$@"
@@ -263,17 +116,17 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@冲%2$@"
+            "state" : "translated",
+            "value" : "%1$@ clashes with %2$@"
           }
         },
-        "zh-Hant" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@冲%2$@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@冲%2$@"
@@ -281,15 +134,24 @@
         }
       }
     },
+    "%@冲%@ · %@ – %@" : {
+      "shouldTranslate" : false
+    },
     "%@刻" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quarter %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@刻"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@刻"
@@ -301,17 +163,17 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@方，%2$@"
+            "state" : "translated",
+            "value" : "%1$@, %2$@"
           }
         },
-        "zh-Hant" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@方，%2$@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@方，%2$@"
@@ -323,17 +185,17 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@方，五行%2$@，天干%3$@%4$@"
+            "state" : "translated",
+            "value" : "%1$@, element %2$@, stems %3$@%4$@"
           }
         },
-        "zh-Hant" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@方，五行%2$@，天干%3$@%4$@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@方，五行%2$@，天干%3$@%4$@"
@@ -344,16 +206,22 @@
     "%@日後" : {
       "comment" : "Days until an event; %@ is the count spelled out (十五)",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@日後"
+            "value" : "In %@ days"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@日后"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@日後"
           }
         }
       }
@@ -363,14 +231,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@日後%2$@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "%1$@日後%2$@"
+            "value" : "%2$@ in %1$@ days"
           }
         },
         "zh-Hans" : {
@@ -378,22 +240,34 @@
             "state" : "translated",
             "value" : "%1$@日后%2$@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@日後%2$@"
+          }
         }
       }
     },
     "%@氣" : {
       "comment" : "A 中氣 solar term, e.g. 大暑氣",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@氣"
+            "value" : "%@"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@气"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@氣"
           }
         }
       }
@@ -402,17 +276,17 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@生%2$@"
+            "state" : "translated",
+            "value" : "%1$@ generates %2$@"
           }
         },
-        "zh-Hant" : {
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@生%2$@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@生%2$@"
@@ -422,10 +296,10 @@
     },
     "%@的關係" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@的關係"
+            "value" : "%@ relationships"
           }
         },
         "zh-Hans" : {
@@ -433,16 +307,22 @@
             "state" : "translated",
             "value" : "%@的关系"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@的關係"
+          }
         }
       }
     },
     "%@節" : {
       "comment" : "A 節 solar term, e.g. 小暑節",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@節"
+            "value" : "%@"
           }
         },
         "zh-Hans" : {
@@ -450,22 +330,193 @@
             "state" : "translated",
             "value" : "%@节"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@節"
+          }
+        }
+      }
+    },
+    "%@，%@，宜：%@，忌：%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$@, auspicious: %3$@, avoid: %4$@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@，%2$@，宜：%3$@，忌：%4$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@，%2$@，宜：%3$@，忌：%4$@"
+          }
+        }
+      }
+    },
+    "%@，年柱" : {
+      "comment" : "Accessibility: a 干支 marked as the year pillar",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, year pillar"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，年柱"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，年柱"
+          }
+        }
+      }
+    },
+    "%@，日柱" : {
+      "comment" : "Accessibility: a 干支 marked as the day pillar",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, day pillar"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，日柱"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，日柱"
+          }
+        }
+      }
+    },
+    "%@，時柱" : {
+      "comment" : "Accessibility: a 干支 marked as the hour pillar",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, hour pillar"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，时柱"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，時柱"
+          }
+        }
+      }
+    },
+    "%@，月柱" : {
+      "comment" : "Accessibility: a 干支 marked as the month pillar",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, month pillar"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，月柱"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，月柱"
+          }
+        }
+      }
+    },
+    "%@，每年重複。" : {
+      "comment" : "Custom holiday footer; %@ is the date, e.g. 農曆八月十五",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, every year."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，每年重复。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，每年重複。"
+          }
         }
       }
     },
     "%lld" : {
       "shouldTranslate" : false
     },
+    "%lld刻" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quarter %lld"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld刻"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld刻"
+          }
+        }
+      }
+    },
     "%lld日" : {
       "comment" : "Gregorian day of month, e.g. 1日",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld日"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld日"
@@ -474,11 +525,24 @@
       }
     },
     "%lld日後" : {
+      "comment" : "Days until an event outside Chinese; %lld is the count. Needs plural variants.",
       "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld日後"
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Tomorrow"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "In %lld days"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -486,16 +550,67 @@
             "state" : "translated",
             "value" : "%lld日后"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld日後"
+          }
+        }
+      }
+    },
+    "%lld日後%@" : {
+      "comment" : "Countdown to the next solar term; %1$lld days, %2$@ the term",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ %#@days@"
+          },
+          "substitutions" : {
+            "days" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "tomorrow"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "in %arg days"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld日后%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld日後%2$@"
+          }
         }
       }
     },
     "%lld月" : {
       "comment" : "Gregorian month, e.g. 5月",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%lld月"
+            "value" : "Month %lld"
           }
         },
         "zh-Hans" : {
@@ -503,59 +618,17 @@
             "state" : "translated",
             "value" : "%lld月"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld月"
+          }
         }
       }
     },
-    "⌘," : {
+    "(%@)" : {
       "shouldTranslate" : false
-    },
-    "⌘C" : {
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⌘C"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⌘C"
-          }
-        }
-      }
-    },
-    "⌘O" : {
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⌘O"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⌘O"
-          }
-        }
-      }
-    },
-    "⌘Q" : {
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⌘Q"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "⌘Q"
-          }
-        }
-      }
     },
     "Configuration" : {
       "localizations" : {
@@ -581,6 +654,12 @@
     },
     "Date" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -597,6 +676,12 @@
     },
     "Location" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -613,6 +698,12 @@
     },
     "TianganDizhi Widgets" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TianganDizhi Widgets"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -627,12 +718,24 @@
         }
       }
     },
+    "⌘," : {
+      "shouldTranslate" : false
+    },
+    "⌘C" : {
+      "shouldTranslate" : false
+    },
+    "⌘O" : {
+      "shouldTranslate" : false
+    },
+    "⌘Q" : {
+      "shouldTranslate" : false
+    },
     "一年內沒有節日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "一年內沒有節日"
+            "value" : "No festivals in the coming year"
           }
         },
         "zh-Hans" : {
@@ -640,18 +743,30 @@
             "state" : "translated",
             "value" : "一年内没有节日"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一年內沒有節日"
+          }
         }
       }
     },
     "三合" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Three Harmonies"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "三合"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "三合"
@@ -662,13 +777,19 @@
     "下次：%@。" : {
       "comment" : "Custom holiday footer; %@ is the next date it falls on",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next: %@."
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "下次：%@。"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "下次：%@。"
@@ -678,10 +799,10 @@
     },
     "二十四節氣" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "二十四節氣"
+            "value" : "24 Solar Terms"
           }
         },
         "zh-Hans" : {
@@ -689,16 +810,22 @@
             "state" : "translated",
             "value" : "二十四节气"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二十四節氣"
+          }
         }
       }
     },
     "二十四節氣桌面組件%@" : {
       "comment" : "Widget suggestion; %@ is the current 時辰 (子)",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "二十四節氣桌面組件%@"
+            "value" : "24 Solar Terms widget %@"
           }
         },
         "zh-Hans" : {
@@ -706,15 +833,21 @@
             "state" : "translated",
             "value" : "二十四节气桌面组件%@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二十四節氣桌面組件%@"
+          }
         }
       }
     },
     "二十四節氣養生提示" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "二十四節氣養生提示"
+            "value" : "Seasonal health notes for the 24 solar terms"
           }
         },
         "zh-Hans" : {
@@ -722,18 +855,30 @@
             "state" : "translated",
             "value" : "二十四节气养生提示"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二十四節氣養生提示"
+          }
         }
       }
     },
     "五味" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Five Flavors"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五味"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五味"
@@ -743,13 +888,19 @@
     },
     "五方" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Five Directions"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五方"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五方"
@@ -759,10 +910,10 @@
     },
     "五行" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "五行"
+            "value" : "Five Phases"
           }
         },
         "zh-Hans" : {
@@ -770,34 +921,30 @@
             "state" : "translated",
             "value" : "五行"
           }
-        }
-      }
-    },
-    "五行：%@" : {
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "五行：%@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "五行：%@"
+            "value" : "五行"
           }
         }
       }
     },
     "五行以及衍生" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Five Phases and correspondences"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五行以及衍生"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五行以及衍生"
@@ -807,13 +954,19 @@
     },
     "五行分析" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Five Phases balance"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五行分析"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五行分析"
@@ -823,10 +976,10 @@
     },
     "五行屬性" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "五行屬性"
+            "value" : "Five Phases attributes"
           }
         },
         "zh-Hans" : {
@@ -834,34 +987,74 @@
             "state" : "translated",
             "value" : "五行属性"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行屬性"
+          }
         }
       }
     },
     "五行相生相克" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "五行相生相克"
+            "value" : "Five Phases: generating and overcoming"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五行相生相克"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行相生相克"
+          }
+        }
+      }
+    },
+    "五行：%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phase: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行：%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "五行：%@"
           }
         }
       }
     },
     "五音" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Five Tones"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五音"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "五音"
@@ -871,10 +1064,10 @@
     },
     "今日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今日"
+            "value" : "Today"
           }
         },
         "zh-Hans" : {
@@ -882,22 +1075,11 @@
             "state" : "translated",
             "value" : "今日"
           }
-        }
-      }
-    },
-    "今日：%@" : {
-      "comment" : "Share text line",
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今日：%@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今日：%@"
+            "value" : "今日"
           }
         }
       }
@@ -906,13 +1088,19 @@
       "comment" : "Recommended intent for the Luck widget.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Almanac"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日宜忌"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日宜忌"
@@ -924,13 +1112,19 @@
       "comment" : "Title of the widget configuration intent.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Almanac"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日宜忌配置"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日宜忌配置"
@@ -942,10 +1136,10 @@
       "comment" : "A label displayed above the name of the zodiac sign for the current day.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今日沖"
+            "value" : "Today clashes with"
           }
         },
         "zh-Hans" : {
@@ -953,15 +1147,21 @@
             "state" : "translated",
             "value" : "今日冲"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日沖"
+          }
         }
       }
     },
     "今日節日：%@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今日節日：%@"
+            "value" : "Festival today: %@"
           }
         },
         "zh-Hans" : {
@@ -969,15 +1169,21 @@
             "state" : "translated",
             "value" : "今日节日：%@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日節日：%@"
+          }
         }
       }
     },
     "今日自訂節日：%@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "今日自訂節日：%@"
+            "value" : "Your day today: %@"
           }
         },
         "zh-Hans" : {
@@ -985,15 +1191,67 @@
             "state" : "translated",
             "value" : "今日自定义节日：%@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日自訂節日：%@"
+          }
+        }
+      }
+    },
+    "今日：%@" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日：%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日：%@"
+          }
+        }
+      }
+    },
+    "以下內容僅提供中文" : {
+      "comment" : "Caption above almanac text that exists only in Chinese",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shown in Chinese"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以下内容仅提供中文"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以下內容僅提供中文"
+          }
         }
       }
     },
     "以下為天干地支相關的快速查閱表格，適合作為參考工具。" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "以下為天干地支相關的快速查閱表格，適合作為參考工具。"
+            "value" : "Quick-reference tables for the stems and branches."
           }
         },
         "zh-Hans" : {
@@ -1001,15 +1259,21 @@
             "state" : "translated",
             "value" : "以下为天干地支相关的快速查阅表格，适合作为参考工具。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以下為天干地支相關的快速查閱表格，適合作為參考工具。"
+          }
         }
       }
     },
     "以十二時辰、二十四節氣與天干地支，顯示當下的傳統曆法、星象及天氣。" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "以十二時辰、二十四節氣與天干地支，顯示當下的傳統曆法、星象及天氣。"
+            "value" : "See today in the traditional Chinese calendar: the twelve double hours, the 24 solar terms, the stems and branches, the sky and the weather."
           }
         },
         "zh-Hans" : {
@@ -1017,15 +1281,21 @@
             "state" : "translated",
             "value" : "以十二时辰、二十四节气与天干地支，显示当下的传统历法、星象及天气。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以十二時辰、二十四節氣與天干地支，顯示當下的傳統曆法、星象及天氣。"
+          }
         }
       }
     },
     "以系統預設字體取代魏碑字體" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "以系統預設字體取代魏碑字體"
+            "value" : "Use the system font instead of Weibei calligraphy"
           }
         },
         "zh-Hans" : {
@@ -1033,18 +1303,30 @@
             "state" : "translated",
             "value" : "以系统默认字体取代魏碑字体"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以系統預設字體取代魏碑字體"
+          }
         }
       }
     },
     "伏羲先天八卦" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fu Xi's Earlier Heaven Bagua"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "伏羲先天八卦"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "伏羲先天八卦"
@@ -1054,10 +1336,10 @@
     },
     "伏羲先天八卦：伏羲創作的先天八卦排列方式" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "伏羲先天八卦：伏羲創作的先天八卦排列方式"
+            "value" : "Fu Xi's Earlier Heaven Bagua: the trigram arrangement attributed to Fu Xi"
           }
         },
         "zh-Hans" : {
@@ -1065,15 +1347,21 @@
             "state" : "translated",
             "value" : "伏羲先天八卦：伏羲创作的先天八卦排列方式"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "伏羲先天八卦：伏羲創作的先天八卦排列方式"
+          }
         }
       }
     },
     "使用東八區時間（UTC+8）" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "使用東八區時間（UTC+8）"
+            "value" : "Use China time (UTC+8)"
           }
         },
         "zh-Hans" : {
@@ -1081,15 +1369,21 @@
             "state" : "translated",
             "value" : "使用东八区时间（UTC+8）"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用東八區時間（UTC+8）"
+          }
         }
       }
     },
     "使用系統字體" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "使用系統字體"
+            "value" : "Use System Font"
           }
         },
         "zh-Hans" : {
@@ -1097,15 +1391,21 @@
             "state" : "translated",
             "value" : "使用系统字体"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用系統字體"
+          }
         }
       }
     },
     "備註（選填）" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "備註（選填）"
+            "value" : "Note (optional)"
           }
         },
         "zh-Hans" : {
@@ -1113,15 +1413,21 @@
             "state" : "translated",
             "value" : "备注（可选）"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "備註（選填）"
+          }
         }
       }
     },
     "儲存" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "儲存"
+            "value" : "Save"
           }
         },
         "zh-Hans" : {
@@ -1129,15 +1435,21 @@
             "state" : "translated",
             "value" : "保存"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存"
+          }
         }
       }
     },
     "允許匿名使用統計" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "允許匿名使用統計"
+            "value" : "Share Anonymous Usage Data"
           }
         },
         "zh-Hans" : {
@@ -1145,18 +1457,30 @@
             "state" : "translated",
             "value" : "允许匿名使用统计"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允許匿名使用統計"
+          }
         }
       }
     },
     "克" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overcomes"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "克"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "克"
@@ -1166,13 +1490,19 @@
     },
     "克我" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overcomes it"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "克我"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "克我"
@@ -1182,13 +1512,19 @@
     },
     "全部" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "全部"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "全部"
@@ -1198,13 +1534,19 @@
     },
     "八卦" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagua"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "八卦"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "八卦"
@@ -1214,16 +1556,22 @@
     },
     "公曆" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "公曆"
+            "value" : "Gregorian"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "公历"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公曆"
           }
         }
       }
@@ -1233,14 +1581,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "公曆%1$@%2$@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "公曆%1$@%2$@"
+            "value" : "%1$@ %2$@"
           }
         },
         "zh-Hans" : {
@@ -1248,18 +1590,30 @@
             "state" : "translated",
             "value" : "公历%1$@%2$@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "公曆%1$@%2$@"
+          }
         }
       }
     },
     "六冲" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Six Clashes"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "六冲"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "六冲"
@@ -1269,13 +1623,19 @@
     },
     "六十甲子" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sexagenary Cycle"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "六十甲子"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "六十甲子"
@@ -1285,10 +1645,10 @@
     },
     "六十甲子（含納音）" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "六十甲子（含納音）"
+            "value" : "Sexagenary Cycle (with Nayin)"
           }
         },
         "zh-Hans" : {
@@ -1296,15 +1656,21 @@
             "state" : "translated",
             "value" : "六十甲子（含纳音）"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六十甲子（含納音）"
+          }
         }
       }
     },
     "六十納音" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "六十納音"
+            "value" : "Sixty Nayin"
           }
         },
         "zh-Hans" : {
@@ -1312,18 +1678,30 @@
             "state" : "translated",
             "value" : "六十纳音"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六十納音"
+          }
         }
       }
     },
     "六合" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Six Harmonies"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "六合"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "六合"
@@ -1333,52 +1711,41 @@
     },
     "六害" : {
       "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "六害"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "六害"
-          }
-        }
-      }
-    },
-    "最高%@最低%@" : {
-      "comment" : "Today's temperature range; %1$@ high, %2$@ low",
-      "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "最高%1$@最低%2$@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "最高%1$@最低%2$@"
+            "value" : "Six Harms"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "最高%1$@最低%2$@"
+            "value" : "六害"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "六害"
           }
         }
       }
     },
     "冲" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clash"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "冲"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "冲"
@@ -1388,13 +1755,19 @@
     },
     "冲%@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clashes with %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "冲%@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "冲%@"
@@ -1404,10 +1777,10 @@
     },
     "出生地使用 UTC+8 時區（北京、台北、新加坡）" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "出生地使用 UTC+8 時區（北京、台北、新加坡）"
+            "value" : "Born in a UTC+8 time zone (Beijing, Taipei, Singapore)"
           }
         },
         "zh-Hans" : {
@@ -1415,15 +1788,21 @@
             "state" : "translated",
             "value" : "出生地使用 UTC+8 时区（北京、台北、新加坡）"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出生地使用 UTC+8 時區（北京、台北、新加坡）"
+          }
         }
       }
     },
     "出生日期時辰" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "出生日期時辰"
+            "value" : "Birth date and time"
           }
         },
         "zh-Hans" : {
@@ -1431,15 +1810,21 @@
             "state" : "translated",
             "value" : "出生日期时辰"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出生日期時辰"
+          }
         }
       }
     },
     "分享今日時辰資訊" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "分享今日時辰資訊"
+            "value" : "Share Today's Shichen"
           }
         },
         "zh-Hans" : {
@@ -1447,15 +1832,21 @@
             "state" : "translated",
             "value" : "分享今日时辰信息"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分享今日時辰資訊"
+          }
         }
       }
     },
     "別名" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "別名"
+            "value" : "Also called"
           }
         },
         "zh-Hans" : {
@@ -1463,15 +1854,21 @@
             "state" : "translated",
             "value" : "别名"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "別名"
+          }
         }
       }
     },
     "刪除" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "刪除"
+            "value" : "Delete"
           }
         },
         "zh-Hans" : {
@@ -1479,15 +1876,21 @@
             "state" : "translated",
             "value" : "删除"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除"
+          }
         }
       }
     },
     "前往設置" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "前往設置"
+            "value" : "Open Settings"
           }
         },
         "zh-Hans" : {
@@ -1495,15 +1898,21 @@
             "state" : "translated",
             "value" : "前往设置"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前往設置"
+          }
         }
       }
     },
     "加入小組件" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "加入小組件"
+            "value" : "Add Widgets"
           }
         },
         "zh-Hans" : {
@@ -1511,18 +1920,30 @@
             "state" : "translated",
             "value" : "添加小组件"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入小組件"
+          }
         }
       }
     },
     "十二地支" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 Earthly Branches"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二地支"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二地支"
@@ -1532,10 +1953,10 @@
     },
     "十二地支为名的十二时辰組件，更新频率为十五分鐘。" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "十二地支为名的十二时辰組件，更新频率为十五分鐘。"
+            "value" : "The twelve double hours, named by the Earthly Branches. Updates every 15 minutes."
           }
         },
         "zh-Hans" : {
@@ -1543,18 +1964,30 @@
             "state" : "translated",
             "value" : "十二地支为名的十二时辰组件，更新频率为十五分钟。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二地支为名的十二时辰組件，更新频率为十五分鐘。"
+          }
         }
       }
     },
     "十二地支表" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 Earthly Branches"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二地支表"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二地支表"
@@ -1564,13 +1997,19 @@
     },
     "十二建除神" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 Day Officers"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二建除神"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二建除神"
@@ -1580,13 +2019,19 @@
     },
     "十二时辰" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 Double Hours"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二时辰"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二时辰"
@@ -1596,10 +2041,10 @@
     },
     "十二時辰頌" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "十二時辰頌"
+            "value" : "Ode to the Twelve Hours"
           }
         },
         "zh-Hans" : {
@@ -1607,15 +2052,21 @@
             "state" : "translated",
             "value" : "十二时辰颂"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二時辰頌"
+          }
         }
       }
     },
     "十二生肖與五行" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "十二生肖與五行"
+            "value" : "Zodiac Animals and Five Phases"
           }
         },
         "zh-Hans" : {
@@ -1623,18 +2074,30 @@
             "state" : "translated",
             "value" : "十二生肖与五行"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二生肖與五行"
+          }
         }
       }
     },
     "十二神" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day Officer"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二神"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二神"
@@ -1644,13 +2107,19 @@
     },
     "十二辟卦" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 Sovereign Hexagrams"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二辟卦"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十二辟卦"
@@ -1660,10 +2129,10 @@
     },
     "十二辟卦文字方向配圓弧" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "十二辟卦文字方向配圓弧"
+            "value" : "Curved Sovereign Hexagram Labels"
           }
         },
         "zh-Hans" : {
@@ -1671,18 +2140,30 @@
             "state" : "translated",
             "value" : "十二辟卦文字方向配圆弧"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "十二辟卦文字方向配圓弧"
+          }
         }
       }
     },
     "十天干" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 Heavenly Stems"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十天干"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "十天干"
@@ -1692,10 +2173,10 @@
     },
     "協助改進App，不收集個人身份資訊" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "協助改進App，不收集個人身份資訊"
+            "value" : "Helps improve the app. No personal information is collected."
           }
         },
         "zh-Hans" : {
@@ -1703,18 +2184,30 @@
             "state" : "translated",
             "value" : "帮助改进App，不收集个人身份信息"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "協助改進App，不收集個人身份資訊"
+          }
         }
       }
     },
     "卦" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gua"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "卦"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "卦"
@@ -1724,10 +2217,10 @@
     },
     "參考" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "參考"
+            "value" : "Reference"
           }
         },
         "zh-Hans" : {
@@ -1735,15 +2228,21 @@
             "state" : "translated",
             "value" : "参考"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "參考"
+          }
         }
       }
     },
     "參考圖示" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "參考圖示"
+            "value" : "Reference Charts"
           }
         },
         "zh-Hans" : {
@@ -1751,18 +2250,30 @@
             "state" : "translated",
             "value" : "参考图示"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "參考圖示"
+          }
         }
       }
     },
     "取消" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
@@ -1772,13 +2283,19 @@
     },
     "合" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Combines"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "合"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "合"
@@ -1788,10 +2305,10 @@
     },
     "名稱，如：媽媽生日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "名稱，如：媽媽生日"
+            "value" : "Name, e.g. Mom's birthday"
           }
         },
         "zh-Hans" : {
@@ -1799,15 +2316,21 @@
             "state" : "translated",
             "value" : "名称，如：妈妈生日"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名稱，如：媽媽生日"
+          }
         }
       }
     },
     "唐譜：%@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "唐譜：%@"
+            "value" : "Tang notation: %@"
           }
         },
         "zh-Hans" : {
@@ -1815,18 +2338,30 @@
             "state" : "translated",
             "value" : "唐谱：%@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "唐譜：%@"
+          }
         }
       }
     },
     "唱名：%@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solfège: %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "唱名：%@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "唱名：%@"
@@ -1836,13 +2371,19 @@
     },
     "四季" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Season"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "四季"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "四季"
@@ -1852,13 +2393,19 @@
     },
     "四柱" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Four Pillars"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "四柱"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "四柱"
@@ -1868,13 +2415,19 @@
     },
     "四柱八字推算" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Four Pillars (Bazi)"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "四柱八字推算"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "四柱八字推算"
@@ -1884,10 +2437,10 @@
     },
     "地區與日曆" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "地區與日曆"
+            "value" : "Region & Calendar"
           }
         },
         "zh-Hans" : {
@@ -1895,15 +2448,21 @@
             "state" : "translated",
             "value" : "地区与日历"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地區與日曆"
+          }
         }
       }
     },
     "地支" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "地支"
+            "value" : "Earthly Branches"
           }
         },
         "zh-Hans" : {
@@ -1911,47 +2470,21 @@
             "state" : "translated",
             "value" : "地支"
           }
-        }
-      }
-    },
-    "地支，十二律呂，西洋調名" : {
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "地支，十二律呂，西洋調名"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "地支，十二律吕，西洋调名"
-          }
-        }
-      }
-    },
-    "地支：" : {
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "地支："
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "地支："
+            "value" : "地支"
           }
         }
       }
     },
     "地支沖合害" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "地支沖合害"
+            "value" : "Clashes, Harmonies and Harms"
           }
         },
         "zh-Hans" : {
@@ -1959,15 +2492,21 @@
             "state" : "translated",
             "value" : "地支冲合害"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支沖合害"
+          }
         }
       }
     },
     "地支與陰曆月份" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "地支與陰曆月份"
+            "value" : "Branches and Lunar Months"
           }
         },
         "zh-Hans" : {
@@ -1975,15 +2514,65 @@
             "state" : "translated",
             "value" : "地支与阴历月份"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支與陰曆月份"
+          }
+        }
+      }
+    },
+    "地支，十二律呂，西洋調名" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branches, the 12 pitch pipes and Western pitches"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支，十二律吕，西洋调名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支，十二律呂，西洋調名"
+          }
+        }
+      }
+    },
+    "地支：" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branches:"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支："
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地支："
+          }
         }
       }
     },
     "夜間深色模式下組件文字顯示為黑色" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "夜間深色模式下組件文字顯示為黑色"
+            "value" : "Widgets use black text in Dark Mode"
           }
         },
         "zh-Hans" : {
@@ -1991,18 +2580,30 @@
             "state" : "translated",
             "value" : "夜间深色模式下组件文字显示为黑色"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "夜間深色模式下組件文字顯示為黑色"
+          }
         }
       }
     },
     "大理石" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marble"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "大理石"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "大理石"
@@ -2012,10 +2613,10 @@
     },
     "大運" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "大運"
+            "value" : "Luck Pillars"
           }
         },
         "zh-Hans" : {
@@ -2023,56 +2624,52 @@
             "state" : "translated",
             "value" : "大运"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大運"
+          }
         }
       }
     },
     "天干" : {
       "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "天干"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "天干"
-          }
-        }
-      }
-    },
-    "天干：%@%@" : {
-      "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "天干：%1$@%2$@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "天干：%1$@%2$@"
+            "value" : "Heavenly Stems"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "天干：%1$@%2$@"
+            "value" : "天干"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干"
           }
         }
       }
     },
     "天干地支" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stems & Branches"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "天干地支"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "天干地支"
@@ -2082,13 +2679,19 @@
     },
     "天干地支五行" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganzhi & Five Phases"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "天干地支五行"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "天干地支五行"
@@ -2098,10 +2701,10 @@
     },
     "天干地支小組件 - %@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "天干地支小組件 - %@"
+            "value" : "TianganDizhi widget – %@"
           }
         },
         "zh-Hans" : {
@@ -2109,15 +2712,43 @@
             "state" : "translated",
             "value" : "天干地支小组件 - %@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支小組件 - %@"
+          }
+        }
+      }
+    },
+    "天干：%@%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stems: %1$@%2$@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干：%1$@%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干：%1$@%2$@"
+          }
         }
       }
     },
     "天氣以及日月信息來自(" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "天氣以及日月信息來自("
+            "value" : "Weather, sun and moon data from ("
           }
         },
         "zh-Hans" : {
@@ -2125,18 +2756,30 @@
             "state" : "translated",
             "value" : "天气以及日月信息来自("
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天氣以及日月信息來自("
+          }
         }
       }
     },
     "女" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Female"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "女"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "女"
@@ -2146,13 +2789,19 @@
     },
     "子午流注" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Organ Clock"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "子午流注"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "子午流注"
@@ -2164,13 +2813,19 @@
       "comment" : "A label for \"宜\" in the Chinese zodiac.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "宜"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "宜"
@@ -2181,13 +2836,19 @@
     "宜：%@" : {
       "comment" : "Share text line",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do: %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "宜：%@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "宜：%@"
@@ -2197,10 +2858,10 @@
     },
     "宣紙" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "宣紙"
+            "value" : "Rice Paper"
           }
         },
         "zh-Hans" : {
@@ -2208,15 +2869,21 @@
             "state" : "translated",
             "value" : "宣纸"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宣紙"
+          }
         }
       }
     },
     "宣紙質感或大理石紋理" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "宣紙質感或大理石紋理"
+            "value" : "Rice paper or marble texture"
           }
         },
         "zh-Hans" : {
@@ -2224,18 +2891,30 @@
             "state" : "translated",
             "value" : "宣纸质感或大理石纹理"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "宣紙質感或大理石紋理"
+          }
         }
       }
     },
     "害" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harms"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "害"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "害"
@@ -2245,10 +2924,10 @@
     },
     "小組件上顯示當日月相符號" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "小組件上顯示當日月相符號"
+            "value" : "Show today's moon phase on widgets"
           }
         },
         "zh-Hans" : {
@@ -2256,15 +2935,21 @@
             "state" : "translated",
             "value" : "小组件上显示当日月相符号"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小組件上顯示當日月相符號"
+          }
         }
       }
     },
     "小組件在春節期間使用紅色背景" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "小組件在春節期間使用紅色背景"
+            "value" : "Red widget backgrounds during Spring Festival"
           }
         },
         "zh-Hans" : {
@@ -2272,15 +2957,21 @@
             "state" : "translated",
             "value" : "小组件在春节期间使用红色背景"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小組件在春節期間使用紅色背景"
+          }
         }
       }
     },
     "小組件已更新" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "小組件已更新"
+            "value" : "Widgets updated"
           }
         },
         "zh-Hans" : {
@@ -2288,15 +2979,21 @@
             "state" : "translated",
             "value" : "小组件已更新"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小組件已更新"
+          }
         }
       }
     },
     "小組件隨節氣變換" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "小組件隨節氣變換"
+            "value" : "Changes with each solar term"
           }
         },
         "zh-Hans" : {
@@ -2304,21 +3001,33 @@
             "state" : "translated",
             "value" : "小组件随节气变换"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小組件隨節氣變換"
+          }
         }
       }
     },
     "尚未添加自訂節日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "尚未添加自訂節日"
+            "value" : "You haven't added any days yet"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "尚未添加自定义节日"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未添加自訂節日"
           }
         }
       }
@@ -2328,13 +3037,19 @@
     },
     "年柱" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Year"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "年柱"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "年柱"
@@ -2344,16 +3059,22 @@
     },
     "後%@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "後%@"
+            "value" : " until %@"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "后%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後%@"
           }
         }
       }
@@ -2362,13 +3083,19 @@
       "comment" : "A label for the \"don't do\" part of a luck prediction.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avoid"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "忌"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "忌"
@@ -2379,13 +3106,19 @@
     "忌：%@" : {
       "comment" : "Share text line",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avoid: %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "忌：%@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "忌：%@"
@@ -2395,10 +3128,10 @@
     },
     "快速查閱表" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "快速查閱表"
+            "value" : "Quick Reference"
           }
         },
         "zh-Hans" : {
@@ -2406,15 +3139,21 @@
             "state" : "translated",
             "value" : "快速查阅表"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快速查閱表"
+          }
         }
       }
     },
     "性別" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "性別"
+            "value" : "Sex"
           }
         },
         "zh-Hans" : {
@@ -2422,15 +3161,21 @@
             "state" : "translated",
             "value" : "性别"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "性別"
+          }
         }
       }
     },
     "您似乎不在東八區（UTC+8），節日是否以東八區時間計算？" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "您似乎不在東八區（UTC+8），節日是否以東八區時間計算？"
+            "value" : "You seem to be outside China time (UTC+8). Should festivals and solar terms follow China time?"
           }
         },
         "zh-Hans" : {
@@ -2438,18 +3183,30 @@
             "state" : "translated",
             "value" : "您似乎不在东八区（UTC+8），节日是否以东八区时间计算？"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您似乎不在東八區（UTC+8），節日是否以東八區時間計算？"
+          }
         }
       }
     },
     "我克" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It overcomes"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "我克"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "我克"
@@ -2459,13 +3216,19 @@
     },
     "我生" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It generates"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "我生"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "我生"
@@ -2475,10 +3238,10 @@
     },
     "打開主視窗" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "打開主視窗"
+            "value" : "Open Main Window"
           }
         },
         "zh-Hans" : {
@@ -2486,18 +3249,30 @@
             "state" : "translated",
             "value" : "打开主窗口"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打開主視窗"
+          }
         }
       }
     },
     "推算" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calculators"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "推算"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "推算"
@@ -2507,10 +3282,10 @@
     },
     "換算後（UTC+8）：%@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "換算後（UTC+8）：%@"
+            "value" : "In China time (UTC+8): %@"
           }
         },
         "zh-Hans" : {
@@ -2518,15 +3293,21 @@
             "state" : "translated",
             "value" : "换算后（UTC+8）：%@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "換算後（UTC+8）：%@"
+          }
         }
       }
     },
     "文王後天八卦" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "文王後天八卦"
+            "value" : "King Wen's Later Heaven Bagua"
           }
         },
         "zh-Hans" : {
@@ -2534,15 +3315,21 @@
             "state" : "translated",
             "value" : "文王后天八卦"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文王後天八卦"
+          }
         }
       }
     },
     "文王後天八卦：文王創作的後天八卦排列方式" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "文王後天八卦：文王創作的後天八卦排列方式"
+            "value" : "King Wen's Later Heaven Bagua: the trigram arrangement attributed to King Wen"
           }
         },
         "zh-Hans" : {
@@ -2550,18 +3337,30 @@
             "state" : "translated",
             "value" : "文王后天八卦：文王创作的后天八卦排列方式"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文王後天八卦：文王創作的後天八卦排列方式"
+          }
         }
       }
     },
     "方位" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Direction"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "方位"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "方位"
@@ -2571,13 +3370,19 @@
     },
     "日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日"
@@ -2587,13 +3392,19 @@
     },
     "日主：" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day Master:"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日主："
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日主："
@@ -2603,13 +3414,19 @@
     },
     "日出" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunrise"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日出"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日出"
@@ -2619,13 +3436,19 @@
     },
     "日出 %@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunrise %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日出 %@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日出 %@"
@@ -2636,13 +3459,19 @@
     "日期：%@" : {
       "comment" : "Share text line",
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date: %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日期：%@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日期：%@"
@@ -2652,13 +3481,19 @@
     },
     "日柱" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日柱"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日柱"
@@ -2668,13 +3503,19 @@
     },
     "日落" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunset"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日落"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日落"
@@ -2684,13 +3525,19 @@
     },
     "日落 %@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunset %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日落 %@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "日落 %@"
@@ -2700,13 +3547,19 @@
     },
     "旺" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Strong"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "旺"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "旺"
@@ -2716,13 +3569,19 @@
     },
     "星宿: %@" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mansion: %@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "星宿: %@"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "星宿: %@"
@@ -2732,38 +3591,22 @@
     },
     "星象: %@" : {
       "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "星象: %@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "星象: %@"
-          }
-        }
-      }
-    },
-    "星象：%@，星宿：%@" : {
-      "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "星象：%1$@，星宿：%2$@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "星象：%1$@，星宿：%2$@"
+            "value" : "Symbol: %@"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "星象：%1$@，星宿：%2$@"
+            "value" : "星象: %@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星象: %@"
           }
         }
       }
@@ -2773,14 +3616,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "星象：%1$@·%2$@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "星象：%1$@·%2$@"
+            "value" : "Sky: %1$@ · %2$@"
           }
         },
         "zh-Hans" : {
@@ -2788,15 +3625,43 @@
             "state" : "translated",
             "value" : "星象：%1$@·%2$@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星象：%1$@·%2$@"
+          }
+        }
+      }
+    },
+    "星象：%@，星宿：%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol: %1$@, mansion: %2$@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星象：%1$@，星宿：%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "星象：%1$@，星宿：%2$@"
+          }
         }
       }
     },
     "春節氣氛組件設置" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "春節氣氛組件設置"
+            "value" : "Spring Festival Widgets"
           }
         },
         "zh-Hans" : {
@@ -2804,15 +3669,21 @@
             "state" : "translated",
             "value" : "春节气氛组件设置"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "春節氣氛組件設置"
+          }
         }
       }
     },
     "時區設置" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "時區設置"
+            "value" : "Time Zone"
           }
         },
         "zh-Hans" : {
@@ -2820,15 +3691,21 @@
             "state" : "translated",
             "value" : "时区设置"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時區設置"
+          }
         }
       }
     },
     "時柱" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "時柱"
+            "value" : "Hour"
           }
         },
         "zh-Hans" : {
@@ -2836,15 +3713,21 @@
             "state" : "translated",
             "value" : "时柱"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時柱"
+          }
         }
       }
     },
     "時辰" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "時辰"
+            "value" : "Shichen"
           }
         },
         "zh-Hans" : {
@@ -2852,15 +3735,21 @@
             "state" : "translated",
             "value" : "时辰"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰"
+          }
         }
       }
     },
     "時辰、節氣、農曆無需打開App，一眼可見。在桌面按右鍵，選擇「編輯小工具」，搜尋「天干地支」即可加入。" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "時辰、節氣、農曆無需打開App，一眼可見。在桌面按右鍵，選擇「編輯小工具」，搜尋「天干地支」即可加入。"
+            "value" : "See the Shichen, solar term and lunar date without opening the app. Right-click the desktop, choose “Edit Widgets”, and search for “TianganDizhi”."
           }
         },
         "zh-Hans" : {
@@ -2868,21 +3757,99 @@
             "state" : "translated",
             "value" : "时辰、节气、农历无需打开App，一眼可见。在桌面上点按右键，选择“编辑小组件”，搜索“天干地支”即可添加。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰、節氣、農曆無需打開App，一眼可見。在桌面按右鍵，選擇「編輯小工具」，搜尋「天干地支」即可加入。"
+          }
         }
       }
     },
     "時辰、節氣、農曆無需打開App，一眼可見。長按主畫面空白處，點「編輯」→「加入小工具」，搜尋「天干地支」即可加入；鎖定畫面同樣適用。" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "時辰、節氣、農曆無需打開App，一眼可見。長按主畫面空白處，點「編輯」→「加入小工具」，搜尋「天干地支」即可加入；鎖定畫面同樣適用。"
+            "value" : "See the Shichen, solar term and lunar date without opening the app. Touch and hold an empty area of the Home Screen, tap Edit → Add Widget, and search for “TianganDizhi”. It works on the Lock Screen too."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "时辰、节气、农历无需打开App，一眼可见。长按主屏幕空白处，轻点“编辑”→“添加小组件”，搜索“天干地支”即可添加；锁定屏幕同样适用。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰、節氣、農曆無需打開App，一眼可見。長按主畫面空白處，點「編輯」→「加入小工具」，搜尋「天干地支」即可加入；鎖定畫面同樣適用。"
+          }
+        }
+      }
+    },
+    "時辰及節氣使用傳統古稱" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Classical names for hours and solar terms"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时辰及节气使用传统古称"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰及節氣使用傳統古稱"
+          }
+        }
+      }
+    },
+    "時辰的別名" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Other Names of the Hours"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时辰的别名"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰的別名"
+          }
+        }
+      }
+    },
+    "時辰與小時" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shichen and Clock Hours"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时辰与小时"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時辰與小時"
           }
         }
       }
@@ -2892,14 +3859,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "時辰：%1$@（%2$@）"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "時辰：%1$@（%2$@）"
+            "value" : "Shichen: %1$@ (%2$@)"
           }
         },
         "zh-Hans" : {
@@ -2907,63 +3868,21 @@
             "state" : "translated",
             "value" : "时辰：%1$@（%2$@）"
           }
-        }
-      }
-    },
-    "時辰及節氣使用傳統古稱" : {
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "時辰及節氣使用傳統古稱"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "时辰及节气使用传统古称"
-          }
-        }
-      }
-    },
-    "時辰的別名" : {
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "時辰的別名"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "时辰的别名"
-          }
-        }
-      }
-    },
-    "時辰與小時" : {
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "時辰與小時"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "时辰与小时"
+            "value" : "時辰：%1$@（%2$@）"
           }
         }
       }
     },
     "曆法" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "曆法"
+            "value" : "Calendar"
           }
         },
         "zh-Hans" : {
@@ -2971,18 +3890,53 @@
             "state" : "translated",
             "value" : "历法"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "曆法"
+          }
+        }
+      }
+    },
+    "最高%@最低%@" : {
+      "comment" : "Today's temperature range; %1$@ high, %2$@ low",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "H %1$@ L %2$@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最高%1$@最低%2$@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最高%1$@最低%2$@"
+          }
         }
       }
     },
     "月" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Month"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "月"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "月"
@@ -2992,13 +3946,19 @@
     },
     "月升" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moonrise"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "月升"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "月升"
@@ -3010,10 +3970,10 @@
       "comment" : "Title of a calendar widget.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "月曆"
+            "value" : "Calendar"
           }
         },
         "zh-Hans" : {
@@ -3021,31 +3981,21 @@
             "state" : "translated",
             "value" : "月历"
           }
-        }
-      }
-    },
-    "月曆，點擊查看" : {
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "月曆，點擊查看"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "月历，点击查看"
+            "value" : "月曆"
           }
         }
       }
     },
     "月曆配置" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "月曆配置"
+            "value" : "Calendar"
           }
         },
         "zh-Hans" : {
@@ -3053,18 +4003,52 @@
             "state" : "translated",
             "value" : "月历配置"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月曆配置"
+          }
+        }
+      }
+    },
+    "月曆，點擊查看" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendar, tap to open"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月历，点击查看"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月曆，點擊查看"
+          }
         }
       }
     },
     "月柱" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Month"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "月柱"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "月柱"
@@ -3074,13 +4058,19 @@
     },
     "月落" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moonset"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "月落"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "月落"
@@ -3090,13 +4080,19 @@
     },
     "模式" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "模式"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "模式"
@@ -3106,16 +4102,22 @@
     },
     "歡迎使用時辰" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "歡迎使用時辰"
+            "value" : "Welcome"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "欢迎使用时辰"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歡迎使用時辰"
           }
         }
       }
@@ -3124,10 +4126,10 @@
       "comment" : "A label for the \"沖\" column in the Luck widget.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "沖"
+            "value" : "Clash"
           }
         },
         "zh-Hans" : {
@@ -3135,31 +4137,21 @@
             "state" : "translated",
             "value" : "冲"
           }
-        }
-      }
-    },
-    "海外用戶：節日與節氣以東八區時間（UTC+8）計算" : {
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "海外用戶：節日與節氣以東八區時間（UTC+8）計算"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "海外用户：节日与节气以东八区时间（UTC+8）计算"
+            "value" : "沖"
           }
         }
       }
     },
     "海外用戶開啟後節日與節氣以中國標準時間計算" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "海外用戶開啟後節日與節氣以中國標準時間計算"
+            "value" : "When on, festivals and solar terms use China Standard Time"
           }
         },
         "zh-Hans" : {
@@ -3167,15 +4159,43 @@
             "state" : "translated",
             "value" : "海外用户开启后节日与节气以中国标准时间计算"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海外用戶開啟後節日與節氣以中國標準時間計算"
+          }
+        }
+      }
+    },
+    "海外用戶：節日與節氣以東八區時間（UTC+8）計算" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Outside China: date festivals and solar terms by China time (UTC+8)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海外用户：节日与节气以东八区时间（UTC+8）计算"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "海外用戶：節日與節氣以東八區時間（UTC+8）計算"
+          }
         }
       }
     },
     "添加生日、紀念日等每年重複的日子，它們會顯示在節日曆和「節氣與節日」小組件中。" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "添加生日、紀念日等每年重複的日子，它們會顯示在節日曆和「節氣與節日」小組件中。"
+            "value" : "Add birthdays, anniversaries and other yearly days. They appear in the festival calendar and the Solar Terms & Festivals widget."
           }
         },
         "zh-Hans" : {
@@ -3183,15 +4203,21 @@
             "state" : "translated",
             "value" : "添加生日、纪念日等每年重复的日子，它们会显示在节日历和“节气与节日”小组件中。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加生日、紀念日等每年重複的日子，它們會顯示在節日曆和「節氣與節日」小組件中。"
+          }
         }
       }
     },
     "添加自訂節日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "添加自訂節日"
+            "value" : "Add a Day"
           }
         },
         "zh-Hans" : {
@@ -3199,15 +4225,21 @@
             "state" : "translated",
             "value" : "添加自定义节日"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加自訂節日"
+          }
         }
       }
     },
     "清除選擇" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "清除選擇"
+            "value" : "Clear Selection"
           }
         },
         "zh-Hans" : {
@@ -3215,15 +4247,21 @@
             "state" : "translated",
             "value" : "清除选择"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除選擇"
+          }
         }
       }
     },
     "無三合" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "無三合"
+            "value" : "No Three Harmony"
           }
         },
         "zh-Hans" : {
@@ -3231,15 +4269,21 @@
             "state" : "translated",
             "value" : "无三合"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無三合"
+          }
         }
       }
     },
     "無結果" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "無結果"
+            "value" : "No Results"
           }
         },
         "zh-Hans" : {
@@ -3247,18 +4291,30 @@
             "state" : "translated",
             "value" : "无结果"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無結果"
+          }
         }
       }
     },
     "生" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generates"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "生"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "生"
@@ -3268,13 +4324,19 @@
     },
     "生我" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generates it"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "生我"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "生我"
@@ -3284,13 +4346,19 @@
     },
     "用神" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Useful element"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "用神"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "用神"
@@ -3300,13 +4368,19 @@
     },
     "男" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Male"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "男"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "男"
@@ -3316,16 +4390,45 @@
     },
     "當前" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "當前"
+            "value" : "Now"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "当前"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "當前"
+          }
+        }
+      }
+    },
+    "當前時辰%@" : {
+      "comment" : "Widget suggestion; %@ is the current 時辰 (子)",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current Shichen %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前时辰%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "當前時辰%@"
           }
         }
       }
@@ -3336,14 +4439,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "當前時辰：%1$@，%2$@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "當前時辰：%1$@，%2$@"
+            "value" : "Current Shichen: %1$@, %2$@"
           }
         },
         "zh-Hans" : {
@@ -3351,35 +4448,30 @@
             "state" : "translated",
             "value" : "当前时辰：%1$@，%2$@"
           }
-        }
-      }
-    },
-    "當前時辰%@" : {
-      "comment" : "Widget suggestion; %@ is the current 時辰 (子)",
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "當前時辰%@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "当前时辰%@"
+            "value" : "當前時辰：%1$@，%2$@"
           }
         }
       }
     },
     "相克" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overcoming"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "相克"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "相克"
@@ -3389,10 +4481,10 @@
     },
     "相生" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "相生"
+            "value" : "Generating"
           }
         },
         "zh-Hans" : {
@@ -3400,15 +4492,43 @@
             "state" : "translated",
             "value" : "相生"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相生"
+          }
+        }
+      }
+    },
+    "管理自訂節日" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage Your Days"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理自定义节日"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理自訂節日"
+          }
         }
       }
     },
     "節日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "節日"
+            "value" : "Festivals"
           }
         },
         "zh-Hans" : {
@@ -3416,15 +4536,21 @@
             "state" : "translated",
             "value" : "节日"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節日"
+          }
         }
       }
     },
     "節日倒數" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "節日倒數"
+            "value" : "Festival Countdown"
           }
         },
         "zh-Hans" : {
@@ -3432,15 +4558,21 @@
             "state" : "translated",
             "value" : "节日倒数"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節日倒數"
+          }
         }
       }
     },
     "節日曆" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "節日曆"
+            "value" : "Festival Calendar"
           }
         },
         "zh-Hans" : {
@@ -3448,15 +4580,21 @@
             "state" : "translated",
             "value" : "节日历"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節日曆"
+          }
         }
       }
     },
     "節日與節氣使用東八區時間" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "節日與節氣使用東八區時間"
+            "value" : "Use China Time for Festivals"
           }
         },
         "zh-Hans" : {
@@ -3464,15 +4602,21 @@
             "state" : "translated",
             "value" : "节日与节气使用东八区时间"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節日與節氣使用東八區時間"
+          }
         }
       }
     },
     "節氣" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "節氣"
+            "value" : "Solar Terms"
           }
         },
         "zh-Hans" : {
@@ -3480,22 +4624,11 @@
             "state" : "translated",
             "value" : "节气"
           }
-        }
-      }
-    },
-    "節氣：%@" : {
-      "comment" : "Share text line",
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "節氣：%@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "节气：%@"
+            "value" : "節氣"
           }
         }
       }
@@ -3504,16 +4637,22 @@
       "comment" : "Title of a widget that displays the current Chinese New Year.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "節氣與節日"
+            "value" : "Solar Terms & Festivals"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "节气与节日"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節氣與節日"
           }
         }
       }
@@ -3522,10 +4661,10 @@
       "comment" : "Title of a widget that displays health tips and seasonal foods related to the current lunar festival.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "節氣養生"
+            "value" : "Seasonal Health"
           }
         },
         "zh-Hans" : {
@@ -3533,15 +4672,21 @@
             "state" : "translated",
             "value" : "节气养生"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節氣養生"
+          }
         }
       }
     },
     "節氣養生配置" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "節氣養生配置"
+            "value" : "Seasonal Health"
           }
         },
         "zh-Hans" : {
@@ -3549,31 +4694,44 @@
             "state" : "translated",
             "value" : "节气养生配置"
           }
-        }
-      }
-    },
-    "管理自訂節日" : {
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "管理自訂節日"
+            "value" : "節氣養生配置"
+          }
+        }
+      }
+    },
+    "節氣：%@" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solar term: %@"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "管理自定义节日"
+            "value" : "节气：%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "節氣：%@"
           }
         }
       }
     },
     "組件夜間模式使用黑字" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "組件夜間模式使用黑字"
+            "value" : "Black Widget Text at Night"
           }
         },
         "zh-Hans" : {
@@ -3581,15 +4739,21 @@
             "state" : "translated",
             "value" : "组件夜间模式使用黑字"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "組件夜間模式使用黑字"
+          }
         }
       }
     },
     "組件紅底" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "組件紅底"
+            "value" : "Red Widget Background"
           }
         },
         "zh-Hans" : {
@@ -3597,15 +4761,21 @@
             "state" : "translated",
             "value" : "组件红底"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "組件紅底"
+          }
         }
       }
     },
     "組件顯示月相" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "組件顯示月相"
+            "value" : "Moon Phase on Widgets"
           }
         },
         "zh-Hans" : {
@@ -3613,15 +4783,21 @@
             "state" : "translated",
             "value" : "组件显示月相"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "組件顯示月相"
+          }
         }
       }
     },
     "綜合圖示" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "綜合圖示"
+            "value" : "Charts"
           }
         },
         "zh-Hans" : {
@@ -3629,15 +4805,21 @@
             "state" : "translated",
             "value" : "综合图示"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "綜合圖示"
+          }
         }
       }
     },
     "編輯自訂節日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "編輯自訂節日"
+            "value" : "Edit Day"
           }
         },
         "zh-Hans" : {
@@ -3645,18 +4827,30 @@
             "state" : "translated",
             "value" : "编辑自定义节日"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編輯自訂節日"
+          }
         }
       }
     },
     "缺" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "None"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "缺"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "缺"
@@ -3666,13 +4860,19 @@
     },
     "缺失五行" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Missing phases"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "缺失五行"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "缺失五行"
@@ -3682,10 +4882,10 @@
     },
     "背景風格" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "背景風格"
+            "value" : "Background"
           }
         },
         "zh-Hans" : {
@@ -3693,15 +4893,21 @@
             "state" : "translated",
             "value" : "背景风格"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背景風格"
+          }
         }
       }
     },
     "臟腑和情緒" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "臟腑和情緒"
+            "value" : "Organs and Emotions"
           }
         },
         "zh-Hans" : {
@@ -3709,15 +4915,21 @@
             "state" : "translated",
             "value" : "脏腑和情绪"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "臟腑和情緒"
+          }
         }
       }
     },
     "自訂" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自訂"
+            "value" : "Yours"
           }
         },
         "zh-Hans" : {
@@ -3725,32 +4937,21 @@
             "state" : "translated",
             "value" : "自定义"
           }
-        }
-      }
-    },
-    "自訂：%@" : {
-      "comment" : "Share text line",
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自訂：%@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "自定义：%@"
+            "value" : "自訂"
           }
         }
       }
     },
     "自訂節日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "自訂節日"
+            "value" : "Your Days"
           }
         },
         "zh-Hans" : {
@@ -3758,18 +4959,53 @@
             "state" : "translated",
             "value" : "自定义节日"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂節日"
+          }
+        }
+      }
+    },
+    "自訂：%@" : {
+      "comment" : "Share text line",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yours: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自定义：%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自訂：%@"
+          }
         }
       }
     },
     "色彩" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "色彩"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "色彩"
@@ -3779,10 +5015,10 @@
     },
     "若當月沒有這一天（如農曆小月的三十、非閏年的2月29日），則在當月最後一天。" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "若當月沒有這一天（如農曆小月的三十、非閏年的2月29日），則在當月最後一天。"
+            "value" : "If a month has no such day (the 30th of a short lunar month, February 29 outside leap years), it falls on the month's last day."
           }
         },
         "zh-Hans" : {
@@ -3790,15 +5026,21 @@
             "state" : "translated",
             "value" : "若当月没有这一天（如农历小月的三十、非闰年的2月29日），则在当月最后一天。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "若當月沒有這一天（如農曆小月的三十、非閏年的2月29日），則在當月最後一天。"
+          }
         }
       }
     },
     "複製時辰資訊" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "複製時辰資訊"
+            "value" : "Copy Shichen Info"
           }
         },
         "zh-Hans" : {
@@ -3806,15 +5048,21 @@
             "state" : "translated",
             "value" : "复制时辰信息"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "複製時辰資訊"
+          }
         }
       }
     },
     "設置" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "設置"
+            "value" : "Settings"
           }
         },
         "zh-Hans" : {
@@ -3822,21 +5070,33 @@
             "state" : "translated",
             "value" : "设置"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設置"
+          }
         }
       }
     },
     "起運：%lld歲" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "起運：%lld歲"
+            "value" : "Starts at age %lld"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "起运：%lld岁"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "起運：%lld歲"
           }
         }
       }
@@ -3846,20 +5106,20 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "距離%1$@還有 %2$lld 分鐘"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "距離%1$@還有 %2$lld 分鐘"
+            "value" : "%2$lld min until %1$@"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "距离%1$@还有 %2$lld 分钟"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距離%1$@還有 %2$lld 分鐘"
           }
         }
       }
@@ -3869,20 +5129,20 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "距離%1$@還有 %2$lld 小時"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "距離%1$@還有 %2$lld 小時"
+            "value" : "%2$lld h until %1$@"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "距离%1$@还有 %2$lld 小时"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距離%1$@還有 %2$lld 小時"
           }
         }
       }
@@ -3892,14 +5152,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "距離%1$@還有 %2$lld 小時 %3$lld 分鐘"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "距離%1$@還有 %2$lld 小時 %3$lld 分鐘"
+            "value" : "%2$lld h %3$lld min until %1$@"
           }
         },
         "zh-Hans" : {
@@ -3907,18 +5161,30 @@
             "state" : "translated",
             "value" : "距离%1$@还有 %2$lld 小时 %3$lld 分钟"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距離%1$@還有 %2$lld 小時 %3$lld 分鐘"
+          }
         }
       }
     },
     "辟卦" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sovereign Hexagrams"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "辟卦"
           }
         },
-        "zh-Hans" : {
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "辟卦"
@@ -3928,10 +5194,10 @@
     },
     "辟卦圓形圖中文字沿圓弧方向排列" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "辟卦圓形圖中文字沿圓弧方向排列"
+            "value" : "Labels follow the circle in the hexagram wheels"
           }
         },
         "zh-Hans" : {
@@ -3939,21 +5205,33 @@
             "state" : "translated",
             "value" : "辟卦圆形图中文字沿圆弧方向排列"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "辟卦圓形圖中文字沿圓弧方向排列"
+          }
         }
       }
     },
     "農曆" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "農曆"
+            "value" : "Lunar"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "农历"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆"
           }
         }
       }
@@ -3963,14 +5241,8 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "農曆%1$@%2$@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
             "state" : "translated",
-            "value" : "農曆%1$@%2$@"
+            "value" : "Lunar %1$@ %2$@"
           }
         },
         "zh-Hans" : {
@@ -3978,15 +5250,21 @@
             "state" : "translated",
             "value" : "农历%1$@%2$@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆%1$@%2$@"
+          }
         }
       }
     },
     "農曆年月日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "農曆年月日"
+            "value" : "Lunar Date"
           }
         },
         "zh-Hans" : {
@@ -3994,15 +5272,21 @@
             "state" : "translated",
             "value" : "农历年月日"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆年月日"
+          }
         }
       }
     },
     "農曆年月日以及十二时辰，臟器，月相" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "農曆年月日以及十二时辰，臟器，月相"
+            "value" : "Lunar Date, Shichen, Organ and Moon"
           }
         },
         "zh-Hans" : {
@@ -4010,15 +5294,21 @@
             "state" : "translated",
             "value" : "农历年月日以及十二时辰，脏器，月相"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆年月日以及十二时辰，臟器，月相"
+          }
         }
       }
     },
     "農曆新年倒數組件" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "農曆新年倒數組件"
+            "value" : "Countdown to Lunar New Year"
           }
         },
         "zh-Hans" : {
@@ -4026,15 +5316,21 @@
             "state" : "translated",
             "value" : "农历新年倒数组件"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆新年倒數組件"
+          }
         }
       }
     },
     "農曆月曆組件" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "農曆月曆組件"
+            "value" : "Lunar calendar"
           }
         },
         "zh-Hans" : {
@@ -4042,15 +5338,21 @@
             "state" : "translated",
             "value" : "农历月历组件"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "農曆月曆組件"
+          }
         }
       }
     },
     "退出" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "退出"
+            "value" : "Quit"
           }
         },
         "zh-Hans" : {
@@ -4058,31 +5360,21 @@
             "state" : "translated",
             "value" : "退出"
           }
-        }
-      }
-    },
-    "開始使用" : {
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開始使用"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "开始使用"
+            "value" : "退出"
           }
         }
       }
     },
     "開啟定位以顯示天氣與日出日落" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟定位以顯示天氣與日出日落"
+            "value" : "Turn on Location to see weather, sunrise and sunset"
           }
         },
         "zh-Hans" : {
@@ -4090,15 +5382,21 @@
             "state" : "translated",
             "value" : "开启定位以显示天气与日出日落"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟定位以顯示天氣與日出日落"
+          }
         }
       }
     },
     "開啟後全App使用系統字體而非魏碑字體" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟後全App使用系統字體而非魏碑字體"
+            "value" : "When on, the whole app uses the system font instead of Weibei"
           }
         },
         "zh-Hans" : {
@@ -4106,15 +5404,21 @@
             "state" : "translated",
             "value" : "开启后全App使用系统字体而非魏碑字体"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後全App使用系統字體而非魏碑字體"
+          }
         }
       }
     },
     "開啟後夜間深色模式下組件文字顯示為黑色" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟後夜間深色模式下組件文字顯示為黑色"
+            "value" : "When on, widget text is black in Dark Mode"
           }
         },
         "zh-Hans" : {
@@ -4122,15 +5426,21 @@
             "state" : "translated",
             "value" : "开启后夜间深色模式下组件文字显示为黑色"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後夜間深色模式下組件文字顯示為黑色"
+          }
         }
       }
     },
     "開啟後小組件在春節期間顯示紅色背景" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟後小組件在春節期間顯示紅色背景"
+            "value" : "When on, widgets are red during Spring Festival"
           }
         },
         "zh-Hans" : {
@@ -4138,15 +5448,21 @@
             "state" : "translated",
             "value" : "开启后小组件在春节期间显示红色背景"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後小組件在春節期間顯示紅色背景"
+          }
         }
       }
     },
     "開啟後小組件會顯示當日月相符號" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟後小組件會顯示當日月相符號"
+            "value" : "When on, widgets show today's moon phase"
           }
         },
         "zh-Hans" : {
@@ -4154,15 +5470,21 @@
             "state" : "translated",
             "value" : "开启后小组件会显示当日月相符号"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後小組件會顯示當日月相符號"
+          }
         }
       }
     },
     "開啟後時辰及節氣顯示傳統古稱" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟後時辰及節氣顯示傳統古稱"
+            "value" : "When on, hours and solar terms use their classical names"
           }
         },
         "zh-Hans" : {
@@ -4170,15 +5492,21 @@
             "state" : "translated",
             "value" : "开启后时辰及节气显示传统古称"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後時辰及節氣顯示傳統古稱"
+          }
         }
       }
     },
     "開啟後辟卦圓形圖的文字會沿圓弧方向排列" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開啟後辟卦圓形圖的文字會沿圓弧方向排列"
+            "value" : "When on, labels in the hexagram wheels follow the circle"
           }
         },
         "zh-Hans" : {
@@ -4186,15 +5514,43 @@
             "state" : "translated",
             "value" : "开启后辟卦圆形图的文字会沿圆弧方向排列"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟後辟卦圓形圖的文字會沿圓弧方向排列"
+          }
+        }
+      }
+    },
+    "開始使用" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get Started"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始使用"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始使用"
+          }
         }
       }
     },
     "關閉後App不再收集任何匿名使用統計" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "關閉後App不再收集任何匿名使用統計"
+            "value" : "When off, the app collects no usage data"
           }
         },
         "zh-Hans" : {
@@ -4202,15 +5558,21 @@
             "state" : "translated",
             "value" : "关闭后App不再收集任何匿名使用统计"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關閉後App不再收集任何匿名使用統計"
+          }
         }
       }
     },
     "陰" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陰"
+            "value" : "Yin"
           }
         },
         "zh-Hans" : {
@@ -4218,15 +5580,21 @@
             "state" : "translated",
             "value" : "阴"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陰"
+          }
         }
       }
     },
     "陰曆十二辟卦" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陰曆十二辟卦"
+            "value" : "Sovereign Hexagrams by Lunar Month"
           }
         },
         "zh-Hans" : {
@@ -4234,15 +5602,21 @@
             "state" : "translated",
             "value" : "阴历十二辟卦"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陰曆十二辟卦"
+          }
         }
       }
     },
     "陰曆十二辟卦：農曆月份對應的辟卦" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陰曆十二辟卦：農曆月份對應的辟卦"
+            "value" : "Sovereign hexagrams for each lunar month"
           }
         },
         "zh-Hans" : {
@@ -4250,15 +5624,21 @@
             "state" : "translated",
             "value" : "阴历十二辟卦：农历月份对应的辟卦"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陰曆十二辟卦：農曆月份對應的辟卦"
+          }
         }
       }
     },
     "陽" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陽"
+            "value" : "Yang"
           }
         },
         "zh-Hans" : {
@@ -4266,15 +5646,21 @@
             "state" : "translated",
             "value" : "阳"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陽"
+          }
         }
       }
     },
     "陽曆十二辟卦" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陽曆十二辟卦"
+            "value" : "Sovereign Hexagrams by Solar Month"
           }
         },
         "zh-Hans" : {
@@ -4282,15 +5668,21 @@
             "state" : "translated",
             "value" : "阳历十二辟卦"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陽曆十二辟卦"
+          }
         }
       }
     },
     "陽曆十二辟卦：西曆月份對應的辟卦" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "陽曆十二辟卦：西曆月份對應的辟卦"
+            "value" : "Sovereign hexagrams for each Gregorian month"
           }
         },
         "zh-Hans" : {
@@ -4298,15 +5690,21 @@
             "state" : "translated",
             "value" : "阳历十二辟卦：西历月份对应的辟卦"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "陽曆十二辟卦：西曆月份對應的辟卦"
+          }
         }
       }
     },
     "隱私" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "隱私"
+            "value" : "Privacy"
           }
         },
         "zh-Hans" : {
@@ -4314,21 +5712,33 @@
             "state" : "translated",
             "value" : "隐私"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隱私"
+          }
         }
       }
     },
     "類別" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "類別"
+            "value" : "Category"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "类别"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "類別"
           }
         }
       }
@@ -4337,16 +5747,22 @@
       "comment" : "Description of the LuckWidget.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示今日建除神、宜忌事項及日支沖"
+            "value" : "Today's day officer, what to do and avoid, and the day's clash"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "显示今日建除神、宜忌事项及日支冲"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示今日建除神、宜忌事項及日支沖"
           }
         }
       }
@@ -4355,10 +5771,10 @@
       "comment" : "Title of the widget configuration intent.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示今日建除神及宜忌事項"
+            "value" : "Today's day officer and what to do and avoid"
           }
         },
         "zh-Hans" : {
@@ -4366,15 +5782,21 @@
             "state" : "translated",
             "value" : "显示今日建除神及宜忌事项"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示今日建除神及宜忌事項"
+          }
         }
       }
     },
     "顯示以十二地支為命名基礎的農曆年，月，日，俗稱，以及相關臟器信息的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示以十二地支為命名基礎的農曆年，月，日，俗稱，以及相關臟器信息的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。"
+            "value" : "The lunar year, month and day named by the Earthly Branches, with the hour's other name and organ. To configure, touch and hold the widget."
           }
         },
         "zh-Hans" : {
@@ -4382,21 +5804,55 @@
             "state" : "translated",
             "value" : "显示以十二地支为命名基础的农历年，月，日，俗称，以及相关脏器信息的小组件。桌面组件需要您在锁屏界面长按屏幕来配置。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示以十二地支為命名基礎的農曆年，月，日，俗稱，以及相關臟器信息的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。"
+          }
         }
       }
     },
     "顯示傳統名稱" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示傳統名稱"
+            "value" : "Classical Names"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "显示传统名称"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示傳統名稱"
+          }
+        }
+      }
+    },
+    "顯示十二地支為命名基礎的農曆年，月，日以及時辰的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The lunar year, month, day and hour named by the Earthly Branches. To configure, touch and hold the widget."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示十二地支为命名基础的农历年，月，日以及时辰的小组件。桌面组件需要您在锁屏界面长按屏幕来配置。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示十二地支為命名基礎的農曆年，月，日以及時辰的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。"
           }
         }
       }
@@ -4405,10 +5861,10 @@
       "comment" : "Text displayed in a calendar widget that shows the next lunar festival, traditional festival, or custom festival, as well as the number of days from today.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示最近的節氣、傳統節日或自訂節日，以及距今天數"
+            "value" : "The next solar term, festival or day of yours, and how many days away it is"
           }
         },
         "zh-Hans" : {
@@ -4416,21 +5872,11 @@
             "state" : "translated",
             "value" : "显示最近的节气、传统节日或自定义节日，以及距今天数"
           }
-        }
-      }
-    },
-    "顯示十二地支為命名基礎的農曆年，月，日以及時辰的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。" : {
-      "localizations" : {
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示十二地支為命名基礎的農曆年，月，日以及時辰的小組件。桌面組件需要您在鎖屏介面長按屏幕來配置。"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "显示十二地支为命名基础的农历年，月，日以及时辰的小组件。桌面组件需要您在锁屏界面长按屏幕来配置。"
+            "value" : "顯示最近的節氣、傳統節日或自訂節日，以及距今天數"
           }
         }
       }
@@ -4439,10 +5885,10 @@
       "comment" : "Description of a widget that displays health tips and seasonal foods related to the current zodiac sign.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示當前節氣養生提示及時令食物的中尺寸組件"
+            "value" : "This solar term's health notes and seasonal foods"
           }
         },
         "zh-Hans" : {
@@ -4450,15 +5896,21 @@
             "state" : "translated",
             "value" : "显示当前节气养生提示及时令食物的中尺寸组件"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示當前節氣養生提示及時令食物的中尺寸組件"
+          }
         }
       }
     },
     "顯示節氣" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示節氣"
+            "value" : "Show Solar Terms"
           }
         },
         "zh-Hans" : {
@@ -4466,15 +5918,21 @@
             "state" : "translated",
             "value" : "显示节气"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示節氣"
+          }
         }
       }
     },
     "顯示設置" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示設置"
+            "value" : "Display"
           }
         },
         "zh-Hans" : {
@@ -4482,21 +5940,33 @@
             "state" : "translated",
             "value" : "显示设置"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示設置"
+          }
         }
       }
     },
     "顯示農曆日" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示農曆日"
+            "value" : "Show Lunar Days"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "显示农历日"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示農曆日"
           }
         }
       }
@@ -4505,10 +5975,10 @@
       "comment" : "Title and description of the calendar widget.",
       "isCommentAutoGenerated" : true,
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "顯示農曆月曆，含節氣、傳統節日、自訂節日與農曆日名的大尺寸組件"
+            "value" : "A lunar month calendar with solar terms, festivals, your days and lunar day names"
           }
         },
         "zh-Hans" : {
@@ -4516,15 +5986,21 @@
             "state" : "translated",
             "value" : "显示农历月历，含节气、传统节日、自定义节日与农历日名的大尺寸组件"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "顯示農曆月曆，含節氣、傳統節日、自訂節日與農曆日名的大尺寸組件"
+          }
         }
       }
     },
     "點擊五行節點查看相生相克關係" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "點擊五行節點查看相生相克關係"
+            "value" : "Tap a phase to see what it generates and overcomes"
           }
         },
         "zh-Hans" : {
@@ -4532,21 +6008,33 @@
             "state" : "translated",
             "value" : "点击五行节点查看相生相克关系"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "點擊五行節點查看相生相克關係"
+          }
         }
       }
     },
     "點擊重試" : {
       "localizations" : {
-        "zh-Hant" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "點擊重試"
+            "value" : "Tap to Retry"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "点击重试"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "點擊重試"
           }
         }
       }
