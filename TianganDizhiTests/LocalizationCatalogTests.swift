@@ -11,7 +11,7 @@ import Testing
 
   // MARK: Internal
 
-  @Test(arguments: catalogPaths)
+  @Test(.enabled(if: sourcesAvailable, "Reads the catalogs from the source checkout"), arguments: catalogPaths)
   func everyKeyHasTraditionalChinese(_ path: String) throws {
     let missing = try entries(in: path)
       .filter { $0.value.shouldTranslate != false }
@@ -21,7 +21,7 @@ import Testing
     #expect(missing.isEmpty, "Keys without a zh-Hant value in \(path): \(missing)")
   }
 
-  @Test(arguments: catalogPaths)
+  @Test(.enabled(if: sourcesAvailable, "Reads the catalogs from the source checkout"), arguments: catalogPaths)
   func translationsKeepTheKeysPlaceholders(_ path: String) throws {
     for (key, entry) in try entries(in: path) {
       for (language, localization) in entry.localizations ?? [:] {
@@ -72,6 +72,11 @@ import Testing
   private static let repositoryRoot = URL(fileURLWithPath: #filePath)
     .deletingLastPathComponent()
     .deletingLastPathComponent()
+
+  /// Xcode Cloud runs tests on a machine with the built products but no source
+  /// checkout, so the catalog checks only run where the sources are (locally, fastlane).
+  private static let sourcesAvailable = FileManager.default.fileExists(
+    atPath: repositoryRoot.appending(path: catalogPaths[0]).path)
 
   private static let catalogPaths = [
     "TianganDizhi/AppWidgetShared/Localizable.xcstrings",

@@ -16,6 +16,8 @@ xcodebuild -scheme "ShichenWatch Watch App" -destination 'generic/platform=watch
 - Needs the Metal Toolchain (`Utilities/TextureShaders.metal`); if the build says it's missing,
   ask the user to run `xcodebuild -downloadComponent MetalToolchain`.
 - `name=` matches only the newest iOS runtime; check `xcodebuild -showdestinations` if it fails.
+- Xcode Cloud builds TestFlight builds and runs the tests on machines without the source checkout:
+  a test that reads repo files (`#filePath`) must be gated with `.enabled(if:)` on the file existing.
 - The `TianganDizhi` scheme uses `TianganDizhi.xctestplan` (`TianganDizhiTests` + `TianganDizhiUITests`).
 - Other shared schemes: `ShiChenExtension`, `ShichenWatchExtension`, `ShichenWatch Watch App (Notification)`.
 - fastlane (`fastlane/Fastfile`): `ios release`, `mac release`, `ios screenshots`, `ios metadata`,
