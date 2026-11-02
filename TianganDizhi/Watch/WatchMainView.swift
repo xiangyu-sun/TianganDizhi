@@ -34,9 +34,7 @@ struct WatchMainView: View {
         }
       }
       if let shichen = date.shichen {
-        ZStack {
-          CircularContainerView(currentShichen: shichen.dizhi, padding: -24)
-
+        CircularContainerView(currentShichen: shichen.dizhi, padding: -24) {
           VStack {
             Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
               .font(titleFont)

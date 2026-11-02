@@ -168,48 +168,17 @@ struct MainView: View {
         }
 
         if let shichen = date.shichen {
-          ZStack {
-            #if os(macOS)
-            CircularContainerView(currentShichen: shichen.dizhi, padding: 0)
-              .frame(minWidth: 640)
-            #else
-            if horizontalSizeClass == .compact {
-              CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
-                .fixedSize(horizontal: false, vertical: true)
-            } else {
-              CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10)
-            }
-            #endif
-
-            VStack {
-              Text(shichen.keText(language: displayLanguage))
-                .font(largeTitleFont)
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-              if displayLanguage.isChinese {
-                HStack() {
-                  Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
-                  Text(shichen.dizhi.luizhu.organReference.converted(to: displayLanguage))
-                    .foregroundStyle(shichen.dizhi.luizhu.是表经 ? Color.primary : Color.secondary)
-                }
-                .font(bodyFont)
-              } else {
-                // The alias (夜半) is Chinese-only prose; the organ has an English name.
-                VStack(spacing: 0) {
-                  Text(shichen.dizhi.aliasName)
-                  Text(shichen.dizhi.luizhu.organText(in: displayLanguage))
-                    .font(footnote)
-                    .foregroundStyle(shichen.dizhi.luizhu.是表经 ? Color.primary : Color.secondary)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.6)
-                }
-                .font(bodyFont)
-              }
-            }
-            .accessibilityElement(children: .combine)
-            .accessibilityLabel(shichenAccessibilityLabel(shichen))
-            .accessibilityAddTraits(.updatesFrequently)
+          #if os(macOS)
+          CircularContainerView(currentShichen: shichen.dizhi, padding: 0) { clockCentre(shichen) }
+            .frame(minWidth: 640)
+          #else
+          if horizontalSizeClass == .compact {
+            CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10) { clockCentre(shichen) }
+              .fixedSize(horizontal: false, vertical: true)
+          } else {
+            CircularContainerView(currentShichen: shichen.dizhi, padding: shouldScaleFont ? 0 : -10) { clockCentre(shichen) }
           }
+          #endif
         }
 
         Spacer()
@@ -307,6 +276,34 @@ struct MainView: View {
     }
   }
 
+  /// The ke, alias and organ shown in the middle of the dial.
+  private func clockCentre(_ shichen: Shichen) -> some View {
+    VStack {
+      Text(shichen.keText(language: displayLanguage))
+        .font(largeTitleFont)
+      if displayLanguage.isChinese {
+        HStack() {
+          Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
+          Text(shichen.dizhi.luizhu.organReference.converted(to: displayLanguage))
+            .foregroundStyle(shichen.dizhi.luizhu.是表经 ? Color.primary : Color.secondary)
+        }
+        .font(bodyFont)
+      } else {
+        // The alias (夜半) is Chinese-only prose; the organ has an English name.
+        VStack(spacing: 0) {
+          Text(shichen.dizhi.aliasName)
+          Text(shichen.dizhi.luizhu.organText(in: displayLanguage))
+            .font(footnote)
+            .foregroundStyle(shichen.dizhi.luizhu.是表经 ? Color.primary : Color.secondary)
+        }
+        .font(bodyFont)
+      }
+    }
+    .accessibilityElement(children: .combine)
+    .accessibilityLabel(shichenAccessibilityLabel(shichen))
+    .accessibilityAddTraits(.updatesFrequently)
+  }
+
   /// The clock centre's spoken label: alias, ke and organ.
   private func shichenAccessibilityLabel(_ shichen: Shichen) -> String {
     let alias = shichen.dizhi.aliasName.converted(to: displayLanguage)
@@ -318,14 +315,23 @@ struct MainView: View {
   }
 
   func fixedMoonInformationView(_ moonphase: ChineseMoonPhase) -> some View {
+    // English names are long enough that one row would wrap mid-name; stack them instead.
+    ViewThatFits(in: .horizontal) {
+      HStack { moonInformationParts(moonphase) }
+      VStack(spacing: 2) { moonInformationParts(moonphase) }
+    }
+    .font(bodyFont)
+  }
+
+  @ViewBuilder
+  private func moonInformationParts(_ moonphase: ChineseMoonPhase) -> some View {
     HStack {
       Image(systemName: moonphase.moonPhase.symbolName)
       Text(moonphase.name(traditionnal: useTranditionalNaming, language: displayLanguage))
-      if let gua = moonphase.gua {
-        Text(gua.description(in: displayLanguage))
-      }
     }
-    .font(bodyFont)
+    if let gua = moonphase.gua {
+      Text(gua.description(in: displayLanguage))
+    }
   }
 
 }

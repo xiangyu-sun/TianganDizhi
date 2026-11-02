@@ -85,17 +85,13 @@ struct ShiChenEntryView: View {
         
         ZStack(alignment: .center) {
           if let shichen = entry.date.shichen {
-            CircularContainerView(currentShichen: shichen.dizhi, padding: -20)
-            VStack {
-//              Text(
-//                "\(NumberFormatter.tranditionalChineseNunmberFormatter.string(from: NSNumber(value: shichen.currentKe)) ?? "")刻"
-//              )
-//              .font(titleFont)      
-            
-              Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
-                .font(titleFont)
-              Text(shichen.dizhi.luizhu.organText(in: displayLanguage))
-                .font(bodyFont)
+            CircularContainerView(currentShichen: shichen.dizhi, padding: -20) {
+              VStack {
+                Text(shichen.dizhi.aliasName.converted(to: displayLanguage))
+                  .font(titleFont)
+                Text(shichen.dizhi.luizhu.organText(in: displayLanguage))
+                  .font(bodyFont)
+              }
             }
           }
         }

@@ -124,19 +124,26 @@ struct ShierPiguaView: View {
     #endif
   }
 
-  var outterSpacing: Double {
+  /// How far each ring sits in from the rim, outermost first: 節氣, 律呂, 地支, 卦.
+  /// On iPhone the steps follow the glyphs rather than a fixed 40 pt: a two-glyph term on
+  /// the left or right (穀雨, 蕤賓, 大壯) is ~35 pt wide and needs that much room from the
+  /// next ring.
+  var ringInsets: [Double] {
     #if os(watchOS)
-    12
+    [12, 30, 48, 66]
     #else
-    shouldScaleFont ? 46 : 30
+    shouldScaleFont ? [46, 126, 206, 286] : [28, 74, 112, 150]
     #endif
   }
 
-  var innerSpacing: Double {
+  /// The 卦 ring's radius at the dial's natural size. Twelve names share that circle with
+  /// the spokes, so on iPhone it needs ~70 pt to keep them off the lines. The natural size
+  /// then exceeds a phone's width and `fitScale` shrinks the whole dial slightly.
+  var hubRadius: Double {
     #if os(watchOS)
-    18
+    20
     #else
-    shouldScaleFont ? 80 : 40
+    shouldScaleFont ? 20 : 70
     #endif
   }
 
@@ -163,9 +170,9 @@ struct ShierPiguaView: View {
     max(0.2, min(1, min(size.width, size.height) / minimumDiameter))
   }
 
-  /// Twice the outermost ring's offset plus room for the innermost ring's glyphs.
+  /// Twice the innermost ring's inset plus room for its glyphs.
   private var minimumDiameter: CGFloat {
-    CGFloat(2 * (outterSpacing + 3 * innerSpacing + 20))
+    CGFloat(2 * ((ringInsets.last ?? 0) + hubRadius))
   }
 
   private func anglePosition(for index: Int, in size: CGSize) -> CGSize {
@@ -173,8 +180,7 @@ struct ShierPiguaView: View {
 
     let startAngle = segmentAngle * Double(index) + .pi - segmentAngle * 0.5
 
-    let radius = min(size.width, size.height) / 2 -
-      outterSpacing // Adjust the spacing between the circle and the Text elements here
+    let radius = min(size.width, size.height) / 2 - ringInsets[0]
     let x = cos(startAngle) * radius
     let y = sin(startAngle) * radius
     return CGSize(width: x, height: y)
@@ -184,8 +190,7 @@ struct ShierPiguaView: View {
     let segmentAngle = 2 * .pi / Double(12)
 
     let startAngle = segmentAngle * Double(index) + .pi
-    let adjustment = outterSpacing + z * innerSpacing
-    let radius = min(size.width, size.height) / 2 - adjustment // Adjust the spacing between the circle and the Text elements here
+    let radius = min(size.width, size.height) / 2 - ringInsets[Int(z)]
     let x = cos(startAngle) * radius
     let y = sin(startAngle) * radius
     return CGSize(width: x, height: y)

@@ -90,13 +90,24 @@ struct TianganNodeView: View {
   let color: Color
   
   var body: some View {
-    VStack {
-      Circle()
-        .fill(color.opacity(stem.yin ? 0.5 : 0.7))
-        .frame(width: 50, height: 50)
-        .overlay(Text(stem.chineseCharacter).font(.title2).bold().foregroundStyle(.primary))
-      (stem.yin ? Text("陰") : Text("陽")).font(.caption)
-    }
+    // The yin/yang caption goes inside the disc: below it, it landed on the 五行 circle's
+    // stroke and on the arrowheads. The opaque underlay keeps both from showing through
+    // the translucent fill.
+    Circle()
+      .fill(color.opacity(stem.yin ? 0.5 : 0.7))
+      .background(.background, in: Circle())
+      .frame(width: 50, height: 50)
+      .overlay {
+        VStack(spacing: -2) {
+          Text(stem.chineseCharacter).font(.title3).bold()
+          (stem.yin ? Text("陰") : Text("陽"))
+            .font(.caption2)
+            .lineLimit(1)
+            .minimumScaleFactor(0.7)
+        }
+        .foregroundStyle(.primary)
+        .padding(.horizontal, 6)
+      }
   }
 }
 

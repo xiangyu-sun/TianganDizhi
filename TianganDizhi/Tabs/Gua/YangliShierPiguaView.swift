@@ -53,7 +53,7 @@ struct YangliShierPiguaView: View {
             let dizhiIndex = dizhi.rawValue - 1
 
             let monthIndex = jieqi.monthFromCelestialLongitude
-            let monthName = localizedMonthName(from: monthIndex) ?? ""
+            let monthName = localizedMonthName(from: monthIndex, language: displayLanguage) ?? ""
 
             Text(monthName)
               .rotationEffect(getRotatingAngle(for: dizhiIndex, base: 12))
@@ -124,23 +124,28 @@ struct YangliShierPiguaView: View {
     #endif
   }
 
-  var outterSpacing: Double {
+  /// How far each ring sits in from the rim, outermost first: 節氣, month, 卦.
+  var ringInsets: [Double] {
     #if os(watchOS)
-    12
+    [12, 30, 48]
     #else
-    shouldScaleFont ? 46 : 30
+    shouldScaleFont ? [46, 126, 206] : [28, 80, 126]
     #endif
   }
 
-  var innerSpacing: Double {
+  /// The 卦 ring's radius at the dial's natural size; see `ShierPiguaView.hubRadius`.
+  var hubRadius: Double {
     #if os(watchOS)
-    18
+    20
     #else
-    shouldScaleFont ? 80 : 40
+    shouldScaleFont ? 20 : 60
     #endif
   }
 
-  func localizedMonthName(from number: Int, locale: Locale = Locale.current) -> String? {
+  /// The month's name in the UI language, not the device region. Chinese keeps the full
+  /// 九月 form; other languages use the short form (Sep), since the ring has room for
+  /// about two glyphs.
+  func localizedMonthName(from number: Int, language: DisplayLanguage) -> String? {
     guard (1...12).contains(number) else { return nil }
 
     var dateComponents = DateComponents()
@@ -149,8 +154,8 @@ struct YangliShierPiguaView: View {
 
     if let date = calendar.date(from: dateComponents) {
       let formatter = DateFormatter()
-      formatter.locale = locale
-      formatter.dateFormat = "LLLL" // Full month name
+      formatter.locale = Locale(identifier: language.identifier)
+      formatter.dateFormat = language.isChinese ? "LLLL" : "LLL"
       return formatter.string(from: date)
     }
 
@@ -180,9 +185,9 @@ struct YangliShierPiguaView: View {
     max(0.2, min(1, min(size.width, size.height) / minimumDiameter))
   }
 
-  /// Twice the outermost ring's offset plus room for the innermost ring's glyphs.
+  /// Twice the innermost ring's inset plus room for its glyphs.
   private var minimumDiameter: CGFloat {
-    CGFloat(2 * (outterSpacing + 2 * innerSpacing + 20))
+    CGFloat(2 * ((ringInsets.last ?? 0) + hubRadius))
   }
 
   private func anglePosition(for index: Int, in size: CGSize) -> CGSize {
@@ -190,8 +195,7 @@ struct YangliShierPiguaView: View {
 
     let startAngle = segmentAngle * Double(index) + .pi - segmentAngle * 0.5
 
-    let radius = min(size.width, size.height) / 2 -
-      outterSpacing // Adjust the spacing between the circle and the Text elements here
+    let radius = min(size.width, size.height) / 2 - ringInsets[0]
     let x = cos(startAngle) * radius
     let y = sin(startAngle) * radius
     return CGSize(width: x, height: y)
@@ -201,8 +205,7 @@ struct YangliShierPiguaView: View {
     let segmentAngle = 2 * .pi / Double(12)
 
     let startAngle = segmentAngle * Double(index) + .pi
-    let adjustment = outterSpacing + z * innerSpacing
-    let radius = min(size.width, size.height) / 2 - adjustment // Adjust the spacing between the circle and the Text elements here
+    let radius = min(size.width, size.height) / 2 - ringInsets[Int(z)]
     let x = cos(startAngle) * radius
     let y = sin(startAngle) * radius
     return CGSize(width: x, height: y)

@@ -118,9 +118,28 @@ struct WuxingCircleView: View {
     guard len > nodeRadius * 2 else { return (from, to) }
     let ux = dx / len
     let uy = dy / len
-    let newFrom = CGPoint(x: from.x + ux * nodeRadius, y: from.y + uy * nodeRadius)
-    let newTo   = CGPoint(x: to.x   - ux * nodeRadius, y: to.y   - uy * nodeRadius)
+    let start = clearance(ux, uy)
+    let end = clearance(-ux, -uy)
+    let newFrom = CGPoint(x: from.x + ux * start, y: from.y + uy * start)
+    let newTo   = CGPoint(x: to.x   - ux * end, y: to.y   - uy * end)
     return (newFrom, newTo)
+  }
+
+  /// How far from a node's centre a line leaving in direction (ux, uy) must stop. The node's
+  /// circle is `nodeRadius`, but its two stem discs stick out to the sides (`WuxingNodeView`:
+  /// ±40 pt, radius 25), and a nearly horizontal arrow would end with its head under one.
+  private func clearance(_ ux: CGFloat, _ uy: CGFloat) -> CGFloat {
+    let stemOffset: CGFloat = 40
+    let stemReach: CGFloat = 25 + 8 // disc radius plus half the arrowhead and a gap
+    var distance = nodeRadius
+    while distance < nodeRadius + stemReach {
+      let x = ux * distance
+      let y = uy * distance
+      let nearest = min(hypot(x - stemOffset, y), hypot(x + stemOffset, y))
+      if nearest >= stemReach { break }
+      distance += 1
+    }
+    return distance
   }
 
   func position(for index: Int, in size: CGSize) -> CGPoint {

@@ -56,7 +56,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "TianganDizhi needs to have your permission of getting your current location to be able to show yoru local moon phase information on the Widgets."
+            "value" : "TianganDizhi uses your location to show local weather, sunrise and sunset, and moon information in the app and widgets."
           }
         },
         "zh-Hans" : {
