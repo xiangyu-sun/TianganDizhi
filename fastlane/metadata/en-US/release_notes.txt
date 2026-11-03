@@ -1,6 +1,6 @@
 - New: TianganDizhi now speaks English and Simplified Chinese. The app, widgets and Apple Watch follow your device's language, and Traditional Chinese stays exactly as before
 - In English, every term keeps its Chinese character with pinyin and an English name (子 · Zǐ · Rat), while the clock dial, the trigram wheels and the Ode to the Twelve Hours stay in Chinese
 - In Simplified Chinese, terms, festivals and the calendar are shown in Simplified characters with the Weibei SC calligraphy font
-- To choose the app's language, go to Settings › Apps › TianganDizhi › Language
+- Choose the app's language anytime in the app under Settings › Language. If you already use the app, it stays in Traditional Chinese after the update
 - The clock and dials stay usable in small windows on iPad
 - Bug fixes and stability improvements

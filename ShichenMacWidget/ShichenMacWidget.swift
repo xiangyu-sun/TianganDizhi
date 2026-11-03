@@ -12,7 +12,15 @@ import WidgetKit
 
 // MARK: - AllWidgets
 
+/// Applies the app's 語言 setting before WidgetKit starts; see `AppLanguage`.
 @main
+enum WidgetMain {
+  static func main() {
+    AppLanguage.applyAtLaunch()
+    AllWidgets.main()
+  }
+}
+
 struct AllWidgets: WidgetBundle {
   @WidgetBundleBuilder
   var body: some Widget {

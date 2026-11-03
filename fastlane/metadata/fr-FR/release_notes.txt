@@ -1,6 +1,6 @@
 - Nouveauté : TianganDizhi prend désormais en charge l'anglais et le chinois simplifié. L'app, les widgets et l'Apple Watch suivent la langue de votre appareil, et le chinois traditionnel reste inchangé
 - En anglais, chaque terme conserve son caractère chinois avec le pinyin et un nom anglais (子 · Zǐ · Rat), tandis que le cadran de l'horloge, les roues des trigrammes et le poème « Ode to the Twelve Hours » restent en chinois
 - En chinois simplifié, les termes, les fêtes et le calendrier s'affichent en caractères simplifiés avec la police calligraphique Weibei SC
-- Pour choisir la langue de l'app, allez dans Réglages › Apps › 天干地支 › Langue
+- Choisissez la langue de l'app à tout moment dans l'app, sous Settings › Language. Si vous utilisiez déjà l'app, elle reste en chinois traditionnel après la mise à jour
 - L'horloge et les cadrans restent utilisables dans les petites fenêtres sur iPad
 - Corrections de bugs et améliorations de stabilité

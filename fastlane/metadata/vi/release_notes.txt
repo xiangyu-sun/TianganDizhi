@@ -1,6 +1,6 @@
 - Mới: TianganDizhi nay hỗ trợ tiếng Anh và tiếng Trung giản thể. Ứng dụng, widget và Apple Watch theo ngôn ngữ của thiết bị, còn tiếng Trung phồn thể vẫn giữ nguyên như trước
 - Với tiếng Anh, mỗi thuật ngữ giữ chữ Hán cùng phiên âm và tên tiếng Anh (子 · Zǐ · Rat), trong khi mặt đồng hồ, vòng bát quái và bài Ode to the Twelve Hours vẫn bằng tiếng Trung
 - Với tiếng Trung giản thể, thuật ngữ, lễ hội và lịch được hiển thị bằng chữ giản thể với phông thư pháp Weibei SC
-- Để chọn ngôn ngữ của ứng dụng, vào Cài đặt › Ứng dụng › 天干地支 › Ngôn ngữ
+- Chọn ngôn ngữ của ứng dụng bất cứ lúc nào ngay trong ứng dụng, tại Settings › Language. Nếu bạn đã dùng ứng dụng, ứng dụng vẫn giữ tiếng Trung phồn thể sau khi cập nhật
 - Đồng hồ và mặt số vẫn dùng được trong cửa sổ nhỏ trên iPad
 - Sửa lỗi và cải thiện độ ổn định

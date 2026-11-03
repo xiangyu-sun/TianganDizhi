@@ -31,6 +31,8 @@ struct SettingsView: View {
   var backgroundStyle = 0
   @AppStorage(Constants.analyticsEnabled, store: Constants.sharedUserDefault)
   var analyticsEnabled = true
+  @AppStorage(Constants.appLanguage, store: Constants.sharedUserDefault)
+  var appLanguage = ""
 
   @Environment(\.footnote) var footnote
   @EnvironmentObject var fontProvider: FontProvider
@@ -54,6 +56,27 @@ struct SettingsView: View {
         .simultaneousGesture(TapGesture().onEnded {
           AnalyticsService.log(.shareInvoked(source: "settings"))
         })
+      }
+      Section {
+        Picker(selection: $appLanguage) {
+          Text("跟隨系統").tag("")
+          // Each language in its own name, whatever the UI language.
+          Text(verbatim: "繁體中文").tag("zh-Hant")
+          Text(verbatim: "简体中文").tag("zh-Hans")
+          Text(verbatim: "English").tag("en")
+        } label: {
+          VStack(alignment: .leading, spacing: 2) {
+            Text("語言")
+            Text("App及小組件使用的語言")
+              .font(footnote)
+              .foregroundStyle(.secondary)
+          }
+        }
+        .onChange(of: appLanguage) { _, value in
+          settingChanged(Constants.appLanguage, value.isEmpty ? "system" : value)
+        }
+      } footer: {
+        Text("重新開啟App後生效")
       }
       Section(header: Text("春節氣氛組件設置")) {
         Toggle(isOn: $springFestiveBackgroundEnabled) {

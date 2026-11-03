@@ -1,6 +1,6 @@
 - Baharu: TianganDizhi kini menyokong bahasa Inggeris dan Cina Ringkas. Apl, widget dan Apple Watch mengikut bahasa peranti anda, dan Cina Tradisional kekal seperti sebelumnya
 - Dalam bahasa Inggeris, setiap istilah mengekalkan aksara Cina dengan pinyin dan nama Inggeris (子 · Zǐ · Rat), manakala dail jam, roda trigram dan Ode to the Twelve Hours kekal dalam bahasa Cina
 - Dalam Cina Ringkas, istilah, perayaan dan kalendar dipaparkan dalam aksara ringkas dengan fon kaligrafi Weibei SC
-- Untuk memilih bahasa apl, pergi ke Seting › App › 天干地支 › Bahasa
+- Pilih bahasa apl pada bila-bila masa dalam apl, di Settings › Language. Jika anda sudah menggunakan apl ini, apl kekal dalam Cina Tradisional selepas kemas kini
 - Jam dan dail kekal boleh digunakan dalam tetingkap kecil pada iPad
 - Pembetulan pepijat dan penambahbaikan kestabilan

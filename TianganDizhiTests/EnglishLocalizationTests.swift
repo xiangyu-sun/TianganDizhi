@@ -196,3 +196,79 @@ import Testing
     return try #require(Calendar.current.date(from: components))
   }
 }
+
+// MARK: - AppLanguageTests
+
+/// The 語言 setting and the one-time pin that keeps returning users in Chinese.
+@Suite struct AppLanguageTests {
+
+  // MARK: Internal
+
+  @Test func returningUserOnAnEnglishDeviceKeepsTraditionalChinese() {
+    let (shared, process, domain) = makeDefaults()
+    shared.set(true, forKey: Constants.hasCompletedOnboarding)
+    apply(shared, process, domain, preferred: ["en-US"])
+    #expect(shared.string(forKey: Constants.appLanguage) == "zh-Hant")
+    #expect(process.stringArray(forKey: "AppleLanguages") == ["zh-Hant"])
+  }
+
+  @Test func newUserFollowsTheDevice() {
+    let (shared, process, domain) = makeDefaults()
+    apply(shared, process, domain, preferred: ["en-US"])
+    #expect(shared.string(forKey: Constants.appLanguage) == nil)
+    #expect(appleLanguages(process, domain) == nil)
+  }
+
+  @Test func returningUserOnAChineseDeviceFollowsTheDevice() {
+    let (shared, process, domain) = makeDefaults()
+    shared.set(1, forKey: Constants.backgroundStyle)
+    apply(shared, process, domain, preferred: ["zh-Hans-CN"])
+    #expect(shared.string(forKey: Constants.appLanguage) == nil)
+    #expect(appleLanguages(process, domain) == nil)
+  }
+
+  @Test func pinHappensOnceAndFollowSystemRemovesIt() {
+    let (shared, process, domain) = makeDefaults()
+    shared.set(true, forKey: Constants.hasCompletedOnboarding)
+    apply(shared, process, domain, preferred: ["en-US"])
+    shared.set("", forKey: Constants.appLanguage)  // 跟隨系統 in Settings
+    apply(shared, process, domain, preferred: ["en-US"])
+    #expect(shared.string(forKey: Constants.appLanguage) == "")
+    #expect(appleLanguages(process, domain) == nil)
+  }
+
+  @Test func systemPerAppLanguageBecomesTheSetting() {
+    let (shared, process, domain) = makeDefaults()
+    shared.set("zh-Hant", forKey: Constants.appLanguage)
+    shared.set(true, forKey: Constants.appLanguageMigrated)
+    apply(shared, process, domain, preferred: ["en-US"])
+    process.set(["en-GB"], forKey: "AppleLanguages")  // changed in the system's Settings
+    apply(shared, process, domain, preferred: ["en-GB"])
+    #expect(shared.string(forKey: Constants.appLanguage) == "en")
+    #expect(process.stringArray(forKey: "AppleLanguages") == ["en"])
+  }
+
+  // MARK: Private
+
+  private let localizations = ["en", "zh-Hans", "zh-Hant"]
+
+  private func makeDefaults() -> (UserDefaults, UserDefaults, String) {
+    let shared = UserDefaults(suiteName: "AppLanguageTests.shared.\(UUID().uuidString)")!
+    let domain = "AppLanguageTests.process.\(UUID().uuidString)"
+    return (shared, UserDefaults(suiteName: domain)!, domain)
+  }
+
+  private func apply(_ shared: UserDefaults, _ process: UserDefaults, _ domain: String, preferred: [String]) {
+    AppLanguage.apply(
+      shared: shared,
+      process: process,
+      processDomain: domain,
+      localizations: localizations,
+      preferredLanguages: preferred)
+  }
+
+  /// Only the process's own domain, not the device languages behind it.
+  private func appleLanguages(_ process: UserDefaults, _ domain: String) -> [String]? {
+    process.persistentDomain(forName: domain)?["AppleLanguages"] as? [String]
+  }
+}

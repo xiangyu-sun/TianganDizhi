@@ -1,6 +1,6 @@
 - Baru: TianganDizhi kini mendukung bahasa Inggris dan Mandarin Sederhana. Aplikasi, widget, dan Apple Watch mengikuti bahasa perangkat Anda, dan Mandarin Tradisional tetap seperti sebelumnya
 - Dalam bahasa Inggris, setiap istilah tetap menggunakan aksara Mandarin dengan pinyin dan nama Inggris (子 · Zǐ · Rat), sementara dial jam, roda trigram, dan Ode to the Twelve Hours tetap dalam bahasa Mandarin
 - Dalam Mandarin Sederhana, istilah, festival, dan kalender ditampilkan dengan aksara sederhana menggunakan font kaligrafi Weibei SC
-- Untuk memilih bahasa aplikasi, buka Pengaturan › App › 天干地支 › Bahasa
+- Pilih bahasa aplikasi kapan saja di dalam aplikasi, di Settings › Language. Jika Anda sudah menggunakan aplikasi ini, aplikasi tetap dalam Mandarin Tradisional setelah pembaruan
 - Jam dan dial tetap dapat digunakan di jendela kecil di iPad
 - Perbaikan bug dan peningkatan stabilitas

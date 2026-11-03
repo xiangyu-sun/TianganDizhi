@@ -2,7 +2,16 @@ import ChineseAstrologyCalendar
 import Combine
 import SwiftUI
 
+/// Applies the 語言 setting before SwiftUI starts, while nothing has asked
+/// `Bundle.main` for its localization yet.
 @main
+enum AppMain {
+  static func main() {
+    AppLanguage.applyAtLaunch()
+    TianganDizhiApp.main()
+  }
+}
+
 struct TianganDizhiApp: App {
 
   // MARK: Lifecycle

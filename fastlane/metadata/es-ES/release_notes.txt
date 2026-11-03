@@ -1,6 +1,6 @@
 - Novedad: TianganDizhi ahora está disponible en inglés y chino simplificado. La app, los widgets y el Apple Watch siguen el idioma de tu dispositivo, y el chino tradicional sigue igual que antes
 - En inglés, cada término conserva su carácter chino con pinyin y un nombre en inglés (子 · Zǐ · Rat), mientras que la esfera del reloj, las ruedas de trigramas y el poema «Ode to the Twelve Hours» se mantienen en chino
 - En chino simplificado, los términos, las festividades y el calendario se muestran en caracteres simplificados con la fuente caligráfica Weibei SC
-- Para elegir el idioma de la app, ve a Ajustes › Apps › 天干地支 › Idioma
+- Elige el idioma de la app cuando quieras en la propia app, en Settings › Language. Si ya usabas la app, seguirá en chino tradicional tras la actualización
 - El reloj y las esferas siguen siendo utilizables en ventanas pequeñas del iPad
 - Correcciones de errores y mejoras de estabilidad
