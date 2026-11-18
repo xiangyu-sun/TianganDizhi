@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/Astral.git",
       "state" : {
-        "revision" : "6ce6644af07249b1793d057b7115ff18a91c9ea7",
-        "version" : "1.3.0"
+        "revision" : "bd1b054232dea5dd9dcf0f6b892b80f81733126d",
+        "version" : "1.4.0"
       }
     },
     {
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/Bagua",
       "state" : {
-        "revision" : "a5ad32a02750bf1ef5d4f5f64878ccaa81f58fdf",
-        "version" : "1.1.0"
+        "revision" : "8ff34471f6ef2f764a5e74f2bc4fd1867ff8ce43",
+        "version" : "1.1.1"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git",
       "state" : {
-        "revision" : "df2e5d1d7f80ae31ff10bc8ba306736523f9c702",
-        "version" : "4.3.0"
+        "revision" : "9d12a415d711bbbf3ac6596ec93cf0658f3a2ad0",
+        "version" : "4.3.1"
       }
     },
     {
@@ -61,7 +61,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseTranditionalCalendarUI.git",
       "state" : {
         "branch" : "master",
-        "revision" : "6c42a697a01f7cbd25535a6c316b05b9a5c16b4c"
+        "revision" : "4668c8ca3b1f38b23385b316d723f2ab52db1291"
       }
     },
     {
@@ -70,7 +70,7 @@
       "location" : "https://github.com/xiangyu-sun/ChineseTranditionalMusicCore.git",
       "state" : {
         "branch" : "main",
-        "revision" : "cc11f94bf778f37036a45240ad1adec1c1f3686b"
+        "revision" : "74f0eee3667f7248a0e260732074fcdca0a6c650"
       }
     },
     {
@@ -150,8 +150,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xiangyu-sun/JingluoShuxueCore.git",
       "state" : {
-        "revision" : "599289253a74e887548cf1fb8bca6accc46a60d8",
-        "version" : "1.2.0"
+        "revision" : "75d39b3a3ec884c170830bdb6f4a1a539ec654af",
+        "version" : "1.2.1"
       }
     },
     {

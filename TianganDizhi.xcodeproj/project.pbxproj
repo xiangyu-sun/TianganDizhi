@@ -2859,7 +2859,7 @@
 			repositoryURL = "https://github.com/xiangyu-sun/JingluoShuxueCore.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
+				minimumVersion = 1.2.1;
 			};
 		};
 		46F9C28325D137020017440D /* XCRemoteSwiftPackageReference "ChineseTranditionalMusicCore" */ = {
@@ -2875,7 +2875,7 @@
 			repositoryURL = "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.3.0;
+				minimumVersion = 4.3.1;
 			};
 		};
 		9968B3302F930000005E242A /* XCRemoteSwiftPackageReference "ChineseTranditionalCalendarUI" */ = {
@@ -2899,7 +2899,7 @@
 			repositoryURL = "https://github.com/xiangyu-sun/Bagua";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
+				minimumVersion = 1.1.1;
 			};
 		};
 		99D2C78B2943912700327AF7 /* XCRemoteSwiftPackageReference "AppStoreReviewPrompt" */ = {
