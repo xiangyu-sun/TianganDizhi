@@ -4,7 +4,6 @@ PENENTUAN WAKTU TIONGKOK (SHICHEN)
 - Jam melingkar waktu nyata yang menampilkan 12 periode dua jam tradisional (時辰)
 - Subdivisi Ke yang melacak progres seperempat jam dalam setiap Shichen
 - Nama alias dan konteks budaya untuk setiap periode waktu
-- Dukungan Live Activity & Dynamic Island untuk info Shichen sekilas di Layar Kunci
 
 KALENDER & ASTROLOGI TIONGKOK
 - Konversi kalender lunar-solar lengkap dengan Batang Langit dan Cabang Bumi (天干地支)
@@ -55,4 +54,4 @@ KUSTOMISASI
 Baik Anda mempelajari astrologi Tiongkok, mempraktikkan pengobatan tradisional, atau sekadar ingin terhubung dengan kearifan budaya ribuan tahun, TianganDizhi adalah pendamping penting Anda.
 
 BAHASA
-Aplikasi tersedia dalam bahasa Inggris, Mandarin Sederhana, dan Mandarin Tradisional.
+Aplikasi tersedia dalam bahasa Inggris, Spanyol, Mandarin Sederhana, dan Mandarin Tradisional.

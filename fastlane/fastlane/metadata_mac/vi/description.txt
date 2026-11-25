@@ -4,7 +4,6 @@ Mười Hai Thời Thần
 - Đồng hồ tròn hiển thị thời gian thực 12 thời thần truyền thống (Tý, Sửu, Dần, Mão, Thìn, Tỵ, Ngọ, Mùi, Thân, Dậu, Tuất, Hợi)
 - Theo dõi tiến trình khắc trong mỗi thời thần
 - Tên gọi khác và bối cảnh văn hóa của từng thời thần
-- Hỗ trợ Live Activity và Dynamic Island để xem thời thần ngay trên màn hình khóa
 
 Thiên Can Địa Chi & Lịch Pháp
 - Chuyển đổi âm dương lịch, ghi chép đầy đủ năm tháng ngày giờ theo Thiên Can Địa Chi
@@ -55,4 +54,4 @@ Tùy Chỉnh
 Dù bạn nghiên cứu văn hóa truyền thống Trung Hoa, học kinh lạc y học cổ truyền, hay đơn giản là tò mò về thiên văn lịch pháp cổ đại——Thiên Can Địa Chi là người bạn đồng hành không thể thiếu của bạn.
 
 NGÔN NGỮ
-Ứng dụng có giao diện tiếng Anh, tiếng Trung giản thể và tiếng Trung phồn thể.
+Ứng dụng có giao diện tiếng Anh, tiếng Tây Ban Nha, tiếng Trung giản thể và tiếng Trung phồn thể.

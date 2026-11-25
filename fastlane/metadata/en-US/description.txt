@@ -12,7 +12,6 @@ CHINESE TIMEKEEPING (SHICHEN)
 - Real-time circular clock displaying the 12 traditional two-hour periods (時辰)
 - Ke subdivisions tracking quarter-hour progress within each Shichen
 - Alias names and cultural context for every time period
-- Live Activity & Dynamic Island support for at-a-glance Shichen info on your Lock Screen
 
 CHINESE CALENDAR & ASTROLOGY
 - Full lunar-solar calendar conversion with Heavenly Stems and Earthly Branches (天干地支)
@@ -59,4 +58,4 @@ CUSTOMIZATION
 Whether you study Chinese astrology, practice traditional medicine, or simply want to connect with thousands of years of cultural wisdom, TianganDizhi is your essential companion.
 
 LANGUAGES
-The app is available in English, Simplified Chinese and Traditional Chinese.
+The app is available in English, Spanish, Simplified Chinese and Traditional Chinese.

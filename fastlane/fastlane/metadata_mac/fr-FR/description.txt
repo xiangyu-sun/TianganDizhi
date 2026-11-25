@@ -4,7 +4,6 @@ LES DOUZE SHICHEN
 - Horloge circulaire en temps réel affichant les 12 périodes de deux heures traditionnelles
 - Suivi de la progression des quarts d'heure (Ke) au sein de chaque Shichen
 - Noms alternatifs et contexte culturel pour chaque période
-- Prise en charge des Live Activity et Dynamic Island pour les infos Shichen sur l'écran de verrouillage
 
 TIANGAN DIZHI & CALENDRIER
 - Conversion luni-solaire avec les Tiges Célestes et Branches Terrestres (天干地支)
@@ -55,4 +54,4 @@ PERSONNALISATION
 Que vous étudiiez l'astrologie chinoise, pratiquez la médecine traditionnelle ou souhaitiez simplement vous connecter à des millénaires de sagesse culturelle——TianganDizhi est votre compagnon indispensable.
 
 LANGUES
-L'app est disponible en anglais, en chinois simplifié et en chinois traditionnel.
+L'app est disponible en anglais, en espagnol, en chinois simplifié et en chinois traditionnel.
