@@ -1,0 +1,61 @@
+El calendario tradicional chino, sus horas y su almanaque, de un vistazo en la pantalla de inicio de tu teléfono, en la pantalla de bloqueo y en tu muñeca: en iPhone, iPad, Mac y Apple Watch.
+
+WIDGETS EN TODAS PARTES
+- Toca un widget para ir directamente a los detalles de su término solar, festividad o almanaque
+- Widgets para la pantalla de inicio en tamaños pequeño, mediano, grande y extragrande
+- Widgets para la pantalla de bloqueo con el Shichen, la fecha lunar y la cuenta regresiva del próximo término solar
+- Widget con la cuenta regresiva para el Año Nuevo Chino
+- Complicaciones y widgets para Apple Watch
+- En macOS, información en la barra de menú con copia rápida
+
+HORAS CHINAS (SHICHEN)
+- Reloj circular en tiempo real con los 12 períodos tradicionales de dos horas (時辰)
+- Subdivisiones «ke» para seguir cada cuarto de hora dentro de cada Shichen
+- Nombres alternativos y contexto cultural de cada período
+
+CALENDARIO Y ASTROLOGÍA CHINA
+- Conversión completa entre calendario lunar y solar, con Troncos Celestiales y Ramas Terrestres (天干地支)
+- El ciclo sexagenario completo (六十甲子)
+- Los 24 términos solares (節氣), con cuenta regresiva para el siguiente
+- Los 12 animales del zodiaco y sus asociaciones con los Cinco Elementos
+- Los doce dioses (十二建除神), con las actividades favorables y desfavorables de cada día
+- Calculadora Bazi o de los Cuatro Pilares (四柱八字), con los ciclos de suerte Da Yun (大運)
+- Calendario de festividades con cuentas regresivas para las celebraciones tradicionales
+- Referencia de los 60 Nayin (六十納音)
+- Seguimiento de las 28 mansiones lunares (二十八宿)
+
+I CHING Y BAGUA
+- Los Ocho Trigramas en las disposiciones del Cielo Anterior (Fuxi) y del Cielo Posterior (rey Wen)
+- Los 64 hexagramas con sus símbolos e interpretaciones
+- Los 12 hexagramas mensuales en los calendarios lunar y solar
+- Relación entre las fases de la luna y los hexagramas del I Ching
+
+MEDICINA TRADICIONAL CHINA
+- Reloj de los meridianos y órganos (子午流注): descubre qué órgano está más activo en cada Shichen
+- Los Cinco Elementos con sus órganos, emociones, sabores, colores y direcciones
+- Apuntes sobre salud basados en los principios horarios de la acupuntura clásica
+
+TEORÍA MUSICAL TRADICIONAL
+- Las cinco notas (五音) con sus equivalentes de la dinastía Tang y occidentales
+- Los doce lülü (十二律呂) relacionados con las Ramas Terrestres
+
+CLIMA Y ASTRONOMÍA
+- Amanecer, atardecer y salida y puesta de la luna con Apple WeatherKit
+- Fases de la luna con sus nombres tradicionales chinos
+- Temperatura y estado del clima cada día
+
+APPLE WATCH
+- App propia para el reloj, con el reloj circular del Shichen
+- Varios tipos de complicaciones para tu esfera
+- Referencia compacta de órganos y meridianos en tu muñeca
+
+PERSONALIZACIÓN
+- Elige el idioma de la app y de los widgets
+- Fuente caligráfica Weibei para los caracteres chinos o la del sistema
+- Fondo rojo en los widgets durante la Fiesta de la Primavera
+- Opción de hora GMT+8 para festividades y términos solares si vives fuera de China
+
+Tanto si estudias astrología china como si practicas medicina tradicional o quieres acercarte a miles de años de cultura, TianganDizhi es tu compañero imprescindible.
+
+IDIOMAS
+La app está disponible en español, inglés, chino simplificado y chino tradicional. Algunos textos tradicionales, como los consejos de salud de cada término solar y las indicaciones del almanaque, se muestran en chino.

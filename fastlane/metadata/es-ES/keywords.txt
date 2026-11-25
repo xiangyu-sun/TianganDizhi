@@ -1,1 +1,1 @@
-astrología china, calendario lunar, I Ching, meridianos, zodíaco chino
+lunar,zodiaco,horóscopo,bazi,i ching,hexagramas,bagua,almanaque,wuxing,meridianos,luna,fiestas,reloj

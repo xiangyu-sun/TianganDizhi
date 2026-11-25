@@ -1,1 +1,2 @@
+- Mới: giao diện tiếng Tây Ban Nha. Ứng dụng hiện đã có tiếng Tây Ban Nha
 - Sửa lỗi và cải thiện độ ổn định

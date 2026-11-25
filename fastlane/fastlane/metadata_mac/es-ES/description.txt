@@ -1,58 +1,60 @@
-Descubre la sabiduría de la astrología china tradicional, la medición del tiempo y la filosofía — todo en una app bellamente diseñada para iPhone, iPad, Mac y Apple Watch.
+El calendario tradicional chino, sus horas y su almanaque, siempre a la vista en la barra de menús y el escritorio de tu Mac, y también en iPhone, iPad y Apple Watch.
 
-TIEMPO CHINO (SHICHEN)
+EN TU MAC, DE UN VISTAZO
+- Fecha lunar, Shichen y deidad del día en la barra de menús, con copia rápida
+- Widgets para Mac con la hora china, el calendario mensual, las festividades, la cuenta atrás para el Año Nuevo Chino, el almanaque del día y los consejos de cada término solar
+- Haz clic en un widget para ir directamente a sus detalles
+- En iPhone y iPad: widgets para la pantalla de inicio y la pantalla de bloqueo
+- En Apple Watch: complicaciones y widgets
+
+HORAS CHINAS (SHICHEN)
 - Reloj circular en tiempo real con los 12 períodos tradicionales de dos horas (時辰)
-- Subdivisiones Ke para seguir el progreso de cada cuarto de hora dentro de cada Shichen
-- Nombres y contexto cultural para cada período horario
-- Live Activity y Dynamic Island para información Shichen en tu pantalla de bloqueo
+- Subdivisiones «ke» para seguir cada cuarto de hora dentro de cada Shichen
+- Nombres alternativos y contexto cultural de cada período
 
 CALENDARIO Y ASTROLOGÍA CHINA
-- Conversión completa entre calendario lunar y solar con Troncos Celestiales y Ramas Terrestres (天干地支)
-- Ciclo Sexagenario completo de 60 años (六十甲子)
-- 24 Términos Solares (節氣) con cuenta regresiva al próximo término
-- 12 Animales del Zodíaco con asociaciones de los Cinco Elementos
-- Doce Dioses (十二建除神) con actividades auspiciosas e inauspiciosas del día
-- Seguimiento de las 28 Mansiones Lunares (二十八宿)
+- Conversión completa entre calendario lunar y solar, con Troncos Celestiales y Ramas Terrestres (天干地支)
+- El ciclo sexagenario completo (六十甲子)
+- Los 24 términos solares (節氣), con cuenta atrás para el siguiente
+- Los 12 animales del zodiaco y sus asociaciones con los Cinco Elementos
+- Los doce dioses (十二建除神), con las actividades favorables y desfavorables de cada día
+- Calculadora Bazi o de los Cuatro Pilares (四柱八字), con los ciclos de suerte Da Yun (大運)
+- Calendario de festividades con cuentas atrás para las fiestas tradicionales
+- Referencia de los 60 Nayin (六十納音)
+- Seguimiento de las 28 mansiones lunares (二十八宿)
 
 I CHING Y BAGUA
-- Arreglos del Cielo Anterior de Fuxi y del Cielo Posterior del Rey Wen con los Ocho Trigramas
-- Los 64 Hexagramas con símbolos e interpretaciones
-- 12 Hexagramas Mensuales para calendarios lunares y solares
-- Correlación de las fases lunares con los hexagramas del I Ching
+- Los Ocho Trigramas en las disposiciones del Cielo Anterior (Fuxi) y del Cielo Posterior (rey Wen)
+- Los 64 hexagramas con sus símbolos e interpretaciones
+- Los 12 hexagramas mensuales en los calendarios lunar y solar
+- Relación entre las fases de la luna y los hexagramas del I Ching
 
 MEDICINA TRADICIONAL CHINA
-- Reloj de Órganos Meridianos (子午流注): observa qué órgano está más activo en cada Shichen
-- Sistema de los Cinco Elementos con asociaciones de órganos, emociones, sabores, colores y direcciones
-- Información práctica de salud basada en principios ancestrales de acupuntura
+- Reloj de los meridianos y órganos (子午流注): descubre qué órgano está más activo en cada Shichen
+- Los Cinco Elementos con sus órganos, emociones, sabores, colores y direcciones
+- Apuntes sobre salud basados en los principios horarios de la acupuntura clásica
 
 TEORÍA MUSICAL TRADICIONAL
-- Cinco Notas Musicales (五音) con equivalentes de la Dinastía Tang y occidentales
-- Doce Escalas de Tono (十二律呂) correlacionadas con las Ramas Terrestres
+- Las cinco notas (五音) con sus equivalentes de la dinastía Tang y occidentales
+- Los doce lülü (十二律呂) relacionados con las Ramas Terrestres
 
-CLIMA Y ASTRONOMÍA
-- Horarios de amanecer, atardecer, salida y puesta de la luna a través de Apple WeatherKit
-- Visualización de fases lunares con nombres chinos tradicionales
-- Temperatura y condiciones climáticas diarias
-
-WIDGETS EN TODAS PARTES
-- Widgets para la pantalla de inicio en tamaños pequeño, mediano, grande y extra grande
-- Widgets para la pantalla de bloqueo con Shichen, fecha lunar y cuenta regresiva del término solar
-- Widget de cuenta regresiva para el Año Nuevo Lunar
-- Complicaciones y widgets para Apple Watch
-- Pantalla en la barra de menú de macOS con copia rápida
+EL TIEMPO Y LA ASTRONOMÍA
+- Amanecer, atardecer y salida y puesta de la luna con Apple WeatherKit
+- Fases de la luna con sus nombres tradicionales chinos
+- Temperatura y estado del tiempo cada día
 
 APPLE WATCH
-- App dedicada para el reloj con reloj circular Shichen
-- Múltiples tipos de complicaciones para tu esfera de reloj
+- App propia para el reloj, con el reloj circular del Shichen
+- Varios tipos de complicaciones para tu esfera
 - Referencia compacta de órganos y meridianos en tu muñeca
 
 PERSONALIZACIÓN
-- Estilo de nombres en chino tradicional o simplificado
-- Fuente caligráfica personalizada (WeibeiTC-Bold) o fuente del sistema
-- Tema rojo del Festival de Primavera para las celebraciones de Año Nuevo Lunar
-- Opción de zona horaria GMT+8 para usuarios en el extranjero
+- Elige el idioma de la app y de los widgets
+- Tipografía caligráfica Weibei para los caracteres chinos o la del sistema
+- Fondo rojo en los widgets durante la Fiesta de la Primavera
+- Opción de hora GMT+8 para festividades y términos solares si vives fuera de China
 
-Ya sea que estudies astrología china, practiques medicina tradicional o simplemente quieras conectar con miles de años de sabiduría cultural, TianganDizhi es tu compañero esencial.
+Tanto si estudias astrología china como si practicas medicina tradicional o quieres acercarte a miles de años de cultura, TianganDizhi es tu compañero imprescindible.
 
 IDIOMAS
-La app está disponible en inglés, chino simplificado y chino tradicional.
+La app está disponible en español, inglés, chino simplificado y chino tradicional. Algunos textos tradicionales, como los consejos de salud de cada término solar y las indicaciones del almanaque, se muestran en chino.

@@ -1,1 +1,2 @@
+- New: Spanish interface. The app is now available in Spanish
 - Bug fixes and stability improvements

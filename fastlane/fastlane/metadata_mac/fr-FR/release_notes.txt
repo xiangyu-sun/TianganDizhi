@@ -1,1 +1,2 @@
+- Nouveauté : interface en espagnol. L’application est désormais disponible en espagnol
 - Corrections de bugs et amélioration de la stabilité

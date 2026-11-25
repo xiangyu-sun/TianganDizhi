@@ -1,1 +1,2 @@
+- Baru: antarmuka bahasa Spanyol. Aplikasi kini tersedia dalam bahasa Spanyol
 - Perbaikan bug dan peningkatan stabilitas

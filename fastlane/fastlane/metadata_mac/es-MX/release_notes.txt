@@ -1,0 +1,3 @@
+- Nuevo: interfaz en español en la app, la barra de menú y los widgets
+- Si la app sigue en otro idioma, elige Español en Ajustes › Idioma y vuelve a abrirla
+- Corrección de errores y mejoras de estabilidad

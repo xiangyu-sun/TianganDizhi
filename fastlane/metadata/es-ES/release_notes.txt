@@ -1,1 +1,3 @@
+- Nuevo: interfaz en español en la app, los widgets y Apple Watch
+- Si la app sigue en otro idioma, elige Español en Ajustes › Idioma y vuelve a abrirla
 - Corrección de errores y mejoras de estabilidad
