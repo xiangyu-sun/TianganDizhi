@@ -40,6 +40,10 @@ struct SunInformationView: View {
         .accessibilityLabel("日落 \(sunset.formatted(date: .omitted, time: .shortened))")
       }
     }
+    // Two translated captions and 12-hour times don't fit a phone at full size.
+    .lineLimit(displayLanguage.isChinese ? nil : 1)
+    .minimumScaleFactor(displayLanguage.isChinese ? 1 : 0.6)
+    .padding(.horizontal, displayLanguage.isChinese ? 0 : 8)
   }
 }
 

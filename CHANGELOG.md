@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+### Spanish
+- The app, widgets and watch app are available in Spanish; pick Español in Settings › Language.
+  Returning users who were kept in Traditional Chinese stay there until they choose another.
+  Solar-term health tips, almanac guidance and other classical prose stay in Chinese, except
+  the solar-term and festival notes in the festival calendar and its widget.
+- Fixed: outside Chinese, custom days showed Gregorian months as "M05" instead of the month name.
+- Requires `ChineseAstrologyCalendar` 4.4.0, `Bagua` 1.2.0 and `JingluoShuxueCore` 1.3.0.
+
 ### Package Updates
 - Moved to `ChineseAstrologyCalendar` 4.1 (from a pre-3.0 `master` commit), `Bagua` 1.1.0 and
   `JingluoShuxueCore` 1.2.0, all pinned by version. `ChineseTranditionalCalendarUI` and

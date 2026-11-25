@@ -55,8 +55,8 @@ struct UpcomingFestivalsView: View {
         #if !os(watchOS)
         .pickerStyle(.segmented)
         #endif
-        // Solar-term notes are library prose, which exists only in Chinese.
-        if !displayLanguage.isChinese && (filter == .all || filter == .jieqi) {
+        // Solar-term notes are library prose, Chinese in some languages.
+        if SpecialDayCatalog.solarTermNotesNeedCaption(in: displayLanguage), filter == .all || filter == .jieqi {
           ChineseOnlyCaption()
             .listRowInsets(EdgeInsets())
         }
@@ -106,11 +106,14 @@ struct UpcomingFestivalsView: View {
   private func row(_ item: Event) -> some View {
     VStack(alignment: .leading, spacing: 4) {
       HStack {
-        Text(item.day.name)
-          .font(title3Font)
-        Text(item.day.category)
-          .font(footnote)
-          .foregroundStyle(.secondary)
+        // Names run to several words outside Chinese, so the category goes under them.
+        (displayLanguage.isChinese ? AnyLayout(HStackLayout()) : AnyLayout(VStackLayout(alignment: .leading, spacing: 0))) {
+          Text(item.day.name)
+            .font(title3Font)
+          Text(item.day.category)
+            .font(footnote)
+            .foregroundStyle(.secondary)
+        }
         Spacer()
         // The list spans at most a year, so a short date fits beside long English names.
         (displayLanguage.isChinese

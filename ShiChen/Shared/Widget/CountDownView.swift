@@ -70,7 +70,7 @@ struct CountDownView: View {
       }
 
     case .systemSmall:
-      Text("\(relative) \(title)")
+      Text(displayLanguage.isChinese ? "\(relative) \(title)" : "\(relative) · \(title)")
       .font(bodyFont)
       .englishFit(displayLanguage, lines: 5, minimumScale: 0.5)
       .foregroundStyle(color)

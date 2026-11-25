@@ -1309,7 +1309,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cinco Elementos: generación y control"
+            "value" : "Generación y control"
           }
         },
         "zh-Hans" : {
@@ -1483,7 +1483,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Choque de hoy"
+            "value" : "Choque"
           }
         },
         "zh-Hans" : {
@@ -1709,7 +1709,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bagua del Cielo Anterior (Fuxi)"
+            "value" : "Bagua de Fuxi"
           }
         },
         "zh-Hans" : {
@@ -2158,7 +2158,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nayin de los 60"
+            "value" : "Los 60 Nayin"
           }
         },
         "zh-Hans" : {
@@ -2662,7 +2662,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zodíaco y Cinco Elementos"
+            "value" : "Zodíaco y elementos"
           }
         },
         "zh-Hans" : {
@@ -2718,7 +2718,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "12 Hexagramas Mensuales"
+            "value" : "12 Hexagramas"
           }
         },
         "zh-Hans" : {
@@ -2886,7 +2886,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Diagramas de referencia"
+            "value" : "Diagramas"
           }
         },
         "zh-Hans" : {
@@ -3194,7 +3194,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Choques, armonías y daños"
+            "value" : "Choques y armonías"
           }
         },
         "zh-Hans" : {
@@ -3222,7 +3222,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ramas y meses lunares"
+            "value" : "Ramas y meses"
           }
         },
         "zh-Hans" : {
@@ -3250,7 +3250,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ramas, las 12 escalas de tono y tonos occidentales"
+            "value" : "Ramas y escalas"
           }
         },
         "zh-Hans" : {
@@ -3446,7 +3446,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ganzhi y Cinco Elementos"
+            "value" : "Ganzhi y elementos"
           }
         },
         "zh-Hans" : {
@@ -3530,7 +3530,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tiempo, Sol y Luna: datos de ("
+            "value" : "Datos de ("
           }
         },
         "zh-Hans" : {
@@ -4239,7 +4239,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bagua del Cielo Posterior (Rey Wen)"
+            "value" : "Bagua del rey Wen"
           }
         },
         "zh-Hans" : {
@@ -4885,7 +4885,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Otros nombres de las horas"
+            "value" : "Nombres de las horas"
           }
         },
         "zh-Hans" : {
@@ -4913,7 +4913,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Shichen y horas del reloj"
+            "value" : "Shichen y horas"
           }
         },
         "zh-Hans" : {
@@ -5874,7 +5874,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hora de China para festividades"
+            "value" : "Hora de China"
           }
         },
         "zh-Hans" : {
@@ -6553,7 +6553,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%2$lld min para %1$@"
+            "value" : "%2$lld min para la %1$@"
           }
         },
         "zh-Hans" : {
@@ -6582,7 +6582,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%2$lld h para %1$@"
+            "value" : "%2$lld h para la %1$@"
           }
         },
         "zh-Hans" : {
@@ -6611,7 +6611,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%2$lld h %3$lld min para %1$@"
+            "value" : "%2$lld h %3$lld min para la %1$@"
           }
         },
         "zh-Hans" : {
@@ -6752,7 +6752,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lunar: %1$@ %2$@"
+            "value" : "%2$@ del %1$@ lunar"
           }
         },
         "zh-Hans" : {
@@ -7228,7 +7228,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hexagramas mensuales por mes lunar"
+            "value" : "Hexagramas lunares"
           }
         },
         "zh-Hans" : {
@@ -7312,7 +7312,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hexagramas mensuales por mes solar"
+            "value" : "Hexagramas solares"
           }
         },
         "zh-Hans" : {

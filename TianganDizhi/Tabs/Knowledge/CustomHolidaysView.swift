@@ -222,14 +222,15 @@ struct CustomHolidayEditor: View {
   /// Traditional Chinese for Chinese and in the current locale otherwise.
   static func footerText(for day: RecurringDay, language: DisplayLanguage, locale: Locale = .current, now: Date = .now) -> String {
     let bundle = language.localizationBundle
-    var text = String(localized: "\(day.dateText(language: language))，每年重複。", bundle: bundle, comment: "Custom holiday footer; %@ is the date, e.g. 農曆八月十五")
+    var sentences = [String(localized: "\(day.dateText(language: language))，每年重複。", bundle: bundle, comment: "Custom holiday footer; %@ is the date, e.g. 農曆八月十五")]
     if let next = RecurringDaySource(days: [day], timeZone: .solarTerm).nextOccurrence(of: day, onOrAfter: now) {
       let formatLocale = language.isChinese ? Locale(identifier: "zh-Hant") : locale
       let nextText = next.formatted(.dateTime.year().month().day().locale(formatLocale))
-      text += String(localized: "下次：\(nextText)。", bundle: bundle, comment: "Custom holiday footer; %@ is the next date it falls on")
+      sentences.append(String(localized: "下次：\(nextText)。", bundle: bundle, comment: "Custom holiday footer; %@ is the next date it falls on"))
     }
-    text += String(localized: "若當月沒有這一天（如農曆小月的三十、非閏年的2月29日），則在當月最後一天。", bundle: bundle)
-    return text
+    sentences.append(String(localized: "若當月沒有這一天（如農曆小月的三十、非閏年的2月29日），則在當月最後一天。", bundle: bundle))
+    // Chinese punctuation carries its own space.
+    return sentences.joined(separator: language.isChinese ? "" : " ")
   }
 }
 

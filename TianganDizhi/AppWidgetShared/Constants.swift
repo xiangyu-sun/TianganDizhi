@@ -56,7 +56,7 @@ enum AppLanguage {
   // MARK: Internal
 
   /// The localizations the picker offers.
-  static let choices = ["zh-Hant", "zh-Hans", "en"]
+  static let choices = ["zh-Hant", "zh-Hans", "en", "es"]
 
   /// Applies the 語言 setting to this process. Call first thing in `main`.
   static func applyAtLaunch() {

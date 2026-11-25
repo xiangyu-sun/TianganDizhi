@@ -245,6 +245,8 @@ struct GlossedText: View {
   /// The gloss shown outside Chinese, e.g. "Zi · Rat". Empty for none.
   let gloss: String
   var alignment: HorizontalAlignment = .leading
+  /// How many lines the gloss may take; narrow grid cells allow more.
+  var glossLines = 2
 
   var body: some View {
     if displayLanguage.isChinese || gloss.isEmpty {
@@ -255,7 +257,7 @@ struct GlossedText: View {
         Text(gloss)
           .font(.caption)
           .foregroundStyle(.secondary)
-          .lineLimit(2)
+          .lineLimit(glossLines)
           .minimumScaleFactor(0.8)
       }
       .accessibilityElement(children: .ignore)
@@ -375,10 +377,10 @@ extension LunarMansion {
 
 extension 十二经脉 {
   /// The organ's short name for the hour strip and clock centre: 膽 in
-  /// Chinese, "Gallbladder" in English (the meridian's name without "Meridian").
+  /// Chinese, the organ without "Meridian" in other languages ("Gallbladder").
   func organText(in language: DisplayLanguage) -> String {
     if language.isChinese { return organReference.converted(to: language) }
-    return localizedName(in: language).replacingOccurrences(of: " Meridian", with: "")
+    return localizedOrganName(in: language)
   }
 }
 

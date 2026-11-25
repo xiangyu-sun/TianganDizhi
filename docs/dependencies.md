@@ -4,8 +4,8 @@ Read this before bumping a package, changing a pin, or fixing code that lives in
 author's own packages. All of them have local clones next to this repo in `~/Documents/GitHub/`.
 
 ## Pins (in `TianganDizhi.xcodeproj`)
-- **By version** (`upToNextMajorVersion`): `ChineseAstrologyCalendar` (from 4.3.0, Swift 6 language mode), `Bagua`
-  (from 1.1.0), `JingluoShuxueCore` (from 1.2.0, product `JingluoShuxue`), `firebase-ios-sdk`
+- **By version** (`upToNextMajorVersion`): `ChineseAstrologyCalendar` (from 4.4.0, Swift 6 language mode), `Bagua`
+  (from 1.2.0), `JingluoShuxueCore` (from 1.3.0, product `JingluoShuxue`), `firebase-ios-sdk`
   (from 12.18.0), `airbnb/swift` (from 1.0.0, the Airbnb Swift style/format plugin). Bump the
   minimum when the app needs a newer API; never switch the first three back to a branch, or
   SwiftPM can no longer resolve the graph (Bagua/Jingluo require ChineseAstrologyCalendar by

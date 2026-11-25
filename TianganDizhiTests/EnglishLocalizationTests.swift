@@ -68,7 +68,7 @@ import Testing
   // MARK: Dates
 
   @Test func recurringDayTextInEnglish() {
-    #expect(RecurringDay.monthText(5, reckoning: .gregorian, language: .en) == Calendar(identifier: .gregorian).monthSymbols[4])
+    #expect(RecurringDay.monthText(5, reckoning: .gregorian, language: .en) == "May")
     #expect(RecurringDay.dayText(1, reckoning: .gregorian, language: .en) == "1")
     #expect(RecurringDay.monthText(8, reckoning: .lunar, language: .en) == "8th Month")
     #expect(RecurringDay.dayText(3, reckoning: .lunar, language: .en) == "3rd")
@@ -78,6 +78,7 @@ import Testing
     let lunar = RecurringDay(name: "", reckoning: .lunar, month: 8, day: 3)
     #expect(lunar.dateText(language: .en) == "Lunar 8th Month 3rd")
     #expect(lunar.dateText(language: .zhHant) == "農曆八月初三")
+    #expect(RecurringDay(name: "", reckoning: .gregorian, month: 5, day: 1).dateText(language: .en) == "May 1")
   }
 
   @Test func lunarDateIsEnglishOutsideChinese() throws {
@@ -248,9 +249,32 @@ import Testing
     #expect(process.stringArray(forKey: "AppleLanguages") == ["en"])
   }
 
+  @Test func newUserOnASpanishDeviceFollowsTheDevice() {
+    let (shared, process, domain) = makeDefaults()
+    apply(shared, process, domain, preferred: ["es-ES"])
+    #expect(shared.string(forKey: Constants.appLanguage) == nil)
+    #expect(appleLanguages(process, domain) == nil)
+  }
+
+  @Test func returningUserOnASpanishDeviceKeepsTraditionalChinese() {
+    let (shared, process, domain) = makeDefaults()
+    shared.set(true, forKey: Constants.hasCompletedOnboarding)
+    apply(shared, process, domain, preferred: ["es-MX"])
+    #expect(shared.string(forKey: Constants.appLanguage) == "zh-Hant")
+  }
+
+  @Test func choosingSpanishAppliesIt() {
+    let (shared, process, domain) = makeDefaults()
+    shared.set(true, forKey: Constants.appLanguageMigrated)
+    shared.set("es", forKey: Constants.appLanguage)
+    apply(shared, process, domain, preferred: ["en-US"])
+    #expect(appleLanguages(process, domain) == ["es"])
+    #expect(AppLanguage.choices.contains("es"))
+  }
+
   // MARK: Private
 
-  private let localizations = ["en", "zh-Hans", "zh-Hant"]
+  private let localizations = ["en", "es", "zh-Hans", "zh-Hant"]
 
   private func makeDefaults() -> (UserDefaults, UserDefaults, String) {
     let shared = UserDefaults(suiteName: "AppLanguageTests.shared.\(UUID().uuidString)")!

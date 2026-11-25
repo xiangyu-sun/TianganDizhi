@@ -121,8 +121,13 @@ private struct WidgetMediumView: View {
     VStack {
       Spacer()
       HStack() {
-        Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
-        Text(entry.date.twelveGod()?.localizedName(in: displayLanguage) ?? "")
+        if displayLanguage.isChinese {
+          Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
+          Text(entry.date.twelveGod()?.localizedName(in: displayLanguage) ?? "")
+        } else {
+          // One text, so the whole line wraps and shrinks together.
+          Text(entry.date.lunarDateWithZodiac(language: displayLanguage) + (entry.date.twelveGod().map { " · " + $0.localizedName(in: displayLanguage) } ?? ""))
+        }
       }
       .englishFit(displayLanguage, lines: 2, minimumScale: 0.5)
       .font(title2Font)

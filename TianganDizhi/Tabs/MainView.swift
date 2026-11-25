@@ -190,6 +190,7 @@ struct MainView: View {
         }
         .lineLimit(1)
         .minimumScaleFactor(0.7)
+        .padding(.horizontal, displayLanguage.isChinese ? 0 : 8)
         .foregroundStyle(Color.secondary)
         .font(calloutFont)
         .accessibilityElement(children: .combine)

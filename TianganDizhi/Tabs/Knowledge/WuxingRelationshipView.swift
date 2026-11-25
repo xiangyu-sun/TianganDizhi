@@ -173,8 +173,8 @@ private struct RelationshipDetailPanel: View {
     .padding(.vertical, 6)
   }
 
-  // English glosses need more room than the single glyphs.
-  private var labelWidth: CGFloat { displayLanguage.isChinese ? 36 : 56 }
+  // Glosses and the column header need more room than the single glyphs.
+  private var labelWidth: CGFloat { displayLanguage.isChinese ? 36 : 72 }
   private var columnWidth: CGFloat { displayLanguage.isChinese ? 60 : 96 }
 
   // MARK: Relationship card
@@ -257,71 +257,80 @@ private struct WuxingAttributeList: View {
           }
         }
 
-        HStack {
-          VStack(alignment: .leading, spacing: 0) {
-            Text("天干")
-              .font(footnote)
-            HStack {
-              Text("\(item.tiangan.0.chineseCharacter)")
-              Text("\(item.tiangan.1.chineseCharacter)")
-            }
-            .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
-            Divider()
-            Text("地支")
-              .font(footnote)
-            HStack {
-              ForEach(item.dizhi) {
-                Text("\($0.chineseCharacter)")
-                  .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
-              }
-            }
-          }
-          .scaledToFit()
-
-          Divider()
-
-          VStack(alignment: .leading, spacing: 0) {
-            Text("臟腑和情緒")
-              .font(footnote)
-            HStack {
-              let wuzang = 五臟.allCases.first { $0.wuxing == item } ?? .心
-              GlossedText(glyph: wuzang.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : wuzang.localizedName(in: displayLanguage))
-
-              let wufu = 五腑.allCases.first { $0.wuxing == item } ?? .小腸
-              GlossedText(glyph: wufu.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : wufu.localizedName(in: displayLanguage))
-              // 情緒 is library prose, which exists only in Chinese.
-              Text("\(wuzang.情緒.converted(to: displayLanguage))")
-            }
-            .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
-
-            Divider()
-
-            Text("五味")
-              .font(footnote)
-            HStack {
-              GlossedText(glyph: item.localizedFlavor(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : item.localizedFlavor(in: displayLanguage))
-                .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
-            }
-          }
-          .scaledToFit()
-
-          Divider()
-          makeTopicView(title: "五音", detail: "\(Key.wuyin.first { $0.wuxing == item }?.localizedWuyinName(in: displayLanguage) ?? "")")
-
-          Divider()
-
-          makeTopicView(title: "方位", detail: "\(item.fangwei.localizedName(in: displayLanguage.glyphLanguage))", gloss: displayLanguage.isChinese ? "" : item.fangwei.localizedName(in: displayLanguage))
-          makeTopicView(title: "色彩", detail: "\(item.localizedColorDescription(in: displayLanguage.glyphLanguage))", gloss: displayLanguage.isChinese ? "" : item.localizedColorDescription(in: displayLanguage))
-
-          Divider()
-
-          if let season = Season.allCases.first(where: { $0.wuxing == item }) {
-            makeTopicView(title: "四季", detail: season.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : season.localizedName(in: displayLanguage))
-          }
+        if displayLanguage.isChinese {
+          attributeColumns(item: item)
+        } else {
+          WuxingAttributeGrid(item: item)
         }
       }
     }
     .accessibilityElement(children: .combine)
+  }
+
+  /// Chinese fits every attribute of an element on one line.
+  private func attributeColumns(item: Wuxing) -> some View {
+    HStack {
+      VStack(alignment: .leading, spacing: 0) {
+        Text("天干")
+          .font(footnote)
+        HStack {
+          Text("\(item.tiangan.0.chineseCharacter)")
+          Text("\(item.tiangan.1.chineseCharacter)")
+        }
+        .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
+        Divider()
+        Text("地支")
+          .font(footnote)
+        HStack {
+          ForEach(item.dizhi) {
+            Text("\($0.chineseCharacter)")
+              .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
+          }
+        }
+      }
+      .scaledToFit()
+
+      Divider()
+
+      VStack(alignment: .leading, spacing: 0) {
+        Text("臟腑和情緒")
+          .font(footnote)
+        HStack {
+          let wuzang = 五臟.allCases.first { $0.wuxing == item } ?? .心
+          GlossedText(glyph: wuzang.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : wuzang.localizedName(in: displayLanguage))
+
+          let wufu = 五腑.allCases.first { $0.wuxing == item } ?? .小腸
+          GlossedText(glyph: wufu.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : wufu.localizedName(in: displayLanguage))
+          // 情緒 is library prose, which exists only in Chinese.
+          Text("\(wuzang.情緒.converted(to: displayLanguage))")
+        }
+        .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
+
+        Divider()
+
+        Text("五味")
+          .font(footnote)
+        HStack {
+          GlossedText(glyph: item.localizedFlavor(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : item.localizedFlavor(in: displayLanguage))
+            .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
+        }
+      }
+      .scaledToFit()
+
+      Divider()
+      makeTopicView(title: "五音", detail: "\(Key.wuyin.first { $0.wuxing == item }?.localizedWuyinName(in: displayLanguage) ?? "")")
+
+      Divider()
+
+      makeTopicView(title: "方位", detail: "\(item.fangwei.localizedName(in: displayLanguage.glyphLanguage))", gloss: displayLanguage.isChinese ? "" : item.fangwei.localizedName(in: displayLanguage))
+      makeTopicView(title: "色彩", detail: "\(item.localizedColorDescription(in: displayLanguage.glyphLanguage))", gloss: displayLanguage.isChinese ? "" : item.localizedColorDescription(in: displayLanguage))
+
+      Divider()
+
+      if let season = Season.allCases.first(where: { $0.wuxing == item }) {
+        makeTopicView(title: "四季", detail: season.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : season.localizedName(in: displayLanguage))
+      }
+    }
   }
 
   fileprivate func makeTopicView(title: LocalizedStringKey, detail: String, gloss: String = "") -> some View {
@@ -333,6 +342,93 @@ private struct WuxingAttributeList: View {
           .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
       }
     }
+  }
+}
+
+// MARK: - WuxingAttributeGrid
+
+/// An element's attributes outside Chinese, where headings and glosses are too
+/// wide for one line: the organs span the width and the rest fill a grid.
+private struct WuxingAttributeGrid: View {
+
+  // MARK: Internal
+
+  let item: Wuxing
+
+  var body: some View {
+    VStack(alignment: .leading, spacing: 12) {
+      LazyVGrid(
+        columns: [GridItem(.adaptive(minimum: 150), alignment: .topLeading)],
+        alignment: .leading,
+        spacing: 12)
+      {
+        topic("天干") {
+          HStack {
+            Text(item.tiangan.0.chineseCharacter)
+            Text(item.tiangan.1.chineseCharacter)
+          }
+        }
+        topic("地支") {
+          HStack {
+            ForEach(item.dizhi) {
+              Text($0.chineseCharacter)
+            }
+          }
+        }
+        topic("五味") {
+          glossed(item.localizedFlavor(in: displayLanguage.glyphLanguage), item.localizedFlavor(in: displayLanguage))
+        }
+        topic("五音") {
+          Text(Key.wuyin.first { $0.wuxing == item }?.localizedWuyinName(in: displayLanguage) ?? "")
+        }
+        topic("方位") {
+          glossed(item.fangwei.localizedName(in: displayLanguage.glyphLanguage), item.fangwei.localizedName(in: displayLanguage))
+        }
+        topic("色彩") {
+          glossed(item.localizedColorDescription(in: displayLanguage.glyphLanguage), item.localizedColorDescription(in: displayLanguage))
+        }
+        if let season = Season.allCases.first(where: { $0.wuxing == item }) {
+          topic("四季") {
+            glossed(season.localizedName(in: displayLanguage.glyphLanguage), season.localizedName(in: displayLanguage))
+          }
+        }
+      }
+
+      topic("臟腑和情緒") {
+        HStack(alignment: .top, spacing: 16) {
+          let wuzang = 五臟.allCases.first { $0.wuxing == item } ?? .心
+          glossed(wuzang.localizedName(in: displayLanguage.glyphLanguage), wuzang.localizedName(in: displayLanguage))
+
+          let wufu = 五腑.allCases.first { $0.wuxing == item } ?? .小腸
+          glossed(wufu.localizedName(in: displayLanguage.glyphLanguage), wufu.localizedName(in: displayLanguage))
+          // 情緒 is library prose, which exists only in Chinese.
+          Text(wuzang.情緒.converted(to: displayLanguage))
+        }
+      }
+    }
+  }
+
+  // MARK: Private
+
+  @Environment(\.bodyFont) private var bodyFont
+  @Environment(\.title3Font) private var title3Font
+  @Environment(\.footnote) private var footnote
+  @Environment(\.displayLanguage) private var displayLanguage
+  @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+
+  private func glossed(_ glyph: String, _ gloss: String) -> some View {
+    GlossedText(glyph: glyph, gloss: gloss)
+  }
+
+  private func topic(_ title: LocalizedStringKey, @ViewBuilder content: () -> some View) -> some View {
+    VStack(alignment: .leading, spacing: 2) {
+      Text(title)
+        .font(footnote)
+        .foregroundStyle(.secondary)
+      content()
+        .font(horizontalSizeClass != .compact ? title3Font : bodyFont)
+    }
+    .frame(maxWidth: .infinity, alignment: .leading)
   }
 }
 

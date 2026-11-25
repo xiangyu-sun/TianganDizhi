@@ -36,8 +36,8 @@ struct DizhiGridView: View {
         .font(bodyFont)
 
       HStack {
-        GlossedText(glyph: dizhi.jie.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : dizhi.jie.localizedName(in: displayLanguage), alignment: .center)
-        GlossedText(glyph: dizhi.qi.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : dizhi.qi.localizedName(in: displayLanguage), alignment: .center)
+        GlossedText(glyph: dizhi.jie.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : dizhi.jie.localizedName(in: displayLanguage), alignment: .center, glossLines: 3)
+        GlossedText(glyph: dizhi.qi.localizedName(in: displayLanguage.glyphLanguage), gloss: displayLanguage.isChinese ? "" : dizhi.qi.localizedName(in: displayLanguage), alignment: .center, glossLines: 3)
       }
       .multilineTextAlignment(.center)
       .font(bodyFont)

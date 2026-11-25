@@ -63,6 +63,7 @@ struct LuckMediumWidgetView: View {
           VStack(alignment: .leading) {
             HStack(alignment: .top) {
               Text("今日沖")
+                .englishFit(displayLanguage, lines: 1, minimumScale: 0.6)
               
               Text(chong.chineseCharacter)
                 .widgetAccentable()

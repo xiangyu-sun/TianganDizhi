@@ -13,6 +13,8 @@ import WidgetKit
 // MARK: - MediumWidgetView
 
 struct MediumWidgetView: View {
+  @Environment(\.displayLanguage) private var displayLanguage
+
   let date: Date
 
   @AppStorage(Constants.springFestiveForegroundEnabled, store: Constants.sharedUserDefault)
@@ -36,14 +38,16 @@ struct MediumWidgetView: View {
     VStack {
       Spacer(minLength: 8)
       FullDateTitleView(date: date)
-          .font(title3Font)
+          .font(displayLanguage.isChinese ? title3Font : .footnote.bold())
+          // The date needs a second line outside Chinese.
+          .fixedSize(horizontal: false, vertical: !displayLanguage.isChinese)
   
       #if os(iOS) || os(macOS)
       Spacer(minLength: 4)
       if let value = weather {
         Text(
           MeasurmentFormatterManager
-            .buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + "\(value.condition)")
+            .buildTemperatureDescription(high: value.temperatureHigh, low: value.temperatureLow) + (displayLanguage.isChinese ? "" : " · ") + "\(value.condition)")
           .font(footnote)
           .foregroundStyle(Color.secondary)
       }

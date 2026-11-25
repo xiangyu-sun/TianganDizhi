@@ -59,9 +59,10 @@ enum SpecialDayCatalog {
     var lunar = Calendar(identifier: .chinese)
     lunar.timeZone = timeZone
     // Traditional Chinese uses the library's defaults; Simplified Chinese swaps
-    // in Simplified strings and every other language the English names. The
-    // jieqi `detail` (health tips) and, in Chinese, the festival meanings stay
-    // library prose: Chinese for jieqi, English for festivals.
+    // in Simplified strings, Spanish has its own names and notes, and every
+    // other language gets the English names. Except in Spanish, the `detail`
+    // text stays library prose: Chinese for jieqi (health tips) and, outside
+    // Chinese, English for festivals.
     let festivals: any ChineseFestivalContentProvider
     let jieqi: any JieqiContentProvider
     switch language {
@@ -71,6 +72,9 @@ enum SpecialDayCatalog {
     case .zhHant:
       festivals = DefaultFestivalContentProvider()
       jieqi = DefaultJieqiContentProvider()
+    case .es:
+      festivals = LocalizedFestivalContentProvider(language: .es)
+      jieqi = LocalizedJieqiContentProvider(language: .es)
     default:
       festivals = LocalizedFestivalContentProvider(language: .en)
       jieqi = LocalizedJieqiContentProvider(language: .en)
@@ -80,6 +84,14 @@ enum SpecialDayCatalog {
       FestivalSource(converter: DayConverter(calendar: lunar), timeZone: timeZone, contentProvider: festivals),
       JieqiSource(timeZone: timeZone, contentProvider: jieqi),
     ]
+  }
+
+  /// Whether the solar-term notes ``sources(customHolidays:timeZone:language:)``
+  /// returns in `language` are Chinese text in a UI that isn't, so the screen
+  /// showing them needs a ``ChineseOnlyCaption``. The library writes them in
+  /// Spanish too.
+  static func solarTermNotesNeedCaption(in language: DisplayLanguage) -> Bool {
+    !language.isChinese && language != .es
   }
 
   /// The custom days that fall on `date`'s calendar day.
@@ -116,7 +128,9 @@ extension RecurringDay {
       return LunarMonth(number: month)?.localizedName(in: language) ?? String(localized: "\(month)月", bundle: language.localizationBundle)
     case .gregorian:
       if !language.isChinese {
-        let symbols = Calendar(identifier: .gregorian).monthSymbols
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.locale = Locale(identifier: language.identifier)
+        let symbols = calendar.monthSymbols
         if symbols.indices.contains(month - 1) { return symbols[month - 1] }
         return String(localized: "\(month)月", bundle: language.localizationBundle)
       }
@@ -140,7 +154,8 @@ extension RecurringDay {
     dateText(language: .app)
   }
 
-  /// ``dateText`` in `language`: "Lunar 8th Month 3rd" or "May 1" outside Chinese.
+  /// ``dateText`` in `language`: "Lunar 8th Month 3rd" or "May 1" in English,
+  /// "1 de mayo" in Spanish.
   func dateText(language: DisplayLanguage) -> String {
     let month = Self.monthText(month, reckoning: reckoning, language: language)
     let day = Self.dayText(day, reckoning: reckoning, language: language)

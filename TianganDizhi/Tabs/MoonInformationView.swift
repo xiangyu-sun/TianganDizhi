@@ -55,6 +55,9 @@ struct MoonInformationView: View {
           }
         }
       }
+      .lineLimit(displayLanguage.isChinese ? nil : 1)
+      .minimumScaleFactor(displayLanguage.isChinese ? 1 : 0.6)
+      .padding(.horizontal, displayLanguage.isChinese ? 0 : 8)
     }
     .accessibilityElement(children: .combine)
   }

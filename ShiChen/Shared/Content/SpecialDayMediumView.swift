@@ -71,7 +71,8 @@ struct SpecialDayMediumView: View {
               VStack(alignment: .leading, spacing: 0) {
                 Text(event.day.name)
                   .font(calloutFont)
-                  .lineLimit(1)
+                  // Names run to several words outside Chinese.
+                  .lineLimit(displayLanguage.isChinese ? 1 : 2)
                   .minimumScaleFactor(0.6)
                 Text(event.daysUntil.daysUntilText(language: displayLanguage))
                   .font(.footnote)

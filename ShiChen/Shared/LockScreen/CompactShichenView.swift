@@ -31,6 +31,7 @@ struct CompactShichenView: View {
       titleView
       Text(shichen.localizedHourName(in: displayLanguage))
         .font(largeTitleFont)
+        .englishFit(displayLanguage, lines: 1, minimumScale: 0.5)
 
       ShichenInformationView(shichen: shichen)
     }
@@ -50,6 +51,7 @@ struct CompactShichenView: View {
       Text(components.nian?.formatedYear ?? "")
       Text(components.zodiac?.localizedName(in: displayLanguage) ?? "")
     }
+    .englishFit(displayLanguage, lines: 1, minimumScale: 0.5)
     .font(title3Font)
   }
 }

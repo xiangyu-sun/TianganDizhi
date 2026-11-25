@@ -64,6 +64,7 @@ struct SettingsView: View {
           Text(verbatim: "繁體中文").tag("zh-Hant")
           Text(verbatim: "简体中文").tag("zh-Hans")
           Text(verbatim: "English").tag("en")
+          Text(verbatim: "Español").tag("es")
         } label: {
           VStack(alignment: .leading, spacing: 2) {
             Text("語言")

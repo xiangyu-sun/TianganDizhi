@@ -131,6 +131,14 @@ Original plan:
 6. en-US screenshots with the English UI; check the en-US description against what actually ships.
 
 ### Phase 3 — next languages, chosen by data · per language ~M
+**Spanish (2026-11-25, for 2.83.0):** catalog values, the language picker, the library's Spanish
+names and festival/節氣 notes. Checked by eye on an iPhone 17e simulator (app and iOS widget
+gallery); not checked: watch, macOS, lock screen widgets, onboarding, iPad.
+- Still open: `ChineseTranditionalCalendarUI`'s month grid and week strip truncate Spanish solar
+  terms ("Comien…", "Calor…" for both 小暑 and 大暑). Needs short names or two-line cells there.
+- Open decision: the 節氣 list and health widget still show the Chinese tips (as the store
+  description says), while the festival calendar and its widget show the library's Spanish notes.
+
 **Status (2026-11-01): waiting on data.** Read GA4's language and country dimensions in Firebase first. Once a language is picked, the work is:
 1. `ChineseAstrologyCalendar`: add `DisplayLanguage.ja` (or `.ko`) in a minor release and give every `localizedName(in:)` its native form, e.g. 啓蟄, 処暑 and 春分の日 for Japanese, or 입춘 and 갑자 for Korean. `LocalizationCoverageTests` enforces full coverage. Then tag it and raise the app's minimum version.
 2. App: `glyphLanguage` keeps hanzi for ja/ko (kanji and hanja), and `isChinese` stays false, so lists get the native-reading gloss. Add ja/ko to the catalog (about 270 keys) and to the `ChineseTranditionalCalendarUI` catalog (48 keys).

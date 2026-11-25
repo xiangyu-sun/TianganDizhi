@@ -88,6 +88,7 @@ struct CalendarWidget: Widget {
 /// sidebar (Four Pillars + Moon Phase) to use that extra horizontal space.
 struct CalendarWidgetView: View {
   @Environment(\.displayLanguage) private var displayLanguage
+  @Environment(\.locale) private var locale
   let entry: CalendarEntry
 
   @Environment(\.widgetFamily) private var family
@@ -151,12 +152,14 @@ struct CalendarWidgetView: View {
     // CalendarDayGridView (below) both read the same value and stay aligned.
     return VStack(spacing: theme.rowSpacing) {
       VStack(alignment: .center, spacing: 0){
-        Text(month.title)
+        Text(month.title(in: displayLanguage, locale: locale))
         Text(entry.date.lunarDateWithZodiac(language: displayLanguage))
           .englishFit(displayLanguage, lines: 2, minimumScale: 0.7)
       }
       .font(.headline)
       .padding(.bottom, 8)
+      // The widget has no content margins, and the longer lines reach its edges.
+      .padding([.top, .horizontal], displayLanguage.isChinese ? 0 : 8)
 
       WeekdayHeaderView(calendar: month.calendar)
 
