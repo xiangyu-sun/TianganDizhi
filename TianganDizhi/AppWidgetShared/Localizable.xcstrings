@@ -12,6 +12,12 @@
             "value" : " Weather). Tap to see the data sources."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Weather). Toca para ver las fuentes."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -59,6 +65,12 @@
             "value" : "How %@ generates and overcomes"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cómo %@ genera y controla"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -98,6 +110,12 @@
             "value" : "%1$@ overcomes %2$@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ controla %2$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -118,6 +136,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@ clashes with %2$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ choca con %@"
           }
         },
         "zh-Hans" : {
@@ -145,6 +169,12 @@
             "value" : "Quarter %@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuarto %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -162,6 +192,12 @@
     "%@方，%@" : {
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$@"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@, %2$@"
@@ -189,6 +225,12 @@
             "value" : "%1$@, element %2$@, stems %3$@%4$@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, elemento %2$@, troncos %3$@%4$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -210,6 +252,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "In %@ days"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En %@ días"
           }
         },
         "zh-Hans" : {
@@ -235,6 +283,12 @@
             "value" : "%2$@ in %1$@ days"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ en %1$@ días"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -253,6 +307,12 @@
       "comment" : "A 中氣 solar term, e.g. 大暑氣",
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -280,6 +340,12 @@
             "value" : "%1$@ generates %2$@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ genera %2$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -302,6 +368,12 @@
             "value" : "%@ relationships"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Relaciones de %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -320,6 +392,12 @@
       "comment" : "A 節 solar term, e.g. 小暑節",
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -347,6 +425,12 @@
             "value" : "%1$@, %2$@, auspicious: %3$@, avoid: %4$@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@, %2$@, favorable: %3$@, evitar: %4$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -368,6 +452,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, year pillar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, pilar del año"
           }
         },
         "zh-Hans" : {
@@ -393,6 +483,12 @@
             "value" : "%@, day pillar"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, pilar del día"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -414,6 +510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, hour pillar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, pilar de la hora"
           }
         },
         "zh-Hans" : {
@@ -439,6 +541,12 @@
             "value" : "%@, month pillar"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, pilar del mes"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -460,6 +568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, every year."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, cada año."
           }
         },
         "zh-Hans" : {
@@ -487,6 +601,12 @@
             "value" : "Quarter %lld"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuarto %lld"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -505,6 +625,12 @@
       "comment" : "Gregorian day of month, e.g. 1日",
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld"
@@ -540,6 +666,24 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "In %lld days"
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Mañana"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "En %lld días"
                 }
               }
             }
@@ -590,6 +734,34 @@
             }
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ %#@days@"
+          },
+          "substitutions" : {
+            "days" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "mañana"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "en %arg días"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -611,6 +783,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Month %lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mes %lld"
           }
         },
         "zh-Hans" : {
@@ -638,6 +816,12 @@
             "value" : "Language for the app and its widgets"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma de la app y sus widgets"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -658,6 +842,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Configuration"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuración"
           }
         },
         "zh-Hans" : {
@@ -682,6 +872,12 @@
             "value" : "Date"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -704,6 +900,12 @@
             "value" : "Location"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ubicación"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -724,6 +926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "TianganDizhi Widgets"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets de TianganDizhi"
           }
         },
         "zh-Hans" : {
@@ -760,6 +968,12 @@
             "value" : "No festivals in the coming year"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin festividades en el próximo año"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -780,6 +994,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Three Harmonies"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tres Armonías"
           }
         },
         "zh-Hans" : {
@@ -805,6 +1025,12 @@
             "value" : "Next: %@."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Próxima fecha: %@."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -825,6 +1051,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "24 Solar Terms"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "24 Términos Solares"
           }
         },
         "zh-Hans" : {
@@ -850,6 +1082,12 @@
             "value" : "24 Solar Terms widget %@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget de 24 Términos Solares %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -870,6 +1108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seasonal health notes for the 24 solar terms"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consejos de salud para los 24 términos solares"
           }
         },
         "zh-Hans" : {
@@ -894,6 +1138,12 @@
             "value" : "Five Flavors"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cinco sabores"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -914,6 +1164,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Five Directions"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cinco direcciones"
           }
         },
         "zh-Hans" : {
@@ -938,6 +1194,12 @@
             "value" : "Five Phases"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cinco Elementos"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -958,6 +1220,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Five Phases and correspondences"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cinco Elementos y correspondencias"
           }
         },
         "zh-Hans" : {
@@ -982,6 +1250,12 @@
             "value" : "Five Phases balance"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Equilibrio de los Cinco Elementos"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1002,6 +1276,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Five Phases attributes"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atributos de los Cinco Elementos"
           }
         },
         "zh-Hans" : {
@@ -1026,6 +1306,12 @@
             "value" : "Five Phases: generating and overcoming"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cinco Elementos: generación y control"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1046,6 +1332,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Phase: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elemento: %@"
           }
         },
         "zh-Hans" : {
@@ -1070,6 +1362,12 @@
             "value" : "Five Tones"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cinco Notas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1090,6 +1388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Today"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoy"
           }
         },
         "zh-Hans" : {
@@ -1116,6 +1420,12 @@
             "value" : "Today's Almanac"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Almanaque de hoy"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1138,6 +1448,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Today's Almanac"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Almanaque de hoy"
           }
         },
         "zh-Hans" : {
@@ -1164,6 +1480,12 @@
             "value" : "Today clashes with"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choque de hoy"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1186,6 +1508,12 @@
             "value" : "Festival today: %@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Festividad de hoy: %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1206,6 +1534,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your day today: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu día de hoy: %@"
           }
         },
         "zh-Hans" : {
@@ -1231,6 +1565,12 @@
             "value" : "Today: %@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoy: %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1252,6 +1592,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shown in Chinese"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se muestra en chino"
           }
         },
         "zh-Hans" : {
@@ -1276,6 +1622,12 @@
             "value" : "Quick-reference tables for the stems and branches."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tablas de consulta rápida sobre los troncos y las ramas."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1296,6 +1648,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "See today in the traditional Chinese calendar: the twelve double hours, the 24 solar terms, the stems and branches, the sky and the weather."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consulta el día de hoy en el calendario tradicional chino: las 12 horas dobles, los 24 términos solares, los troncos y las ramas, el cielo y el tiempo."
           }
         },
         "zh-Hans" : {
@@ -1320,6 +1678,12 @@
             "value" : "Use the system font instead of Weibei calligraphy"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar la fuente del sistema en lugar de la caligrafía Weibei"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1340,6 +1704,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fu Xi's Earlier Heaven Bagua"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagua del Cielo Anterior (Fuxi)"
           }
         },
         "zh-Hans" : {
@@ -1364,6 +1734,12 @@
             "value" : "Fu Xi's Earlier Heaven Bagua: the trigram arrangement attributed to Fu Xi"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagua del Cielo Anterior (Fuxi): la disposición de trigramas atribuida a Fuxi"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1384,6 +1760,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Use China time (UTC+8)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar la hora de China (UTC+8)"
           }
         },
         "zh-Hans" : {
@@ -1408,6 +1790,12 @@
             "value" : "Use System Font"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar fuente del sistema"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1428,6 +1816,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Note (optional)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nota (opcional)"
           }
         },
         "zh-Hans" : {
@@ -1452,6 +1846,12 @@
             "value" : "Save"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1472,6 +1872,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Share Anonymous Usage Data"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir datos de uso anónimos"
           }
         },
         "zh-Hans" : {
@@ -1496,6 +1902,12 @@
             "value" : "Overcomes"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controla"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1516,6 +1928,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Overcomes it"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lo controla"
           }
         },
         "zh-Hans" : {
@@ -1540,6 +1958,12 @@
             "value" : "All"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1557,6 +1981,12 @@
     "八卦" : {
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagua"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bagua"
@@ -1584,6 +2014,12 @@
             "value" : "Gregorian"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gregoriano"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1605,6 +2041,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$@ %2$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$@ de %1$@"
           }
         },
         "zh-Hans" : {
@@ -1629,6 +2071,12 @@
             "value" : "Six Clashes"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seis Choques"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1649,6 +2097,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sexagenary Cycle"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciclo Sexagenario"
           }
         },
         "zh-Hans" : {
@@ -1673,6 +2127,12 @@
             "value" : "Sexagenary Cycle (with Nayin)"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ciclo Sexagenario (con Nayin)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1693,6 +2153,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sixty Nayin"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nayin de los 60"
           }
         },
         "zh-Hans" : {
@@ -1717,6 +2183,12 @@
             "value" : "Six Harmonies"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seis Armonías"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1737,6 +2209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Six Harms"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seis Daños"
           }
         },
         "zh-Hans" : {
@@ -1761,6 +2239,12 @@
             "value" : "Clash"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choque"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1781,6 +2265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clashes with %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choca con %@"
           }
         },
         "zh-Hans" : {
@@ -1805,6 +2295,12 @@
             "value" : "Born in a UTC+8 time zone (Beijing, Taipei, Singapore)"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lugar de nacimiento en UTC+8 (Pekín, Taipéi, Singapur)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1825,6 +2321,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Birth date and time"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha y hora de nacimiento"
           }
         },
         "zh-Hans" : {
@@ -1849,6 +2351,12 @@
             "value" : "Share Today's Shichen"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir el Shichen de hoy"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1869,6 +2377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Also called"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otro nombre"
           }
         },
         "zh-Hans" : {
@@ -1893,6 +2407,12 @@
             "value" : "Delete"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1913,6 +2433,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open Settings"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir Ajustes"
           }
         },
         "zh-Hans" : {
@@ -1937,6 +2463,12 @@
             "value" : "Add Widgets"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir widgets"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1957,6 +2489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "12 Earthly Branches"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 Ramas Terrestres"
           }
         },
         "zh-Hans" : {
@@ -1981,6 +2519,12 @@
             "value" : "The twelve double hours, named by the Earthly Branches. Updates every 15 minutes."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las doce horas dobles, nombradas por las Ramas Terrestres. Se actualiza cada 15 minutos."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2001,6 +2545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "12 Earthly Branches"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabla de las 12 Ramas"
           }
         },
         "zh-Hans" : {
@@ -2025,6 +2575,12 @@
             "value" : "12 Day Officers"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doce Dioses"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2045,6 +2601,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "12 Double Hours"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 horas dobles"
           }
         },
         "zh-Hans" : {
@@ -2069,6 +2631,12 @@
             "value" : "Ode to the Twelve Hours"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oda a las doce horas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2089,6 +2657,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zodiac Animals and Five Phases"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zodíaco y Cinco Elementos"
           }
         },
         "zh-Hans" : {
@@ -2113,6 +2687,12 @@
             "value" : "Day Officer"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dios del día"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2133,6 +2713,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "12 Sovereign Hexagrams"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "12 Hexagramas Mensuales"
           }
         },
         "zh-Hans" : {
@@ -2157,6 +2743,12 @@
             "value" : "Curved Sovereign Hexagram Labels"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etiquetas curvas de hexagramas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2177,6 +2769,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "10 Heavenly Stems"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 Troncos Celestiales"
           }
         },
         "zh-Hans" : {
@@ -2201,6 +2799,12 @@
             "value" : "Helps improve the app. No personal information is collected."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayuda a mejorar la app. No se recopila información personal."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2218,6 +2822,12 @@
     "卦" : {
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gua"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gua"
@@ -2245,6 +2855,12 @@
             "value" : "Reference"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Referencia"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2265,6 +2881,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reference Charts"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diagramas de referencia"
           }
         },
         "zh-Hans" : {
@@ -2289,6 +2911,12 @@
             "value" : "Cancel"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2309,6 +2937,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Combines"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Combina"
           }
         },
         "zh-Hans" : {
@@ -2333,6 +2967,12 @@
             "value" : "Name, e.g. Mom's birthday"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre, p. ej.: cumpleaños de mamá"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2353,6 +2993,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tang notation: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notación Tang: %@"
           }
         },
         "zh-Hans" : {
@@ -2377,6 +3023,12 @@
             "value" : "Solfège: %@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solfeo: %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2397,6 +3049,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Season"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estación"
           }
         },
         "zh-Hans" : {
@@ -2421,6 +3079,12 @@
             "value" : "Four Pillars"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuatro Pilares"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2441,6 +3105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Four Pillars (Bazi)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuatro Pilares (Bazi)"
           }
         },
         "zh-Hans" : {
@@ -2465,6 +3135,12 @@
             "value" : "Region & Calendar"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Región y calendario"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2485,6 +3161,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Earthly Branches"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ramas Terrestres"
           }
         },
         "zh-Hans" : {
@@ -2509,6 +3191,12 @@
             "value" : "Clashes, Harmonies and Harms"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choques, armonías y daños"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2529,6 +3217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Branches and Lunar Months"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ramas y meses lunares"
           }
         },
         "zh-Hans" : {
@@ -2553,6 +3247,12 @@
             "value" : "Branches, the 12 pitch pipes and Western pitches"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ramas, las 12 escalas de tono y tonos occidentales"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2573,6 +3273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Branches:"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ramas:"
           }
         },
         "zh-Hans" : {
@@ -2597,6 +3303,12 @@
             "value" : "Widgets use black text in Dark Mode"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los widgets usan texto negro en el modo oscuro"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2617,6 +3329,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marble"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mármol"
           }
         },
         "zh-Hans" : {
@@ -2641,6 +3359,12 @@
             "value" : "Luck Pillars"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilares de la suerte"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2661,6 +3385,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heavenly Stems"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Troncos Celestiales"
           }
         },
         "zh-Hans" : {
@@ -2685,6 +3415,12 @@
             "value" : "Stems & Branches"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganzhi"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2705,6 +3441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ganzhi & Five Phases"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ganzhi y Cinco Elementos"
           }
         },
         "zh-Hans" : {
@@ -2729,6 +3471,12 @@
             "value" : "TianganDizhi widget – %@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widget de TianganDizhi – %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2749,6 +3497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stems: %1$@%2$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Troncos: %1$@%2$@"
           }
         },
         "zh-Hans" : {
@@ -2773,6 +3527,12 @@
             "value" : "Weather, sun and moon data from ("
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiempo, Sol y Luna: datos de ("
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2795,6 +3555,12 @@
             "value" : "Female"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mujer"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2815,6 +3581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Organ Clock"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reloj de órganos"
           }
         },
         "zh-Hans" : {
@@ -2841,6 +3613,12 @@
             "value" : "Do"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorable"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2862,6 +3640,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Do: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorable: %@"
           }
         },
         "zh-Hans" : {
@@ -2886,6 +3670,12 @@
             "value" : "Rice Paper"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Papel de arroz"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2906,6 +3696,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rice paper or marble texture"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Textura de papel de arroz o mármol"
           }
         },
         "zh-Hans" : {
@@ -2930,6 +3726,12 @@
             "value" : "Harms"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daño"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2950,6 +3752,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show today's moon phase on widgets"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar la fase lunar de hoy en los widgets"
           }
         },
         "zh-Hans" : {
@@ -2974,6 +3782,12 @@
             "value" : "Red widget backgrounds during Spring Festival"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fondos rojos en los widgets durante la Fiesta de la Primavera"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2994,6 +3808,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Widgets updated"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets actualizados"
           }
         },
         "zh-Hans" : {
@@ -3018,6 +3838,12 @@
             "value" : "Changes with each solar term"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambia con cada término solar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3038,6 +3864,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "You haven't added any days yet"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no has añadido ningún día"
           }
         },
         "zh-Hans" : {
@@ -3065,6 +3897,12 @@
             "value" : "Year"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Año"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3085,6 +3923,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : " until %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " para %@"
           }
         },
         "zh-Hans" : {
@@ -3111,6 +3955,12 @@
             "value" : "Avoid"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evitar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3132,6 +3982,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avoid: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evitar: %@"
           }
         },
         "zh-Hans" : {
@@ -3156,6 +4012,12 @@
             "value" : "Quick Reference"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Referencia rápida"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3176,6 +4038,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sex"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sexo"
           }
         },
         "zh-Hans" : {
@@ -3200,6 +4068,12 @@
             "value" : "You seem to be outside China time (UTC+8). Should festivals and solar terms follow China time?"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parece que no estás en la hora de China (UTC+8). ¿Quieres que las festividades y los términos solares sigan la hora de China?"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3220,6 +4094,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "It overcomes"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Controla a"
           }
         },
         "zh-Hans" : {
@@ -3244,6 +4124,12 @@
             "value" : "It generates"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genera a"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3264,6 +4150,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open Main Window"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir ventana principal"
           }
         },
         "zh-Hans" : {
@@ -3288,6 +4180,12 @@
             "value" : "Calculators"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calculadoras"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3308,6 +4206,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "In China time (UTC+8): %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En hora de China (UTC+8): %@"
           }
         },
         "zh-Hans" : {
@@ -3332,6 +4236,12 @@
             "value" : "King Wen's Later Heaven Bagua"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagua del Cielo Posterior (Rey Wen)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3352,6 +4262,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "King Wen's Later Heaven Bagua: the trigram arrangement attributed to King Wen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bagua del Cielo Posterior (Rey Wen): la disposición de trigramas atribuida al Rey Wen"
           }
         },
         "zh-Hans" : {
@@ -3376,6 +4292,12 @@
             "value" : "Direction"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dirección"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3396,6 +4318,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Day"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Día"
           }
         },
         "zh-Hans" : {
@@ -3420,6 +4348,12 @@
             "value" : "Day Master:"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maestro del día:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3442,6 +4376,12 @@
             "value" : "Sunrise"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amanecer"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3462,6 +4402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sunrise %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Amanecer %@"
           }
         },
         "zh-Hans" : {
@@ -3487,6 +4433,12 @@
             "value" : "Date: %@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha: %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3507,6 +4459,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Day"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Día"
           }
         },
         "zh-Hans" : {
@@ -3531,6 +4489,12 @@
             "value" : "Sunset"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atardecer"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3551,6 +4515,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sunset %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atardecer %@"
           }
         },
         "zh-Hans" : {
@@ -3575,6 +4545,12 @@
             "value" : "Strong"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fuerte"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3597,6 +4573,12 @@
             "value" : "Mansion: %@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mansión: %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3617,6 +4599,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Symbol: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Símbolo: %@"
           }
         },
         "zh-Hans" : {
@@ -3642,6 +4630,12 @@
             "value" : "Sky: %1$@ · %2$@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cielo: %1$@ · %2$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3662,6 +4656,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Symbol: %1$@, mansion: %2$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Símbolo: %1$@, mansión: %2$@"
           }
         },
         "zh-Hans" : {
@@ -3686,6 +4686,12 @@
             "value" : "Spring Festival Widgets"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widgets de la Fiesta de la Primavera"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3706,6 +4712,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Time Zone"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zona horaria"
           }
         },
         "zh-Hans" : {
@@ -3730,6 +4742,12 @@
             "value" : "Hour"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hora"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3747,6 +4765,12 @@
     "時辰" : {
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shichen"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shichen"
@@ -3774,6 +4798,12 @@
             "value" : "See the Shichen, solar term and lunar date without opening the app. Right-click the desktop, choose “Edit Widgets”, and search for “TianganDizhi”."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consulta el Shichen, el término solar y la fecha lunar sin abrir la app. Haz clic con el botón derecho en el escritorio, elige “Editar widgets” y busca “TianganDizhi”."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3794,6 +4824,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "See the Shichen, solar term and lunar date without opening the app. Touch and hold an empty area of the Home Screen, tap Edit → Add Widget, and search for “TianganDizhi”. It works on the Lock Screen too."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consulta el Shichen, el término solar y la fecha lunar sin abrir la app. Mantén pulsada un área vacía de la pantalla de inicio, toca Editar → Añadir widget y busca “TianganDizhi”. También funciona en la pantalla de bloqueo."
           }
         },
         "zh-Hans" : {
@@ -3818,6 +4854,12 @@
             "value" : "Classical names for hours and solar terms"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombres clásicos de las horas y los términos solares"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3838,6 +4880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Other Names of the Hours"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otros nombres de las horas"
           }
         },
         "zh-Hans" : {
@@ -3862,6 +4910,12 @@
             "value" : "Shichen and Clock Hours"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shichen y horas del reloj"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3880,6 +4934,12 @@
       "comment" : "Share text line",
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shichen: %1$@ (%2$@)"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Shichen: %1$@ (%2$@)"
@@ -3907,6 +4967,12 @@
             "value" : "Calendar"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendario"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3928,6 +4994,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "H %1$@ L %2$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Máx. %1$@ Mín. %2$@"
           }
         },
         "zh-Hans" : {
@@ -3952,6 +5024,12 @@
             "value" : "Month"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mes"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3972,6 +5050,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moonrise"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salida lunar"
           }
         },
         "zh-Hans" : {
@@ -3998,6 +5082,12 @@
             "value" : "Calendar"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendario"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4018,6 +5108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Calendar"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendario"
           }
         },
         "zh-Hans" : {
@@ -4042,6 +5138,12 @@
             "value" : "Calendar, tap to open"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendario, toca para abrir"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4062,6 +5164,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Month"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mes"
           }
         },
         "zh-Hans" : {
@@ -4086,6 +5194,12 @@
             "value" : "Moonset"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puesta lunar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4108,6 +5222,12 @@
             "value" : "Mode"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4128,6 +5248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Welcome"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Te damos la bienvenida"
           }
         },
         "zh-Hans" : {
@@ -4154,6 +5280,12 @@
             "value" : "Clash"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choque"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4174,6 +5306,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "When on, festivals and solar terms use China Standard Time"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuando está activado, las festividades y los términos solares usan la hora estándar de China"
           }
         },
         "zh-Hans" : {
@@ -4198,6 +5336,12 @@
             "value" : "Outside China: date festivals and solar terms by China time (UTC+8)"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fuera de China: calcula las festividades y los términos solares según la hora de China (UTC+8)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4218,6 +5362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add birthdays, anniversaries and other yearly days. They appear in the festival calendar and the Solar Terms & Festivals widget."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añade cumpleaños, aniversarios y otras fechas anuales. Aparecen en el calendario festivo y en el widget “Términos solares y fiestas”."
           }
         },
         "zh-Hans" : {
@@ -4242,6 +5392,12 @@
             "value" : "Add a Day"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir un día"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4262,6 +5418,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clear Selection"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar selección"
           }
         },
         "zh-Hans" : {
@@ -4286,6 +5448,12 @@
             "value" : "No Three Harmony"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin Tres Armonías"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4306,6 +5474,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No Results"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin resultados"
           }
         },
         "zh-Hans" : {
@@ -4330,6 +5504,12 @@
             "value" : "Generates"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genera"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4350,6 +5530,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Generates it"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lo genera"
           }
         },
         "zh-Hans" : {
@@ -4374,6 +5560,12 @@
             "value" : "Useful element"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Útil"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4394,6 +5586,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Male"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hombre"
           }
         },
         "zh-Hans" : {
@@ -4418,6 +5616,12 @@
             "value" : "Now"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4439,6 +5643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Current Shichen %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shichen actual %@"
           }
         },
         "zh-Hans" : {
@@ -4465,6 +5675,12 @@
             "value" : "Current Shichen: %1$@, %2$@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shichen actual: %1$@, %2$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4485,6 +5701,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Overcoming"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Control"
           }
         },
         "zh-Hans" : {
@@ -4509,6 +5731,12 @@
             "value" : "Generating"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generación"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4529,6 +5757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Manage Your Days"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestionar tus días"
           }
         },
         "zh-Hans" : {
@@ -4553,6 +5787,12 @@
             "value" : "Festivals"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fiestas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4573,6 +5813,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Festival Countdown"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuenta regresiva"
           }
         },
         "zh-Hans" : {
@@ -4597,6 +5843,12 @@
             "value" : "Festival Calendar"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendario festivo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4619,6 +5871,12 @@
             "value" : "Use China Time for Festivals"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hora de China para festividades"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4639,6 +5897,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Solar Terms"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos"
           }
         },
         "zh-Hans" : {
@@ -4665,6 +5929,12 @@
             "value" : "Solar Terms & Festivals"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos solares y fiestas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4689,6 +5959,12 @@
             "value" : "Seasonal Health"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salud estacional"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4709,6 +5985,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Seasonal Health"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salud estacional"
           }
         },
         "zh-Hans" : {
@@ -4734,6 +6016,12 @@
             "value" : "Solar term: %@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Término solar: %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4754,6 +6042,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Black Widget Text at Night"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Texto negro en widgets de noche"
           }
         },
         "zh-Hans" : {
@@ -4778,6 +6072,12 @@
             "value" : "Red Widget Background"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fondo rojo en widgets"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4798,6 +6098,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moon Phase on Widgets"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fase lunar en widgets"
           }
         },
         "zh-Hans" : {
@@ -4822,6 +6128,12 @@
             "value" : "Charts"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diagramas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4842,6 +6154,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Edit Day"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar día"
           }
         },
         "zh-Hans" : {
@@ -4866,6 +6184,12 @@
             "value" : "None"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4886,6 +6210,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Missing phases"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elementos ausentes"
           }
         },
         "zh-Hans" : {
@@ -4910,6 +6240,12 @@
             "value" : "Background"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estilo de fondo"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4930,6 +6266,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Organs and Emotions"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Órganos y emociones"
           }
         },
         "zh-Hans" : {
@@ -4954,6 +6296,12 @@
             "value" : "Yours"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Propios"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4974,6 +6322,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your Days"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tus días"
           }
         },
         "zh-Hans" : {
@@ -4999,6 +6353,12 @@
             "value" : "Yours: %@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu día: %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5016,6 +6376,12 @@
     "色彩" : {
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Color"
@@ -5043,6 +6409,12 @@
             "value" : "If a month has no such day (the 30th of a short lunar month, February 29 outside leap years), it falls on the month's last day."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si el mes no tiene ese día (el 30 de un mes lunar corto o el 29 de febrero fuera de año bisiesto), se usa el último día del mes."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5063,6 +6435,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Copy Shichen Info"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar datos del Shichen"
           }
         },
         "zh-Hans" : {
@@ -5087,6 +6465,12 @@
             "value" : "Settings"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5109,6 +6493,12 @@
             "value" : "Language"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5129,6 +6519,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Starts at age %lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicio a la edad de %lld"
           }
         },
         "zh-Hans" : {
@@ -5154,6 +6550,12 @@
             "value" : "%2$lld min until %1$@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$lld min para %1$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5175,6 +6577,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%2$lld h until %1$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$lld h para %1$@"
           }
         },
         "zh-Hans" : {
@@ -5200,6 +6608,12 @@
             "value" : "%2$lld h %3$lld min until %1$@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$lld h %3$lld min para %1$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5220,6 +6634,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "System"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sistema"
           }
         },
         "zh-Hans" : {
@@ -5244,6 +6664,12 @@
             "value" : "Sovereign Hexagrams"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hexagramas mensuales"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5266,6 +6692,12 @@
             "value" : "Labels follow the circle in the hexagram wheels"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las etiquetas siguen el círculo en las ruedas de hexagramas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5283,6 +6715,12 @@
     "農曆" : {
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lunar"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lunar"
@@ -5311,6 +6749,12 @@
             "value" : "Lunar %1$@ %2$@"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lunar: %1$@ %2$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5331,6 +6775,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lunar Date"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha lunar"
           }
         },
         "zh-Hans" : {
@@ -5355,6 +6805,12 @@
             "value" : "Lunar Date, Shichen, Organ and Moon"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha lunar, Shichen, órgano y luna"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5375,6 +6831,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Countdown to Lunar New Year"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuenta regresiva al Año Nuevo Lunar"
           }
         },
         "zh-Hans" : {
@@ -5399,6 +6861,12 @@
             "value" : "Lunar calendar"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendario lunar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5419,6 +6887,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quit"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salir"
           }
         },
         "zh-Hans" : {
@@ -5443,6 +6917,12 @@
             "value" : "Takes effect the next time you open the app."
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se aplica la próxima vez que abras la app."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5463,6 +6943,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turn on Location to see weather, sunrise and sunset"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activa la ubicación para ver el tiempo, el amanecer y el atardecer"
           }
         },
         "zh-Hans" : {
@@ -5487,6 +6973,12 @@
             "value" : "When on, the whole app uses the system font instead of Weibei"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si está activado, toda la app usa la fuente del sistema en lugar de Weibei"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5507,6 +6999,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "When on, widget text is black in Dark Mode"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si está activado, el texto de los widgets es negro en modo oscuro"
           }
         },
         "zh-Hans" : {
@@ -5531,6 +7029,12 @@
             "value" : "When on, widgets are red during Spring Festival"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si está activado, los widgets son rojos durante la Fiesta de la Primavera"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5551,6 +7055,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "When on, widgets show today's moon phase"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si está activado, los widgets muestran la fase lunar de hoy"
           }
         },
         "zh-Hans" : {
@@ -5575,6 +7085,12 @@
             "value" : "When on, hours and solar terms use their classical names"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si está activado, las horas y los términos solares usan sus nombres clásicos"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5595,6 +7111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "When on, labels in the hexagram wheels follow the circle"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si está activado, las etiquetas de las ruedas de hexagramas siguen el círculo"
           }
         },
         "zh-Hans" : {
@@ -5619,6 +7141,12 @@
             "value" : "Get Started"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empezar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5641,6 +7169,12 @@
             "value" : "When off, the app collects no usage data"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si se desactiva, la app ya no recopila datos de uso anónimos"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5658,6 +7192,12 @@
     "陰" : {
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yin"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yin"
@@ -5685,6 +7225,12 @@
             "value" : "Sovereign Hexagrams by Lunar Month"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hexagramas mensuales por mes lunar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5707,6 +7253,12 @@
             "value" : "Sovereign hexagrams for each lunar month"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hexagramas mensuales para cada mes lunar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5724,6 +7276,12 @@
     "陽" : {
       "localizations" : {
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yang"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yang"
@@ -5751,6 +7309,12 @@
             "value" : "Sovereign Hexagrams by Solar Month"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hexagramas mensuales por mes solar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5771,6 +7335,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sovereign hexagrams for each Gregorian month"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hexagramas mensuales para cada mes gregoriano"
           }
         },
         "zh-Hans" : {
@@ -5795,6 +7365,12 @@
             "value" : "Privacy"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacidad"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5815,6 +7391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Category"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categoría"
           }
         },
         "zh-Hans" : {
@@ -5841,6 +7423,12 @@
             "value" : "Today's day officer, what to do and avoid, and the day's clash"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dios del día, qué es favorable, qué evitar y el choque del día"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5865,6 +7453,12 @@
             "value" : "Today's day officer and what to do and avoid"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dios del día, qué es favorable y qué evitar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5885,6 +7479,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The lunar year, month and day named by the Earthly Branches, with the hour's other name and organ. To configure, touch and hold the widget."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El año, mes y día lunares con nombres de las Ramas Terrestres, el nombre popular de la hora y su órgano. Para configurarlo, mantén pulsado el widget."
           }
         },
         "zh-Hans" : {
@@ -5909,6 +7509,12 @@
             "value" : "Classical Names"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar nombres clásicos"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5929,6 +7535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The lunar year, month, day and hour named by the Earthly Branches. To configure, touch and hold the widget."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El año, mes, día y hora lunares con nombres de las Ramas Terrestres. Para configurarlo, mantén pulsado el widget."
           }
         },
         "zh-Hans" : {
@@ -5955,6 +7567,12 @@
             "value" : "The next solar term, festival or day of yours, and how many days away it is"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El próximo término solar, festividad o día tuyo, y cuántos días faltan"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5979,6 +7597,12 @@
             "value" : "This solar term's health notes and seasonal foods"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Consejos de salud y alimentos de temporada de este término solar"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5999,6 +7623,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show Solar Terms"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar términos solares"
           }
         },
         "zh-Hans" : {
@@ -6023,6 +7653,12 @@
             "value" : "Display"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualización"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6043,6 +7679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show Lunar Days"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar días lunares"
           }
         },
         "zh-Hans" : {
@@ -6069,6 +7711,12 @@
             "value" : "A lunar month calendar with solar terms, festivals, your days and lunar day names"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calendario lunar mensual con términos solares, festividades, tus días y nombres de días lunares"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6091,6 +7739,12 @@
             "value" : "Tap a phase to see what it generates and overcomes"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca un elemento para ver qué genera y qué controla"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6111,6 +7765,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap to Retry"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para reintentar"
           }
         },
         "zh-Hans" : {

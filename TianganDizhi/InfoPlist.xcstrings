@@ -11,6 +11,12 @@
             "value" : "天干地支"
           }
         },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "天干地支"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -32,6 +38,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
+            "value" : "TianganDizhi"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
             "value" : "TianganDizhi"
           }
         },
@@ -57,6 +69,12 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "TianganDizhi uses your location to show local weather, sunrise and sunset, and moon information in the app and widgets."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TianganDizhi usa tu ubicación para mostrar el tiempo local, el amanecer, el atardecer y la información lunar en la app y los widgets."
           }
         },
         "zh-Hans" : {
