@@ -16,8 +16,9 @@
 
 ### Package Updates
 - `ChineseAstrologyCalendar` 4.4.0, `Bagua` 1.2.0 and `JingluoShuxueCore` 1.3.0, plus
-  `ChineseTranditionalCalendarUI` and `ChineseTranditionalMusicCore` at their 1.1.0 commits
-  (branch pins). All five add Spanish support.
+  `ChineseTranditionalCalendarUI` 1.1.1 and `ChineseTranditionalMusicCore` 1.1.0 (branch
+  pins). All five add Spanish support; CalendarUI 1.1.1 shortens the Spanish labels in the
+  calendar's day cells.
 
 ## [2.58.0 – 2.81.0]
 
