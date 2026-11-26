@@ -37,23 +37,34 @@ struct SpecialDayMediumView: View {
         // The bundled LXGW font is kept to single-line names, which shrink to
         // fit. Multi-line and small text uses system text styles: WidgetKit
         // truncates custom-font CJK text instead of wrapping or fitting it.
-        HStack(alignment: .firstTextBaseline, spacing: 6) {
-          Text(featured.day.name)
-            .font(title3Font)
-            .minimumScaleFactor(0.6)
+        if displayLanguage.isChinese {
+          HStack(alignment: .firstTextBaseline, spacing: 6) {
+            Text(featured.day.name)
+              .font(title3Font)
+              .minimumScaleFactor(0.6)
 
-          Text(featured.daysUntil.daysUntilText(language: displayLanguage))
-            .font(.callout)
-            .foregroundStyle(featured.daysUntil == 0 ? Color.orange : Color.secondary)
+            countdown(featured.daysUntil)
 
-          Spacer(minLength: 0)
+            Spacer(minLength: 0)
 
-          Text(featured.day.date, format: Self.dayFormat)
-            .font(.footnote)
-            .foregroundStyle(.secondary)
-            .layoutPriority(1)
+            dateText(featured.day)
+          }
+          .lineLimit(1)
+        } else {
+          // Names run to several words, so they get the whole line. The system
+          // font, unlike the bundled one, shrinks to fit in a widget.
+          VStack(alignment: .leading, spacing: 0) {
+            Text(featured.day.name)
+              .font(.headline)
+              .minimumScaleFactor(0.6)
+            HStack(alignment: .firstTextBaseline, spacing: 6) {
+              countdown(featured.daysUntil)
+              Spacer(minLength: 0)
+              dateText(featured.day)
+            }
+          }
+          .lineLimit(1)
         }
-        .lineLimit(1)
 
         if !featured.day.detail.isEmpty {
           Text(featured.day.detail)
@@ -64,14 +75,14 @@ struct SpecialDayMediumView: View {
 
         Spacer(minLength: 0)
 
-        let later = events.dropFirst().prefix(3)
+        // Two wider columns hold the longer names of other languages.
+        let later = events.dropFirst().prefix(displayLanguage.isChinese ? 3 : 2)
         if !later.isEmpty {
           HStack(spacing: 12) {
             ForEach(Array(later.enumerated()), id: \.offset) { _, event in
               VStack(alignment: .leading, spacing: 0) {
                 Text(event.day.name)
-                  .font(calloutFont)
-                  // Names run to several words outside Chinese.
+                  .font(displayLanguage.isChinese ? calloutFont : .footnote.bold())
                   .lineLimit(displayLanguage.isChinese ? 1 : 2)
                   .minimumScaleFactor(0.6)
                 Text(event.daysUntil.daysUntilText(language: displayLanguage))
@@ -112,6 +123,19 @@ struct SpecialDayMediumView: View {
 
   private var title3Font: Font { fontProvider.title3Font }
   private var calloutFont: Font { fontProvider.calloutFont }
+
+  private func countdown(_ daysUntil: Int) -> some View {
+    Text(daysUntil.daysUntilText(language: displayLanguage))
+      .font(.callout)
+      .foregroundStyle(daysUntil == 0 ? Color.orange : Color.secondary)
+  }
+
+  private func dateText(_ day: SpecialDay) -> some View {
+    Text(day.date, format: Self.dayFormat)
+      .font(.footnote)
+      .foregroundStyle(.secondary)
+      .layoutPriority(1)
+  }
 
   @ViewBuilder
   private func background(for day: SpecialDay) -> some View {

@@ -25,7 +25,8 @@ struct WuyinView: View {
             .font(title3Font)
           Text("(\(yin.wuyinChineseName.transformToPinyin()))")
         }
-        HStack {
+        // One line in Chinese; the longer labels stack in other languages.
+        (displayLanguage.isChinese ? AnyLayout(HStackLayout()) : AnyLayout(VStackLayout(alignment: .leading))) {
           Text("唐譜：\(yin.wuyinTangDynastySymbol)")
           Text("五行：\(yin.wuxing.chineseCharacter)")
           Text("唱名：\(yin.description)")

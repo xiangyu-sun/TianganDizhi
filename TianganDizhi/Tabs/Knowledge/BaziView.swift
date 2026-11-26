@@ -179,6 +179,17 @@ struct BaziElementBalanceSection: View {
   @Environment(\.title3Font) var title3Font
   @Environment(\.displayLanguage) var displayLanguage
 
+  /// How a row's count and 旺 / 用神 marks are arranged: side by side, except
+  /// on the watch outside Chinese, where the words don't fit next to the bar.
+  private var statusLayout: AnyLayout {
+    #if os(watchOS)
+    if !displayLanguage.isChinese {
+      return AnyLayout(VStackLayout(alignment: .trailing, spacing: 0))
+    }
+    #endif
+    return AnyLayout(HStackLayout(spacing: 8))
+  }
+
   var body: some View {
     VStack(alignment: .leading, spacing: 12) {
       Text("五行分析")
@@ -191,7 +202,8 @@ struct BaziElementBalanceSection: View {
         let isDominant = bazi.dominantElement == element
 
         HStack(spacing: 8) {
-          GlossedText(glyph: element.chineseCharacter, gloss: element.gloss(in: displayLanguage), alignment: .center)
+          // One line, shrinking if need be: "Madera" would hyphenate on the watch.
+          GlossedText(glyph: element.chineseCharacter, gloss: element.gloss(in: displayLanguage), alignment: .center, glossLines: 1)
             .font(bodyFont)
             .foregroundStyle(element.traditionalColor)
             .frame(width: displayLanguage.isChinese ? 24 : 48)
@@ -203,20 +215,27 @@ struct BaziElementBalanceSection: View {
           }
           .frame(height: 20)
 
-          (isMissing ? Text("缺") : Text(count, format: .number))
-            .font(footnote)
-            .foregroundStyle(isMissing ? .red : .secondary)
-            .frame(width: 24, alignment: .trailing)
+          statusLayout {
+            (isMissing ? Text("缺") : Text(count, format: .number))
+              .font(footnote)
+              .foregroundStyle(isMissing ? .red : .secondary)
+              .lineLimit(1)
+              .minimumScaleFactor(0.6)
+              // "Falta" and "None" are wider than 缺.
+              .frame(width: displayLanguage.isChinese ? 24 : 40, alignment: .trailing)
 
-          if isDominant {
-            Text("旺")
-              .font(footnote)
-              .foregroundStyle(.orange)
-          }
-          if isBeneficial {
-            Text("用神")
-              .font(footnote)
-              .foregroundStyle(.green)
+            if isDominant {
+              Text("旺")
+                .font(footnote)
+                .foregroundStyle(.orange)
+                .fixedSize()
+            }
+            if isBeneficial {
+              Text("用神")
+                .font(footnote)
+                .foregroundStyle(.green)
+                .fixedSize()
+            }
           }
         }
       }

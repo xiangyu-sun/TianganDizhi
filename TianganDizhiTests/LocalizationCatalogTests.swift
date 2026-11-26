@@ -101,6 +101,7 @@ import Testing
 
   private struct Variations: Decodable {
     let plural: [String: Variant]?
+    let device: [String: Variant]?
   }
 
   private struct Substitution: Decodable {
@@ -117,9 +118,10 @@ import Testing
       ([variations] + (substitutions ?? [:]).values.map(\.variations)).compactMap { $0?.plural }
     }
 
-    /// Whether there is text, either plain or for every plural form.
+    /// Whether there is text: plain, or for every plural form or device.
     var isComplete: Bool {
-      let units = [stringUnit].compactMap { $0 } + pluralForms.flatMap { $0.values.compactMap(\.stringUnit) }
+      let forms = pluralForms + [variations?.device].compactMap { $0 }
+      let units = [stringUnit].compactMap { $0 } + forms.flatMap { $0.values.compactMap(\.stringUnit) }
       return !units.isEmpty && units.allSatisfy { !($0.value?.isEmpty ?? true) }
     }
   }

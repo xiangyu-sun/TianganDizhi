@@ -1167,9 +1167,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cinco direcciones"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Direcciones"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Cinco direcciones"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -1223,9 +1235,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cinco Elementos y correspondencias"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Elementos"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Cinco Elementos y correspondencias"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -1307,9 +1331,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Generación y control"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Elementos"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Generación y control"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -2100,9 +2136,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ciclo Sexagenario"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "60 Jiazi"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Ciclo Sexagenario"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -2492,9 +2540,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "12 Ramas Terrestres"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "12 Ramas"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "12 Ramas Terrestres"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -2632,9 +2692,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oda a las doce horas"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "12 horas"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Oda a las doce horas"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -2660,9 +2732,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zodíaco y elementos"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Zodíaco"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Zodíaco y elementos"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -2716,9 +2800,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "12 Hexagramas"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Hexagramas"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "12 Hexagramas"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -2772,9 +2868,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "10 Troncos Celestiales"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "10 Troncos"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "10 Troncos Celestiales"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -3108,9 +3216,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cuatro Pilares (Bazi)"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Bazi"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Cuatro Pilares (Bazi)"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -3192,9 +3312,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choques y armonías"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Choques"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Choques y armonías"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -3220,9 +3352,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ramas y meses"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Meses"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Ramas y meses"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -3248,9 +3392,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ramas y escalas"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Escalas"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Ramas y escalas"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -3444,9 +3600,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ganzhi y elementos"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Ganzhi"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Ganzhi y elementos"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -3584,9 +3752,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reloj de órganos"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Órganos"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Reloj de órganos"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -4237,9 +4417,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bagua del rey Wen"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Bagua de Wen"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Bagua del rey Wen"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -4883,9 +5075,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nombres de las horas"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Nombres"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Nombres de las horas"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -4911,9 +5115,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shichen y horas"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Horas"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Shichen y horas"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -5844,9 +6060,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Calendario festivo"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Fiestas"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Calendario festivo"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -6187,7 +6415,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No"
+            "value" : "Falta"
           }
         },
         "zh-Hans" : {
@@ -7226,9 +7454,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hexagramas lunares"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Lunares"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Hexagramas lunares"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
@@ -7310,9 +7550,21 @@
           }
         },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hexagramas solares"
+          "variations" : {
+            "device" : {
+              "applewatch" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Solares"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Hexagramas solares"
+                }
+              }
+            }
           }
         },
         "zh-Hans" : {
