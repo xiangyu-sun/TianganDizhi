@@ -1,1 +1,13 @@
+No account or login is needed. The app has no in-app purchases, subscriptions or paywall; every feature is available immediately.
 
+LOCATION (optional)
+Location is used only for local weather, sunrise and sunset, and moon information, through Apple WeatherKit. If you decline, the app keeps working: the clock, calendar, solar terms, moon phase and reference screens are all available, and the main screen offers "Tap to Retry".
+
+LANGUAGES
+New in this version: Spanish. The app follows the Mac's language. To choose it in the app, open the Settings tab (Ajustes), then Language (Idioma), pick "Español", and quit and reopen the app. Users upgrading from an older version who used the app in Traditional Chinese stay in Chinese until they choose another language there. Chinese characters on the dials, and some classical texts such as solar-term health tips and almanac guidance, are shown in Chinese by design.
+
+MENU BAR AND WIDGETS
+The app adds a menu bar item with the current Chinese date and double hour. Widgets can be added from the desktop or Notification Center by searching for "TianganDizhi": double-hour clock, monthly calendar, festivals, Lunar New Year countdown, daily almanac and solar-term health tips.
+
+PRIVACY
+Privacy policy: Settings tab (Ajustes) > Privacy (Privacidad) section at the bottom > Privacy Policy (Política de privacidad). The Mac app contains no analytics, no tracking and no advertising.

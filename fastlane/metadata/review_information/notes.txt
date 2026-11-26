@@ -1,1 +1,16 @@
+No account or login is needed. The app has no in-app purchases, subscriptions or paywall; every feature is available immediately.
 
+LOCATION (optional)
+Location is used only for local weather, sunrise and sunset, and moon information, through Apple WeatherKit, in the app and widgets. If you decline, the app keeps working: the clock, calendar, solar terms, moon phase and reference screens are all available, and the main screen offers "Tap to Retry" and "Open Settings".
+
+LANGUAGES
+New in this version: Spanish. The app follows the device language. To choose it in the app, open the Settings tab (Ajustes), then Language (Idioma), pick "Español", and reopen the app. Users upgrading from an older version who used the app in Traditional Chinese stay in Chinese until they choose another language there. Chinese characters on the dials, and some classical texts such as solar-term health tips and almanac guidance, are shown in Chinese by design.
+
+WIDGETS
+Add them from the Home Screen or Lock Screen by searching for "TianganDizhi": Chinese double-hour clock, lunar date, solar terms, festivals, monthly calendar, Lunar New Year countdown and daily almanac. Tapping a widget opens the matching screen in the app.
+
+APPLE WATCH
+The watch app shows the double-hour clock and reference screens, and provides complications for the watch face.
+
+PRIVACY
+Privacy policy: Settings tab (Ajustes) > Privacy (Privacidad) section at the bottom > Privacy Policy (Política de privacidad). The switch above the link turns off anonymous usage analytics on iPhone and iPad. There is no tracking and no advertising.
