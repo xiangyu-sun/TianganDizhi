@@ -80,7 +80,11 @@ enum SpecialDayCatalog {
       jieqi = LocalizedJieqiContentProvider(language: .en)
     }
     return [
-      RecurringDaySource(days: customHolidays.map(\.day), timeZone: timeZone),
+      RecurringDaySource(
+        days: customHolidays.map(\.day),
+        timeZone: timeZone,
+        category: RecurringDaySource.categoryName(in: language)
+      ),
       FestivalSource(converter: DayConverter(calendar: lunar), timeZone: timeZone, contentProvider: festivals),
       JieqiSource(timeZone: timeZone, contentProvider: jieqi),
     ]

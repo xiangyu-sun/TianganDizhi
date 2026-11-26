@@ -13,12 +13,14 @@
 
 ### Fixes
 - Outside Chinese, custom days showed Gregorian months as "M05" instead of the month name.
+- Outside Traditional Chinese, custom days were labelled 自訂 in the festival calendar and
+  widget; the label now follows the display language.
 - Settings › Privacy now links to the privacy policy.
 - The Chinese location permission prompt now says what location is used for (local weather,
   sunrise and sunset, and moon information in the app and widgets), as the English one does.
 
 ### Package Updates
-- `ChineseAstrologyCalendar` 4.4.0, `Bagua` 1.2.0 and `JingluoShuxueCore` 1.3.0, plus
+- `ChineseAstrologyCalendar` 4.4.1, `Bagua` 1.2.0 and `JingluoShuxueCore` 1.3.0, plus
   `ChineseTranditionalCalendarUI` 1.1.1 and `ChineseTranditionalMusicCore` 1.1.0 (branch
   pins). All five add Spanish support; CalendarUI 1.1.1 shortens the Spanish labels in the
   calendar's day cells.

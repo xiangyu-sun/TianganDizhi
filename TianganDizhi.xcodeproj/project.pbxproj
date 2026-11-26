@@ -2888,7 +2888,7 @@
 			repositoryURL = "https://github.com/xiangyu-sun/ChineseAstrologyCalendar.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.4.0;
+				minimumVersion = 4.4.1;
 			};
 		};
 		9968B3302F930000005E242A /* XCRemoteSwiftPackageReference "ChineseTranditionalCalendarUI" */ = {

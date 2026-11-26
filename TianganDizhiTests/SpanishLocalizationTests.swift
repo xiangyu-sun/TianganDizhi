@@ -91,6 +91,19 @@ import Testing
   }
 
   @Test(arguments: [
+    (DisplayLanguage.zhHant, "自訂"),
+    (.zhHans, "自定义"),
+    (.en, "Custom"),
+    (.es, "Personal"),
+  ])
+  func customDayCategoryFollowsTheLanguage(_ language: DisplayLanguage, _ expected: String) throws {
+    let birthday = CustomHoliday(day: RecurringDay(name: "生日", reckoning: .gregorian, month: 5, day: 1))
+    let sources = SpecialDayCatalog.sources(customHolidays: [birthday], timeZone: .current, language: language)
+    let day = try #require(sources[0].nextSpecialDay(after: try localNoon(2026, 3, 1)))
+    #expect(day.category == expected)
+  }
+
+  @Test(arguments: [
     (DisplayLanguage.zhHant, false),
     (.zhHans, false),
     (.es, false),
