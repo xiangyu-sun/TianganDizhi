@@ -172,6 +172,13 @@ struct SettingsView: View {
           }
         }
         .accessibilityHint("關閉後App不再收集任何匿名使用統計")
+        // App Review 5.1.1(i): the policy has to be reachable inside the app, not
+        // only from the store listing. Same URL as `privacy_url.txt`.
+        if let policyURL = URL(string: "https://github.com/xiangyu-sun/tiangandizhi-support/blob/main/PRIVACY.md") {
+          Link(destination: policyURL) {
+            Label("隱私政策", systemImage: "hand.raised")
+          }
+        }
       }
     }
     .font(fontProvider.bodyFont)

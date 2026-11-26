@@ -13,6 +13,9 @@
 
 ### Fixes
 - Outside Chinese, custom days showed Gregorian months as "M05" instead of the month name.
+- Settings › Privacy now links to the privacy policy.
+- The Chinese location permission prompt now says what location is used for (local weather,
+  sunrise and sunset, and moon information in the app and widgets), as the English one does.
 
 ### Package Updates
 - `ChineseAstrologyCalendar` 4.4.0, `Bagua` 1.2.0 and `JingluoShuxueCore` 1.3.0, plus

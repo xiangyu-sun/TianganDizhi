@@ -79,14 +79,14 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "天干地支需要获得您的当前位置许可，才能在小部件上显示您当地的月相信息。"
+            "state" : "translated",
+            "value" : "天干地支会使用您的位置，在 App 和小组件中显示当地天气、日出日落与月亮信息。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "天干地支需要獲得您的當前位置許可，才能在小部件上顯示您當地的月相信息。"
+            "state" : "translated",
+            "value" : "天干地支會使用您的位置，在 App 及小組件中顯示當地天氣、日出日落與月亮資訊。"
           }
         }
       }
